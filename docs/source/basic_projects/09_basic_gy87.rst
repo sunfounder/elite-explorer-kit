@@ -63,7 +63,7 @@ Code
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/efd14082-486b-47eb-9533-8d36a36d2d88/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After the code is successfully uploaded to your Arduino Uno R4, the Serial Monitor will come to life, continuously printing out sensor data from the GY-87 IMU module. This module incorporates three individual sensors: the MPU6050(or QMC5883L) for accelerometer and gyroscope readings, the HMC5883L for magnetometer readings, and the BMP180 for barometric pressure and temperature readings.
+After the code is successfully uploaded to your Arduino Uno R4, the Serial Monitor will come to life, continuously printing out sensor data from the GY-87 IMU module. This module incorporates three individual sensors: the MPU6050 for accelerometer and gyroscope readings, the HMC5883L(or QMC5883L) for magnetometer readings, and the BMP180 for barometric pressure and temperature readings.
 
 Code Analysis
 ------------------------

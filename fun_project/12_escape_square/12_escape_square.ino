@@ -1,9 +1,22 @@
+/*
+  The code utilizes an Arduino Uno and a GY-87 IMU module to create the "Escape" game. 
+  The goal is for the player to tilt the MPU6050 sensor, which controls the movement 
+  of a pixel on the LED matrix. The objective is to guide the pixel through an opening 
+  in the border of the matrix (the exit). Each successful passage through the opening 
+  raises the game level.
+
+  Board: Arduino Uno R4 
+  Component: GY-87 IMU module
+  Library: https://github.com/adafruit/Adafruit_MPU6050  (Adafruit MPU6050 by Adafruit)
+*/
+
+// Include necessary libraries
 #include "Arduino_LED_Matrix.h"
 #include <Wire.h>
 #include <Adafruit_MPU6050.h>
 #include <Adafruit_Sensor.h>
 
-
+// Create instances of sensor and matrix
 Adafruit_MPU6050 mpu;
 ArduinoLEDMatrix matrix;
 byte frame[8][12];

@@ -1,3 +1,11 @@
+/*
+  The code is for an Arduino project that plays a melody when motion is detected by 
+  a PIR (Passive Infrared) motion sensor. 
+
+  Board: Arduino Uno R4 
+  Component: PIR Motion Sensor Module, Audio Module, and Speaker
+*/
+
 #include "analogWave.h"
 #include "pitches.h"
 

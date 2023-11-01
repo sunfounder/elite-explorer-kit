@@ -1,6 +1,15 @@
 /*
-  A simple Pong game:
- */
+  This code creates a basic Pong game using an Arduino Uno, an OLED display, 
+  and buttons. Players use the buttons to control a vertical paddle and bounce 
+  back a moving ball to prevent it from passing their paddle. Scoring happens 
+  when the ball goes off the screen edges.
+
+  Board: Arduino Uno R4 
+  Component: OLED Display Module and Button
+  Library: https://github.com/adafruit/Adafruit_SSD1306 (Adafruit SSD1306 by Adafruit)  
+           https://github.com/adafruit/Adafruit-GFX-Library (Adafruit GFX Library by Adafruit) 
+*/
+
 
 #include <SPI.h>
 #include <Wire.h>

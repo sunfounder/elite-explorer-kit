@@ -1,3 +1,14 @@
+/*
+  This code implements a simple Snake game using an Arduino Uno R4 and a 
+  Joystick Module. The Snake moves based on joystick input, and the 
+  objective is to eat randomly generated food without colliding with 
+  the snake's body. The game ends if the snake collides with itself.
+
+  Board: Arduino Uno R4 
+  Component: Joystick Module
+*/
+
+
 #include "Arduino_LED_Matrix.h"
 
 ArduinoLEDMatrix matrix;

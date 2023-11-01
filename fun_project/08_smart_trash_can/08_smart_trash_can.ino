@@ -7,7 +7,7 @@
   closed position of 0 degrees after a one-second delay. 
 
   Board: Arduino Uno R4 (or R3)
-  Component: Servo motor(SG90) and Ultrasonic distance Sensor(HC-SR04)
+  Component: Servo motor and Ultrasonic distance Sensor
 */
 
 #include <Servo.h>

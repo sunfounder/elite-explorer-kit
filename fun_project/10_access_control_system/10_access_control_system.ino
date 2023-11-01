@@ -1,3 +1,15 @@
+/*
+  The code is designed for an Arduino Uno R4 board and uses an MFRC522 RFID module, 
+  a stepper motor, and a buzzer. The system serves as an RFID-based door lock. It 
+  reads an RFID card and matches its ID with a pre-defined authenticated ID. If the 
+  ID matches, the stepper motor turns to open the door, and a buzzer beeps to indicate 
+  success. Otherwise, the buzzer beeps differently to indicate failure.
+
+  Board: Arduino Uno R4 
+  Component: MFRC522 Module, Stepper Motor and Buzzer
+*/
+
+
 #include <rfid1.h>
 #include <Stepper.h>
 #include <Wire.h>
@@ -5,8 +17,8 @@
 #define ID_LEN 4
 
 /*Stepper Motor*/
-const int stepsPerRevolution = 2048;
-const int rolePerMinute = 16;
+const int stepsPerRevolution = 2048;  // Steps per revolution for stepper motor
+const int rolePerMinute = 16;         // Motor speed in RPM
 const int IN1 = 11;
 const int IN2 = 10;
 const int IN3 = 9;
@@ -17,7 +29,7 @@ const int buzPin = 12;
 
 /*Authentication Parameters*/
 uchar userIdRead[ID_LEN] = { "" };
-uchar userId[ID_LEN] = {0x36, 0xE2, 0xC4, 0xF7};  // Authenticated ID
+uchar userId[ID_LEN] = { 0x36, 0xE2, 0xC4, 0xF7 };  // Authenticated ID
 bool approved = 0;
 
 RFID1 rfid;  //create a variable type of RFID1
@@ -33,15 +45,17 @@ void setup() {
 }
 
 void loop() {
+  // If not approved, try to read RFID
   if (approved == 0) {
     approved = rfidRead();
     for (int i = 0; i < ID_LEN; i++) {
-      userIdRead[i] = NULL;
+      userIdRead[i] = NULL;  // Clear read ID
     }
   }
+  // If approved, open the door
   if (approved == 1) {
     openDoor();
-    approved = 0;
+    approved = 0;  // Reset approval flag
   }
 }
 
@@ -95,7 +109,7 @@ void getId() {
       for (int i = 0; i < ID_LEN; i++) {
         userIdRead[i] = str[i];
         Serial.print("0x");
-        Serial.print(userIdRead[i],HEX);
+        Serial.print(userIdRead[i], HEX);
         Serial.print(", ");
       }
     }

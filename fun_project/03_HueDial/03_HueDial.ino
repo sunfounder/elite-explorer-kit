@@ -1,23 +1,29 @@
+/*
+  This code controls an RGB LED using a potentiometer 
+  to change the hue of the color.
+
+  Board: Arduino Uno R4 
+  Component: RGB LED and Potentiometer
+*/
+
 // Define RGB LED pins
-const int redPin = 12;    // PWM Pin
-const int greenPin = 10; // PWM Pin
-const int bluePin = 9;  // PWM Pin
+const int redPin = 12;    // Red channel
+const int greenPin = 10;  // Green channel
+const int bluePin = 9;    // Blue channel
 
 // Define the pin for the knob
-#define KNOB_PIN A0
+const int knobPin = A0;
 
 void setup() {
-  // Set RGB pins as outputs
+  // Initialize RGB LED pins as outputs
   pinMode(redPin, OUTPUT);
   pinMode(greenPin, OUTPUT);
   pinMode(bluePin, OUTPUT);
-
-  // Set the pin for the knob as input (default is INPUT for analog pins, so no need for INPUT_PULLUP)
 }
 
 void loop() {
   // Read the value of the knob
-  int knobValue = analogRead(KNOB_PIN);
+  int knobValue = analogRead(knobPin);
 
   // Normalize the knob value to the range 0-1
   float hueValue = (float)knobValue / 1023.0;
@@ -33,13 +39,14 @@ void loop() {
   setColor(red, green, blue);
 }
 
+// Function to set the RGB LED color
 void setColor(int red, int green, int blue) {
   analogWrite(redPin, red);
   analogWrite(greenPin, green);
   analogWrite(bluePin, blue);
 }
 
-// Convert a HUE value to RGB values (Same as original)
+// Function to convert a hue value to RGB values
 void HUEtoRGB(int hue, int* red, int* green, int* blue) {
   float h = (float)hue / 60.0;
   float c = 1.0;

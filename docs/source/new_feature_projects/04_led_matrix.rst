@@ -190,7 +190,7 @@ In the previous steps, we obtained a ``.h`` file that stores a series of frames 
    .. raw:: html
    
       <video loop autoplay muted style = "max-width:100%">
-         <source src="../../_static/videos/new_feature_projects/led_matrix.mp4"  type="video/mp4">
+         <source src="../_static/videos/new_feature_projects/led_matrix.mp4"  type="video/mp4">
          Your browser does not support the video tag.
       </video>
 

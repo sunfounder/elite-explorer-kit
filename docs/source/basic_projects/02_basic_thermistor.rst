@@ -1,0 +1,54 @@
+.. _basic_thermistor:
+
+Thermistor
+==========================
+
+.. https://docs.sunfounder.com/projects/vincent-kit/en/latest/arduino/2.27_thermistor.html#ar-thermistor
+
+Overview
+-------------
+
+In this lesson, you will learn how to use thermistor. Thermistor can be used as electronic circuit components for temperature compensation of instrument circuits. In the current meter, flowmeter, gas analyzer, and other devices. It can also be used for overheating protection, contactless relay, constant temperature, automatic gain control, motor start, time delay, color TV automatic degaussing, fire alarm and temperature compensation.
+
+Required Components
+------------------------
+
+
+* :ref:`uno_r4_wifi`
+* :ref:`cpn_breadboard`
+* :ref:`cpn_wires`
+* :ref:`cpn_resistor`
+* :ref:`cpn_thermistor`
+
+Wiring
+----------------------
+
+In this example, we use the analog pin A0 to get the value of Thermistor. One pin of thermistor is connected to 5V, and the other is wired up to A0. At the same time, a 10kΩ resistor is connected with the other pin before connecting to GND.
+
+.. image:: img/02-thermistor_bb.png
+    :align: center
+    :width: 70%
+
+Schematic Diagram
+-----------------------
+
+.. image:: img/02_thermistor_schematic.png
+   :align: center
+   :width: 70%
+
+Code
+-----------
+
+.. note::
+
+    * You can open the file ``02-thermistor.ino`` under the path of ``Elite-Explorer-Kit-main\basic_project\02-thermistor`` directly.
+    * Or copy this code into Arduino IDE.
+
+.. raw:: html
+
+    <iframe src=https://create.arduino.cc/editor/sunfounder01/be5dbe68-b57d-41f0-9fc0-237b99acbe3f/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+
+After uploading the code to the uno r4 board, you can open the serial monitor to check the current temperature. 
+
+The Kelvin temperature is calculated using the formula **T\ K\ =1/(ln(R\ T/R\ N)/B+1/T\ N)**. This equation is derived from the |link_steinhart_hart| and simplifies calculations. You can also find more information about this formula on the detailed introduction page of the :ref:`cpn_thermistor`.
+

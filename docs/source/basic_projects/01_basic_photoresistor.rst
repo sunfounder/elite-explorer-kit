@@ -1,0 +1,53 @@
+.. _basic_photoresistor:
+
+Photoresistor
+==========================
+
+.. https://docs.sunfounder.com/projects/vincent-kit/en/latest/arduino/2.26_photoresistor.html
+
+Overview
+---------------
+
+In this lesson, you will learn about Photoresistor. Photoresistor is applied in many electronic goods, such as the camera meter, clock radio, alarm device (as beam detector), small night lights, outdoor clock, solar street lamps and etc. Photoresistor is placed in a street lamp to control when the light is turned on. Ambient light falling on the photoresistor causes street lamps to turn on or off.
+
+Required Components
+-------------------------
+
+* :ref:`uno_r4_wifi`
+* :ref:`cpn_breadboard`
+* :ref:`cpn_wires`
+* :ref:`cpn_resistor`
+* :ref:`cpn_photoresistor`
+
+Wiring
+----------------------
+
+In this example, we use analog pin ( A0 ) to read the value of photoresistor. One pin of photoresistor is connected to 5V, the other is wired up to A0. Besides, a 10kΩ resistor is needed before the other pin is connected to GND.
+
+.. image:: img/01-photoresistor_bb.png
+    :align: center
+    :width: 80%
+
+Schematic Diagram
+-----------------------
+
+.. image:: img/01_photoresistor_schematic.png
+    :align: center
+    :width: 70%
+
+Code
+---------------
+
+.. note::
+
+    * You can open the file ``01-photoresistor`` under the path of ``Elite-Explorer-Kit-main\basic_project\01-photoresistor`` directly.
+    * Or copy this code into Arduino IDE.
+
+
+
+
+.. raw:: html
+
+    <iframe src=https://create.arduino.cc/editor/sunfounder01/e6bf007e-b20d-44d0-9ef9-6d57c1ce4c3c/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+
+After uploading the codes to the uno board, you can open the serial monitor to see the read value of the pin. When the ambient light becomes stronger, the reading will increase correspondingly, and the pin reading range is 「0」~「1023」.  However, according to the environmental conditions and the characteristics of the photoresistor, the actual reading range may be smaller than the theoretical range. 

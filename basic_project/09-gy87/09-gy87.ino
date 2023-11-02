@@ -18,8 +18,8 @@
 #include <Adafruit_BMP085.h>
 #include <DFRobot_QMC5883.h>
 
-DFRobot_QMC5883 compass(&Wire, 0x1E);
-// DFRobot_QMC5883 compass(&Wire, 0x0D);
+// DFRobot_QMC5883 compass(&Wire, 0x1E);
+DFRobot_QMC5883 compass(&Wire, 0x0D);
 
 // Initialize sensor objects
 Adafruit_MPU6050 mpu;
@@ -52,7 +52,7 @@ void loop() {
 
   // Print BMP180 data
   printBMP180();
-  delay(500);
+  delay(1500);
 }
 
 void initializeX5883() {

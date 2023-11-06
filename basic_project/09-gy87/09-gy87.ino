@@ -30,7 +30,7 @@ void setup() {
   // Initialize the MPU6050 sensor (accelerometer and gyroscope)
   initializeMPU6050();
 
-  // Enable I2C bypass on MPU6050 to directly access the HMC5883L magnetometer
+  // Enable I2C bypass on MPU6050 to directly access the QMC5883L magnetometer
   mpu.setI2CBypass(true);
 
   // Initialize the QMC5883L magnetometer sensor

@@ -1,13 +1,13 @@
 /*
   This Arduino code is designed to work with the GY-87 IMU (Inertial Measurement Unit) module, 
   which is a multi-sensor module containing three individual sensors: MPU6050 (Accelerometer and Gyroscope), 
-  HMC5883L (or QMC5883L Magnetometer), and BMP180 (Barometric Pressure and Temperature). The code initializes these 
+  QMC5883L Magnetometer, and BMP180 (Barometric Pressure and Temperature). The code initializes these 
   sensors and continuously prints their readings to the Serial Monitor.
   
   Board: Arduino Uno R4
   Component: GY-87 IMU Module
   Library: https://github.com/adafruit/Adafruit_MPU6050  (Adafruit MPU6050 by Adafruit)
-           https://github.com/DFRobot/DFRobot_QMC5883  (DFRobot_QMC5883 by DFRobot)
+           https://github.com/mprograms/QMC5883LCompass  (QMC5883LCompass by MPrograms)
            https://github.com/adafruit/Adafruit-BMP085-Library  (Adafruit BMP085 Library by Adafruit)
 */
 
@@ -16,14 +16,12 @@
 #include <Adafruit_Sensor.h>
 #include <Wire.h>
 #include <Adafruit_BMP085.h>
-#include <DFRobot_QMC5883.h>
-
-// DFRobot_QMC5883 compass(&Wire, 0x1E);
-DFRobot_QMC5883 compass(&Wire, 0x0D);
+#include <QMC5883LCompass.h>
 
 // Initialize sensor objects
 Adafruit_MPU6050 mpu;
 Adafruit_BMP085 bmp;
+QMC5883LCompass compass;
 
 void setup() {
   // Initialize the serial communication with a baud rate of 115200
@@ -35,8 +33,8 @@ void setup() {
   // Enable I2C bypass on MPU6050 to directly access the HMC5883L magnetometer
   mpu.setI2CBypass(true);
 
-  // Initialize the HMC5883L or QMC5883L magnetometer sensor
-  initializeX5883();
+  // Initialize the QMC5883L magnetometer sensor
+  initializeQMC5883L();
 
   // Initialize BMP180 barometric sensor
   initializeBMP180();
@@ -47,56 +45,59 @@ void loop() {
   // Print MPU6050 data
   printMPU6050();
 
-  // Print HMC5883 or QMC5883 data
-  printX5883();
+  // Print QMC5883L data
+  printQMC5883L();
 
   // Print BMP180 data
   printBMP180();
-  delay(1500);
+  delay(500);
 }
 
-void initializeX5883() {
-  // Check if the 5883 sensor is detected
-  while (!compass.begin()) {
-    Serial.println("Could not find a valid 5883 sensor, check wiring!");
-    delay(500);
-  }
+void initializeQMC5883L() {
 
-  if (compass.isHMC()) {
-    Serial.println("HMC5883 Found!");
-  } else if (compass.isQMC()) {
-    Serial.println("QMC5883 Found!");
-  }
+  compass.init();
 
-  Serial.println();
+  // compass.setCalibrationOffsets(-336.00, -179.00, 47.00);
+  // compass.setCalibrationScales(1.05, 0.94, 1.02);
+
 }
 
-void printX5883() {
-  /**
-   * @brief  Set declination angle on your location and fix heading
-   * @n      You can find your declination on: http://magnetic-declination.com/
-   * @n      (+) Positive or (-) for negative
-   * @n      For Bytom / Poland declination angle is 4'26E (positive)
-   * @n      Formula: (deg + (min / 60.0)) / (180 / PI);
-   */
+void printQMC5883L() {
 
   Serial.println();
-  Serial.println("5883 ------------");
+  Serial.println("QMC5883L ------------");
 
-  float declinationAngle = (4.0 + (26.0 / 60.0)) / (180 / PI);
-  compass.setDeclinationAngle(declinationAngle);
-  sVector_t mag = compass.readRaw();
-  compass.getHeadingDegrees();
-  Serial.print("X:");
-  Serial.print(mag.XAxis);
-  Serial.print(" Y:");
-  Serial.print(mag.YAxis);
-  Serial.print(" Z:");
-  Serial.println(mag.ZAxis);
-  Serial.print("Degress = ");
-  Serial.println(mag.HeadingDegress);
+	int x, y, z, a;
+	char myArray[3];
+	
+	compass.read();
+  
+	x = compass.getX();
+	y = compass.getY();
+	z = compass.getZ();
+	
+	a = compass.getAzimuth();
 
-  Serial.println("5883 ------------");
+	compass.getDirection(myArray, a);
+  
+	Serial.print("X: ");
+	Serial.print(x);
+
+	Serial.print(" Y: ");
+	Serial.print(y);
+
+	Serial.print(" Z: ");
+	Serial.print(z);
+
+	Serial.print(" Azimuth: ");
+	Serial.print(a);
+
+	Serial.print(" Direction: ");
+	Serial.print(myArray[0]);
+	Serial.print(myArray[1]);
+	Serial.println(myArray[2]);
+
+  Serial.println("QMC5883L ------------");
   Serial.println();
 }
 

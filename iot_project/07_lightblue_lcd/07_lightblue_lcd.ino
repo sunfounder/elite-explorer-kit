@@ -1,3 +1,15 @@
+/*
+  The code implements a Bluetooth Low Energy (BLE) peripheral using an Arduino Uno R4 WiFi 
+  board. It advertises a BLE service with a custom UUID and a characteristic that can be read 
+  and written to. A Liquid Crystal Display (LCD) with an I2C interface is used to display the 
+  message when the BLE central device writes to the characteristic. 
+
+  Board: Arduino Uno R4 WiFI
+  Component: Liquid Crystal Display 1620 with I2C Interface
+  Library: https://www.arduino.cc/reference/en/libraries/liquidcrystal-i2c/ (LiquidCrystal I2C by Frank de Brabander)
+           https://www.arduino.cc/reference/en/libraries/arduinoble/ (ArduinoBLE by Arduino)
+*/
+
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
 #include <ArduinoBLE.h>
@@ -52,12 +64,12 @@ void loop() {
     Serial.print("Connected to central: ");
     Serial.println(central.address());
 
-    while (central.connected()) { // While the central device is connected
-      if (boxCharacteristic.written()) { // Check if the characteristic has been written
+    while (central.connected()) {                      // While the central device is connected
+      if (boxCharacteristic.written()) {               // Check if the characteristic has been written
         int length = boxCharacteristic.valueLength();  // Get the length of the written value
-        byte buffer[length + 1];        // Create a buffer to store the value
-        boxCharacteristic.readValue(buffer, length);  // Read the value into the buffer
-        buffer[length] = '\0';         // Null-terminate the buffer to treat it as a string
+        byte buffer[length + 1];                       // Create a buffer to store the value
+        boxCharacteristic.readValue(buffer, length);   // Read the value into the buffer
+        buffer[length] = '\0';                         // Null-terminate the buffer to treat it as a string
         Serial.print("Characteristic event, written: ");
         Serial.print((char *)buffer);
 

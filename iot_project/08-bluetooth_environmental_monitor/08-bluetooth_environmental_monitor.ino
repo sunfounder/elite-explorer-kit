@@ -8,6 +8,9 @@
   that prints sensor data to the serial monitor.
 
   Board: Arduino Uno R4 
+  Component: DHT11
+  Library: https://github.com/adafruit/DHT-sensor-library  (DHT sensor library by Adafruit)
+           https://www.arduino.cc/reference/en/libraries/arduinoble/ (ArduinoBLE by Arduino)
 */
 
 

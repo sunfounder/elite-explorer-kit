@@ -1,42 +1,50 @@
+/*
+  The code is designed for an Arduino Uno R4 WiFi to establish a connection with 
+  both a Wi-Fi network and an MQTT broker. It constantly monitors the status of 
+  four buttons that are connected to digital inputs. Whenever a button is pressed, 
+  it sends a message to a specific MQTT topic. Additionally, the code incorporates 
+  functions for displaying Wi-Fi network information and managing received MQTT 
+  messages.
+
+  Board: Arduino Uno R4 WiFi
+  Component: Button
+  Library: https://github.com/arduino-libraries/ArduinoMqttClient (ArduinoMqttClient by Arduino)
+*/
+
 #include <WiFiS3.h>
 #include <ArduinoMqttClient.h>
 
-#include "arduino_secrets.h" 
+#include "arduino_secrets.h"
 ///////please enter your sensitive data in the Secret tab/arduino_secrets.h
-char ssid[] = SECRET_SSID;        // your network SSID (name)
+char ssid[] = SECRET_SSID;    // your network SSID (name)
 char pass[] = SECRET_PASS;    // your network password (use for WPA, or use as key for WEP)
-int status = WL_IDLE_STATUS;     // the WiFi radio's status
+int status = WL_IDLE_STATUS;  // the WiFi radio's status
 
 WiFiClient wifiClient;
 MqttClient mqttClient(wifiClient);
 
 const char broker[] = "broker.hivemq.com";
-int        port     = 1883;
-const char topic[]  = "SunFounder MQTT Test";
-const char hostTopic[] = "SunFounder MQTT Test";
-
-const long interval = 1000;
-unsigned long previousMillis = 0;
-
+int port = 1883;
+const char topic[] = "SunFounder MQTT Test";
 
 //init buttons & states
-const int buttonPins[4] = {2, 3, 4, 5};
-bool previousButtonStates[4] = {false, false, false, false};
-
+const int buttonPins[4] = { 2, 3, 4, 5 };
+bool previousButtonStates[4] = { false, false, false, false };
 
 void setup() {
   //Initialize serial and wait for port to open:
   Serial.begin(9600);
 
   while (!Serial) {
-    ; // wait for serial port to connect. Needed for native USB port only
+    ;  // wait for serial port to connect. Needed for native USB port only
   }
 
   // check for the WiFi module:
   if (WiFi.status() == WL_NO_MODULE) {
     Serial.println("Communication with WiFi module failed!");
     // don't continue
-    while (true);
+    while (true)
+      ;
   }
 
   String fv = WiFi.firmwareVersion();
@@ -51,8 +59,8 @@ void setup() {
     // Connect to WPA/WPA2 network. Change this line if using open or WEP network:
     status = WiFi.begin(ssid, pass);
 
-    // wait 10 seconds for connection:
-    delay(10000);
+    // wait 5 seconds for connection:
+    delay(5000);
   }
 
   // you're connected now, so print out the data:
@@ -74,7 +82,8 @@ void setup() {
     Serial.print("MQTT connection failed! Error code = ");
     Serial.println(mqttClient.connectError());
 
-    while (1);
+    while (1)
+      ;
   }
 
   Serial.println("You're connected to the MQTT broker!");
@@ -84,7 +93,7 @@ void setup() {
   mqttClient.onMessage(onMqttMessage);
 
   Serial.print("Subscribing to topic: ");
-  Serial.println(topic); 
+  Serial.println(topic);
   Serial.println();
 
   // subscribe to a topic
@@ -102,7 +111,6 @@ void setup() {
     pinMode(buttonPins[i], INPUT_PULLUP);
     previousButtonStates[i] = digitalRead(buttonPins[i]);
   }
-
 }
 
 void loop() {
@@ -114,7 +122,7 @@ void loop() {
   // Check button status
   for (int i = 0; i < 4; i++) {
     bool currentButtonState = digitalRead(buttonPins[i]);
-    
+
     // If the button is pressed and its previous state was not pressed.
     if (!currentButtonState && previousButtonStates[i]) {
       sendButtonMessage(i + 1);  // The message that the send button has been pressed.
@@ -131,7 +139,7 @@ void printWifiData() {
   // print your board's IP address:
   IPAddress ip = WiFi.localIP();
   Serial.print("IP Address: ");
-  
+
   Serial.println(ip);
 
   // print your MAC address:
@@ -197,7 +205,6 @@ void onMqttMessage(int messageSize) {
   Serial.println(message);
 
   Serial.println();
-
 }
 
 void sendButtonMessage(int buttonNumber) {

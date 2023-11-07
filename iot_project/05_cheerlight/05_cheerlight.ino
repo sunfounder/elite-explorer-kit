@@ -1,42 +1,55 @@
+/*
+  The code is designed for an Arduino Uno R4 WiFi to connect to a Wi-Fi network, 
+  subscribe to an MQTT topic, and control a chain of NeoPixel LEDs based on messages 
+  received from the MQTT broker. It listens for color commands from the cheerlights 
+  topic and updates the LED colors accordingly.
+
+  Board: Arduino Uno R4 WiFi
+  Component: WS2812
+  Library: https://github.com/arduino-libraries/ArduinoMqttClient (ArduinoMqttClient by Arduino)
+           https://github.com/FastLED/FastLED (FastLED by Daniel Garcia)
+           
+*/
+
 #include <WiFiS3.h>
 #include <ArduinoMqttClient.h>
 #include <FastLED.h>
 
-#define NUM_LEDS 8    // Number of LEDs in the chain
-#define DATA_PIN 6    // Data pin for LED control
+#define NUM_LEDS 8  // Number of LEDs in the chain
+#define DATA_PIN 6  // Data pin for LED control
 
-#include "arduino_secrets.h" 
+#include "arduino_secrets.h"
 ///////please enter your sensitive data in the Secret tab/arduino_secrets.h
-char ssid[] = SECRET_SSID;        // your network SSID (name)
+char ssid[] = SECRET_SSID;    // your network SSID (name)
 char pass[] = SECRET_PASS;    // your network password (use for WPA, or use as key for WEP)
-int status = WL_IDLE_STATUS;     // the WiFi radio's status
+int status = WL_IDLE_STATUS;  // the WiFi radio's status
 
 WiFiClient wifiClient;
 MqttClient mqttClient(wifiClient);
 
 const char broker[] = "mqtt.cheerlights.com";
-int        port     = 1883;
-const char topic[]  = "cheerlights";
+int port = 1883;
+const char topic[] = "cheerlights";
 
 
 
 CRGB leds[NUM_LEDS];  // Array to hold LED color data
 
 // Define the supported CheerLights colors and their RGB values
-String colorName[] = {"red", "pink", "green", "blue", "cyan", "white", "warmwhite", "oldlace", "purple", "magenta", "yellow", "orange"};
+String colorName[] = { "red", "pink", "green", "blue", "cyan", "white", "warmwhite", "oldlace", "purple", "magenta", "yellow", "orange" };
 
-int colorRGB[][3] = { 255,   0,   0,  // "red"
+int colorRGB[][3] = { 255, 0, 0,      // "red"
                       255, 192, 203,  // "pink"
-                        0, 255,   0,  // "green"
-                        0,   0, 255,  // "blue"
-                        0, 255, 255,  // "cyan"
+                      0, 255, 0,      // "green"
+                      0, 0, 255,      // "blue"
+                      0, 255, 255,    // "cyan"
                       255, 255, 255,  // "white"
                       255, 223, 223,  // "warmwhite"
                       255, 223, 223,  // "oldlace"
-                      128,   0, 128,  // "purple"
-                      255,   0, 255,  // "magenta"
-                      255, 255,   0,  // "yellow"
-                      255, 165,   0}; // "orange"
+                      128, 0, 128,    // "purple"
+                      255, 0, 255,    // "magenta"
+                      255, 255, 0,    // "yellow"
+                      255, 165, 0 };  // "orange"
 
 
 void setup() {
@@ -44,14 +57,15 @@ void setup() {
   Serial.begin(9600);
 
   while (!Serial) {
-    ; // wait for serial port to connect. Needed for native USB port only
+    ;  // wait for serial port to connect. Needed for native USB port only
   }
 
   // check for the WiFi module:
   if (WiFi.status() == WL_NO_MODULE) {
     Serial.println("Communication with WiFi module failed!");
     // don't continue
-    while (true);
+    while (true)
+      ;
   }
 
   String fv = WiFi.firmwareVersion();
@@ -89,7 +103,8 @@ void setup() {
     Serial.print("MQTT connection failed! Error code = ");
     Serial.println(mqttClient.connectError());
 
-    while (1);
+    while (1)
+      ;
   }
 
   Serial.println("You're connected to the MQTT broker!");
@@ -99,7 +114,7 @@ void setup() {
   mqttClient.onMessage(onMqttMessage);
 
   Serial.print("Subscribing to topic: ");
-  Serial.println(topic); 
+  Serial.println(topic);
   Serial.println();
 
   // subscribe to a topic
@@ -129,7 +144,7 @@ void printWifiData() {
   // print your board's IP address:
   IPAddress ip = WiFi.localIP();
   Serial.print("IP Address: ");
-  
+
   Serial.println(ip);
 
   // print your MAC address:
@@ -206,9 +221,9 @@ void setColor(String color) {
     if (color == colorName[colorIndex]) {
       // Set the color of each NeoPixel on the strip
       for (int pixel = 0; pixel < NUM_LEDS; pixel++) {
-        leds[pixel]= CRGB(colorRGB [colorIndex][0], colorRGB [colorIndex][1], colorRGB [colorIndex][2]);
+        leds[pixel] = CRGB(colorRGB[colorIndex][0], colorRGB[colorIndex][1], colorRGB[colorIndex][2]);
       }
-      FastLED.show();    
+      FastLED.show();
     }
   }
 }

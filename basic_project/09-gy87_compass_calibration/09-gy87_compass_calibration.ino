@@ -2,7 +2,7 @@
   This code is used to calibrate the QMC5883L magnetometer in the gy-87 module.
 
   Upload this calibration sketch onto your Arduino to provide calibration for 
-  your QMC5883L chip.After upload, run the serial monitor and follow the directions.
+  your QMC5883L chip. After upload, run the serial monitor and follow the directions.
   When prompted, copy the last line into your project's actual sketch.
 
   Board: Arduino Uno R4

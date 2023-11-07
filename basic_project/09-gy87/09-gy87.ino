@@ -50,6 +50,7 @@ void loop() {
 
   // Print BMP180 data
   printBMP180();
+  
   delay(500);
 }
 
@@ -57,8 +58,9 @@ void initializeQMC5883L() {
 
   compass.init();
 
-  // compass.setCalibrationOffsets(-336.00, -179.00, 47.00);
-  // compass.setCalibrationScales(1.05, 0.94, 1.02);
+  // You should replace the code below according to your calibration results
+  compass.setCalibrationOffsets(-458.00, -310.00, -362.00);
+  compass.setCalibrationScales(0.79, 0.79, 2.19);
 
 }
 

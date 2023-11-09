@@ -50,7 +50,7 @@ Code
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/ac0f9910-e53e-43a3-a5ae-ec4d3a3f4aa1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-Now, push the rocker and the coordinates of X and Y axes displayed on Serial Monitor will change accordingly.
+Now, when you push the rocker, the coordinates of the X and Y axes displayed on the Serial Monitor will change accordingly. Pressing the button will also display the coordinate Z=0.
 
 
 Code Analysis

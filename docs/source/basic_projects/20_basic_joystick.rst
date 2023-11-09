@@ -65,6 +65,8 @@ The code is use the serial monitor to print the value of the VRX and VRY pins of
         Serial.print("X: "); 
         Serial.print(analogRead(xPin), DEC);  // print the value of VRX in DEC
         Serial.print("|Y: ");
-        Serial.println(analogRead(yPin), DEC);  // print the value of VRX in DEC
-        delay(500);
+        Serial.print(analogRead(yPin), DEC);  // print the value of VRX in DEC
+        Serial.print("|Z: ");
+        Serial.println(digitalRead(swPin));  // print the value of SW
+        delay(50);
     }

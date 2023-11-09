@@ -232,4 +232,24 @@ rst_epilog = """
 
     <a href="https://github.com/sunfounder/Elite-Explorer-Kit/blob/main/basic_project/16-passive_buzzer/pitches.h" target="_blank">pitches.h</a>
 
+.. |link_ifttt| raw:: html
+
+    <a href="https://ifttt.com/explore" target="_blank">IFTTT</a>
+
+.. |link_webhooks| raw:: html
+
+    <a href="https://ifttt.com/maker_webhooks/settings" target="_blank">Webhooks Settings</a>
+
+.. |link_hivemq| raw:: html
+
+    <a href="http://www.hivemq.com/demos/websocket-client/" target="_blank">HiveMQ Web Client</a>
+
+.. |link_cheerlights| raw:: html
+
+    <a href="https://twitter.com/cheerlights" target="_blank">@CheerLights - Twitter</a>
+
+.. |link_discord_server| raw:: html
+
+    <a href="https://discord.com/invite/G7Q5UjDT7K" target="_blank">Discord Server</a>
+
 """

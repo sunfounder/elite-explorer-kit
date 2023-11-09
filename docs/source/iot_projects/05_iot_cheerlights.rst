@@ -1,0 +1,113 @@
+CherryLight
+===============================
+
+CheerLights is a global network of synchronized lights that can be controlled by anyone.
+
+Join the |link_cheerlights| LED color-changing community, which allows LEDs around the world to change colors simultaneously.
+
+You can place your LEDs in a corner of your office to remind yourself that you are not alone.
+
+In this case, we also utilize MQTT, but instead of publishing our own messages, we subscribe to the "cheerlights" topic. This allows us to receive messages sent by others to the "cheerlights" topic and use that information to change the color of our LED strip accordingly.
+
+
+**Wiring**
+
+.. image:: img/05_cheerlight_bb.png
+    :width: 100%
+    :align: center
+
+* :ref:`uno_r4_wifi`
+* :ref:`cpn_wires`
+* :ref:`cpn_breadboard`
+* :ref:`cpn_ws2812`
+
+
+**Schematic**
+
+.. image:: img/05_cheerlight_schematic.png
+    :width: 50%
+    :align: center
+
+.. raw:: html
+
+   <br/>
+
+**Install the Library**
+
+``ArduinoMqttClient.h``: Used for MQTT communication.
+
+``FastLED.h``: Used to drive the RGB LED Strip.
+
+**Run the Code**
+
+
+.. note::
+
+    * You can open the file ``05_cheerlight.ino`` under the path of ``Elite-Explorer-Kit-main\iot_project\05_cheerlight`` directly.
+    * Or copy this code into Arduino IDE.
+
+.. note::
+    In the code, SSID and password are stored in ``arduino_secrets.h``. Before uploading this example, you need to modify them with your own WiFi credentials. Additionally, for security purposes, ensure that this information is kept confidential when sharing or storing the code.
+
+.. raw:: html
+
+   <iframe src=https://create.arduino.cc/editor/sunfounder01/9d7ad736-9725-499f-a6ea-91602120d53e/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+
+
+
+
+**Control global @CheerLights devices**
+
+#. Join the |link_discord_server| and utilize the CheerLights bot to set the color. Simply type ``/cheerlights`` in any of the channels on the **CheerLights Discord Server** to activate the bot.
+
+   .. image:: img/05_iot_cheerlights_1.png
+
+#. Follow the instructions provided by the bot to set the color. This will allow you to control CheerLights devices globally.
+
+   .. image:: img/05_iot_cheerlights_2.png
+
+**How it works?**
+
+Here are the main parts of the code and explanations of their functions:
+
+1. Include the required libraries:
+
+   * ``WiFiS3.h``: Used for handling Wi-Fi connections.
+   * ``ArduinoMqttClient.h``: Used for handling MQTT connections.
+   * ``FastLED.h``: Used for controlling NeoPixel LED strips.
+
+2. Define some constants:
+
+   * ``NUM_LEDS``: The number of LEDs on the LED strip.
+   * ``DATA_PIN``: The data pin connected to Arduino for controlling the LED strip.
+   * ``arduino_secrets.h``: Header file containing Wi-Fi network name and password to protect sensitive information.
+   * ``broker``: Address of the MQTT server.
+   * ``port``: Port of the MQTT server.
+   * ``topic``: The MQTT topic to subscribe to.
+
+3. Define some global variables:
+
+   * ``CRGB leds[NUM_LEDS]``: An array to store LED color data.
+   * ``colorName``: An array of color names supported by the CheerLights project.
+   * ``colorRGB``: An array of RGB color codes corresponding to color names.
+
+4. ``setup()`` function:
+
+   * Initialize serial communication.
+   * Check if the Wi-Fi module is present and output its firmware version.
+   * Attempt to connect to the Wi-Fi network; if it fails, wait 10 seconds and retry.
+   * Upon successful connection, connect to the MQTT broker (server) and subscribe to the specified topic.
+   * Initialize the NeoPixel LED strip.
+
+5. ``loop()`` function:
+
+   * Periodically call the ``mqttClient.poll()`` function to receive MQTT messages and send MQTT keep-alive signals.
+   * Add a 5-second delay to avoid continuous connection.
+
+6. ``printWifiData()`` and ``printCurrentNet()`` functions are used to output Wi-Fi network and connection information.
+
+7. ``printMacAddress()`` function is used to print the MAC address in hexadecimal format.
+
+8. ``onMqttMessage()`` function is a callback function triggered when an MQTT message is received. It outputs the received topic and message content, converting the message content to lowercase. If the topic is "cheerlights," it calls the ``setColor()`` function to set the LED strip color.
+
+9. ``setColor()`` function takes a color name as a parameter, then looks for a matching color in the ``colorName`` array. If a matching color is found, it sets the LED strip's color to the corresponding RGB value and updates the LED strip's color using the ``FastLED.show()`` function.

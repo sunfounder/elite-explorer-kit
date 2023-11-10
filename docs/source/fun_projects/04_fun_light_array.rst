@@ -26,7 +26,7 @@ This program converts the readings from a light-dependent resistor into a corres
 
 **Schematic**
 
-.. image:: img/04_light_array_schematic.png
+.. image:: img/04_light_sensitive_array_schematic.png
    :width: 60%
 
 **Code**

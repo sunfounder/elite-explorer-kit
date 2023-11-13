@@ -41,3 +41,5 @@ valve motor, electromagnetic lock drive, precision instruments and other circuit
 
 * :ref:`basic_motor` (Basic Project)
 * :ref:`basic_pump` (Basic Project)
+* :ref:`fun_smart_fan` (Fun Project)
+* :ref:`fun_plant_monitor` (Fun Project)

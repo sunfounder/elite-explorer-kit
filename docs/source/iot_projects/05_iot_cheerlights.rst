@@ -1,3 +1,5 @@
+.. _iot_cherrylight:
+
 CherryLight
 ===============================
 

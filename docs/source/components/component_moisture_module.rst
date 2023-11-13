@@ -35,5 +35,6 @@ The higher the soil moisture, the higher the capacitance of the sensor. As a res
 **Example**
 
 * :ref:`basic_moisture` (Basic Project)
+* :ref:`fun_plant_monitor` (Fun Project)
 
 

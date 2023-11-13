@@ -17,9 +17,9 @@ Here is the electronic symbol of photoresistor.
     :width: 200
     :align: center
 
-* `Photoresistor - Wikipedia <https://en.wikipedia.org/wiki/Photoresistor#:~:text=A%20photoresistor%20(also%20known%20as,on%20the%20component's%20sensitive%20surface>`_
+* |link_photoresistor_wiki|
 
 **Example**
 
 * :ref:`basic_photoresistor` (Basic Project)
-
+* :ref:`fun_light_array` (Fun Project)

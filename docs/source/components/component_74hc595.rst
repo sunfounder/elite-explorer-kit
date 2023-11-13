@@ -8,7 +8,7 @@
 The 74HC595 consists of an 8−bit shift register and a storage register with three−state parallel outputs. It converts serial input into parallel output so you can save IO ports of an MCU.
 When MR (pin10) is high level and OE (pin13) is low level, data is input in the rising edge of SHcp and goes to the memory register through the rising edge of SHcp. If the two clocks are connected together, the shift register is always one pulse earlier than the memory register. There is a serial shift input pin (Ds), a serial output pin (Q) and an asynchronous reset button (low level) in the memory register. The memory register outputs a Bus with a parallel 8-bit and in three states. When OE is enabled (low level), the data in memory register is output to the bus.
 
-* `74HC595 Datasheet <https://www.ti.com/lit/ds/symlink/cd74hc595.pdf?ts=1617341564801>`_
+* |link_74hc595_datasheet|
 
 .. image:: img/74hc595_pin.png
     :width: 600
@@ -28,7 +28,4 @@ Pins of 74HC595 and their functions:
 **Example**
 
 * :ref:`basic_74hc595` (Basic Project)
-
-
-
-
+* :ref:`fun_digital_dice` (Fun Project)

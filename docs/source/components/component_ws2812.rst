@@ -25,7 +25,7 @@ It is flexible, can be docked, bent, and cut at will, and the back is equipped w
 
 **WS2812B Introdction**
 
-* `WS2812B Datasheet <https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf>`_
+* |link_ws2812b_datasheet|
 
 WS2812B is a intelligent control LED light source that the control circuit and RGB chip are integrated in a package of 5050 components. It internal include intelligent digital port data latch and signal reshaping ampli fication drive circuit. Also include a precision internal oscillator and a 12V voltage programmable constant current control part, effectively ensuring the pixel point light color height consistent.
 
@@ -42,3 +42,4 @@ LED with low driving voltage, environmental protection and energy saving, high b
 **Example**
 
 * :ref:`basic_ws2812` (Basic Project)
+* :ref:`iot_cherrylight` (IoT Project)

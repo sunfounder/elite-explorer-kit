@@ -3,7 +3,7 @@
 Power Supply Module
 =====================
 
-When we need a large current to drive a component, which will severely interfere with the normal work of Raspberry Pi. Therefore, we separately supply power for the component by this module to make it run safely and steadily.
+When we need a large current to drive a component, which will severely interfere with the normal work of Arduino UNO board. Therefore, we separately supply power for the component by this module to make it run safely and steadily.
 
 You can just plug it in the breadboard to supply power. It provides a voltage of 3.3V and 5V, and you can connect either via a jumper cap included.
 
@@ -29,4 +29,8 @@ You can just plug it in the breadboard to supply power. It provides a voltage of
 
 * :ref:`basic_motor` (Basic Project)
 * :ref:`basic_stepper_motor` (Basic Project)
+* :ref:`fun_tomato_timer` (Fun Project)
+* :ref:`fun_smart_fan` (Fun Project)
+* :ref:`fun_plant_monitor` (Fun Project)
+* :ref:`fun_access` (Fun Project)
 

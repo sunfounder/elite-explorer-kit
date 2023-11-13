@@ -17,6 +17,7 @@ Additionally, users can enter manual mode through a button to operate the fan at
 * :ref:`cpn_thermistor`
 * :ref:`cpn_motor`
 * :ref:`cpn_ta6586`
+* :ref:`cpn_power`
 
 **Wiring**
 

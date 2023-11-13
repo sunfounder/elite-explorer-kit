@@ -17,6 +17,7 @@ You can open the serial monitor to view the ID of your RFID card and re-config t
 * :ref:`cpn_mfrc522`
 * :ref:`cpn_stepper_motor`
 * :ref:`cpn_buzzer`
+* :ref:`cpn_power`
 
 **Wiring**
 

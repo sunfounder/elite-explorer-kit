@@ -28,3 +28,5 @@ The OLED driver chip converts the signals from the Arduino into commands for the
 **Example**
 
 * :ref:`basic_oled` (Basic Project)
+* :ref:`fun_pong` (Fun Project)
+* :ref:`iot_weathertime_screen` (IoT Project)

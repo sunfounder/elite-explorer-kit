@@ -21,9 +21,12 @@ The formula of the resistance value is as follows:
 
 **R** stands for the resistance value of the current limiting resistor, **Vsupply** for voltage supply, **VD** for voltage drop and **I** for the working current of the LED.
 
-Here is the detailed introduction for the LED: `LED - Wikipedia <https://en.wikipedia.org/wiki/Light-emitting_diode>`_.
+Here is the detailed introduction for the LED: |link_led_wiki|.
 
 **Example**
 
 * :ref:`basic_led` (Basic Project)
 * :ref:`basic_relay` (Basic Project)
+* :ref:`fun_light_array` (Fun Project)
+* :ref:`fun_tomato_timer` (Fun Project)
+* :ref:`fun_smart_fan` (Fun Project)

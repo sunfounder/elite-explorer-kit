@@ -39,4 +39,5 @@ Choosing different modes by using the jumper cap.
 **Example**
 
 * :ref:`basic_pir` (Basic Project)
-
+* :ref:`fun_welcome` (Fun Project)
+* :ref:`iot_security_system_ifttt` (IoT Project)

@@ -43,5 +43,7 @@ The size chart is as follows：
 **Example**
 
 * :ref:`basic_audio_speaker` (Basic Project)
+* :ref:`fun_welcome` (Fun Project)
+* :ref:`fun_fruit_piano` (Fun Project)
 * :ref:`new_dac`
 

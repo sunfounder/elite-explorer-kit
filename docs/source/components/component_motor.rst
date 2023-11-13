@@ -27,8 +27,7 @@ Current flows from the positive terminal of the battery through the circuit, thr
 But because of the two gaps in the commutator, this flow reverses halfway through each complete rotation.
 This continuous reversal essentially converts the DC power from the battery to AC, allowing the armature to experience torque in the right direction at the right time to maintain rotation.
 
-* `DC Motor - MagLab <https://nationalmaglab.org/education/magnet-academy/watch-play/interactive/dc-motor>`_
-
 **Example**
 
 * :ref:`basic_motor` (Basic Project)
+* :ref:`fun_smart_fan` (Fun Project)

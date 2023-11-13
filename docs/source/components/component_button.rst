@@ -34,6 +34,11 @@ In this kit, we provide two types of buttons. The one mentioned earlier is a sma
 **Example**
 
 * :ref:`basic_button` (Basic Project)
+* :ref:`fun_tomato_timer` (Fun Project)
+* :ref:`fun_digital_dice` (Fun Project)
+* :ref:`fun_smart_fan` (Fun Project)
+* :ref:`fun_pong` (Fun Project)
+* :ref:`iot_mqtt_publish` (IoT Project)
 * :ref:`new_hid_keyboard` 
 
 

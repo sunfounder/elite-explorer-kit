@@ -26,3 +26,4 @@ To help you get to know how 7-segment displays(Common Cathode) display Numbers, 
 
 * :ref:`basic_7segment` (Basic Project)
 * :ref:`basic_74hc595` (Basic Project)
+* :ref:`fun_digital_dice` (Fun Project)

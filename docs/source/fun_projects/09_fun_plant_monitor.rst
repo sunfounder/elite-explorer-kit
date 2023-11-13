@@ -16,6 +16,7 @@ Additionally, it displays temperature, humidity, and soil moisture on an LCD scr
 * :ref:`cpn_ta6586`
 * :ref:`cpn_soil_moisture`
 * :ref:`cpn_dht11`
+* :ref:`cpn_power`
 
 **Wiring**
 

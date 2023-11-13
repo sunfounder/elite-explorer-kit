@@ -28,6 +28,7 @@ In this project, we will simulate a Pomodoro timer. When the "Pomodoro" starts, 
 * :ref:`cpn_led`
 * :ref:`cpn_resistor`
 * :ref:`cpn_button`
+* :ref:`cpn_power`
 
 **Wiring**
 

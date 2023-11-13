@@ -1,5 +1,5 @@
-Components List and Introduction
-====================================
+Learn about the Components in Your Kit
+=========================================
 
 Components List
 -----------------

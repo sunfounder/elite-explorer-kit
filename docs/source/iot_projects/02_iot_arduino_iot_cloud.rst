@@ -1,3 +1,5 @@
+.. _iot_arduino_cloud:
+
 Arduino IoT Cloud
 ===========================
 

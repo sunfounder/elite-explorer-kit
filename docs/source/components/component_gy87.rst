@@ -22,4 +22,5 @@ The GY-87 sensor module is commonly used in applications such as drones, robotic
 
 **Example**
 
- * :ref:`basic_gy87` (Basic Project)
+* :ref:`basic_gy87` (Basic Project)
+* :ref:`fun_escape` (Fun Project)

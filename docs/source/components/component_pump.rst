@@ -31,3 +31,4 @@ It's highly suitable for beginners to create a fountain or plant watering projec
 **Example**
 
 * :ref:`basic_pump` (Basic Project)
+* :ref:`fun_plant_monitor` (Fun Project)

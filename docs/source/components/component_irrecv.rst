@@ -45,3 +45,4 @@ This is a Mini thin infrared wireless remote control with 21 function buttons an
 **Example**
 
 * :ref:`basic_irrecv` (Basic Project)
+* :ref:`fun_guess_number` (Fun Project)

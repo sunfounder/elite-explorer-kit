@@ -41,5 +41,4 @@ trigger signal and the echo signal.
 **Example**
 
 * :ref:`basic_ultrasonic_sensor` (Basic Project)
-
-
+* :ref:`fun_smart_can` (Fun Project)

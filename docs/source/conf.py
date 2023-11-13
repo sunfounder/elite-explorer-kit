@@ -252,4 +252,68 @@ rst_epilog = """
 
     <a href="https://discord.com/invite/G7Q5UjDT7K" target="_blank">Discord Server</a>
 
+.. |link_breadboard_tutorials| raw:: html
+
+    <a href="https://www.sciencebuddies.org/science-fair-projects/references/how-to-use-a-breadboard" target="_blank">How to Use a Breadboard - Science Buddies</a>
+
+.. |link_s8050_datasheet| raw:: html
+
+    <a href="https://datasheet4u.com/datasheet-pdf/WeitronTechnology/S8050/pdf.php?id=576670" target="_blank">S8050 Transistor Datasheet</a>
+
+.. |link_s8550_datasheet| raw:: html
+
+    <a href="https://www.mouser.com/datasheet/2/149/SS8550-118608.pdf" target="_blank">S8550 Transistor Datasheet</a>
+
+.. |link_general_purpose_diode| raw:: html
+
+    <a href="https://en.wikipedia.org/wiki/1N400x_general-purpose_diode" target="_blank">1N400x general-purpose diode - Wikipedia</a>
+
+.. |link_zener_diode| raw:: html
+
+    <a href="https://en.wikipedia.org/wiki/Zener_diode" target="_blank">Zener diode - Wikipedia</a>
+
+.. |link_led_wiki| raw:: html
+
+    <a href="https://en.wikipedia.org/wiki/Light-emitting_diode" target="_blank">LED - Wikipedia</a>
+
+.. |link_ws2812b_datasheet| raw:: html
+
+    <a href="https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" target="_blank">WS2812B Datasheet</a>
+
+.. |link_pcf8574_datasheet| raw:: html
+
+    <a href="https://www.ti.com/lit/ds/symlink/pcf8574.pdf" target="_blank">PCF8574 Datasheet</a>
+
+.. |link_buzzer_wiki| raw:: html
+
+    <a href="https://en.wikipedia.org/wiki/Buzzer" target="_blank">Buzzer - Wikipedia</a>
+
+.. |link_potentiometer_wiki| raw:: html
+
+    <a href="https://en.wikipedia.org/wiki/Potentiometer" target="_blank">Potentiometer - Wikipedia</a>
+
+.. |link_mpr121_datasheet| raw:: html
+
+    <a href="https://cdn-shop.adafruit.com/datasheets/MPR121.pdf" target="_blank">MPR121 Datasheet</a>
+
+.. |link_photoresistor_wiki| raw:: html
+
+    <a href="https://en.wikipedia.org/wiki/Photoresistor" target="_blank">Photoresistor - Wikipedia</a>
+
+.. |link_thermistor_wikipedia| raw:: html
+
+    <a href="https://en.wikipedia.org/wiki/Thermistor" target="_blank">Thermistor - Wikipedia</a>
+
+.. |link_sw520d_datasheet| raw:: html
+
+    <a href="https://www.tme.com/Document/f1e6cedd8cb7feeb250b353b6213ec6c/SW-520D.pdf" target="_blank">SW520D Tilt Switch Datasheet</a>
+
+.. |link_dht11_datasheet| raw:: html
+
+    <a href="https://components101.com/sites/default/files/component_datasheet/DHT11-Temperature-Sensor.pdf" target="_blank">DHT11 Datasheet</a>
+
+.. |link_74hc595_datasheet| raw:: html
+
+    <a href="https://www.ti.com/lit/ds/symlink/cd74hc595.pdf?ts=1617341564801" target="_blank">74HC595 Datasheet</a>
+
 """

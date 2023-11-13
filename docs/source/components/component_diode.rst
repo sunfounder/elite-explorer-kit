@@ -23,7 +23,7 @@ A rectifier diode is a semiconductor diode, used to rectify AC (alternating curr
 
 The designing of rectifier diodes can be done with Silicon material and they are capable of conducting high electric current values. These diodes are not famous but still used Ge or gallium arsenide-based semiconductor diodes. Ge diodes have less allowable reversed voltage as well as a lesser allowable junction temperature. The Ge diode has a benefit as compared to Si diode that is low threshold voltage value while operating in a forward-bias.
 
-* `1N400x general-purpose diode  - Wikipedia <https://en.wikipedia.org/wiki/1N400x_general-purpose_diode>`_
+* |link_general_purpose_diode|
 
 
 **Zener Diode**
@@ -36,7 +36,7 @@ This diode is a semiconductor device that has a very high resistance up to the c
 .. image:: img/symbol-zener-diode.jpg
 
 
-* `Zener diode - Wikipedia <https://en.wikipedia.org/wiki/Zener_diode>`_
+* |link_zener_diode|
 
 **Example**
 

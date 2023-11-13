@@ -25,7 +25,7 @@ electrodes with auto-configuration built in. The device also features a 13th
 simulated sensing channel dedicated for near proximity detection using the
 multiplexed sensing inputs.
 
-* `MPR121 Datasheet <https://cdn-shop.adafruit.com/datasheets/MPR121.pdf>`_
+* |link_mpr121_datasheet|
 
 **Features**
 
@@ -48,3 +48,4 @@ multiplexed sensing inputs.
 **Example**
 
 * :ref:`basic_mpr121` (Basic Project)
+* :ref:`fun_fruit_piano` (Fun Project)

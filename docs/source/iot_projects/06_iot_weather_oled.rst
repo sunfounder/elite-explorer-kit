@@ -1,3 +1,4 @@
+.. _iot_weathertime_screen:
 
 WeatherTime Screen
 ===============================

@@ -14,8 +14,11 @@ Then the host receives the answer signal and begins to receive 40-bit humiture d
 .. image:: img/Dht11.png
 
 
-* `DHT11 Datasheet <https://components101.com/sites/default/files/component_datasheet/DHT11-Temperature-Sensor.pdf>`_
+* |link_dht11_datasheet|
 
 **Example**
 
 * :ref:`basic_humiture_sensor` (Basic Project)
+* :ref:`fun_plant_monitor` (Fun Project)
+* :ref:`iot_arduino_cloud` (IoT Project)
+* :ref:`iot_ble_home` (IoT Project)

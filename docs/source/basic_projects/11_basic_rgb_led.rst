@@ -1,9 +1,7 @@
 .. _basic_rgb_led:
 
-RGB LED module
+RGB LED
 ==========================
-
-.. https://docs.sunfounder.com/projects/euler-kit/en/latest/cproject/ar_rgb.html#ar-rgb
 
 Overview
 ---------------

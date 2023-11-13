@@ -1,7 +1,5 @@
 .. _fun_digital_dice:
 
-.. _fun_xxx:
-
 Digital Dice
 =======================================
 

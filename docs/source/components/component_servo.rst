@@ -23,3 +23,4 @@ When a pulse is sent to a servo that is less than 1.5 ms, the servo rotates to a
 **Example**
 
 * :ref:`basic_servo` (Basic Project)
+* :ref:`fun_smart_can` (Fun Project)

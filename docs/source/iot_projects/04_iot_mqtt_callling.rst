@@ -9,9 +9,6 @@ MQTT protocols define how IoT devices exchange data. They operate in an event-dr
 
 In this section, we'll create a service bell system using UNO R4, HiveMQ (a free public MQTT broker service), and four buttons. Each of the four buttons corresponds to a restaurant table, and when a customer presses a button, you'll be able to see which table needs service on HiveMQ.
 
-
-
-
 **Wiring**
 
 .. image:: img/04_mqtt_button_bb.png

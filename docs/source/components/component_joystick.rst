@@ -22,3 +22,4 @@ The joystick also has a digital input that is actuated when the joystick is pres
 **Example**
 
 * :ref:`basic_joystick` (Basic Project)
+* :ref:`fun_snake` (Fun Project)

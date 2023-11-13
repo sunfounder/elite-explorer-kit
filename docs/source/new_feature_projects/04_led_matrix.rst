@@ -201,6 +201,9 @@ In the previous steps, we obtained a ``.h`` file that stores a series of frames 
 
 - |link_r4_led|
 
+**More Projects**
+
+* :ref:`fun_snake` (Fun Project)
 
 
 

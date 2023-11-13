@@ -15,7 +15,7 @@ As we all know, though LCD and some other displays greatly enrich the man-machin
 
 Therefore, LCD1602 with an I2C module is developed to solve the problem. The I2C module has a built-in PCF8574 I2C chip that converts I2C serial data to parallel data for the LCD display.        
 
-* `PCF8574 Datasheet <https://www.ti.com/lit/ds/symlink/pcf8574.pdf?ts=1627006546204&ref_url=https%253A%252F%252Fwww.google.com%252F>`_
+* |link_pcf8574_datasheet|
 
 **I2C Address**
 
@@ -43,3 +43,6 @@ Backlight can be enabled by jumper cap, unplugg the jumper cap to disable the ba
 
 * :ref:`basic_i2c_lcd1602` (Basic Project)
 * :ref:`basic_ultrasonic_sensor` (Basic Project)
+* :ref:`fun_plant_monitor` (Fun Project)
+* :ref:`fun_guess_number` (Fun Project)
+* :ref:`iot_Bluetooth_lcd` (IoT Project)

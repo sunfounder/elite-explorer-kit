@@ -21,3 +21,4 @@ The MF RC522 uses advanced modulation and demodulation concept which fully prese
 **Example**
 
 * :ref:`basic_mfrc522` (Basic Project)
+* :ref:`fun_access` (Fun Project)

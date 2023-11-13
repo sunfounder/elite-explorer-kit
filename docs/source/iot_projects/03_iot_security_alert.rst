@@ -1,3 +1,5 @@
+.. _iot_security_system_ifttt:
+
 Security System via IFTTT
 ============================================
 

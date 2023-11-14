@@ -24,7 +24,7 @@ Adafruit_BMP085 bmp;
 QMC5883LCompass compass;
 
 void setup() {
-  // Initialize the serial communication with a baud rate of 115200
+  // Initialize the serial communication with a baud rate of 9600
   Serial.begin(9600);
 
   // Initialize the MPU6050 sensor (accelerometer and gyroscope)

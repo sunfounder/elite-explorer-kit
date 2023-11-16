@@ -1,15 +1,16 @@
 /*
-  This code simulates a dice roll on a 7-segment display. Pressing a button starts
-  the roll, displaying random numbers rapidly and stopping after 1 second.
+  This code simulates a dice roll on a 7-segment display. Shaking the device 
+  (tilt switch activation) starts the roll, displaying random numbers rapidly 
+  and stopping after a short duration.
 
   Board: Arduino Uno R4 
-  Component: 7-segment Display with 74HC595 and Button
+  Component: 7-segment Display with 74HC595 and Tilt Switch
 */
 
 const int dataPin = 10;   // DS of 74HC595
 const int clockPin = 13;  // SH_CP of 74HC595
 const int latchPin = 12;  // ST_CP of 74HC595
-const int buttonPin = 2;  // The pin where the button is connected
+const int tiltPin = 2;    // The pin where the tilt switch is connected
 
 // Byte representation for numbers in a common-cathode 7-segment display
 byte numbers[] = {
@@ -25,17 +26,17 @@ byte numbers[] = {
 
 // State and timing variables
 volatile bool rolling = false;
-unsigned long lastButtonPress = 0;
+unsigned long lastShakeTime = 0;
 
 void setup() {
   // Initialize pins
   pinMode(dataPin, OUTPUT);
   pinMode(clockPin, OUTPUT);
   pinMode(latchPin, OUTPUT);
-  pinMode(buttonPin, INPUT_PULLUP);  // Enable internal pull-up resistor
+  pinMode(tiltPin, INPUT_PULLUP);  // Enable internal pull-up resistor
 
-  // Attach an interrupt to the buttonPin. When the button state changes (pressed or released), the rollDice function will be called
-  attachInterrupt(digitalPinToInterrupt(buttonPin), rollDice, CHANGE);
+  // Attach an interrupt to the tiltPin. When the tilt switch is activated, the shakeDetected function will be called
+  attachInterrupt(digitalPinToInterrupt(tiltPin), rollDice, CHANGE);
 }
 
 void loop() {
@@ -46,17 +47,17 @@ void loop() {
     delay(80);  // Delay to make the rolling effect visible
 
     // Stop rolling after 1 second
-    if ((millis() - lastButtonPress) > 1000) {
+    if ((millis() - lastShakeTime) > 1000) {
       rolling = false;
     }
   }
 }
 
-// Interrupt handler for button press
+// Interrupt handler for shake detection
 void rollDice() {
-  if (digitalRead(buttonPin) == LOW) {
-    lastButtonPress = millis();  // Record the time of button press
-    rolling = true;              // Start rolling
+  if (digitalRead(tiltPin) == LOW) {
+    lastShakeTime = millis();  // Record the time of shake
+    rolling = true;            // Start rolling
   }
 }
 

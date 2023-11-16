@@ -19,7 +19,8 @@ String lastDecodedValue = "";  // Variable to store the last decoded value
 
 LiquidCrystal_I2C lcd(0x27, 16, 2);
 
-int count = 0;       // Current input number
+// Variables for game state
+int currentGuess = 0;       // Current input number
 int pointValue = 0;  // Target number
 int upper = 99;      // Current upper limit for guessing
 int lower = 0;       // Current lower limit for guessing
@@ -34,7 +35,7 @@ void setup() {
 
 void loop() {
   if (IrReceiver.decode()) {
-    bool result = 0;
+    bool numberMatched = 0;
     // Serial.println(IrReceiver.decodedIRData.command);
     String num = decodeKeyValue(IrReceiver.decodedIRData.command);
     if (num != "ERROR" && num != lastDecodedValue) {
@@ -46,51 +47,59 @@ void loop() {
     if (num == "POWER") {
       initNewValue();  // Start new game if POWER button pressed
     } else if (num == "CYCLE") {
-      result = detectPoint();
-      lcdShowInput(result);
+      numberMatched = detectPoint();
+      lcdShowInput(numberMatched);
     } else if (num >= "0" && num <= "9") {
-      count = count * 10;
-      count += num.toInt();
-      if (count >= 10) {
-        result = detectPoint();
+      currentGuess = currentGuess * 10;
+      currentGuess += num.toInt();
+      if (currentGuess >= 10) {
+        numberMatched = detectPoint();
       }
-      lcdShowInput(result);
+      lcdShowInput(numberMatched);
     }
     IrReceiver.resume();  // Enable receiving of the next value
   }
 }
 
 void initNewValue() {
+
+  // Generate a new target number
   randomSeed(analogRead(A0));  // Seed random number generator
   pointValue = random(99);     // Generate target number
+
   upper = 99;
   lower = 0;
+
+  // Display welcome message
   lcd.clear();
   lcd.print("    Welcome!");
   lcd.setCursor(0, 1);
   lcd.print("  Guess Number!");
-  count = 0;
+
+  currentGuess = 0;
+
+  // Output target for debugging
   Serial.print("point is ");
   Serial.println(pointValue);
 }
 
 bool detectPoint() {
   // Check if guess is correct, too high, or too low
-  if (count > pointValue) {
-    if (count < upper) upper = count;
-  } else if (count < pointValue) {
-    if (count > lower) lower = count;
-  } else if (count == pointValue) {
-    count = 0;
+  if (currentGuess > pointValue) {
+    if (currentGuess < upper) upper = currentGuess;
+  } else if (currentGuess < pointValue) {
+    if (currentGuess > lower) lower = currentGuess;
+  } else if (currentGuess == pointValue) {
+    currentGuess = 0;
     return true;
   }
-  count = 0;
+  currentGuess = 0;
   return false;
 }
 
-void lcdShowInput(bool result) {
+void lcdShowInput(bool numberMatched) {
   lcd.clear();
-  if (result == 1) {
+  if (numberMatched == 1) {
     lcd.setCursor(0, 0);
     lcd.print("The number is ");
     lcd.print(pointValue);
@@ -101,7 +110,7 @@ void lcdShowInput(bool result) {
     return;
   }
   lcd.print("Enter number:");
-  lcd.print(count);
+  lcd.print(currentGuess);
   lcd.setCursor(0, 1);
   lcd.print(lower);
   lcd.print(" < Point < ");
@@ -109,9 +118,9 @@ void lcdShowInput(bool result) {
 }
 
 
-String decodeKeyValue(long result) {
+String decodeKeyValue(long irCode) {
   // Map IR codes to corresponding commands
-  switch (result) {
+  switch (irCode) {
     case 0x16:
       return "0";
     case 0xC:

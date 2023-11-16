@@ -17,24 +17,19 @@
 const int IR_RECEIVE_PIN = 5;  // Define the pin number for the IR Sensor
 String lastDecodedValue = "";  // Variable to store the last decoded value
 
-const long interval = 1000;
-
-unsigned long previousMillis = 0;
-
 LiquidCrystal_I2C lcd(0x27, 16, 2);
 
-
-int count = 0;      /*Input Number Value*/
-int pointValue = 0; /*The Random Lucky Point*/
-int upper = 99;     /*Upper Limit Tips*/
-int lower = 0;      /*Lower Limit Tips*/
+int count = 0;       // Current input number
+int pointValue = 0;  // Target number
+int upper = 99;      // Current upper limit for guessing
+int lower = 0;       // Current lower limit for guessing
 
 void setup() {
   lcd.init();
   lcd.backlight();
   Serial.begin(9600);                                     // Start serial communication at 9600 baud rate
   IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK);  // Start the IR receiver
-  initNewValue();
+  initNewValue();                                         // Initialize a new game round
 }
 
 void loop() {
@@ -47,8 +42,9 @@ void loop() {
       lastDecodedValue = num;  // Update the last decoded value
     }
 
+    // Handle different IR commands
     if (num == "POWER") {
-      initNewValue();
+      initNewValue();  // Start new game if POWER button pressed
     } else if (num == "CYCLE") {
       result = detectPoint();
       lcdShowInput(result);
@@ -65,8 +61,8 @@ void loop() {
 }
 
 void initNewValue() {
-  randomSeed(analogRead(A0));
-  pointValue = random(99);
+  randomSeed(analogRead(A0));  // Seed random number generator
+  pointValue = random(99);     // Generate target number
   upper = 99;
   lower = 0;
   lcd.clear();
@@ -79,21 +75,25 @@ void initNewValue() {
 }
 
 bool detectPoint() {
+  // Check if guess is correct, too high, or too low
   if (count > pointValue) {
     if (count < upper) upper = count;
   } else if (count < pointValue) {
     if (count > lower) lower = count;
   } else if (count == pointValue) {
     count = 0;
-    return 1;
+    return true;
   }
   count = 0;
-  return 0;
+  return false;
 }
 
 void lcdShowInput(bool result) {
   lcd.clear();
   if (result == 1) {
+    lcd.setCursor(0, 0);
+    lcd.print("The number is ");
+    lcd.print(pointValue);
     lcd.setCursor(0, 1);
     lcd.print(" You've got it! ");
     delay(5000);
@@ -109,54 +109,54 @@ void lcdShowInput(bool result) {
 }
 
 
-String decodeKeyValue(long result)
-{
-  switch(result){
+String decodeKeyValue(long result) {
+  // Map IR codes to corresponding commands
+  switch (result) {
     case 0x16:
       return "0";
     case 0xC:
-      return "1"; 
+      return "1";
     case 0x18:
-      return "2"; 
+      return "2";
     case 0x5E:
-      return "3"; 
+      return "3";
     case 0x8:
-      return "4"; 
+      return "4";
     case 0x1C:
-      return "5"; 
+      return "5";
     case 0x5A:
-      return "6"; 
+      return "6";
     case 0x42:
-      return "7"; 
+      return "7";
     case 0x52:
-      return "8"; 
+      return "8";
     case 0x4A:
-      return "9"; 
+      return "9";
     case 0x9:
-      return "+"; 
+      return "+";
     case 0x15:
-      return "-"; 
+      return "-";
     case 0x7:
-      return "EQ"; 
+      return "EQ";
     case 0xD:
       return "U/SD";
     case 0x19:
-      return "CYCLE";         
+      return "CYCLE";
     case 0x44:
-      return "PLAY/PAUSE";   
+      return "PLAY/PAUSE";
     case 0x43:
-      return "FORWARD";   
+      return "FORWARD";
     case 0x40:
-      return "BACKWARD";   
+      return "BACKWARD";
     case 0x45:
-      return "POWER";   
+      return "POWER";
     case 0x47:
-      return "MUTE";   
+      return "MUTE";
     case 0x46:
-      return "MODE";       
+      return "MODE";
     case 0x0:
-      return "ERROR";   
-    default :
       return "ERROR";
-    }
+    default:
+      return "ERROR";
+  }
 }

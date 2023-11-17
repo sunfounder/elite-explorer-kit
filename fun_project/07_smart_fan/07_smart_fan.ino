@@ -20,6 +20,9 @@
 bool manualMode = false;
 
 void setup() {
+
+  Serial.begin(9600);
+
   // Set pin modes
   pinMode(MOTOR_PIN, OUTPUT);
   pinMode(TEMP_SENSOR_PIN, INPUT);
@@ -83,6 +86,11 @@ float voltageToTemperature(float voltage) {
 
   // Convert to Celsius
   float tempC = tempK - 273.15;
+
+  // Print temperature in Celsius to the Serial Monitor
+  Serial.print("Temp: ");
+  Serial.print(tempC);
+  Serial.println(" degree Celsius");
 
   // Convert to Fahrenheit
   // float tempF = tempC * 1.8 + 32;

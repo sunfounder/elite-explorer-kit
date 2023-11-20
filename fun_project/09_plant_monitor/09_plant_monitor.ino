@@ -63,7 +63,7 @@ void loop() {
   lcd.print(String(soilMoisture));
 
   // Activate water pump if soil is dry
-  if (soilMoisture > 650) {
+  if (soilMoisture > 580) {
     digitalWrite(WATER_PUMP_PIN, HIGH);  // Turn on water pump
     delay(1000);                         // Pump water for 1 second
     digitalWrite(WATER_PUMP_PIN, LOW);   // Turn off water pump

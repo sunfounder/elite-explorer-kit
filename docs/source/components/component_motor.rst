@@ -8,12 +8,14 @@ DC Motor
 
 This is a 3V DC motor. When you give a high level and a low level to each of the 2 terminals, it will rotate.
 
-* **Size**: 25*20*15MM
-* **Operation Voltage**: 1-6V
-* **Free-run Current** (3V): 70m
-* **A Free-run Speed** (3V): 13000RPM
-* **Stall Current** (3V): 800mA
+* **Length**: 25mm
+* **Diameter**: 21mm
 * **Shaft Diameter**: 2mm
+* **Shaft Length**: 8mm
+* **Voltage**: 3-6V
+* **Current**: 0.35-0.4A
+* **Speed at 3V**: 19000 RPM (Rotations Per Minute)
+* **Weight**: Approximately 14g (for one unit)
 
 Direct current (DC) motor is a continuous actuator that converts electrical energy into mechanical energy. DC motors make rotary pumps, fans, compressors, impellers, and other devices work by producing continuous angular rotation.
 

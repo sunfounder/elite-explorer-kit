@@ -3,6 +3,13 @@
 Light-sensitive Array
 ==========================================
 
+.. raw:: html
+
+   <video loop autoplay muted style = "max-width:100%">
+      <source src="../_static/videos/fun_projects/04_fun_lightarray.mp4"  type="video/mp4">
+      Your browser does not support the video tag.
+   </video>
+
 This program converts the readings from a light-dependent resistor into a corresponding number of illuminated LED lights, creating a simple indicator of light brightness.
 
 **Required Components**

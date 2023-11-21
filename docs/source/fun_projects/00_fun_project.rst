@@ -12,14 +12,13 @@ In this chapter, you will find some fun projects. These projects involve the use
     02_fun_fruit_piano
     03_fun_hue
     04_fun_light_array
-    05_fun_tomato_timer
-    06_fun_digital_dice
-    07_fun_smart_fan
-    08_fun_smart_can
-    09_fun_plant_monitor
-    10_fun_access
-    11_fun_guess_number
-    12_fun_escape
-    13_fun_pong
-    14_fun_snake
+    05_fun_digital_dice
+    06_fun_smart_fan
+    07_fun_smart_can
+    08_fun_plant_monitor
+    09_fun_access
+    10_fun_guess_number
+    11_fun_escape
+    12_fun_pong
+    13_fun_snake
 

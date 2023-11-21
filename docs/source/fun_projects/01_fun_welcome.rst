@@ -3,7 +3,14 @@
 Welcome
 ========================
 
-In this project, we will use a PIR sensor to detect human presence and a speaker to simulate a doorbell, similar to the entrance doorbells in convenience stores. 
+.. raw:: html
+
+   <video loop controls style = "max-width:100%">
+      <source src="../_static/videos/fun_projects/01_fun_welcome.mp4"  type="video/mp4">
+      Your browser does not support the video tag.
+   </video>
+
+In this project, we will use a PIR sensor to detect human presence and a speaker to simulate a doorbell, similar to the entrance doorbells in convenience stores.
 When a pedestrian appears within the range of the PIR sensor, the speaker will ring, mimicking a doorbell.
 
 **Required Components**

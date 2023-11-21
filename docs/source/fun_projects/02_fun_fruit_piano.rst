@@ -3,8 +3,14 @@
 Fruit Piano
 ========================
 
-This project is a simple fruit piano that reads input from an MPR121 touch sensor and plays music through a DAC. 
-In other words, we've turned fruits into a keyboard, allowing you to play music by simply touching them.
+.. raw:: html
+
+   <video loop controls style = "max-width:100%">
+      <source src="../_static/videos/fun_projects/02_fun_fruit_piano.mp4"  type="video/mp4">
+      Your browser does not support the video tag.
+   </video>
+
+This project is a simple fruit piano that reads input from an MPR121 touch sensor and plays music through a DAC. In other words, we've turned fruits into a keyboard, allowing you to play music by simply touching them.
 
 **Required Components**
 

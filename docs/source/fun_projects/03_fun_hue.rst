@@ -3,6 +3,13 @@
 HueDial
 ========================================
 
+.. raw:: html
+
+   <video loop autoplay muted style = "max-width:100%">
+      <source src="../_static/videos/fun_projects/03_fun_huedial.mp4"  type="video/mp4">
+      Your browser does not support the video tag.
+   </video>
+
 This example controls the color of an RGB LED based on the position of a rotary knob. 
 Different positions of the knob correspond to different HUE values, which are then translated into RGB color values, resulting in a color change for the RGB LED.
 

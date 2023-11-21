@@ -56,6 +56,6 @@ void loop() {
 
 void playNote(int note) {
   wave.freq(note);  // Set frequency for the DAC
-  delay(100);       // Delay for a short period to play the note
+  delay(300);       // Delay for a short period to play the note
   wave.stop();      // Stop the wave after the note is played
 }

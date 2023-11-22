@@ -11,6 +11,7 @@
   Library: https://github.com/bblanchon/ArduinoJson (ArduinoJson by Benoit Blanchon)
            0https://github.com/adafruit/Adafruit_SSD1306 (Adafruit SSD1306 by Adafruit)  
            https://github.com/adafruit/Adafruit-GFX-Library (Adafruit GFX Library by Adafruit) 
+           https://github.com/arduino-libraries/NTPClient (NTPClient by Fabrice Weinberg) 
            
 */
 
@@ -93,7 +94,7 @@ void loop() {
   timeClient.update();
 
   // Check if it's time to send a new request
-  if (millis() - lastConnectionTime > postingInterval) {
+  if (!lastConnectionTime || millis() - lastConnectionTime > postingInterval) {
     httpRequest();
   }
 }
@@ -108,6 +109,10 @@ void read_response() {
   while (client.available()) {
     /* actual data reception */
     char c = client.read();
+    
+    // for debug
+    Serial.print(c);
+    
     if ('{' == c) {
       jsonDetected = true;
     }
@@ -130,6 +135,7 @@ void read_response() {
       return;
     }
 
+    String weather = (root["weather"][0]["main"]);
     float temp = (float)(root["main"]["temp"]) - 273.15;        // get temperature in °C
     int humidity = root["main"]["humidity"];                    // get humidity in %
     float pressure = (float)(root["main"]["pressure"]) / 1000;  // get pressure in bar
@@ -142,7 +148,7 @@ void read_response() {
     // Serial.println("Pressure = " + String(pressure) + " bar");
     // Serial.println("Wind speed = " + String(wind_speed) + " m/s");
     // Serial.println("Wind degree = " + String(wind_degree) + " °");
-    displayWeatherData(temp, humidity, pressure, wind_speed);
+    displayWeatherData(weather, temp, humidity, pressure, wind_speed);
   }
 }
 
@@ -188,7 +194,7 @@ void printWifiStatus() {
   Serial.println(" dBm");
 }
 
-void displayWeatherData(float temp, int humidity, float pressure, float wind_speed) {
+void displayWeatherData(String weather, float temp, int humidity, float pressure, float wind_speed) {
   display.clearDisplay();
   display.setTextSize(1);               // Normal 1:1 pixel scale
   display.setTextColor(SSD1306_WHITE);  // Draw white text
@@ -196,18 +202,21 @@ void displayWeatherData(float temp, int humidity, float pressure, float wind_spe
 
   // Display Day of the Week
   String daysOfTheWeek[7] = { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
-  display.println(daysOfTheWeek[timeClient.getDay()]);
+  display.print(daysOfTheWeek[timeClient.getDay()]);
 
-  // Display Time in HH:MM format
-  display.print("Time: ");
+  display.print(" ");
   if (timeClient.getHours() < 10) display.print("0");  // Add leading zero for hours < 10
   display.print(timeClient.getHours());
   display.print(":");
   if (timeClient.getMinutes() < 10) display.print("0");  // Add leading zero for minutes < 10
   display.println(timeClient.getMinutes());
 
+  display.println();
+  display.print(LOCATION);
+  display.println(" " + weather);
 
-  display.print("Temp: ");
+  // Display Weather
+  display.print("Temperature: ");
   display.print(temp);
   display.println(" C");
 

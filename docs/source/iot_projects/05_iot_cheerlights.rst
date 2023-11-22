@@ -3,11 +3,14 @@
 CherryLight
 ===============================
 
-CheerLights is a global network of synchronized lights that can be controlled by anyone.
+.. raw:: html
 
-Join the |link_cheerlights| LED color-changing community, which allows LEDs around the world to change colors simultaneously.
+   <video loop autoplay muted style = "max-width:100%">
+      <source src="../_static/videos/iot_projects/05_iot_cheerlights.mp4"  type="video/mp4">
+      Your browser does not support the video tag.
+   </video>
 
-You can place your LEDs in a corner of your office to remind yourself that you are not alone.
+CheerLights is a global network of synchronized lights that can be controlled by anyone. Join the |link_cheerlights| LED color-changing community, which allows LEDs around the world to change colors simultaneously.  Place your LEDs in a corner of your office to remind yourself that you are not alone.
 
 In this case, we also utilize MQTT, but instead of publishing our own messages, we subscribe to the "cheerlights" topic. This allows us to receive messages sent by others to the "cheerlights" topic and use that information to change the color of our LED strip accordingly.
 

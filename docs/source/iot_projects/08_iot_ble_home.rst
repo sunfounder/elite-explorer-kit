@@ -3,12 +3,12 @@
 Bluetooth Environmental Monitor
 =================================
 
-.. .. raw:: html
+.. raw:: html
 
-..    <video loop autoplay muted style = "max-width:100%">
-..       <source src="../_static/video/iot/10-iot_Bluetooth_environmental_monitor.mp4"  type="video/mp4">
-..       Your browser does not support the video tag.
-..    </video>
+   <video loop autoplay muted style = "max-width:100%">
+      <source src="../_static/videos/iot_projects/08_iot_ble_home.mp4"  type="video/mp4">
+      Your browser does not support the video tag.
+   </video>
 
 
 This project uses an Android app created with MIT App Inventor to receive and display environmental data from an Arduino board. The Arduino board fetches data from a DHT11 sensor to measure temperature and humidity. Once the data is collected, it's transmitted over Bluetooth. The app will display the data on the screen once it receives it.

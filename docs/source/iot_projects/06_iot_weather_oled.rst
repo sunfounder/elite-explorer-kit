@@ -3,10 +3,14 @@
 WeatherTime Screen
 ===============================
 
+.. raw:: html
 
-This sketch connects to a WiFi network, fetches weather data from OpenWeatherMap every minute, 
-retrieves the current time from an NTP server, 
-and displays the day, time, and weather information on an OLED screen.
+   <video loop autoplay muted style = "max-width:100%">
+      <source src="../_static/videos/iot_projects/06_iot_weather_oled.mp4"  type="video/mp4">
+      Your browser does not support the video tag.
+   </video>
+
+This sketch connects to a WiFi network, fetches weather data from OpenWeatherMap every minute, retrieves the current time from an NTP server, and displays the day, time, and weather information on an OLED screen.
 
 
 **Wiring**
@@ -68,9 +72,21 @@ Get OpenWeather API keys
    .. code-block:: Arduino
 
        #define SECRET_SSID "<SSID>"        // your network SSID (name)
-       #define SECRET_PASS "<PASSWORD>"        // your network password (use for WPA, or use as key for WEP)
+       #define SECRET_PASS "<PASSWORD>"        // your network password 
        #define API_KEY "<OpenWeather_API_KEY>"
-       #define LOCATION "<YOUR CITY>"        
+       #define LOCATION "<YOUR CITY>"
+
+#. Set the time zone of your location.
+
+   Take the capital of Sweden, Stockholm, as an example. Search "stockholm timezone" on Google.
+
+   .. image:: img/06_weather_oled_01.png 
+
+   In the search results, you will see "GMT+1", so you set the parameter of the function below to ``3600 * 1`` seconds.
+   
+   .. code-block:: Arduino
+
+      timeClient.setTimeOffset(3600 * 1);  // Adjust for your time zone (this is +1 hour)
 
 **Install the Library**
 

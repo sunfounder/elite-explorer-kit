@@ -1,9 +1,14 @@
 Simple Webserver
 ===========================
 
-This simple Arduino program is designed to create a basic WiFi web server, allowing users to control the on and off state of an LED on the Arduino board via a web browser.
+.. raw:: html
 
-.. image:: img/01_webserver.png
+   <video loop autoplay muted style = "max-width:100%">
+      <source src="../_static/videos/new_feature_projects/wifi.mp4"  type="video/mp4">
+      Your browser does not support the video tag.
+   </video>
+
+This simple Arduino program is designed to create a basic WiFi web server, allowing users to control the on and off state of an LED on the Arduino board via a web browser.
 
 **Run the Code**
 
@@ -21,6 +26,8 @@ This simple Arduino program is designed to create a basic WiFi web server, allow
 
 
 After uploading the code, you will be able to see the IP address in the serial monitor. You can enter this IP address in your web browser to turn the onboard LED on/off.
+
+.. image:: img/01_webserver.png
 
 **How it works?**
 

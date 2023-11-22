@@ -3,6 +3,13 @@
 Cloud Calling System with MQTT
 ============================================
 
+.. raw:: html
+
+   <video loop autoplay muted style = "max-width:100%">
+      <source src="../_static/videos/iot_projects/04_iot_mqtt_callling.mp4"  type="video/mp4">
+      Your browser does not support the video tag.
+   </video>
+
 Message Queuing Telemetry Transport (MQTT) is a straightforward messaging protocol. It is also the most widely used messaging protocol in the realm of the Internet of Things (IoT).
 
 MQTT protocols define how IoT devices exchange data. They operate in an event-driven manner and are interconnected using the Publish/Subscribe model. The sender (Publisher) and the receiver (Subscriber) communicate through Topics. A device publishes a message on a specific topic, and all devices subscribed to that topic receive the message.
@@ -40,10 +47,11 @@ HiveMQ is an MQTT broker and client-based messaging platform that facilitates fa
 
    .. image:: img/04_mqtt_2.png
 
-4. Enter the topics you wish to follow and click **Subscribe**. Make sure the topics you set here are unique to avoid receiving messages from other users, and pay attention to case sensitivity.
+4. Enter the topics you wish to follow and click **Subscribe**. Make sure the topics you set here are unique to avoid receiving messages from other users, and pay attention to case sensitivity. 
+
+   In this example code, we set the topic as ``SunFounder MQTT Test``. If you have made any changes, ensure that the topic in the code matches the subscribed topic on the webpage.
 
    .. image:: img/04_mqtt_3.png
-
 
 
 **Install the Library**

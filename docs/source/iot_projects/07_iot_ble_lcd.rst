@@ -3,6 +3,13 @@
 Bluetooth Message Box
 =============================
 
+.. raw:: html
+
+   <video loop autoplay muted style = "max-width:100%">
+      <source src="../_static/videos/iot_projects/07_iot_ble_lcd.mp4"  type="video/mp4">
+      Your browser does not support the video tag.
+   </video>
+
 This project receives messages and displays them on an LCD screen.
 
 You can use it as a family message board, reminding family members who haven't left yet to remember to take their keys.

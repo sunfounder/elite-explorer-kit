@@ -3,6 +3,13 @@
 Security System via IFTTT
 ============================================
 
+.. raw:: html
+
+   <video loop autoplay muted style = "max-width:100%">
+      <source src="../_static/videos/iot_projects/03_iot_security_alert.mp4"  type="video/mp4">
+      Your browser does not support the video tag.
+   </video>
+
 With this project, we create a security device that employs a PIR Sensor to detect intruders or stray animals entering your home. In case of a breach, you will receive an email alert.
 
 We'll utilize Webhooks as the fundamental service. A POST request is sent to IFTTT's service from UNO R4. 
@@ -118,6 +125,9 @@ Please follow the steps below on IFTTT.
 
 .. note::
     In the code, SSID and password are stored in ``arduino_secrets.h``. Before uploading this example, you need to modify them with your own WiFi credentials. Additionally, for security purposes, ensure that this information is kept confidential when sharing or storing the code.
+
+.. warning::
+   To prevent your mailbox from being flooded, please debug the :ref:`cpn_pir` beforehand before running the code for this project.
 
 .. raw:: html
 

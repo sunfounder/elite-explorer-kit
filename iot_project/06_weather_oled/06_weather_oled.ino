@@ -9,7 +9,7 @@
   Board: Arduino Uno R4 WiFi
   Component: OLED
   Library: https://github.com/bblanchon/ArduinoJson (ArduinoJson by Benoit Blanchon)
-           0https://github.com/adafruit/Adafruit_SSD1306 (Adafruit SSD1306 by Adafruit)  
+           https://github.com/adafruit/Adafruit_SSD1306 (Adafruit SSD1306 by Adafruit)  
            https://github.com/adafruit/Adafruit-GFX-Library (Adafruit GFX Library by Adafruit) 
            https://github.com/arduino-libraries/NTPClient (NTPClient by Fabrice Weinberg) 
            

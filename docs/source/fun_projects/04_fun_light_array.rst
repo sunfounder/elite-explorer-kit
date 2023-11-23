@@ -40,7 +40,7 @@ This program converts the readings from a light-dependent resistor into a corres
 
 .. note::
 
-    * You can open the file ``04_light_sensitive_array.ino`` under the path of ``Elite-Explorer-Kit-main\fun_project\04_light_sensitive_array`` directly.
+    * You can open the file ``04_light_sensitive_array.ino`` under the path of ``elite-explorer-kit-main\fun_project\04_light_sensitive_array`` directly.
     * Or copy this code into Arduino IDE.
 
 .. raw:: html

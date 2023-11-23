@@ -50,12 +50,12 @@ You can open the serial monitor to view the ID of your RFID card and re-config t
 
 .. note::
 
-    * You can open the file ``09_access_control_system.ino`` under the path of ``Elite-Explorer-Kit-main\fun_project09_access_control_system`` directly.
+    * You can open the file ``09_access_control_system.ino`` under the path of ``elite-explorer-kit-main\fun_project09_access_control_system`` directly.
     * Or copy this code into Arduino IDE.
 
 .. note::
-   
-    * The ``RFID1`` library is used here. The library can be found in the ``Elite-Explorer-Kit-main/library/`` directory, or you can click here :download:`RFID1.zip </_static/RFID1.zip>` to download it. Refer to :ref:`manual_install_lib` for a tutorial on how to install it.
+
+    * The ``RFID1`` library is used here. The library can be found in the ``elite-explorer-kit-main/library/`` directory, or you can click here :download:`RFID1.zip </_static/RFID1.zip>` to download it. Refer to :ref:`manual_install_lib` for a tutorial on how to install it.
 
 .. raw:: html
 

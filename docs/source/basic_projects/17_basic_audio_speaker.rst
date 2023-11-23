@@ -41,7 +41,7 @@ Code
 
 .. note::
 
-    * You can open the file ``17-speaker.ino`` under the path of ``Elite-Explorer-Kit-main\basic_project\17-speaker`` directly.
+    * You can open the file ``17-speaker.ino`` under the path of ``elite-explorer-kit-main\basic_project\17-speaker`` directly.
     * Or copy this code into Arduino IDE.
 
 .. raw:: html

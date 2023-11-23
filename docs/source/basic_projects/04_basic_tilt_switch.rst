@@ -42,7 +42,7 @@ Code
 
 .. note::
 
-    * You can open the file ``04-tilt_switch.ino`` under the path of ``Elite-Explorer-Kit-main\basic_project\04-tilt_switch`` directly.
+    * You can open the file ``04-tilt_switch.ino`` under the path of ``elite-explorer-kit-main\basic_project\04-tilt_switch`` directly.
     * Or copy this code into Arduino IDE.
 
 .. raw:: html

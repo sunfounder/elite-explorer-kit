@@ -6,7 +6,7 @@ This project allows you to control an LED light through a web interface. The Ard
 1. Upload the code
 ========================
 
-Open the ``01-wifi_ap.ino`` file under the path of ``Elite-Explorer-Kit-main\r4_new_feature\01-wifi_ap``, or copy this code into **Arduino IDE**.
+Open the ``01-wifi_ap.ino`` file under the path of ``elite-explorer-kit-main\r4_new_feature\01-wifi_ap``, or copy this code into **Arduino IDE**.
 
 .. note:: 
       Wi-Fi® support is enabled via the built-in ``WiFiS3`` library that is shipped with the Arduino UNO R4 Core. Installing the core automatically installs the ``WiFiS3`` library.

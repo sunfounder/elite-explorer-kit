@@ -43,7 +43,7 @@ Code
 
 .. note::
 
-    * You can open the file ``23-mpr121.ino`` under the path of ``Elite-Explorer-Kit-main\basic_project\23-mpr121`` directly.
+    * You can open the file ``23-mpr121.ino`` under the path of ``elite-explorer-kit-main\basic_project\23-mpr121`` directly.
     * The ``Adafruit MPR121`` library is used here, you can install it from the **Library Manager**.
 
         .. image:: img/22_mpr121_lib.png

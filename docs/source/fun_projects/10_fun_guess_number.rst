@@ -44,7 +44,7 @@ In this game, we use an IR Remote Controller to input numbers and an LCD to disp
 
 .. note::
 
-    * You can open the file ``10_guess_number.ino`` under the path of ``Elite-Explorer-Kit-main\fun_project\10_guess_number`` directly.
+    * You can open the file ``10_guess_number.ino`` under the path of ``elite-explorer-kit-main\fun_project\10_guess_number`` directly.
     * Or copy this code into Arduino IDE.
 
 .. note::

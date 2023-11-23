@@ -48,7 +48,7 @@ The game mechanics can be divided into the following parts:
 
 .. note::
 
-    * You can open the file ``12_pong_oled.ino`` under the path of ``Elite-Explorer-Kit-main\fun_project\12_pong_oled`` directly.
+    * You can open the file ``12_pong_oled.ino`` under the path of ``elite-explorer-kit-main\fun_project\12_pong_oled`` directly.
     * Or copy this code into Arduino IDE.
 
 .. note::

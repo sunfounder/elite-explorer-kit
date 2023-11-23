@@ -38,8 +38,8 @@ Code
 
 .. note::
 
-    * You can open the file ``08-mfrc522.ino`` under the path of ``Elite-Explorer-Kit-main\basic_project\08-mfrc522`` directly.
-    * The ``RFID1`` library is used here. The library can be found in the ``Elite-Explorer-Kit-main/library/`` directory, or you can click here :download:`RFID1.zip </_static/RFID1.zip>` to download it. Refer to :ref:`manual_install_lib` for a tutorial on how to install it.
+    * You can open the file ``08-mfrc522.ino`` under the path of ``elite-explorer-kit-main\basic_project\08-mfrc522`` directly.
+    * The ``RFID1`` library is used here. The library can be found in the ``elite-explorer-kit-main/library/`` directory, or you can click here :download:`RFID1.zip </_static/RFID1.zip>` to download it. Refer to :ref:`manual_install_lib` for a tutorial on how to install it.
 
 .. raw:: html
 

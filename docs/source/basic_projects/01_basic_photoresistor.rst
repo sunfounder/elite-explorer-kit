@@ -40,7 +40,7 @@ Code
 
 .. note::
 
-    * You can open the file ``01-photoresistor`` under the path of ``Elite-Explorer-Kit-main\basic_project\01-photoresistor`` directly.
+    * You can open the file ``01-photoresistor`` under the path of ``elite-explorer-kit-main\basic_project\01-photoresistor`` directly.
     * Or copy this code into Arduino IDE.
 
 

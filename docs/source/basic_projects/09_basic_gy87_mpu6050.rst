@@ -40,7 +40,7 @@ Code
 
 .. note::
 
-    * You can open the file ``09-gy87_mpu6050.ino`` under the path of ``Elite-Explorer-Kit-main\basic_project\09-gy87_mpu6050`` directly.
+    * You can open the file ``09-gy87_mpu6050.ino`` under the path of ``elite-explorer-kit-main\basic_project\09-gy87_mpu6050`` directly.
     * Or copy this code into Arduino IDE.
 
 .. note:: 

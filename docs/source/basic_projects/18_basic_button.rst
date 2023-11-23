@@ -48,7 +48,7 @@ Code
 
 .. note::
 
-    * You can open the file ``18-button.ino`` under the path of ``Elite-Explorer-Kit-main\basic_project\18-button`` directly.
+    * You can open the file ``18-button.ino`` under the path of ``elite-explorer-kit-main\basic_project\18-button`` directly.
     * Or copy this code into Arduino IDE.
 
 

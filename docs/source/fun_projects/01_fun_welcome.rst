@@ -40,7 +40,7 @@ When a pedestrian appears within the range of the PIR sensor, the speaker will r
 
 .. note::
 
-    * You can open the file ``01_welcome.ino`` under the path of ``Elite-Explorer-Kit-main\fun_project\01_welcome`` directly.
+    * You can open the file ``01_welcome.ino`` under the path of ``elite-explorer-kit-main\fun_project\01_welcome`` directly.
     * Or copy this code into Arduino IDE.
 
 .. raw:: html

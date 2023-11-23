@@ -41,7 +41,7 @@ This code is designed to simulate a rolling dice using a 74HC595 shift register 
 
 .. note::
 
-    * You can open the file ``05_digital_dice.ino`` under the path of ``Elite-Explorer-Kit-main\fun_project\05_digital_dice`` directly.
+    * You can open the file ``05_digital_dice.ino`` under the path of ``elite-explorer-kit-main\fun_project\05_digital_dice`` directly.
     * Or copy this code into Arduino IDE.
 
 .. raw:: html

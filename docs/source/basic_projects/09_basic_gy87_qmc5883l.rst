@@ -59,7 +59,7 @@ Calibrate QMC5883L
 
 .. note::
 
-    * You can open the file ``09-gy87_compass_calibration.ino`` under the path of ``Elite-Explorer-Kit-main\basic_project\09-gy87_compass_calibration`` directly.
+    * You can open the file ``09-gy87_compass_calibration.ino`` under the path of ``elite-explorer-kit-main\basic_project\09-gy87_compass_calibration`` directly.
     * Or copy this code into Arduino IDE.
 
 .. raw:: html
@@ -97,7 +97,7 @@ Code
 
 .. note::
 
-    * You can open the file ``09-gy87_qmc5883l.ino`` under the path of ``Elite-Explorer-Kit-main\basic_project\09-gy87_qmc5883l`` directly.
+    * You can open the file ``09-gy87_qmc5883l.ino`` under the path of ``elite-explorer-kit-main\basic_project\09-gy87_qmc5883l`` directly.
     * Or copy this code into Arduino IDE.
     * Put the code obtained from the calibration steps below the line of code ``compass.init()`` in the function ``initializeQMC5883L()``.
 

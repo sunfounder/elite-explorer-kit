@@ -43,7 +43,7 @@ Different positions of the knob correspond to different HUE values, which are th
 
 .. note::
 
-    * You can open the file ``03_huedial.ino`` under the path of ``Elite-Explorer-Kit-main\fun_project\03_huedial`` directly.
+    * You can open the file ``03_huedial.ino`` under the path of ``elite-explorer-kit-main\fun_project\03_huedial`` directly.
     * Or copy this code into Arduino IDE.
 
 .. raw:: html

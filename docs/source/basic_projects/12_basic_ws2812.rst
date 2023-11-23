@@ -37,7 +37,7 @@ Code
 
 .. note::
 
-    * You can open the file ``12-ws2812.ino`` under the path of ``Elite-Explorer-Kit-main\basic_project\12-ws2812`` directly.
+    * You can open the file ``12-ws2812.ino`` under the path of ``elite-explorer-kit-main\basic_project\12-ws2812`` directly.
     * Or copy this code into Arduino IDE.
 
 .. note:: 

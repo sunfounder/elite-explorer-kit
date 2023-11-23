@@ -36,7 +36,7 @@ Some libraries are not available through the **Library Manager** and need to be 
 
    .. image:: img/add_lib_zip.png
 
-#. Navigate to the directory where the library files are located, such as the ``Elite-Explorer-Kit-main/library/`` folder, and select the library file and click **Open**.
+#. Navigate to the directory where the library files are located, such as the ``elite-explorer-kit-main/library/`` folder, and select the library file and click **Open**.
 
    .. image:: img/rfid_choose.png
 

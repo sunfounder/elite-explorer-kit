@@ -66,7 +66,7 @@ UUIDs play a crucial role in BLE communication, ensuring the uniqueness of devic
 
 .. note::
 
-    * You can open the file ``07_lightblue_lcd.ino`` under the path of ``Elite-Explorer-Kit-main\iot_project\07_lightblue_lcd`` directly.
+    * You can open the file ``07_lightblue_lcd.ino`` under the path of ``elite-explorer-kit-main\iot_project\07_lightblue_lcd`` directly.
     * Or copy this code into Arduino IDE.
 
 .. note:: 

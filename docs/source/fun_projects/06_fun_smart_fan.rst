@@ -46,7 +46,7 @@ Additionally, users can enter manual mode through a button to operate the fan at
 
 .. note::
 
-    * You can open the file ``06_smart_fan.ino`` under the path of ``Elite-Explorer-Kit-main\fun_project\06_smart_fan`` directly.
+    * You can open the file ``06_smart_fan.ino`` under the path of ``elite-explorer-kit-main\fun_project\06_smart_fan`` directly.
     * Or copy this code into Arduino IDE.
 
 .. raw:: html

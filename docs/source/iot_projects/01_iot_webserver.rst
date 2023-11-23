@@ -14,7 +14,7 @@ This simple Arduino program is designed to create a basic WiFi web server, allow
 
 .. note::
 
-    * You can open the file ``01_simple_webserver.ino`` under the path of ``Elite-Explorer-Kit-main\iot_project\01_simple_webserver`` directly.
+    * You can open the file ``01_simple_webserver.ino`` under the path of ``elite-explorer-kit-main\iot_project\01_simple_webserver`` directly.
     * Or copy this code into Arduino IDE.
 
 .. note::

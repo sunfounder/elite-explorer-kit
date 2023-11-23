@@ -43,7 +43,7 @@ Code
 
 .. note::
 
-    * You can open the file ``19-potentiometer.ino`` under the path of ``Elite-Explorer-Kit-main\basic_project\19-potentiometer`` directly.
+    * You can open the file ``19-potentiometer.ino`` under the path of ``elite-explorer-kit-main\basic_project\19-potentiometer`` directly.
     * Or copy this code into Arduino IDE.
 
 .. raw:: html

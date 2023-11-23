@@ -49,7 +49,7 @@ Additionally, it displays temperature, humidity, and soil moisture on an LCD scr
 
 .. note::
 
-    * You can open the file ``08_plant_monitor.ino`` under the path of ``Elite-Explorer-Kit-main\fun_project\08_plant_monitor`` directly.
+    * You can open the file ``08_plant_monitor.ino`` under the path of ``elite-explorer-kit-main\fun_project\08_plant_monitor`` directly.
     * Or copy this code into Arduino IDE.
 
 .. note::

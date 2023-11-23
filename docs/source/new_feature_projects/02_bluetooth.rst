@@ -65,7 +65,7 @@ In this example, the Arduino acts as a peripheral device in a Bluetooth Low Ener
 
 **Upload the Code**
 
-Open the ``02-bluetooth.ino`` file located at ``Elite-Explorer-Kit-main\r4_new_feature\02-bluetooth``, or paste the following code into your Arduino IDE.
+Open the ``02-bluetooth.ino`` file located at ``elite-explorer-kit-main\r4_new_feature\02-bluetooth``, or paste the following code into your Arduino IDE.
 
 .. raw:: html
 

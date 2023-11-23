@@ -40,7 +40,7 @@ If you want to use these three chips simultaneously, here is a simple example:
 
 .. note::
 
-    * You can open the file ``09-gy87.ino`` under the path of ``Elite-Explorer-Kit-main\basic_project\09-gy87`` directly.
+    * You can open the file ``09-gy87.ino`` under the path of ``elite-explorer-kit-main\basic_project\09-gy87`` directly.
     * Or copy this code into Arduino IDE.
 
 .. note:: 

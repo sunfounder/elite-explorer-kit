@@ -43,7 +43,7 @@ Code
 
 .. note::
 
-    * You can open the file ``20-joystick.ino`` under the path of ``Elite-Explorer-Kit-main\basic_project\20-joystick`` directly.
+    * You can open the file ``20-joystick.ino`` under the path of ``elite-explorer-kit-main\basic_project\20-joystick`` directly.
     * Or copy this code into Arduino IDE.
 
 .. raw:: html

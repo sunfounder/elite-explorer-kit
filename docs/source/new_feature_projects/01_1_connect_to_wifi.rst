@@ -6,7 +6,7 @@ This tutorial will guide you through the essential steps to connect your Arduino
 1. Upload the code
 ========================
 
-Open the ``01-wifi_connect.ino`` file under the path of ``Elite-Explorer-Kit-main\r4_new_feature\01-wifi_connect``, or copy this code into **Arduino IDE**.
+Open the ``01-wifi_connect.ino`` file under the path of ``elite-explorer-kit-main\r4_new_feature\01-wifi_connect``, or copy this code into **Arduino IDE**.
 
 .. note:: 
       Wi-Fi® support is enabled via the built-in ``WiFiS3`` library that is shipped with the Arduino UNO R4 Core. Installing the core automatically installs the ``WiFiS3`` library.

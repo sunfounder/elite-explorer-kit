@@ -120,7 +120,7 @@ Please follow the steps below on IFTTT.
 
 .. note::
 
-    * You can open the file ``03_ifttt_pir.ino`` under the path of ``Elite-Explorer-Kit-main\iot_project\03_ifttt_pir`` directly.
+    * You can open the file ``03_ifttt_pir.ino`` under the path of ``elite-explorer-kit-main\iot_project\03_ifttt_pir`` directly.
     * Or copy this code into Arduino IDE.
 
 .. note::

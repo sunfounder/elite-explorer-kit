@@ -40,7 +40,7 @@ Code
 
 .. note::
 
-    * You can open the file ``05-pir_motion_sensor.ino`` under the path of ``Elite-Explorer-Kit-main\basic_project\05-pir_motion_sensor`` directly.
+    * You can open the file ``05-pir_motion_sensor.ino`` under the path of ``elite-explorer-kit-main\basic_project\05-pir_motion_sensor`` directly.
     * Or copy this code into Arduino IDE.
 
 .. raw:: html

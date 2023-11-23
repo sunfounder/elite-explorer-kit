@@ -40,7 +40,7 @@ Code
 
 .. note::
 
-   * You can open the file ``10-led.ino`` under the path of ``Elite-Explorer-Kit-main\basic_project\10-led``. 
+   * You can open the file ``10-led.ino`` under the path of ``elite-explorer-kit-main\basic_project\10-led``. 
    * Or copy this code into **Arduino IDE**.
 
 

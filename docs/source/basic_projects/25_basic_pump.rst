@@ -42,7 +42,7 @@ Code
 
 .. note::
 
-   * You can open the file ``25-pump.ino`` under the path of ``Elite-Explorer-Kit-main\basic_project\25-pump``. 
+   * You can open the file ``25-pump.ino`` under the path of ``elite-explorer-kit-main\basic_project\25-pump``. 
    * Or copy this code into **Arduino IDE**.
 
 .. raw:: html

@@ -44,7 +44,7 @@ Code
 
 .. note::
 
-    * You can open the file ``26-stepper_motor.ino`` under the path of ``Elite-Explorer-Kit-main\basic_project\26-stepper_motor.rst`` directly.
+    * You can open the file ``26-stepper_motor.ino`` under the path of ``elite-explorer-kit-main\basic_project\26-stepper_motor.rst`` directly.
     * Or copy this code into Arduino IDE.
 
 .. raw:: html

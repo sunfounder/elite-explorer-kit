@@ -36,7 +36,7 @@ Code
 
 .. note::
 
-    * You can open the file ``21-keypad.ino`` under the path of ``Elite-Explorer-Kit-main\basic_project\21-keypad`` directly.
+    * You can open the file ``21-keypad.ino`` under the path of ``elite-explorer-kit-main\basic_project\21-keypad`` directly.
     * To install the library, use the Arduino Library Manager and search for **"Adafruit Keypad"** and install it. 
 
 .. raw:: html

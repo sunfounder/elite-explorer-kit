@@ -40,7 +40,7 @@ Code
 
 .. note::
 
-    * Open the ``03-moisture.ino`` file under the path of ``Elite-Explorer-Kit-main\basic_project\03-moisture``.
+    * Open the ``03-moisture.ino`` file under the path of ``elite-explorer-kit-main\basic_project\03-moisture``.
     * Or copy this code into **Arduino IDE**.
     
 .. raw:: html

@@ -40,7 +40,7 @@ Players control the snake's direction using a dual-axis joystick.
 
 .. note::
 
-    * You can open the file ``13_snake.ino`` under the path of ``Elite-Explorer-Kit-main\fun_project\13_snake`` directly.
+    * You can open the file ``13_snake.ino`` under the path of ``elite-explorer-kit-main\fun_project\13_snake`` directly.
     * Or copy this code into Arduino IDE.
 
 .. raw:: html

@@ -40,7 +40,7 @@ This project is a simple fruit piano that reads input from an MPR121 touch senso
 
 .. note::
 
-    * You can open the file ``02_fruit_piano.ino`` under the path of ``Elite-Explorer-Kit-main\fun_project\02_fruit_piano`` directly.
+    * You can open the file ``02_fruit_piano.ino`` under the path of ``elite-explorer-kit-main\fun_project\02_fruit_piano`` directly.
     * Or copy this code into Arduino IDE.
 
 .. note::

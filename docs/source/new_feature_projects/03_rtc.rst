@@ -18,7 +18,7 @@ In certain use-cases, you may need to execute specific tasks at regular interval
 
 **Upload the Code**
 
-Open the ``03-rtc.ino`` file located at ``Elite-Explorer-Kit-main\r4_new_feature\03-rtc``, or paste the following code into your Arduino IDE.
+Open the ``03-rtc.ino`` file located at ``elite-explorer-kit-main\r4_new_feature\03-rtc``, or paste the following code into your Arduino IDE.
 
 .. raw:: html
 

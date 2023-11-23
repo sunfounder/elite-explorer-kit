@@ -39,7 +39,7 @@ This project utilizes an SG90 servo motor and an HC-SR04 ultrasonic distance sen
 
 .. note::
 
-    * You can open the file ``07_smart_trash_can.ino`` under the path of ``Elite-Explorer-Kit-main\fun_project\07_smart_trash_can`` directly.
+    * You can open the file ``07_smart_trash_can.ino`` under the path of ``elite-explorer-kit-main\fun_project\07_smart_trash_can`` directly.
     * Or copy this code into Arduino IDE.
 
 .. raw:: html

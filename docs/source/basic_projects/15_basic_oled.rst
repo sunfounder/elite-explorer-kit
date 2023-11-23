@@ -49,7 +49,7 @@ Code
 
 .. note::
 
-    * You can open the file ``15-oled.ino`` under the path of ``Elite-Explorer-Kit-main\basic_project\15-oled`` directly.
+    * You can open the file ``15-oled.ino`` under the path of ``elite-explorer-kit-main\basic_project\15-oled`` directly.
     * Or copy this code into Arduino IDE.
 
     .. note:: 

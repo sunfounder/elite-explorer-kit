@@ -54,7 +54,7 @@ Code
 
 .. note::
 
-    * You can open the file ``11-rgb_led.ino`` under the path of ``Elite-Explorer-Kit-main\basic_project\11-rgb_led`` directly.
+    * You can open the file ``11-rgb_led.ino`` under the path of ``elite-explorer-kit-main\basic_project\11-rgb_led`` directly.
     * Or copy this code into Arduino IDE.
 
 

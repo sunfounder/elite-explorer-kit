@@ -22,7 +22,7 @@ Here's a simple example that demonstrates mouse cursor control using a button.
 
 **Upload the Code**
 
-Open the ``06-hid_mouse.ino`` file located at ``Elite-Explorer-Kit-main\r4_new_feature\06-hid_mouse``, or paste the following code into your Arduino IDE.
+Open the ``06-hid_mouse.ino`` file located at ``elite-explorer-kit-main\r4_new_feature\06-hid_mouse``, or paste the following code into your Arduino IDE.
 
 .. warning::
     When you use the ``Mouse.move()`` command, the Arduino takes over your computer's mouse! To insure you don't lose control of your computer while running a sketch with this function, make sure to set up a reliable control system before you call ``Mouse.move()``. This sketch includes a pushbutton to toggle the mouse, so that it only runs after the button is pressed.
@@ -67,7 +67,7 @@ Upon pressing either button, the Arduino employs the ``Keyboard.press()`` and ``
 
 **Upload the Code**
 
-Open the ``06-hid_keyboard.ino`` file located at ``Elite-Explorer-Kit-main\r4_new_feature\06-hid_keyboard``, or paste the following code into your Arduino IDE.
+Open the ``06-hid_keyboard.ino`` file located at ``elite-explorer-kit-main\r4_new_feature\06-hid_keyboard``, or paste the following code into your Arduino IDE.
 
 .. raw:: html
 

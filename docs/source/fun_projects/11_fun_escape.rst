@@ -39,7 +39,7 @@ The player's objective is to tilt the MPU6050 sensor to move a pixel on the LED 
 
 .. note::
 
-    * You can open the file ``11_escape_square.ino`` under the path of ``Elite-Explorer-Kit-main\fun_project\11_escape_square`` directly.
+    * You can open the file ``11_escape_square.ino`` under the path of ``elite-explorer-kit-main\fun_project\11_escape_square`` directly.
     * Or copy this code into Arduino IDE.
 
 .. note::

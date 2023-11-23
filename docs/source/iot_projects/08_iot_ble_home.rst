@@ -51,7 +51,7 @@ Now, let's begin.
        :width: 90%
        :align: center
 
-#. After logging in, navigate to **Projects** -> **Import project (.aia) from my computer**. Subsequently, upload the ``ble_environmental_monitor.aia`` file located in the path ``Elite-Explorer-Kit-main\iot_project\08-bluetooth_environmental_monitor``.
+#. After logging in, navigate to **Projects** -> **Import project (.aia) from my computer**. Subsequently, upload the ``ble_environmental_monitor.aia`` file located in the path ``elite-explorer-kit-main\iot_project\08-bluetooth_environmental_monitor``.
 
    You can also directly download here: :download:`ble_environmental_monitor.aia</_static/other/ble_environmental_monitor.aia>`
 
@@ -89,7 +89,7 @@ Now, let's begin.
 -----------------------------
 
 
-#. Open the ``08-bluetooth_environmental_monitor.ino`` file under the path of ``Elite-Explorer-Kit-main\iot_project\08-bluetooth_environmental_monitor``, or copy this code into **Arduino IDE**.
+#. Open the ``08-bluetooth_environmental_monitor.ino`` file under the path of ``elite-explorer-kit-main\iot_project\08-bluetooth_environmental_monitor``, or copy this code into **Arduino IDE**.
    
    .. note:: 
       To install the library, use the Arduino Library Manager to search for and install **"DHT sensor library"** and **"ArduinoBLE"**.

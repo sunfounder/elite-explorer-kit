@@ -48,7 +48,7 @@ Code
 
 .. note::
 
-    * You can open the file ``28-relay.ino`` under the path of ``Elite-Explorer-Kit-main\basic_project\28-relay`` directly.
+    * You can open the file ``28-relay.ino`` under the path of ``elite-explorer-kit-main\basic_project\28-relay`` directly.
     * Or copy this code into Arduino IDE.
 
 .. raw:: html

@@ -48,7 +48,7 @@ Code
 
 .. note::
 
-    * You can open the file ``07-humiture_sensor.ino`` under the path of ``Elite-Explorer-Kit-main\basic_project\07-humiture_sensor`` directly.
+    * You can open the file ``07-humiture_sensor.ino`` under the path of ``elite-explorer-kit-main\basic_project\07-humiture_sensor`` directly.
     * Or copy this code into Arduino IDE.
 
 .. note:: 

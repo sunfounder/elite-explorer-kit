@@ -47,7 +47,7 @@ Code
 
 .. note::
 
-    * You can open the file ``24-motor.ino`` under the path of ``Elite-Explorer-Kit-main\basic_project\24-motor`` directly.
+    * You can open the file ``24-motor.ino`` under the path of ``elite-explorer-kit-main\basic_project\24-motor`` directly.
     * Or copy this code into Arduino IDE.
 
 .. raw:: html

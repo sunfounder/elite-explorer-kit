@@ -49,7 +49,7 @@ Code
 
 .. note::
 
-    * You can open the file ``16-active_buzzer.ino`` under the path of ``Elite-Explorer-Kit-main\basic_project\16-active_buzzer`` directly.
+    * You can open the file ``16-active_buzzer.ino`` under the path of ``elite-explorer-kit-main\basic_project\16-active_buzzer`` directly.
     * Or copy this code into Arduino IDE.
 
 .. raw:: html

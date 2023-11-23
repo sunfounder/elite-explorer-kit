@@ -50,7 +50,7 @@ To install the library, use the Arduino Library Manager and search for "ArduinoM
 
 .. note::
 
-    * You can open the file ``05_cheerlight.ino`` under the path of ``Elite-Explorer-Kit-main\iot_project\05_cheerlight`` directly.
+    * You can open the file ``05_cheerlight.ino`` under the path of ``elite-explorer-kit-main\iot_project\05_cheerlight`` directly.
     * Or copy this code into Arduino IDE.
 
 .. note::

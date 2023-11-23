@@ -6,7 +6,6 @@
   
   Board: Arduino Uno R4
   Component: RFID-RC522 Module
-  Library: 
 */
 
 #include "rfid1.h"  // Include RFID1 library

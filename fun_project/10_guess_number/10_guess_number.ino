@@ -7,6 +7,8 @@
 
   Board: Arduino Uno R4 
   Component: I2C LCD1602 and Infrared Receiver
+  Library: https://www.arduino.cc/reference/en/libraries/liquidcrystal-i2c/ (LiquidCrystal I2C by Frank de Brabander)
+           https://github.com/Arduino-IRremote/Arduino-IRremote (IRremote by shirriff, z3t0, ArminJo)
 */
 
 

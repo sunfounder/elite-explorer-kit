@@ -29,7 +29,6 @@ You can just plug it in the breadboard to supply power. It provides a voltage of
 
 * :ref:`basic_motor` (Basic Project)
 * :ref:`basic_stepper_motor` (Basic Project)
-* :ref:`fun_tomato_timer` (Fun Project)
 * :ref:`fun_smart_fan` (Fun Project)
 * :ref:`fun_plant_monitor` (Fun Project)
 * :ref:`fun_access` (Fun Project)

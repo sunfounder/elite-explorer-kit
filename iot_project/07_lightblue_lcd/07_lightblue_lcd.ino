@@ -5,7 +5,7 @@
   message when the BLE central device writes to the characteristic. 
 
   Board: Arduino Uno R4 WiFI
-  Component: Liquid Crystal Display 1620 with I2C Interface
+  Component: Liquid Crystal Display 1602 with I2C Interface
   Library: https://www.arduino.cc/reference/en/libraries/liquidcrystal-i2c/ (LiquidCrystal I2C by Frank de Brabander)
            https://www.arduino.cc/reference/en/libraries/arduinoble/ (ArduinoBLE by Arduino)
 */

@@ -4,7 +4,7 @@
   first and second lines of the display.
 
   Board: Arduino Uno R4
-  Component:  Liquid Crystal Display 1620 with I2C Interface
+  Component:  Liquid Crystal Display 1602 with I2C Interface
   Library: https://www.arduino.cc/reference/en/libraries/liquidcrystal-i2c/ (LiquidCrystal I2C by Frank de Brabander)  
 */
 

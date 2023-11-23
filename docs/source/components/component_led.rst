@@ -28,5 +28,4 @@ Here is the detailed introduction for the LED: |link_led_wiki|.
 * :ref:`basic_led` (Basic Project)
 * :ref:`basic_relay` (Basic Project)
 * :ref:`fun_light_array` (Fun Project)
-* :ref:`fun_tomato_timer` (Fun Project)
 * :ref:`fun_smart_fan` (Fun Project)

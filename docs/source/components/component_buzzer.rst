@@ -32,5 +32,4 @@ You can check the pins of the buzzer, the longer one is the anode and the shorte
 
 * :ref:`basic_active_buzzer` (Basic Project)
 * :ref:`basic_passive_buzzer` (Basic Project)
-* :ref:`fun_tomato_timer` (Fun Project)
 * :ref:`fun_access` (Fun Project)

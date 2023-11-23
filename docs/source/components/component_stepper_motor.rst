@@ -38,5 +38,4 @@ To apply the motor in the circuit, a driver board needs to be used. Stepper Moto
 
 
 * :ref:`basic_stepper_motor` (Basic Project)
-* :ref:`fun_tomato_timer` (Fun Project)
 * :ref:`fun_access` (Fun Project)

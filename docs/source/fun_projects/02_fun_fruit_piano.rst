@@ -43,6 +43,9 @@ This project is a simple fruit piano that reads input from an MPR121 touch senso
     * You can open the file ``02_fruit_piano.ino`` under the path of ``Elite-Explorer-Kit-main\fun_project\02_fruit_piano`` directly.
     * Or copy this code into Arduino IDE.
 
+.. note::
+   To install the library, use the Arduino Library Manager and search for **“Adafruit MPR121”** and install it.
+
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/e677c06a-7af1-4846-a507-dd69c0c50aae/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>

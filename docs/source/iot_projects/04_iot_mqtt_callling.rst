@@ -56,6 +56,8 @@ HiveMQ is an MQTT broker and client-based messaging platform that facilitates fa
 
 **Install the Library**
 
+To install the library, use the Arduino Library Manager and search for “ArduinoMqttClient” and install it.
+
 ``ArduinoMqttClient.h``: Used for MQTT communication.
 
 **Run the Code**

@@ -52,6 +52,9 @@ Additionally, it displays temperature, humidity, and soil moisture on an LCD scr
     * You can open the file ``08_plant_monitor.ino`` under the path of ``Elite-Explorer-Kit-main\fun_project\08_plant_monitor`` directly.
     * Or copy this code into Arduino IDE.
 
+.. note::
+   To install the library, use the Arduino Library Manager and search for **“DHT sensor library”** and **“LiquidCrystal I2C”** and install them.
+
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/a9d6c9c7-0d7f-4dc2-84b6-9dbda15c89ae/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>

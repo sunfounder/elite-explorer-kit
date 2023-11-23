@@ -39,6 +39,8 @@ In this case, we also utilize MQTT, but instead of publishing our own messages, 
 
 **Install the Library**
 
+To install the library, use the Arduino Library Manager and search for "ArduinoMqttClient" and "FastLED" and install them.
+
 ``ArduinoMqttClient.h``: Used for MQTT communication.
 
 ``FastLED.h``: Used to drive the RGB LED Strip.

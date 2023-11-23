@@ -51,6 +51,9 @@ The game mechanics can be divided into the following parts:
     * You can open the file ``12_pong_oled.ino`` under the path of ``Elite-Explorer-Kit-main\fun_project\12_pong_oled`` directly.
     * Or copy this code into Arduino IDE.
 
+.. note::
+   To install the library, use the Arduino Library Manager and search for **“Adafruit SSD1306”** and **“Adafruit GFX”** and install them.
+
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/86dbb549-d425-4f42-8b5b-28d486e3f7f8/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>

@@ -42,6 +42,9 @@ The player's objective is to tilt the MPU6050 sensor to move a pixel on the LED 
     * You can open the file ``11_escape_square.ino`` under the path of ``Elite-Explorer-Kit-main\fun_project\11_escape_square`` directly.
     * Or copy this code into Arduino IDE.
 
+.. note::
+   To install the library, use the Arduino Library Manager and search for **"Adafruit MPU6050"** and install it.
+
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/6b239445-f921-48fb-a93e-70cc7ef8afc7/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>

@@ -47,6 +47,9 @@ In this game, we use an IR Remote Controller to input numbers and an LCD to disp
     * You can open the file ``10_guess_number.ino`` under the path of ``Elite-Explorer-Kit-main\fun_project\10_guess_number`` directly.
     * Or copy this code into Arduino IDE.
 
+.. note::
+   To install the library, use the Arduino Library Manager and search for **“IRremote”** and **“LiquidCrystal I2C”** and install them.
+
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/935cd2e8-23e1-4af8-bdf5-94ac00f10e8b/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>

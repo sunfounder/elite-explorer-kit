@@ -90,12 +90,13 @@ Get OpenWeather API keys
 
 **Install the Library**
 
+To install the library, use the Arduino Library Manager and search for "ArduinoMqttClient", "FastLED", "Adafruit GFX" and "Adafruit SSD1306" and install them.
 
-``ArduinoJson.h`` ： Used for handling JSON data (data obtained from openweathermap).
+``ArduinoJson.h``: Used for handling JSON data (data obtained from openweathermap).
 
-``NTPClient.h``, ``WiFiUdp.h``: Used for obtaining real-time time.
+``NTPClient.h``: Used for obtaining real-time time.
 
-``Adafruit_GFX.h``, ``Adafruit_SSD1306.h`` : Used for OLED module.
+``Adafruit_GFX.h``, ``Adafruit_SSD1306.h``: Used for OLED module.
 
 **Run the Code**
 

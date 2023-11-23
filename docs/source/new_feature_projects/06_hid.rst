@@ -32,7 +32,7 @@ Open the ``06-hid_mouse.ino`` file located at ``Elite-Explorer-Kit-main\r4_new_f
     
     To upload under such circumstances, follow these steps:
     
-    1. Quickly press and release the “RESET” button on the board twice. The LED marked “L” should start pulsing.
+    1. Quickly press and release the "RESET" button on the board twice. The LED marked "L" should start pulsing.
     
     2. From the Arduino IDE menu, select the board’s port. The port may change following the reset, so ensure it’s correctly selected.
 

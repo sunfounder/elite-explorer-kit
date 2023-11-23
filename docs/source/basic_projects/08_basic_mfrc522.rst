@@ -56,7 +56,7 @@ The functions of the module are included in the library ``rfid1.h``.
 
     #include <rfid1.h>
 
-**Library Functions：**
+**Library Functions:**
 
 .. code-block:: arduino
 

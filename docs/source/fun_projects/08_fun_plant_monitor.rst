@@ -53,7 +53,7 @@ Additionally, it displays temperature, humidity, and soil moisture on an LCD scr
     * Or copy this code into Arduino IDE.
 
 .. note::
-   To install the library, use the Arduino Library Manager and search for **“DHT sensor library”** and **“LiquidCrystal I2C”** and install them.
+   To install the library, use the Arduino Library Manager and search for **"DHT sensor library"** and **"LiquidCrystal I2C"** and install them.
 
 .. raw:: html
 

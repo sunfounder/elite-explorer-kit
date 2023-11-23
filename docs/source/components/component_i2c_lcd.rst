@@ -33,7 +33,7 @@ Backlight can be enabled by jumper cap, unplugg the jumper cap to disable the ba
 
 .. image:: img/back_lcd1602.jpg
 
-* **Shorting Cap**: Backlight can be enabled by this cap，unplugg this cap to disable the backlight.
+* **Shorting Cap**: Backlight can be enabled by this cap, unplugg this cap to disable the backlight.
 * **Potentiometer**: It is used to adjust the contrast (the clarity of the displayed text), which is increased in the clockwise direction and decreased in the counterclockwise direction.
 
 

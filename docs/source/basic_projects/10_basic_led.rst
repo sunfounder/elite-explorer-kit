@@ -7,7 +7,7 @@ LED module
 
 .. https://docs.sunfounder.com/projects/3in1-kit/en/latest/basic_project/ar_fading.html#ar-fading
 
-Just as printing “Hello, world!” is the first step in learning to program, using a program to drive an LED is the traditional introduction to learning physical programming.
+Just as printing "Hello, world!" is the first step in learning to program, using a program to drive an LED is the traditional introduction to learning physical programming.
 
 Required Components
 -------------------------

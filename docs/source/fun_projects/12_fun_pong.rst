@@ -52,7 +52,7 @@ The game mechanics can be divided into the following parts:
     * Or copy this code into Arduino IDE.
 
 .. note::
-   To install the library, use the Arduino Library Manager and search for **“Adafruit SSD1306”** and **“Adafruit GFX”** and install them.
+   To install the library, use the Arduino Library Manager and search for **"Adafruit SSD1306"** and **"Adafruit GFX"** and install them.
 
 .. raw:: html
 

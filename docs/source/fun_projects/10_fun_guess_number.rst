@@ -48,7 +48,7 @@ In this game, we use an IR Remote Controller to input numbers and an LCD to disp
     * Or copy this code into Arduino IDE.
 
 .. note::
-   To install the library, use the Arduino Library Manager and search for **“IRremote”** and **“LiquidCrystal I2C”** and install them.
+   To install the library, use the Arduino Library Manager and search for **"IRremote"** and **"LiquidCrystal I2C"** and install them.
 
 .. raw:: html
 

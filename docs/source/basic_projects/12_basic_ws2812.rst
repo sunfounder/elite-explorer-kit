@@ -3,9 +3,6 @@
 WS2812 RGB LEDs Strip
 ==========================
 
-
-.. https://docs.sunfounder.com/projects/euler-kit/en/latest/cproject/ar_neopixel.html#ar-neopixel
-
 Overview
 ---------------
 
@@ -46,6 +43,13 @@ Code
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/6c9b8c2c-6cea-4ea8-a959-e579ca98f35d/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+
+.. raw:: html
+
+   <video loop autoplay muted style = "max-width:100%">
+      <source src="../_static/videos/basic_projects/12_basic_ws2812.mp4"  type="video/mp4">
+      Your browser does not support the video tag.
+   </video>
 
 After the code is uploaded successfully, you will see each LED in the chain of 8 NeoPixel LEDs light up one at a time in a blue color. The program will loop through this sequence continuously, turning off each LED before moving on to the next. With a short delay between each LED, the lighting effect will appear as a traveling blue dot along the chain.
 

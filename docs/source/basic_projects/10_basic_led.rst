@@ -3,10 +3,6 @@
 LED module
 ==========================
 
-.. https://docs.sunfounder.com/projects/3in1-kit/en/latest/basic_project/ar_blinking_led.html#ar-blink
-
-.. https://docs.sunfounder.com/projects/3in1-kit/en/latest/basic_project/ar_fading.html#ar-fading
-
 Just as printing "Hello, world!" is the first step in learning to program, using a program to drive an LED is the traditional introduction to learning physical programming.
 
 Required Components
@@ -24,7 +20,7 @@ Wiring
 
 .. image:: img/10-led_bb.png
     :align: center
-    :width: 70%
+    :width: 60%
 
 
 Schematic Diagram
@@ -43,12 +39,16 @@ Code
    * You can open the file ``10-led.ino`` under the path of ``elite-explorer-kit-main\basic_project\10-led``. 
    * Or copy this code into **Arduino IDE**.
 
-
-
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/2d23289e-ebd1-49e9-b11f-b1bbc1f192c1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
+.. raw:: html
+
+   <video loop autoplay muted style = "max-width:100%">
+      <source src="../_static/videos/basic_projects/10_basic_led.mp4"  type="video/mp4">
+      Your browser does not support the video tag.
+   </video>
 
 After the code is uploaded successfully, you will see the LED connected to digital pin 9 of the Arduino board start to blink. The LED will turn on for half a second and then turn off for another half a second, repeating this cycle continuously as the program runs.
 

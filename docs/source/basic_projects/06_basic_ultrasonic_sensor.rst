@@ -3,13 +3,6 @@
 Ultrasonic
 ==========================
 
-.. raw:: html
-
-   <video loop autoplay muted style = "max-width:100%">
-      <source src="../_static/videos/basic_projects/06_basic_ultrasonic_sensor.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
-   </video>
-
 Overview
 --------------------
 
@@ -56,6 +49,12 @@ Code
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/1897efb6-fa3c-4ebc-8993-6561b24848a9/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
+.. raw:: html
+
+   <video loop autoplay muted style = "max-width:100%">
+      <source src="../_static/videos/basic_projects/06_basic_ultrasonic_sensor.mp4"  type="video/mp4">
+      Your browser does not support the video tag.
+   </video>
 
 Code Analysis
 ------------------------

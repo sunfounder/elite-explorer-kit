@@ -59,6 +59,15 @@ Code
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/ec580f40-78b4-42c2-af7c-bb5bc05a7c23/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
+.. raw:: html
+
+   <video loop autoplay muted style = "max-width:100%">
+      <source src="../_static/videos/basic_projects/15_basic_oled.mp4"  type="video/mp4">
+      Your browser does not support the video tag.
+   </video>
+
+   <br/><br/>
+
 
 Code Analysis
 ------------------------

@@ -40,6 +40,7 @@ Wiring
 
 .. image:: img/11-rgb_led_bb.png
     :align: center
+    :width: 70%
 
 Schematic Diagram
 -----------------------
@@ -57,12 +58,16 @@ Code
     * You can open the file ``11-rgb_led.ino`` under the path of ``elite-explorer-kit-main\basic_project\11-rgb_led`` directly.
     * Or copy this code into Arduino IDE.
 
-
-
-
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/71dc53ac-adc6-4c4d-8d92-1dfffd1d0f7f/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+
+.. raw:: html
+
+   <video loop autoplay muted style = "max-width:100%">
+      <source src="../_static/videos/basic_projects/11_basic_rgb_led.mp4"  type="video/mp4">
+      Your browser does not support the video tag.
+   </video>
 
 Once the code is successfully uploaded, you will observe the RGB LED flashing in a circular pattern of red, green, and blue initially. It will then proceed to flash in the sequence of red, orange, yellow, green, blue, indigo, and purple.
 
@@ -130,7 +135,7 @@ You can use the paint tool on your computer to get the RGB value.
          ......
    
    
-**color()function**
+**color() function**
 
 .. code-block:: arduino
 

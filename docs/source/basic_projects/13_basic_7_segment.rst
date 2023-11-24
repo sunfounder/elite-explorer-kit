@@ -25,7 +25,7 @@ Wiring
 
 .. image:: img/13-7_segment_display_bb.png
     :align: center
-    :width: 80%
+    :width: 70%
 
 
 Schematic Diagram
@@ -50,7 +50,14 @@ Code
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/ce9857dc-6285-45cd-9918-e35b0b135836/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
+.. raw:: html
 
+   <video loop autoplay muted style = "max-width:100%">
+      <source src="../_static/videos/basic_projects/13_basic_7_segment.mp4"  type="video/mp4">
+      Your browser does not support the video tag.
+   </video>
+
+   <br/><br/>
 
 Code Analysis
 ----------------------

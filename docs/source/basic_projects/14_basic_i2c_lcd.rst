@@ -47,8 +47,26 @@ Code
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/096326ad-eccf-4d2e-be52-66f4819ca7d8/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
+.. raw:: html
+
+   <video loop autoplay muted style = "max-width:100%">
+      <source src="../_static/videos/basic_projects/14_basic_i2c_lcd.mp4"  type="video/mp4">
+      Your browser does not support the video tag.
+   </video>
 
 After the code is uploaded successfully to the Arduino, the Liquid Crystal Display (LCD) will show the message "Hello world!" on its first line and "LCD Tutorial" on its second line.
+
+.. note::
+    If the LCD does not display any characters after uploading the code, you can adjust the contrast by rotating the potentiometer on the I2C module until the LCD functions correctly.
+
+.. raw:: html
+
+   <video loop autoplay muted style = "max-width:100%">
+      <source src="../_static/videos/basic_projects/14_basic_i2c_lcd_2.mp4"  type="video/mp4">
+      Your browser does not support the video tag.
+   </video>
+
+   <br/><br/>
 
 Code Analysis
 ------------------------

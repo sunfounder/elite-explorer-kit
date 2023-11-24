@@ -15,7 +15,7 @@ We need to use active buzzer. Turn them around, the sealed back (not the exposed
 
 .. image:: img/16_buzzer.png
     :align: center
-    :width: 80%
+    :width: 70%
 
 Required Components
 -------------------------

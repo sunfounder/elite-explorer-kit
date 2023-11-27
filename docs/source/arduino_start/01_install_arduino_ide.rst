@@ -14,7 +14,8 @@ Requirements
 
 * Windows - Win 10 and newer, 64 bits
 * Linux - 64 bits
-* Mac OS X - Version 10.14: "Mojave" or newer, 64 bits
+* Mac OS Intel - Version 10.14: "Mojave" or newer, 64 bits
+* Mac OS Apple Silicon - Version 11: "Big Sur" or newer, 64 bits
 
 Download the Arduino IDE 2.0
 -------------------------------
@@ -23,7 +24,7 @@ Download the Arduino IDE 2.0
 
 #. Download the IDE for your OS version.
 
-    .. image:: img/sp_001.png
+   .. image:: img/sp_001.png
 
 Installation
 ------------------------------

@@ -98,7 +98,7 @@ rst_epilog = """
 
 .. |link_download_arduino| raw:: html
 
-    <a href="https://www.arduino.cc/en/software" target="_blank">Arduino IDE 2.0.0 Page</a>
+    <a href="https://www.arduino.cc/en/software" target="_blank">Arduino IDE 2.x Download Page</a>
 
 .. |link_install_arduino_linux| raw:: html
 

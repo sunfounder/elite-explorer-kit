@@ -20,17 +20,17 @@ A circuit is a closed path in which electrons move to create an electric current
 The Arduino Board has some power output pins (positive) and some ground pins (negative).
 You can use these pins as the positive and negative sides of the power supply by plugging the power source into the board.
 
-.. image:: img/arduinoPN.jpg
+.. image:: img/08_circuit_1.png
     :align: center
-    :width: 65%
+    :width: 70%
 
 With electricity, you can create works with light, sound, and motion.
 You can light up an LED by connecting the long pin to the positive terminal and the short pin to the negative terminal.
-The LED will break down very quickly if you do this, so you need to add a 220* resistor inside the circuit to protect it.
+However, doing this directly can quickly damage not just the LED but also risk harming the pins of your UNO R4 board. To avoid this, it's essential to add a 1kΩ resistor into the circuit, protecting both the LED and the UNO R4's pins.
 
 The circuit they form is shown below.
 
-.. image:: img/sp221014_181625.png
+.. image:: img/08_circuit_2.png
     :align: center
     :width: 65%
 
@@ -64,16 +64,21 @@ On the Internet, we can find a lot of information about breadboards.
 
 Here are some things you should know about breadboards.
 
+.. image:: ../components/img/breadboard_internal.png
+    :align: center
+    :width: 85%
+
+.. raw:: html
+
+   <br/>
+
 #. Each half-row group (such as column A-E in row 1 or column F-J in row 3) is connected. Therefore, if an electrical signal flows in from A1, it can flow out from B1, C1, D1, E1, but not from F1 or A2.
 
 #. In most cases, both sides of the breadboard are used as power buses, and the holes in each column (about 50 holes) are connected together. As a general rule, positive power supplies are connected to the holes near the red wire, and negative power supplies are connected to the holes near the blue wire.
 
-#. In a circuit, current flows from the positive pole to the negative pole after passing through the load. In this case, a short circuit may occur.
-
-
 **Let us follow the direction of the current to build the circuit!**
 
-.. image:: img/sp221014_182229.png
+.. image:: img/08_circuit_3.png
     :align: center
     :width: 60%
 
@@ -82,10 +87,10 @@ Here are some things you should know about breadboards.
     <br/>
 
 1. In this circuit, we use the 5V pin of the board to power the LED. Use a male-to-male (M2M) jumper wire to connect it to the red power bus.
-#. To protect the LED, the current must pass through a 220 ohm resistor. Connect one end (either end) of the resistor to the red power bus, and the other end to the free row of the breadboard.
+#. To protect the LED and the UNO R4's pins, the current must pass through a 1k ohm resistor. Connect one end (either end) of the resistor to the red power bus, and the other end to the free row of the breadboard.
 
    .. note::
-        The color ring of the 220 ohm resistor is red, red, black, black and brown.
+        The color ring of the 1000 ohm :ref:`cpn_resistor` is red, black, black, brown and brown.
 
 #. If you pick up the LED, you will see that one of its leads is longer than the other. Connect the longer lead to the same row as the resistor, and the shorter lead to the other row.
 
@@ -108,7 +113,7 @@ Direction of the circuit
 -------------------------------
 There is an orientation to circuits, and the orientation plays a significant role in certain electronic components. There are some devices with polarity, which means they must be connected correctly based on their positive and negative poles. Circuits built with the wrong orientation will not function properly.
 
-.. image:: img/sp221014_182229.png
+.. image:: img/08_circuit_4.png
     :align: center
     :width: 60%
 
@@ -141,10 +146,11 @@ Therefore, current (I) = voltage (V) / resistance (R).
 
 About Ohm's law we can do a simple experiment.
 
-.. image:: img/sp221014_183107.png
+.. image:: img/08_circuit_5.png
+    :width: 55%
 
 By changing the wire connecting 5V to 3.3V , the LED gets dimmer.
-If you change the resistor from 220ohm to 1000ohm (color ring: brown, black, black, brown, and brown), you will notice that the LED becomes dimmer than before. The larger the resistor, the dimmer the LED.
+If you change the resistor from 1000 ohm to 2000 ohm (color ring: brown, black, black, brown, and brown), you will notice that the LED becomes dimmer than before. The larger the resistor, the dimmer the LED.
 
 Most packaged modules only require access to the proper voltage (usually 3.3V or 5V), such as ultrasonic module.
 
@@ -165,7 +171,7 @@ Simply put, the way Arduino controls a circuit is by changing the level of the p
 
 Now let's try to code the Arduino board to control the blinking LED on the breadboard. Build the circuit so that the LED is connected to pin 9.
 
-.. image:: img/wiring_led.png
+.. image:: img/08_circuit_6.png
     :width: 400
     :align: center
 

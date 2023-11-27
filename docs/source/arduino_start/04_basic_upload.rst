@@ -9,18 +9,15 @@ Arduino development boards usually come with a USB cable. You can use it to conn
 
 Select the correct **Board** and **Port** in the Arduino IDE. Normally, Arduino boards are recognized automatically by the computer and assigned a port, so you can select it here.
 
-    .. image:: img/board_port.png
+    .. image:: img/04_upload_1.png
         :width: 90%
 
 
-If your board is already plugged in, but not recognized, check if the **INSTALLED** logo appears in the **Arduino AVR Boards** section of the **Boards Manager**, if not, please scroll down a bit and click on **INSTALL**.
+If your board is already plugged in, but not recognized, check if the **INSTALLED** logo appears in the **Arduino UNO R4 Boards** section of the **Boards Manager**, if not, please scroll down a bit and click on **INSTALL**.
 
-    .. image:: img/upload1.png
-        :width: 90%
+Search **"UNO R4"** in **Boards Manager** and check if the corresponding library is installed.
 
-Specifically, for UNO R4, search **"UNO R4"** in **Boards Manager** and check if the corresponding library is installed.
-
-    .. image:: img/install_uno_r4_lib.png
+    .. image:: img/04_upload_2.png
         :width: 90%
 
 Reopening the Arduino IDE and re-plugging the Arduino board will fix most of the problems. You can also click **Tools** -> **Board** or **Port** to select them.
@@ -30,17 +27,17 @@ Reopening the Arduino IDE and re-plugging the Arduino board will fix most of the
 
 After clicking the Verify button, the sketch will be compiled to see if there are any errors.
 
-    .. image:: img/sp221014_174532.png
+    .. image:: img/04_upload_3.png
         :width: 90%
 
 You can use it to find mistakes if you delete some characters or type a few letters by mistake. From the message bar, you can see where and what type of errors occurred. 
 
-    .. image:: img/sp221014_175307.png
+    .. image:: img/04_upload_4.png
         :width: 90%
 
 If there are no errors, you will see a message like the one below.
 
-    .. image:: img/sp221014_175512.png
+    .. image:: img/04_upload_5.png
         :width: 90%
 
 
@@ -48,17 +45,17 @@ If there are no errors, you will see a message like the one below.
 
 After completing the above steps, click the **Upload** button to upload this sketch to the board.
 
-    .. image:: img/sp221014_175614.png
+    .. image:: img/04_upload_6.png
         :width: 90%
 
 If successful, you will be able to see the following prompt.
 
-    .. image:: img/sp221014_175654.png
+    .. image:: img/04_upload_7.png
         :width: 90%
 
 At the same time, the on-board LED blink.
 
-.. image:: img/1_led.jpg
+.. image:: img/04_upload_8.png
     :width: 400
     :align: center
 

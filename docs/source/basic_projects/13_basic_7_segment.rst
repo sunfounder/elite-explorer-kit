@@ -31,7 +31,7 @@ Wiring
 Schematic Diagram
 ------------------------
 
-In this experiment, connect each of pin a-g of the 7-Segment Display to one 220ohm current limiting resistor respectively and then to pin 4-11. GND connects to GND. By programming, we can set one or several of pin4-11 as High level to light up the corresponding LED(s).
+In this experiment, connect each of pin a-g of the 7-Segment Display to one 1000 ohm current limiting resistor respectively and then to pin 4-11. GND connects to GND. By programming, we can set one or several of pin4-11 as High level to light up the corresponding LED(s).
 
 .. image:: img/13-7_segment_display_schematic.png
     :align: center

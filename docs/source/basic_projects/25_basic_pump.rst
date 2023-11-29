@@ -14,9 +14,11 @@ Required Components
 -------------------------
 
 * :ref:`uno_r4_wifi`
+* :ref:`cpn_breadboard`
 * :ref:`cpn_wires`
 * :ref:`cpn_pump`
 * :ref:`cpn_ta6586`
+* :ref:`cpn_power`
 
 
 Wiring

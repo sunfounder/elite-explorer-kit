@@ -37,6 +37,8 @@ Schematic Diagram
 -----------------------
 
 .. image:: img/26_stepper_motor_schematic.png
+   :align: center
+   :width: 80%
 
 
 Code

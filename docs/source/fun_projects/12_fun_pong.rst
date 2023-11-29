@@ -29,6 +29,7 @@ The game mechanics can be divided into the following parts:
 * :ref:`cpn_breadboard`
 * :ref:`cpn_oled`
 * :ref:`cpn_button`
+* :ref:`cpn_power`
 
 
 **Wiring**

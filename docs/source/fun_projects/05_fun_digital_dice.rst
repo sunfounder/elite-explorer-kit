@@ -19,7 +19,7 @@ This code is designed to simulate a rolling dice using a 74HC595 shift register 
 * :ref:`cpn_breadboard`
 * :ref:`cpn_74hc595`
 * :ref:`cpn_7segment`
-* :ref:`cpn_button`
+* :ref:`cpn_tilt_switch`
 * :ref:`cpn_resistor`
 
 **Wiring**

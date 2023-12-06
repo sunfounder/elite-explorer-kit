@@ -34,7 +34,7 @@ This example demonstrates code for communicating with the Arduino IoT Cloud. Its
 
 **Install Arduino Create Agent**
 
-1. Visit the address https://docs.arduino.cc/arduino-cloud/getting-started/iot-cloud-getting-started.
+1. Visit the address https://create.arduino.cc/getting-started/plugin/welcome.
 
 2. Click START.
 
@@ -67,10 +67,10 @@ This example demonstrates code for communicating with the Arduino IoT Cloud. Its
 
   https://login.arduino.cc/login
 
-2. After logging in, access the IoT Cloud by clicking the menu in the upper right corner.
+2. Once logged in, click on IoT Cloud in the upper right corner.
 
    .. image:: img/02_iot_cloud_2.png
-      :width: 60%
+
 
 3. Create a new thing.
 
@@ -79,37 +79,37 @@ This example demonstrates code for communicating with the Arduino IoT Cloud. Its
 4. Associate your device.
 
    .. image:: img/02_iot_cloud_4.png
-    :width: 90%
+
 
 5. Set up a new device.
 
    .. image:: img/02_iot_cloud_5.png
-    :width: 90%
+
 
 6. Choose your Arduino board.
  
    .. image:: img/02_iot_cloud_6.png
-    :width: 90%
+
 
 7. Wait for a moment, and your UNO R4 WiFi will be detected. Continue by clicking configure.
  
    .. image:: img/02_iot_cloud_7.png
-    :width: 90%
+
  
 8. Give your device a name.
 
   .. image:: img/02_iot_cloud_8.png
-    :width: 90%
+
 
 9. Make your device IoT-ready, and remember to save the secret key.
 
   .. image:: img/02_iot_cloud_9.png
-    :width: 90%
+
 
 10. Wait for a few minutes.
 
   .. image:: img/02_iot_cloud_10.png
-    :width: 90%
+
 
 .. 5. Select Arduino UNO R4 WiFi.
 
@@ -118,42 +118,42 @@ This example demonstrates code for communicating with the Arduino IoT Cloud. Its
 11. Configure WiFi.
 
   .. image:: img/02_iot_cloud_11.png
-    :width: 90%
+
 
 12. Here you will need to enter your WiFi password and secret key.
 
   .. image:: img/02_iot_cloud_12.png
-    :width: 80%
+
 
 13. Add a variable.
 
   .. image:: img/02_iot_cloud_13.png
-    :width: 80%
+
 
 14. Here, we want to display the temperature in IoT Cloud, so we configure a read-only float variable.
 
   .. image:: img/02_iot_cloud_14.png
-    :width: 80%
+
 
 15. After completion, go to the sketch.
 
   .. image:: img/02_iot_cloud_15.png
-    :width: 90%
+
 
 16. Open the full editor.
 
   .. image:: img/02_iot_cloud_16.png
-    :width: 90%
+
 
 17. Click on Libraries on the right side, then Library Manager.
 
   .. image:: img/02_iot_cloud_17.png
-    :width: 90%
+
 
 18. Search for the DHT sensor library and check it.
 
   .. image:: img/02_iot_cloud_18.png
-    :width: 90%
+
 
 19. Now, we need to edit the code. You can see that the editor has already prepared the IoT Cloud-related code for you. You just need to add the specific functionality you need. In this example, we added code to read the temperature using the DHT11 sensor.
 
@@ -181,7 +181,7 @@ This example demonstrates code for communicating with the Arduino IoT Cloud. Its
   
       #include "thingProperties.h"
   
-      #define DHTPIN 4     
+      #define DHTPIN 11     
       #define DHTTYPE DHT11 
       DHT dht(DHTPIN, DHTTYPE);
   
@@ -222,32 +222,42 @@ This example demonstrates code for communicating with the Arduino IoT Cloud. Its
 20. Upload the code. You may be prompted to update; follow the prompts to complete.
 
   .. image:: img/02_iot_cloud_20.png
-    :width: 90%
+
 
 21. Return to IoT CLOUD.
 
   .. image:: img/02_iot_cloud_21.png
-    :width: 90%
 
-22. Build a dashboard.
+
+22. Click on the menu in the top left corner.
   
   .. image:: img/02_iot_cloud_22.png
-    :width: 90%
 
-23. There are many widgets available; here, we choose a value widget for displaying the temperature.
 
+23. Click on the dashboard.
+  
   .. image:: img/02_iot_cloud_23.png
-    :width: 90%
 
-24. After clicking, a widget settings interface will appear, where you can connect the widget to the cloud variable you created earlier.
 
+24. Create dashboard.
+  
   .. image:: img/02_iot_cloud_24.png
-    :width: 90%
 
-25. Now, you can view the sensor readings on Arduino IoT Cloud.
 
-  .. image:: img/02_cloud.png
-    :width: 100%
+25. There are many widgets available; here, we choose a value widget for displaying the temperature.
+
+  .. image:: img/02_iot_cloud_25.png
+
+
+26. After clicking, a widget settings interface will appear, where you can connect the widget to the cloud variable you created earlier.
+
+  .. image:: img/02_iot_cloud_26.png
+
+
+27. Now, you can view the sensor readings on Arduino IoT Cloud.
+
+  .. image:: img/02_iot_cloud_27.png
+
 
 **How it works?**
 

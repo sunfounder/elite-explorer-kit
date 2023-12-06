@@ -15,18 +15,46 @@ This project uses an Android app created with MIT App Inventor to receive and di
 
 The Android application will be constructed utilizing a complimentary web-based platform known as |link_appinventor|. The project presents an excellent opportunity to gain familiarity with the interfacing of an Arduino with a smartphone. 
 
+**Required Components**
 
-1. Build the Cirduit
------------------------------
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - Elite Explorer Kit
+        - 300+
+        - |link_Elite_Explorer_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`uno_r4_wifi`
+        - \-
+    *   - :ref:`cpn_breadboard`
+        - |link_breadboard_buy|
+    *   - :ref:`cpn_wires`
+        - |link_wires_buy|
+    *   - :ref:`cpn_dht11`
+        - |link_humiture_buy|
+
+**1. Build the Cirduit**
 
 .. image:: img/08-bluetooth_environmental_monitor_bb.png
     :width: 80%
     :align: center
-
-* :ref:`uno_r4_wifi`
-* :ref:`cpn_wires`
-* :ref:`cpn_breadboard`
-* :ref:`cpn_dht11`
 
 .. image:: img/08_ble_home_schematic.png
     :width: 30%
@@ -36,8 +64,7 @@ The Android application will be constructed utilizing a complimentary web-based 
 
    <br/>
 
-2. Create the Android App
------------------------------
+**2. Create the Android App**
 
 The Android application will be developed using a free web application known as |link_appinventor|. 
 MIT App Inventor serves as an excellent starting point for Android development, owing to its intuitive drag-and-drop 
@@ -85,9 +112,7 @@ Now, let's begin.
    * If you wish to upload this app to Google Play or another app marketplace, you can generate a ``.aab`` file.
 
 
-3. Upload the Code
------------------------------
-
+**3. Upload the Code**
 
 #. Open the ``08-bluetooth_environmental_monitor.ino`` file under the path of ``elite-explorer-kit-main\iot_project\08-bluetooth_environmental_monitor``, or copy this code into **Arduino IDE**.
    
@@ -102,8 +127,7 @@ Now, let's begin.
 
 #. Open the Serial monitor(set baudrate to **9600**) to view debug messages. 
 
-4. App and Bluetooth moudule Connection
------------------------------------------------
+**4. App and Bluetooth moudule Connection**
 
 Ensure that the application created earlier is installed on your smartphone.
 
@@ -161,9 +185,7 @@ Ensure that the application created earlier is installed on your smartphone.
       :width: 60%
       :align: center
 
-5. Code explanation
------------------------------------------------
-
+**5. Code explanation**
 
 1. Importing Libraries and Defining Constants
 

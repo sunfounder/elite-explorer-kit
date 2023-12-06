@@ -13,12 +13,43 @@ The water pump is also a motor, which converts the mechanical energy of the moto
 Required Components
 -------------------------
 
-* :ref:`uno_r4_wifi`
-* :ref:`cpn_breadboard`
-* :ref:`cpn_wires`
-* :ref:`cpn_pump`
-* :ref:`cpn_ta6586`
-* :ref:`cpn_power`
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - Elite Explorer Kit
+        - 300+
+        - |link_Elite_Explorer_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`uno_r4_wifi`
+        - \-
+    *   - :ref:`cpn_breadboard`
+        - |link_breadboard_buy|
+    *   - :ref:`cpn_wires`
+        - |link_wires_buy|
+    *   - :ref:`cpn_pump`
+        - 
+    *   - :ref:`cpn_ta6586`
+        - \-
+    *   - :ref:`cpn_power`
+        - \-
+
 
 
 Wiring

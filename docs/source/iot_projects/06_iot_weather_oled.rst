@@ -12,6 +12,38 @@ WeatherTime Screen
 
 This sketch connects to a WiFi network, fetches weather data from OpenWeatherMap every minute, retrieves the current time from an NTP server, and displays the day, time, and weather information on an OLED screen.
 
+**Required Components**
+
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - Elite Explorer Kit
+        - 300+
+        - |link_Elite_Explorer_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`uno_r4_wifi`
+        - \-
+    *   - :ref:`cpn_wires`
+        - |link_wires_buy|
+    *   - :ref:`cpn_oled`
+        - |link_oled_buy|
 
 **Wiring**
 
@@ -19,20 +51,11 @@ This sketch connects to a WiFi network, fetches weather data from OpenWeatherMap
     :width: 100%
     :align: center
 
-
-* :ref:`uno_r4_wifi`
-* :ref:`cpn_wires`
-* :ref:`cpn_breadboard`
-* :ref:`cpn_oled`
-
-
 **Schematic**
 
 .. image:: img/06_weather_oled_schematic.png
     :width: 60%
     :align: center
-
-
 
 **OpenWeather**
 

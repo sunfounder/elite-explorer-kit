@@ -15,16 +15,50 @@ Additionally, users can enter manual mode through a button to operate the fan at
 
 **Required Components**
 
-* :ref:`uno_r4_wifi`
-* :ref:`cpn_wires`
-* :ref:`cpn_breadboard`
-* :ref:`cpn_button`
-* :ref:`cpn_led`
-* :ref:`cpn_resistor`
-* :ref:`cpn_thermistor`
-* :ref:`cpn_motor`
-* :ref:`cpn_ta6586`
-* :ref:`cpn_power`
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - Elite Explorer Kit
+        - 300+
+        - |link_Elite_Explorer_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`uno_r4_wifi`
+        - \-
+    *   - :ref:`cpn_breadboard`
+        - |link_breadboard_buy|
+    *   - :ref:`cpn_wires`
+        - |link_wires_buy|
+    *   - :ref:`cpn_resistor`
+        - |link_resistor_buy|
+    *   - :ref:`cpn_led`
+        - |link_led_buy|
+    *   - :ref:`cpn_button`
+        - |link_button_buy|
+    *   - :ref:`cpn_thermistor`
+        - |link_thermistor_buy|
+    *   - :ref:`cpn_motor`
+        - |link_motor_buy|
+    *   - :ref:`cpn_ta6586`
+        - \-
+    *   - :ref:`cpn_power`
+        - \-
 
 **Wiring**
 

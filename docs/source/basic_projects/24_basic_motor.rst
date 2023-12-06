@@ -11,12 +11,42 @@ In this lesson, you will learn how to use Motor, the working principle of which 
 Required Components
 -------------------
 
-* :ref:`uno_r4_wifi`
-* :ref:`cpn_breadboard`
-* :ref:`cpn_wires`
-* :ref:`cpn_ta6586`
-* :ref:`cpn_motor`
-* :ref:`cpn_power`
+In this project, we need the following components. 
+
+It's definitely convenient to buy a whole kit, here's the link: 
+
+.. list-table::
+    :widths: 20 20 20
+    :header-rows: 1
+
+    *   - Name	
+        - ITEMS IN THIS KIT
+        - LINK
+    *   - Elite Explorer Kit
+        - 300+
+        - |link_Elite_Explorer_kit|
+
+You can also buy them separately from the links below.
+
+.. list-table::
+    :widths: 30 20
+    :header-rows: 1
+
+    *   - COMPONENT INTRODUCTION
+        - PURCHASE LINK
+
+    *   - :ref:`uno_r4_wifi`
+        - \-
+    *   - :ref:`cpn_breadboard`
+        - |link_breadboard_buy|
+    *   - :ref:`cpn_wires`
+        - |link_wires_buy|
+    *   - :ref:`cpn_ta6586`
+        - \-
+    *   - :ref:`cpn_motor`
+        - |link_motor_buy|
+    *   - :ref:`cpn_power`
+        - \-
 
 Wiring
 ----------------------

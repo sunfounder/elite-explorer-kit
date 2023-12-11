@@ -1,32 +1,32 @@
 .. _cpn_oled:
 
-OLED Display Module
+OLEDディスプレイモジュール
 ==========================
 
 .. image:: img/oled.png
     :width: 300
     :align: center
 
-Introduction
+紹介
 ---------------------------
-An OLED (Organic Light-Emitting Diode) display module is a device that can display text, graphics and images on a thin and flexible screen using organic materials that emit light when electric current is applied.
+OLED（有機発光ダイオード）ディスプレイモジュールは、電流が流れると発光する有機物質を使用して、薄くて柔軟な画面にテキスト、グラフィック、画像を表示できるデバイスです。
 
-The main advantage of an OLED Display is that it emits its own light and doesn’t need another source of backlight. Due to this, OLED Displays often have better contrast, brightness and viewing angles when compared to LCD displays.
+OLEDディスプレイの主な利点は、自身が光を発するため、別のバックライト源が必要ないことです。このため、OLEDディスプレイは、LCDディスプレイと比較して、コントラスト、明るさ、視野角がしばしば優れています。
 
-Another important feature of OLED Displays is deep black levels. Since each pixel emits its own light in an OLED Display, to produce black color, the individual pixel can be turned OFF.
+OLEDディスプレイのもう一つの重要な特徴は、深い黒色レベルです。OLEDディスプレイでは各ピクセルが自身の光を発するため、黒色を生成するには、個々のピクセルをOFFにできます。
 
-Due to lower power consumption (only pixels which are lit up draw current), OLED displays are also popular in battery operated devices like Smart Watches, Health Trackers and other wearables.
+低消費電力（点灯しているピクセルのみが電流を消費する）のため、OLEDディスプレイはスマートウォッチ、ヘルストラッカー、その他のバッテリー駆動のウェアラブル機器で人気があります。
 
-Principle
+原理
 ---------------------------
-An OLED display module consists of an OLED panel and an OLED driver chip that is mounted on the back of the module. The OLED panel is made of many tiny pixels that can produce different colors of light. Each pixel consists of several layers of organic materials sandwiched between two electrodes (anode and cathode). When electric current flows through the electrodes, the organic materials emit light of different wavelengths depending on their composition.
+OLEDディスプレイモジュールは、OLEDパネルとモジュールの背面に取り付けられたOLEDドライバーチップで構成されています。OLEDパネルは、さまざまな色の光を発する多くの小さなピクセルでできています。各ピクセルは、2つの電極（アノードとカソード）の間に挟まれた数層の有機物質で構成されています。電極を通じて電流が流れると、有機物質はその組成に応じて異なる波長の光を発します。
 
-The OLED driver chip is a chip that can control the pixels of the OLED panel using a serial communication protocol called I2C (Inter-Integrated Circuit).
+OLEDドライバーチップは、I2C（Inter-Integrated Circuit）と呼ばれるシリアル通信プロトコルを使用してOLEDパネルのピクセルを制御できるチップです。
 
-The OLED driver chip converts the signals from the Arduino into commands for the OLED panel. The Arduino can send data to the OLED driver chip using a library that can control the I2C protocol. One such library is the Adafruit SSD1306 library. With this library, you can initialize the OLED display module, set the brightness level, print text, graphics or images, etc.
+OLEDドライバーチップは、Arduinoからの信号をOLEDパネルのコマンドに変換します。Arduinoは、I2Cプロトコルを制御できるライブラリを使用してOLEDドライバーチップにデータを送信できます。そのようなライブラリの一つがAdafruit SSD1306ライブラリです。このライブラリを使って、OLEDディスプレイモジュールを初期化し、明るさレベルを設定し、テキスト、グラフィック、画像などを表示できます。
 
-**Example**
+**例**
 
-* :ref:`basic_oled` (Basic Project)
-* :ref:`fun_pong` (Fun Project)
-* :ref:`iot_weathertime_screen` (IoT Project)
+* :ref:`basic_oled` (基本プロジェクト)
+* :ref:`fun_pong` (楽しいプロジェクト)
+* :ref:`iot_weathertime_screen` (IoTプロジェクト)

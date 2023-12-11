@@ -1,38 +1,39 @@
+.. _basic_gy87_bmp180:
+
 BMP180
 ==========================
 
-
-Overview
+概要
 ---------------
 
-In this tutorial, we delve into the GY-87 IMU module, focusing on the BMP180 sensor for measuring temperature, pressure, and altitude. Ideal for applications like weather monitoring and altitude tracking, this lesson covers interfacing the GY-87 with an Arduino Uno and using the Adafruit BMP085 library. You'll learn how to initialize the BMP180 sensor and read its data on the Arduino Serial Monitor, a crucial skill for projects that require environmental data.
+このチュートリアルでは、GY-87 IMUモジュールに焦点を当て、特に気温、気圧、高度を測定するためのBMP180センサーについて詳しく解説します。天気監視や高度追跡などの用途に理想的なこのレッスンでは、GY-87をArduino Unoとインターフェースし、Adafruit BMP085ライブラリを使用する方法について紹介します。BMP180センサーを初期化し、Arduinoシリアルモニターでそのデータを読み取る方法を学ぶことができます。これは、環境データを必要とするプロジェクトにとって重要なスキルです。
 
-Required Components
+必要なコンポーネント
 -------------------------
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全てのキットを一括で購入するのが便利です。リンクはこちらです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名称
+        - このキットのアイテム数
+        - リンク
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネント紹介
+        - 購入リンク
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -42,7 +43,7 @@ You can also buy them separately from the links below.
         - \-
 
 
-Wiring
+配線図
 ----------------------
 
 .. image:: img/09-gy87_bb.png
@@ -54,7 +55,7 @@ Wiring
    <br/>
 
 
-Schematic Diagram
+回路図
 -----------------------
 
 .. image:: img/09_basic_gy87_schematic.png
@@ -62,28 +63,29 @@ Schematic Diagram
     :width: 60%
 
 
-Code
+
+コード
 -----------
 
 .. note::
 
-    * You can open the file ``09-gy87_bmp180.ino`` under the path of ``elite-explorer-kit-main\basic_project\09-gy87_bmp180`` directly.
-    * Or copy this code into Arduino IDE.
+    * ファイル ``09-gy87_bmp180.ino`` を直接 ``elite-explorer-kit-main\basic_project\09-gy87_bmp180`` のパスから開くことができます。
+    * または、このコードをArduino IDEにコピーしてください。
 
 .. note:: 
-    To install the library, use the Arduino Library Manager and search for **"Adafruit BMP085 Library"** and install it. 
+    ライブラリをインストールするには、Arduinoライブラリマネージャーを使用し、 **「Adafruit BMP085 Library」** を検索してインストールしてください。
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/7f7347f7-e1e6-400f-b10c-02ccf300b3b9/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-Code Analysis
+コード解析
 ------------------------
 
 - ``initializeBMP180()``
 
-  Initialize the BMP180 sensor.
+  BMP180センサーの初期化。
 
   .. code-block:: arduino
 
@@ -99,7 +101,8 @@ Code Analysis
 
 - ``printBMP180()``
 
-  Print the values ​​read by the BMP180 sensor.
+  BMP180センサーによって読み取られた値を表示します。
+
 
   .. code-block:: arduino
 

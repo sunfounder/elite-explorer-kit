@@ -1,45 +1,40 @@
 .. _cpn_ws2812:
 
-WS2812 RGB 8 LEDs Strip
+WS2812 RGB 8 LEDストリップ
 ============================
 
 .. image:: img/ws2812b.png
 
-The WS2812 RGB 8 LEDs Strip is composed of 8 RGB LEDs. 
-Only one pin is required to control all the LEDs. Each RGB LED has a WS2812 chip, which can be controlled independently. 
-It can realize 256-level brightness display and complete true color display of 16,777,216 colors. 
-At the same time, the pixel contains an intelligent digital interface data latch signal shaping amplifier drive circuit, and a signal shaping circuit is built in to effectively ensure the color height of the pixel point light Consistent.
+WS2812 RGB 8 LEDストリップは、8個のRGB LEDで構成されています。
+全てのLEDを制御するために1つのピンだけが必要です。各RGB LEDにはWS2812チップが搭載されており、個別に制御することができます。
+256レベルの明るさ表示と16,777,216色の完全なトゥルーカラー表示を実現できます。
+同時に、ピクセルにはインテリジェントなデジタルインターフェースデータラッチ信号成形アンプ駆動回路が含まれており、ピクセルポイントライトの色の高さを効果的に保証するために、信号成形回路が内蔵されています。
 
-It is flexible, can be docked, bent, and cut at will, and the back is equipped with adhesive tape, which can be fixed on the uneven surface at will, and can be installed in a narrow space.
+柔軟性があり、ドッキング、曲げ、自由にカットが可能で、裏面には粘着テープが付いているため、凹凸のある表面に自由に固定し、狭いスペースにも取り付けることができます。
 
-**Features**
+**特徴**
 
-* Work Voltage: DC5V
-* IC: One IC drives one RGB LED
-* Consumption: 0.3w each LED
-* Working Temperature: -15-50
-* Color: Full color RGB
-* RGB Type:5050RGB（Built-in IC WS2812B）
-* Light Strip Thickness: 2mm
-* Each LED can be controlled individually
+* 動作電圧: DC5V
+* IC: 1つのICで1つのRGB LEDを駆動
+* 消費電力: LED当たり0.3w
+* 動作温度: -15-50
+* 色: フルカラーRGB
+* RGBタイプ: 5050RGB（内蔵IC WS2812B）
+* ライトストリップの厚さ: 2mm
+* 各LEDは個別に制御可能
 
-**WS2812B Introdction**
+**WS2812Bの紹介**
 
 * |link_ws2812b_datasheet|
 
-WS2812B is a intelligent control LED light source that the control circuit and RGB chip are integrated in a package of 5050 components. It internal include intelligent digital port data latch and signal reshaping ampli fication drive circuit. Also include a precision internal oscillator and a 12V voltage programmable constant current control part, effectively ensuring the pixel point light color height consistent.
+WS2812Bは、制御回路とRGBチップが5050コンポーネントのパッケージに統合されたインテリジェントな制御LED光源です。内部にはインテリジェントなデジタルポートデータラッチと信号成形増幅駆動回路が含まれています。また、精密な内部オシレーターと12Vの電圧プログラム可能な定電流制御部を内蔵し、ピクセルポイントライトの色の高さを効果的に保証しています。
 
-The data transfer protocol use single NZR communication mode. After the pixel power-on reset, the DIN port receive data from controller, the first pixel collect initial 24bit data then sent to the internal data latch, the other data which reshaping by the internal signal reshaping amplification circuit sent to the next cascade pixel through the DO port. After transmission for each pixel, the signal to reduce 24bit. pixel adopt auto resha -ping transmit technology, making the pixel cascade number is not limited the signal transmission, only depend on the speed of signal transmission.
+データ伝送プロトコルには単一のNZR通信モードを使用します。ピクセルの電源オンリセット後、DINポートはコントローラーからのデータを受信し、最初のピクセルは最初の24ビットのデータを収集し、内部データラッチに送信します。内部信号成形増幅回路によって成形された他のデータは、DOポートを通じて次のカスケードピクセルに送信されます。各ピクセルの伝送後、信号は24ビット減少します。ピクセルは自動再形成伝送技術を採用しており、ピクセルのカスケード数は信号伝送の速度にのみ依存し、信号伝送の限界はありません。
 
-LED with low driving voltage, environmental protection and energy saving, high brightness, scattering angl e is large, good consistency, low power, long life and other advantages. The control chip integrated in LED above becoming more simple circuit, small volume, convenient installation.
+低駆動電圧、環境保護、省エネルギー、高輝度、大きな散乱角、良好な一貫性、低電力、長寿命などの利点があります。LEDの上に統合された制御チップにより、回路がよりシンプルで、体積が小さく、取り付けが便利になります。
 
-.. Example
-.. -------------------
+**例**
 
-.. :ref:`RGB LED Strip`
+* :ref:`basic_ws2812` (基本プロジェクト)
+* :ref:`iot_cherrylight` (IoTプロジェクト)
 
-
-**Example**
-
-* :ref:`basic_ws2812` (Basic Project)
-* :ref:`iot_cherrylight` (IoT Project)

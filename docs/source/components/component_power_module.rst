@@ -1,11 +1,11 @@
 .. _cpn_power:
 
-Power Supply Module
+電源モジュール
 =====================
 
-When we need a large current to drive a component, which will severely interfere with the normal work of Arduino UNO board. Therefore, we separately supply power for the component by this module to make it run safely and steadily.
+Arduino UNOボードの正常な動作を大幅に妨げるような大電流でコンポーネントを駆動する必要がある場合、このモジュールでコンポーネントに別々に電力を供給し、安全かつ安定して動作させます。
 
-You can just plug it in the breadboard to supply power. It provides a voltage of 3.3V and 5V, and you can connect either via a jumper cap included.
+ブレッドボードに差し込んで電力を供給できます。3.3Vおよび5Vの電圧を提供し、付属のジャンパーキャップを介して接続できます。
 
 .. image:: img/power_supply_new.png
     :width: 95%
@@ -15,28 +15,28 @@ You can just plug it in the breadboard to supply power. It provides a voltage of
 
     <br/>
 
-**Features and specifications**
+**特徴と仕様**
 
-* Power input: USB Type-C, 5V
-* Output voltage: 5V, 3.3V (adjustable via jumpers. 0V, 3.3V, and 5V configuration)
-* Output current: 5V/1.5A, 3.3V/1A
-* ON-OFF Switch available
-* Two Independent Channel
-* Onboard berg male header for GND, 5V, 3.3V output
-* USB (Type-C) output available
-* USB (Type-A) intput available
-* Onboard LED: Charging indicator light CHG, power indicator light PWR
-* Battery: 3.7V 14500 lithium-ion battery, 500mAh
-* Dimension: 52mm x 32mm (L x W)
+* 電源入力: USB Type-C, 5V
+* 出力電圧: 5V, 3.3V（ジャンパーを介して調整可能。0V、3.3V、および5Vの設定）
+* 出力電流: 5V/1.5A、3.3V/1A
+* ON-OFFスイッチあり
+* 二つの独立チャンネル
+* 基板上のベルグオスヘッダーでGND、5V、3.3V出力
+* USB（Type-C）出力あり
+* USB（Type-A）入力あり
+* 基板上のLED: 充電指示灯CHG、電源指示灯PWR
+* バッテリー: 3.7V 14500リチウムイオン電池、500mAh
+* 寸法: 52mm x 32mm (長さ x 幅)
 
 
-**Example**
+**例**
 
-* :ref:`basic_motor` (Basic Project)
-* :ref:`basic_pump` (Basic Project)
-* :ref:`basic_stepper_motor` (Basic Project)
-* :ref:`fun_smart_fan` (Fun Project)
-* :ref:`fun_plant_monitor` (Fun Project)
-* :ref:`fun_access` (Fun Project)
-* :ref:`fun_pong` (Fun Project)
+* :ref:`basic_motor` (基本プロジェクト)
+* :ref:`basic_pump` (基本プロジェクト)
+* :ref:`basic_stepper_motor` (基本プロジェクト)
+* :ref:`fun_smart_fan` (楽しいプロジェクト)
+* :ref:`fun_plant_monitor` (楽しいプロジェクト)
+* :ref:`fun_access` (楽しいプロジェクト)
+* :ref:`fun_pong` (楽しいプロジェクト)
 

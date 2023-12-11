@@ -1,17 +1,17 @@
 .. _cpn_photoresistor:
 
-Photoresistor
+フォトレジスタ
 ==============
 
 .. image:: img/photoresistor.png
     :width: 200
     :align: center
 
-A photoresistor or photocell is a light-controlled variable resistor. The resistance of a photoresistor decreases with increasing incident light intensity; in other words, it exhibits photo conductivity. 
+フォトレジスタまたはフォトセルは、光制御可変抵抗器です。フォトレジスタの抵抗は、入射光の強度が増すにつれて減少し、つまり、光導電性を示します。
 
-A photoresistor can be applied in light-sensitive detector circuits and light-activated and dark-activated switching circuits acting as a resistance semiconductor. In the dark, a photoresistor can have a resistance as high as several megaohms (MΩ), while in the light, a photoresistor can have a resistance as low as a few hundred ohms.
+フォトレジスタは、抵抗半導体として、光感知ディテクタ回路や光アクティブおよび暗アクティブスイッチング回路に応用することができます。暗闇では、フォトレジスタの抵抗は数メガオーム（MΩ）に達することがありますが、光が当たると、フォトレジスタの抵抗は数百オームまで低下することがあります。
 
-Here is the electronic symbol of photoresistor.
+こちらはフォトレジスタの電子記号です。
 
 .. image:: img/photoresistor_symbol.png
     :width: 200
@@ -19,7 +19,8 @@ Here is the electronic symbol of photoresistor.
 
 * |link_photoresistor_wiki|
 
-**Example**
+**例**
 
-* :ref:`basic_photoresistor` (Basic Project)
-* :ref:`fun_light_array` (Fun Project)
+* :ref:`basic_photoresistor` (基本プロジェクト)
+* :ref:`fun_light_array` (楽しいプロジェクト)
+

@@ -6,26 +6,26 @@ LED
 .. image:: img/LED.png
     :width: 400
 
-Semiconductor light-emitting diode is a type of component which can turn electric energy into light energy via PN junctions. By wavelength, it can be categorized into laser diode, infrared light-emitting diode and visible light-emitting diode which is usually known as light-emitting diode (LED). 
-                    
-Diode has unidirectional conductivity, so the current flow will be as the arrow indicates in figure circuit symbol. You can only provide the anode with a positive power and the cathode with a negative. Thus the LED will light up. 
+半導体発光ダイオードは、PN接合を介して電気エネルギーを光エネルギーに変換するタイプのコンポーネントです。波長によって、レーザーダイオード、赤外線発光ダイオード、そして一般的には発光ダイオード（LED）として知られる可視光発光ダイオードに分類されます。
+
+ダイオードは一方向の導電性を持つので、図の回路シンボルの矢印が示すように電流の流れがあります。陽極には正の電力を、陰極には負の電力を供給することができます。すると、LEDは点灯します。
 
 .. image:: img/led_symbol.png
 
+LEDには2つのピンがあります。長い方が陽極、短い方が陰極です。逆接続しないように注意してください。LEDには固定された順方向電圧降下があり、供給電圧がこの降下を上回るとLEDが焼損する可能性があるため、直接回路に接続することはできません。赤、黄、緑のLEDの順方向電圧は1.8Vで、白色LEDは2.6Vです。ほとんどのLEDは最大20mAの電流に耐えることができるので、直列に電流制限抵抗器を接続する必要があります。
 
-An LED has two pins. The longer one is the anode, and shorter one, the cathode. Pay attention not to connect them inversely. There is fixed forward voltage drop in the LED, so it cannot be connected with the circuit directly because the supply voltage can outweigh this drop and cause the LED to be burnt. The forward voltage of the red, yellow, and green LED is 1.8 V and that of the white one is 2.6 V. Most LEDs can withstand a maximum current of 20 mA, so we need to connect a current limiting resistor in series.                   
-
-The formula of the resistance value is as follows:
+抵抗値の計算式は次の通りです：
 
     R = (Vsupply – VD)/I
 
-**R** stands for the resistance value of the current limiting resistor, **Vsupply** for voltage supply, **VD** for voltage drop and **I** for the working current of the LED.
+**R** は電流制限抵抗器の抵抗値、 **Vsupply** は電源電圧、 **VD** は電圧降下、 **I** はLEDの動作電流を表します。
 
-Here is the detailed introduction for the LED: |link_led_wiki|.
+LEDの詳細な紹介はこちらです：|link_led_wiki|。
 
-**Example**
+**例**
 
-* :ref:`basic_led` (Basic Project)
-* :ref:`basic_relay` (Basic Project)
-* :ref:`fun_light_array` (Fun Project)
-* :ref:`fun_smart_fan` (Fun Project)
+* :ref:`basic_led` (基本プロジェクト)
+* :ref:`basic_relay` (基本プロジェクト)
+* :ref:`fun_light_array` (楽しいプロジェクト)
+* :ref:`fun_smart_fan` (楽しいプロジェクト)
+

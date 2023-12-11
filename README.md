@@ -16,6 +16,9 @@ Coming soon...
 
 <a id="update"></a>
 ## Update:
+2023-12-11:
+    - First release in Japanese.
+
 2023-12-06:
     - First release in English.
 

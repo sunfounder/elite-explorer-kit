@@ -3,37 +3,37 @@
 RGB LED
 ==========================
 
-Overview
+概要
 ---------------
 
-In this lesson, we will use PWM to control an RGB LED to flash various kinds of color. When different PWM values are set to the R, G, and B pins of the LED, its brightness will be different. When the three different colors are mixed, we can see that the RGB LED flashes different colors.
+本レッスンでは、PWM（パルス幅変調）を使用してRGB LEDを様々な色に点滅させます。LEDのR（赤）、G（緑）、B（青）ピンに異なるPWM値を設定すると、その明るさが変わります。3つの異なる色を混ぜることで、RGB LEDが様々な色に点滅するのを観察できます。
 
-Required Components
+必要なコンポーネント
 -------------------------
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全セットを購入するのが便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名称	
+        - このキットのアイテム数
+        - リンク
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネント紹介
+        - 購入リンク
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -49,29 +49,30 @@ You can also buy them separately from the links below.
 PWM
 --------
 
-Pulse width modulation, or PWM, is a technique for getting analog results with digital means. Digital control is used to create a square wave, a signal switched between on and off. This on-off pattern can simulate voltages in between full on (5 Volts) and off (0 Volts) by changing the portion of the time the signal spends on versus the time that the signal spends off. The duration of "on time" is called pulse width. To get varying analog values, you change, or modulate, that width. If you repeat this on-off pattern fast enough with some device, an LED for example, it would be like this: the signal is a steady voltage between 0 and 5V controlling the brightness of the LED. (See the PWM description on the official website of Arduino).
+パルス幅変調（PWM）は、デジタル手段でアナログ結果を得るための技術です。デジタル制御を使用して、オンとオフの間で切り替えられる矩形波（スクエアウェーブ）を作成します。このオン・オフのパターンは、オン（5ボルト）とオフ（0ボルト）の間の電圧を、信号がオンになる時間とオフになる時間の比率を変えることでシミュレートできます。"オン時間"の持続時間を「パルス幅」と呼びます。異なるアナログ値を得るには、その幅を変調（調整）します。このオン・オフのパターンを十分に高速で繰り返すと、例えばLEDのようなデバイスでは、信号が0～5Vの間の安定した電圧として現れ、LEDの明るさを制御します（Arduinoの公式ウェブサイト上のPWM説明を参照）。
 
-In the graphic below, the green lines represent a regular time period. This duration or period is the inverse of the PWM frequency. In other words, with Arduino's PWM frequency at about 500Hz, the green lines would measure 2 milliseconds each.
+以下の図では、緑色の線が通常の時間周期を表しています。この持続時間または周期はPWM周波数の逆数です。つまり、ArduinoのPWM周波数が約500Hzであれば、緑色の線はそれぞれ2ミリ秒となります。
 
 .. image:: img/11_rgbled_pwm.jpeg
    :align: center
    :width: 60%
 
 
-A call to analogWrite() is on a scale of 0 - 255, such that analogWrite(255) requests a 100% duty cycle (always on), and analogWrite(127) is a 50% duty cycle (on half the time) for example. 
+analogWrite()の呼び出しは0～255のスケールで行われ、analogWrite(255)は100％のデューティサイクル（常にオン）、analogWrite(127)は50％のデューティサイクル（半分の時間オン）を要求します。
 
-You will find that the smaller the PWM value is, the smaller the value will be after being converted into voltage. Then the LED becomes dimmer accordingly. Therefore, we can control the brightness of the LED by controlling the PWM value.
+PWM値が小さいほど、電圧に変換された後の値も小さくなります。その結果、LEDの明るさもそれに応じて暗くなります。したがって、PWM値を制御することでLEDの明るさをコントロールできます。
 
 
 
-Wiring
+
+配線図
 ----------------------
 
 .. image:: img/11-rgb_led_bb.png
     :align: center
     :width: 70%
 
-Schematic Diagram
+回路図
 -----------------------
 
 .. image:: img/11-rgb_led_schematic.png
@@ -79,13 +80,13 @@ Schematic Diagram
     :width: 80%
 
 
-Code
+コード
 ---------------
 
 .. note::
 
-    * You can open the file ``11-rgb_led.ino`` under the path of ``elite-explorer-kit-main\basic_project\11-rgb_led`` directly.
-    * Or copy this code into Arduino IDE.
+    * ファイル ``11-rgb_led.ino`` を ``elite-explorer-kit-main\basic_project\11-rgb_led`` のパスで直接開くことができます。
+    * または、このコードをArduino IDEにコピーしてください。
 
 .. raw:: html
 
@@ -95,32 +96,31 @@ Code
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/videos/basic_projects/11_basic_rgb_led.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      ブラウザがビデオタグをサポートしていません。
    </video>
 
-Once the code is successfully uploaded, you will observe the RGB LED flashing in a circular pattern of red, green, and blue initially. It will then proceed to flash in the sequence of red, orange, yellow, green, blue, indigo, and purple.
+コードが正常にアップロードされると、最初はRGB LEDが赤、緑、青の順に循環点滅し、その後、赤、オレンジ、黄色、緑、青、藍色、紫の順に点滅します。
 
 
-Code Analysis
+コード解析
 --------------------
 
-**Set the color**
+**色の設定**
 
-Here use the ``color()`` function to set the color of the RGB LED. In the
-code, it is set to flash 7 different colors.
+ここでは ``color()`` 関数を使用してRGB LEDの色を設定します。コードでは、7つの異なる色に点滅するように設定されています。
 
-You can use the paint tool on your computer to get the RGB value.
+コンピューターのペイントツールを使用してRGB値を取得できます。
 
-1. Open the paint tool on your computer and click to Edit colors.
+1. コンピューターでペイントツールを開き、色の編集をクリックします。
 
    .. image:: img/11_rgbled_color1.png
       :align: center
 
 
-2. Select one color, then you can see the RGB value of this color. Fill them in the code.
+2. 1色を選択すると、その色のRGB値が表示されます。それらをコードに入力してください。
    
    .. note:: 
-      Due to hardware and environmental factors, the colors displayed on computer screens and RGB LEDs may vary even when using the same RGB values.
+      ハードウェアや環境要因により、コンピューターの画面とRGB LEDで表示される色は、同じRGB値を使用しても異なる場合があります。
 
    .. image:: img/11_rgbled_color2.png
       :align: center
@@ -163,8 +163,7 @@ You can use the paint tool on your computer to get the RGB value.
    
          ......
    
-   
-**color() function**
+   **color()関数**
 
 .. code-block:: arduino
 
@@ -181,6 +180,7 @@ You can use the paint tool on your computer to get the RGB value.
 
     }
 
-Define three unsigned char variables, red, green and blue. Write their values to ``redPin``, ``greenPin`` and ``bluePin``. For example, color(128,0,128) is to write 128 to ``redPin``, 0 to ``greenPin`` and 128 to ``bluePin``. Then the result is the LED flashing purple.
+赤、緑、青の3つのunsigned char変数を定義し、それらの値を ``redPin``、 ``greenPin``、 ``bluePin`` に書き込みます。例えば、color(128,0,128)は ``redPin`` に128、 ``greenPin`` に0、 ``bluePin`` に128を書き込むことを意味し、結果としてLEDが紫色に点滅します。
 
-**analogWrite()**: Writes an analog value (PWM wave) to a pin. It has nothing to do with an analog pin, but is just for PWM pins. You do not need to call the ``pinMode()`` to set the pin as output before calling ``analogWrite()``.
+**analogWrite()**：アナログ値（PWM波）をピンに書き込みます。アナログピンとは関係ありませんが、PWMピン専用です。 ``analogWrite()`` を呼び出す前にピンを出力として設定するために ``pinMode()`` を呼び出す必要はありません。
+

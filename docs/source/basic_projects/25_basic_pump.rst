@@ -1,41 +1,41 @@
 .. _basic_pump:
 
-Water Pump
+水ポンプ
 ==========================
 
-Overview
+概要
 ---------------
 
-The water pump is also a motor, which converts the mechanical energy of the motor or other external energy through a special structure to transport the liquid.
+水ポンプもモーターの一種で、特殊な構造を通じてモーターや他の外部エネルギーの機械的エネルギーを変換し、液体を輸送します。
 
 
 
-Required Components
+必要なコンポーネント
 -------------------------
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全セットを購入するのが便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名称	
+        - このキットのアイテム数
+        - リンク
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネント紹介
+        - 購入リンク
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -52,7 +52,7 @@ You can also buy them separately from the links below.
 
 
 
-Wiring
+配線図
 ----------------------
 
 .. image:: img/25-pump_bb.png
@@ -64,32 +64,32 @@ Wiring
   <br/> 
 
 
-Schematic Diagram
+回路図
 -----------------------
 
 .. image:: img/25_pump_schematic.png
 
 
-Code
+コード
 ---------------
 
 .. note::
 
-   * You can open the file ``25-pump.ino`` under the path of ``elite-explorer-kit-main\basic_project\25-pump``. 
-   * Or copy this code into **Arduino IDE**.
+   * ファイル ``25-pump.ino`` を ``elite-explorer-kit-main\basic_project\25-pump`` で直接開くことができます。
+   * または、このコードを **Arduino IDE** にコピーしてください。
 
 .. raw:: html
     
     <iframe src=https://create.arduino.cc/editor/sunfounder01/8a530528-aa58-4306-acc9-01632ae5e99a/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-Attach the tubing to the pump and position it in the basin. Once the code is successfully uploaded, the water pump will turn on and remain active for five seconds.
-When conducting this experiment, please ensure that the circuit is kept away from water to prevent any potential short circuits.
+ポンプにチューブを取り付け、ベースンに配置します。コードが正常にアップロードされると、水ポンプがオンになり、5秒間稼働します。
+この実験を行う際には、回路が水から離れていることを確認し、ショートサーキットを防いでください。
 
 
-Code Analysis
+コード解析
 --------------------------
 
-The motor can be driven by providing a voltage difference between the copper sheets at both sides of the motor. 
+モーターは、モーターの両側の銅板間に電圧差を与えることで駆動できます。 
 
 .. code-block:: arduino
     

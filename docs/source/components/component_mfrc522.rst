@@ -1,24 +1,24 @@
 .. _cpn_mfrc522:
 
-MFRC522 Module
+MFRC522モジュール
 =====================
 
 **RFID**
 
-Radio Frequency Identification (RFID) refers to technologies that involve using wireless communication between an object (or tag) and an interrogating device (or reader) to automatically track and identify such objects. The tag transmission range is limited to several meters from the reader. A clear line of sight between the reader and tag is not necessarily required.
+無線周波数識別（RFID）は、物体（タグ）と尋問装置（リーダー）間の無線通信を使用して、そのような物体を自動的に追跡・識別する技術を指します。タグの送信範囲は、リーダーから数メートルに限定されます。リーダーとタグの間に必ずしも直接の視界が必要ではありません。
 
-Most tags contain at least one integrated circuit (IC) and an antenna. The microchip stores information and is responsible for managing the radio frequency (RF) communication with the reader. Passive tags do not have an independent energy source and depend on an external electromagnetic signal, provided by the reader, to power their operations. Active tags contain an independent energy source, such as a battery. Thus, they may have increased processing, transmission capabilities and range.
+ほとんどのタグには、少なくとも一つの集積回路（IC）とアンテナが含まれます。マイクロチップは情報を保存し、リーダーとの無線周波数（RF）通信を管理する責任があります。パッシブタグには独立したエネルギー源がなく、リーダーが提供する外部電磁信号に依存して動作します。アクティブタグには独立したエネルギー源（例えば電池）が含まれているため、処理能力、送信能力、及び範囲が増加することがあります。
 
 .. image:: img/mfrc522.png
 
 
 **MFRC522**
 
-MFRC522 is a kind of integrated read and write card chip. It is commonly used in the radio at 13.56MHz. Launched by the NXP Company, it is a low-voltage, low-cost, and small-sized non-contact card chip, a best choice of intelligent instrument and portable handheld device.
+MFRC522は、統合された読み書きカードチップの一種です。13.56MHzの無線で一般的に使用されています。NXP社によって発売されたもので、低電圧、低コスト、小型の非接触カードチップであり、知能計器や携帯型ハンドヘルドデバイスに最適な選択肢です。
 
-The MF RC522 uses advanced modulation and demodulation concept which fully presented in all types of 13.56MHz passive contactless communication methods and protocols. In addition, it supports rapid CRYPTO1 encryption algorithm to verify MIFARE products. MFRC522 also supports MIFARE series of high-speed non-contact communication, with a two-way data transmission rate up to 424kbit/s. As a new member of the 13.56MHz highly integrated reader card series, MF RC522 is much similar to the existing MF RC500 and MF RC530 but there also exists great differences. It communicates with the host machine via the serial manner which needs less wiring. You can choose between SPI, I2C and serial UART mode (similar to RS232), which helps reduce the connection, save PCB board space (smaller size), and reduce cost.
+MFRC522は、13.56MHzの全ての種類のパッシブ非接触通信方法とプロトコルに完全に表される先進的な変調及び復調概念を使用しています。さらに、MIFARE製品を検証するための迅速なCRYPTO1暗号化アルゴリズムをサポートします。MFRC522は、MIFAREシリーズの高速非接触通信もサポートし、双方向データ伝送速度は最大424kbit/sに達します。13.56MHzの高度に統合されたリーダーカードシリーズの新メンバーとして、MFRC522は既存のMFRC500やMFRC530に非常に似ていますが、大きな違いもあります。シリアル方式を介してホストマシンと通信し、配線が少なくて済みます。SPI、I2C、シリアルUARTモード（RS232に似ている）の間で選択できるため、接続を減らし、PCBボードのスペースを節約し（サイズが小さい）、コストを削減できます。
 
-**Example**
+**例**
 
-* :ref:`basic_mfrc522` (Basic Project)
-* :ref:`fun_access` (Fun Project)
+* :ref:`basic_mfrc522` (基本プロジェクト)
+* :ref:`fun_access` (楽しいプロジェクト)

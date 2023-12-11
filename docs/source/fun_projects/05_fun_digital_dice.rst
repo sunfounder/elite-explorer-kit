@@ -1,42 +1,42 @@
 .. _fun_digital_dice:
 
-Digital Dice
+デジタルダイス
 =======================================
 
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/videos/fun_projects/05_fun_dice.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      お使いのブラウザではビデオタグがサポートされていません。
    </video>
 
-This code is designed to simulate a rolling dice using a 74HC595 shift register and a 7-segment digital display. The dice roll simulation is activated by directly shaking the tilt switch. Upon this action, the digital display cycles through random numbers between 1 and 6, simulating the rolling of a dice. After a brief interval, the display stops, showing a random number that signifies the outcome of the dice roll.
+このコードは、74HC595 シフトレジスタと7セグメントデジタルディスプレイを使用して、サイコロを振るシミュレーションを行います。サイコロを振るシミュレーションは、直接チルトスイッチを振ることで起動します。このアクションにより、デジタルディスプレイは1から6の間のランダムな数をサイクルし、サイコロの振る動作をシミュレートします。短い間隔の後、ディスプレイは停止し、サイコロの振りの結果を意味するランダムな数を表示します。
 
-**Required Components**
+**必要なコンポーネント**
 
-In this project, we need the following components. 
+このプロジェクトには以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全体のキットを購入すると便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名称	
+        - このキットのアイテム数
+        - リンク
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから別々に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネント紹介
+        - 購入リンク
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -53,7 +53,7 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_7segment`
         - |link_7segment_buy|
 
-**Wiring**
+**配線図**
 
 .. image:: img/05_dice_bb.png
     :width: 80%
@@ -63,51 +63,51 @@ You can also buy them separately from the links below.
 
    <br/>
 
-**Schematic**
+**回路図**
 
 .. image:: img/05_digital_dice_schematic.png
    :width: 100%
 
-**Code**
+**コード**
 
 .. note::
 
-    * You can open the file ``05_digital_dice.ino`` under the path of ``elite-explorer-kit-main\fun_project\05_digital_dice`` directly.
-    * Or copy this code into Arduino IDE.
+    * ファイル ``05_digital_dice.ino`` を ``elite-explorer-kit-main\fun_project\05_digital_dice`` のパスから直接開くことができます。
+    * または、このコードをArduino IDEにコピーしてください。
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/ff0528b0-a10d-49e8-8916-6cb1fdfdf9a2/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-**How it works?**
+**どのように動作しますか？**
 
-Here's a detailed explanation of the code:
+以下はコードの詳細な説明です：
 
-1. Initialization of variables:
+1. 変数の初期化：
 
-   ``dataPin``, ``clockPin``, ``latchPin``: Pins for the 74HC595.
-   ``buttonPin``: The digital pin where the button is connected.
-   ``numbers[]``: An array to store the encoding representing numbers 1 through 6 on a common anode digital tube.
+   ``dataPin``, ``clockPin``, ``latchPin``：74HC595用のピン。
+   ``buttonPin``：ボタンが接続されているデジタルピン。
+   ``numbers[]``：共通アノードデジタルチューブで1から6までの数を表すエンコーディングを格納する配列。
 
-2. Volatile variables:
+2. 揮発性変数：
 
-   rolling: This is a volatile variable indicating whether the dice is currently rolling. 
-   It's declared as volatile since it's accessed both in the interrupt service routine and the main program.
+   rolling：ダイスが現在ローリング中であるかどうかを示す揮発性変数。
+   割り込みサービスルーチンとメインプログラムの両方でアクセスされるため、揮発性として宣言されます。
 
-3. ``setup()``:
+3. ``setup()``：
 
-   Set the modes for the relevant pins.
-   Set the input mode for the button using the internal pull-up resistor.
-   Assign an interrupt to the button, which calls the rollDice function when the button's state changes.
+   関連するピンのモードを設定します。
+   内部プルアップ抵抗を使用してボタンの入力モードを設定します。
+   ボタンに割り込みを割り当て、ボタンの状態が変わったときにrollDice関数を呼び出します。
 
-4. ``loop()``:
+4. ``loop()``：
 
-   It checks if rolling is true. If it is, it continues to display a random number between 1 and 6. If the button has been pressed for more than 500 milliseconds, the rolling stops.
+   rollingがtrueであるかどうかをチェックします。trueの場合、1から6の間のランダムな数を表示し続けます。ボタンが500ミリ秒以上押されている場合、ローリングは停止します。
 
-5. ``rollDice()``:
+5. ``rollDice()``：
 
-   This is the interrupt service routine for the button. It checks if the button is pressed (low level). If it is, the current time is recorded and the rolling begins.
+   これはボタンの割り込みサービスルーチンです。ボタンが押されている（低レベル）かどうかをチェックします。もしそうなら、現在の時間を記録し、ローリングを開始します。
 
-6. ``displayNumber()``:
+6. ``displayNumber()``：
 
-   This function displays a number on the digital tube. It sends the number to the digital tube through the 74HC595 shift register.
+   この関数はデジタルチューブに数を表示します。74HC595シフトレジスタを通じてデジタルチューブに数を送信します。

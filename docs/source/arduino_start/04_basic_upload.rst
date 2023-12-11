@@ -1,59 +1,56 @@
-How to upload Sketch to the Board?
+ボードへのスケッチのアップロード方法
 =============================================
 
-In this section, you will learn how to upload the sketch created previously to the Arduino board, as well as learn about some considerations.
+このセクションでは、作成したスケッチをArduinoボードにアップロードする方法と、いくつかの考慮事項について学びます。
 
-**1. Choose Board and port**
+**1. ボードとポートの選択**
 
-Arduino development boards usually come with a USB cable. You can use it to connect the board to your computer.
+Arduino開発ボードには通常、USBケーブルが付属しています。これを使用してボードをコンピュータに接続します。
 
-Select the correct **Board** and **Port** in the Arduino IDE. Normally, Arduino boards are recognized automatically by the computer and assigned a port, so you can select it here.
+Arduino IDEで正しい **Board** と **Port** を選択します。通常、Arduinoボードはコンピュータによって自動的に認識され、ポートが割り当てられるため、ここで選択できます。
 
     .. image:: img/04_upload_1.png
         :width: 90%
 
+ボードが既に接続されているが認識されない場合は、 **Boards Manager** の **Arduino UNO R4 Boards** セクションに **INSTALLED** ロゴが表示されているか確認し、表示されていない場合は少しスクロールして **INSTALL** をクリックしてください。
 
-If your board is already plugged in, but not recognized, check if the **INSTALLED** logo appears in the **Arduino UNO R4 Boards** section of the **Boards Manager**, if not, please scroll down a bit and click on **INSTALL**.
-
-Search **"UNO R4"** in **Boards Manager** and check if the corresponding library is installed.
+**Boards Manager** で **"UNO R4"** を検索し、対応するライブラリがインストールされているか確認します。
 
     .. image:: img/04_upload_2.png
         :width: 90%
 
-Reopening the Arduino IDE and re-plugging the Arduino board will fix most of the problems. You can also click **Tools** -> **Board** or **Port** to select them.
+Arduino IDEを再起動し、Arduinoボードを再度接続することで、ほとんどの問題が解決します。 **Tools** -> **Board** または **Port** をクリックして選択することもできます。
 
+**2. スケッチの検証**
 
-**2. Verify the Sketch**
-
-After clicking the Verify button, the sketch will be compiled to see if there are any errors.
+検証ボタンをクリックすると、スケッチがコンパイルされ、エラーがないか確認されます。
 
     .. image:: img/04_upload_3.png
         :width: 90%
 
-You can use it to find mistakes if you delete some characters or type a few letters by mistake. From the message bar, you can see where and what type of errors occurred. 
+何か文字を間違えたり、削除したりした場合に、エラーを見つけるために使用できます。メッセージバーから、どこでどのような種類のエラーが発生したかがわかります。
 
     .. image:: img/04_upload_4.png
         :width: 90%
 
-If there are no errors, you will see a message like the one below.
+エラーがない場合は、以下のようなメッセージが表示されます。
 
     .. image:: img/04_upload_5.png
         :width: 90%
 
+**3. スケッチのアップロード**
 
-**3. Upload sketch**
-
-After completing the above steps, click the **Upload** button to upload this sketch to the board.
+上記の手順を完了したら、 **Upload** ボタンをクリックして、このスケッチをボードにアップロードします。
 
     .. image:: img/04_upload_6.png
         :width: 90%
 
-If successful, you will be able to see the following prompt.
+成功すると、以下のようなプロンプトが表示されます。
 
     .. image:: img/04_upload_7.png
         :width: 90%
 
-At the same time, the on-board LED blink.
+同時に、ボードのLEDが点滅します。
 
 .. image:: img/04_upload_8.png
     :width: 400
@@ -63,8 +60,5 @@ At the same time, the on-board LED blink.
     
     <br/>
 
-The Arduino board will automatically run the sketch after power is applied after the sketch is uploaded. The running program can be overwritten by uploading a new sketch.
-
-
-
+スケッチがアップロードされた後、Arduinoボードは電源が供給されると自動的にスケッチを実行します。実行中のプログラムは、新しいスケッチをアップロードすることで上書きすることができます。
 

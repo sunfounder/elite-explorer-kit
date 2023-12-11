@@ -1,43 +1,43 @@
 .. _fun_smart_fan:
 
-Smart Fan
+スマートファン
 =================================
 
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/videos/fun_projects/06_fun_smartfan.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      お使いのブラウザではビデオタグがサポートされていません。
    </video>
 
-This Arduino project automatically adjusts the fan's speed to maintain the temperature within a suitable range.
-Additionally, users can enter manual mode through a button to operate the fan at maximum speed.
+このArduinoプロジェクトでは、ファンの速度が自動的に調整され、温度を適切な範囲内に保ちます。
+また、ユーザーはボタンを通じて手動モードに入り、ファンを最大速度で操作できます。
 
-**Required Components**
+**必要なコンポーネント**
 
-In this project, we need the following components. 
+このプロジェクトには以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全体のキットを購入すると便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名称	
+        - このキットのアイテム数
+        - リンク
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから別々に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネント紹介
+        - 購入リンク
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -60,7 +60,7 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_power`
         - \-
 
-**Wiring**
+**配線図**
 
 .. image:: img/06_smart_fan_bb.png
     :width: 100%
@@ -70,48 +70,48 @@ You can also buy them separately from the links below.
 
    <br/>
 
-**Schematic**
+**回路図**
 
 .. image:: img/06_smart_fan_schematic.png
    :width: 80%
    :align: center
 
-**Code**
+**コード**
 
 .. note::
 
-    * You can open the file ``06_smart_fan.ino`` under the path of ``elite-explorer-kit-main\fun_project\06_smart_fan`` directly.
-    * Or copy this code into Arduino IDE.
+    * ファイル ``06_smart_fan.ino`` を ``elite-explorer-kit-main\fun_project\06_smart_fan`` のパスから直接開くことができます。
+    * または、このコードをArduino IDEにコピーしてください。
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/ba484912-14d6-4125-83a0-73a107904144/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-**How it works?**
+**どのように動作しますか？**
 
-Here is a step-by-step explanation of the code:
+以下はコードのステップバイステップの説明です：
 
-1. Constants and Variable Definitions:
+1. 定数と変数の定義：
 
-   Use ``#define`` to define the pins for various hardware connections.
-   ``TEMP_THRESHOLD`` is defined as 25°C, which is the temperature threshold to start the fan.
-   ``manualMode``: A boolean variable that indicates whether it is in manual mode.
+   様々なハードウェア接続用のピンを定義するために ``#define`` を使用します。
+   ``TEMP_THRESHOLD`` は25°Cと定義され、これはファンを起動する温度のしきい値です。
+   ``manualMode``：手動モードかどうかを示すブール変数。
 
-2. ``setup()``:
+2. ``setup()``：
 
-   Set the mode for relevant pins (output, input, input with pull-up).
-   Initially set to automatic mode, so ``LED_AUTO`` is lit while ``LED_MANUAL`` is off.
+   関連するピンのモード（出力、入力、プルアップ付き入力）を設定します。
+   初期状態は自動モードなので、 ``LED_AUTO`` が点灯し、 ``LED_MANUAL`` は消灯しています。
 
-3. ``loop()``:
+3. ``loop()``：
 
-   Monitor the button's state. When the button is pressed, it toggles the mode and changes the LED's status.
-   In manual mode, the fan operates at maximum speed.
-   In automatic mode, the code first reads the voltage value from the temperature sensor and converts it to a temperature value. 
-   If the temperature exceeds the threshold, the fan's speed is adjusted based on the temperature.
+   ボタンの状態を監視します。ボタンが押されると、モードが切り替わり、LEDの状態が変わります。
+   手動モードでは、ファンは最大速度で稼働します。
+   自動モードでは、まず温度センサーからの電圧値を読み取り、それを温度値に変換します。
+   温度がしきい値を超えると、ファンの速度は温度に基づいて調整されます。
 
-4. ``voltageToTemperature()``:
+4. ``voltageToTemperature()``：
 
-   This is an auxiliary function used to convert the voltage value from the temperature sensor into a temperature value (in Celsius).
-   The function uses the standard formula for a thermistor to estimate the temperature.
-   The return value is in degrees Celsius.
+   温度センサーからの電圧値を摂氏の温度値に変換するための補助関数です。
+   この関数は、サーミスタの標準式を使用して温度を推定します。
+   戻り値は摂氏です。

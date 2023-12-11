@@ -5,47 +5,38 @@ MPR121
 
 .. image:: img/mpr121.png
 
+* **3.3V**: 電源
+* **IRQ**: オープンコレクタ割り込み出力ピン、アクティブロー
+* **SCL**: I2Cクロック
+* **SDA**: I2Cデータ
+* **ADD**: I2Cアドレス選択入力ピン。ADDRピンをVSS、VDD、SDA、SCLラインに接続すると、結果として得られるI2Cアドレスはそれぞれ0x5A、0x5B、0x5C、0x5Dになります
+* **GND**: グラウンド
+* **0〜11**: 電極0〜11、電極はタッチセンサーです。通常、電極は金属片やワイヤーであることが多いですが、ワイヤーの長さや電極がある材料によっては、センサーをトリガーすることが難しくなることがあります。そのため、MPR121では、電極をトリガーおよび非トリガーするために必要な設定を行うことができます。
 
-* **3.3V**: Power supply
-* **IRQ**: Open Collector Interrupt Output Pin, active low
-* **SCL**: I2C Clock
-* **SDA**: I2C Data
-* **ADD**: I2C Address Select Input Pin. Connect the ADDR pin to the VSS, VDD, SDA or SCL line, the resulting I2C addresses are 0x5A, 0x5B, 0x5C and 0x5D respectively
-* **GND**: Ground
-* **0~11**: Electrode 0~11, electrode is a touch sensor. Typically, electrodes can just be some piece of metal, or a wire. But some times depending on the length of our wire, or the material the electrode is on, it can make triggering the sensor difficult. For this reason, the MPR121 allows you to configure what is needed to trigger and untrigger an electrode.
+**MPR121概要**
 
-**MPR121 OVERVIEW**
-
-The MPR121 is the second generation capacitive touch sensor controller after
-the initial release of the MPR03x series devices. The MPR121 features
-increased internal intelligence, some of the major additions include an
-increased electrode count, a hardware configurable I2C address, an
-expanded filtering system with debounce, and completely independent
-electrodes with auto-configuration built in. The device also features a 13th
-simulated sensing channel dedicated for near proximity detection using the
-multiplexed sensing inputs.
+MPR121は、初期リリースされたMPR03xシリーズデバイスに続く第2世代の静電容量タッチセンサーコントローラーです。MPR121は、内部の知能が増強され、主な追加点としては、電極数の増加、ハードウェアで設定可能なI2Cアドレス、デバウンス付きの拡張フィルタリングシステム、そして完全に独立した電極に内蔵された自動設定機能などがあります。このデバイスは、マルチプレックスされたセンシング入力を使用した近接検出用の13番目のシミュレートされたセンシングチャンネルも特徴としています。
 
 * |link_mpr121_datasheet|
 
-**Features**
+**特徴**
 
-* Low power operation
-    • 1.71 V to 3.6 V supply operation
-    • 29 μA supply current at 16 ms sampling interval period
-    • 3 μA Stop mode current
-* 12 capacitance sensing inputs
-    • 8 inputs are multifunctional for LED driver and GPIO
-* Complete touch detection
-    • Auto-configuration for each sensing input
-    • Auto-calibration for each sensing input
-    • Touch/release threshold and debounce for touch detection
-* I2C interface, with Interrupt output
-* 3 mm x 3 mm x 0.65 mm 20 lead QFN package
-* -40°C to +85°C operating temperature range
+* 低消費電力動作
+    • 1.71Vから3.6Vまでの電源動作
+    • 16msサンプリング間隔での29μAの供給電流
+    • ストップモード時の3μA電流
+* 12の静電容量センシング入力
+    • 8入力はLEDドライバーおよびGPIOに多機能
+* 完全なタッチ検出
+    • 各センシング入力の自動設定
+    • 各センシング入力の自動キャリブレーション
+    • タッチ検出のためのタッチ/リリース閾値とデバウンス
+* I2Cインターフェース、割り込み出力付き
+* 3mm x 3mm x 0.65mm 20リードQFNパッケージ
+* 動作温度範囲 -40°Cから+85°C
 
 
+**例**
 
-**Example**
-
-* :ref:`basic_mpr121` (Basic Project)
-* :ref:`fun_fruit_piano` (Fun Project)
+* :ref:`basic_mpr121` (基本プロジェクト)
+* :ref:`fun_fruit_piano` (楽しいプロジェクト)

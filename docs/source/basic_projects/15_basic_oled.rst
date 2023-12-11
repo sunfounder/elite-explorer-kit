@@ -5,50 +5,49 @@ OLED
 
 .. https://docs.sunfounder.com/projects/ultimate-sensor-kit/en/latest/components_basic/22-component_oled.html
 
-Overview
+概要
 ---------------
 
-In this lesson, you will learn about OLED Displays using the SSD1306 driver. OLED (Organic Light-Emitting Diodes) displays are widely used in various electronic devices such as smartwatches, mobile phones, and even televisions. The SSD1306 is a single-chip CMOS OLED/PLED driver with controller for organic/polymer light emitting diode dot-matrix graphic display system. It offers a crisp and clear visual output through the means of organic material-based diodes that emit light when an electric current passes through them.
+このレッスンでは、SSD1306ドライバーを使用したOLEDディスプレイについて学びます。OLED（有機発光ダイオード）ディスプレイは、スマートウォッチ、携帯電話、さらにはテレビなど、さまざまな電子機器で広く使用されています。SSD1306は、有機／ポリマー発光ダイオードのドットマトリックスグラフィックディスプレイシステム用のシングルチップCMOS OLED/PLEDドライバー兼コントローラーです。電流が流れると発光する有機物質ベースのダイオードを使用し、クリアで鮮明なビジュアル出力を提供します。
 
-In the code provided, an OLED display is interfaced with an Arduino board via the I2C protocol. The code uses the Adafruit SSD1306 library to control the display. The program covers various functionalities such as:
+提供されたコードでは、ArduinoボードとI2Cプロトコルを介してOLEDディスプレイがインターフェースされます。コードはAdafruit SSD1306ライブラリを使用してディスプレイを制御します。プログラムは、以下のようなさまざまな機能をカバーしています：
 
-1. Displaying text: "Hello world!" is printed on the screen.
-2. Inverted text: The text "Hello world!" is displayed in an inverted color scheme.
-3. Font Size: The text "Hello!" is displayed with an increased font size.
-4. Numerical Display: The numbers 123456789 are displayed.
-5. ASCII Characters: A set of ASCII characters are displayed.
-6. Scrolling: Text is scrolled horizontally across the display.
-7. Bitmap Display: A predefined bitmap image is displayed on the OLED screen.
+1. テキストの表示：「Hello world!」が画面に表示されます。
+2. 反転テキスト：「Hello world!」が反転した色の配色で表示されます。
+3. フォントサイズ：「Hello!」が拡大されたフォントサイズで表示されます。
+4. 数字の表示：123456789が表示されます。
+5. ASCII文字：一連のASCII文字が表示されます。
+6. スクロール：テキストがディスプレイを横切ってスクロールします。
+7. ビットマップ表示：事前定義されたビットマップ画像がOLED画面に表示されます。
 
-This OLED display can be used in a multitude of applications including digital clocks, mini game consoles, information displays, and so on. It offers a great way to provide a user interface in compact and portable devices.
+このOLEDディスプレイは、デジタル時計、ミニゲームコンソール、情報表示など、さまざまなアプリケーションで使用できます。コンパクトでポータブルなデバイスでユーザーインターフェイスを提供するための素晴らしい方法です。
 
-
-Required Components
+必要なコンポーネント
 -------------------------
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全セットを購入するのが便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名称	
+        - このキットのアイテム数
+        - リンク
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネント紹介
+        - 購入リンク
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -57,29 +56,29 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_oled`
         - |link_oled_buy|
 
-Wiring
+配線図
 ----------------------
 
 .. image:: img/15-oled_bb.png
     :align: center
 
-Schematic Diagram
+回路図
 -----------------------
 
 .. image:: img/15_oled_schematic.png
     :align: center
     :width: 70%
 
-Code
+コード
 ---------------
 
 .. note::
 
-    * You can open the file ``15-oled.ino`` under the path of ``elite-explorer-kit-main\basic_project\15-oled`` directly.
-    * Or copy this code into Arduino IDE.
+    * ファイル ``15-oled.ino`` を ``elite-explorer-kit-main\basic_project\15-oled`` のパスで直接開くことができます。
+    * または、このコードをArduino IDEにコピーしてください。
 
     .. note:: 
-      To install the library, use the Arduino Library Manager and search for **"Adafruit SSD1306"** and **"Adafruit GFX"** and install it. 
+      ライブラリをインストールするには、Arduinoライブラリマネージャーを使用し、 **「Adafruit SSD1306」** と **「Adafruit GFX」** を検索してインストールしてください。
 
 .. raw:: html
 
@@ -89,24 +88,23 @@ Code
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/videos/basic_projects/15_basic_oled.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      ブラウザがビデオタグをサポートしていません。
    </video>
 
    <br/><br/>
 
 
-Code Analysis
+コード解析
 ------------------------
 
-1. **Library Inclusion and Initial Definitions**:
-   The necessary libraries for interfacing with the OLED are included. Following that, definitions regarding the OLED's dimensions and I2C address are provided.
+1. **ライブラリのインクルードと初期定義**:
+   OLEDとのインターフェースに必要なライブラリを含めます。その後、OLEDの寸法とI2Cアドレスに関する定義が提供されます。
 
-
-   - **Adafruit SSD1306**: This library is designed to help with the interfacing of the SSD1306 OLED display. It provides methods to initialize the display, control its settings, and display content.
-   - **Adafruit GFX Library**: This is a core graphics library for displaying text, producing colors, drawing shapes, etc., on various screens including OLEDs.
+   - **Adafruit SSD1306**: このライブラリはSSD1306 OLEDディスプレイのインターフェースに役立つように設計されています。ディスプレイの初期化、設定の制御、コンテンツの表示などの方法を提供します。
+   - **Adafruit GFXライブラリ**: これは、OLEDを含むさまざまな画面でテキストを表示したり、色を生成したり、図形を描画するためのコアグラフィックスライブラリです。
 
    .. note:: 
-      To install the library, use the Arduino Library Manager and search for **"Adafruit SSD1306"** and **"Adafruit GFX"** and install it. 
+      ライブラリをインストールするには、Arduinoライブラリマネージャーを使用し、 **「Adafruit SSD1306」** と **「Adafruit GFX」** を検索してインストールしてください。
 
    .. code-block:: arduino
     
@@ -121,19 +119,19 @@ Code Analysis
       #define OLED_RESET -1
       #define SCREEN_ADDRESS 0x3C
 
-2. **Bitmap Data**:
-   Bitmap data for displaying a custom icon on the OLED screen. This data represents an image in a format that the OLED can interpret.
+2. **ビットマップデータ**:
+   OLED画面にカスタムアイコンを表示するためのビットマップデータです。このデータは、OLEDが解釈できる形式でイメージを表しています。
 
-   You can use this online tool called |link_image2cpp| that can turn your image into an array. 
+   画像を配列に変換できるオンラインツール |link_image2cpp| を使用できます。
 
-   The ``PROGMEM`` keyword denotes that the array is stored in the program memory of the Arduino microcontroller. Storing data in program memory(PROGMEM) instead of RAM can be helpful for large amounts of data, which would otherwise take up too much space in RAM.
+   ``PROGMEM`` キーワードは、配列がArduinoマイクロコントローラのプログラムメモリに格納されていることを示しています。大量のデータがRAMを大量に消費する場合に、プログラムメモリ(PROGMEM)にデータを格納すると有用です。
 
    .. code-block:: arduino
 
       static const unsigned char PROGMEM sunfounderIcon[] = {...};
 
-3. **Setup Function (Initialization and Display)**:
-   The ``setup()`` function initializes the OLED and displays a series of patterns, texts, and animations.
+3. **セットアップ関数（初期化と表示）**:
+   ``setup()`` 関数はOLEDを初期化し、一連のパターン、テキスト、アニメーションを表示します。
 
    .. code-block:: arduino
 

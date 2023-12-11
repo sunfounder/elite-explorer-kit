@@ -1,29 +1,22 @@
 .. _cpn_ta6586:
 
-TA6586 - Motor Driver Chip
+TA6586 - モータードライバーIC
 =================================
 
 .. image:: img/ta6586.png
 
-TA6586 is a monolithic IC designed for driving bi-directional DC motor. It has
-two pins of logic inputs for controlling the direction, forward and backward.
-The circuit feature good anti-interference performance, small standby current and
-low output saturation pressure drop. It has a built-in clamp diode to reverse the impact
-of the release of inductive load current, making it in the drive relays, DC motors,
-stepper motors or control the use of switching power safe and reliable.
-TA6586 is suitable for toy vehicles, remote-controlled aircraft motor drive, automatic
-valve motor, electromagnetic lock drive, precision instruments and other circuits.
+TA6586は、双方向DCモーターを駆動するために設計されたモノリシックICです。進行方向と後退方向の制御のための2つのロジック入力ピンがあります。この回路は、良好な対干渉性能、小さなスタンバイ電流、低出力飽和圧力降下を特徴としています。リレー、DCモーター、ステッピングモーター、またはスイッチング電源の制御で安全かつ信頼性のある駆動を行うために、逆誘導性負荷電流の放出の影響を逆転させる内蔵クランプダイオードがあります。TA6586は、おもちゃの車両、リモートコントロール航空機モーター駆動、自動バルブモーター、電磁ロック駆動、精密機器などの回路に適しています。
 
-**Features**
+**特徴**
 
-* Low stand-by current: ≦2uA
-* Wide supply voltage range
-* Built-in Brake Function
-* Thermal Shutdown protection
-* Over Current Limit and Short Circuit Protect Function
-* DIP8 Pb-Free package.
+* 低スタンバイ電流: ≦2uA
+* 広い供給電圧範囲
+* 内蔵ブレーキ機能
+* サーマルシャットダウン保護
+* 過電流制限および短絡保護機能
+* DIP8 Pbフリーパッケージ。
 
-**Pin Function**
+**ピン機能**
 
 .. image:: img/ta6586_pin1.png
     :width: 30%
@@ -32,14 +25,14 @@ valve motor, electromagnetic lock drive, precision instruments and other circuit
     :width: 75%
 
 
-**Input Truth Table**
+**入力トゥルーステーブル**
 
 .. image:: img/ta6586_priciple.png
     :width: 95%
 
-**Example**
+**例**
 
-* :ref:`basic_motor` (Basic Project)
-* :ref:`basic_pump` (Basic Project)
-* :ref:`fun_smart_fan` (Fun Project)
-* :ref:`fun_plant_monitor` (Fun Project)
+* :ref:`basic_motor` (基本プロジェクト)
+* :ref:`basic_pump` (基本プロジェクト)
+* :ref:`fun_smart_fan` (楽しいプロジェクト)
+* :ref:`fun_plant_monitor` (楽しいプロジェクト)

@@ -1,19 +1,20 @@
 .. _cpn_keypad:
 
-Keypad
+キーパッド
 ========================
 
-A keypad is a rectangular array of 12 or 16 OFF-(ON) buttons. 
-Their contacts are accessed via a header suitable for connection with a ribbon cable or insertion into a printed circuit board. 
-In some keypads, each button connects with a separate contact in the header, while all the buttons share a common ground.
+キーパッドは、12または16のOFF-(ON)ボタンの長方形の配列です。
+その接点は、リボンケーブルでの接続やプリント基板への挿入に適したヘッダーを介してアクセスされます。
+一部のキーパッドでは、各ボタンがヘッダーの別々の接点と接続し、すべてのボタンが共通のグラウンドを共有しています。
 
 .. image:: img/keypad314.png
 
-More often, the buttons are matrix encoded, meaning that each of them bridges a unique pair of conductors in a matrix. 
-This configuration is suitable for polling by a microcontroller, which can be programmed to send an output pulse to each of the four horizontal wires in turn. 
-During each pulse, it checks the remaining four vertical wires in sequence, to determine which one, if any, is carrying a signal. 
-Pullup or pulldown resistors should be added to the input wires to prevent the inputs of the microcontroller from behaving unpredictably when no signal is present.
+より一般的には、ボタンは行列エンコードされており、それぞれが行列内の独特な導体のペアを架け橋としています。
+この構成は、マイクロコントローラーによるポーリングに適しており、4つの水平線に順番に出力パルスを送るようにプログラムすることができます。
+各パルス中に、残りの4つの垂直線を順にチェックし、どの線が、もしあれば、信号を搬送しているかを判断します。
+信号が存在しない場合にマイクロコントローラーの入力が予測不可能に振る舞うことを防ぐために、入力線にプルアップまたはプルダウン抵抗を追加する必要があります。
 
-**Example**
+**例**
 
-* :ref:`basic_keypad` (Basic Project)
+* :ref:`basic_keypad` (基本プロジェクト)
+

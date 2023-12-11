@@ -1,42 +1,42 @@
 .. _iot_weathertime_screen:
 
-WeatherTime Screen
+WeatherTime スクリーン
 ===============================
 
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/videos/iot_projects/06_iot_weather_oled.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      お使いのブラウザではビデオタグがサポートされていません。
    </video>
 
-This sketch connects to a WiFi network, fetches weather data from OpenWeatherMap every minute, retrieves the current time from an NTP server, and displays the day, time, and weather information on an OLED screen.
+このスケッチはWi-Fiネットワークに接続し、毎分OpenWeatherMapから天気データを取得し、NTPサーバーから現在時刻を取得し、OLEDスクリーンに日付、時刻、天気情報を表示します。
 
-**Required Components**
+**必要なコンポーネント**
 
-In this project, we need the following components. 
+このプロジェクトには以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全体のキットを購入すると便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名称	
+        - このキットのアイテム数
+        - リンク
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから別々に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネント紹介
+        - 購入リンク
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -45,13 +45,13 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_oled`
         - |link_oled_buy|
 
-**Wiring**
+**配線図**
 
 .. image:: img/06_weather_oled_bb.png
     :width: 100%
     :align: center
 
-**Schematic**
+**回路図**
 
 .. image:: img/06_weather_oled_schematic.png
     :width: 60%
@@ -59,38 +59,38 @@ You can also buy them separately from the links below.
 
 **OpenWeather**
 
-Get OpenWeather API keys
+OpenWeather APIキーの取得
 
-.. .|link_openweather| is an online service, owned by OpenWeather Ltd, that provides global weather data via API, including current weather data, forecasts, nowcasts and historical weather data for any geographical location.
+.. .|link_openweather|は、OpenWeather Ltdが所有するオンラインサービスで、API経由でグローバルな天気データを提供しています。これには、現在の天気データ、予報、ナウキャスト、歴史的天気データが任意の地理的位置に含まれます。
 
-`OpenWeather <https://openweathermap.org/>`_ is an online service, owned by OpenWeather Ltd, that provides global weather data via API, including current weather data, forecasts, nowcasts and historical weather data for any geographical location.
+`OpenWeather <https://openweathermap.org/>`_ は、OpenWeather Ltdが所有するオンラインサービスで、API経由でグローバルな天気データを提供しています。これには、現在の天気データ、予報、ナウキャスト、歴史的天気データが任意の地理的位置に含まれます。
 
 
-#. Visit OpenWeather to log in/create an account.
+#. OpenWeatherにログインするか、アカウントを作成します。
 
    .. image:: img/06_owm_1.png
 
 
-#. Click into the API page from the navigation bar.
+#. ナビゲーションバーからAPIページに移動します。
 
    .. image:: img/06_owm_2.png
 
 
-#. Find **Current Weather Data** and click Subscribe.
+#. **Current Weather Data** を見つけて、サブスクライブをクリックします。
 
    .. image:: img/06_owm_3.png
 
 
-#. Under **Current weather and forecasts collection**, subscribe to the appropriate service. In our project, Free is good enough.
+#. **Current weather and forecasts collection** の下で、適切なサービスにサブスクライブします。私たちのプロジェクトでは、Freeで十分です。
 
    .. image:: img/06_owm_4.png
 
 
-#. Copy the Key from the **API keys** page.
+#. **API keys** ページからキーをコピーします。
 
    .. image:: img/06_owm_5.png
 
-#. Copy it to the ``arduino_secrets.h``.
+#. それを ``arduino_secrets.h`` にコピーします。
 
    .. code-block:: Arduino
 
@@ -99,38 +99,38 @@ Get OpenWeather API keys
        #define API_KEY "<OpenWeather_API_KEY>"
        #define LOCATION "<YOUR CITY>"
 
-#. Set the time zone of your location.
+#. あなたの場所のタイムゾーンを設定します。
 
-   Take the capital of Sweden, Stockholm, as an example. Search "stockholm timezone" on Google.
+   スウェーデンの首都ストックホルムを例に取ります。Googleで「stockholm timezone」と検索します。
 
    .. image:: img/06_weather_oled_01.png 
 
-   In the search results, you will see "GMT+1", so you set the parameter of the function below to ``3600 * 1`` seconds.
+   検索結果で、「GMT+1」を見ることができますので、以下の関数のパラメータを ``3600 * 1`` 秒に設定します。
    
    .. code-block:: Arduino
 
-      timeClient.setTimeOffset(3600 * 1);  // Adjust for your time zone (this is +1 hour)
+      timeClient.setTimeOffset(3600 * 1);   // Adjust for your time zone (this is +1 hour)
 
-**Install the Library**
+**ライブラリのインストール**
 
-To install the library, use the Arduino Library Manager and search for "ArduinoMqttClient", "FastLED", "Adafruit GFX" and "Adafruit SSD1306" and install them.
+ライブラリをインストールするには、Arduinoライブラリマネージャーを使用し、「ArduinoMqttClient」、「FastLED」、「Adafruit GFX」、「Adafruit SSD1306」を検索してインストールします。
 
-``ArduinoJson.h``: Used for handling JSON data (data obtained from openweathermap).
+``ArduinoJson.h``：JSONデータ（openweathermapから取得されたデータ）を扱うために使用します。
 
-``NTPClient.h``: Used for obtaining real-time time.
+``NTPClient.h``：リアルタイムの時間を取得するために使用します。
 
-``Adafruit_GFX.h``, ``Adafruit_SSD1306.h``: Used for OLED module.
+``Adafruit_GFX.h``、 ``Adafruit_SSD1306.h``：OLEDモジュール用に使用します。
 
-**Run the Code**
+**コードの実行**
 
-
-.. note::
-
-    * You can open the file ``06_weather_oled.ino`` under the path of ``elite-explorer-kit-main\iot_project\06_weather_oled`` directly.
-    * Or copy this code into Arduino IDE.
 
 .. note::
-    In the code, SSID and password are stored in ``arduino_secrets.h``. Before uploading this example, you need to modify them with your own WiFi credentials. Additionally, for security purposes, ensure that this information is kept confidential when sharing or storing the code.
+
+    * ファイル ``06_weather_oled.ino`` を ``elite-explorer-kit-main\iot_project\06_weather_oled`` のパスから直接開くことができます。
+    * または、このコードをArduino IDEにコピーしてください。
+
+.. note::
+    コード内で、SSIDとパスワードは ``arduino_secrets.h`` に格納されています。この例をアップロードする前に、自分のWiFiの認証情報でそれらを修正する必要があります。さらに、コードを共有または保存する際には、この情報を機密に保つためのセキュリティ対策を講じてください。
 
 .. raw:: html
 
@@ -138,55 +138,55 @@ To install the library, use the Arduino Library Manager and search for "ArduinoM
 
 
 
-**How it works?**
+**どのように動作するのか？**
 
+1. ライブラリと定義:
 
-1. Libraries and Definitions:
-
-   #. ``WiFiS3.h``: This is likely a library specific to a certain WiFi module or board to manage WiFi connections.
-   #. ``ArduinoJson.h``: This library is used for decoding (and encoding) JSON data.
-   #. ``arduino_secrets.h``: A separate file where sensitive data (like WiFi credentials) are stored. This is a good practice to keep credentials out of the main code.
-   #. **NTPClient & WiFiUdp**: These are used for fetching the current time from an NTP (Network Time Protocol) server.
-   #. **Adafruit libraries**: Used for managing the OLED display.
-   #. **Various global variables**: These include WiFi credentials, server details, and more, which will be used throughout the script.
+   #. ``WiFiS3.h``：これは、特定のWiFiモジュールやボードに特有のライブラリで、WiFi接続を管理します。
+   #. ``ArduinoJson.h``：このライブラリはJSONデータのデコード（およびエンコード）に使用されます。
+   #. ``arduino_secrets.h``：機密データ（WiFiの認証情報など）が格納されている別のファイルです。これは、認証情報をメインコードから外しておくための良い習慣です。
+   #. **NTPClient & WiFiUdp**：NTP（Network Time Protocol）サーバーから現在時刻を取得するために使用されます。
+   #. **Adafruitライブラリ**：OLEDディスプレイを管理するために使用されます。
+   #. **さまざまなグローバル変数**：これにはWiFiの認証情報、サーバーの詳細などが含まれ、スクリプト全体で使用されます。
 
 2. ``setup()``:
 
-   #. It initializes the serial communication.
-   #. Checks and prints the WiFi module's firmware version.
-   #. Tries to connect to the WiFi network using the provided SSID and password.
-   #. Prints the connected WiFi's status (SSID, IP, Signal strength).
-   #. Initializes the OLED display.
-   #. Starts the NTP client to fetch the current time and sets a time offset (in this case, 8 hours which might correspond to a specific timezone).
+   #. シリアル通信を初期化します。
+   #. WiFiモジュールのファームウェアバージョンをチェックして印刷します。
+   #. 提供されたSSIDとパスワードを使用してWiFiネットワークに接続を試みます。
+   #. 接続されたWiFiのステータス（SSID、IP、信号強度）を印刷します。
+   #. OLEDディスプレイを初期化します。
+   #. NTPクライアントを開始して現在時刻を取得し、タイムオフセットを設定します（この場合は8時間で、特定のタイムゾーンに対応する可能性があります）。
 
 3. ``read_response()``:
 
-   #. Reads the response from the server, specifically looking for JSON data (denoted by ``{`` and ``}``).
-   #. If JSON data is found, it decodes the data to extract weather details like temperature, humidity, pressure, wind speed, and wind direction.
-   #. Calls the ``displayWeatherData`` function to display the weather information on the OLED screen.
+   #. サーバーからの応答を読み取り、特にJSONデータ（ ``{`` and ``}`` で示される）を探します。
+   #. JSONデータが見つかった場合、データをデコードして、気温、湿度、気圧、風速、風向きなどの天気の詳細を抽出します。
+   #. OLEDスクリーンに天気情報を表示する ``displayWeatherData`` 関数を呼び出します。
 
 4. ``httpRequest()``:
 
-   #. Closes any existing connections to ensure the WiFi module's socket is free.
-   #. Tries to connect to the OpenWeatherMap server.
-   #. If connected, sends an HTTP GET request to fetch the weather data for a specific location defined by ``LOCATION`` (likely defined in ``arduino_secrets.h`` or elsewhere).
-   #. Records the time the request was made.
+   #. 既存の接続を閉じて、WiFiモジュールのソケットが空いていることを確認します。
+   #. OpenWeatherMapサーバーに接続を試みます。
+   #. 接続された場合、 ``LOCATION`` で定義された特定の場所（おそらく ``arduino_secrets.h`` または他の場所で定義）の天気データを取得するためにHTTP GETリクエストを送信します。
+   #. リクエストが行われた時間を記録します。
 
 5. ``loop()``:
 
-   #. Calls the ``read_response`` function to process any incoming data from the server.
-   #. Updates the time from the NTP server.
-   #. Checks if it's time to make another request to the weather server (based on the ``postingInterval``). If so, it calls the ``httpRequest`` function.
+   #. サーバーからの受信データを処理するために ``read_response`` 関数を呼び出します。
+   #. NTPサーバーから時刻を更新します。
+   #. 天気サーバーに別のリクエストを行う時刻かどうかをチェックします（ ``postingInterval`` に基づいて）。そうであれば、 ``httpRequest`` 関数を呼び出します。
 
 6. ``printWifiStatus()``:
 
-   #. The SSID of the connected network.
-   #. The local IP address of the board.
-   #. The signal strength (RSSI).
+   #. 接続されているネットワークのSSID。
+   #. ボードのローカルIPアドレス。
+   #. 信号強度（RSSI）。
 
 7. ``displayWeatherData()``:
 
-   #. Clears the OLED screen.
-   #. Displays the current day of the week.
-   #. Displays the current time in HH:MM format.
-   #. Displays the provided weather data (temperature, humidity, pressure, and wind speed).
+   #. OLEDスクリーンをクリアします。
+   #. 現在の曜日を表示します。
+   #. 現在時刻をHH:MM形式で表示します。
+   #. 提供された天気データ（気温、湿度、気圧、風速）を表示します。
+

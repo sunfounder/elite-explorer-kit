@@ -1,45 +1,45 @@
 .. _basic_moisture:
 
-Soil Moisture
+土壌湿度
 ==========================
 
 .. https://docs.sunfounder.com/projects/3in1-kit-r4/en/latest/basic_project/ar_moisture.html
 
-Overview
+概要
 ---------------
 
-In the agricultural industry, crops cannot directly acquire inorganic elements from the soil. Instead, water present in the soil acts as a solvent to dissolve these elements.
+農業業界では、作物は土壌から無機元素を直接取得することはできません。代わりに、土壌内の水が溶媒として働き、これらの元素を溶かします。
 
-Crops absorb moisture from the soil through their root system to obtain nutrients and facilitate growth.
+作物は根系を通じて土壌から水分を吸収し、栄養を得て成長を促進します。
 
-During the growth and development of crops, there are varying requirements for soil temperature. Hence, it is necessary to use a soil moisture sensor.
+作物の成長と発達の過程では、土壌温度に対する要求が異なります。したがって、土壌湿度センサーの使用が必要です。
 
-Required Components
+必要なコンポーネント
 -------------------------
 
-In this project, we need the following components. 
+このプロジェクトでは、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全てのキットを一式購入するのが便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名称	
+        - このキットのアイテム数
+        - リンク
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+下記のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネント紹介
+        - 購入リンク
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -50,32 +50,32 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_soil_moisture`
         - |link_soil_moisture_buy|
 
-Wiring
+配線図
 ----------------------
 
 .. image:: img/03-soil_moisture_bb.png
     :align: center
     :width: 80%
 
-Schematic Diagram
+回路図
 -----------------------
 
 .. image:: img/03_moisture_schematic.webp
     :align: center
     :width: 70%
 
-Code
+コード
 ---------------
 
 .. note::
 
-    * Open the ``03-moisture.ino`` file under the path of ``elite-explorer-kit-main\basic_project\03-moisture``.
-    * Or copy this code into **Arduino IDE**.
+    * ``elite-explorer-kit-main\basic_project\03-moisture`` のパスの下にある ``03-moisture.ino`` ファイルを開く。
+    * または、このコードを **Arduino IDE** にコピーします。
     
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/c585dd77-2e8a-4839-a908-d22e1d6e93aa/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-Once the code is successfully uploaded, the serial monitor will print out the soil moisture value.
+コードが正常にアップロードされると、シリアルモニターに土壌の湿度値が表示されます。
 
-By inserting the module into the soil and watering it, the value of the soil moisture sensor will become smaller.
+センサーを土壌に挿入し、水をやると、土壌湿度センサーの値が小さくなります。

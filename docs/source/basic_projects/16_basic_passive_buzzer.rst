@@ -1,44 +1,43 @@
 .. _basic_passive_buzzer:
 
-Passive Buzzer
+パッシブブザー
 ==========================
 
 .. https://docs.sunfounder.com/projects/3in1-kit-r4/en/latest/basic_project/ar_tone_notone.html#ar-passive-buzzer
 
-
-Overview
+概要
 ---------------
 
-In this project, use these two functions to make the passive buzzer vibrate and produce sound. The function ``tone()`` generates a square wave with a specified frequency (and 50% duty cycle) on a pin. A duration can be specified, or the wave continues until ``noTone()`` is called.
-Similar to the active buzzer, the passive buzzer also utilizes electromagnetic induction to operate.
-The difference is that a passive buzzer does not have its own oscillating source, so it will not emit sound if DC signals are used.However, this allows the passive buzzer to adjust its own oscillation frequency and produce different notes such as "do, re, mi, fa, sol, la, ti".
+このプロジェクトでは、パッシブブザーを振動させ、音を発生させるためにこれら2つの関数を使用します。関数 ``tone()`` は、指定された周波数（および50％のデューティサイクル）でピン上に矩形波を生成します。持続時間を指定することもできますし、 ``noTone()`` が呼び出されるまで波が続きます。
+アクティブブザーと同様に、パッシブブザーも電磁誘導を利用して動作します。
+違いは、パッシブブザーには自身の発振源がないため、直流信号を使用しても音を発することはありません。しかし、これによりパッシブブザーは自身の発振周波数を調整し、"ド、レ、ミ、ファ、ソ、ラ、シ"などの異なる音符を生成できます。
 
-Required Components
+必要なコンポーネント
 -------------------------
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全セットを購入するのが便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名称	
+        - このキットのアイテム数
+        - リンク
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネント紹介
+        - 購入リンク
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -54,45 +53,46 @@ You can also buy them separately from the links below.
         - |link_passive_buzzer_buy|
 
 
-Wiring
+配線図
 ----------------------
 
 .. note::
-    When connecting the buzzer, make sure to check its pins. The longer pin is the anode and the shorter one is the cathode. It's important not to mix them up, as doing so will prevent the buzzer from producing any sound.
+    ブザーを接続する際は、ピンを確認してください。長いピンがアノード、短い方がカソードです。逆に接続するとブザーから音が出ないため、間違えないように注意が必要です。
 
 .. image:: img/16-passive_buzzer_bb.png
     :align: center
     :width: 70%
 
-Schematic Diagram
+回路図
 -----------------------
 
 .. image:: img/16_passive_buzzer_schematic.png
     :align: center
     :width: 80%
 
-Code
+コード
 ---------------
 
 .. note::
 
-    * You can open the file ``16-passive_buzzer.ino`` under the path of ``elite-explorer-kit-main\basic_project\16-passive_buzzer`` directly.
-    * Or copy this code into Arduino IDE.
+    * ファイル ``16-passive_buzzer.ino`` を ``elite-explorer-kit-main\basic_project\16-passive_buzzer`` のパスで直接開くことができます。
+    * または、このコードをArduino IDEにコピーしてください。
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/7936cad2-3605-40a0-a9fc-573f934ab6b1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-At the time when you finish uploading the codes to the R4 board, you can hear a melody containing seven notes. 
+コードをR4ボードにアップロードし終えると、7つの音符を含むメロディーが聞こえます。
 
-Code Analysis
+
+コード解析
 ------------------------
 
-1. Including the pitches library:
-   This library provides the frequency values for various musical notes, allowing you to use musical notation in your code.
+1. pitchesライブラリのインクルード：
+   このライブラリは、さまざまな音楽ノートの周波数値を提供し、コード内で音楽記譜法を使用できるようにします。
 
    .. note::
-      Please place the ``pitches.h`` file in the same directory as the code to ensure proper functioning. |link_pitches|
+      正常な動作を確保するために、 ``pitches.h`` ファイルをコードと同じディレクトリに配置してください。 |link_pitches|
 
       .. image:: img/16_passive_buzzer_piches.png
 
@@ -100,13 +100,13 @@ Code Analysis
        
       #include "pitches.h"
 
-2. Defining constants and arrays:
+2. 定数と配列の定義：
 
-   * ``buzzerPin`` is the digital pin on the Arduino where the buzzer is connected.
+   * ``buzzerPin`` は、ブザーが接続されているArduinoのデジタルピンです。
 
-   * ``melody[]`` is an array that stores the sequence of notes to be played.
+   * ``melody[]`` は、演奏されるノートのシーケンスを格納する配列です。
 
-   * ``noteDurations[]`` is an array that stores the duration of each note in the melody.
+   * ``noteDurations[]`` は、メロディーの各ノートの持続時間を格納する配列です。
 
    .. code-block:: arduino
    
@@ -118,17 +118,15 @@ Code Analysis
         4, 8, 8, 4, 4, 4, 4, 4
       };
 
-3. Playing the melody:
+3. メロディーの演奏：
 
-   * The ``for`` loop iterates over each note in the melody.
+   * ``for`` ループはメロディーの各ノートを反復処理します。
 
-   * The ``tone()`` function plays a note on the buzzer for a specific duration.
+   * ``tone()`` 関数は、特定の期間にわたってブザーでノートを再生します。
 
-   * A delay is added between notes to distinguish them.
+   * ノートを区別するために、ノート間に遅延が追加されます。
 
-   * The ``noTone()`` function stops the sound.
-
-
+   * ``noTone()`` 関数は音を停止します。
 
    .. code-block:: arduino
    
@@ -142,7 +140,7 @@ Code Analysis
         }
       }
 
-4. Empty loop function:
-   Since the melody is played only once in the setup, there's no code in the loop function.
+4. 空のループ関数：
+   メロディーはセットアップで一度だけ演奏されるため、ループ関数にはコードがありません。
 
-5. Feel free to experiment with altering the notes and durations in the ``melody[]`` and ``noteDurations[]`` arrays to create your own melodies. If you're interested, there is a GitHub repository (|link_arduino-songs|) that offers Arduino code for playing various songs. While their approach may differ from this project, you can consult their notes and durations for reference.
+5. ``melody[]`` と ``noteDurations[]`` 配列のノートや持続時間を変更して、独自のメロディーを作成することをお試しください。興味があれば、さまざまな曲を演奏するためのArduinoコードを提供するGitHubリポジトリ（ |link_arduino-songs| ）があります。そのアプローチはこのプロジェクトと異なるかもしれませんが、参考としてノートや持続時間を参照することができます。

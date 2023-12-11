@@ -1,52 +1,52 @@
 .. _fun_pong:
 
-GAME - Pong
+ゲーム - ポン
 =================================
 
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/videos/fun_projects/12_fun_pong.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      お使いのブラウザーはビデオタグをサポートしていません。
    </video>
 
-This is a simple Pong game designed using an OLED display and an Arduino board.
-In the Pong game, players compete against the computer, controlling a vertical paddle to bounce back a bouncing ball. 
-The goal is to prevent the ball from passing your paddle's edge, or else the opponent scores.
+これは、OLEDディスプレイとArduinoボードを使用して設計されたシンプルなポンゲームです。
+ポンゲームでは、プレイヤーはコンピュータと対戦し、垂直なパドルを操作して跳ね返るボールを跳ね返します。
+目標は、ボールを自分のパドルの端を越えさせないようにすることで、さもなければ相手に得点されます。
 
-The game mechanics can be divided into the following parts:
+ゲームのメカニズムは以下のパーツに分けられます：
 
-1. Ball Movement - The ball moves along its current direction at a set speed. Whenever the ball collides with a paddle, its speed increases, making the game more challenging.
+1. ボールの動き - ボールは現在の方向に沿って設定された速度で動きます。ボールがパドルに衝突するたびに、その速度が増加し、ゲームがより難しくなります。
 
-2. Paddle Movement - Used to block the ball's movement, the paddle can move up or down. Players control their own paddle using buttons, while the computer's paddle automatically follows the ball's position.
+2. パドルの動き - ボールの動きをブロックするために使用されるパドルは、上または下に動かすことができます。プレイヤーはボタンを使用して自分のパドルを操作し、コンピュータのパドルは自動的にボールの位置に従います。
 
-3. Scoring - Whenever the ball goes beyond the left or right edge of the screen, the corresponding player or CPU scores.
+3. スコアリング - ボールが画面の左または右端を越えるたびに、対応するプレイヤーまたはCPUが得点します。
 
-**Required Components**
+**必要なコンポーネント**
 
-In this project, we need the following components. 
+このプロジェクトでは、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+一式を購入するのが便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名称	
+        - このキットのアイテム数
+        - リンク
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネント紹介
+        - 購入リンク
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -64,64 +64,65 @@ You can also buy them separately from the links below.
         - \-
 
 
-**Wiring**
+**配線図**
 
 .. image:: img/12_pong_bb.png
     :width: 100%
     :align: center
 
 
-**Schematic**
+**回路図**
 
 .. image:: img/12_pong_schematic.png
     :width: 100%
     :align: center
 
-**Code**
+**コード**
 
 .. note::
 
-    * You can open the file ``12_pong_oled.ino`` under the path of ``elite-explorer-kit-main\fun_project\12_pong_oled`` directly.
-    * Or copy this code into Arduino IDE.
+    * ファイル ``12_pong_oled.ino`` は、パス ``elite-explorer-kit-main\fun_project\12_pong_oled`` で直接開けます。
+    * または、このコードをArduino IDEにコピーしてください。
 
 .. note::
-   To install the library, use the Arduino Library Manager and search for **"Adafruit SSD1306"** and **"Adafruit GFX"** and install them.
+   ライブラリをインストールするには、Arduinoライブラリマネージャーで **「Adafruit SSD1306」** と **「Adafruit GFX」** を検索し、インストールしてください。
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/86dbb549-d425-4f42-8b5b-28d486e3f7f8/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-**How it works?**
+**どのように動作するのか？**
 
-The program structure can be divided into the following five parts:
+プログラムの構造は以下の5つの部分に分けられます：
 
-1. Import Necessary Libraries - Used to control the OLED screen and read button inputs.
+1. 必要なライブラリのインポート - OLEDスクリーンの制御とボタン入力の読み取りに使用されます。
 
-2. Define Constants and Global Variables:
+2. 定数とグローバル変数の定義：
 
-   Definitions for OLED screen width and height.
-   Definitions for buttons and OLED reset pins.
-   Position, speed, size, and direction of the ball and paddles.
-   Scores for player and CPU.
+   OLEDスクリーンの幅と高さの定義。
+   ボタンとOLEDリセットピンの定義。
+   ボールとパドルの位置、速度、サイズ、方向。
+   プレイヤーとCPUのスコア。
 
-3. Initialization:
+3. 初期化：
 
-   Initialize serial communication, the OLED screen, and display the initial interface.
-   Set buttons as inputs and connect pull-up resistors.
-   Draw the playing field.
+   シリアル通信、OLEDスクリーンを初期化し、初期インターフェースを表示します。
+   ボタンを入力として設定し、プルアップ抵抗器を接続します。
+   プレイングフィールドを描きます。
 
-4. Main Loop:
+4. メインループ：
 
-   Read button states.
-   Move the ball based on the set refresh rate.
-   Detect collisions between the ball and paddles or walls, adjusting the ball's direction and speed accordingly.
-   Update the screen with scores based on scoring events.
-   Refresh paddle positions.
+   ボタンの状態を読み取ります。
+   設定されたリフレッシュレートに基づいてボールを動かします。
+   ボールとパドルまたは壁との衝突を検出し、ボールの方向と速度をそれに応じて調整します。
+   得点イベントに基づいてスクリーン上のスコアを更新します。
+   パドルの位置をリフレッシュします。
 
-5. Additional Functions:
+5. 追加の関数：
 
-   ``crossesPlayerPaddle`` and ``crossesCpuPaddle`` - Used to detect whether the ball collides with the player's or CPU's paddle.
+   ``crossesPlayerPaddle`` と ``crossesCpuPaddle`` - ボールがプレイヤーのパドルまたはCPUのパドルと衝突するかどうかを検出するために使用されます。
    
-   ``drawCourt`` - Draws the playing field on the OLED screen.
+   ``drawCourt`` - OLEDスクリーン上にプレイングフィールドを描きます。
 
-   ``displayScore`` - Displays the player's and CPU's scores on the screen.
+   ``displayScore`` - 画面上にプレイヤーとCPUのスコアを表示します。
+

@@ -1,36 +1,35 @@
 .. _cpn_diode:
 
-Diode
+ダイオード
 =================
 
+ダイオードは、2つの電極を持つ電子部品です。これは、電流を一方向にのみ流すことができ、しばしば「整流」と呼ばれる機能を持ちます。
+したがって、ダイオードはチェックバルブの電子バージョンと考えることができます。
 
-A diode is an electronic component with two electrodes. It allows current to flow in only one direction, which is often called the "Rectifying" function.
-Thus, a diode can be thought of as an electronic version of a check valve.
+その一方向性の導電性のため、ダイオードはある程度の複雑さを持つほぼすべての電子回路で使用されています。これは最初の半導体デバイスの一つであり、幅広い用途があります。
 
-Because of its unidirectional conductivity, the diode is used in almost all electronic circuits of some complexity. It is one of the first semiconductor devices and has a wide range of applications.
+用途分類によって、検出用ダイオード、整流ダイオード、制限ダイオード、電圧調整ダイオードなどに分けられます。
 
-According to its use classification, it can be divided into detector diodes, rectifier diodes, limiter diodes, voltage regulator diodes, etc. 
+このキットには整流ダイオードと電圧調整ダイオードが含まれています。
 
-Rectifier diodes and voltage regulator diodes are included in this kit.
-
-**Rectifier Diode**
+**整流ダイオード**
 
 .. image:: img/in4007_diode.png
 .. image:: img/symbol_rectifier_diode.png
     :width: 200
 
-A rectifier diode is a semiconductor diode, used to rectify AC (alternating current) to DC (direct current) using the rectifier bridge application. The alternative of rectifier diode through the Schottky barrier is mainly valued within digital electronics. This diode is capable to conduct the values of current which changes from mA to a few kA & voltages up to a few kV.
+整流ダイオードは半導体ダイオードで、整流ブリッジの応用を使用してAC（交流）をDC（直流）に整流するために使用されます。整流ダイオードの代替品としてのショットキーバリアは、主にデジタルエレクトロニクス内で価値があります。このダイオードはmAから数kAまでの電流値と数kVまでの電圧を導く能力を持っています。
 
-The designing of rectifier diodes can be done with Silicon material and they are capable of conducting high electric current values. These diodes are not famous but still used Ge or gallium arsenide-based semiconductor diodes. Ge diodes have less allowable reversed voltage as well as a lesser allowable junction temperature. The Ge diode has a benefit as compared to Si diode that is low threshold voltage value while operating in a forward-bias.
+整流ダイオードの設計はシリコン材料で行われ、高い電流値を導くことができます。これらのダイオードは有名ではありませんが、まだGeまたはガリウムヒ素を基にした半導体ダイオードが使用されています。Geダイオードは許容される逆電圧が少なく、許容される接合温度も低いです。GeダイオードにはSiダイオードと比較して、順バイアスで動作する際の低いしきい値電圧値という利点があります。
 
 * |link_general_purpose_diode|
 
 
-**Zener Diode**
+**ゼナーダイオード**
 
-A Zener diode is a special type of diode designed to reliably allow current to flow "backwards" when a certain set reverse voltage, known as the Zener voltage, is reached.
+ゼナーダイオードは、特定の設定逆電圧、いわゆるゼナー電圧に達すると、信頼性を持って「逆方向」に電流を流すように設計された特殊なタイプのダイオードです。
 
-This diode is a semiconductor device that has a very high resistance up to the critical reverse breakdown voltage. At this critical breakdown point, the reverse resistance is reduced to a very small value, and the current increases while the voltage remains constant in this low resistance region.
+このダイオードは、重要な逆方向ブレークダウン電圧に達するまで非常に高い抵抗を持つ半導体デバイスです。この重要なブレークダウン点で、逆方向抵抗は非常に小さな値に減少し、この低抵抗領域で電流は増加するが、電圧は一定のままです。
 
 .. image:: img/zener_diode.png
 .. image:: img/symbol-zener-diode.jpg
@@ -38,6 +37,7 @@ This diode is a semiconductor device that has a very high resistance up to the c
 
 * |link_zener_diode|
 
-**Example**
+**例**
 
- * :ref:`basic_relay` (Basic Project)
+ * :ref:`basic_relay` （基本プロジェクト）
+

@@ -1,43 +1,41 @@
 .. _basic_pir:
 
-PIR Motion Sensor Module
+PIR動作センサーモジュール
 ==========================
 
 .. https://docs.sunfounder.com/projects/kepler-kit/en/latest/cproject/ar_pir.html#ar-pir
 
-
-Overview
+概要
 ---------------
 
-In this lesson, you will learn about PIR motion sensor module. The Passive Infrared(PIR) Motion Sensor is a sensor that detects motion. It is commonly used in security systems and automatic lighting systems. The sensor has two slots that detect infrared radiation. When an object, such as a person, passes in front of the sensor, it detects a change in the amount of infrared radiation and triggers an output signal.
+このレッスンでは、PIR動作センサーモジュールについて学びます。パッシブ赤外線（PIR）動作センサーは、動きを検出するセンサーです。セキュリティシステムや自動照明システムで一般的に使用されています。このセンサーには、赤外線を検出する2つのスロットがあります。人などの物体がセンサーの前を通過すると、赤外線の量の変化を検出し、出力信号をトリガーします。
 
-
-Required Components
+必要なコンポーネント
 -------------------------
 
-In this project, we need the following components. 
+このプロジェクトでは、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全てのキットを一式購入するのが便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名称	
+        - このキットのアイテム数
+        - リンク
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+下記のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネント紹介
+        - 購入リンク
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -48,7 +46,7 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_pir`
         - |link_pir_buy|
 
-Wiring
+配線図
 ----------------------
 
 .. image:: img/05-pir_bb.png
@@ -56,7 +54,7 @@ Wiring
    :width: 100%
 
 
-Schematic Diagram
+回路図
 -----------------------
 
 .. image:: img/05-pir_schematic.png
@@ -64,20 +62,20 @@ Schematic Diagram
    :width: 50%
 
 
-Code
+コード
 ---------------
 
 .. note::
 
-    * You can open the file ``05-pir_motion_sensor.ino`` under the path of ``elite-explorer-kit-main\basic_project\05-pir_motion_sensor`` directly.
-    * Or copy this code into Arduino IDE.
+    * ``elite-explorer-kit-main\basic_project\05-pir_motion_sensor`` のパスの下にある ``05-pir_motion_sensor.ino`` ファイルを直接開く。
+    * または、このコードをArduino IDEにコピーします。
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/d9fc9198-1538-413d-b501-2cddc8d7cfe6/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After uploading the code to the Arduino Uno board, you can open the serial monitor to observe the sensor's output. When the PIR (passive infrared) motion sensor detects movement, the serial monitor will display the message "Somebody here!" to indicate that motion has been detected. If no motion is detected, the message "Monitoring..." will be shown instead.
+コードをArduino Unoボードにアップロードした後、シリアルモニターを開いてセンサーの出力を観察できます。PIR（パッシブ赤外線）動作センサーが動きを検出すると、シリアルモニターに「Somebody here!」と表示され、動きが検出されたことを示します。動きが検出されない場合は、「Monitoring...」と表示されます。
 
-The PIR sensor outputs a digital HIGH or LOW signal, corresponding to detected or undetected motion, respectively. Unlike an analog sensor that provides a range of values, the digital output from this PIR sensor will either be HIGH (typically represented as '1') or LOW (typically represented as '0').
+PIRセンサーは、検出されたか検出されていないかに応じて、デジタルHIGHまたはLOWの信号を出力します。アナログセンサーが値の範囲を提供するのとは異なり、このPIRセンサーからのデジタル出力は、HIGH（通常「1」と表される）かLOW（通常「0」と表される）のいずれかになります。
 
-Note that the actual sensitivity and range of detection can vary based on the PIR sensor's characteristics and the environmental conditions. Therefore, it is advisable to calibrate the sensor according to your specific needs.
+PIRセンサーの特性や環境条件に基づいて、実際の感度や検出範囲が異なる場合があるため、特定のニーズに合わせてセンサーを調整することが推奨されます。

@@ -3,38 +3,37 @@
 74HC595
 ==========================
 
-
-Overview
+概要
 ----------------------
 
-Generally, there are two ways to drive a single 7-segment display. One way is to connect its 8 pins directly to eight ports on the Uno board, which we have done previously. Or you can connect the 74HC595 to three ports of the UNO board and then the 7-segment display to the 74HC595. In this experiment, we will use the latter. By this way, we can save five ports – considering the Uno board’s limited ports, this is very important. Now let's get started!
+一般的に、単一の7セグメントディスプレイを駆動する方法には2つあります。1つは、その8ピンをUnoボードの8ポートに直接接続する方法で、これは以前に行ったことがあります。もう1つの方法は、74HC595をUnoボードの3つのポートに接続し、その後に7セグメントディスプレイを74HC595に接続することです。この実験では、後者を使用します。この方法では、Unoボードの限られたポートを考えると、5つのポートを節約することができます。それでは始めましょう！
 
-Required Components
+必要なコンポーネント
 ------------------------
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全セットを購入するのが便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名称	
+        - このキットのアイテム数
+        - リンク
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネント紹介
+        - 購入リンク
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -49,57 +48,56 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_74hc595`
         - |link_74hc595_buy|
 
-Wiring
+配線図
 ----------------------
 
 .. image:: img/29-74hc595_bb.png
     :align: center
     :width: 95%
 
-Schematic Diagram
+回路図
 --------------------
 
-In the experiment MR (pin10) is connected to 5V (HIGH Level) and OE (pin 1)  to GND (LOW Level). Therefore, the data is input into the rising edge of SHcp and enters the memory register through the rising edge. We use the shiftout() function to output a 8-bit data to the shift register through DS. In the rising edge of the SHcp, the data in the shift register moves successively one bit in one time, i.e. data in Q1 moves to Q2, and so forth. In the rising edge of STcp, data in the shift register moves into the memory register. All data will be moved to the memory register after 8 times. Then the data in the memory register is output to the bus (Q0-Q7). So the 16 characters are displayed in the 7-segment in turn.
+この実験では、MR（ピン10）を5V（HIGHレベル）に、OE（ピン1）をGND（LOWレベル）に接続します。したがって、データはSHcpの立ち上がりエッジで入力され、立ち上がりエッジでメモリレジスタに入ります。shiftout()関数を使用して、DSを介してシフトレジスタに8ビットのデータを出力します。SHcpの立ち上がりエッジでは、シフトレジスタ内のデータが1回に1ビットずつ順次移動し、つまり、Q1のデータがQ2に移動し、以降同様になります。STcpの立ち上がりエッジで、シフトレジスタのデータがメモリレジスタに移動します。8回後、すべてのデータがメモリレジスタに移動します。その後、メモリレジスタのデータがバス（Q0-Q7）に出力されます。したがって、16個の文字が7セグメントに順番に表示されます。
 
 .. image:: img/29_74hc595_schematic.png
    :align: center
 
-
-Code
+コード
 --------
 
 .. note::
 
-    * You can open the file ``29-74hc595.ino`` under the path of ``elite-explorer-kit-main\basic_project\29-74hc595`` directly.
-    * Or copy this code into Arduino IDE.
+    * ファイル ``29-74hc595.ino`` を ``elite-explorer-kit-main\basic_project\29-74hc595`` で直接開くことができます。
+    * または、このコードをArduino IDEにコピーしてください。
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/c7232b3c-61c9-4d7d-849b-55ed406181b1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After uploading the codes to the uno board, you should now see the 7-segment display from 0 to 9 and A to F.
+Unoボードにコードをアップロードした後、7セグメントディスプレイで0から9、AからFまで順番に表示されるはずです。
     
 
-Code Analysis
+コード解析
 -----------------
 
-**Set the array elements**
+**配列の要素を設定**
 
 .. code-block:: arduino
 
     int datArray[16] = {252, 96, 218, 242, 102, 182, 190, 224, 254, 246, 238, 62, 156, 122, 158, 142};
 
-This array stores the data of the 16 characters from 0 to F. 252 stands for 0, which you can calculate by yourself. To display 0, the segment g (the middle one) of the 7-segment display must be low level (dim).
+この配列には0からFまでの16文字のデータが格納されています。252は0を表し、自分で計算できます。0を表示するには、7セグメントディスプレイのセグメントg（中央のもの）をローレベル（暗い）にする必要があります。
 
-Since the segment g is connected to Q1 of the 74HC595, set both Q1 and DP (the dot) as low level and leave the rest pins as high level.
-Therefore, the values of Q7 Q6 Q5 Q4 Q3 Q2 Q1 Q0 are 1 1 1 1 1 1 0 0.
+セグメントgは74HC595のQ1に接続されているため、Q1とDP（ドット）の両方をローレベルに設定し、残りのピンをハイレベルにします。
+したがって、Q7 Q6 Q5 Q4 Q3 Q2 Q1 Q0の値は1 1 1 1 1 1 0 0です。
 
-Change the binary numbers into decimal ones:
+2進数を10進数に変換します：
 1x2\ :sup:`7`\ +1x2\ :sup:`6`\ +1x2\ :sup:`5`\ +1x2\ :sup:`4`\ +1x2\ :sup:`3`\ +1x2\ :sup:`2`\ +0x2\ :sup:`1`\ +1x2\ :sup:`0`\ =252.
 
-So that's the value for the number **0** to be displayed. You can calculate other characters similarly.
+これが数字**0**が表示される値です。他の文字も同様に計算できます。
 
-**Display 0-F in the 7-segment display**
+**7セグメントディスプレイに0-Fを表示**
 
 .. code-block:: arduino
 
@@ -121,11 +119,10 @@ So that's the value for the number **0** to be displayed. You can calculate othe
 
     }
 
-Set ``STcp`` as low level first and then high level. It will generate a rising edge pulse of STcp.
+まず ``STcp`` を低レベルに設定し、その後高レベルにします。これによりSTcpの立ち上がりエッジパルスが生成されます。
 
-``shiftOut()`` is used to shift out a byte of data one bit at a time, which means to shift a byte of data in ``dataArray[num]`` to the shifting register with the DS pin. ``MSBFIRST`` means to move from high bits.
+``shiftOut()`` は、DSピンを介して ``dataArray[num]`` のバイトデータを1ビットずつシフトするために使用されます。 ``MSBFIRST`` は高ビットから移動することを意味します。
 
-After ``digitalWrite(STcp,HIGH)`` is run, the STcp will be at the rising edge. At this time, the data in the shift register will be moved to the memory register.
+``digitalWrite(STcp,HIGH)`` が実行されると、STcpが立ち上がりエッジになります。この時点で、シフトレジスタのデータがメモリレジスタに移動します。
 
-A byte of data will be transferred into the memory register after 8 times. Then the data of memory register is output to the bus (Q0-Q7). You will see a character is displayed on the 7-segment. Then delay for 1000ms. After that line, go back to ``for()``. The loop repeats until all the characters are displayed in the 7-segment display one by one after
-16 times.
+8回の操作で1バイトのデータがメモリレジスタに転送されます。その後、メモリレジスタのデータがバス（Q0-Q7）に出力されます。7セグメントに文字が表示されるのを見ることができます。その後、1000ms遅延します。その行の後に、 ``for()`` に戻ります。ループは16回繰り返され、7セグメントディスプレイに1つずつ文字が表示されます。

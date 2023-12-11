@@ -1,39 +1,38 @@
 .. _basic_audio_speaker:
 
-Audio Module and Speaker
-==========================
+オーディオモジュールとスピーカー
+=================================
 
-Overview
+概要
 ---------------
-In this lesson, you will learn about the Audio Module and Speaker when used with an Arduino Uno board. These components are widely utilized in various electronic applications, including musical toys, DIY sound systems, alarms, and even sophisticated musical instruments. By combining an Arduino with an Audio Module and Speaker, you can create a simple yet effective melody player.
+このレッスンでは、Arduino Unoボードと一緒に使用されるオーディオモジュールとスピーカーについて学びます。これらのコンポーネントは、音楽玩具、DIYサウンドシステム、アラーム、さらには高度な楽器など、さまざまな電子アプリケーションで広く利用されています。Arduinoとオーディオモジュール、スピーカーを組み合わせることで、シンプルながら効果的なメロディープレーヤーを作成できます。
 
-
-Required Components
+必要なコンポーネント
 -------------------------
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全セットを購入するのが便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名称	
+        - このキットのアイテム数
+        - リンク
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネント紹介
+        - 購入リンク
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -47,18 +46,18 @@ You can also buy them separately from the links below.
         - \-
 
 
-Wiring
+配線図
 ----------------------
 
-As this is a mono amplifier, you can connect pin 8 to the L or R pin of the audio amplifier module.
+これはモノラルアンプなので、ピン8をオーディオアンプモジュールのLまたはRピンに接続できます。
 
-The 10K resistor is used to reduce high-frequency noise and lower the audio volume. It forms an RC low-pass filter with the parasitic capacitance of the DAC and audio amplifier. This filter decreases the amplitude of high-frequency signals, effectively reducing high-frequency noise. So, adding the 10K resistor makes the music sound softer and eliminates unwanted high-frequency noise.
+10K抵抗は、高周波ノイズを減少させ、オーディオボリュームを下げるために使用されます。DACとオーディオアンプの寄生容量とのRCローパスフィルタを形成します。このフィルタは高周波信号の振幅を減少させ、高周波ノイズを効果的に減少させます。したがって、10K抵抗を追加すると、音楽が柔らかく聞こえ、望ましくない高周波ノイズが排除されます。
 
 .. image:: img/17-audio_bb.png
     :align: center
     :width: 100%
 
-Schematic Diagram
+回路図
 -----------------------
 
 .. image:: img/17-audio_schematic.png
@@ -66,28 +65,28 @@ Schematic Diagram
     :width: 80%
 
 
-Code
+コード
 ---------------
 
 .. note::
 
-    * You can open the file ``17-speaker.ino`` under the path of ``elite-explorer-kit-main\basic_project\17-speaker`` directly.
-    * Or copy this code into Arduino IDE.
+    * ファイル ``17-speaker.ino`` を ``elite-explorer-kit-main\basic_project\17-speaker`` のパスで直接開くことができます。
+    * または、このコードをArduino IDEにコピーしてください。
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/33b690b5-0be6-434d-83d7-5bfcfce3775e/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-At the time when you finish uploading the codes to the R4 board, you can hear a melody containing seven notes. 
+コードをR4ボードにアップロードし終えると、7つの音符を含むメロディーが聞こえます。
 
-Code Analysis
+コード解析
 ------------------------
 
-1. Including the pitches library:
-   This library provides the frequency values for various musical notes, allowing you to use musical notation in your code.
+1. pitchesライブラリのインクルード：
+   このライブラリは、さまざまな音楽ノートの周波数値を提供し、コード内で音楽記譜法を使用できるようにします。
 
    .. note::
-      Please place the ``pitches.h`` file in the same directory as the code to ensure proper functioning. |link_pitches|
+      正常な動作を確保するために、 ``pitches.h`` ファイルをコードと同じディレクトリに配置してください。 |link_pitches|
 
       .. image:: img/16_passive_buzzer_piches.png
 
@@ -95,13 +94,13 @@ Code Analysis
        
       #include "pitches.h"
 
-2. Defining constants and arrays:
+2. 定数と配列の定義：
 
-   * ``speakerPin`` is the digital pin on the Arduino where the speaker is connected.
+   * ``speakerPin`` は、スピーカーが接続されているArduinoのデジタルピンです。
 
-   * ``melody[]`` is an array that stores the sequence of notes to be played.
+   * ``melody[]`` は、演奏されるノートのシーケンスを格納する配列です。
 
-   * ``noteDurations[]`` is an array that stores the duration of each note in the melody.
+   * ``noteDurations[]`` は、メロディーの各ノートの持続時間を格納する配列です。
 
    .. code-block:: arduino
    
@@ -113,17 +112,15 @@ Code Analysis
         4, 8, 8, 4, 4, 4, 4, 4
       };
 
-3. Playing the melody:
+3. メロディーの演奏：
 
-   * The ``for`` loop iterates over each note in the melody.
+   * ``for`` ループはメロディーの各ノートを反復処理します。
 
-   * The ``tone()`` function plays a note on the spekaer for a specific duration.
+   * ``tone()`` 関数は、特定の期間にわたってスピーカーでノートを再生します。
 
-   * A delay is added between notes to distinguish them.
+   * ノートを区別するために、ノート間に遅延が追加されます。
 
-   * The ``noTone()`` function stops the sound.
-
-
+   * ``noTone()`` 関数は音を停止します。
 
    .. code-block:: arduino
    
@@ -137,7 +134,7 @@ Code Analysis
         }
       }
 
-4. Empty loop function:
-   Since the melody is played only once in the setup, there's no code in the loop function.
+4. 空のループ関数：
+   メロディーはセットアップで一度だけ演奏されるため、ループ関数にはコードがありません。
 
-5. Feel free to experiment with altering the notes and durations in the ``melody[]`` and ``noteDurations[]`` arrays to create your own melodies. If you're interested, there is a GitHub repository (|link_arduino-songs|) that offers Arduino code for playing various songs. While their approach may differ from this project, you can consult their notes and durations for reference.
+5. ``melody[]`` と ``noteDurations[]`` 配列のノートや持続時間を変更して、独自のメロディーを作成することをお試しください。興味があれば、さまざまな曲を演奏するためのArduinoコードを提供するGitHubリポジトリ（ |link_arduino-songs| ）があります。そのアプローチはこのプロジェクトと異なるかもしれませんが、参考としてノートや持続時間を参照することができます。

@@ -1,42 +1,42 @@
 .. _basic_relay:
 
-Relay
+リレー
 ==========================
 
 .. https://docs.sunfounder.com/projects/r4-basic-kit/en/latest/projects/relay_uno.html#relay-uno
 
 
-Overview
+概要
 ---------------
 
-As we may know, relay is a device which is used to provide connection between two or more points or devices in response to the input signal applied. In other words, relays provide isolation between the controller and the device as devices may work on AC as well as on DC. However, they receive signals from a micro-controller which works on DC hence requiring a relay to bridge the gap. Relay is extremely useful when you need to control a large amount of current or voltage with small electrical signal.
+リレーは、入力信号に応じて2つ以上のポイントまたはデバイス間の接続を提供するために使用されるデバイスです。言い換えると、リレーはコントローラとデバイス間の絶縁を提供します。デバイスはAC（交流）およびDC（直流）の両方で動作することがありますが、DCで動作するマイクロコントローラからの信号を受け取ります。そのため、ギャップを埋めるためにリレーが必要です。小さな電気信号で大量の電流または電圧を制御する必要がある場合には、リレーが非常に役立ちます。
 
-Required Components
+必要なコンポーネント
 -------------------------
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全セットを購入するのが便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名称	
+        - このキットのアイテム数
+        - リンク
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネント紹介
+        - 購入リンク
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -53,44 +53,42 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_transistor`
         - |link_transistor_buy|
     *   - :ref:`cpn_diode`
-        - |link_diode_buy| 
+        - |link_diode_buy|
 
-Wiring
+配線図
 ----------------------
 
 .. image:: img/28-relay_bb.png
     :align: center
     :width: 90%
 
-Schematic Diagram
+回路図
 -----------------------
 
-Connect a 1K resistor (for current limiting when the transistor is energized) to pin 8 of the SunFounder Uno board, then to an NPN transistor whose collector is connected to the coil of a relay and emitter to GND; connect the normally open contact of the relay to an LED and then GND. Therefore, when a High level signal is given to pin 8, the transistor is energized, thus making the coil of the relay conductive. Then its normally open contact is closed, and the LED will light up. When pin 8 is given a Low level, the LED will stay dim.
+SunFounder Unoボードのピン8に1K抵抗（トランジスタが通電時の電流制限用）を接続し、NPNトランジスタのコレクターにリレーのコイルを接続し、エミッターをGNDに接続します。リレーの通常開接点をLEDに、それからGNDに接続します。したがって、ピン8にHighレベルの信号が与えられると、トランジスタが通電し、リレーのコイルが導通します。そして、その通常開接点が閉じて、LEDが点灯します。ピン8にLowレベルが与えられると、LEDは消灯します。
 
 .. image:: img/28_relay_schematic.png
 
+**フリーホイールダイオードの機能**：電圧入力がHigh（5V）からLow（0V）に変わると、トランジスタは飽和状態（3つの動作条件：増幅、飽和、カットオフ）からカットオフに変わり、コイル内の電流は突然流れる場所がなくなります。この瞬間、フリーホイールダイオードがなければ、コイルの端には逆起電力（EMF）が発生し、下部が正で上部が負になり、100Vを超える電圧が発生します。この電圧とトランジスタの電源からの電圧が加わり、トランジスタを焼損させるのに十分です。したがって、フリーホイールダイオードは、図中の矢印の方向に逆起電力を放電するために非常に重要であり、トランジスタからGNDへの電圧は+5V（+0.7V）を超えません。
 
-**Function of the freewheeling diode**: When the voltage input changes from High (5V) to Low (0V), the transistor changes from saturation (three working conditions: amplification, saturation, and cut-off) to cut-off, the current in the coil suddenly has no way to flow through. At this moment, without the freewheeling diode, a counter-electromotive force (EMF) will be generated at the ends of the coil, with positive at the bottom and negative at the top, a voltage higher than 100V. This voltage plus that from the power at the transistor are big enough to burn it. Therefore, the freewheeling diode is extremely important in discharging this counter-EMF in the direction of the arrow in the figure above, so the voltage of the transistor to GND is no higher than +5V (+0.7V).
+この実験では、リレーが閉じるとLEDが点灯し、リレーが開くとLEDが消灯します。
 
-In this experiment, when the relay closes, the LED will light up; when the relay opens, the LED will go out.
-
-
-Code
+コード
 --------
 
 .. note::
 
-    * You can open the file ``28-relay.ino`` under the path of ``elite-explorer-kit-main\basic_project\28-relay`` directly.
-    * Or copy this code into Arduino IDE.
+    * ファイル ``28-relay.ino`` を ``elite-explorer-kit-main\basic_project\28-relay`` で直接開くことができます。
+    * または、このコードをArduino IDEにコピーしてください。
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/093cb26d-298d-4b36-b3be-466d813c19a9/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
   
 
-Now, send a High level signal, and the relay will close and the LED will light up; send a low one, and it will open and the LED will go out. In addition, you can hear a tick-tock caused by breaking the normally close contact and closing the normally open one.
+Highレベルの信号を送ると、リレーが閉じてLEDが点灯します。Lowレベルを送ると、リレーが開いてLEDが消灯します。また、通常閉接点を切り、通常開接点を閉じることによる「カチカチ」という音も聞こえます。
 
-Code Analysis
+コード解析
 -----------------
 
 .. code-block:: arduino
@@ -102,4 +100,4 @@ Code Analysis
      delay(1000);                   // Wait for one second
    }
 
-The code in this experiment is simple. First, set relayPin as HIGH level and the LED connected to the relay will light up. Then set relayPin as LOW level and the LED goes out.
+この実験のコードはシンプルです。最初にrelayPinをHIGHレベルに設定し、リレーに接続されたLEDが点灯します。次にrelayPinをLOWレベルに設定すると、LEDが消灯します。

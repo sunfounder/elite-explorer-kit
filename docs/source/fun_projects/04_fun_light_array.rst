@@ -1,42 +1,42 @@
 .. _fun_light_array:
 
-Light-sensitive Array
+光敏アレイ
 ==========================================
 
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/videos/fun_projects/04_fun_lightarray.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      お使いのブラウザではビデオタグがサポートされていません。
    </video>
 
-This program converts the readings from a light-dependent resistor into a corresponding number of illuminated LED lights, creating a simple indicator of light brightness.
+このプログラムは、光依存抵抗器からの読み取りを対応する数の点灯するLEDライトに変換し、光の明るさのシンプルなインジケータを作成します。
 
-**Required Components**
+**必要なコンポーネント**
 
-In this project, we need the following components. 
+このプロジェクトには以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全体のキットを購入すると便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名称	
+        - このキットのアイテム数
+        - リンク
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから別々に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネント紹介
+        - 購入リンク
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -52,7 +52,7 @@ You can also buy them separately from the links below.
         - |link_photoresistor_buy|
 
 
-**Wiring**
+**配線図**
 
 .. image:: img/04_light_sensitive_array_bb.png
     :width: 70%
@@ -62,44 +62,45 @@ You can also buy them separately from the links below.
 
    <br/>
 
-**Schematic**
+**回路図**
 
 .. image:: img/04_light_sensitive_array_schematic.png
    :width: 60%
 
-**Code**
+**コード**
 
 .. note::
 
-    * You can open the file ``04_light_sensitive_array.ino`` under the path of ``elite-explorer-kit-main\fun_project\04_light_sensitive_array`` directly.
-    * Or copy this code into Arduino IDE.
+    * ファイル ``04_light_sensitive_array.ino`` を ``elite-explorer-kit-main\fun_project\04_light_sensitive_array`` のパスから直接開くことができます。
+    * または、このコードをArduino IDEにコピーしてください。
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/9da7af57-c002-41a0-bc84-372e91885d52/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-**How it works?**
+**どのように動作しますか？**
 
-Here's a step-by-step explanation of the code:
+以下はコードの詳細な説明です：
 
-1. Constant and Variable Definitions:
+1. 定数と変数の定義：
 
-   ``NbrLEDs``: Defines the presence of 8 LEDs.
-   ``ledPins[]``: LEDs are connected to Arduino pins 5 to 12.
-   ``photocellPin``: The photoresistor is connected to Arduino's A0 pin.
-   ``sensorValue``: This variable stores the value read from the photoresistor.
-   ``ledLevel``: This variable stores the number of LEDs based on the sensorValue conversion.
+   ``NbrLEDs``：8個のLEDの存在を定義します。
+   ``ledPins[]``：LEDはArduinoのピン5から12に接続されています。
+   ``photocellPin``：フォトレジスタはArduinoのA0ピンに接続されています。
+   ``sensorValue``：この変数はフォトレジスタから読み取った値を保存します。
+   ``ledLevel``：この変数はsensorValueの変換に基づいてLEDの数を保存します。
 
-2. ``setup()``:
+2. ``setup()``：
 
-   Configures pins 5 to 12 as output to drive the LEDs.
+   ピン5から12を出力として設定し、LEDを駆動します。
 
-3. ``loop()``:
+3. ``loop()``：
 
-   Reads the analog value of the photoresistor from pin A0, typically ranging from 0 to 1023.
-   Uses the map function to map the photoresistor's value from the range 300-1023 to the range 0-8.
-   This means that if the reading from the light-dependent resistor is 300, no LEDs will be lit;
-   if the reading is 1023 or higher, all 8 LEDs will be lit.
-   
-   The subsequent for loop checks each LED. If its index is less than ledLevel,
-   the LED will be turned on; otherwise, it will be turned off.
+   フォトレジスタのアナログ値をピンA0から読み取ります。通常は0から1023の範囲です。
+   map関数を使用して、フォトレジスタの値を300-1023の範囲から0-8の範囲にマップします。
+   これは、光依存抵抗器からの読み取りが300の場合、LEDは点灯しないことを意味します。
+   読み取りが1023以上の場合、8個のLEDすべてが点灯します。
+
+   続くforループは、各LEDをチェックします。そのインデックスがledLevel未満の場合、
+   LEDを点灯させます。それ以外の場合は、LEDを消灯させます。
+

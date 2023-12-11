@@ -1,42 +1,42 @@
 .. _basic_7segment:
 
-7-segment Display
+7セグメントディスプレイ
 ==========================
 
 .. https://docs.sunfounder.com/projects/uno-mega-kit/en/latest/uno/7_segment_display_uno.html#segmeng-uno
 
 
-Overview
+概要
 -------------------
 
-A 7-segment display is a device that can display numerals and letters. It's made up of seven LEDs connected in parallel. Different letters/numbers can be shown by connecting pins on the display to the power source and enabling the related pins, thus turning on the corresponding LED segments. In this lesson let's learn how to display specific characters on it.
+7セグメントディスプレイは、数字や文字を表示できる装置です。7つのLEDが並列に接続されて構成されています。ディスプレイ上のピンを電源に接続し、関連するピンを有効にすることで、対応するLEDセグメントが点灯し、異なる文字/数字を表示できます。このレッスンでは、特定の文字を表示する方法を学びます。
 
-Required Components
+必要なコンポーネント
 ------------------------
 
-In this project, we need the following components. 
+このプロジェクトには以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全セットを購入するのが便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名称	
+        - このキットのアイテム数
+        - リンク
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネント紹介
+        - 購入リンク
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -49,7 +49,7 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_7segment`
         - |link_7segment_buy|
 
-Wiring
+配線図
 ----------------------
 
 .. image:: img/13-7_segment_display_bb.png
@@ -57,23 +57,22 @@ Wiring
     :width: 70%
 
 
-Schematic Diagram
+回路図
 ------------------------
 
-In this experiment, connect each of pin a-g of the 7-Segment Display to one 1000 ohm current limiting resistor respectively and then to pin 4-11. GND connects to GND. By programming, we can set one or several of pin4-11 as High level to light up the corresponding LED(s).
+この実験では、7セグメントディスプレイのa-gの各ピンをそれぞれ1000オームの電流制限抵抗に接続し、その後4-11ピンに接続します。GNDはGNDに接続します。プログラミングにより、4-11ピンの一つまたは複数をHighレベルに設定して、対応するLED（複数可）を点灯させます。
 
 .. image:: img/13-7_segment_display_schematic.png
     :align: center
     :width: 80%
 
-Code
+コード
 ---------------
 
 .. note::
 
-    * You can open the file ``13-7_segment.ino`` under the path of ``elite-explorer-kit-main\basic_project\13-7_segment`` directly.
-    * Or copy this code into Arduino IDE.
-
+    * ファイル ``13-7_segment.ino`` を ``elite-explorer-kit-main\basic_project\13-7_segment`` のパスで直接開くことができます。
+    * または、このコードをArduino IDEにコピーしてください。
 
 .. raw:: html
 
@@ -83,17 +82,17 @@ Code
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/videos/basic_projects/13_basic_7_segment.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      ブラウザがビデオタグをサポートしていません。
    </video>
 
    <br/><br/>
 
-Code Analysis
+コード解析
 ----------------------
 
-The code may be a little long for this experiment. But the syntax is simple. Let's take a look.
+この実験のコードは少し長いかもしれませんが、構文はシンプルです。見てみましょう。
 
-**Call the function in loop()**
+**loop()内で関数を呼び出す**
 
 .. code-block:: arduino
 
@@ -112,9 +111,9 @@ The code may be a little long for this experiment. But the syntax is simple. Let
    digital_4(); //diaplay 4 to the 7-segment
 
 
-Calling these functions into the loop() is to let the 7-Segment display 0-F. The functions are shown below. Take ``digital_2()`` for example:
+これらの関数をloop()に呼び出すことで、7セグメントが0-Fを表示します。以下に関数の例を示します。 ``digital_2()`` を例にとります：
 
-**Detailed analysis of digital_2()**
+**digital_2()の詳細な分析**
 
 .. code-block:: arduino
 
@@ -131,6 +130,6 @@ Calling these functions into the loop() is to let the 7-Segment display 0-F. The
 .. image:: img/13_7segment.jpeg
    :align: center
 
-First, we need to understand how the numeral **2** appears on the 7-Segment display. It is achieved by powering on segments a, b, d, e, and g. In programming, pins connected to these segments are set to a High level while c and f are set to Low level. We start by using the function ``turnOffAllSegments()`` to turn off all segments and then light up the required ones.
+まず、7セグメントディスプレイで数字の **2** がどのように表示されるかを理解する必要があります。これは、a、b、d、e、gのセグメントに電力を供給することで実現されます。プログラミングでは、これらのセグメントに接続されたピンをHighレベルに設定し、cとfはLowレベルに設定します。まず、 ``turnOffAllSegments()`` 関数を使用してすべてのセグメントを消灯し、その後必要なセグメントを点灯させます。
 
-After running this part, the 7-segment will display **2**. Similarly, the display of other characters are the same. Since the letters b and d in upper case, namely **B** and **D**, would look the same with **8** and **0** on the display, they are displayed in lower case instead.
+この部分を実行すると、7セグメントは **2** を表示します。他の文字の表示も同様です。表示上、大文字の **B** と **D** は、それぞれ **8** と **0** と同じに見えるため、小文字で表示されます。

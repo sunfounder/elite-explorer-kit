@@ -1,48 +1,48 @@
 .. _cpn_ir_receiver:
 
-Infrared Receiver
+赤外線レシーバー
 =================================
 
-IR Receiver
+IRレシーバー
 ----------------------------
 
 .. image:: img/infrared-receiver_01.png
     :width: 60%
 
-* S: Signal output
+* S: 信号出力
 * +: VCC
 * -: GND
 
-.. An infrared-receiver is a component which receives infrared signals and can independently receive infrared rays and output signals compatible with TTL level. It is similar with a normal plastic-packaged transistor in size and is suitable for all kinds of infrared remote control and infrared transmission.
+.. 赤外線レシーバーは、赤外線信号を受信し、独立して赤外線を受信してTTLレベルに互換性のある信号を出力できるコンポーネントです。サイズは通常のプラスチックパッケージのトランジスタに似ており、あらゆる種類の赤外線リモコンや赤外線伝送に適しています。
 
-SL838 is a small receiver for infrared remote control systems. It contains high speed and high sensitivity photodiode and preamplifier, and is packaged with epoxy resin to form infrared filter, Its main advantage is that it hasreliable function even in the disturbed environment.
+SL838は、赤外線リモコンシステム用の小型レシーバーです。高速かつ高感度のフォトダイオードとプリアンプを含み、エポキシ樹脂でパッケージされ、赤外線フィルターを形成しています。主な利点は、妨害環境でも信頼性の高い機能を持っていることです。
 
-Infrared, or IR, communication is a popular, low-cost, easy-to-use wireless communication technology. Infrared light has a slightly longer wavelength than visible light, so it is imperceptible to the human eye - ideal for wireless communication. A common modulation scheme for infrared communication is 38KHz modulation.
+赤外線、またはIR通信は、低コストで使いやすい無線通信技術です。赤外線は可視光よりもわずかに長い波長を持っているため、人間の目には見えません - 無線通信に最適です。赤外線通信の一般的な変調方式は、38KHzの変調です。
 
-* Can be used for remote control
-* Wide operating voltage: 2.7~5V
-* Internal filter for PCM frequency 
-* TTL and CMOS compatibility
-* Strong anti-interference ability
-* Compliant RoHS
+* リモコン用に使用できます
+* 広い動作電圧：2.7~5V
+* PCM周波数用の内蔵フィルター
+* TTLおよびCMOSとの互換性
+* 強力な抗干渉能力
+* RoHS準拠
 
-Remote Control
+リモコン
 -------------------------
 
 .. image:: img/infrared-receiver_02.jpeg
     :width: 70%
 
-This is a Mini thin infrared wireless remote control with 21 function buttons and a transmitting distance of up to 8 meters, which is suitable for operating a wide range of devices in a kid's room.
+これは、最大8メートルの伝送距離を持つ21の機能ボタン付きのミニ薄型赤外線ワイヤレスリモコンで、子供部屋のさまざまなデバイスを操作するのに適しています。
 
-* Size: 85x39x6mm
-* Remote control range: 8-10m
-* Battery: 3V button type lithium manganese battery
-* Infrared carrier frequency: 38KHz
-* Surface paste material: 0.125mm PET
-* Effective life: more than 20,000 times
+* サイズ: 85x39x6mm
+* リモコン範囲: 8-10m
+* バッテリー: 3Vボタン型リチウムマンガン電池
+* 赤外線キャリア周波数: 38KHz
+* 表面貼り材料: 0.125mm PET
+* 有効寿命: 20,000回以上
 
 
-**Example**
+**例**
 
-* :ref:`basic_irrecv` (Basic Project)
-* :ref:`fun_guess_number` (Fun Project)
+* :ref:`basic_irrecv` (基本プロジェクト)
+* :ref:`fun_guess_number` (楽しいプロジェクト)

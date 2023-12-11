@@ -1,43 +1,43 @@
 .. _fun_escape:
 
-GAME - Escape
+ゲーム - 脱出
 ==================================
 
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/videos/fun_projects/11_fun_escape_square.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      お使いのブラウザーはビデオタグをサポートしていません。
    </video>
 
-This game is called "Escape".
-The player's objective is to tilt the MPU6050 sensor to move a pixel on the LED matrix and attempt to maneuver it through an opening in the matrix border (the exit).
+このゲームは「脱出」と呼ばれています。
+プレイヤーの目的は、MPU6050センサーを傾けてLEDマトリックス上でピクセルを動かし、マトリックスの境界にある開口部（出口）を通過させることです。
 
-**Required Components**
+**必要なコンポーネント**
 
-In this project, we need the following components. 
+このプロジェクトでは、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+一式を購入するのが便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名称	
+        - このキットのアイテム数
+        - リンク
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネント紹介
+        - 購入リンク
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -47,62 +47,63 @@ You can also buy them separately from the links below.
         - \-
 
 
-**Wiring**
+**配線図**
 
 .. image:: img/11_escape_bb.png
     :width: 80%
     :align: center
 
 
-**Schematic**
+**回路図**
 
 .. image:: img/11_escape_schematic.png
    :width: 70%
    :align: center
 
 
-**Code**
+**コード**
 
 .. note::
 
-    * You can open the file ``11_escape_square.ino`` under the path of ``elite-explorer-kit-main\fun_project\11_escape_square`` directly.
-    * Or copy this code into Arduino IDE.
+    * ファイル ``11_escape_square.ino`` は、パス ``elite-explorer-kit-main\fun_project\11_escape_square`` で直接開けます。
+    * または、このコードをArduino IDEにコピーしてください。
 
 .. note::
-   To install the library, use the Arduino Library Manager and search for **"Adafruit MPU6050"** and install it.
+   ライブラリをインストールするには、Arduinoライブラリマネージャーで **「Adafruit MPU6050」** を検索し、インストールしてください。
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/6b239445-f921-48fb-a93e-70cc7ef8afc7/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-**How it works?**
+**どのように動作するのか？**
 
-Here's a detailed explanation of the code:
+コードの詳細な説明はこちらです：
 
-1. Library Imports and Global Variables:
+1. ライブラリのインポートとグローバル変数：
 
-   Imported libraries include the LED matrix, Wire (for I2C communication), MPU6050 (motion sensor), and ``Adafruit_Sensor`` library.
-   Initialization of MPU6050 and LED matrix objects.
-   Definition of global variables such as pixelX and pixelY (pixel position), gapStart and side (start position of the gap and which side), level (game difficulty level), and more.
+   LEDマトリックス、Wire（I2C通信用）、MPU6050（モーションセンサー）、および ``Adafruit_Sensor`` ライブラリをインポートします。
+   MPU6050とLEDマトリックスオブジェクトを初期化します。
+   pixelXやpixelY（ピクセルの位置）、gapStartやside（ギャップの開始位置とその側面）、level（ゲームの難易度レベル）などのグローバル変数を定義します。
 
-2. ``setup()``:
+2. ``setup()``：
 
-   Initialize the LED matrix and draw the matrix with the gap.
-   Initialize serial communication and check if the MPU6050 sensor is starting correctly, setting its acceleration range to 2g.
+   LEDマトリックスを初期化し、ギャップ付きのマトリックスを描きます。
+   シリアル通信を初期化し、MPU6050センサーが正しく起動しているか確認し、加速度範囲を2gに設定します。
 
-3. ``loop()``:
+3. ``loop()``：
 
-   Periodically update the position of the pixel based on MPU6050 sensor readings.
-   Periodically move the gap's position.
-   Load the new pixel layout and render it on the LED matrix.
-   Check if the pixel has passed through the gap. 
-   If it has, delay for 1.5 seconds to display the success, increase the game difficulty, and reset the pixel's position.
+   MPU6050センサーの読み取りに基づいてピクセルの位置を定期的に更新します。
+   ギャップの位置を定期的に移動させます。
+   新しいピクセルのレイアウトを読み込み、LEDマトリックスにレンダリングします。
+   ピクセルがギャップを通過したかどうかを確認します。
+   通過した場合、成功を表示するために1.5秒間遅延させ、ゲームの難易度を上げ、ピクセルの位置をリセットします。
 
-4. Other Functions:
+4. その他の関数：
 
-   * ``drawSquareWithGap()``: Draw an 8x8 border and create a gap within it.
-   * ``createGap()``: Create a gap of length 2 on the specified side.
-   * ``moveGap()``: Move the gap's position based on the current side and gapStart, changing the side when necessary.
-   * ``movePixelBasedOnMPU()``: Read acceleration data from MPU6050. Move the pixel's position based on the acceleration data (resetting if the pixel goes out of bounds or into walls).
-   * ``resetPixel()``: Reset the pixel's position to the center of the matrix.
-   * ``checkPixelPosition()``: Check if the pixel is on the gap. If it is, increase the game's difficulty level and set the pass flag to true.
+   * ``drawSquareWithGap()``：8x8の境界を描き、その中にギャップを作成します。
+   * ``createGap()``：指定された側に長さ2のギャップを作成します。
+   * ``moveGap()``：現在の側面とgapStartに基づいてギャップの位置を移動させ、必要に応じて側面を変更します。
+   * ``movePixelBasedOnMPU()``：MPU6050から加速度データを読み取ります。加速度データに基づいてピクセルの位置を移動させます（ピクセルが境界外や壁に当たった場合はリセット）。
+   * ``resetPixel()``：ピクセルの位置をマトリックスの中心にリセットします。
+   * ``checkPixelPosition()``：ピクセルがギャップ上にあるかどうかを確認します。もしそうなら、ゲームの難易度レベルを上げ、パスフラグをtrueに設定します。
+

@@ -1,45 +1,46 @@
 .. _iot_ble_home:
 
-Bluetooth Environmental Monitor
-=================================
+Bluetooth環境モニター
+=====================
 
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/videos/iot_projects/08_iot_ble_home.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      お使いのブラウザーはビデオタグをサポートしていません。
    </video>
 
 
-This project uses an Android app created with MIT App Inventor to receive and display environmental data from an Arduino board. The Arduino board fetches data from a DHT11 sensor to measure temperature and humidity. Once the data is collected, it's transmitted over Bluetooth. The app will display the data on the screen once it receives it.
+このプロジェクトでは、MITアップインベンターで作成されたAndroidアプリを使用して、Arduinoボードからの環境データを受信し表示します。ArduinoボードはDHT11センサーから温度と湿度のデータを取得します。データが収集されると、Bluetoothを介して送信されます。アプリはデータを受信すると、画面上に表示します。
 
-The Android application will be constructed utilizing a complimentary web-based platform known as |link_appinventor|. The project presents an excellent opportunity to gain familiarity with the interfacing of an Arduino with a smartphone. 
+Androidアプリケーションは、 |link_appinventor| という無料のWebベースプラットフォームを利用して構築されます。このプロジェクトは、Arduinoとスマートフォンのインターフェースに慣れる絶好の機会を提供します。
 
-**Required Components**
 
-In this project, we need the following components. 
+**必要なコンポーネント**
 
-It's definitely convenient to buy a whole kit, here's the link: 
+このプロジェクトでは、以下のコンポーネントが必要です。
+
+全てのキットを一括購入するのが便利です。こちらがリンクです:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名称	
+        - このキットのアイテム数
+        - リンク
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+また、以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネント紹介
+        - 購入リンク
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -50,7 +51,7 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_dht11`
         - |link_humiture_buy|
 
-**1. Build the Cirduit**
+**1. 回路を組む**
 
 .. image:: img/08-bluetooth_environmental_monitor_bb.png
     :width: 80%
@@ -64,86 +65,85 @@ You can also buy them separately from the links below.
 
    <br/>
 
-**2. Create the Android App**
+**2. Androidアプリを作成する**
 
-The Android application will be developed using a free web application known as |link_appinventor|. 
-MIT App Inventor serves as an excellent starting point for Android development, owing to its intuitive drag-and-drop 
-features allowing for the creation of simplistic applications.
+Androidアプリケーションは、 |link_appinventor| という無料のウェブアプリケーションを使用して開発されます。
+MITアップインベンターは、直感的なドラッグアンドドロップ機能により、簡易なアプリケーションを作成するための優れたスタートポイントとして機能します。
 
-Now, let's begin.
+さあ、始めましょう。
 
-#. Go to |link_appinventor_login|, and click "online tool" to login. You will require a Google account to register with MIT App Inventor.
+#. |link_appinventor_login| にアクセスし、「オンラインツール」をクリックしてログインします。MITアップインベンターに登録するためにはGoogleアカウントが必要です。
 
    .. image:: img/08_ai_signup.png
        :width: 90%
        :align: center
 
-#. After logging in, navigate to **Projects** -> **Import project (.aia) from my computer**. Subsequently, upload the ``ble_environmental_monitor.aia`` file located in the path ``elite-explorer-kit-main\iot_project\08-bluetooth_environmental_monitor``.
+#. ログインしたら、 **Projects** -> **Import project (.aia) from my computer** に進みます。その後、 ``elite-explorer-kit-main\iot_project\08-bluetooth_environmental_monitor`` のパスにある ``ble_environmental_monitor.aia`` ファイルをアップロードします。
 
-   You can also directly download here: :download:`ble_environmental_monitor.aia</_static/other/ble_environmental_monitor.aia>`
+   また、こちらから直接ダウンロードもできます: :download:`ble_environmental_monitor.aia</_static/other/ble_environmental_monitor.aia>`
 
    .. image:: img/08_ai_import.png
         :align: center
 
-#. Upon uploading the ``.aia`` file, you will see the application on the MIT App Inventor software. This is a pre-configured template. You can modify this template after you have familiarized yourself with MIT App Inventor through the following steps.
+#. ``.aia`` ファイルをアップロードすると、MITアップインベンターソフトウェア上にアプリケーションが表示されます。これは事前に設定されたテンプレートです。MITアップインベンターに慣れた後、このテンプレートを変更することができます。
 
-#. In MIT App Inventor, you have 2 primary sections: the **Designer** and the **Blocks**. You can switch between these two sections in the upper right corner of the page.
+#. MITアップインベンターには、主に **Designer** と **Blocks** の2つのセクションがあります。ページの右上隅でこれらのセクション間を切り替えることができます。
 
    .. image:: img/08_ai_intro_1.png
 
-#. The **Designer** allows you to add buttons, text, screens, and modify the overall aesthetic of your application.
+#. **Designer** では、ボタン、テキスト、スクリーンを追加したり、アプリケーションの全体的な見た目を変更したりすることができます。
 
    .. image:: img/08_ai_intro_2.png
       :width: 100%
    
-#. Next, there's the **Blocks** section. This section lets you craft custom functionalities for your app, allowing you to program each component on the app's GUI to achieve desired features.
+#. 次に、 **Blocks** セクションがあります。このセクションでは、アプリのGUI上の各コンポーネントにカスタム機能を作成し、望ましい機能を実現することができます。
 
    .. image:: img/08_ai_intro_3.png
       :width: 100%
 
-#. To install the application on a smartphone, navigate to the **Build** tab.
+#. スマートフォンにアプリケーションをインストールするには、 **Build** タブに移動します。
 
    .. image:: img/08_ai_intro_4.png
 
-   * You can generate a ``.apk`` file. After selecting this option, a page will appear allowing you to choose between downloading a ``.apk`` file or scanning a QR code for installation. Follow the installation guide to complete the application installation. 
+   * ``.apk`` ファイルを生成できます。このオプションを選択すると、 ``.apk`` ファイルをダウンロードするか、QRコードをスキャンしてインストールするかを選択するページが表示されます。インストールガイドに従ってアプリケーションのインストールを完了してください。
 
-     You also download our pre-compiled APK here: :download:`ble_environmental_monitor.apk</_static/other/ble_environmental_monitor.apk>`
+     こちらから事前にコンパイルされたAPKもダウンロードできます: :download:`ble_environmental_monitor.apk</_static/other/ble_environmental_monitor.apk>`
 
-   * If you wish to upload this app to Google Play or another app marketplace, you can generate a ``.aab`` file.
+   * このアプリをGoogle Playや他のアプリマーケットにアップロードしたい場合は、 ``.aab`` ファイルを生成できます。
 
 
-**3. Upload the Code**
+**3. コードをアップロードする**
 
-#. Open the ``08-bluetooth_environmental_monitor.ino`` file under the path of ``elite-explorer-kit-main\iot_project\08-bluetooth_environmental_monitor``, or copy this code into **Arduino IDE**.
+#. ``elite-explorer-kit-main\iot_project\08-bluetooth_environmental_monitor`` のパスにある ``08-bluetooth_environmental_monitor.ino`` ファイルを開くか、このコードを **Arduino IDE** にコピーします。
    
    .. note:: 
-      To install the library, use the Arduino Library Manager to search for and install **"DHT sensor library"** and **"ArduinoBLE"**.
+      ライブラリをインストールするには、Arduinoライブラリマネージャーを使用して、 **「DHT sensor library」** と **「ArduinoBLE」** を検索し、インストールします。
 
    .. raw:: html
        
       <iframe src=https://create.arduino.cc/editor/sunfounder01/53fd4af4-dcc6-439d-b52f-2f94f17c1263/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-#. After selecting the correct board and port, click the **Upload** button.
+#. 正しいボードとポートを選択したら、 **Upload** ボタンをクリックします。
 
-#. Open the Serial monitor(set baudrate to **9600**) to view debug messages. 
+#. シリアルモニター（ボーレートは **9600** に設定）を開き、デバッグメッセージを確認します。
 
-**4. App and Bluetooth moudule Connection**
+**4. アプリとBluetoothモジュールの接続**
 
-Ensure that the application created earlier is installed on your smartphone.
+先に作成したアプリケーションがスマートフォンにインストールされていることを確認します。
 
-#. Initially, turn on **Bluetooth** on your smartphone.
+#. まず、スマートフォンで **Bluetooth** をオンにします。
 
    .. image:: img/08_app_1.png
       :width: 60%
       :align: center
 
-#. Now open the newly installed **Environmental Monitor** APP.
+#. 次に、新しくインストールされた **Environmental Monitor** アプリを開きます。
 
    .. image:: img/08_app_2.png
       :width: 25%
       :align: center
 
-#. When you first open this app, two authorization prompts will pop up in succession. These are the permissions required for using Bluetooth.
+#. このアプリを初めて開くと、Bluetoothの使用に必要な許可を求める2つのプロンプトが連続して表示されます。
 
    .. image:: img/08_app_3.png
       :width: 100%
@@ -153,13 +153,13 @@ Ensure that the application created earlier is installed on your smartphone.
 
       <br/>
 
-#. In the APP, click on **Connect** button to establish a connection between the APP and Bluetooth module.
+#. アプリ内で **Connect** ボタンをクリックし、アプリとBluetoothモジュール間の接続を確立します。
 
    .. image:: img/08_app_4.png
       :width: 55%
       :align: center
 
-#. This page displays a list of all paired Bluetooth devices. Choose the ``xx.xx.xx.xx.xx.xx UNO R4 Home`` option from the list. The name of each device is listed next to its MAC address.
+#. このページには、すべてのペアリングされたBluetoothデバイスのリストが表示されます。リストから ``xx.xx.xx.xx.xx.xx UNO R4 Home`` オプションを選択します。各デバイスの名前はMACアドレスの隣にリストされています。
 
    .. image:: img/08_app_5.png
       :width: 60%
@@ -169,7 +169,7 @@ Ensure that the application created earlier is installed on your smartphone.
 
       <br/>
 
-#. If you don't see any devices on the page shown above, you can try turning on the location switch of the device (some Android system versions bundle the location switch with the Bluetooth function).
+#. 上記のページにデバイスが表示されない場合は、デバイスの位置情報スイッチをオンにしてみてください（一部のAndroidシステムバージョンでは、Bluetooth機能と位置情報スイッチが統合されています）。
 
    .. image:: img/08_app_6.png
       :width: 60%
@@ -179,20 +179,20 @@ Ensure that the application created earlier is installed on your smartphone.
 
       <br/>
 
-#. After a successful connection, you will be redirected to the main page where it will display temperature and humidity.
+#. 接続が成功すると、メインページにリダイレクトされ、そこで温度と湿度が表示されます。
 
    .. image:: img/08_app_7.png
       :width: 60%
       :align: center
 
-**5. Code explanation**
+**5. コードの説明**
 
-1. Importing Libraries and Defining Constants
+1. ライブラリのインポートと定数の定義
 
-   - Import the required libraries and define constants for the DHT sensor pin and type.
+   - 必要なライブラリをインポートし、DHTセンサーピンとタイプに関する定数を定義します。
 
    .. note:: 
-      To install the library, use the Arduino Library Manager to search for and install **"DHT sensor library"** and **"ArduinoBLE"**.
+      ライブラリをインストールするには、Arduinoライブラリマネージャーを使用して、 **「DHT sensor library」** と **「ArduinoBLE」** を検索し、インストールします。
 
    .. code-block:: arduino
    
@@ -201,9 +201,9 @@ Ensure that the application created earlier is installed on your smartphone.
        #define DHTPIN 11
        #define DHTTYPE DHT11
 
-2. Initializing BLE Services and Characteristics
+2. BLEサービスと特性の初期化
 
-   - Define the UUIDs for BLE Environmental Sensing Service and Characteristics. We are using the pre-defined UUIDs provided by |link_bluetooth_sig|. The |link_sig_environmental_sensing| is assigned ``0x181A``, while ``0x2A6E`` and ``0x2A6F`` are reserved for |link_sig_temperature_humidity|, respectively.
+   - BLE環境センシングサービスと特性のUUIDを定義します。 |link_bluetooth_sig| によって提供された事前定義されたUUIDを使用しています。 |link_sig_environmental_sensing| には ``0x181A`` が割り当てられ、それぞれ ``0x2A6E`` と ``0x2A6F`` は |link_sig_temperature_humidity| 用に予約されています。
 
    .. code-block:: arduino
    
@@ -211,9 +211,9 @@ Ensure that the application created earlier is installed on your smartphone.
        BLEShortCharacteristic temperatureCharacteristic("2A6E", BLERead | BLENotify);
        BLEUnsignedShortCharacteristic humidityCharacteristic("2A6F", BLERead | BLENotify);
 
-3. Setup Function
+3. Setup関数
 
-   - Initialize the Serial communication, DHT sensor, and BLE.
+   - シリアル通信、DHTセンサー、BLEを初期化します。
 
    .. code-block:: arduino
    
@@ -228,11 +228,11 @@ Ensure that the application created earlier is installed on your smartphone.
          setupBle();
        }
 
-4. Main Loop
+4. メインループ
 
-   - Poll for BLE events and update sensor data at regular intervals.
+   - BLEイベントをポーリングし、定期的にセンサーデータを更新します。
 
-   - The ``millis() - lastUpdateTime > updateInterval`` line ensures that the sensor data is updated every updateInterval milliseconds.
+   - ``millis() - lastUpdateTime > updateInterval`` の行は、センサーデータがupdateIntervalミリ秒ごとに更新されることを保証します。
 
    .. code-block:: arduino
    
@@ -243,9 +243,9 @@ Ensure that the application created earlier is installed on your smartphone.
          }
        }
 
-5. BLE and Debug Functions
+5. BLEおよびデバッグ関数
 
-   Functions for setting up BLE, printing debug information, and managing BLE events.
+   BLEを設定し、デバッグ情報を出力し、BLEイベントを管理するための関数。
 
    .. code-block:: arduino
    
@@ -254,8 +254,8 @@ Ensure that the application created earlier is installed on your smartphone.
        void blePeripheralConnectHandler(BLEDevice central) { /* ... */ }
        void blePeripheralDisconnectHandler(BLEDevice central) { /* ... */ }
 
-   - ``printDHT(float h, float t)``: Used to print the temperature and humidity data read by DHT11 on the serial monitor. This function is for debugging purposes.
+   - ``printDHT(float h, float t)``: DHT11によって読み取られた温度と湿度のデータをシリアルモニターに出力するために使用されます。この関数はデバッグ目的のためです。
 
-   - ``setupBle()``: Initializes Bluetooth, including setting the broadcast name, characteristics, and services.
+   - ``setupBle()``: ブロードキャスト名、特性、およびサービスを設定を含むBluetoothを初期化します。
 
-   - ``blePeripheralConnectHandler(BLEDevice central)`` and ``blePeripheralDisconnectHandler(BLEDevice central)``: These functions handle events when Bluetooth connects or disconnects. When a device successfully connects with UNO R4 via Bluetooth, the onboard LED lights up. When the device disconnects, the LED turns off.
+   - ``blePeripheralConnectHandler(BLEDevice central)`` および ``blePeripheralDisconnectHandler(BLEDevice central)``: これらの関数は、Bluetoothが接続または切断されたときのイベントを処理します。デバイスがUNO R4とBluetooth経由で正常に接続すると、オンボードLEDが点灯します。デバイスが切断されると、LEDが消灯します。

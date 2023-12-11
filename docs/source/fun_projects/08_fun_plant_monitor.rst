@@ -1,43 +1,43 @@
 .. _fun_plant_monitor:
 
-Plant Monitor
+植物モニター
 ============================
 
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/videos/fun_projects/08_fun_plant_monitor.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      お使いのブラウザではビデオタグがサポートされていません。
    </video>
 
-This project automatically waters plants by activating a water pump when the soil humidity falls below a specific threshold.
-Additionally, it displays temperature, humidity, and soil moisture on an LCD screen, providing users with insights into the plant's growth environment.
+このプロジェクトは、土壌の湿度が特定のしきい値以下になったときに水ポンプを起動して自動的に植物に水をやります。
+さらに、LCDスクリーンに温度、湿度、土壌の湿度を表示し、ユーザーに植物の成長環境についての洞察を提供します。
 
-**Required Components**
+**必要なコンポーネント**
 
-In this project, we need the following components. 
+このプロジェクトには以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全体のキットを購入すると便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名称	
+        - このキットのアイテム数
+        - リンク
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから別々に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネント紹介
+        - 購入リンク
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -58,7 +58,7 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_power`
         - \-
 
-**Wiring**
+**配線図**
 
 .. image:: img/08_plant_monitor_bb.png
     :width: 100%
@@ -68,7 +68,7 @@ You can also buy them separately from the links below.
 
    <br/>
 
-**Schematic**
+**回路図**
 
 .. image:: img/08_plant_monitor_schematic.png
    :width: 100%
@@ -78,39 +78,39 @@ You can also buy them separately from the links below.
 
    <br/>
 
-**Code**
+**コード**
 
 .. note::
 
-    * You can open the file ``08_plant_monitor.ino`` under the path of ``elite-explorer-kit-main\fun_project\08_plant_monitor`` directly.
-    * Or copy this code into Arduino IDE.
+    * ファイル ``08_plant_monitor.ino`` を ``elite-explorer-kit-main\fun_project\08_plant_monitor`` のパスから直接開くことができます。
+    * または、このコードをArduino IDEにコピーしてください。
 
 .. note::
-   To install the library, use the Arduino Library Manager and search for **"DHT sensor library"** and **"LiquidCrystal I2C"** and install them.
+   ライブラリをインストールするには、Arduinoライブラリマネージャーを使用し、 **「DHT sensor library」** と **「LiquidCrystal I2C」** を検索してインストールしてください。
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/a9d6c9c7-0d7f-4dc2-84b6-9dbda15c89ae/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-**How it works?**
+**どのように動作するのか？**
 
-Here is a detailed explanation of the code:
+以下はコードの詳細な説明です：
 
-1. Library Inclusions and Constants/Variables:
+1. ライブラリのインポートと定数/変数の定義：
 
-   Import ``Wire.h``, ``LiquidCrystal_I2C.h``, and ``DHT.h`` libraries.
-   Define pin numbers and other parameters related to DHT11, soil moisture sensor, and the water pump.
+   ``Wire.h``、 ``LiquidCrystal_I2C.h``、 ``DHT.h`` ライブラリをインポートします。
+   DHT11、土壌湿度センサー、水ポンプに関連するピン番号やその他のパラメータを定義します。
 
-2. ``setup()``:
+2. ``setup()``：
 
-   Initialize the pin modes related to the soil moisture sensor and the water pump.
-   Turn off the water pump initially.
-   Initialize the LCD display and turn on the backlight.
-   Start the DHT sensor.
+   土壌湿度センサーと水ポンプに関連するピンモードを初期化します。
+   最初に水ポンプをオフにします。
+   LCDディスプレイを初期化し、バックライトを点灯させます。
+   DHTセンサーを起動します。
 
-3. ``loop()``:
+3. ``loop()``：
 
-   Read humidity and temperature from the DHT sensor.
-   Read soil moisture from the soil moisture sensor.
-   Display temperature and humidity values on the LCD screen, then clear the screen and display the soil moisture value.
-   Determine whether to activate the water pump based on soil moisture. If the soil moisture is below 500 (a configurable threshold), activate the water pump for 1 second.
+   DHTセンサーから湿度と温度を読み取ります。
+   土壌湿度センサーから土壌の湿度を読み取ります。
+   LCDスクリーンに温度と湿度の値を表示し、その後画面をクリアして土壌湿度の値を表示します。
+   土壌湿度に基づいて水ポンプを起動するかどうかを決定します。土壌湿度が500（設定可能なしきい値）以下の場合、1秒間水ポンプを起動します。

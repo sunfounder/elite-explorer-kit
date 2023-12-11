@@ -1,10 +1,9 @@
-Download the Code
+コードのダウンロード
 ========================
 
-Download the relevant code from the link below.
+以下のリンクから関連するコードをダウンロードしてください。
 
-* :download:`SunFounder Elite Explorer Kit Code <https://codeload.github.com/sunfounder/Elite-Explorer-Kit/zip/refs/heads/main>`
+* :download:`SunFounder Elite Explorer Kit コード <https://codeload.github.com/sunfounder/Elite-Explorer-Kit/zip/refs/heads/main>`
 
-* Or check out the code at |link_github_elite|
-
+* または、 |link_github_elite| でコードをチェックしてください。
 

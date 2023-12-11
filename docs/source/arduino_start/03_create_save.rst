@@ -1,15 +1,13 @@
-How to create, open or Save the Sketch?
+スケッチの作成、開く、保存方法
 =======================================
 
-
-#. When you open the Arduino IDE for the first time or create a new sketch, you will see a page like this, where the Arduino IDE creates a new file for you, which is called a "sketch".
+1. Arduino IDEを初めて開く場合や新しいスケッチを作成する場合、このようなページが表示されます。ここでArduino IDEは新しいファイルを作成し、それを「スケッチ」と呼びます。
 
    .. image:: img/sp221014_173458.png
 
-   These sketch files have a regular temporary name, from which you can tell the date the file was created. ``sketch_oct14a.ino`` means October 14th first sketch, ``.ino`` is the file format of this sketch.
+   これらのスケッチファイルには一般的な一時的な名前が付けられており、ファイル作成日を知ることができます。 ``sketch_oct14a.ino`` は10月14日の最初のスケッチを意味し、 ``.ino`` はこのスケッチのファイル形式です。
 
-#. Now let's try to create a new sketch. Copy the following code into the Arduino IDE to replace the original code.
-
+2. 新しいスケッチを作成してみましょう。次のコードをArduino IDEにコピーして、元のコードを置き換えてください。
 
    .. image:: img/create1.png
 
@@ -28,12 +26,12 @@ How to create, open or Save the Sketch?
            delay(500);
        }
 
-#. Press ``Ctrl+S`` or click **File** -> **Save**. The Sketch is saved in: ``C:\Users\{your_user}\Documents\Arduino`` by default, you can rename it or find a new path to save it.
+3. ``Ctrl+S`` を押すか、 **File** -> **Save** をクリックします。スケッチはデフォルトで ``C:\Users\{ユーザー名}\Documents\Arduino`` に保存されますが、名前を変更するか、新しいパスを見つけて保存することができます。
 
    .. image:: img/create2.png
 
-#. After successful saving, you will see that the name in the Arduino IDE has been updated.
+4. 保存に成功すると、Arduino IDEの名前が更新されたことが分かります。
 
    .. image:: img/create3.png
 
-Please continue with the next section to learn how to upload this created sketch to your Arduino board.
+次のセクションで、作成したこのスケッチをArduinoボードにアップロードする方法を学びましょう。

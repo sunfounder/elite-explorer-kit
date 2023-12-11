@@ -1,42 +1,42 @@
 .. _basic_joystick:
 
-Joystick Module
+ジョイスティックモジュール
 ==========================
 
 .. https://docs.sunfounder.com/projects/r4-basic-kit/en/latest/projects/joystick_ps2_uno.html#joystick-uno
 
 
-Overview
+概要
 ---------------
 
-A joystick is an input device consisting of a stick that pivots on a base and reports its angle or direction to the device it is controlling. Joysticks are often used to control video games and robots. A Joystick PS2 is used here.
+ジョイスティックは、基部で回転するスティックから成る入力デバイスであり、その角度や方向を制御しているデバイスに報告します。ジョイスティックは、ビデオゲームやロボットの制御によく使用されます。ここでは、ジョイスティックPS2を使用します。
 
-Required Components
+必要なコンポーネント
 -------------------------
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全セットを購入するのが便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名称	
+        - このキットのアイテム数
+        - リンク
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネント紹介
+        - 購入リンク
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -47,43 +47,43 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_joystick`
         - |link_joystick_buy|
 
-Wiring
+配線図
 ----------------------
 
 .. image:: img/20-joystick_bb.png
     :align: center
     :width: 70%
 
-Schematic Diagram
+回路図
 ---------------------
 
-This module has two analog outputs (corresponding to X,Y biaxial offsets). 
+このモジュールには2つのアナログ出力（X、Yの両軸オフセットに対応）があります。
 
-In this experiment, we use the Uno board to detect the moving direction of the Joystick knob.
+この実験では、Unoボードを使用してジョイスティックのノブの移動方向を検出します。
 
 .. image:: img/20_joystick_schematic.png
     :align: center 
     :width: 70%
 
-Code
+コード
 -------
 
 .. note::
 
-    * You can open the file ``20-joystick.ino`` under the path of ``elite-explorer-kit-main\basic_project\20-joystick`` directly.
-    * Or copy this code into Arduino IDE.
+    * ファイル ``20-joystick.ino`` を ``elite-explorer-kit-main\basic_project\20-joystick`` のパスで直接開くことができます。
+    * または、このコードをArduino IDEにコピーしてください。
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/ac0f9910-e53e-43a3-a5ae-ec4d3a3f4aa1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-Now, when you push the rocker, the coordinates of the X and Y axes displayed on the Serial Monitor will change accordingly. Pressing the button will also display the coordinate Z=0.
+今、ロッカーを押すと、シリアルモニターに表示されるX軸とY軸の座標がそれに応じて変化します。ボタンを押すと、座標Z=0も表示されます。
 
 
-Code Analysis
+コード解析
 -------------------
 
-The code is use the serial monitor to print the value of the VRX and VRY pins of the joystick ps2.
+このコードは、シリアルモニターを使用して、ジョイスティックPS2のVRXおよびVRYピンの値を表示します。
 
 .. code-block:: arduino
 

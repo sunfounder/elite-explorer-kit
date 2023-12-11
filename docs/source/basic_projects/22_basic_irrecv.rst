@@ -1,44 +1,43 @@
 .. _basic_irrecv:
 
-Infrared Receiver
+赤外線レシーバー
 ==========================
 
 .. https://docs.sunfounder.com/projects/uno-mega-kit/en/latest/uno/infrared_Receiver_uno.html#receive-uno
 
 .. https://docs.sunfounder.com/projects/r4-basic-kit/en/latest/projects/infrared_Receiver_uno.html#receive-uno
 
-
-Overview
+概要
 ------------------
 
-An infrared-receiver is a component that receives infrared signals and can independently receive infrared ray and output signals compatible with TTL level. It's similar with a normal plastic-packaged transistor in size and it is suitable for all kinds of infrared remote control and infrared transmission.
+赤外線レシーバーは、赤外線信号を受信し、独立して赤外線を受信し、TTLレベルと互換性のある信号を出力する部品です。通常のプラスチックパッケージのトランジスタとサイズが似ており、様々な種類の赤外線リモコンや赤外線伝送に適しています。
 
-Required Components
+必要なコンポーネント
 -------------------------
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全セットを購入するのが便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名称	
+        - このキットのアイテム数
+        - リンク
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネント紹介
+        - 購入リンク
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -52,7 +51,7 @@ You can also buy them separately from the links below.
         - |link_receiver_buy|
 
 
-Wiring
+配線図
 ----------------------
 
 .. image:: img/22-ir_receiver_bb.png
@@ -60,41 +59,41 @@ Wiring
     :width: 80%
 
 
-Schematic Diagram
+回路図
 ---------------------
 
 .. image:: img/22_irrecv_schematic.png
     :align: center
     :width: 50%
 
-Code
+コード
 ---------------
 
 .. note::
 
-    * You can open the file ``22-ir_receiver.ino`` under the path of ``elite-explorer-kit-main\basic_project\22-ir_receiver`` directly.
-    * Or copy this code into Arduino IDE.
+    * ファイル ``22-ir_receiver.ino`` を ``elite-explorer-kit-main\basic_project\22-ir_receiver`` のパスで直接開くことができます。
+    * または、このコードをArduino IDEにコピーする。
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/92e1cb75-cda1-4fc7-9680-28e28df8dccc/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-* The ``IRremote`` library is used here, you can install it from the **Library Manager**.
+* ここでは ``IRremote`` ライブラリを使用しています。 **Library Manager** からインストールできます。
 
     .. image:: img/22_irrecv_lib.png
         :align: center
 
 .. Note::
 
-    * There is a transparent plastic piece at the back of the remote control to cut off the power and pull it out before you use the remote control.
+    * リモコンの背面には、電源を遮断する透明なプラスチック片があり、リモコンを使用する前にそれを取り出してください。
 
 
-Code Analysis
+コード解析
 ---------------------
 
-This code is designed to work with an infrared (IR) remote control using the ``IRremote`` library. Here's the breakdown:
+このコードは、 ``IRremote`` ライブラリを使用して赤外線（IR）リモコンを操作するように設計されています。以下がその詳細です：
 
-#. Including the library and defining constants. First, the IRremote library is included, and the pin number for the IR receiver is defined as 2.
+#. ライブラリを含めて定数を定義します。まず、IRremoteライブラリを含め、IRレシーバー用のピン番号を2として定義します。
 
    .. code-block:: cpp
  
@@ -102,7 +101,7 @@ This code is designed to work with an infrared (IR) remote control using the ``I
      const int IR_RECEIVE_PIN = 2;
 
 
-#. Initializes serial communication at a baud rate of 9600. Initializes the IR receiver on the specified pin (``IR_RECEIVE_PIN``) and enables LED feedback (if applicable).
+#. 9600のボーレートでシリアル通信を初期化し、指定されたピン（ ``IR_RECEIVE_PIN`` ）でIRレシーバーを初期化し、LEDフィードバックを有効にします（該当する場合）。
 
    .. code-block:: arduino
 
@@ -111,7 +110,7 @@ This code is designed to work with an infrared (IR) remote control using the ``I
            IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK);  // Start the IR receiver
        }
 
-#. The loop runs continuously to process incoming IR remote signals.
+#. ループは継続的に実行され、受信したIRリモコン信号を処理します。
 
    .. code-block:: arduino
 
@@ -126,16 +125,16 @@ This code is designed to work with an infrared (IR) remote control using the ``I
         }
       }
    
-   * Checks if an IR signal is received and successfully decoded.
-   * Decodes the IR command and stores it in ``decodedValue`` using a custom ``decodeKeyValue()`` function.
-   * Prints the decoded IR value to the serial monitor.
-   * Resumes IR signal reception for the next signal.
+   * IR信号が受信され、正常にデコードされたかをチェックします。
+   * IRコマンドをデコードし、カスタム関数 ``decodeKeyValue()`` を使用して ``decodedValue`` に格納します。
+   * デコードされたIR値をシリアルモニターに表示します。
+   * 次の信号のIR信号受信を再開します。
 
    .. raw:: html
 
         <br/>
 
-#. Helper function to map received IR signals to corresponding keys
+#. 受信したIR信号を対応するキーにマッピングするヘルパー関数
 
    .. image:: img/22_irrecv_key.png
       :align: center

@@ -1,9 +1,9 @@
 .. _basic_projects:
 
-Basic Projects
+基本プロジェクト
 ====================
 
-**Sensor**
+**センサー**
 
 .. toctree::
     :maxdepth: 1
@@ -19,7 +19,7 @@ Basic Projects
     09_basic_gy87
 
 
-**Display**
+**ディスプレイ**
 
 .. toctree::
     :maxdepth: 1
@@ -32,7 +32,7 @@ Basic Projects
     15_basic_oled
 
 
-**Sound**
+**サウンド**
 
 .. toctree::
     :maxdepth: 1
@@ -42,7 +42,7 @@ Basic Projects
     17_basic_audio_speaker
 
 
-**Controller**
+**コントローラー**
 
 .. toctree::
     :maxdepth: 1
@@ -55,7 +55,7 @@ Basic Projects
     23_basic_mpr121_module
 
 
-**Actuator**
+**アクチュエーター**
 
 .. toctree::
     :maxdepth: 1
@@ -67,7 +67,7 @@ Basic Projects
     28_basic_relay
     
     
-**Chip**
+**チップ**
 
 .. toctree::
     :maxdepth: 1

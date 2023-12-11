@@ -1,22 +1,21 @@
-Learn about the Components in Your Kit
+キット内のコンポーネントについて学ぶ
 =========================================
 
-Components List
------------------
+コンポーネントリスト
+---------------------
 
-After opening the package, please check whether the quantity of components is compliance with product description and whether all components are in good condition.
+パッケージを開けた後、コンポーネントの数量が製品説明に準じているかどうか、そしてすべてのコンポーネントが良好な状態にあるかどうかを確認してください。
 
-* :download:`Components List </_static/Elite_Explorer_Kit_Components_List.pdf>`
+* :download:`コンポーネントリスト </_static/Elite_Explorer_Kit_Components_List.pdf>`
 
 
-Components Introductions
+コンポーネントの紹介
 --------------------------
 
+以下は、各コンポーネントの紹介です。これには、コンポーネントの動作原理と対応するプロジェクトが含まれています。
 
-Below is the introduction to each component, which contains the operating principle of the component and the corresponding projects.
 
-
-**Basic**
+**基本**
 
 .. toctree::
     :maxdepth: 1
@@ -29,7 +28,7 @@ Below is the introduction to each component, which contains the operating princi
     component_diode
     component_wires
 
-**Chip**
+**チップ**
 
 .. toctree::
     :maxdepth: 1
@@ -37,7 +36,7 @@ Below is the introduction to each component, which contains the operating princi
     component_ta6585
     component_74hc595
 
-**Display**
+**ディスプレイ**
 
 .. toctree::
     :maxdepth: 1
@@ -50,7 +49,7 @@ Below is the introduction to each component, which contains the operating princi
     component_oled
 
 
-**Sound**
+**サウンド**
 
 .. toctree::
     :maxdepth: 1
@@ -58,7 +57,7 @@ Below is the introduction to each component, which contains the operating princi
     component_buzzer
     component_audio_speaker
 
-**Driver**
+**ドライバー**
 
 .. toctree::
     :maxdepth: 1
@@ -71,7 +70,7 @@ Below is the introduction to each component, which contains the operating princi
     component_power_module
     
 
-**Controller**
+**コントローラー**
 
 .. toctree::
     :maxdepth: 1
@@ -84,7 +83,7 @@ Below is the introduction to each component, which contains the operating princi
     component_mpr121_module
 
 
-**Sensor**
+**センサー**
 
 .. toctree::
     :maxdepth: 1

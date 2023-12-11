@@ -1,48 +1,48 @@
 .. _fun_guess_number:
 
-GAME - Guess Number
+ゲーム - 数当てゲーム
 ============================
 
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/videos/fun_projects/10_fun_guess_game.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      お使いのブラウザーはビデオタグをサポートしていません。
    </video>
 
-Guessing Numbers is an entertaining party game where you and your friends take turns entering a number (0~99). 
-The range becomes narrower with each number input until a player correctly guesses the answer. 
-The player who guesses correctly is declared the loser and subjected to a penalty. 
-For instance, if the secret number is 51, which the players cannot see, and player 1 inputs 50, 
-the number range prompt changes to 50~99. If player 2 inputs 70, the number range becomes 50~70. 
-If player 3 inputs 51, they are the unlucky one. 
-In this game, we use an IR Remote Controller to input numbers and an LCD to display outcomes.
+数当てゲームは、あなたとあなたの友人が交代で数字（0~99）を入力するエンターテイメント性の高いパーティーゲームです。
+各数字の入力により範囲が狭まり、プレイヤーが正解を当てるまで続きます。
+正解を当てたプレイヤーは敗者と宣言され、罰を受けます。
+例えば、秘密の数字が51であり、プレイヤー1が50を入力した場合、
+数字の範囲のプロンプトは50~99に変わります。プレイヤー2が70を入力した場合、数字の範囲は50~70になります。
+プレイヤー3が51を入力した場合、彼らが不運な人です。
+このゲームでは、数字を入力するためにIRリモートコントローラを使用し、結果を表示するためにLCDを使用します。
 
-**Required Components**
+**必要なコンポーネント**
 
-In this project, we need the following components. 
+このプロジェクトでは、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+一式を購入するのが便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名称	
+        - このキットのアイテム数
+        - リンク
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネント紹介
+        - 購入リンク
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -57,28 +57,28 @@ You can also buy them separately from the links below.
 
 
 
-**Wiring**
+**配線図**
 
 .. image:: img/10_guess_number_bb.png
     :width: 90%
     :align: center
 
 
-**Schematic**
+**回路図**
 
 .. image:: img/10_guess_number_schematic.png
    :width: 100%
    :align: center
 
-**Code**
+**コード**
 
 .. note::
 
-    * You can open the file ``10_guess_number.ino`` under the path of ``elite-explorer-kit-main\fun_project\10_guess_number`` directly.
-    * Or copy this code into Arduino IDE.
+    * ファイル ``10_guess_number.ino`` は、パス ``elite-explorer-kit-main\fun_project\10_guess_number`` で直接開けます。
+    * または、このコードをArduino IDEにコピーしてください。
 
 .. note::
-   To install the library, use the Arduino Library Manager and search for **"IRremote"** and **"LiquidCrystal I2C"** and install them.
+   ライブラリをインストールするには、Arduinoライブラリマネージャーで **「IRremote」** と **「LiquidCrystal I2C」** を検索し、インストールしてください。
 
 .. raw:: html
 
@@ -86,42 +86,43 @@ You can also buy them separately from the links below.
 
 
 
-**How it works?**
+**どのように機能しますか？**
 
-1. Library Imports and Global Variable Definitions:
+1. ライブラリのインポートとグローバル変数の定義：
 
-   Three libraries are imported: ``Wire`` for I2C communication, ``LiquidCrystal_I2C`` for controlling the LCD display, and ``IRremote`` for receiving signals from the infrared remote controller.
-   Several global variables are defined to store the game's state and settings.
+   3つのライブラリがインポートされます：I2C通信用の ``Wire`` 、LCDディスプレイの制御用の ``LiquidCrystal_I2C`` 、赤外線リモートコントローラからの信号を受信する ``IRremote`` 。
+   ゲームの状態と設定を保存するためのいくつかのグローバル変数が定義されています。
 
 2. ``setup()`` 
 
-   Initialize the LCD display and turn on the backlight.
-   Initialize serial communication with a baud rate of 9600.
-   Start the infrared receiver.
-   Call the ``initNewValue()`` function to set the initial game state.
+   LCDディスプレイを初期化し、バックライトをオンにします。
+   9600のボーレートでシリアル通信を開始します。
+   赤外線レシーバーを起動します。
+   初期ゲーム状態を設定するために ``initNewValue()`` 関数を呼び出します。
 
 3. ``loop()`` 
 
-   Check if a signal is received from the infrared remote controller.
-   Decode the received infrared signal.
-   Update the game state or perform corresponding actions based on the decoded value (number or command).
+   赤外線リモートコントローラからの信号が受信されたかどうかを確認します。
+   受信した赤外線信号をデコードします。
+   デコードされた値（数字またはコマンド）に基づいてゲームの状態を更新するか、対応するアクションを実行します。
 
 4. ``initNewValue()`` 
 
-   Use ``analogRead`` to initialize the random number seed, ensuring different random numbers are generated each time.
-   Generate a random number between 0 and 98 as the lucky number (the number players need to guess).
-   Reset upper and lower limit prompts.
-   Display a welcome message on the LCD.
-   Reset the input number.
+   ``analogRead`` を使用してランダム数のシードを初期化し、毎回異なるランダム数が生成されることを保証します。
+   0から98の間でランダムな数字を生成し、それを当てる必要がある幸運な数字とします。
+   上限と下限のプロンプトをリセットします。
+   LCDにウェルカムメッセージを表示します。
+   入力された数字をリセットします。
 
 5. ``detectPoint()`` 
 
-   Check the relationship between the player's input number and the lucky number.
-   If the input number is greater than the lucky number, update the upper limit prompt.
-   If the input number is smaller than the lucky number, update the lower limit prompt.
-   If the player inputs the correct number, reset the input and return true.
+   プレイヤーの入力した数字と幸運な数字の関係を確認します。
+   入力した数字が幸運な数字より大きい場合、上限のプロンプトを更新します。
+   入力した数字が幸運な数字より小さい場合、下限のプロンプトを更新します。
+   プレイヤーが正しい数字を入力した場合、入力をリセットし、trueを返します。
 
 6. ``lcdShowInput()`` 
 
-   Display the player's input and the current upper and lower limit prompts on the LCD.
-   If the player guesses correctly, display a success message and pause for 5 seconds before restarting the game.
+   プレイヤーの入力と現在の上限・下限のプロンプトをLCDに表示します。
+   プレイヤーが正しく当てた場合、成功メッセージを表示し、ゲームを再開する前に5秒間一時停止します。
+

@@ -1,44 +1,44 @@
 .. _fun_smart_can:
 
-Smart Can
+スマートゴミ箱
 =====================
 
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/videos/fun_projects/07_fun_smartcan.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      お使いのブラウザではビデオタグがサポートされていません。
    </video>
 
-This is an Arduino code designed to control a smart garbage can. 
-When an object is within a 20-centimeter range in front of the garbage can, its lid automatically opens. 
-This project utilizes an SG90 servo motor and an HC-SR04 ultrasonic distance sensor.
+これは、スマートゴミ箱を制御するために設計されたArduinoのコードです。
+物体がゴミ箱の前面20センチメートル以内にあると、その蓋が自動的に開きます。
+このプロジェクトでは、SG90サーボモーターとHC-SR04超音波距離センサーを利用しています。
 
-**Required Components**
+**必要なコンポーネント**
 
-In this project, we need the following components. 
+このプロジェクトには以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全体のキットを購入すると便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名称	
+        - このキットのアイテム数
+        - リンク
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから別々に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネント紹介
+        - 購入リンク
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -51,55 +51,55 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_servo`
         - |link_servo_buy|
 
-**Wiring**
+**配線図**
 
 .. image:: img/07_smart_trash_can_bb.png
     :width: 70%
     :align: center
 
 
-**Schematic**
+**回路図**
 
 .. image:: img/07_smart_trash_can_schematic.png
    :width: 90%
    :align: center
 
-**Code**
+**コード**
 
 .. note::
 
-    * You can open the file ``07_smart_trash_can.ino`` under the path of ``elite-explorer-kit-main\fun_project\07_smart_trash_can`` directly.
-    * Or copy this code into Arduino IDE.
+    * ファイル ``07_smart_trash_can.ino`` を ``elite-explorer-kit-main\fun_project\07_smart_trash_can`` のパスから直接開くことができます。
+    * または、このコードをArduino IDEにコピーしてください。
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/509f1bee-6e38-4106-bea7-9b06cdb3719f/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-**How it works?**
+**どのように動作するのか？**
 
-Here is a step-by-step explanation of the code:
+以下はコードのステップバイステップの説明です：
 
-1. Import Libraries and Define Constants/Variables:
+1. ライブラリのインポートと定数/変数の定義：
 
-   The ``Servo.h`` library is imported for controlling the SG90 servo motor.
-   Parameters for the servo motor, ultrasonic sensor, and other required constants and variables are defined.
+   SG90サーボモーターを制御するために ``Servo.h`` ライブラリをインポートします。
+   サーボモーター、超音波センサー、その他必要な定数や変数のパラメータを定義します。
 
-2. ``setup()``:
+2. ``setup()``：
 
-   Initialize serial communication with the computer at a baud rate of 9600.
-   Configure the trigger and echo pins of the ultrasonic sensor.
-   Attach the servo motor to its control pin and set its initial position to the closed angle. After setting the angle, the servo motor is detached to save power.
+   コンピュータとのシリアル通信を9600ボーのボーレートで初期化します。
+   超音波センサーのトリガーピンとエコーピンを設定します。
+   サーボモーターを制御ピンに接続し、初期位置を閉じた角度に設定します。角度を設定した後、電力を節約するためにサーボモーターを取り外します。
 
-3. ``loop()``:
+3. ``loop()``：
 
-   Measure distance three times and store the values of each measurement.
-   Calculate the average distance from the three measurements.
-   If the average distance is less than or equal to 20 centimeters (defined distance threshold), the servo motor rotates to the open angle (0 degrees). 
-   Otherwise, the servo motor returns to the closed position (90 degrees) after a one-second delay. The servo motor is detached when not in use to conserve power.
+   3回距離を測定し、各測定値を保存します。
+   3回の測定から平均距離を計算します。
+   平均距離が20センチメートル（定義された距離しきい値）以下の場合、サーボモーターは開角度（0度）に回転します。
+   それ以外の場合、1秒の遅延の後、サーボモーターは閉じた位置（90度）に戻ります。使用していないときは電力を節約するためにサーボモーターを取り外します。
 
-4. ``readDistance()``:
+4. ``readDistance()``：
 
-   Send a pulse to the trigger pin of the ultrasonic sensor.
-   Measure the pulse width of the echo pin and calculate the distance value. 
-   This calculation uses the speed of sound in the air to compute distance based on pulse time.
+   超音波センサーのトリガーピンにパルスを送信します。
+   エコーピンのパルス幅を測定し、距離値を計算します。
+   この計算では、空気中の音速を使用してパルス時間に基づいて距離を計算します。

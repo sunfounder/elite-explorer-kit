@@ -1,39 +1,39 @@
-.. _basic_gy87:
+.. _basic_gy87_qmc5883L:
 
 QMC5883L
 ==========================
 
-Overview
+概要
 ---------------
 
-In this tutorial, we will explore the GY-87 IMU module, focusing on its QMC5883L magnetometer. The first part of the tutorial guides you through calibrating the QMC5883L magnetometer, which is essential for accurate magnetic field measurements. You will learn how to upload a calibration sketch to Arduino, perform real-time calibration, and apply these settings in your projects. The second part of the tutorial covers initializing the MPU6050 (accelerometer and gyroscope) and QMC5883L on an Arduino Uno using the Adafruit MPU6050 and QMC5883LCompass libraries. You will learn how to read and display sensor data on the Serial Monitor, which is a fundamental skill for applications in navigation, motion tracking, and orientation detection.
+このチュートリアルでは、GY-87 IMUモジュールに焦点を当て、特にそのQMC5883L磁力計について探求します。チュートリアルの最初の部分では、QMC5883L磁力計の校正方法について案内します。これは正確な磁場測定に不可欠です。Arduinoに校正スケッチをアップロードし、リアルタイムで校正を行い、プロジェクトにこれらの設定を適用する方法を学びます。チュートリアルの第二部では、Arduino Uno上でMPU6050（加速度計とジャイロスコープ）とQMC5883LをAdafruit MPU6050およびQMC5883LCompassライブラリを使って初期化する方法を取り上げます。センサーデータを読み取り、シリアルモニターに表示する基本的なスキルを身につけます。これは、ナビゲーション、動作追跡、方向検出などのアプリケーションに不可欠です。
 
-Required Components
+必要なコンポーネント
 -------------------------
 
-In this project, we need the following components. 
+このプロジェクトでは、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+キット全体を購入するのは便利です。リンクはこちら：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名称	
+        - このキットのアイテム数
+        - リンク
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+下記のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネント紹介
+        - 購入リンク
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -42,7 +42,7 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_gy87`
         - \-
 
-Wiring
+配線図
 ----------------------
 
 .. image:: img/09-gy87_bb.png
@@ -54,7 +54,7 @@ Wiring
    <br/>
 
 
-Schematic Diagram
+回路図
 -----------------------
 
 .. image:: img/09_basic_gy87_schematic.png
@@ -62,45 +62,45 @@ Schematic Diagram
     :width: 60%
 
 
-Install Library
------------------------
+ライブラリのインストール
+--------------------------
 
 .. note:: 
-    To install the library, use the Arduino Library Manager. 
+    ライブラリをインストールするには、Arduino Library Managerを使用します。
     
-        - Search for **"Adafruit MPU6050"** and install
+        - **「Adafruit MPU6050」** を検索してインストール
 
-          When installing each library, please make sure to select the installation of all dependencies.
+          各ライブラリをインストールする際は、すべての依存関係のインストールを選択してください。
       
           .. image:: img/09-add_lib_tip.png
              :width: 80%
 
-        - Search for **"QMC5883LCompass"** and install
+        - **「QMC5883LCompass」** を検索してインストール
 
 
 .. _basic_gy87_calibrate:
 
-Calibrate QMC5883L
+QMC5883Lの校正
 -----------------------
 
 .. note::
 
-    * You can open the file ``09-gy87_compass_calibration.ino`` under the path of ``elite-explorer-kit-main\basic_project\09-gy87_compass_calibration`` directly.
-    * Or copy this code into Arduino IDE.
+    * ``09-gy87_compass_calibration.ino`` ファイルを ``elite-explorer-kit-main\basic_project\09-gy87_compass_calibration`` のパスから直接開くことができます。
+    * または、このコードをArduino IDEにコピーします。
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/252c7a58-3a9f-4c66-959e-f45fc19e68aa/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After uploading the code, open the serial monitor. Follow the instructions in the serial monitor to calibrate QMC5883L. When prompted to move the sensor, it is recommended to use Figure 8 calibration method. Alternatively, simply keep the sensor parallel to the ground and rotate it clockwise or counterclockwise until the serial monitor prompts that calibration is complete.
+コードのアップロード後、シリアルモニターを開きます。シリアルモニターの指示に従ってQMC5883Lを校正します。センサーの移動を求められた場合、図8の校正方法を使用することをお勧めします。または、センサーを地面と平行に保ち、シリアルモニターが校正が完了したことを示すまで時計回りまたは反時計回りに回転させます。
 
 .. image:: img/09_calibrate_qmc5883l.png
     :width: 100%
     :align: center
 
-Once all calibration data has been collected, the sketch will tell provide you with some code that will look like ``compass.setCalibrationOffsets(-375.00, -179.00, 85.00);`` and ``compass.setCalibrationScales(1.04, 0.96, 1.01);``. Copy this code. You may want to save it for future reference.
+校正データがすべて収集されると、スケッチは ``compass.setCalibrationOffsets(-375.00, -179.00, 85.00);`` や ``compass.setCalibrationScales(1.04, 0.96, 1.01);`` のようなコードを提供します。このコードをコピーしてください。今後の参考のために保存しておくことをお勧めします。
 
-When using QMC5883L: Open your project's sketch and paste the line of code you copied directly below the ``compass.init()`` call. Just like this:
+QMC5883Lを使用する場合：プロジェクトのスケッチを開き、 ``compass.init()`` の呼び出しの直下にコピーしたコードを貼り付けます。以下のようにします：
 
 .. code:: arduino 
 
@@ -114,30 +114,30 @@ When using QMC5883L: Open your project's sketch and paste the line of code you c
    
    }
 
-Code
+コード
 ---------------------------------------------
 
 .. note::
 
-   Magnetometers must be calibrated(:ref:`basic_gy87_calibrate`) before they can be used as compasses, and must held level in use and **kept away from iron objects, magnetized materials and current carrying wires**.
+   磁力計はコンパスとして使用する前に校正する必要があり(:ref:`basic_gy87_calibrate`)、使用中に水平に保持し、 **鉄製品、磁化した材料、電流を運ぶワイヤーから遠ざける** 必要があります。
 
 .. note::
 
-    * You can open the file ``09-gy87_qmc5883l.ino`` under the path of ``elite-explorer-kit-main\basic_project\09-gy87_qmc5883l`` directly.
-    * Or copy this code into Arduino IDE.
-    * Put the code obtained from the calibration steps below the line of code ``compass.init()`` in the function ``initializeQMC5883L()``.
+    * ``09-gy87_qmc5883l.ino`` ファイルを ``elite-explorer-kit-main\basic_project\09-gy87_qmc5883l`` のパスから直接開くことができます。
+    * または、このコードをArduino IDEにコピーします。
+    * 校正手順から得られたコードを、関数 ``initializeQMC5883L()`` の ``compass.init()`` のコードの下に配置します。
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/8b266a18-ce7b-4330-8c10-c9f4148bb8ec/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-Code Analysis
+コード解析
 ------------------------
 
 
-#. Include Libraries and Initialize Sensors
-   This section includes the necessary libraries for the MPU6050 and QMC5883L sensors and initializes their objects.
+#. ライブラリのインクルードとセンサーの初期化
+   このセクションでは、MPU6050およびQMC5883Lセンサーに必要なライブラリをインクルードし、そのオブジェクトを初期化します。
 
    .. code-block:: arduino
       
@@ -149,9 +149,9 @@ Code Analysis
       Adafruit_MPU6050 mpu;
       QMC5883LCompass compass;
 
-#. Setup Function
+#. Setup関数
 
-   Initializes serial communication, the MPU6050 sensor, and sets the MPU6050 to I2C bypass mode to allow direct access to the QMC5883L magnetometer. Then, it initializes the QMC5883L magnetometer.
+   シリアル通信、MPU6050センサーを初期化し、MPU6050をI2Cバイパスモードに設定してQMC5883L磁力計への直接アクセスを可能にします。その後、QMC5883L磁力計を初期化します。
 
    .. code-block:: arduino
       
@@ -169,9 +169,9 @@ Code Analysis
         initializeQMC5883L();
       }
 
-#. Loop Function
+#. ループ関数
 
-   Continuously reads data from the QMC5883L magnetometer and prints it to the Serial Monitor.
+   QMC5883L磁力計からデータを連続的に読み取り、シリアルモニターに出力します。
 
    .. code-block:: arduino
       
@@ -180,9 +180,9 @@ Code Analysis
         delay(500);
       }
 
-#. Initialize QMC5883L Function
+#. QMC5883L初期化関数
 
-   Initializes and calibrates the QMC5883L magnetometer. The calibration values should be adjusted based on specific calibration data.(:ref:`basic_gy87_calibrate`)
+   QMC5883L磁力計を初期化し、校正します。校正値は特定の校正データに基づいて調整する必要があります。(:ref:`basic_gy87_calibrate`)
 
    .. code-block:: arduino
       
@@ -194,9 +194,9 @@ Code Analysis
         compass.setCalibrationScales(0.97, 1.02, 1.02);
       }
 
-#. Print QMC5883L Data Function
+#. QMC5883Lデータ表示関数
 
-   This function reads the magnetometer's X, Y, Z values, and azimuth, then prints them to the Serial Monitor.
+   この関数は磁力計のX、Y、Z値と方位角を読み取り、シリアルモニターに出力します。
 
    .. code-block:: arduino
 

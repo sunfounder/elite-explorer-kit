@@ -1,27 +1,25 @@
-
-SunFounder Elite Explorer Kit
+SunFounder Elite Explorerキット
 =======================================================
 
 .. image:: img/elite_explorer_kit_cover.png
     :width: 800
 
 
-Tired of basic Arduino kits with limited projects? Eager to build advanced IoT systems but don't know where to begin?
+基本的なArduinoキットに飽きたり、高度なIoTシステムを構築したいけど、どこから始めればいいか分からないですか？
 
-Look no further than the SunFounder Elite Explorer Kit with the all-new Arduino Uno R4 WiFi!
+それなら、全く新しいArduino Uno R4 WiFiを搭載したSunFounder Elite Explorerキットをご覧ください！
 
-The powerful Arduino Uno R4 WiFi board represents a giant leap forward for the world's most popular open-source electronics platform. With its 32-bit processor, expanded memory, USB-C, and built-in WiFi/Bluetooth, R4 unlocks endless possibilities.
+強力なArduino Uno R4 WiFiボードは、世界で最も人気のあるオープンソース電子プラットフォームにとって大きな前進を表しています。32ビットプロセッサ、拡張メモリ、USB-C、内蔵WiFi/Bluetoothを備えたR4は、無限の可能性を解き放ちます。
 
-Our Elite Kit unleashes R4's full potential with a massive array of components to build creative projects, from music makers to plant monitors. Simple tutorials teach you the basics while guided projects let you construct automated fans, RFID door locks, and smartphone-controlled robots.
+当社のEliteキットは、音楽メーカーや植物モニターから、R4の全潜在能力を引き出すための大規模なコンポーネント配列を提供します。簡単なチュートリアルで基本を学び、ガイド付きプロジェクトで自動ファン、RFIDドアロック、スマートフォン制御ロボットを構築できます。
 
-Explore the world of IoT with WiFi web servers, cloud dashboards, MQTT networks, and more. The kit transforms R4 into a versatile IoT prototyping tool constrained only by your imagination.
+WiFi Webサーバー、クラウドダッシュボード、MQTTネットワークなど、IoTの世界を探索しましょう。このキットはR4を多目的なIoTプロトタイピングツールに変え、想像力だけが限界です。
 
-With SunFounder, programming Arduino gets an upgrade. The Elite Explorer Kit, combined with the groundbreaking Uno R4 WiFi, is the ultimate all-in-one solution for mastering Arduino and building advanced DIY electronics projects. Order today and let your creativity soar!
+SunFounderとともに、Arduinoのプログラミングがアップグレードされます。Elite Explorerキットと革新的なUno R4 WiFiを組み合わせることで、Arduinoのマスタリングと高度なDIY電子プロジェクトの構築における究極のオールインワンソリューションを提供します。今日ご注文いただければ、あなたの創造力が高まります！
 
+.. **表示言語について**
 
-.. **About the display language**
-
-.. This document is available in other languages as well. To switch the display language, kindly click on the Read the Docs icon located in the lower left corner of the page.
+.. この文書は他の言語でも利用可能です。表示言語を変更するには、ページの左下隅にあるRead the Docsアイコンをクリックしてください。
 
 .. .. image:: img/translation.png
 ..     :align: center
@@ -30,12 +28,12 @@ With SunFounder, programming Arduino gets an upgrade. The Elite Explorer Kit, co
 
 ..     <br/>
 
-**Contents**
+**目次**
 
 .. toctree::
     :maxdepth: 2
 
-    About Elite Explorer Kit <self>
+    Elite Explorerキットについて <self>
     components/00_component_list
     arduino_start/00_get_start
     download_the_code
@@ -53,6 +51,7 @@ With SunFounder, programming Arduino gets an upgrade. The Elite Explorer Kit, co
 
 
 
-**Copyright Notice**
+**著作権に関する通知**
 
-All contents including but not limited to texts, images, and code in this manual are owned by the SunFounder Company. You should only use it for personal study,investigation, enjoyment, or other non-commercial or nonprofit purposes, under therelated regulations and copyrights laws, without infringing the legal rights of the author and relevant right holders. For any individual or organization that uses these for commercial profit without permission, the Company reserves the right to take legal action.
+本マニュアルに含まれるテキスト、画像、コードを含むすべてのコンテンツはSunFounder社が所有しています。これらは、関連する規制および著作権法に従い、著者および関連権利保有者の合法的な権利を侵害することなく、個人的な学習、調査、楽しむため、またはその他の非商業的または非営利目的でのみ使用すべきです。許可なくこれらを商業利益のために使用する個人または組織に対して、当社は法的措置を取る権利を留保します。
+

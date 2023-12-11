@@ -1,9 +1,10 @@
 .. _fun_project:
 
-Fun Projects
+楽しいプロジェクト
 ====================
 
-In this chapter, you will find some fun projects. These projects involve the use of multiple electronic components and illustrate the fundamental logic behind how most programs interact with reality.
+この章では、いくつかの楽しいプロジェクトを紹介します。これらのプロジェクトでは、多くの電子部品を使用し、ほとんどのプログラムが現実とどのように相互作用するかの基本的なロジックを示しています。
+
 
 .. toctree::
     :maxdepth: 1

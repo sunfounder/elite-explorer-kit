@@ -1,41 +1,39 @@
 .. _cpn_stepper_motor:
 
-Stepper Motor
+ステッピングモーター
 =========================
 
 .. image:: img/stepper_motor2.jpeg
    :align: center
 
-Stepper motors, due to their unique design, can be controlled to a high degree of accuracy without any feedback mechanisms. The shaft of a stepper, mounted with a series of magnets, is controlled by a series of electromagnetic coils that are charged positively and negatively in a specific sequence, precisely moving it forward or backward in small
-"steps".
+ステッピングモーターは、そのユニークな設計により、フィードバック機構がなくても高い精度で制御することができます。一連の磁石が取り付けられたステッパーのシャフトは、正確に前進または後退させるために、特定の順序で正負に充電される一連の電磁コイルによって制御されます。これにより、小さな「ステップ」で動かすことができます。
 
-**Principle**
+**原理**
 
-There are two types of steppers, unipolars and bipolars, and it is very important to know which type you are working with. In this experiment, we will use a unipolar stepper.
+ステッピングモーターには、ユニポーラタイプとバイポーラタイプの2種類があり、どちらのタイプを使用しているかを知ることが非常に重要です。この実験では、ユニポーラタイプのステッピングモーターを使用します。
 
-The stepper motor is a four-phase one, which uses a unipolarity DC power supply. As long as you electrify all phase windings of the motor by an appropriate timing sequence, you can make it rotate step by step. The schematic diagram of a four-phase reactive stepper motor:
+ステッピングモーターは四相式で、ユニポーラリティのDC電源を使用します。モーターの全相巻線に適切なタイミングで通電すれば、ステップごとに回転させることができます。四相反応式ステッピングモーターの概略図は以下の通りです。
 
 .. image:: img/stepper_motor3.png
    :align: center
 
-In the figure, in the middle of the motor is a rotor - a gear-shaped permanent magnet. Around the rotor, 0 to 5 are teeth. Then more outside, there are 8 magnetic poles, with each two opposite ones connected by coil winding. So they form four pairs from A to D, which is called a phase. It has four lead wires to be connected with switches SA, SB, SC, and SD. Therefore, the four phases are in parallel in the circuit, and the two magnetic poles in one phase are in series.
+図に示すように、モーターの中心にはローターがあり、これは歯車状の永久磁石です。ローターの周りには0から5までの歯があります。さらに外側には、コイル巻線によって接続された8つの磁極があり、それぞれがAからDまでの四組のペアを形成しています。これをフェーズと呼びます。スイッチSA、SB、SC、およびSDに接続するための4つのリード線があります。したがって、回路内の4つのフェーズは並列で、1つのフェーズ内の2つの磁極は直列になっています。
 
-**Here's how a 4-phase stepper motor works:**
+**四相ステッピングモーターの動作方法は次の通りです：**
 
-At the beginning, switch SB is power on, switch SA, SC, and SD is power off, and B-phase magnetic poles align with tooth 0 and 3 of the rotor. At the same time, tooth 1 and 4 generate staggered teeth with C- and D-phase poles. Tooth 2 and 5 generate staggered teeth with D- and A-phase poles. When switch SC is power on, switch SB, SA, and SD is power off, the rotor rotates under magnetic field of C-phase winding and that between tooth 1 and 4. Then tooth 1 and 4 align with the magnetic poles of C-phase winding. While tooth 0 and 3 generate staggered teeth with A- and B-phase poles, and tooth 2 and 5 generate staggered teeth with the magnetic poles of A- and D-phase poles. The similar situation goes on and on. Energize the A, B, C and D phases in turn, and the rotor will rotate in the order of A, B, C and D.
+最初に、スイッチSBに電源を供給し、スイッチSA、SC、SDには電源を供給しません。すると、B相の磁極がローターの歯0および3に整列します。同時に、歯1および4がC相およびD相の磁極とスタッガードの歯を生成します。歯2および5がD相およびA相の磁極とスタッガードの歯を生成します。スイッチSCに電源を供給し、スイッチSB、SA、およびSDに電源を供給しないと、ローターはC相巻線の磁場および歯1および4の間の磁場によって回転します。その後、歯1および4がC相巻線の磁極に整列します。歯0および3がA相およびB相の磁極とスタッガードの歯を生成し、歯2および5がA相およびD相の磁極とスタッガードの歯を生成します。このような状況が繰り返されます。A、B、C、およびD相を順番に通電すると、ローターはA、B、C、およびDの順序で回転します。
 
-The four-phase stepper motor has three operating modes: single four-step, double four-step, and eight-step. The step angle for the single four-step and double four-step are the same, but the driving torque for the single four-step is smaller. The step angle of the eight-step is half that of the single four-step and double four-step. Thus, the eight-step operating mode can keep high driving torque and improve control accuracy. In this experiment, we let the stepper motor work in the eight-step mode.
+四相ステッピングモーターには、単一四ステップ、二重四ステップ、および八ステップの3つの動作モードがあります。単一四ステップと二重四ステップのステップ角度は同じですが、単一四ステップの駆動トルクは小さいです。八ステップのステップ角度は単一四ステップおよび二重四ステップの半分です。したがって、八ステップ動作モードは、高い駆動トルクを維持し、制御精度を向上させることができます。この実験では、ステッピングモーターを八ステップモードで動作させます。
 
-**ULN2003 Module**
+**ULN2003モジュール**
 
 .. image:: img/uln2003.png
     :align: center
 
-To apply the motor in the circuit, a driver board needs to be used. Stepper Motor Driver-ULN2003 is a 7-channel inverter circuit. That is, when the input end is at high level, the output end of ULN2003 is at low level, and vice versa. If we supply high level to IN1, and low level to IN2, IN3 and IN4, then the output end OUT1 is at low level, and all the other output ends are at high level. So D1 lights up, switch SA is power on, and the stepper motor rotates one step. The similar case repeats on and on. Therefore, just give the stepper motor a specific timing sequence, it will rotate step by step. The ULN2003 here is used to provide particular timing sequences for the stepper motor.
+モーターを回路に適用するためには、ドライバーボードが必要です。ステッピングモータードライバーULN2003は7チャンネルのインバータ回路です。つまり、入力端がハイレベルの場合、ULN2003の出力端はローレベルになり、その逆も同様です。IN1にハイレベルを供給し、IN2、IN3、IN4にローレベルを供給すると、出力端OUT1はローレベルになり、他の出力端はすべてハイレベルになります。したがって、D1が点灯し、スイッチSAがオンになり、ステッピングモーターは1ステップ回転します。このような状況が繰り返されます。したがって、ステッピングモーターに特定のタイミングシーケンスを与えると、ステップごとに回転します。ここでのULN2003は、ステッピングモーターに特定のタイミングシーケンスを提供するために使用されます。
 
 
-**Example**
+**例**
 
-
-* :ref:`basic_stepper_motor` (Basic Project)
-* :ref:`fun_access` (Fun Project)
+* :ref:`basic_stepper_motor` (基本プロジェクト)
+* :ref:`fun_access` (楽しいプロジェクト)

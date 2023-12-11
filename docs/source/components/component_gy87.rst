@@ -1,23 +1,23 @@
 .. _cpn_gy87:
 
-GY-87 IMU module
+GY-87 IMUモジュール
 ============================
 
 .. image:: img/gy87.png
     :align: center
     :width: 40%
 
-The GY-87 sensor module is a high-precision, 10-axis (10DOF) module capable of measuring acceleration, angular velocity, and magnetic field strength across three axes: x, y, and z. It consists of three main sensors: MPU6050, QMC5883L, and BMP180, and communicates via the I2C protocol.
+GY-87センサーモジュールは、高精度の10軸（10DOF）モジュールで、x、y、zの3軸にわたって加速度、角速度、磁場の強さを測定することができます。主要なセンサーはMPU6050、QMC5883L、BMP180の3つで構成されており、I2Cプロトコルを介して通信します。
 
-The GY-87 sensor module is based on three sensors:
+GY-87センサーモジュールは、3つのセンサーに基づいています：
 
-1. **MPU6050**: This is a 6-axis accelerometer and gyroscope that can measure acceleration and angular velocity in three axes x, y, and z.
-2. **QMC5883L**: This is a 3-axis digital compass that can measure the strength of the magnetic field in three axes x, y, and z.
-3. **BMP180**: This is a barometric temperature and pressure sensor that can measure atmospheric pressure and temperature.
+1. **MPU6050**：これは6軸の加速度計およびジャイロスコープで、x、y、zの3軸で加速度と角速度を測定できます。
+2. **QMC5883L**：これは3軸のデジタルコンパスで、x、y、zの3軸で磁場の強さを測定できます。
+3. **BMP180**：これは気圧と温度のバロメトリックセンサーで、大気圧と温度を測定できます。
 
-The MPU6050 measures acceleration and angular velocity in three axes x, y, and z. The QMC5883L measures the strength of the magnetic field in three axes x, y, and z. The BMP180 measures atmospheric pressure and temperature. The data from these sensors are combined to provide accurate information about the orientation of the module in space.
+MPU6050はx、y、zの3軸で加速度と角速度を測定します。QMC5883Lはx、y、zの3軸で磁場の強さを測定します。BMP180は大気圧と温度を測定します。これらのセンサーからのデータは組み合わせられ、モジュールの宇宙における方向に関する正確な情報を提供します。
 
-The GY-87 sensor module is commonly used in applications such as drones, robotics, and other projects that require accurate orientation information. It is compatible with Arduino boards and can be easily interfaced with them using the I2C communication protocol.
+GY-87センサーモジュールは、ドローン、ロボティクス、正確な方向情報が必要な他のプロジェクトなどのアプリケーションで一般的に使用されます。Arduinoボードと互換性があり、I2C通信プロトコルを使用して簡単にインターフェースできます。
 
 .. image:: img/GY-87-SCH.jpg
     :align: center
@@ -27,7 +27,10 @@ The GY-87 sensor module is commonly used in applications such as drones, robotic
 
     <br/>
 
-**Example**
+**例**
 
-* :ref:`basic_gy87` (Basic Project)
-* :ref:`fun_escape` (Fun Project)
+* :ref:`basic_gy87_qmc5883L` （基本プロジェクト）
+* :ref:`basic_gy87_bmp180` （基本プロジェクト）
+* :ref:`basic_gy87_mpu6050` （基本プロジェクト）
+* :ref:`fun_escape` （楽しいプロジェクト）
+

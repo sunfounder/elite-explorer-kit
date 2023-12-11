@@ -1,46 +1,46 @@
 .. _fun_access:
 
-Access Control System
+アクセスコントロールシステム
 ======================================
 
 .. raw:: html
 
    <video loop controls style = "max-width:100%">
       <source src="../_static/videos/fun_projects/09_fun_access.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      お使いのブラウザではビデオタグがサポートされていません。
    </video>
 
-The primary function of this code is to perform user authentication using an RFID module. 
-If the authentication is successful, it controls a stepper motor to open the door and emits a sound through a buzzer to indicate the authentication result. 
-If the authentication fails, the door will not open.
+このコードの主な機能は、RFIDモジュールを使用したユーザー認証の実行です。
+認証に成功すると、ステップモーターを制御してドアを開け、ブザーを鳴らして認証結果を示します。
+認証に失敗した場合、ドアは開きません。
 
-You can open the serial monitor to view the ID of your RFID card and re-config the password in this code.
+シリアルモニターを開いてRFIDカードのIDを表示し、このコードでパスワードを再設定することができます。
 
-**Required Components**
+**必要なコンポーネント**
 
-In this project, we need the following components. 
+このプロジェクトには以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全体のキットを購入すると便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名称	
+        - このキットのアイテム数
+        - リンク
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから別々に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネント紹介
+        - 購入リンク
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -58,7 +58,7 @@ You can also buy them separately from the links below.
         - \-
 
 
-**Wiring**
+**配線図**
 
 .. image:: img/09_access_bb.png
     :width: 100%
@@ -68,7 +68,7 @@ You can also buy them separately from the links below.
 
    <br/>
 
-**Schematic**
+**回路図**
 
 .. image:: img/09_access_schematic.png
     :width: 100%
@@ -78,46 +78,46 @@ You can also buy them separately from the links below.
 
    <br/>
 
-**Code**
+**コード**
 
 .. note::
 
-    * You can open the file ``09_access_control_system.ino`` under the path of ``elite-explorer-kit-main\fun_project09_access_control_system`` directly.
-    * Or copy this code into Arduino IDE.
+    * ファイル ``09_access_control_system.ino`` を ``elite-explorer-kit-main\fun_project09_access_control_system`` のパスから直接開くことができます。
+    * または、このコードをArduino IDEにコピーしてください。
 
 .. note::
 
-    * The ``RFID1`` library is used here. The library can be found in the ``elite-explorer-kit-main/library/`` directory, or you can click here :download:`RFID1.zip </_static/RFID1.zip>` to download it. Refer to :ref:`manual_install_lib` for a tutorial on how to install it.
+    * ここでは ``RFID1`` ライブラリを使用しています。このライブラリは ``elite-explorer-kit-main/library/`` ディレクトリで見つけることができます。または、ここをクリックしてダウンロードしてください :download:`RFID1.zip </_static/RFID1.zip>`。インストール方法については、 :ref:`manual_install_lib` を参照してください。
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/3486dd4e-a76e-478f-b5a4-a86281f7f374/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-**How it works?**
+**どのように動作するのか？**
 
-Below is a step-by-step explanation of the code:
+以下はコードのステップバイステップの説明です：
 
-1. **Include Library Files**: You have included three library files: ``rfid1.h``, ``Stepper.h``, and ``Wire.h``. These libraries are used to communicate with the RFID module, stepper motor, and for I2C communication.
+1. **Include Library Files**: 三つのライブラリファイル ``rfid1.h``、 ``Stepper.h``、 ``Wire.h`` をインクルードしました。これらのライブラリは、RFIDモジュール、ステップモーター、およびI2C通信との通信に使用されます。
 
-2. **Constant Definitions**: You have defined some constants, including ``ID_LEN`` (length of the ID), ``stepsPerRevolution`` (steps per revolution for the stepper motor), ``rolePerMinute`` (stepper motor's speed), as well as the four stepper motor pins (IN1, IN2, IN3, IN4), buzzer pin (``buzPin``), and variables related to authentication.
+2. **Constant Definitions**: いくつかの定数を定義しています。これには、 ``ID_LEN`` （IDの長さ）、 ``stepsPerRevolution`` （ステップモーターの1回転あたりのステップ数）、 ``rolePerMinute`` （ステップモーターの速度）、さらにステップモーターの四つのピン（IN1、IN2、IN3、IN4）、ブザーピン（ ``buzPin`` ）、認証に関連する変数が含まれます。
 
-3. **Variable Definitions**: You've defined variables such as an array to store the read user ID (``userIdRead``), authenticated user ID (``userId``), and a boolean variable (``approved``) to indicate successful authentication.
+3. **Variable Definitions**: 読み取ったユーザーIDを格納するための配列（ ``userIdRead`` ）、認証されたユーザーID（ ``userId`` ）、成功した認証を示すブール変数（ ``approved`` ）などの変数を定義しました。
 
-4. **Object Instantiation**: You've created instances of two objects: ``RFID1 rfid`` and ``Stepper stepper`` for interacting with the RFID module and stepper motor, respectively.
+4. **Object Instantiation**: RFIDモジュールとステップモーターとのやり取りに使う二つのオブジェクト ``RFID1 rfid`` と ``Stepper stepper`` のインスタンスを作成しました。
 
-5. ``setup()``: In the ``setup()`` function, you initialize the stepper motor's speed, set the buzzer pin as an output, and initialize the RFID module.
+5. ``setup()``: ``setup()`` 関数では、ステップモーターの速度を初期化し、ブザーピンを出力として設定し、RFIDモジュールを初期化します。
 
-6. ``loop()``: In the ``loop()`` function, your main logic runs. If ``approved`` is 0 (indicating not authenticated yet), it calls the ``rfidRead()`` function to read data from the RFID module and then clears the ``userIdRead`` array. If ``approved`` is 1 (indicating successful authentication), it calls the ``openDoor()`` function to open the door and resets ``approved`` to 0.
+6. ``loop()``: ``loop()`` 関数では、メインロジックが実行されます。 ``approved`` が0（まだ認証されていないことを示す）の場合、RFIDモジュールからデータを読み取るために ``rfidRead()`` 関数を呼び出し、その後 ``userIdRead`` 配列をクリアします。 ``approved`` が1（認証に成功したことを示す）の場合、ドアを開けるために ``openDoor()`` 関数を呼び出し、 ``approved`` を0にリセットします。
 
-7. ``beep()``: This function controls the buzzer sound based on the ``duration`` and ``frequency`` parameters provided.
+7. ``beep()``: この関数は、与えられた ``duration`` と ``frequency`` パラメータに基づいてブザー音を制御します。
 
-8. ``verifyPrint()``: This function produces different buzzer sounds based on the ``result`` parameter to indicate whether authentication was successful.
+8. ``verifyPrint()``: この関数は、 ``result`` パラメータに基づいて異なるブザー音を出し、認証が成功したかどうかを示します。
 
-9. ``openDoor()``: This function controls the stepper motor to open the door to a certain angle (``doorStep``) and then waits for a period before closing the door.
+9. ``openDoor()``: この関数は、ステップモーターを制御して、特定の角度（ ``doorStep`` ）までドアを開け、一定期間待ってからドアを閉じます。
 
-10. ``rfidRead()``: This function reads data from the RFID module, first calling ``getId()`` to get the user ID and then ``idVerify()`` to verify if the user ID matches the authenticated ID.
+10. ``rfidRead()``: この関数はRFIDモジュールからデータを読み取り、まず ``getId()`` を呼び出してユーザーIDを取得し、次に ``idVerify()`` を呼び出してユーザーIDが認証されたIDと一致するかどうかを確認します。
 
-11. ``getId()``: This function retrieves the user ID from the RFID module and stores it in the ``userIdRead`` array. It emits a beep if reading fails.
+11. ``getId()``: この関数はRFIDモジュールからユーザーIDを取得し、 ``userIdRead`` 配列に格納します。読み取りに失敗した場合、ビープ音が鳴ります。
 
-12. ``idVerify()``: This function verifies if the user ID matches the authenticated ID and produces a sound indicating successful or failed authentication.
+12. ``idVerify()``: この関数はユーザーIDが認証されたIDと一致するかどうかを確認し、成功または失敗した認証を示す音を出します。

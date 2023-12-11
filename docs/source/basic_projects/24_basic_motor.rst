@@ -1,39 +1,39 @@
 .. _basic_motor:
 
-Motor
+モーター
 ==========================
 
-Overview
+概要
 --------
 
-In this lesson, you will learn how to use Motor, the working principle of which is that the energized coil is forced to rotate in the magnetic field then the rotor of the motor rotates accordingly on which the pinion gear drives the engine flywheel to rotate.1
+このレッスンでは、モーターの使用方法を学びます。モーターの動作原理は、通電されたコイルが磁場内で強制的に回転し、その結果モーターのローターが回転し、ピニオンギアがエンジンのフライホイールを回転させることです。
 
-Required Components
--------------------
+必要なコンポーネント
+---------------------
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全セットを購入するのが便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名称	
+        - このキットのアイテム数
+        - リンク
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネント紹介
+        - 購入リンク
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -48,10 +48,10 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_power`
         - \-
 
-Wiring
+配線図
 ----------------------
 
-In this example, we use Power Supply Module to power the anode and cathode of breadboard.
+この例では、パワーサプライモジュールを使用してブレッドボードの陽極と陰極に電力を供給します。
 
 .. image:: img/24-motor_bb.png
     :align: center
@@ -61,7 +61,7 @@ In this example, we use Power Supply Module to power the anode and cathode of br
   
   <br/> 
 
-Schematic Diagram
+回路図
 -----------------
 
 .. image:: img/24_motor_schematic.png
@@ -72,27 +72,26 @@ Schematic Diagram
   
   <br/> 
 
-Code
-----
+コード
+---------
 
 .. note::
 
-    * You can open the file ``24-motor.ino`` under the path of ``elite-explorer-kit-main\basic_project\24-motor`` directly.
-    * Or copy this code into Arduino IDE.
+    * ファイル ``24-motor.ino`` を ``elite-explorer-kit-main\basic_project\24-motor`` のパスで直接開くことができます。
+    * または、このコードをArduino IDEにコピーしてください。
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/7376df09-204d-4698-b2a6-106e2d2f00e6/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After uploading the code to the UNO board, you can choose the motor's rotation direction by typing "A" or "B" in the serial monitor.
+UNOボードにコードをアップロードした後、シリアルモニターで「A」または「B」と入力することで、モーターの回転方向を選択できます。
 
 
-Code Analysis
+コード解析
 --------------------------
 
-
-The motor can be driven by providing a voltage difference between the copper sheets at both sides of the motor. 
-Therefore, you only need to write 0 for the voltage of one side of the copper sheet and 5V for the other side. Modify the written analog signal value to adjust the direction and speed.
+モーターは、モーターの両側の銅板間に電圧差を与えることで駆動できます。
+したがって、銅板の一方の側の電圧を0V、もう一方の側を5Vに設定するだけで済みます。書かれたアナログ信号値を変更することで、方向と速度を調整できます。
 
 .. code-block:: arduino
 
@@ -108,10 +107,10 @@ Therefore, you only need to write 0 for the voltage of one side of the copper sh
      analogWrite(motorFI, 0);
    }
 
-In this example, Serial.Read() is used to control the direction of motor. 
+この例では、Serial.Read()を使用してモーターの方向を制御しています。
 
-When you type \'A\' in serial monitor, there calls the clockwise (255) function to make the motor rotate with the speed of 255.
-Input \'B\', and the motor will rotate in reverse direction.
+シリアルモニターで「A」と入力すると、clockwise(255)関数が呼び出され、モーターが255の速度で回転します。
+「B」と入力すると、モーターは逆方向に回転します。
 
 .. code-block:: arduino
 

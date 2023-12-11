@@ -1,59 +1,59 @@
 .. _install_arduino:
 
-Download and Install Arduino IDE 2.0
-========================================
+Arduino IDE 2.0のダウンロードとインストール
+=============================================
 
-The Arduino IDE, known as Arduino Integrated Development Environment, provides all the software support needed to complete an Arduino project. It is a programming software specifically designed for Arduino, provided by the Arduino team, that allows us to write programs and upload them to the Arduino board. 
+Arduino IDE（Arduino Integrated Development Environment）は、Arduinoプロジェクトを完成させるために必要な全てのソフトウェアサポートを提供します。Arduino専用に設計されたプログラミングソフトウェアで、Arduinoチームによって提供されており、プログラムを書いてArduinoボードにアップロードすることができます。
 
-The Arduino IDE 2.0 is an open-source project. It is a big step from its sturdy predecessor, Arduino IDE 1.x, and comes with revamped UI, improved board & library manager, debugger, autocomplete feature and much more.
+Arduino IDE 2.0はオープンソースプロジェクトです。これは堅牢な前身であるArduino IDE 1.xからの大きな一歩であり、一新されたUI、改善されたボード＆ライブラリマネージャー、デバッガー、オートコンプリート機能などが含まれています。
 
-In this tutorial, we will show how to download and install the Arduino IDE 2.0 on your Windows, Mac, or Linux computer.
+このチュートリアルでは、Windows、Mac、またはLinuxコンピュータにArduino IDE 2.0をダウンロードしてインストールする方法を示します。
 
-Requirements
+要件
 -------------------
 
-* Windows - Win 10 and newer, 64 bits
-* Linux - 64 bits
-* Mac OS Intel - Version 10.14: "Mojave" or newer, 64 bits
-* Mac OS Apple Silicon - Version 11: "Big Sur" or newer, 64 bits
+* Windows - Win 10以降、64ビット
+* Linux - 64ビット
+* Mac OS Intel - バージョン10.14: "Mojave"以降、64ビット
+* Mac OS Apple Silicon - バージョン11: "Big Sur"以降、64ビット
 
-Download the Arduino IDE 2.0
+Arduino IDE 2.0のダウンロード
 -------------------------------
 
-#. Visit |link_download_arduino|.
+1. |link_download_arduino| にアクセスします。
 
-#. Download the IDE for your OS version.
+2. お使いのOSバージョン用のIDEをダウンロードします。
 
    .. image:: img/sp_001.png
 
-Installation
+インストール
 ------------------------------
 
 Windows
 ^^^^^^^^^^^^^
 
-#. Double click the ``arduino-ide_xxxx.exe`` file to run the downloaded file.
+1. ダウンロードした ``arduino-ide_xxxx.exe`` ファイルをダブルクリックして実行します。
 
-#. Read the License Agreement and agree it.
+2. ライセンス契約を読んで同意します。
 
    .. image:: img/sp_002.png
 
-#. Choose installation options.
+3. インストールオプションを選択します。
 
    .. image:: img/sp_003.png
 
-#. Choose install location. It is recommended that the software be installed on a drive other than the system drive.
+4. インストール場所を選択します。ソフトウェアはシステムドライブ以外のドライブにインストールすることを推奨します。
 
    .. image:: img/sp_004.png
 
-#. Then Finish. 
+5. 終了します。
 
    .. image:: img/sp_005.png
 
 macOS
 ^^^^^^^^^^^^^^^^
 
-Double click on the downloaded ``arduino_ide_xxxx.dmg`` file and follow the instructions to copy the **Arduino IDE.app** to the **Applications** folder, you will see the Arduino IDE installed successfully after a few seconds.
+ダウンロードした ``arduino_ide_xxxx.dmg`` ファイルをダブルクリックし、指示に従って **Arduino IDE.app** を **Applications** フォルダにコピーします。数秒後にArduino IDEが正常にインストールされたことが確認できます。
 
 .. image:: img/macos_install_ide.png
     :width: 800
@@ -61,25 +61,22 @@ Double click on the downloaded ``arduino_ide_xxxx.dmg`` file and follow the inst
 Linux
 ^^^^^^^^^^^^
 
-For the tutorial on installing the Arduino IDE 2.0 on a Linux system, please refer |link_install_arduino_linux|
+LinuxシステムでのArduino IDE 2.0のインストールチュートリアルについては、 |link_install_arduino_linux| を参照してください。
 
 
-Open the IDE
+IDEを開く
 --------------
 
-#. When you first open Arduino IDE 2.0, it automatically installs the Arduino AVR Boards, built-in libraries, and other required files.
+1. 初めてArduino IDE 2.0を開くと、自動的にArduino AVRボード、組込みライブラリ、その他必要なファイルがインストールされます。
 
    .. image:: img/sp_901.png
 
-#. In addition, your firewall or security center may pop up a few times asking you if you want to install some device driver. Please install all of them.
+2. さらに、ファイアウォールやセキュリティセンターからデバイスドライバのインストールを求めるポップアップが何度か表示される場合があります。これらすべてをインストールしてください。
 
    .. image:: img/sp_104.png
 
-#. Now your Arduino IDE is ready!
+3. これでArduino IDEの準備が整いました！
 
    .. note::
-     In the event that some installations didn't work due to network issues or other reasons, you can reopen the Arduino IDE and it will finish the rest of the installation. The Output window will not automatically open after all installations are complete unless you click Verify or Upload.
-
-
-
+     ネットワークの問題やその他の理由で一部のインストールがうまくいかなかった場合は、Arduino IDEを再開すると残りのインストールが完了します。すべてのインストールが完了した後、[検証]または[アップロード]をクリックしない限り、出力ウィンドウは自動的に開かれません。
 

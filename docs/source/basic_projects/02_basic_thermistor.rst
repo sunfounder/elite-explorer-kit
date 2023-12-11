@@ -1,41 +1,41 @@
 .. _basic_thermistor:
 
-Thermistor
+サーミスタ
 ==========================
 
 .. https://docs.sunfounder.com/projects/vincent-kit/en/latest/arduino/2.27_thermistor.html#ar-thermistor
 
-Overview
+概要
 -------------
 
-In this lesson, you will learn how to use thermistor. Thermistor can be used as electronic circuit components for temperature compensation of instrument circuits. In the current meter, flowmeter, gas analyzer, and other devices. It can also be used for overheating protection, contactless relay, constant temperature, automatic gain control, motor start, time delay, color TV automatic degaussing, fire alarm and temperature compensation.
+このレッスンでは、サーミスタの使用方法を学びます。サーミスタは、計測機器回路の温度補正用の電子回路部品として使用できます。電流計、流量計、ガス分析装置などで使われています。また、過熱保護、非接触リレー、恒温、自動利得制御、モーター始動、時間遅延、カラーテレビの自動消磁、火災報知器、温度補償などにも使用されます。
 
-Required Components
+必要なコンポーネント
 -------------------------
 
-In this project, we need the following components. 
+このプロジェクトでは、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全てのキットを一式購入するのが便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名称	
+        - このキットのアイテム数
+        - リンク
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+下記のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネント紹介
+        - 購入リンク
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -48,35 +48,35 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_thermistor`
         - |link_thermistor_buy|
 
-Wiring
+配線図
 ----------------------
 
-In this example, we use the analog pin A0 to get the value of Thermistor. One pin of thermistor is connected to 5V, and the other is wired up to A0. At the same time, a 10kΩ resistor is connected with the other pin before connecting to GND.
+この例では、アナログピンA0を使用してサーミスタの値を取得します。サーミスタの一方の端子は5Vに接続され、もう一方の端子はA0に配線されます。同時に、もう一方の端子をGNDに接続する前に10kΩの抵抗器を接続します。
 
 .. image:: img/02-thermistor_bb.png
     :align: center
     :width: 70%
 
-Schematic Diagram
+回路図
 -----------------------
 
 .. image:: img/02_thermistor_schematic.png
    :align: center
    :width: 70%
 
-Code
+コード
 -----------
 
 .. note::
 
-    * You can open the file ``02-thermistor.ino`` under the path of ``elite-explorer-kit-main\basic_project\02-thermistor`` directly.
-    * Or copy this code into Arduino IDE.
+    * ``elite-explorer-kit-main\basic_project\02-thermistor`` のパスの下にある ``02-thermistor.ino`` ファイルを直接開くことができます。
+    * または、このコードをArduino IDEにコピーします。
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/be5dbe68-b57d-41f0-9fc0-237b99acbe3f/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After uploading the code to the uno r4 board, you can open the serial monitor to check the current temperature. 
+uno r4 ボードにコードをアップロードした後、シリアルモニターを開いて現在の温度を確認できます。
 
-The Kelvin temperature is calculated using the formula **T\ K\ =1/(ln(R\ T/R\ N)/B+1/T\ N)**. This equation is derived from the |link_steinhart_hart| and simplifies calculations. You can also find more information about this formula on the detailed introduction page of the :ref:`cpn_thermistor`.
+ケルビン温度は、公式 **T\ K\ =1/(ln(R\ T/R\ N)/B+1/T\ N)** を使用して計算されます。この方程式は、|link_steinhart_hart| から導出され、計算を簡素化しています。この公式に関する詳細情報は、 :ref:`cpn_thermistor` の詳細紹介ページで見ることができます。
 

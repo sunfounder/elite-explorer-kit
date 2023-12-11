@@ -1,24 +1,22 @@
 .. _cpn_dht11:
 
-Humiture Sensor Module
+湿温度センサーモジュール
 =============================
 
-The digital temperature and humidity sensor DHT11 is a composite sensor that contains a calibrated digital signal output of temperature and humidity. 
-The technology of a dedicated digital modules collection and the temperature and humidity sensing technology are applied to ensure that the product has high reliability and excellent long-term stability.
+デジタル温湿度センサーDHT11は、温度と湿度の校正されたデジタル信号出力を含む複合センサーです。
+専用のデジタルモジュールの収集技術と温湿度感知技術を活用し、製品の高い信頼性と長期的な安定性を実現しています。
 
-
-Only three pins are available for use: VCC, GND, and DATA. 
-The communication process begins with the DATA line sending start signals to DHT11, and DHT11 receives the signals and returns an answer signal. 
-Then the host receives the answer signal and begins to receive 40-bit humiture data (8-bit humidity integer + 8-bit humidity decimal + 8-bit temperature integer + 8-bit temperature decimal + 8-bit checksum).
+使用可能なピンは3つだけです：VCC、GND、DATA。
+通信プロセスは、DATAラインがDHT11に開始信号を送信し、DHT11が信号を受信して応答信号を返すことから始まります。
+その後、ホストが応答信号を受信し、40ビットの湿温度データ（湿度整数8ビット + 湿度小数8ビット + 温度整数8ビット + 温度小数8ビット + チェックサム8ビット）の受信を開始します。
 
 .. image:: img/Dht11.png
 
-
 * |link_dht11_datasheet|
 
-**Example**
+**例**
 
-* :ref:`basic_humiture_sensor` (Basic Project)
-* :ref:`fun_plant_monitor` (Fun Project)
-* :ref:`iot_arduino_cloud` (IoT Project)
-* :ref:`iot_ble_home` (IoT Project)
+* :ref:`basic_humiture_sensor` (基本プロジェクト)
+* :ref:`fun_plant_monitor` (楽しいプロジェクト)
+* :ref:`iot_arduino_cloud` (IoTプロジェクト)
+* :ref:`iot_ble_home` (IoTプロジェクト)

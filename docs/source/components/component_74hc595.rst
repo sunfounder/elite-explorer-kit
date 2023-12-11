@@ -5,27 +5,28 @@
 
 .. image:: img/74HC595.png
 
-The 74HC595 consists of an 8−bit shift register and a storage register with three−state parallel outputs. It converts serial input into parallel output so you can save IO ports of an MCU.
-When MR (pin10) is high level and OE (pin13) is low level, data is input in the rising edge of SHcp and goes to the memory register through the rising edge of SHcp. If the two clocks are connected together, the shift register is always one pulse earlier than the memory register. There is a serial shift input pin (Ds), a serial output pin (Q) and an asynchronous reset button (low level) in the memory register. The memory register outputs a Bus with a parallel 8-bit and in three states. When OE is enabled (low level), the data in memory register is output to the bus.
+74HC595は、8ビットのシフトレジスタと三状態並列出力を持つ記憶レジスタから構成されています。シリアル入力を並列出力に変換するため、マイクロコントローラーのIOポートを節約することができます。
+MR（ピン10）が高レベル、OE（ピン13）が低レベルの場合、データはSHcpの立ち上がりエッジで入力され、SHcpの立ち上がりエッジを通じて記憶レジスタに移動します。2つのクロックが一緒に接続されている場合、シフトレジスタは常に記憶レジスタよりも1パルス早く動作します。記憶レジスタにはシリアルシフト入力ピン（Ds）、シリアル出力ピン（Q）、非同期リセットボタン（低レベル）があります。記憶レジスタは、8ビットの並列バスを三状態で出力します。OEが有効（低レベル）のとき、記憶レジスタ内のデータはバスに出力されます。
 
 * |link_74hc595_datasheet|
 
 .. image:: img/74hc595_pin.png
     :width: 600
 
-Pins of 74HC595 and their functions:
+74HC595のピンとその機能：
 
-* **Q0-Q7**: 8-bit parallel data output pins, able to control 8 LEDs or 8 pins of 7-segment display directly.
-* **Q7’**: Series output pin, connected to DS of another 74HC595 to connect multiple 74HC595s in series
-* **MR**: Reset pin, active at low level; 
-* **SHcp**: Time sequence input of shift register. On the rising edge, the data in shift register moves successively one bit, i.e. data in Q1 moves to Q2, and so forth. While on the falling edge, the data in shift register remain unchanged.
-* **STcp**: Time sequence input of storage register. On the rising edge, data in the shift register moves into memory register.
-* **CE**: Output enable pin, active at low level. 
-* **DS**: Serial data input pin
-* **VCC**: Positive supply voltage.
-* **GND**: Ground.
+* **Q0-Q7**: 8ビット並列データ出力ピン。8つのLEDや7セグメントディスプレイの8つのピンを直接制御できます。
+* **Q7’**: シリーズ出力ピン。他の74HC595のDSに接続し、複数の74HC595をシリーズで接続します。
+* **MR**: リセットピン。低レベルで動作。
+* **SHcp**: シフトレジスタの時系列入力。立ち上がりエッジでは、シフトレジスタ内のデータが逐次1ビットずつ移動します（例：Q1のデータがQ2に移動）。立ち下がりエッジでは、シフトレジスタ内のデータは変わりません。
+* **STcp**: 記憶レジスタの時系列入力。立ち上がりエッジで、シフトレジスタ内のデータが記憶レジスタに移動します。
+* **CE**: 出力有効ピン。低レベルで動作。
+* **DS**: シリアルデータ入力ピン。
+* **VCC**: 正の供給電圧。
+* **GND**: グラウンド。
 
-**Example**
+**例**
 
-* :ref:`basic_74hc595` (Basic Project)
-* :ref:`fun_digital_dice` (Fun Project)
+* :ref:`basic_74hc595` （基本プロジェクト）
+* :ref:`fun_digital_dice` （楽しいプロジェクト）
+

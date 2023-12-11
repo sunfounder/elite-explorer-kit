@@ -1,18 +1,15 @@
-
 .. _get_start_arduino_ide:
 
-Get Started with Arduino
+Arduinoの始め方
 =======================================
 
-.. Arduino is an open source platform with simple software and hardware.
-.. You can pick it up in short time even if you are a beginner. It provides
-.. an integrated development environment (IDE) for code compiling,
-.. compatible with multiple control boards. So you can just download the
-.. Arduino IDE, upload the sketches (i.e. the code files) to the board, and
-.. then you can see relative experimental phenomena. For more information,
-.. refer to http://www.arduino.cc.
+.. Arduinoは、シンプルなソフトウェアとハードウェアを備えたオープンソースのプラットフォームです。
+.. 初心者でもすぐに使いこなすことができます。Arduinoは以下の機能を提供します。
+.. コードをコンパイルするための統合開発環境（IDE）、複数の制御ボードと互換性がある。
+.. そのためArduino IDEをダウンロードし、スケッチ（つまりコードファイル）をボードにアップロードすればよい。
+.. すると、相対的な実験現象を見ることができます。詳しくは、http://www.arduino.cc。
 
-.. Please follow the tutorial below to learn how to install the Arduino IDE, add libraries and upload code.
+.. Arduino IDEのインストール、ライブラリの追加、コードのアップロード方法については、以下のチュートリアルを参照してください。
 
 .. .. toctree::
 ..     :maxdepth: 1
@@ -21,50 +18,51 @@ Get Started with Arduino
 ..     download_add
 ..     upload_code
 
-If you have no idea about Arduino. There are several words I would like to show you: electronics, design, programming, and even Maker. Some of you may think these words are quite far away from us, but in fact, they are not far at all. Because Arduino can take us into the world of programming and help us realize the dream of being a Maker. 
-In this session we will learn: 
+Arduinoについて何も知らない方のために、いくつかのキーワードを紹介します：電子工学、デザイン、プログラミング、さらにはメーカーです。これらの言葉は私たちから遠いと思われるかもしれませんが、実際にはそうではありません。なぜならArduinoは、私たちをプログラミングの世界へ導き、メーカーとしての夢を実現する手助けをしてくれるからです。
+このセッションでは、以下を学びます：
 
-* What is Arduino?
-* What can Arduino do? 
-* How to build an Arduino Project?
+* Arduinoとは何か？
+* Arduinoでできることは？
+* Arduinoプロジェクトの構築方法は？
 
 .. _what_is:
 
-What is Arduino?
+Arduinoとは？
 -----------------
 
-First of all, I will give you a brief introduction to Arduino.
+まず、Arduinoについて簡単に紹介します。
 
-Arduino is a convenient, flexible, and easy-to-use open-source electronic prototyping platform, including hardware Arduino boards of various models and software Arduino IDE. It is not only suitable for engineers for rapid prototyping, but also artists, designers, hobbyists, while it is almost a must-have tool for modern Makers.
+Arduinoは、使いやすく柔軟性があり便利なオープンソースの電子プロトタイピングプラットフォームで、さまざまなモデルのハードウェアArduinoボードとソフトウェアArduino IDEを含んでいます。エンジニアによる迅速なプロトタイピングに適しているだけでなく、アーティスト、デザイナー、趣味の人々にも適しており、現代のメーカーにとってはほぼ必須のツールです。
 
-Arduino is quite a large system. It has software, hardware, and a very huge online community of people who have never met each other but are able to work together because of a common hobby. Everyone in the Arduino family is using their wisdom, making with their hands, and sharing one great invention after another. And you can also be a part of it.
+Arduinoはかなり大きなシステムです。ソフトウェア、ハードウェア、そして共通の趣味のために協力できる、お互いに会ったことがない人々の非常に大きなオンラインコミュニティがあります。Arduinoファミリーの一員は、彼らの知恵を使い、手作業で作成し、次々と素晴らしい発明を共有しています。そして、あなたもその一部になることができます。
 
 .. _what_cando:
 
-What can Arduino do?
----------------------
+Arduinoは何ができるの？
+------------------------
 
-Speaking of which, you may have doubts about what Arduino can actually do. Suffice it to say, Arduino will solve all your problems.
+ここで、Arduinoが実際に何ができるのか疑問に思うかもしれません。端的に言えば、Arduinoはあなたのすべての問題を解決します。
 
-Technically speaking, Arduino is a programmable logic controller. It is a development board that can be used to create many exciting and creative electronic creations: such as remote-controlled cars, robotic arms, bionic robots, smart homes, etc. 
+技術的に言えば、Arduinoはプログラム可能なロジックコントローラーです。リモートコントロールカー、ロボットアーム、バイオニックロボット、スマートホームなど、多くのエキサイティングでクリエイティブな電子作品を作成するために使用できる開発ボードです。
 
-Arduino boards are straightforward, simple, and powerful, suitable for students, makers and even professional programmers. 
+Arduinoボードは直感的でシンプルで強力で、学生、メーカー、さらにはプロのプログラマーに適しています。
 
-To this day, electronics enthusiasts worldwide continue to develop creative electronic creations based on Arduino development boards.
+今日まで、世界中の電子工学愛好家たちは、Arduino開発ボードに基づいてクリエイティブな電子作品を開発し続けています。
 
-.. What is Arduino UNO?
+
+.. Arduino UNOとは？
 .. ----------------------
 
-.. The Arduino team has open sourced the Arduino development board, this means that others can manufacture products from Arduino designs. So there are currently two types of development boards available on the market. One is the official development board provided by Arduino, and the other is the compatible development board produced by other companies. ARDUINO original boards are produced by ARDUINO with arduino's Certification. Compatible development boards for Arduino are assembled and produced by third-party companies, which will be more favorable in terms of price. The Arduino team has done a lot for Arduino, so if you want to support them, consider buying Arduino original boards on the Arduino website. You can choose which board to buy according to your situation.
-.. We recommend purchasing an Arduino Uno R3 board or an compatible board for Arduino Uno R3 for a consistent learning experience in our tutorials.
+.. ArduinoチームはArduino開発ボードをオープンソース化しています。そのため、現在市販されている開発ボードには2種類あります。1つはArduinoが提供する公式開発ボードで、もう1つは他社が製造する互換開発ボードです。ARDUINOオリジナルボードは、ARDUINOがarduinoの認証を受けて製造したボードです。Arduino用互換開発ボードは、サードパーティが組み立てて生産するもので、価格面で有利になります。ArduinoチームはArduinoのために多くのことをしてくれているので、彼らをサポートしたいのであれば、ArduinoのウェブサイトでArduinoオリジナルのボードを購入することを検討してください。どのボードを購入するかは、状況に応じて選べばいい。
+.. Arduino Uno R3ボード、またはArduino Uno R3互換ボードの購入をお勧めします。
 
 
 
 
-How to build an Arduino Project
+Arduinoプロジェクトの構築方法
 -----------------------------------
 
-Follow these steps to learn how to use Arduino from zero!
+これらのステップに従って、ゼロからArduinoの使用方法を学びましょう！
 
 
 .. toctree::

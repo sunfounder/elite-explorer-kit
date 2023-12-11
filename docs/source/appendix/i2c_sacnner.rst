@@ -1,16 +1,16 @@
-.. _i2c_sacnner:
+.. _i2c_scanner:
 
-How to Scan and Detect I2C Addresses?
+I2Cアドレスのスキャンと検出方法
 ==============================================
 
-This tutorial takes scanning the I2C address of the gy-87 module as an example, and guides you on how to detect I2C addresses.
+このチュートリアルでは、GY-87モジュールのI2Cアドレスをスキャンする例を取り上げ、I2Cアドレスを検出する方法を紹介します。
 
-Wiring
+配線図
 ---------------
 
-Connect the SCL of GY-87 module to the SCL of UNO R4, and connect the SDA of GY-87 module to the SDA of UNO R4.
+GY-87モジュールのSCLをUNO R4のSCLに、GY-87モジュールのSDAをUNO R4のSDAに接続します。
 
-Another way is to connect the SCL of GY-87 module to A5 of UNO R4, and connect the SDA of GY-87 module to A4 of UNO R4.
+もう一つの方法として、GY-87モジュールのSCLをUNO R4のA5に、SDAをUNO R4のA4に接続することもできます。
 
 .. image:: img/09-gy87_bb.png
     :align: center
@@ -20,10 +20,10 @@ Another way is to connect the SCL of GY-87 module to A5 of UNO R4, and connect t
 
    <br/>
 
-Upload the code
------------------
+コードのアップロード
+-----------------------
 
-Copy the code below to your Arduino IDE and then upload the code.
+以下のコードをArduino IDEにコピーして、アップロードします。
 
 .. code-block:: arduino
 
@@ -97,9 +97,10 @@ Copy the code below to your Arduino IDE and then upload the code.
    }
 
 
-After uploading the code, open the serial monitor and set the baud rate to 9600. Check the output in the serial monitor.
+コードをアップロードした後、シリアルモニターを開いてボーレートを9600に設定します。シリアルモニターの出力を確認します。
 
-These are the detected I2C addresses. You can refer to relevant information to determine which chips correspond to these addresses. In this case, ``0x68`` is for MPU6050 and ``0x77`` is for BMP180. The address ``0x1E`` is for QMC5883L, and occasionally(due to different production batches) the address of QMC5883L may also be ``0x0D``.
+これらが検出されたI2Cアドレスです。関連する情報を参照して、これらのアドレスに対応するチップを特定できます。この場合、 ``0x68`` はMPU6050用で、 ``0x77`` はBMP180用です。アドレス ``0x1E`` はQMC5883L用で、生産ロットによってはQMC5883Lのアドレスが ``0x0D`` になることもあります。
 
 .. image:: img/gy87-i2c.png
     :width: 100%
+

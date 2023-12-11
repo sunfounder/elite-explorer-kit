@@ -1,63 +1,59 @@
 .. _add_libraries:
 
-How to add libraries? (Important)
+ライブラリの追加方法（重要）
 ======================================
 
-A library is a collection of pre-written code or functions that extend the capabilities of the Arduino IDE. Libraries provide ready-to-use code for various functionalities, allowing you to save time and effort in coding complex features.
+ライブラリとは、Arduino IDEの機能を拡張するための事前に書かれたコードや関数の集まりです。ライブラリはさまざまな機能のための使いやすいコードを提供し、複雑な機能のコーディングにかかる時間と労力を節約することができます。
 
-
-Using the Library Manager
+ライブラリマネージャを使用する
 -------------------------------
 
-Many libraries are available directly through the Arduino Library Manager. You can access the Library Manager by following these steps:
+多くのライブラリはArduinoライブラリマネージャを通じて直接利用できます。ライブラリマネージャにアクセスするには、以下の手順に従ってください：
 
-#. In the **Library Manager**, you can search for the desired library by name or browse through different categories.
+#. **Library Manager** で、目的のライブラリを名前で検索するか、さまざまなカテゴリを閲覧します。
 
    .. note::
 
-      In projects where library installation is required, there will be prompts indicating which libraries to install. Follow the instructions provided, such as "The DHT sensor library library is used here, you can install it from the Library Manager." Simply install the recommended libraries as prompted.
+      ライブラリのインストールが必要なプロジェクトでは、どのライブラリをインストールするか指示があります。例えば、「ここではDHTセンサーライブラリを使用しますので、ライブラリマネージャからインストールしてください」といった指示に従ってください。指示されたライブラリをインストールしてください。
 
    .. image:: img/install_lib3.png
 
-#. Once you find the library you want to install, click on it and then click the **Install** button.
+#. インストールしたいライブラリを見つけたら、それをクリックして **Install** ボタンをクリックします。
 
    .. image:: img/install_lib2.png
 
-#. The Arduino IDE will automatically download and install the library for you.
+#. Arduino IDEは自動的にライブラリをダウンロードしてインストールします。
 
 .. _manual_install_lib:
 
-Manual Installation
+手動インストール
 -----------------------
 
-Some libraries are not available through the **Library Manager** and need to be manually installed. To install these libraries, follow these steps:
+**Library Manager** を通じて利用できないライブラリは、手動でインストールする必要があります。これらのライブラリをインストールするには、次の手順に従ってください：
 
-#. Open the Arduino IDE and go to **Sketch** -> **Include Library** -> **Add .ZIP Library**.
+#. Arduino IDEを開き、 **Sketch** -> **Include Library** -> **Add .ZIP Library** に進みます。
 
    .. image:: img/add_lib_zip.png
 
-#. Navigate to the directory where the library files are located, such as the ``elite-explorer-kit-main/library/`` folder, and select the library file and click **Open**.
+#. ライブラリファイルがあるディレクトリ（例えば ``elite-explorer-kit-main/library/`` フォルダ）に移動し、ライブラリファイルを選択して **Open** をクリックします。
 
    .. image:: img/rfid_choose.png
 
-#. After a short while, you will receive a notification indicating a successful installation.
+#. しばらくすると、インストールが成功したことを示す通知が表示されます。
 
    .. image:: img/rfid_success.png
 
-#. Repeat the same process to add other libraries.
+#. 同じプロセスを繰り返して、他のライブラリを追加します。
 
-
-Library Location
+ライブラリの場所
 -----------------------
 
-The libraries installed using either of the above methods can be found in the default library directory of the Arduino IDE, which is usually located at ``C:\Users\xxx\Documents\Arduino\libraries``.
+上記の方法のいずれかを使用してインストールされたライブラリは、Arduino IDEのデフォルトライブラリディレクトリにあります。通常は ``C:\Users\xxx\Documents\Arduino\libraries`` にあります。
 
-If your library directory is different, you can check it by going to **File** -> **Preferences**.
+ライブラリディレクトリが異なる場合は、 **File** -> **Preferences** に進んで確認できます。
 
 .. image:: img/install_lib1.png
 
-
-
-**Reference**
+**参考文献**
 
 * |link_install_arduino_lib|

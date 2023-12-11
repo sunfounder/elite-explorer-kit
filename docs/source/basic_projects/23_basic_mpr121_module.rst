@@ -6,37 +6,37 @@ MPR121
 .. https://docs.sunfounder.com/projects/vincent-kit/en/latest/arduino/2.24_mpr121_module.html#ar-mpr121
 
 
-Overview
+概要
 ---------------
 
-In this lesson, you will learn how to use MPR121. It's a good option when you want to add a lot of touch switches to your project. The electrode of MPR121 can be extended with a conductor. If you connect a wire to a banana, you can turn the banana into a touch switch, thus realizing projects such as fruit piano.
+このレッスンでは、MPR121の使用方法を学びます。プロジェクトに多くのタッチスイッチを追加したい場合に適しています。MPR121の電極は導体で延長できます。ワイヤーをバナナに接続すれば、バナナをタッチスイッチに変えることができ、フルーツピアノのようなプロジェクトを実現できます。
 
-Required Components
+必要なコンポーネント
 -------------------------
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全セットを購入するのが便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名称	
+        - このキットのアイテム数
+        - リンク
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネント紹介
+        - 購入リンク
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -47,32 +47,32 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_mpr121`
         - \-
 
-Wiring
+配線図
 ----------------------
 
-In this example, we insert MPR121 into the breadboard. Get the GND of MPR121 connected to GND, 3.3V to 3V3, IRQ to the digital pin 2, SCL to the pin SCL(A5), and SDA to the pin SDA(A4). There are 12 electrodes for touch sensing. 
+この例では、MPR121をブレッドボードに挿入します。MPR121のGNDをGNDに、3.3Vを3V3に、IRQをデジタルピン2に、SCLをピンSCL(A5)に、SDAをピンSDA(A4)に接続します。タッチセンシング用の12個の電極があります。
 
 .. note::
-    MPR121 is powered by 3.3V, not 5V.
+    MPR121は3.3Vで動作します。5Vではありません。
 
 .. image:: img/23-mpr121_bb.png
     :align: center
     :width: 70%
 
-Schematic Diagram
+回路図
 ----------------------
 
 .. image:: img/23_mpr121_schematic.png
    :align: center
    :width: 70%
 
-Code
+コード
 --------
 
 .. note::
 
-    * You can open the file ``23-mpr121.ino`` under the path of ``elite-explorer-kit-main\basic_project\23-mpr121`` directly.
-    * The ``Adafruit MPR121`` library is used here, you can install it from the **Library Manager**.
+    * ファイル ``23-mpr121.ino`` を ``elite-explorer-kit-main\basic_project\23-mpr121`` のパスで直接開くことができます。
+    * ここでは ``Adafruit MPR121`` ライブラリを使用しています。 **Library Manager** からインストールできます。
 
         .. image:: img/22_mpr121_lib.png
             :align: center
@@ -81,25 +81,26 @@ Code
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/de0aa390-de85-43ab-87f7-f380c67c65e8/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After uploading the code to the UNO board, the touch state of pins MPR121 "1" and "0" will be recorded in a 12-bit boolean array. This array will then be printed on the serial monitor.
+UNOボードにコードをアップロードした後、MPR121のピン「1」と「0」のタッチ状態が12ビットのブール配列に記録されます。この配列はシリアルモニターに表示されます。
 
-Code Analysis
+
+コード解析
 --------------------
-This code facilitates communication and operation of the MPR121 touch sensor. It can detect the status of touch electrodes and print information about touched or released electrodes on the serial interface. If detailed sensor data is required, the relevant code can be uncommented.
+このコードは、MPR121タッチセンサーの通信と操作を容易にします。タッチ電極の状態を検出し、タッチされたり解放されたりした電極に関する情報をシリアルインターフェースに出力することができます。詳細なセンサーデータが必要な場合は、関連するコードのコメントを外すことができます。
 
-Here's an analysis of the code:
+コードの分析は以下の通りです：
 
-#. Import Libraries:
+#. ライブラリのインポート：
 
    .. code-block:: arduino
 
        #include <Wire.h>
        #include "Adafruit_MPR121.h"
 
-   * ``Wire.h``: Used for I2C communication.
-   * ``Adafruit_MPR121.h``: Adafruit's MPR121 library for operating the MPR121 touch sensor.
+   * ``Wire.h``：I2C通信用。
+   * ``Adafruit_MPR121.h``：AdafruitのMPR121ライブラリで、MPR121タッチセンサーの操作に使用します。
 
-#. Define the ``_BV`` Macro:
+#. ``_BV`` マクロの定義：
 
    .. code-block:: arduino
 
@@ -107,19 +108,19 @@ Here's an analysis of the code:
        #define _BV(bit) (1 << (bit)) 
        #endif
    
-   ``_BV(bit)`` defines a macro that converts a given bit into the corresponding binary value, similar to 1 << bit.
+   ``_BV(bit)`` は、指定されたビットを対応するバイナリ値に変換するマクロを定義します。これは1 << bitに似ています。
 
-#. Initialize ``Adafruit_MPR121`` Class Instance:
+#. ``Adafruit_MPR121`` クラスインスタンスの初期化：
 
    .. code-block:: arduino
 
        Adafruit_MPR121 cap = Adafruit_MPR121();
 
-   Create an instance of the ``Adafruit_MPR121`` class named ``cap``. The ``cap`` object will be used to communicate with and operate the MPR121 touch sensor.
+   ``Adafruit_MPR121`` クラスのインスタンスを ``cap`` として作成します。 ``cap`` オブジェクトは、MPR121タッチセンサーとの通信および操作に使用されます。
 
-#. ``setup()`` Function:
+#. ``setup()`` 関数：
 
-   Initialize serial communication at a baud rate of 9600. then initialize the MPR121 touch sensor with the default I2C address of 0x5A. If initialization fails, print an error message and enter an infinite loop.
+   9600ボーレートでシリアル通信を初期化し、デフォルトのI2Cアドレス0x5AでMPR121タッチセンサーを初期化します。初期化に失敗した場合は、エラーメッセージを出力し、無限ループに入ります。
 
    .. code-block:: arduino
 
@@ -141,21 +142,21 @@ Here's an analysis of the code:
            Serial.println("MPR121 found!");
        }
 
-#. ``loop()`` Function:
+#. ``loop()`` 関数：
 
-   * Obtain the current touch status, returned as a 16-bit integer.
+   * 現在のタッチ状態を取得し、16ビットの整数として返します。
 
 
      .. code-block:: arduino
 
          currtouched = cap.touched();
 
-   * Iterate through the status of 12 electrodes (numbered from 0 to 11).
+   * 12個の電極（0から11までの番号）の状態を反復処理します。
 
      .. code-block:: arduino
 
          for (uint8_t i=0; i<12; i++) {
-             // it if *is* touched and *wasnt* touched before, alert!
+            // it if *is* touched and *wasnt* touched before, alert!
              if ((currtouched & _BV(i)) && !(lasttouched & _BV(i)) ) {
                  Serial.print(i); Serial.println(" touched");
              }
@@ -165,16 +166,16 @@ Here's an analysis of the code:
              }
          }
 
-     * If an electrode is touched and wasn't touched before, print "x touched," where x is the electrode number.
-     * If an electrode was touched before but is not touched now, print "x released."
+     * もし電極がタッチされ、以前にタッチされていなかった場合、「x touched」と出力します。ここで、xは電極の番号です。
+     * もし電極が以前タッチされていたが、現在タッチされていない場合、「x released」と出力します。
 
-   * Update ``lasttouched`` to store the current touch status for comparison in the next iteration.
+   * ``lasttouched`` を更新し、次の反復で比較するための現在のタッチ状態を格納します。
 
      .. code-block:: arduino
 
          lasttouched = currtouched;
 
-   * Debugging Information (Optional Section):
+   * デバッグ情報（オプションのセクション）：
 
      .. code-block:: arduino
 

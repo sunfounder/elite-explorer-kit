@@ -1,37 +1,37 @@
 .. _iot_arduino_cloud:
 
-Arduino IoT Cloud
+Arduino IoTクラウド
 ===========================
 
-This example demonstrates code for communicating with the Arduino IoT Cloud. Its purpose is to connect to the Arduino IoT Cloud and interact with cloud variables. Here, we send the temperature values read from the DHT11 sensor to the Arduino IoT Cloud, allowing us to monitor it from the cloud.
+この例は、Arduino IoTクラウドとの通信に関するコードをデモンストレーションしています。その目的は、Arduino IoTクラウドに接続し、クラウド変数とのやり取りを行うことです。ここでは、DHT11センサーから読み取った温度値をArduino IoTクラウドに送信し、クラウドからモニタリングすることができます。
 
 .. image:: img/02_cloud.png
 
-**Required Components**
+**必要なコンポーネント**
 
-In this project, we need the following components. 
+このプロジェクトには以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全体のキットを購入すると便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名称	
+        - このキットのアイテム数
+        - リンク
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから別々に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネント紹介
+        - 購入リンク
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -42,7 +42,7 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_dht11`
         - |link_humiture_buy|
 
-**Wiring**
+**配線図**
 
 .. image:: img/02_arduino_iot_cloud_bb.png
     :width: 90%
@@ -53,137 +53,137 @@ You can also buy them separately from the links below.
     <br/>
 
 
-**Schematic**
+**回路図**
 
 .. image:: img/02_arduino_iot_cloud_schematic.png
   :width: 40%
   :align: center
 
 
-**Install Arduino Create Agent**
+**Arduino Create Agentのインストール**
 
-1. Visit the address https://create.arduino.cc/getting-started/plugin/welcome.
+1. https://create.arduino.cc/getting-started/plugin/welcome にアクセスします。
 
-2. Click START.
+2. STARTをクリックします。
 
   .. image:: img/02_install_agent_2.png
      :width: 95%
 
-3. Choose the version that suits your computer, and it will download an installation package.
+3. お使いのコンピュータに適したバージョンを選び、インストールパッケージがダウンロードされます。
 
   .. image:: img/02_install_agent_3.png
      :width: 95%
 
-4. Install the agent.
+4. エージェントをインストールします。
 
   .. image:: img/02_install_agent_4.png
     :width: 85%
 
-5. After installation, go back to your browser, and you will see the following interface.
+5. インストール後、ブラウザに戻ると、次のインターフェイスが表示されます。
 
   .. image:: img/02_install_agent_5.png
      :width: 95%
 
-6. Click NEXT, and then you can GO TO the web editor.
+6. NEXTをクリックし、ウェブエディタに進むことができます。
 
   .. image:: img/02_install_agent_6.png
      :width: 95%
 
-**Using Arduino IoT Cloud**
+**Arduino IoTクラウドの使用**
 
-1. First, you need to log in or register with Arduino. 
+1. まず、Arduinoにログインするか登録する必要があります。
 
   https://login.arduino.cc/login
 
-2. Once logged in, click on IoT Cloud in the upper right corner.
+2. ログインしたら、右上のIoT Cloudをクリックします。
 
    .. image:: img/02_iot_cloud_2.png
 
 
-3. Create a new thing.
+3. 新しい「thing」を作成します。
 
    .. image:: img/02_iot_cloud_3.png
   
-4. Associate your device.
+4. デバイスを関連付けます。
 
    .. image:: img/02_iot_cloud_4.png
 
 
-5. Set up a new device.
+5. 新しいデバイスを設定します。
 
    .. image:: img/02_iot_cloud_5.png
 
 
-6. Choose your Arduino board.
+6. Arduinoボードを選択します。
  
    .. image:: img/02_iot_cloud_6.png
 
 
-7. Wait for a moment, and your UNO R4 WiFi will be detected. Continue by clicking configure.
+7. 少し待ち、UNO R4 WiFiが検出されると、設定をクリックして続行します。
  
    .. image:: img/02_iot_cloud_7.png
 
  
-8. Give your device a name.
+8. デバイスに名前を付けます。
 
   .. image:: img/02_iot_cloud_8.png
 
 
-9. Make your device IoT-ready, and remember to save the secret key.
+9. デバイスをIoT対応にし、シークレットキーを保存しておいてください。
 
   .. image:: img/02_iot_cloud_9.png
 
 
-10. Wait for a few minutes.
+10. 数分待ちます。
 
   .. image:: img/02_iot_cloud_10.png
 
 
-.. 5. Select Arduino UNO R4 WiFi.
+.. 5. Arduino UNO R4 WiFiを選択します。
 
 .. .. image:: img/sp231016_164654.png
 
-11. Configure WiFi.
+11. WiFiを設定します。
 
   .. image:: img/02_iot_cloud_11.png
 
 
-12. Here you will need to enter your WiFi password and secret key.
+12. ここでWiFiのパスワードとシークレットキーを入力する必要があります。
 
   .. image:: img/02_iot_cloud_12.png
 
 
-13. Add a variable.
+13. 変数を追加します。
 
   .. image:: img/02_iot_cloud_13.png
 
 
-14. Here, we want to display the temperature in IoT Cloud, so we configure a read-only float variable.
+14. ここでは、IoT Cloudに温度を表示したいので、読み取り専用のfloat変数を設定します。
 
   .. image:: img/02_iot_cloud_14.png
 
 
-15. After completion, go to the sketch.
+15. 完了したら、スケッチに進みます。
 
   .. image:: img/02_iot_cloud_15.png
 
 
-16. Open the full editor.
+16. フルエディターを開きます。
 
   .. image:: img/02_iot_cloud_16.png
 
 
-17. Click on Libraries on the right side, then Library Manager.
+17. 右側のライブラリをクリックし、次にライブラリマネージャーをクリックします。
 
   .. image:: img/02_iot_cloud_17.png
 
 
-18. Search for the DHT sensor library and check it.
+18. DHTセンサーライブラリを検索し、チェックします。
 
   .. image:: img/02_iot_cloud_18.png
 
 
-19. Now, we need to edit the code. You can see that the editor has already prepared the IoT Cloud-related code for you. You just need to add the specific functionality you need. In this example, we added code to read the temperature using the DHT11 sensor.
+19. 今、コードを編集する必要があります。エディターは既にIoT Cloud関連のコードを用意しています。必要な特定の機能を追加するだけです。この例では、DHT11センサーを使用して温度を読み取るコードを追加しました。
 
   .. code-block::
       :emphasize-lines: 1,2,3,22,23,24,32,55,56
@@ -247,60 +247,61 @@ You can also buy them separately from the links below.
           
       }
  
-20. Upload the code. You may be prompted to update; follow the prompts to complete.
+20. コードをアップロードします。更新を促されることがありますので、指示に従って完了させてください。
 
   .. image:: img/02_iot_cloud_20.png
 
 
-21. Return to IoT CLOUD.
+21. IoT CLOUDに戻ります。
 
   .. image:: img/02_iot_cloud_21.png
 
 
-22. Click on the menu in the top left corner.
+22. 左上のメニューをクリックします。
   
   .. image:: img/02_iot_cloud_22.png
 
 
-23. Click on the dashboard.
+23. ダッシュボードをクリックします。
   
   .. image:: img/02_iot_cloud_23.png
 
 
-24. Create dashboard.
+24. ダッシュボードを作成します。
   
   .. image:: img/02_iot_cloud_24.png
 
 
-25. There are many widgets available; here, we choose a value widget for displaying the temperature.
+25. 多くのウィジェットが利用可能ですが、ここでは温度表示用の値ウィジェットを選択します。
 
   .. image:: img/02_iot_cloud_25.png
 
 
-26. After clicking, a widget settings interface will appear, where you can connect the widget to the cloud variable you created earlier.
+26. クリックすると、ウィジェット設定インターフェイスが表示され、以前に作成したクラウド変数にウィジェットを接続できます。
 
   .. image:: img/02_iot_cloud_26.png
 
 
-27. Now, you can view the sensor readings on Arduino IoT Cloud.
+27. これで、Arduino IoTクラウドでセンサーの読み取り値を表示できます。
 
   .. image:: img/02_iot_cloud_27.png
 
 
-**How it works?**
+**どのように動作するのか？**
 
-After configuring the IoT Cloud (device setup, network setup, creating cloud variables), you will notice that the sketch on the cloud updates automatically. So, most of the code is already written for you.
+IoTクラウド（デバイスの設定、ネットワークの設定、クラウド変数の作成）を設定すると、クラウド上のスケッチが自動的に更新されることに気付くでしょう。そのため、ほとんどのコードはすでに書かれています。
 
-Open the editor, and you will see that this sketch contains four files:
+エディタを開くと、このスケッチには4つのファイルが含まれていることがわかります：
 
-``main.ino``: Used to initialize the Arduino and perform the main loop tasks. Additionally, it includes logic for connecting and communicating with the Arduino IoT Cloud.
+``main.ino``：Arduinoを初期化し、メインループタスクを実行するために使用されます。また、Arduino IoTクラウドとの接続と通信のロジックが含まれています。
 
-``thingProperties.h``: This file is used to define variables and functions in the Arduino IoT Cloud. It contains declarations of cloud variables and their associated callback functions. In the provided code, it is used to initialize cloud properties (e.g., the temperature variable) and connect to the Arduino IoT Cloud.
+``thingProperties.h``：このファイルは、Arduino IoTクラウド内の変数や関数を定義するために使用されます。クラウド変数とそれに関連するコールバック関数の宣言が含まれています。提供されたコードでは、クラウドプロパティの初期化（例：温度変数）およびArduino IoTクラウドへの接続に使用されます。
 
-``Secret``: Used to store sensitive or private information, such as WiFi passwords or API keys. This sensitive information is typically not exposed directly in the code but is stored in the Secret file to enhance security.
+``Secret``：WiFiパスワードやAPIキーなどの機密情報やプライベート情報を保存するために使用されます。この機密情報は通常、コード内に直接露出されることはなく、セキュリティ向上のためにSecretファイルに保存されます。
 
-``ReadMe.adoc``: Contains project documentation or other relevant information for easier understanding and use of the project. This file usually does not contain executable code but rather documents and descriptive information.
+``ReadMe.adoc``：プロジェクトの理解と使用を容易にするためのプロジェクト文書やその他の関連情報が含まれています。このファイルは通常、実行可能なコードを含むのではなく、ドキュメントや説明情報を含んでいます。
 
-We need to add some code for the DHT11 sensor. This code is identical to what you would use on your local IDE. The only difference is that you need to assign the value read from the DHT11 to the cloud variable ``temperature``.
+DHT11センサー用のコードを追加する必要があります。このコードは、ローカルIDEで使用するコードと同じです。唯一の違いは、DHT11から読み取った値をクラウド変数 ``temperature`` に割り当てる必要があることです。
 
-(Note: You should never modify ``thingProperties.h`` and ``Secret``. They will be modified when you make changes using the Thing editor.)
+（注： ``thingProperties.h`` と ``Secret`` を変更してはいけません。これらは、Thingエディタを使用して変更を加えるときに修正されます。）
+

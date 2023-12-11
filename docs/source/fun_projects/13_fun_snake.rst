@@ -1,43 +1,43 @@
 .. _fun_snake:
 
-GAME - Snake
+ゲーム - スネーク
 =========================
 
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/videos/fun_projects/13_fun_snake.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      お使いのブラウザーはビデオタグをサポートしていません。
    </video>
 
-This example implements the classic Snake game on an 8x12 LED matrix using the R4 Wifi board.
-Players control the snake's direction using a dual-axis joystick.
+この例では、R4 Wifiボードを使用して8x12のLEDマトリックス上でクラシックなスネークゲームを実装しています。
+プレイヤーは二軸ジョイスティックを使ってスネークの方向を制御します。
 
-**Required Components**
+**必要なコンポーネント**
 
-In this project, we need the following components. 
+このプロジェクトでは、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+一式を購入するのが便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名称	
+        - このキットのアイテム数
+        - リンク
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネント紹介
+        - 購入リンク
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -46,75 +46,76 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_joystick`
         - |link_joystick_buy|
 
-**Wiring**
+**配線図**
 
 .. image:: img/13_snake_bb.png
     :width: 80%
     :align: center
 
 
-**Schematic**
+**回路図**
 
 .. image:: img/13_snake_schematic.png
    :width: 80%
    :align: center
 
 
-**Code**
+**コード**
 
 .. note::
 
-    * You can open the file ``13_snake.ino`` under the path of ``elite-explorer-kit-main\fun_project\13_snake`` directly.
-    * Or copy this code into Arduino IDE.
+    * ファイル ``13_snake.inoo`` は、パス ``elite-explorer-kit-main\fun_project\13_snakeo`` で直接開けます。
+    * または、このコードをArduino IDEにコピーしてください。
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/df370ec5-d1b5-4ae7-b3b9-e97e0eb9a872/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-**How it works?**
+**どのように動作するのか？**
 
-Here's a detailed explanation of the code:
+コードの詳細な説明はこちらです：
 
-1. Variable Definition and Initialization
+1. 変数の定義と初期化
 
-   Import the ``Arduino_LED_Matrix`` library for LED matrix operations.
-   matrix is an instance of the LED matrix.
-   ``frame`` and ``flatFrame`` are arrays used to store and process pixel information on the screen.
-   The snake is represented as an array of ``Point`` structures, where each point has an x and y coordinate.
-   food represents the position of the food.
-   ``direction`` is the current movement direction of the snake.
+   LEDマトリックス操作のための ``Arduino_LED_Matrix`` ライブラリをインポートします。
+   matrixはLEDマトリックスのインスタンスです。
+   ``frame`` と ``flatFrame`` は、画面上のピクセル情報を格納・処理するための配列です。
+   スネークは、各ポイントがx座標とy座標を持つ ``Point`` 構造体の配列として表されます。
+   foodは食べ物の位置を表します。
+   ``direction`` はスネークの現在の移動方向です。
 
 2. ``setup()`` 
 
-   Initialize the X and Y axes of the joystick as inputs.
-   Start the LED matrix.
-   Initialize the snake's starting position in the center of the screen.
-   Generate the initial position of the food randomly.
+   ジョイスティックのX軸とY軸を入力として初期化します。
+   LEDマトリックスを起動します。
+   スネークの開始位置を画面の中央で初期化します。
+   食べ物の初期位置をランダムに生成します。
 
 3. ``loop()`` 
 
-   Determine the snake's direction based on the readings from the joystick.
-   Move the snake.
-   Check if the snake's head collides with the food. 
-   If it does, the snake grows, and new food is generated at a new location.
-   Check if the snake collides with itself. If it does, reset the game.
-   Draw the current game state (snake and food positions) on the LED matrix.
-   Add a delay to control the game's speed.
+   ジョイスティックからの読み取りに基づいてスネークの方向を決定します。
+   スネークを移動させます。
+   スネークの頭が食べ物に衝突するかどうかを確認します。
+   衝突した場合、スネークは成長し、新しい位置に新しい食べ物が生成されます。
+   スネークが自分自身と衝突するかどうかを確認します。衝突した場合、ゲームをリセットします。
+   LEDマトリックス上に現在のゲーム状態（スネークと食べ物の位置）を描きます。
+   ゲームの速度を制御するために遅延を加えます。
 
 4. ``moveSnake()`` 
 
-   Move each part of the snake to the position of the previous part, starting from the tail and moving to the head.
-   Move the snake's head based on its direction.
+   尾から頭にかけて、スネークの各部分を前の部分の位置に移動させます。
+   その方向に基づいてスネークの頭を移動させます。
 
 5. ``generateFood()`` 
 
-   Generate all possible food positions.
-   Check if each position overlaps with any part of the snake. If it doesn't overlap, the position is considered a possible food location.
-   Randomly select a possible food location.
+   可能なすべての食べ物の位置を生成します。
+   各位置がスネークのいずれかの部分と重なっていないかを確認します。重なっていない場合、その位置は可能な食べ物の位置とみなされます。
+   可能な食べ物の位置をランダムに選択します。
 
 6. ``drawFrame()`` 
 
-   Clear the current frame.
-   Draw the snake and food on the frame.
-   Flatten the two-dimensional frame array into a one-dimensional array (flatFrame) and load it onto the LED matrix.
+   現在のフレームをクリアします。
+   スネークと食べ物をフレーム上に描きます。
+   2次元のフレーム配列を1次元の配列（flatFrame）に平坦化し、LEDマトリックスにロードします。
+

@@ -1,18 +1,17 @@
-WiFi-Controlled LED (Access Point)
+WiFi制御LED（アクセスポイント）
 ---------------------------------------------------
 
-This project allows you to control an LED light through a web interface. The Arduino board acts as a WiFi access point, creating its own local network that you can connect to with a web browser. Once connected, you can navigate to the device's IP address using the web browser, where you'll find options to turn an LED (connected to the board's pin 13) on and off. The project provides real-time feedback on the LED status via the Serial Monitor, making it easier to debug and understand the flow of operations.
+このプロジェクトでは、Webインターフェースを通じてLEDライトを制御することができます。ArduinoボードはWiFiアクセスポイントとして機能し、独自のローカルネットワークを作成します。そのネットワークにWebブラウザで接続すると、ボードのピン13に接続されたLEDをオン/オフするオプションが表示されます。プロジェクトは、シリアルモニターを通じてLEDの状態をリアルタイムでフィードバックし、デバッグと操作の流れを容易に理解できるようにします。
 
-1. Upload the code
+1. コードのアップロード
 ========================
 
-Open the ``01-wifi_ap.ino`` file under the path of ``elite-explorer-kit-main\r4_new_feature\01-wifi_ap``, or copy this code into **Arduino IDE**.
+``elite-explorer-kit-main\r4_new_feature\01-wifi_ap`` のパス下にある ``01-wifi_ap.ino`` ファイルを開くか、このコードを **Arduino IDE** にコピーします。
 
 .. note:: 
-      Wi-Fi® support is enabled via the built-in ``WiFiS3`` library that is shipped with the Arduino UNO R4 Core. Installing the core automatically installs the ``WiFiS3`` library.
+      Wi-Fi®サポートは、Arduino UNO R4 Coreに付属の内蔵 ``WiFiS3`` ライブラリを通じて有効になります。コアをインストールすると、 ``WiFiS3`` ライブラリも自動的にインストールされます。
 
-
-You still need to create or modify ``arduino_secrets.h``, replace ``SECRET_SSID`` and ``SECRET_PASS`` with the name and password of your WiFi access point. The file should contain:
+``arduino_secrets.h`` を作成または変更し、 ``SECRET_SSID`` と ``SECRET_PASS`` をWi-Fiアクセスポイントの名前とパスワードに置き換えます。ファイルには次のように記載されている必要があります：
 
 .. code:: arduino
 
@@ -28,25 +27,24 @@ You still need to create or modify ``arduino_secrets.h``, replace ``SECRET_SSID`
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/videos/new_feature_projects/wifi.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      お使いのブラウザではビデオタグはサポートされていません。
    </video>
 
-
-2. Code explanation
+2. コードの説明
 ========================
 
-#. Importing Required Libraries
+#. 必要なライブラリのインポート
 
-   Importing the ``WiFiS3`` library for WiFi functionalities and ``arduino_secrets.h`` for sensitive data like passwords.
+   Wi-Fi機能のための ``WiFiS3`` ライブラリと、パスワードなどの機密データのための ``arduino_secrets.h`` をインポートします。
   
    .. code-block:: arduino
    
      #include "WiFiS3.h"
      #include "arduino_secrets.h"
 
-#. Configuration and Variable Initialization
+#. 設定と変数の初期化
 
-   Define WiFi SSID, password, and key index along with the LED pin and WiFi status.
+   Wi-Fi SSID、パスワード、キーインデックスを定義すると共に、LEDピンとWi-Fiステータスを初期化します。
   
    .. code-block:: arduino
    
@@ -57,9 +55,9 @@ You still need to create or modify ``arduino_secrets.h``, replace ``SECRET_SSID`
      int status = WL_IDLE_STATUS;
      WiFiServer server(80);
 
-#. ``setup()`` Function
+#. ``setup()`` 関数
 
-   Initialize the serial communication and configure the WiFi module.
+   シリアル通信を初期化し、Wi-Fiモジュールを設定します。
    
    .. code-block:: arduino
    
@@ -73,7 +71,7 @@ You still need to create or modify ``arduino_secrets.h``, replace ``SECRET_SSID`
        server.begin();
      }
 
-   We also check if the firmware version of uno R4 wifi is up to date. If it is not the latest version, a prompt for upgrade will be displayed. You can refer to :ref:`update_firmware` for firmware upgrade.
+   また、uno R4 wifiのファームウェアが最新であるかどうかを確認します。最新版でない場合は、アップグレードの促進が表示されます。ファームウェアのアップグレードについては、 :ref:`update_firmware` を参照してください。
 
    .. code-block:: arduino
 
@@ -84,26 +82,26 @@ You still need to create or modify ``arduino_secrets.h``, replace ``SECRET_SSID`
       }
       ...
 
-   You may want to modify the following code in order to be able to change the default IP of Arduino.
+   ArduinoのデフォルトIPを変更するために、以下のコードを修正することも検討してください。
 
    .. code-block:: arduino
       
       WiFi.config(IPAddress(192,48,56,2));
    
 
-#. Main ``loop()`` Function
+#. メイン ``loop()`` 関数
 
-   The ``loop()`` function in the Arduino code performs several key operations, specifically:
-   
-   1. Checking if a device has connected or disconnected from the access point.
-   2. Listening for incoming clients who make HTTP requests.
-   3. Reading client data and executing actions based on that data—like turning an LED on or off.
-   
-   Here, let's break down the ``loop()`` function to make these steps more understandable.
-   
-   #. Checking WiFi Status
+   Arduinoのコードにおける ``loop()`` 関数はいくつかの重要な操作を行います。具体的には以下のような操作です：
 
-      The code first checks if the WiFi status has changed. If a device has connected or disconnected, the serial monitor will display the information accordingly.
+   1. アクセスポイントへのデバイスの接続または切断のチェック。
+   2. HTTPリクエストを行うクライアントの受信待ち。
+   3. クライアントのデータの読み取りと、そのデータに基づいたアクションの実行（例えば、LEDのオン/オフ）。
+   
+   ここで、これらのステップをより理解しやすくするために、 ``loop()`` 関数を詳しく見ていきましょう。
+   
+   #. Wi-Fiステータスのチェック
+
+      コードは最初にWi-Fiのステータスが変わったかどうかをチェックします。デバイスが接続または切断された場合、シリアルモニターにそれに応じた情報が表示されます。
    
       .. code-block:: arduino
    
@@ -116,17 +114,17 @@ You still need to create or modify ``arduino_secrets.h``, replace ``SECRET_SSID`
           }
         }
    
-   #. Listening for Incoming Clients
+   #. クライアントの受信待ち
 
-      ``WiFiClient client = server.available();`` waits for incoming clients.
+      ``WiFiClient client = server.available();`` はクライアントの受信待ちを行います。
      
       .. code-block:: arduino
    
         WiFiClient client = server.available();
    
-   #. Handling Client Requests
+   #. クライアントリクエストの処理
 
-      Listens for incoming clients and serves them the HTML web page. When a user clicks on the "Click here to turn the LED on" or "Click here to turn the LED off" links on the served webpage, an HTTP GET request is sent to the Arduino server. Specifically, the URLs "http://yourAddress/H" for turning on the LED and "http://yourAddress/L" for turning it off will be accessed.
+      クライアントの受信待ちを行い、HTMLウェブページを提供します。ユーザーが提供されたウェブページ上の「Click here to turn the LED on」または「Click here to turn the LED off」というリンクをクリックすると、ArduinoサーバーにHTTP GETリクエストが送信されます。具体的には、LEDを点灯させるためのURL「http://yourAddress/H」と、LEDを消灯させるためのURL「http://yourAddress/L」にアクセスされます。
   
       .. code-block:: arduino
 
@@ -141,7 +139,7 @@ You still need to create or modify ``arduino_secrets.h``, replace ``SECRET_SSID`
           // ...
         }
    
-      The Arduino code listens for these incoming GET requests. When it detects ``GET /H`` at the end of an incoming line of text (HTTP header), it sets the LED connected to pin 13 to HIGH, effectively turning it on. Similarly, if it detects ``GET /L``, it sets the LED to LOW, turning it off.
+      ArduinoのコードはこれらのGETリクエストを受信します。受信したテキスト行（HTTPヘッダー）の最後に ``GET /H`` と検出した場合、ピン13に接続されたLEDをHIGHに設定し、LEDを点灯させます。同様に、 ``GET /L`` と検出した場合、LEDをLOWに設定し、LEDを消灯させます。
      
       .. code-block:: arduino
    
@@ -172,6 +170,6 @@ You still need to create or modify ``arduino_secrets.h``, replace ``SECRET_SSID`
 
 
 
-**Reference**
+**参照**
 
 - |link_r4_wifi|

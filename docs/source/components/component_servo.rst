@@ -1,26 +1,27 @@
 .. _cpn_servo:
 
-Servo
+サーボ
 ===========
 
 .. image:: img/servo.png
     :align: center
 
-A servo is generally composed of the following parts: case, shaft, gear system, potentiometer, DC motor, and embedded board.  
+サーボは一般的に、ケース、シャフト、ギアシステム、ポテンショメーター、DCモーター、組込みボードで構成されています。
 
-It works like this: The microcontroller sends out PWM signals to the servo, and then the embedded board in the servo receives the signals through the signal pin and controls the motor inside to turn. As a result, the motor drives the gear system and then motivates the shaft after deceleration. The shaft and potentiometer of the servo are connected together. When the shaft rotates, it drives the potentiometer, so the potentiometer outputs a voltage signal to the embedded board. Then the board determines the direction and speed of rotation based on the current position, so it can stop exactly at the right position as defined and hold there.
+動作原理は以下の通りです：マイクロコントローラーからPWM信号がサーボに送られ、サーボ内の組込みボードが信号ピンを通して信号を受け取り、内蔵モーターの回転を制御します。その結果、モーターがギアシステムを駆動し、減速後にシャフトを動かします。サーボのシャフトとポテンショメーターは連動しています。シャフトが回転すると、ポテンショメーターを駆動し、ポテンショメーターが組込みボードに電圧信号を出力します。次にボードは現在の位置に基づいて回転の方向と速度を判断し、定義された正確な位置で停止し、そこで保持することができます。
 
 .. image:: img/servo_internal.png
     :align: center
 
-The angle is determined by the duration of a pulse that is applied to the control wire. This is called Pulse width Modulation. The servo expects to see a pulse every 20 ms. The length of the pulse will determine how far the motor turns. For example, a 1.5ms pulse will make the motor turn to the 90 degree position (neutral position).
-When a pulse is sent to a servo that is less than 1.5 ms, the servo rotates to a position and holds its output shaft some number of degrees counterclockwise from the neutral point. When the pulse is wider than 1.5 ms the opposite occurs. The minimal width and the maximum width of pulse that will command the servo to turn to a valid position are functions of each servo. Generally the minimum pulse will be about 0.5 ms wide and the maximum pulse will be 2.5 ms wide.
+角度は、制御線に適用されるパルスの持続時間によって決まります。これをパルス幅変調と呼びます。サーボは20 msごとにパルスを期待します。パルスの長さによって、モーターがどれだけ回転するかが決まります。例えば、1.5msのパルスはモーターを90度の位置（中立位置）に回転させます。
+1.5 ms未満のパルスがサーボに送られると、サーボはある位置に回転し、その出力シャフトを中立点から反時計回りに何度か回転して保持します。パルスが1.5 msより広い場合、逆のことが起こります。サーボが有効な位置に回転するための最小パルス幅と最大パルス幅は、各サーボによって異なります。一般に、最小パルスは約0.5 ms、最大パルスは2.5 msになるでしょう。
 
 .. image:: img/servo_duty.png
     :width: 600
     :align: center
 
-**Example**
+**例**
 
-* :ref:`basic_servo` (Basic Project)
-* :ref:`fun_smart_can` (Fun Project)
+* :ref:`basic_servo` (基本プロジェクト)
+* :ref:`fun_smart_can` (楽しいプロジェクト)
+

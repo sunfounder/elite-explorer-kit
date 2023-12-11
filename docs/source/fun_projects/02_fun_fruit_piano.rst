@@ -1,42 +1,42 @@
 .. _fun_fruit_piano:
 
-Fruit Piano
+フルーツピアノ
 ========================
 
 .. raw:: html
 
    <video loop controls style = "max-width:100%">
       <source src="../_static/videos/fun_projects/02_fun_fruit_piano.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      お使いのブラウザではビデオタグがサポートされていません。
    </video>
 
-This project is a simple fruit piano that reads input from an MPR121 touch sensor and plays music through a DAC. In other words, we've turned fruits into a keyboard, allowing you to play music by simply touching them.
+このプロジェクトは、MPR121タッチセンサーからの入力を読み取り、DACを通じて音楽を再生するシンプルなフルーツピアノです。言い換えれば、フルーツをキーボードに変え、それらに触れるだけで音楽を演奏できるようにしました。
 
-**Required Components**
+**必要なコンポーネント**
 
-In this project, we need the following components. 
+このプロジェクトには以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全体のキットを購入すると便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名称	
+        - このキットのアイテム数
+        - リンク
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから別々に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネント紹介
+        - 購入リンク
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -52,7 +52,7 @@ You can also buy them separately from the links below.
         - \-
 
 
-**Wiring**
+**配線図**
 
 .. image:: img/02_fruit_piano_bb.png
     :width: 80%
@@ -63,50 +63,51 @@ You can also buy them separately from the links below.
    <br/>
 
 
-**Schematic**
+**回路図**
 
 .. image:: img/02_fruit_piano_schematic.png
    :width: 100%
 
-**Code**
+**コード**
 
 .. note::
 
-    * You can open the file ``02_fruit_piano.ino`` under the path of ``elite-explorer-kit-main\fun_project\02_fruit_piano`` directly.
-    * Or copy this code into Arduino IDE.
+    * ファイル ``02_fruit_piano.ino`` を ``elite-explorer-kit-main\fun_project\02_fruit_piano`` のパスから直接開くことができます。
+    * または、このコードをArduino IDEにコピーしてください。
 
 .. note::
-   To install the library, use the Arduino Library Manager and search for **"Adafruit MPR121"** and install it.
+   ライブラリをインストールするには、Arduinoライブラリマネージャーを使用し、 **「Adafruit MPR121」** を検索してインストールしてください。
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/e677c06a-7af1-4846-a507-dd69c0c50aae/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-**How it works?**
+**どのように動作しますか？**
 
-Here's a step-by-step explanation of the code:
+以下はコードの詳細な説明です：
 
-1. Library and Object Initialization:
+1. ライブラリとオブジェクトの初期化：
 
-   Import the necessary libraries: ``Wire`` library (for I2C communication), ``Adafruit_MPR121`` library (for driving the MPR121), ``analogWave`` library (for generating analog waveforms), and ``pitches.h`` (which defines the frequencies of notes).
-   Create instances of ``Adafruit_MPR121`` and ``analogWave`` objects.
-   Define a notes array to store the note corresponding to each touch channel.
+   必要なライブラリをインポートします： ``Wire`` ライブラリ（I2C通信用）、 ``Adafruit_MPR121`` ライブラリ（MPR121のドライブ用）、 ``analogWave`` ライブラリ（アナログ波形の生成用）、および ``pitches.h`` （ノートの周波数を定義する）。
+   ``Adafruit_MPR121`` と ``analogWave`` のオブジェクトのインスタンスを作成します。
+   各タッチチャネルに対応するノートを格納するノート配列を定義します。
 
-2. ``setup()``:
+2. ``setup()``：
 
-   Initialize Serial communication and wait for it to start.
-   Check and initialize the MPR121; if not found, print an error message on the serial monitor and halt execution.
-   Initialize the ``analogWave`` object and set the initial sine wave frequency to 10Hz.
+   シリアル通信を初期化し、開始を待ちます。
+   MPR121をチェックし、初期化します。見つからない場合は、シリアルモニタにエラーメッセージを表示し、実行を停止します。
+   ``analogWave`` オブジェクトを初期化し、最初の正弦波周波数を10Hzに設定します。
 
-3. ``loop()``:
+3. ``loop()``：
 
-   Read the currently touched channels of the MPR121.
-   Iterate through all channels, check which one is touched, and play the corresponding note.
-   Add a small delay between each iteration.
+   MPR121の現在のタッチチャネルを読み取ります。
+   すべてのチャネルを反復処理し、どれがタッチされたかをチェックし、対応するノートを演奏します。
+   各反復の間にわずかな遅延を加えます。
 
-4. Play Note ``playNote()``:
+4. ノートを演奏する ``playNote()``：
 
-   The ``playNote`` function takes a ``note`` parameter and sets the DAC frequency to play the corresponding note.
-   Delay for a period to play the note.
-   Stop playing the note.
+   ``playNote`` 関数は ``note`` パラメータを取り、対応するノートを演奏するためにDACの周波数を設定します。
+   ノートを演奏する期間遅延を加えます。
+   ノートの演奏を停止します。
+

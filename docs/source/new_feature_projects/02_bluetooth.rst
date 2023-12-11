@@ -3,82 +3,82 @@
 Bluetooth
 ========================================
 
-Equipped with the ESP32 module, the UNO R4 WiFi board offers both Bluetooth® LE and Bluetooth® 5 functionalities, supporting speeds up to 2 Mbps. The ESP32 module comes with an integrated trace-antenna, eliminating the need for an external antenna to take advantage of the board's connectivity features.
+ESP32モジュールを搭載したUNO R4 WiFiボードは、Bluetooth® LEおよびBluetooth® 5の機能を提供し、最大2 Mbpsの速度に対応しています。ESP32モジュールには統合されたトレースアンテナが付いており、ボードの接続機能を利用するために外部アンテナを必要としません。
 
 .. note::
-    The trace antenna in ESP32 module is shared with the Bluetooth® module, which means that you cannot use Bluetooth® and Wi-Fi® at the same time.
+    ESP32モジュールのトレースアンテナはBluetooth®モジュールと共有されているため、Bluetooth®とWi-Fi®を同時に使用することはできません。
 
-Basic Concepts of BLE
+BLEの基本概念
 ++++++++++++++++++++++++
 
-**Bluetooth Low Energy (BLE)** is a low-power wireless communication technology, designed specifically for short-range interactions. Distinguished from classic Bluetooth, BLE focuses on power efficiency and rapid connection, making it an ideal choice for a range of applications including Internet of Things (IoT) devices and health monitoring equipment.
+**Bluetooth Low Energy (BLE)** は、短距離通信用に特化された低消費電力の無線通信技術です。従来のBluetoothとは異なり、BLEは省電力と迅速な接続に焦点を当てており、IoTデバイスや健康モニタリング機器など幅広いアプリケーションに理想的です。
 
-BLE communications rely on two key protocols: **GATT (Generic Attribute Profile)** and **GAP (Generic Access Profile)**. GATT is used for data exchange, while GAP is responsible for device discovery and connection.
+BLE通信は、 **GATT（Generic Attribute Profile）** と **GAP（Generic Access Profile）** の2つの主要なプロトコルに依存しています。GATTはデータ交換用に、GAPはデバイスの発見と接続用に使用されます。
 
 .. image:: img/02_ble_relationships.png
  :width: 100%
 
 
-Peripheral Devices (Typically GATT Servers)
+周辺機器（通常はGATTサーバー）
 --------------------------------------------------
 
-In the BLE network, **peripheral devices** primarily broadcast data to be discovered and accessed by central devices (typically acting as GATT clients). Such devices are usually sensors or small hardware like heart rate monitors, temperature sensors, or smart bulbs.
+BLEネットワークにおいて、 **周辺機器** は主にデータをブロードキャストし、中央デバイス（通常はGATTクライアントとして機能）によって発見およびアクセスされます。これらのデバイスは通常、センサーや心拍数モニター、温度センサー、スマート電球などの小型ハードウェアです。
 
-In the BLE communication model, peripheral devices often provide one or more **services**, each containing a set of **characteristics**. These services and characteristics collaboratively enable specific functionalities or use-cases, allowing central devices to read or manipulate relevant data.
+BLE通信モデルにおいて、周辺機器はしばしば1つ以上の **サービス** を提供し、各サービスは一連の **特性** を含んでいます。これらのサービスと特性は、特定の機能やユースケースを可能にし、中央デバイスが関連データを読み取ったり操作したりできるようにします。
 
-- **Services**
+- **サービス**
 
-  In BLE, Services act as high-level abstractions used to organize and encapsulate related Characteristics. Services in BLE can be categorized into standard services and custom services based on their origin and purpose.
+  BLEにおいて、サービスは関連する特性を整理し、カプセル化するために使用される高レベルの抽象化です。BLEのサービスは、その起源と目的に基づいて標準サービスとカスタムサービスに分類されます。
 
-  - Standard Services: Defined by the Bluetooth SIG (Bluetooth Special Interest Group), these are intended for specific functions. For example, the heart rate service for heart rate monitors, device information service providing manufacturer, model, and version details, and battery service indicating battery level and status.
-  - Custom Services: These are defined by developers or device manufacturers to meet the requirements of specific applications or devices. For instance, a smart home device manufacturer might define a custom service to control light color and brightness.
+  - 標準サービス：Bluetooth SIG（Bluetooth Special Interest Group）によって定義され、特定の機能のために意図されています。例えば、心拍数モニターのための心拍数サービス、製造元、モデル、バージョンの詳細を提供するデバイス情報サービス、バッテリーレベルとステータスを示すバッテリーサービスなどがあります。
+  - カスタムサービス：開発者やデバイスメーカーによって、特定のアプリケーションやデバイスの要件に合わせて定義されます。例えば、スマートホームデバイスメーカーは、ライトの色や明るさを制御するためのカスタムサービスを定義することがあります。
 
-- **Characteristics**
+- **特性**
 
-  Characteristics in BLE are the fundamental units of data exposed by the peripheral devices. They are enclosed within a Service and define various types of data and the operations that can be performed on them. Each characteristic is identified by a UUID and has a set of associated attributes like value, descriptor, and permissions.
+  BLEにおける特性は、周辺機器によって公開されるデータの基本単位です。これらはサービス内に含まれ、さまざまなタイプのデータとそれらに対する操作を定義します。各特性はUUIDによって識別され、値、記述子、権限などの関連属性を持ちます。
 
-  - Permissions: In BLE, each characteristic is associated with a set of permissions that dictate whether the characteristic is readable, writable, or notify-able. This helps in securing the data and defining how to interact with it.
+  - 権限：BLEでは、各特性は特性が読み取り可能、書き込み可能、通知可能であるかどうかを示す一連の権限と関連付けられています。これにより、データの保護と操作方法の定義が可能になります。
 
 - **UUID**
 
-  Services, characteristics, and descriptors are collectively identified as attributes, each having a unique UUID. The Bluetooth SIG has reserved a set of UUIDs for standard attributes. These UUIDs are usually represented as 16-bit or 32-bit identifiers in the BLE protocol for efficiency, rather than the 128 bits required for a full UUID. For instance, the Device Information service is represented by the short code 0x180A.
+  サービス、特性、記述子は、属性として集約され、それぞれがユニークなUUIDを持ちます。Bluetooth SIGは、標準属性のために一連のUUIDを予約しています。これらのUUIDは、BLEプロトコルでは効率のために通常16ビットまたは32ビットの識別子として表され、完全なUUIDに必要な128ビットよりも短くなります。例えば、デバイス情報サービスは短いコード0x180Aで表されます。
 
 
 
-Central Devices (Typically GATT Clients)
+中央デバイス（通常はGATTクライアント）
 --------------------------------------------------
 
-**Central devices** in the BLE network scan for nearby peripheral devices and establish connections to acquire or control data. These devices are generally more complex and feature-rich, such as smartphones, tablets, or specialized gateway hardware. They are responsible for discovering peripheral devices, connecting to them, and accessing or subscribing to services and characteristics offered by the peripherals to serve various applications or solve specific problems.
+BLEネットワークにおける **中央デバイス** は、近くの周辺デバイスをスキャンし、データを取得または制御するために接続を確立します。これらのデバイスは通常、スマートフォン、タブレット、または特化されたゲートウェイハードウェアなど、より複雑で機能豊富です。中央デバイスは、周辺デバイスの発見、接続、および周辺デバイスが提供するサービスや特性へのアクセスやサブスクリプションを担当し、さまざまなアプリケーションにサービスを提供したり、特定の問題を解決する役割を果たします。
 
-Central devices interact with characteristics in the following ways:
+中央デバイスは、以下の方法で特性と対話します：
 
-- **Read**: Request the peripheral device to send the current value of a characteristic. This is commonly used for characteristics that don't change often, like configuration settings or version numbers.
-- **Write**: Modify the value of a characteristic, typically used for command-like operations, like instructing a peripheral device to turn a motor on or off.
-- **Subscribe**: Request the peripheral device to continuously send updated values of a characteristic, eliminating the need for the central device to repeatedly request this data.
+- **読み取り**：周辺機器に特性の現在の値を送信するよう要求します。これは、頻繁に変更されない特性によく使用されます。例えば、設定やバージョン番号など。
+- **書き込み**：特性の値を変更します。これは、周辺機器にモーターのオン/オフのようなコマンド操作を指示するためによく使用されます。
+- **サブスクライブ**：周辺機器に特性の値を継続的に送信するよう要求します。これにより、中央デバイスがこのデータを繰り返し要求する必要がなくなります。
 
 
 
-Example: Bluetooth-Controlled LED
+例：Bluetooth制御LED
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-In this example, the Arduino acts as a peripheral device in a Bluetooth Low Energy (BLE) network. It offers a custom BLE service designed to control an onboard LED. This service includes a characteristic that can be read and written by a central device, such as a smartphone. Once the central device connects to the Arduino, it can change the LED state by writing to this characteristic. The Arduino's serial monitor displays debugging information, including the LED's current state and the MAC address of the connected central device.
+この例では、ArduinoはBluetooth Low Energy（BLE）ネットワーク内で周辺機器として機能します。オンボードLEDを制御するために設計されたカスタムBLEサービスを提供します。このサービスには、スマートフォンなどの中央デバイスによって読み書きが可能な特性が含まれています。中央デバイスがArduinoに接続すると、この特性に書き込むことでLEDの状態を変更できます。Arduinoのシリアルモニターは、LEDの現在の状態や接続された中央デバイスのMACアドレスなどのデバッグ情報を表示します。
 
-**Upload the Code**
+**コードのアップロード**
 
-Open the ``02-bluetooth.ino`` file located at ``elite-explorer-kit-main\r4_new_feature\02-bluetooth``, or paste the following code into your Arduino IDE.
+``02-bluetooth.ino`` ファイルを ``elite-explorer-kit-main\r4_new_feature\02-bluetooth`` から開くか、以下のコードをArduino IDEに貼り付けます。
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/44d76bb7-9f0a-4004-b3fe-9a88999c5f06/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-**Connect Arduino R4 via Bluetooth**
+**Bluetoothを介したArduino R4との接続**
 
-To interact with the services and characteristics created in this sketch, we should utilize a generic Bluetooth® Low Energy central app such as LightBlue (available for iOS and Android) or nRF Connect (for Android). 
+このスケッチで作成されたサービスと特性を操作するには、LightBlue（iOSおよびAndroid用）やnRF Connect（Android用）などの一般的なBluetooth® Low Energy中央アプリを利用する必要があります。
 
-Let's take LightBlue as an example to demonstrate how to control Arduino's LED via Bluetooth.
+例としてLightBlueを使用して、Bluetooth経由でArduinoのLEDを制御する方法を示します。
 
-1. Download the **LightBlue** app from the |link_lightblue_apple| (for iOS) or |link_lightblue_google| (for Android).
+1. **LightBlue** アプリを |link_lightblue_apple| （iOS用）または |link_lightblue_google| （Android用）からダウンロードします。
 
    .. image:: img/02_lightblue.png
     :width: 90%
@@ -87,9 +87,9 @@ Let's take LightBlue as an example to demonstrate how to control Arduino's LED v
 
       <br/><br/>
 
-2. Connecting Arduino with Your Smartphone via Bluetooth
+2. Bluetoothを介してスマートフォンとArduinoを接続
    
-   Navigate to your Bluetooth settings and locate the device named "UNO R4 LED". Proceed to connect to it.
+   Bluetooth設定に移動し、「UNO R4 LED」というデバイスを探して接続します。
 
    .. image:: img/02_connect.png
     :width: 90%
@@ -98,38 +98,38 @@ Let's take LightBlue as an example to demonstrate how to control Arduino's LED v
 
       <br/>
 
-3. Interacting with Arduino via Bluetooth Using LightBlue
+3. LightBlueを使用してBluetooth経由でArduinoと対話
 
-   Launch LightBlue and tap on the **Bonded** tab located at the bottom of the interface. Here, you'll see a list of BLE devices that your smartphone has previously paired with. Locate **UNO R4 LED** and tap **CONNECT**.
+   LightBlueを起動し、画面下部にある **Bonded** タブをタップします。ここでは、スマートフォンが以前にペアリングしたBLEデバイスのリストが表示されます。 **UNO R4 LED** を探して **CONNECT** をタップします。
 
    .. image:: img/02_lightblue_1.png
     :width: 90%
 
-   Once connected, you'll gain access to detailed information about the "UNO R4 LED" Bluetooth device. Scroll down to find "ledService (**19B10000-E8F2-537E-4F6C-D104768A1214**)" and "switchCharacteristic (**19B10001-E8F2-537E-4F6C-D104768A1214**)".
+   接続すると、「UNO R4 LED」Bluetoothデバイスの詳細情報にアクセスできます。「ledService（ **19B10000-E8F2-537E-4F6C-D104768A1214** ）」および「switchCharacteristic（ **19B10001-E8F2-537E-4F6C-D104768A1214** ）」を探します。
 
-   Tap on the 19B10001-E8F2-537E-4F6C-D104768A1214 Characteristic. You'll notice that this Characteristic is both readable and writable, allowing you to both read from and write to it.
+   19B10001-E8F2-537E-4F6C-D104768A1214特性をタップします。この特性は読み取りと書き込みが可能であり、読み取りおよび書き込みを行うことができます。
   
    .. image:: img/02_lightblue_2.png
     :width: 90%
 
-   Continue scrolling to the **WRITTEN VALUES** section. Input '**1**' into the text box to set the Characteristic value to 1, which will **turn on the onboard LED of the Arduino R4**.
+   そのまま **WRITTEN VALUES** セクションまでスクロールします。テキストボックスに「 **1** 」と入力すると、Characteristicの値が1に設定され、Arduino R4のオンボードLEDが **点灯します** 。
 
    .. image:: img/02_lightblue_3.png
     :width: 90%
-
-   Similarly, you can set this value to '**0**' to **turn off the onboard LED**.
+   
+   同様に、この値を「 **0** 」に設定すると、 **オンボードLED** をオフにすることができる。
 
    .. image:: img/02_lightblue_4.png
     :width: 90%
 
 
 
-**Code explanation**
+**コードの説明**
 
-#. Initialize BLE and LED
+#. BLEとLEDの初期化
 
    .. note::
-      When defining services and characteristic, we need to use UUIDs to identify them. To avoid UUID conflicts and make it easier for you to use, you can use the UUID generation tool at |link_uuid_gen_tool|.
+      サービスや特性を定義する際には、UUIDを使用して識別する必要があります。UUIDの衝突を避け、簡単に使用できるようにするため、 |link_uuid_gen_tool| でUUID生成ツールを利用できます。
 
    .. code-block:: arduino
    
@@ -146,7 +146,7 @@ Let's take LightBlue as an example to demonstrate how to control Arduino's LED v
 
       <br/>
 
-#. ``setup()`` Function
+#. ``setup()`` 関数
 
    .. code-block:: arduino
    
@@ -167,16 +167,16 @@ Let's take LightBlue as an example to demonstrate how to control Arduino's LED v
         Serial.println("BLE LED Peripheral");
       }
 
-   - Initialize serial communication.
-   - Set the LED pin as output.
-   - Initialize the BLE and add the service and characteristics.
-   - Start BLE advertising.
+   - シリアル通信を初期化。
+   - LEDピンを出力として設定。
+   - BLEを初期化し、サービスと特性を追加。
+   - BLE広告を開始。
 
    .. raw:: html
 
       <br/>
 
-#. ``loop()`` Function
+#. ``loop()`` 関数
 
    .. code-block:: arduino
    
@@ -200,12 +200,11 @@ Let's take LightBlue as an example to demonstrate how to control Arduino's LED v
           Serial.println(central.address());
         }
       }
-   
 
-   - Listen for BLE central devices to connect.
-   - If a central device is connected, read the characteristic value to control the LED. If a value other than 0 is received, turn on the LED. If 0 is received, turn off the LED.
+   - BLE中央デバイスの接続を待ちます。
+   - 中央デバイスが接続された場合、特性の値を読み取ってLEDを制御します。0以外の値が受信された場合はLEDを点灯し、0が受信された場合はLEDを消灯します。
 
 
-**Reference**
+**参照**
 
 - |link_r4_bluetooth|

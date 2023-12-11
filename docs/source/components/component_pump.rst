@@ -1,34 +1,33 @@
 .. _cpn_pump:
 
-DC Water Pump
-================
+DCウォーターポンプ
+======================
 
 .. image:: img/pump.png
     :width: 40%
 
-This pump essentially functions as a DC motor, operating at a voltage of 3V and a current of 100mA. Upon powering, the pump draws water in from the bottom of its plastic casing and expels it from the outlet pipe. It must always be kept immersed in water to function properly. Reversing the polarity won't turn it into a water intake device; it will only pump water out!
+このポンプは基本的にDCモーターとして機能し、3Vの電圧と100mAの電流で動作します。電源を入れると、ポンプはプラスチックケースの底から水を吸い上げ、排水管から排水します。正常に機能させるためには、常に水に浸されていなければなりません。極性を逆にしても、水を吸い込む装置にはならず、水を排出するだけです！
 
-It's highly suitable for beginners to create a fountain or plant watering project using this submersible pump, as it is incredibly user-friendly!
+初心者がファウンテンや植物の水やりプロジェクトを作るのに非常に適しています。この水中ポンプは非常に使いやすいです！
+
+**特徴**
+
+* **電圧範囲**: DC 3 ~ 4.5V
+* **動作電流**: 120 ~ 180mA
+* **パワー**: 0.36 ~ 0.91W
+* **最大揚水高**: 0.35 ~ 0.55M
+* **最大流量**: 80 ~ 100 L/H
+* **連続作業時間**: 100時間
+* **防水グレード**: IP68
+* **駆動方式**: DC、磁気駆動
+* **材質**: エンジニアリングプラスチック
+* **排水口外径**: 7.8 mm
+* **排水口内径**: 6.5 mm
+* 水中ポンプであり、水中で使用するべきです。水中で使用しない場合、過熱する危険があります。
+* 25cmのオスワイヤーが付属しており、ブレッドボードへの挿入が簡単です。
 
 
-**Features**
+**例**
 
-* **Voltage Scope**: DC 3 ~ 4.5V
-* **Operating Current**: 120 ~ 180mA
-* **Power**: 0.36 ~ 0.91W
-* **Max Water Head**: 0.35 ~ 0.55M
-* **Max Flow Rate**: 80 ~ 100 L/H
-* **Continuous Working Life**: 100 hours
-* **Water Fing Grade**: IP68
-* **Driving Mode**: DC, Magnetic Driving
-* **Material**: Engineering Plastic
-* **Outlet Outside Diameter**: 7.8 mm
-* **Outlet Inside Diameter**: 6.5 mm
-* It is a submersible pump and should be used that way. It tends to heat too much that there's a risk of overheating if you turn it on unsubmerged.
-* It comes with a 25cm male wire, allowing for easy insertion into a breadboard.
-
-
-**Example**
-
-* :ref:`basic_pump` (Basic Project)
-* :ref:`fun_plant_monitor` (Fun Project)
+* :ref:`basic_pump` (基本プロジェクト)
+* :ref:`fun_plant_monitor` (楽しいプロジェクト)

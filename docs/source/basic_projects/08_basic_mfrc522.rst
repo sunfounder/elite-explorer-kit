@@ -1,41 +1,41 @@
 .. _basic_mfrc522:
 
-RFID-RC522 Module
+RFID-RC522モジュール
 ==========================
 
 .. https://docs.sunfounder.com/projects/vincent-kit/en/latest/arduino/2.35_rfid-rc522_module.html
 
-Overview
+概要
 -------------
 
-In this lesson, you will learn how to use an RFID Module. RFID stands for Radio Frequency Identification. Its principle of operation involves contactless data communication between the reader and the label to identify the target. The applications of RFID are extensive, including animal chips, immobilizers, access control, parking control, production chain automation, material management, and more.
+このレッスンでは、RFIDモジュールの使用方法を学びます。RFIDはRadio Frequency Identificationの略で、その原理はリーダーとラベル間の非接触データ通信によってターゲットを識別することにあります。RFIDの応用範囲は広く、動物チップ、イモビライザー、アクセスコントロール、駐車場管理、生産チェーンの自動化、資材管理などが含まれます。
 
-Required Components
+必要なコンポーネント
 -------------------------
 
-In this project, we need the following components. 
+このプロジェクトでは、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全体のキットを購入すると便利です。以下がリンクです:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名称	
+        - このキットのアイテム数
+        - リンク
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネント紹介
+        - 購入リンク
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -44,92 +44,88 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_mfrc522`
         - |link_mfrc522_rfid_buy|
 
-Fritzing Circuit
+配線図
 ---------------------
 
-In this example, we insert the RFID into the breadboard. Get the 3.3V of RFID connected to 3.3V, GND to GND, RST to pin 2, SDA to pin 6, SCK to pin 5, MOSI to pin 4, MISO to pin 3 and IRQ to pin 7.
+この例では、RFIDをブレッドボードに挿入します。RFIDの3.3Vを3.3Vに、GNDをGNDに、RSTをピン2に、SDAをピン6に、SCKをピン5に、MOSIをピン4に、MISOをピン3に、IRQをピン7に接続します。
 
 .. image:: img/08-rfid_bb.png
    :align: center
 
-Schematic Diagram
+回路図
 -------------------------
 
 .. image:: img/08_mfrc522_schematic.png
    :align: center
    :width: 70%
 
-Code
+コード
 -----------
 
 .. note::
 
-    * You can open the file ``08-mfrc522.ino`` under the path of ``elite-explorer-kit-main\basic_project\08-mfrc522`` directly.
-    * The ``RFID1`` library is used here. The library can be found in the ``elite-explorer-kit-main/library/`` directory, or you can click here :download:`RFID1.zip </_static/RFID1.zip>` to download it. Refer to :ref:`manual_install_lib` for a tutorial on how to install it.
+    * ``elite-explorer-kit-main\basic_project\08-mfrc522`` のパスの下にあるファイル ``08-mfrc522.ino`` を直接開くことができます。
+    * ここでは ``RFID1`` ライブラリが使用されています。このライブラリは ``elite-explorer-kit-main/library/`` ディレクトリにありますが、こちら :download:`RFID1.zip </_static/RFID1.zip>` からダウンロードすることもできます。インストール方法については :ref:`manual_install_lib` を参照してください。
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/9a4e9be9-78f5-4bf0-8b44-ca6e44092dc1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-Uploaded the codes to the uno board, you can get your RFID card (secret key) close to the RFID Reader. The module will read the card information and then print it on the serial monitor.  
+unoボードにコードをアップロードすると、RFIDカード（秘密の鍵）をRFIDリーダーに近づけることができます。モジュールはカード情報を読み取り、シリアルモニターに表示します。
 
-Code Analysis
+
+コード解析
 -------------------
 
-The functions of the module are included in the library ``rfid1.h``.
+このモジュールの機能は ``rfid1.h`` というライブラリに含まれています。
 
 .. code-block:: arduino
 
     #include <rfid1.h>
 
-**Library Functions:**
+**ライブラリの関数:**
 
 .. code-block:: arduino
 
     RFID1 rfid;
 
-Create a new instance of the rfid1 class that represents a particular
-RFID module attached to your Arduino .
+Arduinoに接続された特定のRFIDモジュールを表すrfid1クラスの新しいインスタンスを作成します。
 
 .. code-block:: arduino
 
     void begin(IRQ_PIN,SCK_PIN,MOSI_PIN,MISO_PIN,SDA_PIN,RST_PIN)
 
-Pin configuration.
+ピンの設定です。
 
-* ``IRQ_PIN,SCK_PIN,MOSI_PIN,MISO_PIN``: the pins used for the SPI communication.
-* ``SDA_PIN``: Synchronous data adapter.
-* ``RST_PIN``: The pins used for reset.
+* ``IRQ_PIN,SCK_PIN,MOSI_PIN,MISO_PIN``: SPI通信に使用されるピン。
+* ``SDA_PIN``: 同期データアダプター。
+* ``RST_PIN``: リセットに使用されるピン。
 
 .. code-block:: arduino
 
     void init()
 
-Initialize the RFID.
+RFIDを初期化します。
 
 .. code-block:: arduino
 
     uchar request(uchar reqMode, uchar *TagType);
 
-Search card and read card type, and the function will return the current read status of RFID and return MI_OK if successed.
+カードを検索し、カードタイプを読み取ります。この関数はRFIDの現在の読み取り状態を返し、成功した場合はMI_OKを返します。
 
-* ``reqMode``: Search methods. PICC_REQIDL is defined that 0x26 command bits (Search the cards that does not in the sleep mode in the antenna area).
-* ``*TagType``: It is used to store card type, and its value can be 4byte (e.g. 0x0400).
+* ``reqMode``: 検索方法。PICC_REQIDLは0x26コマンドビットを定義しています（アンテナエリア内のスリープモードでないカードを検索します）。
+* ``*TagType``: カードタイプを格納するために使用され、4バイトの値が可能です（例: 0x0400）。
 
 .. code-block:: arduino
 
     char * readCardType(uchar *TagType)
 
-This function decodes the four-digit hexadecimal number of ``*tagType``
-into the specific card type and returns a string. If passed 0x0400,
-"MFOne-S50" will be returned.
+この関数は ``*tagType`` の4桁の16進数を特定のカードタイプにデコードし、文字列を返します。0x0400を渡した場合は「MFOne-S50」が返されます。
 
 .. code-block:: arduino
 
     uchar anticoll(uchar *serNum);
 
-Prevent conflict, and read the card serial number. The function will
-return the current reading status of RFID. It returns MI_OK if
-successed.
+衝突を防ぎ、カードのシリアル番号を読み取ります。この関数はRFIDの現在の読み取り状態を返し、成功した場合はMI_OKを返します。
 
-* ``*serNum``: It is used to store the card serial number, and return the 4 bytes card serial number. The 5th byte is recheck byte(e.g. e.g. my magnetic card ID is 5AE4C955).
+* ``*serNum``: カードシリアル番号を格納するために使用され、4バイトのカードシリアル番号を返します。5番目のバイトは再チェックバイトです（例: 私の磁気カードIDは5AE4C955）。

@@ -1,39 +1,39 @@
 .. _basic_ultrasonic_sensor:
 
-Ultrasonic
+超音波
 ==========================
 
-Overview
+概要
 --------------------
 
-When you are reversing, you will see the distance between the car and the surrounding obstacles to avoid collision. The device for detecting the distance is an ultrasonic sensor. In this experiment, you will learn how the ultrasonic wave detects the distance.
+車をバックする際、衝突を避けるために車と周囲の障害物との距離を確認します。その距離を検出する装置が超音波センサーです。この実験では、超音波がどのように距離を検出するかを学びます。
 
-Required Components
+必要なコンポーネント
 -------------------------
 
-In this project, we need the following components. 
+このプロジェクトでは、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全てのキットを一式購入するのが便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名称	
+        - このキットのアイテム数
+        - リンク
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+下記のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネント紹介
+        - 購入リンク
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -46,8 +46,7 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_i2c_lcd1602`
         - |link_i2clcd1602_buy|
 
-
-Wiring
+配線図
 ----------------------
 
 .. image:: img/06-ultrasonic_module_bb.png
@@ -58,7 +57,7 @@ Wiring
 
     <br/>
 
-Schematic Diagram
+回路図
 -----------------------
 
 .. image:: img/06_ultrasonic_schematic.png
@@ -66,13 +65,13 @@ Schematic Diagram
     :width: 100%
 
 
-Code
+コード
 --------
 
 .. note::
 
-    * You can open the file ``06-ultrasonic.ino`` under the path of ``elite-explorer-kit-main\basic_project\06-ultrasonic`` directly.
-    * Or copy this code into Arduino IDE.
+    * ``elite-explorer-kit-main\basic_project\06-ultrasonic`` のパスの下にある ``06-ultrasonic.ino`` ファイルを直接開く。
+    * または、このコードをArduino IDEにコピーします。
 
 .. raw:: html
 
@@ -82,13 +81,13 @@ Code
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/videos/basic_projects/06_basic_ultrasonic_sensor.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      お使いのブラウザはビデオタグをサポートしていません。
    </video>
 
-Code Analysis
+コード解析
 ------------------------
 
-**1. Initialize the ultrasonic sensor and LCD1602**
+**1. 超音波センサーとLCD1602の初期化**
 
     .. code-block:: arduino
     
@@ -110,7 +109,7 @@ Code Analysis
        
        }
 
-**2. Display the distance on the LCD1602**
+**2. LCD1602で距離を表示**
 
     .. code-block:: arduino
     
@@ -129,15 +128,15 @@ Code Analysis
          delay(800);                       // Delay for 800 milliseconds before repeating the loop
        }
 
-**3. Convert the time to distance**
+**3. 時間を距離に変換**
 
     .. code-block:: arduino
 
         float readDistance(){// ...}
 
-    Here, "PING" refers to the process where the ultrasonic sensor sends out an ultrasonic pulse (or "ping") and then waits for its echo.
+    ここでの「PING」は、超音波センサーが超音波パルス（または「PING」）を送出し、そのエコーを待つプロセスを指します。
     
-    PING is triggered by a HIGH pulse of 2 or more microseconds. (Give a short LOW pulse beforehand to ensure a clean HIGH pulse.)
+    PINGは、2マイクロ秒以上のHIGHパルスによってトリガーされます。（クリーンなHIGHパルスを保証するために、事前に短いLOWパルスを与えます。）
 
     .. code-block:: arduino
 
@@ -147,15 +146,15 @@ Code Analysis
         delayMicroseconds(10);
         digitalWrite(trigPin, LOW); 
 
-    The echo pin is used to read signal from PING, a HIGH pulse whose duration is the time (in microseconds) from the sending of the ping to the reception of echo of the object. We use the following function to obtain the duration.
+    エコーピンはPINGからの信号を読み取るために使用され、その持続時間はピンの送信からオブジェクトのエコーの受信までの時間（マイクロ秒）です。以下の関数を使用して持続時間を取得します。
 
     .. code-block:: arduino
 
         pulseIn(echoPin, HIGH);
 
-    The speed of sound is 340 m/s or 29 microseconds per centimeter.
+    音速は340m/sまたは29マイクロ秒/センチメートルです。
 
-    This gives the distance travelled by the ping, outbound and return, so we divide by 2 to get the distance of the obstacle.
+    これにより、ピンによる往復の移動距離が得られるため、障害物までの距離を取得するために2で割ります。
 
     .. code-block:: arduino
 

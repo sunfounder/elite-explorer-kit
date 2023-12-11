@@ -1,25 +1,25 @@
 .. _cpn_joystick:
 
-Joystick Module
-=======================
+ジョイスティックモジュール
+============================
 
 .. image:: img/joystick_pic.png
     :align: center
     :width: 600
 
-The basic idea of a joystick is to translate the movement of a stick into electronic information that a computer can process.
+ジョイスティックの基本的な考え方は、スティックの動きをコンピュータが処理できる電子情報に変換することです。
 
-In order to communicate a full range of motion to the computer, a joystick needs to measure the stick’s position on two axes – the X-axis (left to right) and the Y-axis (up and down). Just as in basic geometry, the X-Y coordinates pinpoint the stick’s position exactly.
+コンピュータに完全な動きの範囲を伝えるために、ジョイスティックはスティックの位置を二つの軸で測定する必要があります。X軸（左右）とY軸（上下）です。基本的な幾何学と同じように、X-Y座標はスティックの正確な位置を特定します。
 
-To determine the location of the stick, the joystick control system simply monitors the position of each shaft. The conventional analog joystick design does this with two potentiometers, or variable resistors.
+スティックの位置を決定するために、ジョイスティック制御システムは単純に各軸の位置を監視します。従来のアナログジョイスティックの設計は、これを二つの可変抵抗器（ポテンショメータ）で行います。
 
-The joystick also has a digital input that is actuated when the joystick is pressed down.
+ジョイスティックには、押し下げられたときに作動するデジタル入力もあります。
 
 .. image:: img/joystick318.png
     :align: center
     :width: 600
 	
-**Example**
+**例**
 
-* :ref:`basic_joystick` (Basic Project)
-* :ref:`fun_snake` (Fun Project)
+* :ref:`basic_joystick` (基本プロジェクト)
+* :ref:`fun_snake` (楽しいプロジェクト)

@@ -1,41 +1,41 @@
 .. _basic_photoresistor:
 
-Photoresistor
+フォトレジスタ
 ==========================
 
 .. https://docs.sunfounder.com/projects/vincent-kit/en/latest/arduino/2.26_photoresistor.html
 
-Overview
+概要
 ---------------
 
-In this lesson, you will learn about Photoresistor. Photoresistor is applied in many electronic goods, such as the camera meter, clock radio, alarm device (as beam detector), small night lights, outdoor clock, solar street lamps and etc. Photoresistor is placed in a street lamp to control when the light is turned on. Ambient light falling on the photoresistor causes street lamps to turn on or off.
+このレッスンでは、フォトレジスタについて学びます。フォトレジスタは、カメラメーター、クロックラジオ、アラーム装置（ビーム検出器として）、小型ナイトライト、屋外時計、ソーラー街路灯など、多くの電子製品に応用されています。フォトレジスタは、街灯に取り付けられ、灯りの点灯を制御します。周囲の光がフォトレジスタに当たると、街灯が点灯または消灯します。
 
-Required Components
+必要なコンポーネント
 -------------------------
 
-In this project, we need the following components. 
+このプロジェクトでは、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全てのキットを一式購入するのが便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名称	
+        - このキットのアイテム数
+        - リンク
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+下記のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネント紹介
+        - 購入リンク
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -48,29 +48,29 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_photoresistor`
         - |link_photoresistor_buy|
 
-Wiring
+配線図
 ----------------------
 
-In this example, we use analog pin ( A0 ) to read the value of photoresistor. One pin of photoresistor is connected to 5V, the other is wired up to A0. Besides, a 10kΩ resistor is needed before the other pin is connected to GND.
+この例では、アナログピン（A0）を使用してフォトレジスタの値を読み取ります。フォトレジスタの一方の端子は5Vに接続され、もう一方の端子はA0に配線されます。さらに、もう一方の端子をGNDに接続する前に10kΩの抵抗が必要です。
 
 .. image:: img/01-photoresistor_bb.png
     :align: center
     :width: 80%
 
-Schematic Diagram
+回路図
 -----------------------
 
 .. image:: img/01_photoresistor_schematic.png
     :align: center
     :width: 70%
 
-Code
+コード
 ---------------
 
 .. note::
 
-    * You can open the file ``01-photoresistor`` under the path of ``elite-explorer-kit-main\basic_project\01-photoresistor`` directly.
-    * Or copy this code into Arduino IDE.
+    * ``elite-explorer-kit-main\basic_project\01-photoresistor`` のパスの下にある ``01-photoresistor`` ファイルを直接開くことができます。
+    * または、このコードをArduino IDEにコピーします。
 
 
 
@@ -79,4 +79,4 @@ Code
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/e6bf007e-b20d-44d0-9ef9-6d57c1ce4c3c/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After uploading the codes to the uno board, you can open the serial monitor to see the read value of the pin. When the ambient light becomes stronger, the reading will increase correspondingly, and the pin reading range is 「0」~「1023」.  However, according to the environmental conditions and the characteristics of the photoresistor, the actual reading range may be smaller than the theoretical range. 
+コードをボードにアップロードした後、シリアルモニターを開いてピンの読み取り値を確認できます。周囲の光が強くなると、読み取り値もそれに応じて増加します。ピンの読み取り範囲は「0」〜「1023」です。しかし、環境条件やフォトレジスタの特性により、実際の読み取り範囲は理論的な範囲よりも小さくなる場合があります。

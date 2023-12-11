@@ -1,44 +1,44 @@
 .. _iot_security_system_ifttt:
 
-Security System via IFTTT
+IFTTTを使用したセキュリティシステム
 ============================================
 
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/videos/iot_projects/03_iot_security_alert.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      お使いのブラウザではビデオタグがサポートされていません。
    </video>
 
-With this project, we create a security device that employs a PIR Sensor to detect intruders or stray animals entering your home. In case of a breach, you will receive an email alert.
+このプロジェクトでは、PIRセンサーを使用して侵入者や家に入ってくる野良動物を検出するセキュリティデバイスを作成します。侵入が発生した場合、メールアラートを受け取ります。
 
-We'll utilize Webhooks as the fundamental service. A POST request is sent to IFTTT's service from UNO R4. 
+基本的なサービスとしてWebhooksを利用します。UNO R4からIFTTTのサービスへPOSTリクエストが送信されます。
 
-**Required Components**
+**必要なコンポーネント**
 
-In this project, we need the following components. 
+このプロジェクトには以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全体のキットを購入すると便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名称	
+        - このキットのアイテム数
+        - リンク
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから別々に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネント紹介
+        - 購入リンク
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -47,97 +47,97 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_pir`
         - |link_pir_buy|
 
-**Wiring**
+**配線図**
 
 .. image:: img/03-ifttt_pir_bb.png
     :width: 90%
     :align: center
 
 
-**Schematic**
+**回路図**
 
 .. image:: img/03-ifttt_pir_schematic.png
    :width: 50%
    :align: center
 
-**Setting up IFTTT**
+**IFTTTの設定**
 
-IFTTT is a free service that offers various methods to link different data services together.
+IFTTTは、さまざまなデータサービスを連携する方法を提供する無料のサービスです。
 
-Let's create an Applet that responds to a webhook (custom URL) sending data to IFTTT, which will then send you an email.
+ウェブフック（カスタムURL）をIFTTTに送信して応答するAppletを作成し、その後メールを送信します。
 
-Please follow the steps below on IFTTT.
+IFTTTで以下の手順に従ってください。
 
-1. Visit |link_ifttt| to log in or create an account.
+1. |link_ifttt| にアクセスしてログインまたはアカウントを作成します。
 
    .. image:: img/03_ifttt_1.png
        :width: 90%
 
-2. Click on **Create**.
+2. **Create** をクリックします。
 
    .. image:: img/03_ifttt_2.png
        :width: 90%
 
-3. Add an **If This** event.
+3. **If This** イベントを追加します。
 
    .. image:: img/03_ifttt_3.png
        :width: 70%
 
-4. Search for **Webhooks**.
+4. **Webhooks** を検索します。
 
    .. image:: img/03_ifttt_4.png
        :width: 70%
 
-5. Select **Receive a web request**.
+5. **Receive a web request** を選択します。
 
    .. image:: img/03_ifttt_5.png
        :width: 90%
 
-6. Fill in the event name (e.g., SecurityWarning), and click **Create trigger**.
+6. イベント名（例：SecurityWarning）を入力し、 **Create trigger** をクリックします。
 
    .. image:: img/03_ifttt_6.png
        :width: 70%
 
-7. Add a **Then That** event.
+7. **Then That** イベントを追加します。
 
    .. image:: img/03_ifttt_7.png
        :width: 70%
 
-8. Search for Email.
+8. Emailを検索します。
 
    .. image:: img/03_ifttt_8.png
        :width: 80%
 
-9. Choose **Send me an email**.
+9. **Send me an email** を選択します。
 
    .. image:: img/03_ifttt_9.png
        :width: 80%
 
-10. Enter the **Subject** and **Body**, then click **Create action**.
+10. **Subject** と **Body** を入力し、 **Create action** をクリックします。
 
    .. image:: img/03_ifttt_10.png
        :width: 70%
 
-11. Click **Continue** to finish the setup.
+11. **Continue** をクリックして設定を完了します。
 
    .. image:: img/03_ifttt_11.png
        :width: 70%
 
-12. Adjust the title name as needed.
+12. 必要に応じてタイトル名を調整します。
 
    .. image:: img/03_ifttt_12.png
        :width: 80%
 
-13. You'll be automatically redirected to the Applet details page, where you can see that the Applet is currently connected and you can toggle the switch to enable/disable it.
+13. Appletの詳細ページに自動的にリダイレクトされます。ここで、Appletが現在接続されていることが確認でき、スイッチを切り替えて有効/無効にすることができます。
 
    .. image:: img/03_ifttt_13.png
        :width: 70%
 
-14. Now that we've created the IFTTT Applet, we also need the webhooks key, which can be obtained from |link_webhooks| to allow your device to access IFTTT.
+14. IFTTT Appletを作成したので、デバイスがIFTTTにアクセスするために必要なWebhooksキーも必要です。これは、 |link_webhooks| から取得できます。
 
    .. image:: img/03_ifttt_14.png
 
-15. Copy the webhooks key to "arduino_secrets.h" and fill in your SSID and password.
+15. Webhooksキーを「arduino_secrets.h」にコピーし、SSIDとパスワードを入力してください。
 
     .. code-block:: arduino
     
@@ -145,67 +145,68 @@ Please follow the steps below on IFTTT.
         #define SECRET_PASS "your_password"        // your network password (used for WPA, or as a key for WEP)
         #define WEBHOOKS_KEY "your_key"
 
-**Run the Code**
+**コードの実行**
 
 .. note::
 
-    * You can open the file ``03_ifttt_pir.ino`` under the path of ``elite-explorer-kit-main\iot_project\03_ifttt_pir`` directly.
-    * Or copy this code into Arduino IDE.
+    * ファイル ``03_ifttt_pir.ino`` を ``elite-explorer-kit-main\iot_project\03_ifttt_pir`` のパスから直接開くことができます。
+    * または、このコードをArduino IDEにコピーしてください。
 
 .. note::
-    In the code, SSID and password are stored in ``arduino_secrets.h``. Before uploading this example, you need to modify them with your own WiFi credentials. Additionally, for security purposes, ensure that this information is kept confidential when sharing or storing the code.
+    コード内で、SSIDとパスワードは ``arduino_secrets.h`` に格納されています。この例をアップロードする前に、自分のWiFiの認証情報でそれらを修正する必要があります。さらに、コードを共有または保存する際には、この情報を機密に保つためのセキュリティ対策を講じてください。
 
 .. warning::
-   To prevent your mailbox from being flooded, please debug the :ref:`cpn_pir` beforehand before running the code for this project.
+   メールボックスが溢れるのを防ぐため、このプロジェクトのコードを実行する前に :ref:`cpn_pir` をデバッグしてください。
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/adec1608-4642-4469-bdf4-8dc3e3e4ce4d/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
- 
-**How it works?**
 
-1. Include the necessary libraries and header files:
+**どのように動作するのか？**
 
-   * ``"WiFiS3.h"``: Used for managing Wi-Fi connections.
-   * ``"arduino_secrets.h"``: Contains Wi-Fi network name and password to safeguard sensitive information.
+1. 必要なライブラリとヘッダーファイルを含みます：
 
-2. Define some global variables and constants:
+   * ``「WiFiS3.h」``: Wi-Fi接続の管理に使用します。
+   * ``「arduino_secrets.h」``: Wi-Fiネットワーク名とパスワードなどの機密情報を含みます。
 
-   * ``ssid``: Name of the Wi-Fi network.
-   * ``pass``: Wi-Fi network password.
-   * ``status``: Status of the Wi-Fi connection.
-   * ``client``: Client used for communicating with the Wi-Fi server.
-   * ``server``: Address of the IFTTT Webhook server.
-   * ``event``: Name of the IFTTT Webhook event.
-   * ``webRequestURL``: Constructed URL for sending HTTP requests, including the Webhook event name and key.
-   * ``pirPin``: Digital pin to which the PIR sensor is connected.
-   * ``motionDetected``: Flag variable to track motion detection.
+2. グローバル変数と定数を定義します：
 
-3. ``setup()`` function:
+   * ``ssid``: Wi-Fiネットワークの名前。
+   * ``pass``: Wi-Fiネットワークのパスワード。
+   * ``status``: Wi-Fi接続の状態。
+   * ``client``: Wi-Fiサーバーとの通信に使用するクライアント。
+   * ``server``: IFTTT Webhookサーバーのアドレス。
+   * ``event``: IFTTT Webhookイベントの名前。
+   * ``webRequestURL``: HTTPリクエストを送信するための構築されたURL。Webhookイベント名とキーを含みます。
+   * ``pirPin``: PIRセンサーが接続されているデジタルピン。
+   * ``motionDetected``: 動き検出を追跡するフラグ変数。
 
-   * Initializes serial communication.
-   * Checks for the presence of the Wi-Fi module and outputs its firmware version.
-   * Attempts to connect to the Wi-Fi network, with retries if unsuccessful.
-   * Sets the pin connected to the PIR sensor to input mode.
+3. ``setup()`` 関数：
 
-4. ``readResponse()`` function:
+   * シリアル通信を初期化します。
+   * Wi-Fiモジュールの存在をチェックし、そのファームウェアバージョンを出力します。
+   * Wi-Fiネットワークに接続を試み、失敗した場合は再試行します。
+   * PIRセンサーが接続されているピンを入力モードに設定します。
 
-   * Reads HTTP response data from the IFTTT server and prints it to the serial console.
+4. ``readResponse()`` 関数：
 
-5. ``loop()`` function:
+   * IFTTTサーバーからのHTTP応答データを読み取り、シリアルコンソールに印刷します。
 
-   * Calls the ``readResponse()`` function to read HTTP response data.
-   * Checks for motion using the PIR sensor. If motion is detected and was not detected previously:
-       * Prints "Motion detected!" to the console.
-       * Calls the ``triggerIFTTTEvent()`` function to send an HTTP request to the IFTTT server, triggering the Webhook event.
-       * Sets the ``motionDetected`` flag to ``true`` to indicate motion has been detected.
-   * If no motion is detected, sets the ``motionDetected`` flag to ``false``.
+5. ``loop()`` 関数：
 
-6. ``triggerIFTTTEvent()`` function:
+   * ``readResponse()`` 関数を呼び出してHTTP応答データを読み取ります。
+   * PIRセンサーを使用して動きをチェックします。動きが検出され、以前に検出されていない場合：
+       * コンソールに「動きを検出！」と印刷します。
+       * ``triggerIFTTTEvent()`` 関数を呼び出し、IFTTTサーバーにHTTPリクエストを送信し、Webhookイベントをトリガーします。
+       * ``motionDetected`` フラグを ``true`` に設定して、動きが検出されたことを示します。
+   * 動きが検出されない場合は、 ``motionDetected`` フラグを ``false`` に設定します。
 
-   * Establishes a connection with the IFTTT server.
-   * Sends an HTTP GET request, including the URL of the Webhook event and other HTTP headers.
+6. ``triggerIFTTTEvent()`` 関数：
 
-7. ``printWifiStatus()`` function:
+   * IFTTTサーバーとの接続を確立します。
+   * HTTP GETリクエストを送信し、WebhookイベントのURLと他のHTTPヘッダーを含みます。
 
-   * Outputs information about the connected Wi-Fi network, including SSID, IP address, and signal strength (RSSI) to the serial console.
+7. ``printWifiStatus()`` 関数：
+
+   * 接続されているWi-Fiネットワークに関する情報をシリアルコンソールに出力します。これにはSSID、IPアドレス、信号強度（RSSI）が含まれます。
+

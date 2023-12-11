@@ -1,44 +1,35 @@
 .. _cpn_ultrasonic:
 
-Ultrasonic Module
+超音波モジュール
 ================================
 
 .. image:: img/ultrasonic_pic.png
     :width: 400
     :align: center
 
+超音波センサーモジュールは、超音波を使って物体までの距離を測定する装置です。2つのプローブがあります。一つは超音波を送信し、もう一つは波を受信し、送信と受信の時間を距離に変換して、装置と障害物との距離を検出します。実際には非常に便利で機能的です。
 
-An ultrasonic sensor module is an instrument that measures the distance to an object using ultrasonic sound waves. It has two probes. One is to send ultrasonic waves and the other is to receive the waves and transform the time of sending and receiving into a distance, thus detecting the distance between the device and an obstacle. In practice it is really convenient and functional.
+2cm〜400cmの非接触測定機能を提供し、測定精度は3mmに達することができます。
+5m以内で信号が安定しており、5mを超えると信号が徐々に弱まり、7mの位置で消失します。
 
+モジュールには超音波送信機、受信機、制御回路が含まれています。基本原理は以下の通りです：
 
-It provides 2cm - 400cm non-contact measurement function, and the ranging accuracy can reach to 3mm. 
-It can ensure that the signal is stable within 5m, and the signal is gradually weakened after 5m, till the 7m position disappears.
+1. IOトリガーで少なくとも10usの高レベル信号を処理します。
 
-The module includes ultrasonic transmitters, receiver and control circuit. The basic principles are as follows:
+2. モジュールは自動的に8つの40kHzのパルスを送信し、パルス信号の返信があるかどうかを検出します。
 
-#. Use an IO flip-flop to process a high level signal of at least 10us.
+3. もし信号が返ってきた場合、高レベルを通過して、高出力IOの持続時間は超音波の送信から返信までの時間です。ここで、テスト距離 = （高時間 x 音速（340 m / s）/ 2。
 
-#. The module automatically sends eight 40khz and detects if there is a pulse signal return.
-
-#. If the signal returns, passing the high level, the high output IO duration is the time from the transmission of the ultrasonic wave to the return of it. Here, test distance = (high time x sound speed (340 m / s) / 2.
-
-
-
-The timing diagram is shown below. 
+タイミング図は以下の通りです。
 
 .. image:: img/ultrasonic228.png
 
-You only need to supply a short 10us pulse for the trigger input to start the ranging, and then the module
-will send out an 8 cycle burst of ultrasound at 40 kHz and raise its
-echo. You can calculate the range through the time interval between
-sending trigger signal and receiving echo signal.
+トリガー入力に短い10usパルスを供給するだけで測定を開始でき、その後モジュールは40kHzで8サイクルの超音波を送信し、エコーを発生させます。トリガー信号を送信してエコー信号を受信するまでの時間間隔を通じて、距離を計算できます。
 
-Formula: us / 58 = centimeters or us / 148 =inch; or: the range = high
-level time \* velocity (340M/S) / 2; you are suggested to use
-measurement cycle over 60ms in order to prevent signal collisions of
-trigger signal and the echo signal.
+計算式：us / 58 = センチメートルまたは us / 148 = インチ。または：距離 = 高レベル時間 * 速度（340M/S）/ 2。トリガー信号とエコー信号の信号干渉を防ぐため、60ms以上の測定周期を使用することをお勧めします。
 
-**Example**
+**例**
 
-* :ref:`basic_ultrasonic_sensor` (Basic Project)
-* :ref:`fun_smart_can` (Fun Project)
+* :ref:`basic_ultrasonic_sensor` (基本プロジェクト)
+* :ref:`fun_smart_can` (楽しいプロジェクト)
+

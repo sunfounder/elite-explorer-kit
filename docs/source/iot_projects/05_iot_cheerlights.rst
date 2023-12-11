@@ -7,38 +7,38 @@ CherryLight
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/videos/iot_projects/05_iot_cheerlights.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      お使いのブラウザではビデオタグがサポートされていません。
    </video>
 
-CheerLights is a global network of synchronized lights that can be controlled by anyone. Join the |link_cheerlights| LED color-changing community, which allows LEDs around the world to change colors simultaneously.  Place your LEDs in a corner of your office to remind yourself that you are not alone.
+CheerLightsは、誰でも制御できるグローバルな同期ライトのネットワークです。 |link_cheerlights| のLEDカラーチェンジコミュニティに参加し、世界中のLEDを同時に色を変えられるようにしましょう。オフィスの片隅にLEDを置いて、自分が一人でないことを思い出しましょう。
 
-In this case, we also utilize MQTT, but instead of publishing our own messages, we subscribe to the "cheerlights" topic. This allows us to receive messages sent by others to the "cheerlights" topic and use that information to change the color of our LED strip accordingly.
+このケースでは、MQTTを使用しますが、自分のメッセージを公開する代わりに、「cheerlights」というトピックにサブスクライブします。これにより、他の人が「cheerlights」トピックに送信したメッセージを受信し、その情報を使用してLEDストリップの色を変更することができます。
 
-**Required Components**
+**必要なコンポーネント**
 
-In this project, we need the following components. 
+このプロジェクトには以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全体のキットを購入すると便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名称	
+        - このキットのアイテム数
+        - リンク
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから別々に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネント紹介
+        - 購入リンク
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -47,13 +47,13 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_ws2812`
         - |link_ws2812_buy|
 
-**Wiring**
+**配線図**
 
 .. image:: img/05_cheerlight_bb.png
     :width: 100%
     :align: center
 
-**Schematic**
+**回路図**
 
 .. image:: img/05_cheerlight_schematic.png
     :width: 50%
@@ -63,84 +63,83 @@ You can also buy them separately from the links below.
 
    <br/>
 
-**Install the Library**
+**ライブラリのインストール**
 
-To install the library, use the Arduino Library Manager and search for "ArduinoMqttClient" and "FastLED" and install them.
+ライブラリをインストールするには、Arduinoライブラリマネージャーを使用し、「ArduinoMqttClient」と「FastLED」を検索してインストールしてください。
 
-``ArduinoMqttClient.h``: Used for MQTT communication.
+``ArduinoMqttClient.h``：MQTT通信用に使用します。
 
-``FastLED.h``: Used to drive the RGB LED Strip.
+``FastLED.h``：RGB LEDストリップのドライブに使用します。
 
-**Run the Code**
+**コードの実行**
 
-
-.. note::
-
-    * You can open the file ``05_cheerlight.ino`` under the path of ``elite-explorer-kit-main\iot_project\05_cheerlight`` directly.
-    * Or copy this code into Arduino IDE.
 
 .. note::
-    In the code, SSID and password are stored in ``arduino_secrets.h``. Before uploading this example, you need to modify them with your own WiFi credentials. Additionally, for security purposes, ensure that this information is kept confidential when sharing or storing the code.
+
+    * ファイル ``05_cheerlight.ino`` を ``elite-explorer-kit-main\iot_project\05_cheerlight`` のパスから直接開くことができます。
+    * または、このコードをArduino IDEにコピーしてください。
+
+.. note::
+    コード内で、SSIDとパスワードは ``arduino_secrets.h`` に格納されています。この例をアップロードする前に、自分のWiFiの認証情報でそれらを修正する必要があります。さらに、コードを共有または保存する際には、この情報を機密に保つためのセキュリティ対策を講じてください。
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/9d7ad736-9725-499f-a6ea-91602120d53e/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
+**グローバルな@CheerLightsデバイスを制御する**
 
-
-**Control global @CheerLights devices**
-
-#. Join the |link_discord_server| and utilize the CheerLights bot to set the color. Simply type ``/cheerlights`` in any of the channels on the **CheerLights Discord Server** to activate the bot.
+#. |link_discord_server| に参加し、 ``/CheerLights`` ボットを利用して色を設定します。 **CheerLights Discord Server** の任意のチャンネルで「/cheerlights」と入力してボットをアクティブにします。
 
    .. image:: img/05_iot_cheerlights_1.png
 
-#. Follow the instructions provided by the bot to set the color. This will allow you to control CheerLights devices globally.
+#. ボットが提供する指示に従って色を設定します。これにより、グローバルにCheerLightsデバイスを制御できます。
 
    .. image:: img/05_iot_cheerlights_2.png
 
-**How it works?**
+**どのように動作するのか？**
 
-Here are the main parts of the code and explanations of their functions:
+こちらはコードの主要部分とその機能の説明です：
 
-1. Include the required libraries:
+1. 必要なライブラリを含む：
 
-   * ``WiFiS3.h``: Used for handling Wi-Fi connections.
-   * ``ArduinoMqttClient.h``: Used for handling MQTT connections.
-   * ``FastLED.h``: Used for controlling NeoPixel LED strips.
+   * ``WiFiS3.h``：Wi-Fi接続の処理に使用します。
+   * ``ArduinoMqttClient.h``：MQTT接続の処理に使用します。
+   * ``FastLED.h``：NeoPixel LEDストリップの制御に使用します。
 
-2. Define some constants:
+2. いくつかの定数を定義する：
 
-   * ``NUM_LEDS``: The number of LEDs on the LED strip.
-   * ``DATA_PIN``: The data pin connected to Arduino for controlling the LED strip.
-   * ``arduino_secrets.h``: Header file containing Wi-Fi network name and password to protect sensitive information.
-   * ``broker``: Address of the MQTT server.
-   * ``port``: Port of the MQTT server.
-   * ``topic``: The MQTT topic to subscribe to.
+   * ``NUM_LEDS``：LEDストリップ上のLEDの数。
+   * ``DATA_PIN``：LEDストリップを制御するためにArduinoに接続されているデータピン。
+   * ``arduino_secrets.h``：Wi-Fiネットワーク名とパスワードを含むヘッダーファイルで、機密情報を保護します。
+   * ``broker``：MQTTサーバーのアドレス。
+   * ``port``：MQTTサーバーのポート。
+   * ``topic``：サブスクライブするMQTTトピック。
 
-3. Define some global variables:
+3. いくつかのグローバル変数を定義する：
 
-   * ``CRGB leds[NUM_LEDS]``: An array to store LED color data.
-   * ``colorName``: An array of color names supported by the CheerLights project.
-   * ``colorRGB``: An array of RGB color codes corresponding to color names.
+   * ``CRGB leds[NUM_LEDS]``：LEDの色データを格納するための配列。
+   * ``colorName``：CheerLightsプロジェクトでサポートされている色名の配列。
+   * ``colorRGB``：色名に対応するRGBカラーコードの配列。
 
-4. ``setup()`` function:
+4. ``setup()`` 関数：
 
-   * Initialize serial communication.
-   * Check if the Wi-Fi module is present and output its firmware version.
-   * Attempt to connect to the Wi-Fi network; if it fails, wait 10 seconds and retry.
-   * Upon successful connection, connect to the MQTT broker (server) and subscribe to the specified topic.
-   * Initialize the NeoPixel LED strip.
+   * シリアル通信を初期化します。
+   * Wi-Fiモジュールが存在するかを確認し、そのファームウェアバージョンを出力します。
+   * Wi-Fiネットワークに接続を試み、失敗した場合は10秒待って再試行します。
+   * 接続に成功したら、MQTTブローカー（サーバー）に接続し、指定されたトピックにサブスクライブします。
+   * NeoPixel LEDストリップを初期化します。
 
-5. ``loop()`` function:
+5. ``loop()`` 関数：
 
-   * Periodically call the ``mqttClient.poll()`` function to receive MQTT messages and send MQTT keep-alive signals.
-   * Add a 5-second delay to avoid continuous connection.
+   * 定期的に ``mqttClient.poll()`` 関数を呼び出して、MQTTメッセージを受信し、MQTTのキープアライブ信号を送信します。
+   * 継続的な接続を避けるために5秒の遅延を追加します。
 
-6. ``printWifiData()`` and ``printCurrentNet()`` functions are used to output Wi-Fi network and connection information.
+6. ``printWifiData()`` および ``printCurrentNet()`` 関数は、Wi-Fiネットワークおよび接続情報を出力するために使用されます。
 
-7. ``printMacAddress()`` function is used to print the MAC address in hexadecimal format.
+7. ``printMacAddress()`` 関数は、MACアドレスを16進数形式で印刷するために使用されます。
 
-8. ``onMqttMessage()`` function is a callback function triggered when an MQTT message is received. It outputs the received topic and message content, converting the message content to lowercase. If the topic is "cheerlights," it calls the ``setColor()`` function to set the LED strip color.
+8. ``onMqttMessage()`` 関数は、MQTTメッセージが受信されたときにトリガーされるコールバック関数です。受信したトピックとメッセージ内容を出力し、メッセージ内容を小文字に変換します。トピックが「cheerlights」の場合、 ``setColor()`` 関数を呼び出して、LEDストリップの色を設定します。
 
-9. ``setColor()`` function takes a color name as a parameter, then looks for a matching color in the ``colorName`` array. If a matching color is found, it sets the LED strip's color to the corresponding RGB value and updates the LED strip's color using the ``FastLED.show()`` function.
+9. ``setColor()`` 関数は、色名をパラメータとして取り、 ``colorName`` 配列で一致する色を探します。一致する色が見つかった場合、LEDストリップの色を対応するRGB値に設定し、 ``FastLED.show()`` 関数を使用してLEDストリップの色を更新します。
+

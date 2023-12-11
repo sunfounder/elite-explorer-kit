@@ -1,48 +1,48 @@
 .. _basic_active_buzzer:
 
-Active Buzzer
+アクティブブザー
 ==========================
 
 .. https://docs.sunfounder.com/projects/3in1-kit-r4/en/latest/basic_project/ar_active_buzzer.html#ar-beep
 
-Overview
+概要
 ---------------
 
-The active buzzer is a typical digital output device that is as easy to use as lighting up an LED!
+アクティブブザーは、LEDを点灯させるのと同じくらい簡単に使用できる典型的なデジタル出力デバイスです！
 
-Two types of buzzers are included in the kit. 
-We need to use active buzzer. Turn them around, the sealed back (not the exposed PCB) is the one we want.
+キットには2種類のブザーが含まれています。
+アクティブブザーを使用する必要があります。裏返してみると、密閉された背面（露出したPCBではない方）が私たちが使用するものです。
 
 .. image:: img/16_buzzer.png
     :align: center
     :width: 70%
 
-Required Components
+必要なコンポーネント
 -------------------------
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全セットを購入するのが便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名称	
+        - このキットのアイテム数
+        - リンク
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネント紹介
+        - 購入リンク
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -57,33 +57,33 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_buzzer`
         - \-
 
-Wiring
+配線図
 ----------------------
 
 .. note::
-    When connecting the buzzer, make sure to check its pins. The longer pin is the anode and the shorter one is the cathode. It's important not to mix them up, as doing so will prevent the buzzer from producing any sound.
+    ブザーを接続する際は、ピンを確認してください。長いピンがアノード、短い方がカソードです。逆に接続するとブザーから音が出ないため、間違えないように注意が必要です。
 
 .. image:: img/16-active_buzzer_bb.png
     :align: center
     :width: 70%
 
-Schematic Diagram
+回路図
 -----------------------
 
 .. image:: img/16_active_buzzer_schematic.png
     :align: center
     :width: 80%
 
-Code
+コード
 ---------------
 
 .. note::
 
-    * You can open the file ``16-active_buzzer.ino`` under the path of ``elite-explorer-kit-main\basic_project\16-active_buzzer`` directly.
-    * Or copy this code into Arduino IDE.
+    * ファイル ``16-active_buzzer.ino`` を ``elite-explorer-kit-main\basic_project\16-active_buzzer`` のパスで直接開くことができます。
+    * または、このコードをArduino IDEにコピーしてください。
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/bde4fd5c-8848-49cd-898f-8a824c836b80/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After the code is uploaded successfully, you will hear a beep every second.
+コードが正常にアップロードされると、1秒ごとにビープ音が聞こえます。

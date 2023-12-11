@@ -1,39 +1,39 @@
 .. _basic_ws2812:
 
-WS2812 RGB LEDs Strip
+WS2812 RGB LEDストリップ
 ==========================
 
-Overview
+概要
 ---------------
 
-In this lesson, you will learn about NeoPixel LEDs and how to control them using the FastLED library on an Arduino Uno R4. NeoPixel LEDs are widely used in various applications like home decor, wearables, and event lighting. The FastLED library simplifies the process of programming these LEDs. Here, a chain of 8 NeoPixel LEDs is connected to an Arduino, and each LED in the sequence is lit up in blue color momentarily before turning off, moving on to the next LED in the chain. This basic example can serve as the foundation for more complex light patterns or interactive lighting projects.
+このレッスンでは、NeoPixel LEDとその制御方法について学びます。制御にはArduino Uno R4上でFastLEDライブラリを使用します。NeoPixel LEDは、家庭の装飾、ウェアラブル、イベント照明など様々なアプリケーションで広く使用されています。FastLEDライブラリはこれらのLEDのプログラミングを簡素化します。ここでは、8個のNeoPixel LEDをArduinoに接続し、各LEDが青色で一時的に点灯し、次のLEDに移る前に消灯します。この基本的な例は、より複雑な光パターンやインタラクティブな照明プロジェクトの基礎として役立ちます。
 
-Required Components
+必要なコンポーネント
 -------------------------
 
-In this project, we need the following components. 
+このプロジェクトには以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全セットを購入するのが便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名称	
+        - このキットのアイテム数
+        - リンク
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネント紹介
+        - 購入リンク
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -42,29 +42,29 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_ws2812`
         - |link_ws2812_buy|
 
-Wiring
+配線図
 ----------------------
 
 .. image:: img/12-ws2812_bb.png
     :align: center
 
-Schematic Diagram
+回路図
 -----------------------
 
 .. image:: img/12_ws2812_schematic.png
     :align: center
     :width: 80%
 
-Code
+コード
 ---------------
 
 .. note::
 
-    * You can open the file ``12-ws2812.ino`` under the path of ``elite-explorer-kit-main\basic_project\12-ws2812`` directly.
-    * Or copy this code into Arduino IDE.
+    * ファイル ``12-ws2812.ino`` を ``elite-explorer-kit-main\basic_project\12-ws2812`` のパスで直接開くことができます。
+    * または、このコードをArduino IDEにコピーしてください。
 
 .. note:: 
-    To install the library, use the Arduino Library Manager and search for **"FastLED"** and install it. 
+    ライブラリをインストールするには、Arduinoライブラリマネージャーを使用し、 **「FastLED」** を検索してインストールしてください。
 
 .. raw:: html
 
@@ -74,19 +74,18 @@ Code
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/videos/basic_projects/12_basic_ws2812.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      ブラウザがビデオタグをサポートしていません。
    </video>
 
-After the code is uploaded successfully, you will see each LED in the chain of 8 NeoPixel LEDs light up one at a time in a blue color. The program will loop through this sequence continuously, turning off each LED before moving on to the next. With a short delay between each LED, the lighting effect will appear as a traveling blue dot along the chain.
+コードが正常にアップロードされると、8個のNeoPixel LEDのチェーンの各LEDが青色で一つずつ点灯する様子が見られます。プログラムはこのシーケンスを繰り返し、次のLEDに移る前に各LEDを消灯します。各LED間に短い遅延を設けることで、チェーンに沿って移動する青い点の照明効果が現れます。
 
-
-Code Analysis
+コード解析
 ------------------------
 
-1. Import Library and Setup Constants
+1. ライブラリのインポートと定数の設定
 
-   - Importing the ``FastLED`` library to use its functions.
-   - Defining the number of LEDs and the data pin they are connected to.
+   - ``FastLED`` ライブラリをインポートして、その機能を使用します。
+   - LEDの数と接続されているデータピンを定義します。
    
    .. code-block:: arduino
    
@@ -94,17 +93,17 @@ Code Analysis
       #define NUM_LEDS 8    // Number of LEDs in the chain
       #define DATA_PIN 6    // Data pin for LED control
 
-2. Initialize LED Array
+2. LED配列の初期化
    
-   Creating an array of ``CRGB`` type to store the color information of each LED.
+   各LEDの色情報を格納するための ``CRGB`` 型の配列を作成します。
 
    .. code-block:: arduino
 
       CRGB leds[NUM_LEDS];  // Array to hold LED color data
 
-3. Initialize LEDs in Setup
+3. セットアップ内でのLEDの初期化
 
-   Using ``FastLED.addLeds`` to initialize the LEDs.
+   ``FastLED.addLeds`` を使用してLEDを初期化します。
 
    .. code-block:: arduino
 
@@ -112,13 +111,14 @@ Code Analysis
         FastLED.addLeds<NEOPIXEL, DATA_PIN>(leds, NUM_LEDS);  // Initialize LEDs
       }
 
-4. Control LEDs in Loop
+4. ループ内でのLEDの制御
    
-   Looping through each LED to set it to blue, display it, clear it, and then delay.
+   各LEDを青色に設定し、表示し、クリアし、遅延させるループ。
 
-   - The ``leds`` array serves as a color buffer for your LED strip. Each element in this array corresponds to an individual LED on your physical strip, and its color value determines the color that the LED will display. The order of elements in the array matches the order of LEDs on the strip, starting from the first LED (which corresponds to ``leds[0]``) through to the last LED. To change the color of a specific LED on your strip, you simply modify the corresponding element in the ``leds`` array. You can use |fastled_color| or set colors using RGB (Taking green as an example, use ``leds[dot] = CRGB::Green`` or ``leds[dot] = CRGB(0, 255, 0);``).
+   - ``leds`` 配列はLEDストリップのカラーバッファとして機能します。この配列の各要素は物理的なストリップ上の個々のLEDに対応し、その色の値がLEDが表示する色を決定します。配列内の要素の順序はストリップ上のLEDの順序に一致し、最初のLED（ ``leds[0]`` に対応）から最後のLEDまでです。ストリップ上の特定のLEDの色を変更するには、 ``leds`` 配列内の対応する要素を変更します。 |fastled_color| を使用するか、RGBで色を設定できます（例として緑色を使用する場合、 ``leds[dot] = CRGB::Green`` または ``leds[dot] = CRGB(0, 255, 0);`` を使用します）。
 
-   - The ``FastLED.show();`` function updates the LED strip with new color data, making changes visible. It is like hitting the "publish" button for your LED strip after making edits and adjustments in the code.
+   - ``FastLED.show();`` 関数は新しい色データでLEDストリップを更新し、変更を可視化します。これは、コードで編集や調整を行った後、LEDストリップの「公開」ボタンを押すようなものです。
+
 
    .. raw:: html
 

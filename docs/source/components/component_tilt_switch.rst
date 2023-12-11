@@ -1,22 +1,22 @@
 .. _cpn_tilt_switch:
 
-Tilt Switch
+チルトスイッチ
 =============================
-
 
 .. image:: img/tilt_switch.png
     :width: 80
     :align: center
 
-The tilt switch used here is a ball one with a metal ball inside. It is used to detect inclinations of a small angle.
+ここで使用されているチルトスイッチは、内部に金属球があるボールタイプです。小角度の傾斜を検出するために使用されます。
 
-The principle is very simple. When the switch is tilted in a certain angle, the ball inside rolls down and touches the two contacts connected to the pins outside, thus triggering circuits. Otherwise the ball will stay away from the contacts, thus breaking the circuits.
+原理は非常にシンプルです。スイッチが特定の角度で傾くと、内部のボールが転がって外側のピンに接続された2つの接点に触れ、回路をトリガーします。そうでない場合は、ボールが接点から離れていて、回路が切断されます。
 
 .. image:: img/tilt_symbol.png
     :width: 600
 
 * |link_sw520d_datasheet|
 
-**Example**
+**例**
 
-* :ref:`basic_tilt_switch` (Basic Project)
+* :ref:`basic_tilt_switch` (基本プロジェクト)
+

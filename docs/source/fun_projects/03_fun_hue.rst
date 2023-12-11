@@ -7,37 +7,37 @@ HueDial
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/videos/fun_projects/03_fun_huedial.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      お使いのブラウザではビデオタグがサポートされていません。
    </video>
 
-This example controls the color of an RGB LED based on the position of a rotary knob. 
-Different positions of the knob correspond to different HUE values, which are then translated into RGB color values, resulting in a color change for the RGB LED.
+この例では、回転ノブの位置に基づいてRGB LEDの色を制御します。
+ノブの異なる位置は異なるHUE値に対応し、これらはRGB色値に変換され、RGB LEDの色が変わります。
 
-**Required Components**
+**必要なコンポーネント**
 
-In this project, we need the following components. 
+このプロジェクトには以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全体のキットを購入すると便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名称	
+        - このキットのアイテム数
+        - リンク
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから別々に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネント紹介
+        - 購入リンク
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -49,10 +49,10 @@ You can also buy them separately from the links below.
         - |link_resistor_buy|
     *   - :ref:`cpn_rgb_led`
         - |link_rgb_led_buy|
-    *   - :ref:`potentiometer`
+    *   - :ref:`cpn_potentiometer`
         - |link_potentiometer_buy|
 
-**Wiring**
+**配線図**
 
 .. image:: img/03_hue_dial_bb.png
     :width: 70%
@@ -62,52 +62,53 @@ You can also buy them separately from the links below.
 
    <br/>
 
-**Schematic**
+**回路図**
 
 .. image:: img/03_hue_schematic.png
    :width: 80%
    :align: center
 
 
-**Code**
+**コード**
 
 .. note::
 
-    * You can open the file ``03_huedial.ino`` under the path of ``elite-explorer-kit-main\fun_project\03_huedial`` directly.
-    * Or copy this code into Arduino IDE.
+    * ファイル ``03_huedial.ino`` を ``elite-explorer-kit-main\fun_project\03_huedial`` のパスから直接開くことができます。
+    * または、このコードをArduino IDEにコピーしてください。
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/0ad800d4-77bb-454f-8976-a078da71ec35/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-**How it works?**
+**どのように動作しますか？**
 
-Here's a detailed explanation of the code:
+以下はコードの詳細な説明です：
 
-1. Global Variable Definitions:
+1. グローバル変数の定義：
 
-   ``redPin``, ``greenPin``, and ``bluePin``: These define the PWM pins connected to the red, green, and blue LEDs, respectively.
-   ``KNOB_PIN``: Defines the analog input pin connected to the rotary knob.
+   ``redPin``, ``greenPin``, ``bluePin``：それぞれ赤、緑、青のLEDに接続されたPWMピンを定義します。
+   ``KNOB_PIN``：回転ノブに接続されたアナログ入力ピンを定義します。
 
-2. ``setup()``:
+2. ``setup()``：
 
-   Set the pins for the RGB LED as output.
-   By default, analog pins are set as inputs, so there's no need to set the input mode for the knob's pin.
+   RGB LEDのピンを出力として設定します。
+   アナログピンはデフォルトで入力として設定されているので、ノブのピンの入力モードを設定する必要はありません。
 
-3. ``loop()``:
+3. ``loop()``：
 
-   Read the value of the rotary knob. This value ranges from 0 to 1023.
-   Normalize the knob's value to a range of 0-1.
-   Convert the normalized value to a HUE value ranging from 0-360.
-   Convert the HUE value to RGB values.
-   Update the LED's color using these RGB values.
+   回転ノブの値を読み取ります。この値は0から1023の範囲です。
+   ノブの値を0-1の範囲に正規化します。
+   正規化された値を0-360の範囲のHUE値に変換します。
+   HUE値をRGB値に変換します。
+   これらのRGB値を使用してLEDの色を更新します。
 
-4. ``setColor()``:
+4. ``setColor()``：
 
-   Set the appropriate PWM values for each LED pin using the ``analogWrite()`` function to set the color of the RGB LED.
+   RGB LEDの色を設定するために、各LEDピンに対して ``analogWrite()`` 関数を使用して適切なPWM値を設定します。
 
-5. ``HUEtoRGB()``:
+5. ``HUEtoRGB()``：
 
-   This function converts HUE values to RGB values using the HSL to RGB conversion method but focuses only on the HUE component, keeping saturation and brightness at 100%.
-   The algorithm is divided into 6 stages, each covering 60 degrees.
-   It calculates RGB values for each HUE stage and then scales these values to a range of 0-255, which is the expected range for the ``analogWrite()`` function.
+   この関数はHUE値をRGB値に変換します。これはHSLからRGBへの変換方法を使用しますが、彩度と明るさを100%に保ちながらHUEコンポーネントにのみ焦点を当てます。
+   アルゴリズムは6段階に分けられ、それぞれ60度をカバーしています。
+   各HUE段階のRGB値を計算し、それらの値を ``analogWrite()`` 関数に対して期待される0-255の範囲にスケーリングします。
+

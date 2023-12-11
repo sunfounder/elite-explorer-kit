@@ -1,43 +1,39 @@
 .. _cpn_button:
 
-Button
+ボタン
 ==========
 
 .. image:: img/button.png
     :width: 400
     :align: center
 
-Buttons are a common component used to control electronic devices. They are usually used as switches to connect or break circuits. Although buttons come in a variety of sizes and shapes, the one used here is a 6mm mini-button as shown in the following pictures.
-Pin 1 is connected to pin 2 and pin 3 to pin 4. So you just need to connect either of pin 1 and pin 2 to pin 3 or pin 4.
+ボタンは、電子機器を制御するために使用される一般的なコンポーネントです。通常は、回路を接続または遮断するスイッチとして使用されます。ボタンにはさまざまなサイズや形状がありますが、ここで使用されているのは以下の写真に示す6mmミニボタンです。
+ピン1はピン2に、ピン3はピン4に接続されています。したがって、ピン1とピン2のいずれかをピン3またはピン4に接続するだけで済みます。
 
-The following is the internal structure of a button. The symbol on the right below is usually used to represent a button in circuits. 
+以下はボタンの内部構造です。下の右側にあるシンボルは、通常、回路内でボタンを表すために使用されます。
 
 .. image:: img/button_symbol.png
     :width: 400
     :align: center
 
-Since the pin 1 is connected to pin 2, and pin 3 to pin 4, when the button is pressed, the 4 pins are connected, thus closing the circuit.
+ピン1がピン2に、ピン3がピン4に接続されているため、ボタンが押されると、4つのピンが接続され、回路が閉じます。
 
 .. image:: img/button2.png
     :width: 600
     :align: center
 
-
-In this kit, we provide two types of buttons. The one mentioned earlier is a small button, and there is also a large button. They have the same principle, only different in size.
+このキットには、2種類のボタンが提供されています。先に述べたものは小型のボタンで、大型のボタンもあります。原理は同じで、サイズだけが異なります。
 
 .. image:: img/button3.png
     :width: 300
     :align: center
 
+**例**
 
-
-**Example**
-
-* :ref:`basic_button` (Basic Project)
-* :ref:`fun_digital_dice` (Fun Project)
-* :ref:`fun_smart_fan` (Fun Project)
-* :ref:`fun_pong` (Fun Project)
-* :ref:`iot_mqtt_publish` (IoT Project)
+* :ref:`basic_button` （基本プロジェクト）
+* :ref:`fun_digital_dice` （楽しいプロジェクト）
+* :ref:`fun_smart_fan` （楽しいプロジェクト）
+* :ref:`fun_pong` （楽しいプロジェクト）
+* :ref:`iot_mqtt_publish` （IoTプロジェクト）
 * :ref:`new_hid_keyboard` 
-
 

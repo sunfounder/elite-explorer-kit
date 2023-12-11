@@ -1,46 +1,45 @@
 .. _basic_button:
 
-Button
+ボタン
 ==========================
 
 .. https://docs.sunfounder.com/projects/r4-basic-kit/en/latest/projects/controlling_led_by_button_uno.html#button-uno
 
-
-Overview
+概要
 ----------------
 
-In this lesson, you will learn about controlling an LED using a button with Arduino. Buttons and LEDs are fundamental components in a wide range of electronic devices, such as remote controls, flashlights, and interactive installations. In this setup, a button is used as an input device to control the state of an LED, which serves as an output device.
+このレッスンでは、Arduinoを使用してボタンでLEDを制御する方法について学びます。ボタンとLEDは、リモコン、懐中電灯、インタラクティブインスタレーションなど、さまざまな電子デバイスにおいて基本的なコンポーネントです。このセットアップでは、ボタンを入力デバイスとして使用し、LEDの状態を制御します。
 
-The button is connected to pin 12 on the Arduino Uno R4 board, and the LED is connected to pin 13. When the button is pressed, a signal is sent to the Arduino, triggering the LED to turn on. Conversely, when the button is released, the LED turns off. This simple yet effective mechanism can be the basis for more complex projects, such as home automation systems, interactive displays, and much more.
+ボタンはArduino Uno R4ボードのピン12に、LEDはピン13に接続されています。ボタンが押されると、Arduinoに信号が送られ、LEDが点灯します。逆に、ボタンが放されると、LEDが消えます。このシンプルだが効果的なメカニズムは、ホームオートメーションシステム、インタラクティブディスプレイなど、より複雑なプロジェクトの基礎となることができます。
 
-By the end of this lesson, you will understand how to read input from a button and use it to control an LED, thereby gaining a foundational understanding of input/output operations with Arduino.
+このレッスンを終えるころには、ボタンからの入力を読み取り、それを使用してLEDを制御する方法を理解し、Arduinoの入出力操作に関する基本的な理解を得ることができます。
 
-Required Components
+必要なコンポーネント
 -------------------------
 
-In this project, we need the following components. 
+このプロジェクトには、以下のコンポーネントが必要です。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+全セットを購入するのが便利です。こちらがリンクです：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - 名称	
+        - このキットのアイテム数
+        - リンク
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+以下のリンクから個別に購入することもできます。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - コンポーネント紹介
+        - 購入リンク
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -56,7 +55,7 @@ You can also buy them separately from the links below.
         - |link_button_buy|
 
 
-Wiring
+配線図
 ----------------------
 
 .. image:: img/18-button_bb.png
@@ -64,39 +63,35 @@ Wiring
     :width: 70%
 
 
-Schematic Diagram
+回路図
 ------------------------
 
-Connect one end of the buttons to pin 12 which connects with a pull-down resistor and a 0.1uF (104) capacitor (to eliminate jitter and output a stable level when the button is working). Connect the other end of the resistor to GND and one of the pins at the other end of the button to 5V. When the button is pressed, pin 12 is 5V (HIGH) and set pin 13 (integrated with an LED) as High at the same time. Then release the button (pin 12 changes to LOW) and pin 13 is Low. So we will see the LED lights up and goes out alternately as the button is pressed and released.
+ボタンの一方の端をピン12に接続し、プルダウン抵抗と0.1uF（104）のコンデンサー（ボタンが動作する際にジッターを排除し、安定したレベルを出力するため）と接続します。抵抗の他端をGNDに、ボタンの他端のピンの一つを5Vに接続します。ボタンを押すと、ピン12は5V（HIGH）になり、同時にピン13（LEDが組み込まれている）をHighに設定します。次にボタンを放すと（ピン12がLOWに変わる）、ピン13はLowになります。そのため、ボタンを押して放すたびに、LEDが交互に点灯し消えるのが見られます。
 
 .. image:: img/18_button_schematic.png
     :align: center
     :width: 70%
 
 
-Code
+コード
 ---------------
 
 .. note::
 
-    * You can open the file ``18-button.ino`` under the path of ``elite-explorer-kit-main\basic_project\18-button`` directly.
-    * Or copy this code into Arduino IDE.
-
-
-
+    * ファイル ``18-button.ino`` を ``elite-explorer-kit-main\basic_project\18-button`` のパスで直接開くことができます。
+    * または、このコードをArduino IDEにコピーしてください。
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/a710eb54-9447-4542-ac98-c9a7e1ec4256/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-    
 
 
-Code Analysis
+コード解析
 -------------------
 
-#. Define Constants and Variables
+#. 定数と変数の定義
 
-   In this segment, the pin numbers for the button and the LED are defined. Also, a variable ``buttonState`` is declared to hold the current state of the button.
+   このセグメントでは、ボタンとLEDのピン番号が定義されます。また、 ``buttonState`` 変数が宣言され、ボタンの現在の状態を保持します。
  
    .. code-block:: arduino
  
@@ -104,9 +99,9 @@ Code Analysis
      const int ledPin = 13;
      int buttonState = 0;
 
-#. Setup Function
+#. セットアップ関数
 
-   The ``setup()`` function runs once when the Arduino board starts. The pin modes for the button and the LED are set using the ``pinMode`` function.
+   ``setup()`` 関数は、Arduinoボードが起動するときに一度実行されます。ボタンとLEDのピンモードは、 ``pinMode`` 関数を使用して設定されます。
  
    .. code-block:: arduino
  
@@ -115,9 +110,10 @@ Code Analysis
        pinMode(ledPin, OUTPUT);
      }
 
-#. Main Loop
+#. メインループ
 
-   The ``loop()`` function runs repeatedly. Inside this loop, the ``digitalRead()`` function is used to read the state of the button. Depending on whether the button is pressed or not, the LED is turned on or off.
+   ``loop()`` 関数は繰り返し実行されます。このループ内で、 ``digitalRead()`` 関数を使用してボタンの状態を読み取ります。ボタンが押されているかどうかに応じて、LEDを点灯または消灯します。
+
  
    .. code-block:: arduino
  

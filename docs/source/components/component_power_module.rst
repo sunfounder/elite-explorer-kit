@@ -17,17 +17,14 @@ You can just plug it in the breadboard to supply power. It provides a voltage of
 
 **Features and specifications**
 
-* Power input: USB Type-C, 5V
-* Output voltage: 5V, 3.3V (adjustable via jumpers. 0V, 3.3V, and 5V configuration)
-* Output current: 5V/1.5A, 3.3V/1A
-* ON-OFF Switch available
+* Charge Input: USB Type-C, 5V
+* Output Voltage: 5V, 3.3V (adjustable via jumpers. 0V, 3.3V, and 5V configuration)
+* Output Current: 5V/1.5A, 3.3V/1A
+* ON-OFF Switch Available
 * Two Independent Channel
-* Onboard berg male header for GND, 5V, 3.3V output
-* USB (Type-C) output available
-* USB (Type-A) intput available
-* Onboard LED: Charging indicator light CHG, power indicator light PWR
-* Battery: 3.7V 14500 lithium-ion battery, 500mAh
-* Dimension: 52mm x 32mm (L x W)
+* USB (Type-A) Output Available
+* Battery: 3.7V 14500 Lithium-ion Battery, 500mAh
+* Dimension: 52mm x 32mm x 24mm (L x W x H)
 
 
 **Example**

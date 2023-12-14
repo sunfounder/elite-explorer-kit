@@ -1,6 +1,16 @@
-
 SunFounder Elite Explorer Kit
 =======================================================
+
+Thanks for choosing our Elite Explorer Kit.
+
+.. note::
+    This document is available in the following languages.
+
+        * |link_german_tutorials|
+        * |link_jp_tutorials|
+        * |link_en_tutorials|
+    
+    Please click on the respective links to access the document in your preferred language.
 
 .. image:: img/elite_explorer_kit_cover.png
     :width: 800

@@ -3,34 +3,33 @@
 Diode
 =================
 
+Eine Diode ist eine elektronische Komponente mit zwei Elektroden. Sie ermöglicht es dem Strom, nur in eine Richtung zu fließen, was oft als "Gleichrichter"-Funktion bezeichnet wird.
+Somit kann eine Diode als elektronische Version eines Rückschlagventils betrachtet werden.
 
-A diode is an electronic component with two electrodes. It allows current to flow in only one direction, which is often called the "Rectifying" function.
-Thus, a diode can be thought of as an electronic version of a check valve.
+Aufgrund ihrer unidirektionalen Leitfähigkeit wird die Diode in fast allen elektronischen Schaltungen einer gewissen Komplexität verwendet. Sie ist eines der ersten Halbleiterbauelemente und hat ein breites Anwendungsspektrum.
 
-Because of its unidirectional conductivity, the diode is used in almost all electronic circuits of some complexity. It is one of the first semiconductor devices and has a wide range of applications.
+Je nach Einsatzklassifizierung kann sie in Detektor-Dioden, Gleichrichter-Dioden, Begrenzer-Dioden, Spannungsregler-Dioden usw. unterteilt werden.
 
-According to its use classification, it can be divided into detector diodes, rectifier diodes, limiter diodes, voltage regulator diodes, etc. 
+Gleichrichter-Dioden und Spannungsregler-Dioden sind in diesem Kit enthalten.
 
-Rectifier diodes and voltage regulator diodes are included in this kit.
-
-**Rectifier Diode**
+**Gleichrichter-Diode**
 
 .. image:: img/in4007_diode.png
 .. image:: img/symbol_rectifier_diode.png
     :width: 200
 
-A rectifier diode is a semiconductor diode, used to rectify AC (alternating current) to DC (direct current) using the rectifier bridge application. The alternative of rectifier diode through the Schottky barrier is mainly valued within digital electronics. This diode is capable to conduct the values of current which changes from mA to a few kA & voltages up to a few kV.
+Eine Gleichrichter-Diode ist eine Halbleiterdiode, die verwendet wird, um Wechselstrom (AC) in Gleichstrom (DC) unter Verwendung der Gleichrichterbrücken-Anwendung zu gleichrichten. Die Alternative der Gleichrichter-Diode durch die Schottky-Barriere wird hauptsächlich in der Digitaltechnik geschätzt. Diese Diode ist in der Lage, Stromwerte zu leiten, die von mA bis zu einigen kA reichen und Spannungen bis zu einigen kV.
 
-The designing of rectifier diodes can be done with Silicon material and they are capable of conducting high electric current values. These diodes are not famous but still used Ge or gallium arsenide-based semiconductor diodes. Ge diodes have less allowable reversed voltage as well as a lesser allowable junction temperature. The Ge diode has a benefit as compared to Si diode that is low threshold voltage value while operating in a forward-bias.
+Die Gestaltung von Gleichrichter-Dioden kann mit Siliziummaterial erfolgen und sie sind in der Lage, hohe elektrische Stromwerte zu leiten. Diese Dioden sind nicht berühmt, aber es werden noch Ge- oder Galliumarsenid-basierte Halbleiterdioden verwendet. Ge-Dioden haben eine geringere zulässige Rückwärtsspannung sowie eine geringere zulässige Sperrschichttemperatur. Die Ge-Diode hat gegenüber der Si-Diode den Vorteil eines niedrigen Schwellenspannungswerts bei Betrieb in Vorwärtsrichtung.
 
 * |link_general_purpose_diode|
 
 
-**Zener Diode**
+**Zener-Diode**
 
-A Zener diode is a special type of diode designed to reliably allow current to flow "backwards" when a certain set reverse voltage, known as the Zener voltage, is reached.
+Eine Zener-Diode ist eine spezielle Art von Diode, die zuverlässig den Stromfluss "rückwärts" ermöglicht, wenn eine bestimmte festgelegte Rückwärtsspannung, bekannt als Zener-Spannung, erreicht wird.
 
-This diode is a semiconductor device that has a very high resistance up to the critical reverse breakdown voltage. At this critical breakdown point, the reverse resistance is reduced to a very small value, and the current increases while the voltage remains constant in this low resistance region.
+Diese Diode ist ein Halbleiterbauelement, das einen sehr hohen Widerstand bis zur kritischen Rückwärtsdurchbruchspannung aufweist. An diesem kritischen Durchbruchpunkt verringert sich der Rückwärts-Widerstand auf einen sehr kleinen Wert, und der Strom steigt, während die Spannung in diesem Bereich mit niedrigem Widerstand konstant bleibt.
 
 .. image:: img/zener_diode.png
 .. image:: img/symbol-zener-diode.jpg
@@ -38,6 +37,7 @@ This diode is a semiconductor device that has a very high resistance up to the c
 
 * |link_zener_diode|
 
-**Example**
+**Beispiel**
 
- * :ref:`basic_relay` (Basic Project)
+ * :ref:`basic_relay` (Grundprojekt)
+

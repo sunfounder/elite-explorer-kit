@@ -1,10 +1,11 @@
-Download the Code
+Code herunterladen
 ========================
 
-Download the relevant code from the link below.
+Laden Sie den relevanten Code über den untenstehenden Link herunter.
 
 * :download:`SunFounder Elite Explorer Kit Code <https://codeload.github.com/sunfounder/Elite-Explorer-Kit/zip/refs/heads/main>`
 
-* Or check out the code at |link_github_elite|
+* Oder sehen Sie sich den Code auf |link_github_elite| an
+
 
 

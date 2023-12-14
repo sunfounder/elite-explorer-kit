@@ -5,37 +5,37 @@ Servo
 
 .. https://docs.sunfounder.com/projects/r4-basic-kit/en/latest/projects/servo_uno.html#servo-uno
 
-Overview
+Überblick
 ---------------
 
-In this lesson, you will explore the use of Arduino and Servo Motors. Focusing on the Arduino Uno and the SG90 servo motor, you'll learn how to program the Arduino to control the servo's sweeping motion. This technique is essential in various applications like robotics and automated systems.
+In dieser Lektion erkunden Sie die Verwendung von Arduino und Servomotoren. Mit Fokus auf den Arduino Uno und den SG90-Servomotor lernen Sie, wie Sie das Arduino programmieren, um die schwenkende Bewegung des Servos zu steuern. Diese Technik ist in verschiedenen Anwendungen wie Robotik und automatisierten Systemen unerlässlich.
 
-Required Components
+Benötigte Komponenten
 -------------------------
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Set zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -44,7 +44,7 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_servo`
         - |link_servo_buy|
 
-Wiring
+Verdrahtung
 ----------------------
 
 .. image:: img/27-servo_bb.png
@@ -55,7 +55,7 @@ Wiring
 
    <br/>
 
-Schematic Diagram
+Schaltplan
 -----------------------
 
 .. image:: img/27_servo_schematic.png
@@ -67,19 +67,18 @@ Code
 
 .. note::
 
-    * You can open the file ``27-servo.ino`` under the path of ``elite-explorer-kit-main\basic_project\27-servo`` directly.
-    * Or copy this code into Arduino IDE.
+    * Sie können die Datei ``27-servo.ino`` direkt im Pfad ``elite-explorer-kit-main\basic_project\27-servo`` öffnen.
+    * Oder kopieren Sie diesen Code in die Arduino IDE.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/c57ddb7a-0acb-4a64-938a-0a0abfc0ec4b/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-Code Analysis
+Code-Analyse
 ------------------------
 
-
-1. Here, the ``Servo`` library is included which allows for easy control of the servo motor. The pin connected to the servo and the initial angle of the servo are also defined.
+1. Hier wird die ``Servo``-Bibliothek eingebunden, die eine einfache Steuerung des Servomotors ermöglicht. Der mit dem Servo verbundene Pin und der Anfangswinkel des Servos werden ebenfalls definiert.
 
    .. code-block:: arduino
 
@@ -88,7 +87,7 @@ Code Analysis
       int angle = 0;           // Initialize the angle variable to 0 degrees
       Servo servo;             // Create a servo object
 
-2. The ``setup()`` function runs once when the Arduino starts. The servo is attached to the defined pin using the ``attach()`` function.
+2. Die Funktion ``setup()`` wird einmal ausgeführt, wenn das Arduino startet. Der Servo wird mit der Funktion ``attach()`` an den definierten Pin angehängt.
 
    .. code-block:: arduino
 
@@ -96,7 +95,7 @@ Code Analysis
         servo.attach(servoPin);
       }
 
-3. The main loop has two ``for`` loops. The first loop increases the angle from 0 to 180 degrees, and the second loop decreases the angle from 180 to 0 degrees. The ``servo.write(angle)`` command sets the servo to the specified angle. The ``delay(15)`` causes the servo to wait for 15 milliseconds before moving to the next angle, controlling the speed of the scanning movement.
+3. Die Hauptschleife enthält zwei ``for``-Schleifen. Die erste Schleife erhöht den Winkel von 0 auf 180 Grad, und die zweite Schleife verringert den Winkel von 180 auf 0 Grad. Der Befehl ``servo.write(angle)`` setzt den Servo auf den angegebenen Winkel. Die ``delay(15)``-Anweisung bewirkt, dass der Servo 15 Millisekunden wartet, bevor er zum nächsten Winkel übergeht, und steuert so die Geschwindigkeit der Scanbewegung.
 
    .. code-block:: arduino
 

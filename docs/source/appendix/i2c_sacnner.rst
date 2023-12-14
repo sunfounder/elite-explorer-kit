@@ -1,16 +1,16 @@
 .. _i2c_sacnner:
 
-How to Scan and Detect I2C Addresses?
+Wie scannt und erkennt man I2C-Adressen?
 ==============================================
 
-This tutorial takes scanning the I2C address of the gy-87 module as an example, and guides you on how to detect I2C addresses.
+Dieses Tutorial nimmt das Scannen der I2C-Adresse des GY-87-Moduls als Beispiel und leitet Sie an, wie Sie I2C-Adressen erkennen können.
 
-Wiring
+Verdrahtung
 ---------------
 
-Connect the SCL of GY-87 module to the SCL of UNO R4, and connect the SDA of GY-87 module to the SDA of UNO R4.
+Verbinden Sie den SCL des GY-87-Moduls mit dem SCL des UNO R4 und verbinden Sie den SDA des GY-87-Moduls mit dem SDA des UNO R4.
 
-Another way is to connect the SCL of GY-87 module to A5 of UNO R4, and connect the SDA of GY-87 module to A4 of UNO R4.
+Eine andere Möglichkeit besteht darin, den SCL des GY-87-Moduls mit A5 des UNO R4 zu verbinden und den SDA des GY-87-Moduls mit A4 des UNO R4 zu verbinden.
 
 .. image:: img/09-gy87_bb.png
     :align: center
@@ -20,10 +20,11 @@ Another way is to connect the SCL of GY-87 module to A5 of UNO R4, and connect t
 
    <br/>
 
-Upload the code
+Code hochladen
 -----------------
 
-Copy the code below to your Arduino IDE and then upload the code.
+Kopieren Sie den untenstehenden Code in Ihre Arduino IDE und laden Sie dann den Code hoch.
+
 
 .. code-block:: arduino
 
@@ -97,9 +98,9 @@ Copy the code below to your Arduino IDE and then upload the code.
    }
 
 
-After uploading the code, open the serial monitor and set the baud rate to 9600. Check the output in the serial monitor.
+Nachdem Sie den Code hochgeladen haben, öffnen Sie den seriellen Monitor und stellen Sie die Baudrate auf 9600 ein. Überprüfen Sie die Ausgabe im seriellen Monitor.
 
-These are the detected I2C addresses. You can refer to relevant information to determine which chips correspond to these addresses. In this case, ``0x68`` is for MPU6050 and ``0x77`` is for BMP180. The address ``0x1E`` is for QMC5883L, and occasionally(due to different production batches) the address of QMC5883L may also be ``0x0D``.
+Dies sind die erkannten I2C-Adressen. Sie können sich auf relevante Informationen beziehen, um zu bestimmen, welche Chips diesen Adressen entsprechen. In diesem Fall steht ``0x68`` für MPU6050 und ``0x77`` für BMP180. Die Adresse ``0x1E`` ist für QMC5883L, und gelegentlich (aufgrund unterschiedlicher Produktionschargen) kann die Adresse von QMC5883L auch ``0x0D`` sein.
 
 .. image:: img/gy87-i2c.png
     :width: 100%

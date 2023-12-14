@@ -5,37 +5,37 @@ I2C LCD1602
 
 .. https://docs.sunfounder.com/projects/sensorkit-v2-arduino/en/latest/lesson_1.html
 
-Overview
+Überblick
 ---------------
 
-In this lesson, you will learn about Liquid Crystal Displays (LCDs) with an I2C interface. These types of LCDs are widely used in a variety of electronic devices, such as digital clocks, microwave ovens, car dashboards, and even industrial equipment. The I2C interface simplifies the wiring and connections, making it more convenient and efficient for hobbyists and professionals alike.
+In dieser Lektion erfahren Sie mehr über Flüssigkristallanzeigen (LCDs) mit einer I2C-Schnittstelle. Diese Art von LCDs wird in einer Vielzahl elektronischer Geräte verwendet, wie in Digitaluhren, Mikrowellenöfen, Armaturenbrettern in Autos und sogar in industriellen Geräten. Die I2C-Schnittstelle vereinfacht die Verkabelung und die Verbindungen, was sie sowohl für Hobbyisten als auch für Profis bequemer und effizienter macht.
 
-Required Components
+Benötigte Komponenten
 -------------------------
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein komplettes Kit zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Name
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Sie können die Komponenten auch separat über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -48,14 +48,14 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_i2c_lcd1602`
         - |link_i2clcd1602_buy|
 
-Wiring
+Verdrahtung
 ----------------------
 
 .. image:: img/14-i2c_lcd_bb.png
     :align: center
     :width: 100%
 
-Schematic Diagram
+Schaltplan
 -----------------------
 
 .. image:: img/14-i2c_lcd_schematic.png
@@ -67,11 +67,11 @@ Code
 
 .. note::
 
-    * You can open the file ``14-i2c_lcd.ino`` under the path of ``elite-explorer-kit-main\basic_project\14-i2c_lcd`` directly.
-    * Or copy this code into Arduino IDE.
+    * Sie können die Datei ``14-i2c_lcd.ino`` direkt unter dem Pfad ``elite-explorer-kit-main\basic_project\14-i2c_lcd`` öffnen.
+    * Oder kopieren Sie diesen Code in die Arduino IDE.
 
 .. note:: 
-    To install the library, use the Arduino Library Manager and search for **"LiquidCrystal I2C"** and install it. 
+    Um die Bibliothek zu installieren, verwenden Sie den Arduino Library Manager und suchen Sie nach **„LiquidCrystal I2C“** und installieren Sie diese. 
 
 .. raw:: html
 
@@ -81,39 +81,39 @@ Code
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/videos/basic_projects/14_basic_i2c_lcd.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      Ihr Browser unterstützt das Video-Tag nicht.
    </video>
 
-After the code is uploaded successfully to the Arduino, the Liquid Crystal Display (LCD) will show the message "Hello world!" on its first line and "LCD Tutorial" on its second line.
+Nachdem der Code erfolgreich auf den Arduino hochgeladen wurde, zeigt das Liquid Crystal Display (LCD) die Nachricht „Hello world!“ in der ersten Zeile und „LCD Tutorial“ in der zweiten Zeile an.
 
 .. note::
-    If the LCD does not display any characters after uploading the code, you can adjust the contrast by rotating the potentiometer on the I2C module until the LCD functions correctly.
+    Wenn das LCD nach dem Hochladen des Codes keine Zeichen anzeigt, können Sie den Kontrast einstellen, indem Sie das Potentiometer am I2C-Modul drehen, bis das LCD korrekt funktioniert.
 
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/videos/basic_projects/14_basic_i2c_lcd_2.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      Ihr Browser unterstützt das Video-Tag nicht.
    </video>
 
    <br/><br/>
 
-Code Analysis
+Code-Analyse
 ------------------------
 
-1. Library Inclusion and LCD Initialization:
-   The LiquidCrystal I2C library is included to provide functions and methods for LCD interfacing. Following that, an LCD object is created using the LiquidCrystal_I2C class, specifying the I2C address, number of columns, and number of rows.
+1. Bibliothekseinbindung und LCD-Initialisierung:
+   Die LiquidCrystal I2C-Bibliothek wird eingebunden, um Funktionen und Methoden für die LCD-Schnittstelle bereitzustellen. Danach wird ein LCD-Objekt mit der Klasse LiquidCrystal_I2C erstellt, wobei die I2C-Adresse, die Anzahl der Spalten und die Anzahl der Zeilen angegeben werden.
 
    .. note:: 
-      To install the library, use the Arduino Library Manager and search for **"LiquidCrystal I2C"** and install it.  
+      Um die Bibliothek zu installieren, verwenden Sie den Arduino Library Manager und suchen Sie nach **„LiquidCrystal I2C“** und installieren Sie diese.  
 
    .. code-block:: arduino
 
       #include <LiquidCrystal_I2C.h>
       LiquidCrystal_I2C lcd(0x27, 16, 2);
 
-2. Setup Function:
-   The ``setup()`` function is executed once when the Arduino starts. In this function, the LCD is initialized, cleared, and the backlight is turned on. Then, two messages are displayed on the LCD.
+2. Setup-Funktion:
+   Die ``setup()``-Funktion wird einmal ausgeführt, wenn der Arduino startet. In dieser Funktion wird das LCD initialisiert, gelöscht und die Hintergrundbeleuchtung eingeschaltet. Anschließend werden zwei Nachrichten auf dem LCD angezeigt.
 
    .. code-block:: arduino
 

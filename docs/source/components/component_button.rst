@@ -1,43 +1,39 @@
 .. _cpn_button:
 
-Button
+Knopf
 ==========
 
 .. image:: img/button.png
     :width: 400
     :align: center
 
-Buttons are a common component used to control electronic devices. They are usually used as switches to connect or break circuits. Although buttons come in a variety of sizes and shapes, the one used here is a 6mm mini-button as shown in the following pictures.
-Pin 1 is connected to pin 2 and pin 3 to pin 4. So you just need to connect either of pin 1 and pin 2 to pin 3 or pin 4.
+Knöpfe sind eine gängige Komponente zur Steuerung elektronischer Geräte. Sie werden meist als Schalter verwendet, um Stromkreise zu schließen oder zu unterbrechen. Obwohl es Knöpfe in verschiedenen Größen und Formen gibt, wird hier ein 6mm Mini-Knopf verwendet, wie in den folgenden Bildern gezeigt.
+Pin 1 ist mit Pin 2 und Pin 3 mit Pin 4 verbunden. Sie müssen also entweder Pin 1 mit Pin 3 oder Pin 2 mit Pin 4 verbinden.
 
-The following is the internal structure of a button. The symbol on the right below is usually used to represent a button in circuits. 
+Das Folgende ist die innere Struktur eines Knopfes. Das Symbol unten rechts wird üblicherweise verwendet, um einen Knopf in Schaltungen darzustellen.
 
 .. image:: img/button_symbol.png
     :width: 400
     :align: center
 
-Since the pin 1 is connected to pin 2, and pin 3 to pin 4, when the button is pressed, the 4 pins are connected, thus closing the circuit.
+Da Pin 1 mit Pin 2 verbunden ist und Pin 3 mit Pin 4, werden beim Drücken des Knopfes die 4 Pins verbunden, wodurch der Stromkreis geschlossen wird.
 
 .. image:: img/button2.png
     :width: 600
     :align: center
 
-
-In this kit, we provide two types of buttons. The one mentioned earlier is a small button, and there is also a large button. They have the same principle, only different in size.
+In diesem Kit bieten wir zwei Arten von Knöpfen an. Der zuvor erwähnte ist ein kleiner Knopf, und es gibt auch einen großen Knopf. Sie haben dasselbe Prinzip, unterscheiden sich jedoch in der Größe.
 
 .. image:: img/button3.png
     :width: 300
     :align: center
 
+**Beispiel**
 
-
-**Example**
-
-* :ref:`basic_button` (Basic Project)
-* :ref:`fun_digital_dice` (Fun Project)
-* :ref:`fun_smart_fan` (Fun Project)
-* :ref:`fun_pong` (Fun Project)
-* :ref:`iot_mqtt_publish` (IoT Project)
+* :ref:`basic_button` (Grundprojekt)
+* :ref:`fun_digital_dice` (Spaßprojekt)
+* :ref:`fun_smart_fan` (Spaßprojekt)
+* :ref:`fun_pong` (Spaßprojekt)
+* :ref:`iot_mqtt_publish` (IoT-Projekt)
 * :ref:`new_hid_keyboard` 
-
 

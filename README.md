@@ -16,6 +16,9 @@ Coming soon...
 
 <a id="update"></a>
 ## Update:
+2023-12-14:
+    - First release in German.
+
 2023-12-06:
     - First release in English.
 

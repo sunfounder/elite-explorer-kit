@@ -1,42 +1,42 @@
 .. _basic_7segment:
 
-7-segment Display
+7-Segment-Anzeige
 ==========================
 
 .. https://docs.sunfounder.com/projects/uno-mega-kit/en/latest/uno/7_segment_display_uno.html#segmeng-uno
 
 
-Overview
+Überblick
 -------------------
 
-A 7-segment display is a device that can display numerals and letters. It's made up of seven LEDs connected in parallel. Different letters/numbers can be shown by connecting pins on the display to the power source and enabling the related pins, thus turning on the corresponding LED segments. In this lesson let's learn how to display specific characters on it.
+Eine 7-Segment-Anzeige ist ein Gerät, das Zahlen und Buchstaben darstellen kann. Sie besteht aus sieben in Parallelschaltung verbundenen LEDs. Verschiedene Buchstaben/Zahlen können angezeigt werden, indem die Pins der Anzeige mit der Stromquelle verbunden und die entsprechenden Pins aktiviert werden, wodurch die entsprechenden LED-Segmente eingeschaltet werden. In dieser Lektion lernen wir, wie man bestimmte Zeichen darauf anzeigt.
 
-Required Components
+Benötigte Komponenten
 ------------------------
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein komplettes Kit zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Name
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Sie können die Komponenten auch separat über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -49,7 +49,7 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_7segment`
         - |link_7segment_buy|
 
-Wiring
+Verdrahtung
 ----------------------
 
 .. image:: img/13-7_segment_display_bb.png
@@ -57,10 +57,10 @@ Wiring
     :width: 70%
 
 
-Schematic Diagram
+Schaltplan
 ------------------------
 
-In this experiment, connect each of pin a-g of the 7-Segment Display to one 1000 ohm current limiting resistor respectively and then to pin 4-11. GND connects to GND. By programming, we can set one or several of pin4-11 as High level to light up the corresponding LED(s).
+In diesem Experiment verbinden Sie jeden Pin a-g der 7-Segment-Anzeige jeweils mit einem 1000-Ohm-Strombegrenzungswiderstand und dann mit Pin 4-11. GND verbindet sich mit GND. Durch die Programmierung können wir einen oder mehrere der Pins 4-11 als High-Level setzen, um die entsprechende(n) LED(s) zu beleuchten.
 
 .. image:: img/13-7_segment_display_schematic.png
     :align: center
@@ -71,8 +71,8 @@ Code
 
 .. note::
 
-    * You can open the file ``13-7_segment.ino`` under the path of ``elite-explorer-kit-main\basic_project\13-7_segment`` directly.
-    * Or copy this code into Arduino IDE.
+    * Sie können die Datei ``13-7_segment.ino`` direkt unter dem Pfad ``elite-explorer-kit-main\basic_project\13-7_segment`` öffnen.
+    * Oder kopieren Sie diesen Code in die Arduino IDE.
 
 
 .. raw:: html
@@ -83,17 +83,17 @@ Code
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/videos/basic_projects/13_basic_7_segment.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      Ihr Browser unterstützt das Video-Tag nicht.
    </video>
 
    <br/><br/>
 
-Code Analysis
+Code-Analyse
 ----------------------
 
-The code may be a little long for this experiment. But the syntax is simple. Let's take a look.
+Der Code könnte für dieses Experiment etwas lang erscheinen. Aber die Syntax ist einfach. Lassen Sie uns einen Blick darauf werfen.
 
-**Call the function in loop()**
+**Aufrufen der Funktion in loop()**
 
 .. code-block:: arduino
 
@@ -111,10 +111,9 @@ The code may be a little long for this experiment. But the syntax is simple. Let
 
    digital_4(); //diaplay 4 to the 7-segment
 
+Durch den Aufruf dieser Funktionen in der loop()-Funktion wird die 7-Segment-Anzeige 0-F anzeigen. Die Funktionen werden nachfolgend gezeigt. Nehmen wir ``digital_2()`` als Beispiel:
 
-Calling these functions into the loop() is to let the 7-Segment display 0-F. The functions are shown below. Take ``digital_2()`` for example:
-
-**Detailed analysis of digital_2()**
+**Detaillierte Analyse von digital_2()**
 
 .. code-block:: arduino
 
@@ -131,6 +130,6 @@ Calling these functions into the loop() is to let the 7-Segment display 0-F. The
 .. image:: img/13_7segment.jpeg
    :align: center
 
-First, we need to understand how the numeral **2** appears on the 7-Segment display. It is achieved by powering on segments a, b, d, e, and g. In programming, pins connected to these segments are set to a High level while c and f are set to Low level. We start by using the function ``turnOffAllSegments()`` to turn off all segments and then light up the required ones.
+Zuerst müssen wir verstehen, wie die Zahl **2** auf der 7-Segment-Anzeige erscheint. Dies wird erreicht, indem die Segmente a, b, d, e und g eingeschaltet werden. In der Programmierung werden Pins, die mit diesen Segmenten verbunden sind, auf ein hohes Niveau gesetzt, während c und f auf ein niedriges Niveau gesetzt werden. Wir beginnen mit der Funktion ``turnOffAllSegments()``, um alle Segmente auszuschalten, und beleuchten dann die benötigten.
 
-After running this part, the 7-segment will display **2**. Similarly, the display of other characters are the same. Since the letters b and d in upper case, namely **B** and **D**, would look the same with **8** and **0** on the display, they are displayed in lower case instead.
+Nachdem dieser Teil ausgeführt wurde, zeigt die 7-Segment-Anzeige **2** an. Ähnlich ist es mit der Anzeige anderer Zeichen. Da die Buchstaben b und d in Großbuchstaben, nämlich **B** und **D**, gleich aussehen würden wie **8** und **0** auf der Anzeige, werden sie stattdessen in Kleinbuchstaben dargestellt.

@@ -1,42 +1,42 @@
 .. _basic_relay:
 
-Relay
+Relais
 ==========================
 
 .. https://docs.sunfounder.com/projects/r4-basic-kit/en/latest/projects/relay_uno.html#relay-uno
 
 
-Overview
+Überblick
 ---------------
 
-As we may know, relay is a device which is used to provide connection between two or more points or devices in response to the input signal applied. In other words, relays provide isolation between the controller and the device as devices may work on AC as well as on DC. However, they receive signals from a micro-controller which works on DC hence requiring a relay to bridge the gap. Relay is extremely useful when you need to control a large amount of current or voltage with small electrical signal.
+Wie wir vielleicht wissen, ist ein Relais ein Gerät, das dazu dient, eine Verbindung zwischen zwei oder mehr Punkten oder Geräten als Reaktion auf das angelegte Eingangssignal herzustellen. Mit anderen Worten, Relais bieten eine Isolation zwischen dem Controller und dem Gerät, da Geräte sowohl mit Wechselstrom als auch mit Gleichstrom arbeiten können. Sie erhalten jedoch Signale von einem Mikrocontroller, der mit Gleichstrom arbeitet, weshalb ein Relais benötigt wird, um die Lücke zu überbrücken. Ein Relais ist äußerst nützlich, wenn Sie eine große Menge an Strom oder Spannung mit einem kleinen elektrischen Signal steuern müssen.
 
-Required Components
+Benötigte Komponenten
 -------------------------
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Set zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -55,24 +55,24 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_diode`
         - |link_diode_buy| 
 
-Wiring
+Verdrahtung
 ----------------------
 
 .. image:: img/28-relay_bb.png
     :align: center
     :width: 90%
 
-Schematic Diagram
+Schaltplan
 -----------------------
 
-Connect a 1K resistor (for current limiting when the transistor is energized) to pin 8 of the SunFounder Uno board, then to an NPN transistor whose collector is connected to the coil of a relay and emitter to GND; connect the normally open contact of the relay to an LED and then GND. Therefore, when a High level signal is given to pin 8, the transistor is energized, thus making the coil of the relay conductive. Then its normally open contact is closed, and the LED will light up. When pin 8 is given a Low level, the LED will stay dim.
+Verbinden Sie einen 1K-Widerstand (zur Strombegrenzung, wenn der Transistor aktiviert wird) mit Pin 8 des SunFounder Uno Boards und dann mit einem NPN-Transistor, dessen Kollektor mit der Spule eines Relais verbunden ist und dessen Emitter mit GND; verbinden Sie den normalerweise offenen Kontakt des Relais mit einer LED und dann mit GND. Daher leuchtet die LED auf, wenn Pin 8 ein High-Level-Signal erhält, da der Transistor aktiviert wird und die Spule des Relais leitend macht. Wenn Pin 8 ein Low-Level-Signal erhält, bleibt die LED dunkel.
 
 .. image:: img/28_relay_schematic.png
 
 
-**Function of the freewheeling diode**: When the voltage input changes from High (5V) to Low (0V), the transistor changes from saturation (three working conditions: amplification, saturation, and cut-off) to cut-off, the current in the coil suddenly has no way to flow through. At this moment, without the freewheeling diode, a counter-electromotive force (EMF) will be generated at the ends of the coil, with positive at the bottom and negative at the top, a voltage higher than 100V. This voltage plus that from the power at the transistor are big enough to burn it. Therefore, the freewheeling diode is extremely important in discharging this counter-EMF in the direction of the arrow in the figure above, so the voltage of the transistor to GND is no higher than +5V (+0.7V).
+**Funktion der Freilaufdiode**: Wenn die Spannungseingabe von High (5V) auf Low (0V) wechselt, ändert sich der Transistor von Sättigung (drei Arbeitsbedingungen: Verstärkung, Sättigung und Abschaltung) zu Abschaltung. Der Strom in der Spule hat plötzlich keinen Durchflussweg mehr. In diesem Moment würde ohne die Freilaufdiode eine Gegen-Elektromotorische Kraft (EMK) an den Enden der Spule erzeugt, mit positivem Pol unten und negativem Pol oben, eine Spannung höher als 100V. Diese Spannung plus die vom Transistor zugeführte Spannung sind groß genug, um ihn zu verbrennen. Daher ist die Freilaufdiode extrem wichtig, um diese Gegen-EMK in Richtung des Pfeils in der Abbildung oben zu entladen, sodass die Spannung des Transistors zu GND nicht höher als +5V (+0.7V) ist.
 
-In this experiment, when the relay closes, the LED will light up; when the relay opens, the LED will go out.
+In diesem Experiment leuchtet die LED auf, wenn das Relais schließt; wenn das Relais öffnet, erlischt die LED.
 
 
 Code
@@ -80,17 +80,17 @@ Code
 
 .. note::
 
-    * You can open the file ``28-relay.ino`` under the path of ``elite-explorer-kit-main\basic_project\28-relay`` directly.
-    * Or copy this code into Arduino IDE.
+    * Sie können die Datei ``28-relay.ino`` direkt im Pfad ``elite-explorer-kit-main\basic_project\28-relay`` öffnen.
+    * Oder kopieren Sie diesen Code in die Arduino IDE.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/093cb26d-298d-4b36-b3be-466d813c19a9/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
   
 
-Now, send a High level signal, and the relay will close and the LED will light up; send a low one, and it will open and the LED will go out. In addition, you can hear a tick-tock caused by breaking the normally close contact and closing the normally open one.
+Senden Sie nun ein High-Level-Signal, und das Relais schließt und die LED leuchtet auf; senden Sie ein Low-Level-Signal, und es öffnet sich und die LED erlischt. Zusätzlich können Sie ein Klick-Klack-Geräusch hören, verursacht durch das Öffnen des normalerweise geschlossenen Kontakts und das Schließen des normalerweise offenen Kontakts.
 
-Code Analysis
+Code-Analyse
 -----------------
 
 .. code-block:: arduino
@@ -102,4 +102,4 @@ Code Analysis
      delay(1000);                   // Wait for one second
    }
 
-The code in this experiment is simple. First, set relayPin as HIGH level and the LED connected to the relay will light up. Then set relayPin as LOW level and the LED goes out.
+Der Code in diesem Experiment ist einfach. Zuerst wird relayPin als High-Level gesetzt und die mit dem Relais verbundene LED leuchtet auf. Dann wird relayPin als Low-Level gesetzt und die LED erlischt.

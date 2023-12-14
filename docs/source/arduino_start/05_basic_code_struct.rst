@@ -1,8 +1,8 @@
-Arduino Program Structure
+Arduino Programmstruktur
 ===========================
 
-Let's take a look at the new sketch file. Although it has a few lines of code itself, it is actually an "empty" sketch. 
-Uploading this sketch to the development board will cause nothing to happen.
+Schauen wir uns die neue Sketch-Datei an. Obwohl sie selbst einige Zeilen Code enthält, ist es tatsächlich ein „leerer“ Sketch. 
+Das Hochladen dieses Sketches auf das Entwicklungsboard bewirkt nichts.
 
 .. code-block:: C
 
@@ -16,15 +16,15 @@ Uploading this sketch to the development board will cause nothing to happen.
 
     }
 
-If we remove ``setup()`` and ``loop()`` and make the sketch a real ``blank`` file, you will find that it does not pass the verification. 
-They are the equivalent of the human skeleton, and they are indispensable.
+Wenn wir ``setup()`` und ``loop()`` entfernen und den Sketch zu einer wirklich ``leeren`` Datei machen, werden Sie feststellen, dass er die Überprüfung nicht besteht. 
+Sie sind gleichbedeutend mit dem menschlichen Skelett und unverzichtbar.
 
-During sketching, ``setup()`` is run first, and the code inside it (inside ``{}``) is run after the board is powered up or reset and only once. 
-``loop()`` is used to write the main feature, and the code inside it will run in a loop after ``setup()`` is executed.
+Während des Skizzierens wird ``setup()`` zuerst ausgeführt, und der Code darin (innerhalb von ``{}``) wird ausgeführt, nachdem das Board mit Strom versorgt oder zurückgesetzt wurde, und zwar nur einmal. 
+``loop()`` wird verwendet, um die Hauptfunktion zu schreiben, und der Code darin wird in einer Schleife ausgeführt, nachdem ``setup()`` ausgeführt wurde.
 
-To better understand setup() and loop(), let's use four sketches. Their purpose is to make the on-board LED of the Arduino blink. Please run each experiment in turn and record their specific effects.
+Um setup() und loop() besser zu verstehen, verwenden wir vier Skizzen. Ihr Zweck ist es, die LED auf dem Arduino-Board blinken zu lassen. Bitte führen Sie jedes Experiment nacheinander durch und zeichnen Sie ihre spezifischen Effekte auf.
 
-* Sketch 1: Make the on-board LED blink continuously.
+* Sketch 1: Lassen Sie die LED auf dem Board kontinuierlich blinken.
 
 .. code-block:: C
     :emphasize-lines: 8,9,10,11
@@ -42,7 +42,7 @@ To better understand setup() and loop(), let's use four sketches. Their purpose 
         delay(500);
     }
 
-* Sketch 2: Make the on-board LED blink only once. 
+* Sketch 2: Lassen Sie die LED auf dem Board nur einmal blinken.
 
 .. code-block:: C
     :emphasize-lines: 4,5,6,7
@@ -60,7 +60,7 @@ To better understand setup() and loop(), let's use four sketches. Their purpose 
         // put your main code here, to run repeatedly:
     }
 
-* Sketch 3: Make the on-board LED blink slowly once and then blink quickly. 
+* Sketch 3: Lassen Sie die LED auf dem Board langsam einmal blinken und dann schnell blinken.
 
 .. code-block:: C
     :emphasize-lines: 4,5,6,7,12,13,14,15
@@ -82,7 +82,7 @@ To better understand setup() and loop(), let's use four sketches. Their purpose 
         delay(200);
     }    
 
-* Sketch 4: Report an error.
+* Sketch 4: Meldet einen Fehler.
 
 .. code-block:: C
     :emphasize-lines: 6,7,8,9
@@ -101,14 +101,12 @@ To better understand setup() and loop(), let's use four sketches. Their purpose 
         // put your main code here, to run repeatedly:
     }    
 
-With the help of these sketches, we can summarize several features of ``setup-loop``.
+Mit Hilfe dieser Skizzen können wir mehrere Merkmale von ``setup-loop`` zusammenfassen.
 
-* ``loop()`` will be run repeatedly after the board is powered up. 
-* ``setup()`` will run only once after the board is powered up. 
-* After the board is powered up, ``setup()`` will run first, followed by ``loop()``. 
-* The code needs to be written within the ``{}`` scope of ``setup()`` or ``loop()``, out of the framework will be an error.
+* ``loop()`` wird wiederholt ausgeführt, nachdem das Board mit Strom versorgt wurde. 
+* ``setup()`` wird nur einmal ausgeführt, nachdem das Board mit Strom versorgt wurde. 
+* Nachdem das Board mit Strom versorgt wurde, wird zuerst ``setup()`` ausgeführt, gefolgt von ``loop()``. 
+* Der Code muss innerhalb des ``{}``-Bereichs von ``setup()`` oder ``loop()`` geschrieben werden, außerhalb des Rahmens wird ein Fehler auftreten.
 
-.. note::  
-    Statements such as ``digitalWrite(13,HIGH)`` are used to control the on-board LED, and we will talk about their usage in detail in later chapters.
-
-
+.. note::
+    Anweisungen wie ``digitalWrite(13,HIGH)`` werden verwendet, um die On-Board-LED anzusteuern, und wir werden in späteren Kapiteln detailliert auf ihre Verwendung eingehen.

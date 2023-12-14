@@ -6,43 +6,40 @@ I2C LCD1602
 .. image:: img/i2c_lcd1602.png
     :width: 800
 
-* **GND**: Ground
-* **VCC**: Voltage supply, 5V.
-* **SDA**: Serial data line. Connect to VCC through a pullup resistor.
-* **SCL**: Serial clock line. Connect to VCC through a pullup resistor.
+* **GND**: Masse
+* **VCC**: Spannungsversorgung, 5V.
+* **SDA**: Serielle Datenleitung. Verbinden mit VCC über einen Pullup-Widerstand.
+* **SCL**: Serielle Taktleitung. Verbinden mit VCC über einen Pullup-Widerstand.
 
-As we all know, though LCD and some other displays greatly enrich the man-machine interaction, they share a common weakness. When they are connected to a controller, multiple IOs will be occupied of the controller which has no so many outer ports. Also it restricts other functions of the controller. 
+Wie wir alle wissen, bereichern LCDs und andere Anzeigen zwar die Mensch-Maschine-Interaktion, teilen aber eine gemeinsame Schwäche. Wenn sie mit einem Controller verbunden sind, belegen sie mehrere IOs des Controllers, der nicht so viele externe Ports hat. Dies beschränkt auch andere Funktionen des Controllers.
 
-Therefore, LCD1602 with an I2C module is developed to solve the problem. The I2C module has a built-in PCF8574 I2C chip that converts I2C serial data to parallel data for the LCD display.        
+Daher wurde das LCD1602 mit einem I2C-Modul entwickelt, um dieses Problem zu lösen. Das I2C-Modul hat einen eingebauten PCF8574 I2C-Chip, der I2C-Serien-Daten in parallele Daten für das LCD-Display umwandelt.
 
 * |link_pcf8574_datasheet|
 
-**I2C Address**
+**I2C-Adresse**
 
-The default address is basically 0x27, in a few cases it may be 0x3F.
+Die Standardadresse ist grundsätzlich 0x27, in einigen Fällen kann sie 0x3F sein.
 
-Taking the default address of 0x27 as an example, the device address can be modified by shorting the A0/A1/A2 pads; in the default state, A0/A1/A2 is 1, and if the pad is shorted, A0/A1/A2 is 0.
+Nehmen wir die Standardadresse von 0x27 als Beispiel, kann die Geräteadresse geändert werden, indem die A0/A1/A2-Pads kurzgeschlossen werden; im Standardzustand ist A0/A1/A2 1, und wenn das Pad kurzgeschlossen wird, ist A0/A1/A2 0.
 
 .. image:: img/i2c_address.jpg
     :width: 600
 
-**Backlight/Contrast**
+**Hintergrundbeleuchtung/Kontrast**
 
-Backlight can be enabled by jumper cap, unplugg the jumper cap to disable the backlight. The blue potentiometer on the back is used to adjust the contrast (the ratio of brightness between the brightest white and the darkest black).
-
+Die Hintergrundbeleuchtung kann durch einen Jumper aktiviert werden, entfernen Sie den Jumper, um die Hintergrundbeleuchtung zu deaktivieren. Das blaue Potentiometer auf der Rückseite wird verwendet, um den Kontrast (das Verhältnis der Helligkeit zwischen dem hellsten Weiß und dem dunkelsten Schwarz) einzustellen.
 
 .. image:: img/back_lcd1602.jpg
 
-* **Shorting Cap**: Backlight can be enabled by this cap, unplugg this cap to disable the backlight.
-* **Potentiometer**: It is used to adjust the contrast (the clarity of the displayed text), which is increased in the clockwise direction and decreased in the counterclockwise direction.
+* **Kurzschlusskappe**: Die Hintergrundbeleuchtung kann durch diese Kappe aktiviert werden, entfernen Sie diese Kappe, um die Hintergrundbeleuchtung zu deaktivieren.
+* **Potentiometer**: Es wird verwendet, um den Kontrast (die Klarheit des angezeigten Textes) einzustellen, der im Uhrzeigersinn erhöht und gegen den Uhrzeigersinn verringert wird.
 
+**Beispiel**
 
+* :ref:`basic_i2c_lcd1602` (Grundprojekt)
+* :ref:`basic_ultrasonic_sensor` (Grundprojekt)
+* :ref:`fun_plant_monitor` (Spaßprojekt)
+* :ref:`fun_guess_number` (Spaßprojekt)
+* :ref:`iot_Bluetooth_lcd` (IoT-Projekt)
 
-
-**Example**
-
-* :ref:`basic_i2c_lcd1602` (Basic Project)
-* :ref:`basic_ultrasonic_sensor` (Basic Project)
-* :ref:`fun_plant_monitor` (Fun Project)
-* :ref:`fun_guess_number` (Fun Project)
-* :ref:`iot_Bluetooth_lcd` (IoT Project)

@@ -1,52 +1,47 @@
 .. _basic_humiture_sensor:
 
-Humiture Sensor Module
-==========================
+Feuchtigkeitssensor-Modul
+=============================
 
 .. https://docs.sunfounder.com/projects/3in1-kit/en/latest/basic_project/ar_dht11.html#ar-dht11
 
-Overview
+Überblick
 ---------------
 
-Humidity and temperature are closely related from the physical quantity itself to the actual people's life.
-The temperature and humidity of human environment will directly affect the thermoregulatory function and heat transfer effect of human body.
-It will further affect the thinking activity and mental state, thus affecting the efficiency of our study and work.
+Feuchtigkeit und Temperatur stehen von der physikalischen Größe selbst bis hin zum tatsächlichen menschlichen Leben in enger Beziehung. Die Temperatur und Feuchtigkeit der menschlichen Umgebung beeinflussen direkt die Thermoregulationsfunktion und den Wärmeübertragungseffekt des menschlichen Körpers. Dies wirkt sich weiter auf die Denkaktivität und den mentalen Zustand aus und beeinflusst somit die Effizienz unseres Lernens und Arbeitens.
 
-Temperature is one of the seven basic physical quantities in the International System of Units, which is used to measure the degree of hot and cold of an object.
-Celsius is one of the more widely used temperature scales in the world, expressed by the symbol "℃".
+Die Temperatur ist eine der sieben grundlegenden physikalischen Größen im Internationalen Einheitensystem, die verwendet wird, um den Grad der Wärme oder Kälte eines Objekts zu messen. Celsius ist eine der weltweit am häufigsten verwendeten Temperaturskalen, ausgedrückt durch das Symbol „℃“.
 
-Humidity is the concentration of water vapor present in the air.
-The relative humidity of air is commonly used in life and is expressed in %RH. Relative humidity is closely related to temperature.
-For a certain volume of sealed gas, the higher the temperature, the lower the relative humidity, and the lower the temperature, the higher the relative humidity.
+Feuchtigkeit ist die Konzentration von Wasserdampf in der Luft. Die relative Luftfeuchtigkeit wird im Alltag häufig verwendet und in %RH ausgedrückt. Die relative Feuchtigkeit steht in engem Zusammenhang mit der Temperatur. Bei einem bestimmten Volumen abgeschlossenen Gases gilt: Je höher die Temperatur, desto niedriger die relative Feuchtigkeit und umgekehrt.
 
-The dht11, a digital temperature and humidity sensor, is provided in this kit. It uses a capacitive humidity sensor and thermistor to measure the surrounding air and outputs a digital signal on the data pin.
+Der DHT11, ein digitaler Temperatur- und Feuchtigkeitssensor, ist in diesem Kit enthalten. Er verwendet einen kapazitiven Feuchtigkeitssensor und ein Thermistor, um die umgebende Luft zu messen und gibt ein digitales Signal am Datenpin aus.
 
-Required Components
+Benötigte Komponenten
 -------------------------
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein komplettes Kit zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Name
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Sie können die Komponenten auch separat über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -59,13 +54,13 @@ You can also buy them separately from the links below.
 
 
 
-Wiring
+Verdrahtung
 ----------------------
 
 .. image:: img/07-dht11_bb.png
     :align: center
 
-Schematic Diagram
+Schaltplan
 -----------------------
 
 .. image:: img/07_humiture_schematic.png
@@ -77,27 +72,27 @@ Code
 
 .. note::
 
-    * You can open the file ``07-humiture_sensor.ino`` under the path of ``elite-explorer-kit-main\basic_project\07-humiture_sensor`` directly.
-    * Or copy this code into Arduino IDE.
+    * Sie können die Datei ``07-humiture_sensor.ino`` direkt unter dem Pfad ``elite-explorer-kit-main\basic_project\07-humiture_sensor`` öffnen.
+    * Oder kopieren Sie diesen Code in die Arduino IDE.
 
 .. note:: 
-    To install the library, use the Arduino Library Manager and search for **"DHT sensor library"** and install it. 
+    Um die Bibliothek zu installieren, verwenden Sie den Arduino Library Manager und suchen Sie nach **„DHT sensor library“** und installieren Sie diese.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/1086b07f-9551-4fa0-a0c0-391a6465ad2e/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-After the code is uploaded successfully, you will see the Serial Monitor continuously print out the temperature and humidity, and as the program runs steadily, these two values will become more and more accurate.
+Nachdem der Code erfolgreich hochgeladen wurde, werden Sie sehen, dass der Serielle Monitor kontinuierlich die Temperatur und Feuchtigkeit ausgibt. Während das Programm stabil läuft, werden diese beiden Werte immer genauer.
 
-Code Analysis
+Code-Analyse
 ------------------------
 
-#. Inclusion of necessary libraries and definition of constants.
-   This part of the code includes the DHT sensor library and defines the pin number and sensor type used in this project.
+#. Einbindung notwendiger Bibliotheken und Definition von Konstanten.
+   Dieser Teil des Codes bindet die DHT-Sensorbibliothek ein und definiert die Pinnummer und den Sensortyp, die in diesem Projekt verwendet werden.
 
    .. note:: 
-      To install the library, use the Arduino Library Manager and search for **"DHT sensor library"** and install it. 
+      Um die Bibliothek zu installieren, verwenden Sie den Arduino Library Manager und suchen Sie nach **„DHT sensor library“** und installieren Sie diese.
 
    .. code-block:: arduino
     
@@ -105,14 +100,14 @@ Code Analysis
       #define DHTPIN 2       // Define the pin used to connect the sensor
       #define DHTTYPE DHT11  // Define the sensor type
 
-#. Creation of DHT object.
-   Here we create a DHT object using the defined pin number and sensor type.
+#. Erstellung eines DHT-Objekts.
+   Hier erstellen wir ein DHT-Objekt mit der definierten Pinnummer und dem Sensortyp.
 
    .. code-block:: arduino
 
       DHT dht(DHTPIN, DHTTYPE);  // Create a DHT object
 
-#. This function is executed once when the Arduino starts. We initialize the serial communication and the DHT sensor in this function.
+#. Diese Funktion wird einmal ausgeführt, wenn der Arduino startet. Wir initialisieren die serielle Kommunikation und den DHT-Sensor in dieser Funktion.
 
    .. code-block:: arduino
 
@@ -122,12 +117,12 @@ Code Analysis
         dht.begin();  // Initialize the DHT sensor
       }
 
-#. Main loop.
-   The ``loop()`` function runs continuously after the setup function. Here, we read the humidity and temperature values, calculate the heat index, and print these values to the serial monitor.  If the sensor read fails (returns NaN), it prints an error message.
+#. Hauptloop.
+   Die Funktion ``loop()`` wird kontinuierlich nach der Setup-Funktion ausgeführt. Hier lesen wir die Feuchtigkeits- und Temperaturwerte, berechnen den Hitzeindex und drucken diese Werte auf den seriellen Monitor. Wenn das Auslesen des Sensors fehlschlägt (NaN zurückgibt), wird eine Fehlermeldung ausgegeben.
 
    .. note::
     
-      The |link_heat_index| is a way to measure how hot it feels outside by combining the air temperature and the humidity. It is also called the "felt air temperature" or "apparent temperature".
+      Der |link_heat_index| ist eine Methode, um zu messen, wie heiß es sich draußen anfühlt, indem die Lufttemperatur und die Feuchtigkeit kombiniert werden. Es wird auch als „gefühlte Lufttemperatur“ oder „scheinbare Temperatur“ bezeichnet.
 
    .. code-block:: arduino
 

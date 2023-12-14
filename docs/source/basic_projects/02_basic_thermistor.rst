@@ -5,37 +5,37 @@ Thermistor
 
 .. https://docs.sunfounder.com/projects/vincent-kit/en/latest/arduino/2.27_thermistor.html#ar-thermistor
 
-Overview
+Übersicht
 -------------
 
-In this lesson, you will learn how to use thermistor. Thermistor can be used as electronic circuit components for temperature compensation of instrument circuits. In the current meter, flowmeter, gas analyzer, and other devices. It can also be used for overheating protection, contactless relay, constant temperature, automatic gain control, motor start, time delay, color TV automatic degaussing, fire alarm and temperature compensation.
+In dieser Lektion lernen Sie, wie man einen Thermistor verwendet. Thermistoren können als elektronische Schaltkomponenten zur Temperaturkompensation in Messgeräteschaltungen eingesetzt werden. Sie finden Anwendung in Strommessgeräten, Durchflussmessern, Gasanalysatoren und anderen Geräten. Zudem werden sie für Überhitzungsschutz, kontaktlose Relais, Temperaturkonstanz, automatische Verstärkungsregelung, Motoranlauf, Zeitverzögerung, automatische Entmagnetisierung von Farbfernsehern, Brandmelder und Temperaturkompensation verwendet.
 
-Required Components
+Benötigte Komponenten
 -------------------------
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Kit zu kaufen. Hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Sie können die Komponenten auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -48,16 +48,16 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_thermistor`
         - |link_thermistor_buy|
 
-Wiring
+Verdrahtung
 ----------------------
 
-In this example, we use the analog pin A0 to get the value of Thermistor. One pin of thermistor is connected to 5V, and the other is wired up to A0. At the same time, a 10kΩ resistor is connected with the other pin before connecting to GND.
+In diesem Beispiel verwenden wir den analogen Pin A0, um den Wert des Thermistors zu ermitteln. Ein Pin des Thermistors wird mit 5V verbunden, der andere mit A0. Gleichzeitig wird ein 10kΩ Widerstand mit dem anderen Pin verbunden, bevor dieser mit GND verbunden wird.
 
 .. image:: img/02-thermistor_bb.png
     :align: center
     :width: 70%
 
-Schematic Diagram
+Schaltplan
 -----------------------
 
 .. image:: img/02_thermistor_schematic.png
@@ -69,14 +69,14 @@ Code
 
 .. note::
 
-    * You can open the file ``02-thermistor.ino`` under the path of ``elite-explorer-kit-main\basic_project\02-thermistor`` directly.
-    * Or copy this code into Arduino IDE.
+    * Sie können die Datei ``02-thermistor.ino`` direkt im Pfad ``elite-explorer-kit-main\basic_project\02-thermistor`` öffnen.
+    * Oder kopieren Sie diesen Code in die Arduino IDE.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/be5dbe68-b57d-41f0-9fc0-237b99acbe3f/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After uploading the code to the uno r4 board, you can open the serial monitor to check the current temperature. 
+Nachdem Sie den Code auf das Uno R4 Board hochgeladen haben, können Sie den seriellen Monitor öffnen, um die aktuelle Temperatur zu überprüfen.
 
-The Kelvin temperature is calculated using the formula **T\ K\ =1/(ln(R\ T/R\ N)/B+1/T\ N)**. This equation is derived from the |link_steinhart_hart| and simplifies calculations. You can also find more information about this formula on the detailed introduction page of the :ref:`cpn_thermistor`.
+Die Kelvin-Temperatur wird mit der Formel **T\ K\ =1/(ln(R\ T/R\ N)/B+1/T\ N)** berechnet. Diese Gleichung stammt aus dem |link_steinhart_hart| und vereinfacht die Berechnungen. Weitere Informationen zu dieser Formel finden Sie auf der detaillierten Einführungsseite des :ref:`cpn_thermistor`.
 

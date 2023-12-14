@@ -1,43 +1,43 @@
 .. _basic_stepper_motor:
 
-Stepper Motor
+Schrittmotor
 ==========================
 
 .. https://docs.sunfounder.com/projects/r4-basic-kit/en/latest/projects/stepper_motor_uno.html#stepper-uno
 
-Overview
+Überblick
 ---------------
 
-In this lesson, you will learn about controlling Stepper Motors, specifically the 28BYJ-48 model, using a ULN2003 driver and an Arduino Uno R4. Stepper motors are used in a variety of applications such as 3D printers, CNC machines, robotics, and even in common household appliances. Their precise control allows for intricate movements, making them ideal for projects that require high positional accuracy.
+In dieser Lektion lernen Sie, wie man Schrittmotoren steuert, speziell das Modell 28BYJ-48, unter Verwendung eines ULN2003-Treibers und eines Arduino Uno R4. Schrittmotoren werden in einer Vielzahl von Anwendungen wie 3D-Druckern, CNC-Maschinen, Robotik und sogar in gängigen Haushaltsgeräten verwendet. Ihre präzise Steuerung ermöglicht komplexe Bewegungen, was sie ideal für Projekte macht, die eine hohe Positionsgenauigkeit erfordern.
 
-In this project, we will be configuring the 28BYJ-48 stepper motor to rotate in both clockwise and counter-clockwise directions at different speeds. Stepper motors like these are often used in automated systems to rotate objects or drive mechanisms that require precise control. For example, they can be used in automatic curtains, where the curtains open or close at specific times or under specific conditions. By understanding how to control a stepper motor's rotation and speed, you'll be well on your way to incorporating them into your own electronic projects.
+In diesem Projekt konfigurieren wir den 28BYJ-48-Schrittmotor so, dass er sich in beide Richtungen – im Uhrzeigersinn und gegen den Uhrzeigersinn – mit verschiedenen Geschwindigkeiten dreht. Solche Schrittmotoren werden oft in automatisierten Systemen verwendet, um Objekte zu drehen oder Mechanismen anzutreiben, die eine präzise Steuerung erfordern. Beispielsweise können sie in automatischen Vorhängen verwendet werden, die sich zu bestimmten Zeiten oder unter bestimmten Bedingungen öffnen oder schließen. Wenn Sie verstehen, wie man die Drehung und Geschwindigkeit eines Schrittmotors steuert, sind Sie auf dem besten Weg, sie in Ihre eigenen elektronischen Projekte zu integrieren.
 
-Required Components
+Benötigte Komponenten
 -------------------------
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Set zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -51,19 +51,19 @@ You can also buy them separately from the links below.
         - \-
 
 
-Wiring
+Verdrahtung
 ----------------------
 
 .. warning::
-    Due to the high power consumption of the stepper motor, it is advisable to use an external 5V power supply instead of relying on the Arduino.
+    Aufgrund des hohen Stromverbrauchs des Schrittmotors ist es ratsam, eine externe 5V-Stromversorgung zu verwenden, anstatt sich auf den Arduino zu verlassen.
 
-    Although it is possible to power the stepper motor directly from the Arduino, this is not recommended as it can cause electrical noise on its power supply lines, potentially leading to damage of the Arduino.
+    Obwohl es möglich ist, den Schrittmotor direkt vom Arduino zu betreiben, wird dies nicht empfohlen, da es elektrisches Rauschen auf dessen Stromversorgungsleitungen verursachen kann, was möglicherweise zu Schäden am Arduino führt.
 
 .. image:: img/26-stepper_motor_bb.png
     :align: center
 
 
-Schematic Diagram
+Schaltplan
 -----------------------
 
 .. image:: img/26_stepper_motor_schematic.png
@@ -76,23 +76,23 @@ Code
 
 .. note::
 
-    * You can open the file ``26-stepper_motor.ino`` under the path of ``elite-explorer-kit-main\basic_project\26-stepper_motor.rst`` directly.
-    * Or copy this code into Arduino IDE.
+    * Sie können die Datei ``26-stepper_motor.ino`` direkt im Pfad ``elite-explorer-kit-main\basic_project\26-stepper_motor.rst`` öffnen.
+    * Oder kopieren Sie diesen Code in die Arduino IDE.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/ce640f07-39a0-418a-9114-901df676ff32/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After uploading the code to the Arduino Uno board, the 28BYJ-48 stepper motor will start to rotate, driven by the ULN2003 driver. Initially, the motor will rotate in a clockwise direction at a speed of 5 RPM (revolutions per minute) for one complete revolution. After completing the clockwise rotation, the motor will pause for 1 second.
+Nachdem der Code auf das Arduino Uno Board hochgeladen wurde, beginnt der 28BYJ-48 Schrittmotor sich zu drehen, angetrieben durch den ULN2003 Treiber. Zunächst dreht sich der Motor im Uhrzeigersinn mit einer Geschwindigkeit von 5 Umdrehungen pro Minute (RPM) für eine vollständige Umdrehung. Nachdem die Drehung im Uhrzeigersinn abgeschlossen ist, hält der Motor für 1 Sekunde an.
 
-Subsequently, the motor will rotate in a counter-clockwise direction at an increased speed of 15 RPM for another complete revolution. Again, the motor will pause for 1 second after the counter-clockwise rotation. The rotation and pause cycle will continue indefinitely as long as the Arduino remains powered. 
+Anschließend dreht sich der Motor in die entgegengesetzte Richtung, gegen den Uhrzeigersinn, mit einer erhöhten Geschwindigkeit von 15 RPM für eine weitere vollständige Umdrehung. Wieder hält der Motor nach der Drehung gegen den Uhrzeigersinn für 1 Sekunde an. Der Zyklus aus Drehung und Pause setzt sich unendlich fort, solange das Arduino mit Strom versorgt wird.
 
 
 
-Code Analysis
+Code-Analyse
 -----------------
 
-1. **Initialize the stepper**
+1. **Initialisierung des Schrittmotors**
 
    .. code-block:: arduino
    
@@ -101,14 +101,14 @@ Code Analysis
        #define STEPS 2038                   // Define the number of steps per revolution for the motor
        Stepper stepper(STEPS, 2, 3, 4, 5);  // Initialize stepper object and set pin connections (IN1, IN2, IN3, IN4)
 
-   Include a head file ``Stepper.h``, set the steps to 2038 and then initialize the stepper with a function stepper().
+   Binden Sie die Kopfdatei ``Stepper.h`` ein, setzen Sie die Schritte auf 2038 und initialisieren Sie den Schrittmotor mit der Funktion stepper().
 
-   ``STEPS``: The number of steps in one revolution of your motor. For this stepper motor, this value is 2038.
+   ``STEPS``: Die Anzahl der Schritte in einer Umdrehung Ihres Motors. Für diesen Schrittmotor beträgt dieser Wert 2038.
 
-   ``Stepper(steps, pin1, pin2, pin3, pin4)``: This function creates a new instance of the Stepper class that represents a particular stepper motor attached to your Arduino board. The pins pin1, pin2, pin3, and pin4 correspond to the IN1, IN2, IN3, and IN4 pins on the ULN2003 driver.
+   ``Stepper(steps, pin1, pin2, pin3, pin4)``: Diese Funktion erstellt eine neue Instanz der Stepper-Klasse, die einen bestimmten Schrittmotor repräsentiert, der an Ihrem Arduino-Board angeschlossen ist. Die Pins pin1, pin2, pin3 und pin4 entsprechen den IN1-, IN2-, IN3- und IN4-Pins am ULN2003-Treiber.
    
 
-2. **loop() function**
+2. **loop() Funktion**
 
    .. code-block:: arduino
    
@@ -124,23 +124,24 @@ Code Analysis
         delay(1000);           // Wait for 1 second
       }
    
-   The main program rotates the stepper motor continuously, completing one full clockwise circle at 5 RPM and then one full counter-clockwise circle at 15 RPM.
+   Das Hauptprogramm dreht den Schrittmotor kontinuierlich, einmal eine volle Drehung im Uhrzeigersinn mit 5 U/min und dann einmal eine volle Drehung gegen den Uhrzeigersinn mit 15 U/min.
 
 
-   - ``setSpeed(rpms)``: Sets the motor speed in rotations per minute (RPMs). This function doesn't make the motor turn, just sets the speed at which it will when you call step().
+   - ``setSpeed(rpms)``: Legt die Motorgeschwindigkeit in Umdrehungen pro Minute (U/min) fest. Diese Funktion bringt den Motor nicht zum Drehen, sondern legt nur die Geschwindigkeit fest, mit der er sich dreht, wenn Sie step() aufrufen.
 
-     - ``rpms``: the speed at which the motor should turn in rotations per minute - a positive number (long)
+     - ``rpms``: die Geschwindigkeit, mit der sich der Motor in Umdrehungen pro Minute drehen soll – eine positive Zahl (long)
    
    .. raw::html
 
         <br/>
 
    
-   - ``step(steps)``: This function rotates the motor by a specified number of steps, using the speed set in the most recent call to setSpeed(). It is important to note that this function operates in a blocking manner, meaning it will wait until the motor has completed its movement before allowing control to proceed to the next line in your sketch. 
+   - ``step(steps)``: Diese Funktion dreht den Motor um eine bestimmte Anzahl von Schritten, wobei die in der letzten setSpeed()-Aufruf festgelegte Geschwindigkeit verwendet wird. Es ist wichtig zu beachten, dass diese Funktion blockierend arbeitet, das heißt, sie wartet, bis der Motor seine Bewegung abgeschlossen hat, bevor die Steuerung zur nächsten Zeile Ihres Skripts weitergeht.
    
-     For instance, if you were to set the speed at 1 RPM and called step(2038) on a motor with 2038 steps, it would take one full minute for this function to execute. To achieve more precise control, it is recommended to maintain a higher speed and only move a few steps with each call to step().
+     Wenn Sie beispielsweise die Geschwindigkeit auf 1 U/min einstellen und step(2038) bei einem Motor mit 2038 Schritten aufrufen, würde es eine volle Minute dauern, bis diese Funktion ausgeführt wird. Um eine präzisere Steuerung zu erreichen, wird empfohlen, eine höhere Geschwindigkeit beizubehalten und nur wenige Schritte bei jedem Aufruf von step() zu machen.
    
-     - ``steps``: the number of steps to turn the motor - positive to turn one direction, negative to turn the other (int).
+     - ``steps``: die Anzahl der Schritte, um den Motor zu drehen – positiv für eine Richtung, negativ für die andere (int).
+
 
 
 

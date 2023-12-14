@@ -1,45 +1,45 @@
 .. _basic_moisture:
 
-Soil Moisture
+Bodenfeuchtigkeit
 ==========================
 
 .. https://docs.sunfounder.com/projects/3in1-kit-r4/en/latest/basic_project/ar_moisture.html
 
-Overview
+Übersicht
 ---------------
 
-In the agricultural industry, crops cannot directly acquire inorganic elements from the soil. Instead, water present in the soil acts as a solvent to dissolve these elements.
+In der Landwirtschaft können Pflanzen anorganische Elemente nicht direkt aus dem Boden aufnehmen. Stattdessen dient das im Boden vorhandene Wasser als Lösungsmittel, um diese Elemente aufzulösen.
 
-Crops absorb moisture from the soil through their root system to obtain nutrients and facilitate growth.
+Pflanzen absorbieren Feuchtigkeit aus dem Boden durch ihr Wurzelsystem, um Nährstoffe aufzunehmen und das Wachstum zu fördern.
 
-During the growth and development of crops, there are varying requirements for soil temperature. Hence, it is necessary to use a soil moisture sensor.
+Während des Wachstums und der Entwicklung von Kulturen gibt es unterschiedliche Anforderungen an die Bodentemperatur. Daher ist die Verwendung eines Bodenfeuchtigkeitssensors notwendig.
 
-Required Components
+Benötigte Komponenten
 -------------------------
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein komplettes Kit zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Sie können die Komponenten auch separat über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -50,14 +50,14 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_soil_moisture`
         - |link_soil_moisture_buy|
 
-Wiring
+Verdrahtung
 ----------------------
 
 .. image:: img/03-soil_moisture_bb.png
     :align: center
     :width: 80%
 
-Schematic Diagram
+Schaltplan
 -----------------------
 
 .. image:: img/03_moisture_schematic.webp
@@ -69,13 +69,13 @@ Code
 
 .. note::
 
-    * Open the ``03-moisture.ino`` file under the path of ``elite-explorer-kit-main\basic_project\03-moisture``.
-    * Or copy this code into **Arduino IDE**.
+    * Öffnen Sie die Datei ``03-moisture.ino`` unter dem Pfad ``elite-explorer-kit-main\basic_project\03-moisture``.
+    * Oder kopieren Sie diesen Code in die **Arduino IDE**.
     
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/c585dd77-2e8a-4839-a908-d22e1d6e93aa/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-Once the code is successfully uploaded, the serial monitor will print out the soil moisture value.
+Sobald der Code erfolgreich hochgeladen wurde, zeigt der serielle Monitor den Wert der Bodenfeuchtigkeit an.
 
-By inserting the module into the soil and watering it, the value of the soil moisture sensor will become smaller.
+Durch Einführen des Moduls in den Boden und Bewässerung desselben wird der Wert des Bodenfeuchtigkeitssensors kleiner.

@@ -1,41 +1,39 @@
 .. _cpn_stepper_motor:
 
-Stepper Motor
+Schrittmotor
 =========================
 
 .. image:: img/stepper_motor2.jpeg
    :align: center
 
-Stepper motors, due to their unique design, can be controlled to a high degree of accuracy without any feedback mechanisms. The shaft of a stepper, mounted with a series of magnets, is controlled by a series of electromagnetic coils that are charged positively and negatively in a specific sequence, precisely moving it forward or backward in small
-"steps".
+Schrittmotoren können aufgrund ihres einzigartigen Designs ohne Rückkopplungsmechanismen mit hoher Genauigkeit gesteuert werden. Die Welle eines Schrittmotors, die mit einer Serie von Magneten ausgestattet ist, wird von einer Serie elektromagnetischer Spulen gesteuert, die in einer bestimmten Abfolge positiv und negativ geladen sind und ihn präzise vorwärts oder rückwärts in kleinen "Schritten" bewegen.
 
-**Principle**
+**Prinzip**
 
-There are two types of steppers, unipolars and bipolars, and it is very important to know which type you are working with. In this experiment, we will use a unipolar stepper.
+Es gibt zwei Arten von Schrittmotoren, Unipolare und Bipolare, und es ist sehr wichtig zu wissen, mit welchem Typ man arbeitet. In diesem Experiment werden wir einen Unipolaren Schrittmotor verwenden.
 
-The stepper motor is a four-phase one, which uses a unipolarity DC power supply. As long as you electrify all phase windings of the motor by an appropriate timing sequence, you can make it rotate step by step. The schematic diagram of a four-phase reactive stepper motor:
+Der Schrittmotor ist ein vierphasiger Motor, der eine Unipolar-Gleichstromversorgung verwendet. Solange man alle Phasenwicklungen des Motors mit einer angemessenen zeitlichen Abfolge elektrifiziert, kann man ihn schrittweise drehen lassen. Das Schaltbild eines vierphasigen reaktiven Schrittmotors:
 
 .. image:: img/stepper_motor3.png
    :align: center
 
-In the figure, in the middle of the motor is a rotor - a gear-shaped permanent magnet. Around the rotor, 0 to 5 are teeth. Then more outside, there are 8 magnetic poles, with each two opposite ones connected by coil winding. So they form four pairs from A to D, which is called a phase. It has four lead wires to be connected with switches SA, SB, SC, and SD. Therefore, the four phases are in parallel in the circuit, and the two magnetic poles in one phase are in series.
+In der Abbildung, in der Mitte des Motors, ist ein Rotor - ein zahnradförmiger Permanentmagnet. Um den Rotor herum, von 0 bis 5, sind Zähne. Dann weiter außen gibt es 8 Magnetpole, wobei jeweils zwei gegenüberliegende durch Spulenwicklung verbunden sind. So bilden sie vier Paare von A bis D, was als Phase bezeichnet wird. Es hat vier Anschlussdrähte, die mit den Schaltern SA, SB, SC und SD verbunden werden. Daher sind die vier Phasen im Schaltkreis parallel und die zwei Magnetpole in einer Phase sind in Serie.
 
-**Here's how a 4-phase stepper motor works:**
+**So funktioniert ein 4-Phasen-Schrittmotor:**
 
-At the beginning, switch SB is power on, switch SA, SC, and SD is power off, and B-phase magnetic poles align with tooth 0 and 3 of the rotor. At the same time, tooth 1 and 4 generate staggered teeth with C- and D-phase poles. Tooth 2 and 5 generate staggered teeth with D- and A-phase poles. When switch SC is power on, switch SB, SA, and SD is power off, the rotor rotates under magnetic field of C-phase winding and that between tooth 1 and 4. Then tooth 1 and 4 align with the magnetic poles of C-phase winding. While tooth 0 and 3 generate staggered teeth with A- and B-phase poles, and tooth 2 and 5 generate staggered teeth with the magnetic poles of A- and D-phase poles. The similar situation goes on and on. Energize the A, B, C and D phases in turn, and the rotor will rotate in the order of A, B, C and D.
+Am Anfang ist Schalter SB eingeschaltet, Schalter SA, SC und SD sind ausgeschaltet, und B-Phasen-Magnetpole sind mit Zahn 0 und 3 des Rotors ausgerichtet. Gleichzeitig erzeugen Zahn 1 und 4 versetzte Zähne mit den C- und D-Phasenpolen. Zahn 2 und 5 erzeugen versetzte Zähne mit den D- und A-Phasenpolen. Wenn Schalter SC eingeschaltet ist, Schalter SB, SA und SD sind ausgeschaltet, dreht sich der Rotor unter dem Magnetfeld der C-Phasenwicklung und dem zwischen Zahn 1 und 4. Dann richten sich Zahn 1 und 4 mit den Magnetpolen der C-Phasenwicklung aus. Während Zahn 0 und 3 versetzte Zähne mit den A- und B-Phasenpolen erzeugen und Zahn 2 und 5 versetzte Zähne mit den Magnetpolen der A- und D-Phasenpolen. Die ähnliche Situation setzt sich fort. Erregen Sie die A-, B-, C- und D-Phasen der Reihe nach, und der Rotor dreht sich in der Reihenfolge A, B, C und D.
 
-The four-phase stepper motor has three operating modes: single four-step, double four-step, and eight-step. The step angle for the single four-step and double four-step are the same, but the driving torque for the single four-step is smaller. The step angle of the eight-step is half that of the single four-step and double four-step. Thus, the eight-step operating mode can keep high driving torque and improve control accuracy. In this experiment, we let the stepper motor work in the eight-step mode.
+Der vierphasige Schrittmotor hat drei Betriebsmodi: Einzelschritt-Vierer-Schritt, Doppelschritt-Vierer-Schritt und Achterschritt. Der Schrittwinkel für den Einzelschritt-Vierer-Schritt und Doppelschritt-Vierer-Schritt sind gleich, aber das Antriebsmoment für den Einzelschritt-Vierer-Schritt ist kleiner. Der Schrittwinkel des Achterschritts ist halb so groß wie der des Einzelschritt-Vierer-Schritts und Doppelschritt-Vierer-Schritts. Daher kann der Achterschritt-Betriebsmodus ein hohes Antriebsmoment beibehalten und die Steuerungsgenauigkeit verbessern. In diesem Experiment lassen wir den Schrittmotor im Achterschritt-Modus arbeiten.
 
-**ULN2003 Module**
+**ULN2003-Modul**
 
 .. image:: img/uln2003.png
     :align: center
 
-To apply the motor in the circuit, a driver board needs to be used. Stepper Motor Driver-ULN2003 is a 7-channel inverter circuit. That is, when the input end is at high level, the output end of ULN2003 is at low level, and vice versa. If we supply high level to IN1, and low level to IN2, IN3 and IN4, then the output end OUT1 is at low level, and all the other output ends are at high level. So D1 lights up, switch SA is power on, and the stepper motor rotates one step. The similar case repeats on and on. Therefore, just give the stepper motor a specific timing sequence, it will rotate step by step. The ULN2003 here is used to provide particular timing sequences for the stepper motor.
+Um den Motor im Schaltkreis zu verwenden, muss eine Treiberplatine verwendet werden. Schrittmotor-Treiber-ULN2003 ist ein 7-Kanal-Inverterschaltkreis. Das heißt, wenn das Eingangsende auf hohem Niveau ist, ist das Ausgangsende des ULN2003 auf niedrigem Niveau und umgekehrt. Wenn wir hohes Niveau an IN1 liefern und niedriges Niveau an IN2, IN3 und IN4, dann ist das Ausgangsende OUT1 auf niedrigem Niveau und alle anderen Ausgangsenden sind auf hohem Niveau. So leuchtet D1 auf, Schalter SA ist eingeschaltet und der Schrittmotor dreht sich einen Schritt. Der ähnliche Fall wiederholt sich immer wieder. Geben Sie dem Schrittmotor also eine bestimmte zeitliche Abfolge, und er wird schrittweise rotieren. Der ULN2003 wird hier verwendet, um bestimmte zeitliche Abfolgen für den Schrittmotor bereitzustellen.
 
 
-**Example**
+**Beispiel**
 
-
-* :ref:`basic_stepper_motor` (Basic Project)
-* :ref:`fun_access` (Fun Project)
+* :ref:`basic_stepper_motor` (Grundprojekt)
+* :ref:`fun_access` (Spaßprojekt)

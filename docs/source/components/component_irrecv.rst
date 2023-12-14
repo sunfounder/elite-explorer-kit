@@ -1,48 +1,48 @@
 .. _cpn_ir_receiver:
 
-Infrared Receiver
+Infrarotempfänger
 =================================
 
-IR Receiver
+IR-Empfänger
 ----------------------------
 
 .. image:: img/infrared-receiver_01.png
     :width: 60%
 
-* S: Signal output
+* S: Signalausgang
 * +: VCC
 * -: GND
 
-.. An infrared-receiver is a component which receives infrared signals and can independently receive infrared rays and output signals compatible with TTL level. It is similar with a normal plastic-packaged transistor in size and is suitable for all kinds of infrared remote control and infrared transmission.
+.. Ein Infrarotempfänger ist eine Komponente, die Infrarotsignale empfängt und unabhängig Infrarotstrahlen empfangen und Signale ausgeben kann, die mit TTL-Pegel kompatibel sind. Er ist in der Größe ähnlich einem normalen, in Kunststoff verpackten Transistor und eignet sich für alle Arten von Infrarot-Fernbedienungen und Infrarot-Übertragungen.
 
-SL838 is a small receiver for infrared remote control systems. It contains high speed and high sensitivity photodiode and preamplifier, and is packaged with epoxy resin to form infrared filter, Its main advantage is that it hasreliable function even in the disturbed environment.
+SL838 ist ein kleiner Empfänger für Infrarot-Fernsteuerungssysteme. Er enthält eine schnelle und hochempfindliche Fotodiode und einen Vorverstärker und ist mit Epoxidharz verpackt, um einen Infrarotfilter zu bilden. Sein Hauptvorteil ist, dass er auch in gestörter Umgebung zuverlässig funktioniert.
 
-Infrared, or IR, communication is a popular, low-cost, easy-to-use wireless communication technology. Infrared light has a slightly longer wavelength than visible light, so it is imperceptible to the human eye - ideal for wireless communication. A common modulation scheme for infrared communication is 38KHz modulation.
+Infrarot- oder IR-Kommunikation ist eine beliebte, kostengünstige und einfach zu verwendende drahtlose Kommunikationstechnologie. Infrarotlicht hat eine etwas längere Wellenlänge als sichtbares Licht, daher ist es für das menschliche Auge nicht wahrnehmbar - ideal für drahtlose Kommunikation. Ein gängiges Modulationsschema für die Infrarotkommunikation ist die 38KHz-Modulation.
 
-* Can be used for remote control
-* Wide operating voltage: 2.7~5V
-* Internal filter for PCM frequency 
-* TTL and CMOS compatibility
-* Strong anti-interference ability
-* Compliant RoHS
+* Kann für Fernbedienungen verwendet werden
+* Breiter Betriebsspannungsbereich: 2,7~5V
+* Interner Filter für PCM-Frequenz
+* TTL- und CMOS-Kompatibilität
+* Starke Störfestigkeit
+* RoHS-konform
 
-Remote Control
+Fernbedienung
 -------------------------
 
 .. image:: img/infrared-receiver_02.jpeg
     :width: 70%
 
-This is a Mini thin infrared wireless remote control with 21 function buttons and a transmitting distance of up to 8 meters, which is suitable for operating a wide range of devices in a kid's room.
+Dies ist eine Mini-Dünn-Infrarot-Fernbedienung mit 21 Funktionstasten und einer Übertragungsdistanz von bis zu 8 Metern, die sich für die Bedienung einer Vielzahl von Geräten in einem Kinderzimmer eignet.
 
-* Size: 85x39x6mm
-* Remote control range: 8-10m
-* Battery: 3V button type lithium manganese battery
-* Infrared carrier frequency: 38KHz
-* Surface paste material: 0.125mm PET
-* Effective life: more than 20,000 times
+* Größe: 85x39x6mm
+* Reichweite der Fernbedienung: 8-10m
+* Batterie: 3V Knopfzellen-Lithium-Mangan-Batterie
+* Infrarot-Trägerfrequenz: 38KHz
+* Oberflächenklebematerial: 0,125mm PET
+* Effektive Lebensdauer: mehr als 20.000 Mal
 
 
-**Example**
+**Beispiel**
 
-* :ref:`basic_irrecv` (Basic Project)
-* :ref:`fun_guess_number` (Fun Project)
+* :ref:`basic_irrecv` (Grundprojekt)
+* :ref:`fun_guess_number` (Spaßprojekt)

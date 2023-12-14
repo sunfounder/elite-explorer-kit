@@ -1,18 +1,18 @@
-Connect to Wi-Fi
+Mit Wi-Fi verbinden
 ----------------------------------------
 
-This tutorial will guide you through the essential steps to connect your Arduino board to a Wi-Fi network. You'll learn how to initialize the Wi-Fi module, verify its firmware, and securely join a network using its SSID and password. Once connected, you'll discover how to monitor important network details like your device's IP and MAC addresses, as well as the network's signal strength, directly from the serial console. This tutorial serves as both a practical guide to Wi-Fi connectivity and an introduction to network monitoring with Arduino, helping you establish and maintain a reliable Wi-Fi connection.
+Dieses Tutorial führt Sie durch die wesentlichen Schritte, um Ihr Arduino-Board mit einem Wi-Fi-Netzwerk zu verbinden. Sie lernen, wie Sie das Wi-Fi-Modul initialisieren, seine Firmware überprüfen und sicher einem Netzwerk mit SSID und Passwort beitreten. Sobald Sie verbunden sind, erfahren Sie, wie Sie wichtige Netzwerkinformationen wie die IP- und MAC-Adressen Ihres Geräts sowie die Signalstärke des Netzwerks direkt über die serielle Konsole überwachen. Dieses Tutorial dient sowohl als praktischer Leitfaden für die Wi-Fi-Konnektivität als auch als Einführung in die Netzwerküberwachung mit Arduino, um eine zuverlässige Wi-Fi-Verbindung herzustellen und aufrechtzuerhalten.
 
-1. Upload the code
-========================
+1. Laden Sie den Code hoch
+==============================
 
-Open the ``01-wifi_connect.ino`` file under the path of ``elite-explorer-kit-main\r4_new_feature\01-wifi_connect``, or copy this code into **Arduino IDE**.
+Öffnen Sie die Datei ``01-wifi_connect.ino`` im Pfad ``elite-explorer-kit-main\r4_new_feature\01-wifi_connect`` oder kopieren Sie diesen Code in die **Arduino IDE**.
 
 .. note:: 
-      Wi-Fi® support is enabled via the built-in ``WiFiS3`` library that is shipped with the Arduino UNO R4 Core. Installing the core automatically installs the ``WiFiS3`` library.
+      Wi-Fi® wird über die integrierte ``WiFiS3``-Bibliothek aktiviert, die mit dem Arduino UNO R4 Core geliefert wird. Die Installation des Cores installiert automatisch die ``WiFiS3``-Bibliothek.
 
 
-You still need to create or modify ``arduino_secrets.h``, replace ``SECRET_SSID`` and ``SECRET_PASS`` with the name and password of the wifi you want to connect to. The file should contain:
+Sie müssen auch ``arduino_secrets.h`` erstellen oder bearbeiten, ersetzen Sie ``SECRET_SSID`` und ``SECRET_PASS`` durch den Namen und das Passwort des Wi-Fi, mit dem Sie sich verbinden möchten. Die Datei sollte enthalten:
 
 .. code:: arduino
 
@@ -25,30 +25,30 @@ You still need to create or modify ``arduino_secrets.h``, replace ``SECRET_SSID`
    <iframe src=https://create.arduino.cc/editor/sunfounder01/a41ac638-31da-464c-b5d3-e70f2aacd29c/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-Open the serial monitor, and you will see similar content as follows. Arduino will output your device's IP and MAC addresses, as well as the network's signal strength.
+Öffnen Sie den seriellen Monitor, und Sie werden ähnliche Inhalte wie folgt sehen. Arduino gibt die IP- und MAC-Adressen Ihres Geräts sowie die Signalstärke des Netzwerks aus.
 
 .. image:: img/01_1_wifi.png
     :width: 100%
 
 
-2. Code explanation
+2. Code-Erklärung
 ========================
 
-1. Including Libraries and Secret Data
+1. Einbinden von Bibliotheken und Geheimdaten
 
    .. code-block:: arduino
 
       #include <WiFiS3.h>
       #include "arduino_secrets.h" 
 
-   - ``WiFiS3`` is a library that provides functions for Wi-Fi connectivity. Installing the R4 core automatically installs the WiFiS3 library.
-   - ``arduino_secrets.h`` is a separate file where you keep your SSID and password so they're not exposed in your main code. Storing network and password separately reduces accidental sharing of Wi-Fi credentials.
+   - ``WiFiS3`` ist eine Bibliothek, die Funktionen für die Wi-Fi-Konnektivität bietet. Die Installation des R4-Cores installiert automatisch die WiFiS3-Bibliothek.
+   - ``arduino_secrets.h`` ist eine separate Datei, in der Sie Ihre SSID und Ihr Passwort speichern, damit sie nicht in Ihrem Hauptcode offengelegt werden. Das getrennte Speichern von Netzwerk und Passwort verringert das versehentliche Teilen von Wi-Fi-Anmeldedaten.
 
    .. raw:: html
 
       <br/>
 
-2. Declaring Global Variables
+2. Globale Variablen deklarieren
 
    .. code-block:: arduino
 
@@ -56,16 +56,16 @@ Open the serial monitor, and you will see similar content as follows. Arduino wi
       char pass[] = SECRET_PASS;
       int status = WL_IDLE_STATUS;
 
-   - ``ssid`` and ``pass`` contain your network name and password.
-   - ``status`` will store the current status of your Wi-Fi connection.
+   - ``ssid`` und ``pass`` enthalten Ihren Netzwerknamen und Ihr Passwort.
+   - ``status`` speichert den aktuellen Status Ihrer Wi-Fi-Verbindung.
 
    .. raw:: html
 
       <br/>
 
-3. ``setup()`` Function
+3. Funktion ``setup()``
 
-   The Serial interface is initialized with a baud rate of 9600. The ``while (!Serial);`` line makes sure that the program waits until the Serial connection is established.
+   Die serielle Schnittstelle wird mit einer Baudrate von 9600 initialisiert. Die Zeile ``while (!Serial);`` stellt sicher, dass das Programm wartet, bis die serielle Verbindung hergestellt ist.
 
    .. code-block:: arduino
 
@@ -78,7 +78,7 @@ Open the serial monitor, and you will see similar content as follows. Arduino wi
           ...
       }
 
-   And then, the code checks whether the Wi-Fi module is available or not. If not, the program will halt, effectively stopping any further execution.
+   Anschließend überprüft der Code, ob das Wi-Fi-Modul verfügbar ist oder nicht. Wenn nicht, wird das Programm angehalten und jegliche weitere Ausführung gestoppt.
 
    .. code-block:: arduino
 
@@ -91,7 +91,7 @@ Open the serial monitor, and you will see similar content as follows. Arduino wi
      }
      ...
 
-   In this part of the code, we check if the firmware version of uno R4 wifi is up to date. If it is not the latest version, a prompt for upgrade will be displayed. You can refer to :ref:`update_firmware` for firmware upgrade.
+   In diesem Teil des Codes überprüfen wir, ob die Firmware-Version des Uno R4 WiFi auf dem neuesten Stand ist. Wenn nicht, wird eine Aufforderung zum Upgrade angezeigt. Sie können :ref:`update_firmware` für das Firmware-Upgrade konsultieren.
 
    .. https://forum.arduino.cc/t/radio-module-firmware-version-0-2-0-is-now-available/1147361
 
@@ -104,7 +104,7 @@ Open the serial monitor, and you will see similar content as follows. Arduino wi
       }
       ...
 
-4. ``loop()`` Function
+4. Funktion ``loop()``
 
    .. code-block:: arduino
 
@@ -114,9 +114,9 @@ Open the serial monitor, and you will see similar content as follows. Arduino wi
         printCurrentNet();
       }
 
-   - Every 10 seconds, the function ``printCurrentNet()`` is called to print the current network details.
+   - Alle 10 Sekunden wird die Funktion ``printCurrentNet()`` aufgerufen, um die aktuellen Netzwerkinformationen auszudrucken.
 
 
-**Reference**
+**Referenz**
 
 - |link_r4_wifi|

@@ -1,28 +1,28 @@
 .. _install_arduino:
 
-Download and Install Arduino IDE 2.0
-========================================
+Download und Installation der Arduino IDE 2.0
+=================================================
 
-The Arduino IDE, known as Arduino Integrated Development Environment, provides all the software support needed to complete an Arduino project. It is a programming software specifically designed for Arduino, provided by the Arduino team, that allows us to write programs and upload them to the Arduino board. 
+Die Arduino IDE, bekannt als Arduino Integrated Development Environment, bietet alle notwendigen Softwareunterstützungen, um ein Arduino-Projekt zu vollenden. Es handelt sich um eine speziell für Arduino entwickelte Programmiersoftware, bereitgestellt vom Arduino-Team, die es uns ermöglicht, Programme zu schreiben und auf das Arduino-Board hochzuladen.
 
-The Arduino IDE 2.0 is an open-source project. It is a big step from its sturdy predecessor, Arduino IDE 1.x, and comes with revamped UI, improved board & library manager, debugger, autocomplete feature and much more.
+Die Arduino IDE 2.0 ist ein Open-Source-Projekt. Sie stellt einen großen Schritt gegenüber ihrem robusten Vorgänger, der Arduino IDE 1.x, dar und kommt mit einer überarbeiteten Benutzeroberfläche, verbessertem Board- & Bibliotheksmanager, Debugger, Autocomplete-Funktion und vielem mehr.
 
-In this tutorial, we will show how to download and install the Arduino IDE 2.0 on your Windows, Mac, or Linux computer.
+In diesem Tutorial zeigen wir, wie man die Arduino IDE 2.0 auf Ihrem Windows-, Mac- oder Linux-Computer herunterlädt und installiert.
 
-Requirements
+Voraussetzungen
 -------------------
 
-* Windows - Win 10 and newer, 64 bits
-* Linux - 64 bits
-* Mac OS Intel - Version 10.14: "Mojave" or newer, 64 bits
-* Mac OS Apple Silicon - Version 11: "Big Sur" or newer, 64 bits
+* Windows - Win 10 und neuer, 64 Bit
+* Linux - 64 Bit
+* Mac OS Intel - Version 10.14: „Mojave“ oder neuer, 64 Bit
+* Mac OS Apple Silicon - Version 11: „Big Sur“ oder neuer, 64 Bit
 
-Download the Arduino IDE 2.0
+Download der Arduino IDE 2.0
 -------------------------------
 
-#. Visit |link_download_arduino|.
+#. Besuchen Sie |link_download_arduino|.
 
-#. Download the IDE for your OS version.
+#. Laden Sie die IDE für Ihre Betriebssystemversion herunter.
 
    .. image:: img/sp_001.png
 
@@ -32,28 +32,28 @@ Installation
 Windows
 ^^^^^^^^^^^^^
 
-#. Double click the ``arduino-ide_xxxx.exe`` file to run the downloaded file.
+#. Doppelklicken Sie auf die Datei ``arduino-ide_xxxx.exe``, um die heruntergeladene Datei auszuführen.
 
-#. Read the License Agreement and agree it.
+#. Lesen Sie die Lizenzvereinbarung und stimmen Sie ihr zu.
 
    .. image:: img/sp_002.png
 
-#. Choose installation options.
+#. Wählen Sie Installationsmöglichkeiten.
 
    .. image:: img/sp_003.png
 
-#. Choose install location. It is recommended that the software be installed on a drive other than the system drive.
+#. Wählen Sie den Installationsort. Es wird empfohlen, die Software auf einem anderen Laufwerk als dem Systemlaufwerk zu installieren.
 
    .. image:: img/sp_004.png
 
-#. Then Finish. 
+#. Dann Fertigstellen. 
 
    .. image:: img/sp_005.png
 
 macOS
 ^^^^^^^^^^^^^^^^
 
-Double click on the downloaded ``arduino_ide_xxxx.dmg`` file and follow the instructions to copy the **Arduino IDE.app** to the **Applications** folder, you will see the Arduino IDE installed successfully after a few seconds.
+Doppelklicken Sie auf die heruntergeladene Datei ``arduino_ide_xxxx.dmg`` und folgen Sie den Anweisungen, um die **Arduino IDE.app** in den **Applications**-Ordner zu kopieren. Sie werden sehen, dass die Arduino IDE nach einigen Sekunden erfolgreich installiert ist.
 
 .. image:: img/macos_install_ide.png
     :width: 800
@@ -61,25 +61,22 @@ Double click on the downloaded ``arduino_ide_xxxx.dmg`` file and follow the inst
 Linux
 ^^^^^^^^^^^^
 
-For the tutorial on installing the Arduino IDE 2.0 on a Linux system, please refer |link_install_arduino_linux|
+Für das Tutorial zur Installation der Arduino IDE 2.0 auf einem Linux-System, siehe bitte |link_install_arduino_linux|
 
 
-Open the IDE
+Öffnen der IDE
 --------------
 
-#. When you first open Arduino IDE 2.0, it automatically installs the Arduino AVR Boards, built-in libraries, and other required files.
+#. Wenn Sie die Arduino IDE 2.0 zum ersten Mal öffnen, installiert sie automatisch die Arduino AVR Boards, eingebaute Bibliotheken und andere erforderliche Dateien.
 
    .. image:: img/sp_901.png
 
-#. In addition, your firewall or security center may pop up a few times asking you if you want to install some device driver. Please install all of them.
+#. Zusätzlich kann Ihr Firewall- oder Sicherheitscenter einige Male aufpoppen und fragen, ob Sie einige Gerätetreiber installieren möchten. Bitte installieren Sie alle davon.
 
    .. image:: img/sp_104.png
 
-#. Now your Arduino IDE is ready!
+#. Jetzt ist Ihre Arduino IDE einsatzbereit!
 
    .. note::
-     In the event that some installations didn't work due to network issues or other reasons, you can reopen the Arduino IDE and it will finish the rest of the installation. The Output window will not automatically open after all installations are complete unless you click Verify or Upload.
-
-
-
+     Falls einige Installationen aufgrund von Netzwerkproblemen oder anderen Gründen nicht funktioniert haben, können Sie die Arduino IDE erneut öffnen und sie wird den Rest der Installation abschließen. Das Ausgabefenster wird nach Abschluss aller Installationen nicht automatisch geöffnet, es sei denn, Sie klicken auf Überprüfen oder Hochladen.
 

@@ -1,22 +1,22 @@
 .. _cpn_tilt_switch:
 
-Tilt Switch
+Neigungsschalter
 =============================
-
 
 .. image:: img/tilt_switch.png
     :width: 80
     :align: center
 
-The tilt switch used here is a ball one with a metal ball inside. It is used to detect inclinations of a small angle.
+Der hier verwendete Neigungsschalter ist ein Kugeltyp mit einer Metallkugel im Inneren. Er dient zur Erkennung von Neigungen in kleinen Winkeln.
 
-The principle is very simple. When the switch is tilted in a certain angle, the ball inside rolls down and touches the two contacts connected to the pins outside, thus triggering circuits. Otherwise the ball will stay away from the contacts, thus breaking the circuits.
+Das Prinzip ist sehr einfach. Wenn der Schalter in einem bestimmten Winkel geneigt wird, rollt die Kugel nach unten und berührt die beiden Kontakte, die mit den äußeren Pins verbunden sind, und löst so Schaltkreise aus. Andernfalls bleibt die Kugel von den Kontakten entfernt und unterbricht dadurch die Schaltkreise.
 
 .. image:: img/tilt_symbol.png
     :width: 600
 
 * |link_sw520d_datasheet|
 
-**Example**
+**Beispiel**
 
-* :ref:`basic_tilt_switch` (Basic Project)
+* :ref:`basic_tilt_switch` (Grundprojekt)
+

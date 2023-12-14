@@ -1,29 +1,30 @@
 .. _cpn_rgb_led:
 
-RGB LED
+RGB-LED
 =================
 
 .. image:: img/rgb_led.png
     :width: 100
     
-RGB LEDs emit light in various colors. An RGB LED packages three LEDs of red, green, and blue into a transparent or semitransparent plastic shell. It can display various colors by changing the input voltage of the three pins and superimpose them, which, according to statistics, can create 16,777,216 different colors. 
+RGB-LEDs emittieren Licht in verschiedenen Farben. Eine RGB-LED verpackt drei LEDs in den Farben Rot, Grün und Blau in eine durchsichtige oder halbdurchsichtige Kunststoffhülle. Sie kann verschiedene Farben anzeigen, indem sie die Eingangsspannung der drei Pins ändert und diese überlagert, was laut Statistik 16.777.216 unterschiedliche Farben erzeugen kann.
 
 .. image:: img/rgb_light.png
     :width: 600
 
-RGB LEDs can be categorized into common anode and common cathode ones. In this kit, the latter is used. The **common cathode**, or CC, means to connect the cathodes of the three LEDs. After you connect it with GND and plug in the three pins, the LED will flash the corresponding color. 
+RGB-LEDs können in gemeinsame Anode und gemeinsame Kathode eingeteilt werden. In diesem Kit wird letztere verwendet. Die **gemeinsame Kathode**, oder CC, bedeutet, dass die Kathoden der drei LEDs verbunden sind. Nachdem Sie sie mit GND verbunden und die drei Pins eingesteckt haben, leuchtet die LED in der entsprechenden Farbe auf.
 
-Its circuit symbol is shown as figure.
+Ihr Schaltungssymbol wird wie folgt dargestellt.
 
 .. image:: img/rgb_symbol.png
     :width: 300
 
-An RGB LED has 4 pins: the longest one is GND; the others are Red, Green and Blue. Touch its plastic shell and you will find a cut. The pin closest to the cut is the first pin, marked as Red, then GND, Green and Blue in turn. 
+Eine RGB-LED hat 4 Pins: der längste ist GND; die anderen sind Rot, Grün und Blau. Berühren Sie ihre Kunststoffhülle und Sie werden eine Kerbe finden. Der Pin, der der Kerbe am nächsten ist, ist der erste Pin, markiert als Rot, dann GND, Grün und Blau der Reihe nach.
 
 .. image:: img/rgb_pin.jpg
     :width: 200
 
-**Example**
+**Beispiel**
 
-* :ref:`basic_rgb_led` (Basic Project)
-* :ref:`fun_hue` (Fun Project)
+* :ref:`basic_rgb_led` (Grundprojekt)
+* :ref:`fun_hue` (Spaßprojekt)
+

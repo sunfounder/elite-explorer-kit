@@ -1,48 +1,48 @@
 .. _fun_guess_number:
 
-GAME - Guess Number
+SPIEL - Zahl Erraten
 ============================
 
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/videos/fun_projects/10_fun_guess_game.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      Ihr Browser unterstützt das Video-Tag nicht.
    </video>
 
-Guessing Numbers is an entertaining party game where you and your friends take turns entering a number (0~99). 
-The range becomes narrower with each number input until a player correctly guesses the answer. 
-The player who guesses correctly is declared the loser and subjected to a penalty. 
-For instance, if the secret number is 51, which the players cannot see, and player 1 inputs 50, 
-the number range prompt changes to 50~99. If player 2 inputs 70, the number range becomes 50~70. 
-If player 3 inputs 51, they are the unlucky one. 
-In this game, we use an IR Remote Controller to input numbers and an LCD to display outcomes.
+„Zahl Erraten“ ist ein unterhaltsames Partyspiel, bei dem du und deine Freunde abwechselnd eine Zahl (0~99) eingeben. 
+Der Bereich wird mit jeder Eingabe enger, bis ein Spieler die Antwort richtig errät. 
+Der Spieler, der richtig rät, wird zum Verlierer erklärt und einer Strafe unterzogen. 
+Zum Beispiel, wenn die geheime Zahl 51 ist, die die Spieler nicht sehen können, und Spieler 1 gibt 50 ein, 
+ändert sich die Bereichsanzeige auf 50~99. Wenn Spieler 2 70 eingibt, wird der Bereich zu 50~70. 
+Wenn Spieler 3 51 eingibt, ist er der Unglückliche. 
+In diesem Spiel verwenden wir eine IR-Fernbedienung, um Zahlen einzugeben, und ein LCD, um Ergebnisse anzuzeigen.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Kit zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -57,14 +57,14 @@ You can also buy them separately from the links below.
 
 
 
-**Wiring**
+**Verdrahtung**
 
 .. image:: img/10_guess_number_bb.png
     :width: 90%
     :align: center
 
 
-**Schematic**
+**Schaltplan**
 
 .. image:: img/10_guess_number_schematic.png
    :width: 100%
@@ -74,11 +74,11 @@ You can also buy them separately from the links below.
 
 .. note::
 
-    * You can open the file ``10_guess_number.ino`` under the path of ``elite-explorer-kit-main\fun_project\10_guess_number`` directly.
-    * Or copy this code into Arduino IDE.
+    * Sie können die Datei ``10_guess_number.ino`` direkt unter dem Pfad ``elite-explorer-kit-main\fun_project\10_guess_number`` öffnen.
+    * Oder kopieren Sie diesen Code in die Arduino IDE.
 
 .. note::
-   To install the library, use the Arduino Library Manager and search for **"IRremote"** and **"LiquidCrystal I2C"** and install them.
+   Um die Bibliothek zu installieren, verwenden Sie den Arduino-Bibliotheksmanager und suchen Sie nach **„IRremote“** und **„LiquidCrystal I2C“** und installieren Sie diese.
 
 .. raw:: html
 
@@ -86,42 +86,43 @@ You can also buy them separately from the links below.
 
 
 
-**How it works?**
+**Wie funktioniert des?**
 
-1. Library Imports and Global Variable Definitions:
+1. Bibliotheksimporte und globale Variablendefinitionen:
 
-   Three libraries are imported: ``Wire`` for I2C communication, ``LiquidCrystal_I2C`` for controlling the LCD display, and ``IRremote`` for receiving signals from the infrared remote controller.
-   Several global variables are defined to store the game's state and settings.
+   Drei Bibliotheken werden importiert: ``Wire`` für die I2C-Kommunikation, ``LiquidCrystal_I2C`` zur Steuerung des LCD-Displays und ``IRremote`` zum Empfangen von Signalen der Infrarot-Fernbedienung.
+   Mehrere globale Variablen werden definiert, um den Spielstand und die Einstellungen zu speichern.
 
 2. ``setup()`` 
 
-   Initialize the LCD display and turn on the backlight.
-   Initialize serial communication with a baud rate of 9600.
-   Start the infrared receiver.
-   Call the ``initNewValue()`` function to set the initial game state.
+   Initialisieren Sie das LCD-Display und schalten Sie die Hintergrundbeleuchtung ein.
+   Initialisieren Sie die serielle Kommunikation mit einer Baudrate von 9600.
+   Starten Sie den Infrarotempfänger.
+   Rufen Sie die Funktion ``initNewValue()`` auf, um den anfänglichen Spielzustand einzustellen.
 
 3. ``loop()`` 
 
-   Check if a signal is received from the infrared remote controller.
-   Decode the received infrared signal.
-   Update the game state or perform corresponding actions based on the decoded value (number or command).
+   Überprüfen Sie, ob ein Signal von der Infrarot-Fernbedienung empfangen wurde.
+   Dekodieren Sie das empfangene Infrarotsignal.
+   Aktualisieren Sie den Spielstand oder führen Sie entsprechende Aktionen basierend auf dem dekodierten Wert (Zahl oder Befehl) aus.
 
 4. ``initNewValue()`` 
 
-   Use ``analogRead`` to initialize the random number seed, ensuring different random numbers are generated each time.
-   Generate a random number between 0 and 98 as the lucky number (the number players need to guess).
-   Reset upper and lower limit prompts.
-   Display a welcome message on the LCD.
-   Reset the input number.
+   Verwenden Sie ``analogRead``, um den Zufallszahlensamen zu initialisieren und zu gewährleisten, dass jedes Mal unterschiedliche Zufallszahlen generiert werden.
+   Generieren Sie eine Zufallszahl zwischen 0 und 98 als Glückszahl (die Zahl, die die Spieler erraten müssen).
+   Setzen Sie die Hinweise für die obere und untere Grenze zurück.
+   Zeigen Sie eine Begrüßungsnachricht auf dem LCD an.
+   Setzen Sie die Eingabenummer zurück.
 
 5. ``detectPoint()`` 
 
-   Check the relationship between the player's input number and the lucky number.
-   If the input number is greater than the lucky number, update the upper limit prompt.
-   If the input number is smaller than the lucky number, update the lower limit prompt.
-   If the player inputs the correct number, reset the input and return true.
+   Überprüfen Sie das Verhältnis zwischen der Eingabenummer des Spielers und der Glückszahl.
+   Wenn die Eingabenummer größer als die Glückszahl ist, aktualisieren Sie den Hinweis für die obere Grenze.
+   Wenn die Eingabenummer kleiner als die Glückszahl ist, aktualisieren Sie den Hinweis für die untere Grenze.
+   Wenn der Spieler die richtige Zahl eingibt, setzen Sie die Eingabe zurück und geben Sie wahr zurück.
 
 6. ``lcdShowInput()`` 
 
-   Display the player's input and the current upper and lower limit prompts on the LCD.
-   If the player guesses correctly, display a success message and pause for 5 seconds before restarting the game.
+   Zeigen Sie die Eingabe des Spielers und die aktuellen Hinweise für die obere und untere Grenze auf dem LCD an.
+   Wenn der Spieler richtig rät, zeigen Sie eine Erfolgsmeldung an und pausieren Sie für 5 Sekunden, bevor Sie das Spiel neu starten.
+

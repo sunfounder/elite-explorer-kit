@@ -1,44 +1,34 @@
 .. _cpn_ultrasonic:
 
-Ultrasonic Module
+Ultraschallmodul
 ================================
 
 .. image:: img/ultrasonic_pic.png
     :width: 400
     :align: center
 
+Ein Ultraschallsensor ist ein Gerät zur Messung der Entfernung zu einem Objekt mit Ultraschallwellen. Es besitzt zwei Sonden: eine sendet Ultraschallwellen aus, die andere empfängt diese und wandelt die Übertragungszeit in eine Distanz um. Dies ermöglicht die Ermittlung des Abstands zwischen dem Gerät und einem Hindernis. In der Praxis erweist es sich als sehr praktisch und funktionell.
 
-An ultrasonic sensor module is an instrument that measures the distance to an object using ultrasonic sound waves. It has two probes. One is to send ultrasonic waves and the other is to receive the waves and transform the time of sending and receiving into a distance, thus detecting the distance between the device and an obstacle. In practice it is really convenient and functional.
+Das Modul bietet eine berührungslose Messfunktion von 2 cm bis 400 cm, mit einer Genauigkeit von bis zu 3 mm. Es gewährleistet eine stabile Signalübertragung bis zu einer Entfernung von 5 m; darüber hinaus nimmt die Signalstärke ab und verschwindet bei etwa 7 m.
 
+Das Modul umfasst Ultraschallsender, -empfänger und Steuerschaltkreise. Die grundlegenden Prinzipien sind wie folgt:
 
-It provides 2cm - 400cm non-contact measurement function, and the ranging accuracy can reach to 3mm. 
-It can ensure that the signal is stable within 5m, and the signal is gradually weakened after 5m, till the 7m position disappears.
+#. Ein IO-Flip-Flop verarbeitet ein Hochpegelsignal von mindestens 10us.
 
-The module includes ultrasonic transmitters, receiver and control circuit. The basic principles are as follows:
+#. Das Modul sendet automatisch acht 40kHz-Signale und prüft, ob ein Pulssignal zurückkehrt.
 
-#. Use an IO flip-flop to process a high level signal of at least 10us.
+#. Wenn das Signal zurückkehrt, wird die Dauer des Hochpegelausgangs des IOs zur Zeit vom Aussenden bis zum Zurückkehren der Ultraschallwelle. Hier gilt: Testdistanz = (Hochzeit x Schallgeschwindigkeit (340 m/s) / 2.
 
-#. The module automatically sends eight 40khz and detects if there is a pulse signal return.
-
-#. If the signal returns, passing the high level, the high output IO duration is the time from the transmission of the ultrasonic wave to the return of it. Here, test distance = (high time x sound speed (340 m / s) / 2.
-
-
-
-The timing diagram is shown below. 
+Das Timing-Diagramm ist unten dargestellt.
 
 .. image:: img/ultrasonic228.png
 
-You only need to supply a short 10us pulse for the trigger input to start the ranging, and then the module
-will send out an 8 cycle burst of ultrasound at 40 kHz and raise its
-echo. You can calculate the range through the time interval between
-sending trigger signal and receiving echo signal.
+Sie müssen nur einen kurzen 10us-Impuls an den Trigger-Eingang senden, um die Entfernungsmessung zu starten. Das Modul sendet dann einen 8-Zyklus-Burst von Ultraschall mit 40 kHz aus und erhöht sein Echo. Die Entfernung kann durch das Zeitintervall zwischen dem Senden des Trigger-Signals und dem Empfangen des Echosignals berechnet werden.
 
-Formula: us / 58 = centimeters or us / 148 =inch; or: the range = high
-level time \* velocity (340M/S) / 2; you are suggested to use
-measurement cycle over 60ms in order to prevent signal collisions of
-trigger signal and the echo signal.
+Formel: us / 58 = Zentimeter oder us / 148 = Zoll; oder: die Entfernung = Hochpegelzeit * Geschwindigkeit (340M/S) / 2; es wird empfohlen, einen Messzyklus von über 60ms zu verwenden, um Signalüberschneidungen zwischen Trigger- und Echosignal zu vermeiden.
 
-**Example**
+**Beispiel**
 
-* :ref:`basic_ultrasonic_sensor` (Basic Project)
-* :ref:`fun_smart_can` (Fun Project)
+* :ref:`basic_ultrasonic_sensor` (Grundprojekt)
+* :ref:`fun_smart_can` (Spaßprojekt)
+

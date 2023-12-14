@@ -1,23 +1,23 @@
 .. _cpn_gy87:
 
-GY-87 IMU module
+GY-87 IMU-Modul
 ============================
 
 .. image:: img/gy87.png
     :align: center
     :width: 40%
 
-The GY-87 sensor module is a high-precision, 10-axis (10DOF) module capable of measuring acceleration, angular velocity, and magnetic field strength across three axes: x, y, and z. It consists of three main sensors: MPU6050, QMC5883L, and BMP180, and communicates via the I2C protocol.
+Das GY-87-Sensormodul ist ein hochpräzises 10-Achsen-Modul (10DOF), das in der Lage ist, Beschleunigung, Winkelgeschwindigkeit und magnetische Feldstärke entlang drei Achsen: x, y und z zu messen. Es besteht aus drei Hauptkomponenten: MPU6050, QMC5883L und BMP180 und kommuniziert über das I2C-Protokoll.
 
-The GY-87 sensor module is based on three sensors:
+Das GY-87-Sensormodul basiert auf drei Sensoren:
 
-1. **MPU6050**: This is a 6-axis accelerometer and gyroscope that can measure acceleration and angular velocity in three axes x, y, and z.
-2. **QMC5883L**: This is a 3-axis digital compass that can measure the strength of the magnetic field in three axes x, y, and z.
-3. **BMP180**: This is a barometric temperature and pressure sensor that can measure atmospheric pressure and temperature.
+1. **MPU6050**: Dies ist ein 6-Achsen-Beschleunigungsmesser und Gyroskop, das Beschleunigung und Winkelgeschwindigkeit in den drei Achsen x, y und z messen kann.
+2. **QMC5883L**: Dies ist ein 3-Achsen-Digitalkompass, der die Stärke des Magnetfelds in den drei Achsen x, y und z messen kann.
+3. **BMP180**: Dies ist ein barometrischer Temperatur- und Drucksensor, der den atmosphärischen Druck und die Temperatur messen kann.
 
-The MPU6050 measures acceleration and angular velocity in three axes x, y, and z. The QMC5883L measures the strength of the magnetic field in three axes x, y, and z. The BMP180 measures atmospheric pressure and temperature. The data from these sensors are combined to provide accurate information about the orientation of the module in space.
+Der MPU6050 misst Beschleunigung und Winkelgeschwindigkeit in den drei Achsen x, y und z. Der QMC5883L misst die Stärke des Magnetfelds in den drei Achsen x, y und z. Der BMP180 misst den atmosphärischen Druck und die Temperatur. Die Daten dieser Sensoren werden kombiniert, um genaue Informationen über die Orientierung des Moduls im Raum zu liefern.
 
-The GY-87 sensor module is commonly used in applications such as drones, robotics, and other projects that require accurate orientation information. It is compatible with Arduino boards and can be easily interfaced with them using the I2C communication protocol.
+Das GY-87-Sensormodul wird häufig in Anwendungen wie Drohnen, Robotik und anderen Projekten verwendet, die genaue Orientierungsinformationen benötigen. Es ist mit Arduino-Boards kompatibel und kann leicht über das I2C-Kommunikationsprotokoll mit ihnen verbunden werden.
 
 .. image:: img/GY-87-SCH.jpg
     :align: center
@@ -27,9 +27,10 @@ The GY-87 sensor module is commonly used in applications such as drones, robotic
 
     <br/>
 
-**Example**
+**Beispiel**
 
-* :ref:`basic_gy87_bmp180` (Basic Project)
-* :ref:`basic_gy87_mpu6050` (Basic Project)
-* :ref:`basic_gy87_qmc5883l` (Basic Project)
-* :ref:`fun_escape` (Fun Project)
+* :ref:`basic_gy87_bmp180` (Grundprojekt)
+* :ref:`basic_gy87_mpu6050` (Grundprojekt)
+* :ref:`basic_gy87_qmc5883l` (Grundprojekt)
+* :ref:`fun_escape` (Spaßprojekt)
+

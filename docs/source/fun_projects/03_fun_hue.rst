@@ -7,37 +7,37 @@ HueDial
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/videos/fun_projects/03_fun_huedial.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      Ihr Browser unterstützt das Video-Tag nicht.
    </video>
 
-This example controls the color of an RGB LED based on the position of a rotary knob. 
-Different positions of the knob correspond to different HUE values, which are then translated into RGB color values, resulting in a color change for the RGB LED.
+Dieses Beispiel steuert die Farbe einer RGB-LED basierend auf der Position eines Drehknopfs.
+Verschiedene Positionen des Knopfs entsprechen verschiedenen HUE-Werten, die dann in RGB-Farbwerte übersetzt werden, was zu einer Farbänderung der RGB-LED führt.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Kit zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -52,7 +52,7 @@ You can also buy them separately from the links below.
     *   - :ref:`potentiometer`
         - |link_potentiometer_buy|
 
-**Wiring**
+**Verdrahtung**
 
 .. image:: img/03_hue_dial_bb.png
     :width: 70%
@@ -62,7 +62,7 @@ You can also buy them separately from the links below.
 
    <br/>
 
-**Schematic**
+**Schaltplan**
 
 .. image:: img/03_hue_schematic.png
    :width: 80%
@@ -73,41 +73,42 @@ You can also buy them separately from the links below.
 
 .. note::
 
-    * You can open the file ``03_huedial.ino`` under the path of ``elite-explorer-kit-main\fun_project\03_huedial`` directly.
-    * Or copy this code into Arduino IDE.
+    * Sie können die Datei ``03_huedial.ino`` direkt unter dem Pfad ``elite-explorer-kit-main\fun_project\03_huedial`` öffnen.
+    * Oder kopieren Sie diesen Code in die Arduino IDE.
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/0ad800d4-77bb-454f-8976-a078da71ec35/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-**How it works?**
+**Wie funktioniert das?**
 
-Here's a detailed explanation of the code:
+Hier ist eine detaillierte Erklärung des Codes:
 
-1. Global Variable Definitions:
+1. Globale Variablendefinitionen:
 
-   ``redPin``, ``greenPin``, and ``bluePin``: These define the PWM pins connected to the red, green, and blue LEDs, respectively.
-   ``KNOB_PIN``: Defines the analog input pin connected to the rotary knob.
+   ``redPin``, ``greenPin`` und ``bluePin``: Diese definieren die PWM-Pins, die jeweils mit den roten, grünen und blauen LEDs verbunden sind.
+   ``KNOB_PIN``: Definiert den analogen Eingangspin, der mit dem Drehknopf verbunden ist.
 
 2. ``setup()``:
 
-   Set the pins for the RGB LED as output.
-   By default, analog pins are set as inputs, so there's no need to set the input mode for the knob's pin.
+   Stellen Sie die Pins für die RGB-LED als Ausgang ein.
+   Standardmäßig sind analoge Pins als Eingänge gesetzt, daher ist es nicht notwendig, den Eingangsmodus für den Pin des Knopfes einzustellen.
 
 3. ``loop()``:
 
-   Read the value of the rotary knob. This value ranges from 0 to 1023.
-   Normalize the knob's value to a range of 0-1.
-   Convert the normalized value to a HUE value ranging from 0-360.
-   Convert the HUE value to RGB values.
-   Update the LED's color using these RGB values.
+   Lesen Sie den Wert des Drehknopfs. Dieser Wert reicht von 0 bis 1023.
+   Normalisieren Sie den Wert des Knopfs auf einen Bereich von 0-1.
+   Konvertieren Sie den normalisierten Wert in einen HUE-Wert im Bereich von 0-360.
+   Konvertieren Sie den HUE-Wert in RGB-Werte.
+   Aktualisieren Sie die Farbe der LED mit diesen RGB-Werten.
 
 4. ``setColor()``:
 
-   Set the appropriate PWM values for each LED pin using the ``analogWrite()`` function to set the color of the RGB LED.
+   Setzen Sie die passenden PWM-Werte für jeden LED-Pin mit der Funktion ``analogWrite()``, um die Farbe der RGB-LED einzustellen.
 
 5. ``HUEtoRGB()``:
 
-   This function converts HUE values to RGB values using the HSL to RGB conversion method but focuses only on the HUE component, keeping saturation and brightness at 100%.
-   The algorithm is divided into 6 stages, each covering 60 degrees.
-   It calculates RGB values for each HUE stage and then scales these values to a range of 0-255, which is the expected range for the ``analogWrite()`` function.
+   Diese Funktion konvertiert HUE-Werte in RGB-Werte mit der HSL-zu-RGB-Konvertierungsmethode, konzentriert sich jedoch nur auf die HUE-Komponente und hält Sättigung und Helligkeit bei 100%.
+   Der Algorithmus ist in 6 Stufen unterteilt, wobei jede 60 Grad abdeckt.
+   Es berechnet RGB-Werte für jede HUE-Stufe und skaliert dann diese Werte auf einen Bereich von 0-255, was der erwarteten Spanne für die Funktion ``analogWrite()`` entspricht.
+

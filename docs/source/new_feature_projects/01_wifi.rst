@@ -3,9 +3,9 @@
 Wi-Fi
 ========================================
 
-The Arduino UNO R4 WiFi comes with a built-in ESP32-S3 module, allowing you to connect to Wi-Fi® networks and perform network operations. It supports protocols such as HTTPS, MQTT, and UDP, which have been tested and are compatible. 
+Das Arduino UNO R4 WiFi ist mit einem eingebauten ESP32-S3-Modul ausgestattet, das Ihnen ermöglicht, sich mit Wi-Fi®-Netzwerken zu verbinden und Netzwerkoperationen durchzuführen. Es unterstützt Protokolle wie HTTPS, MQTT und UDP, die getestet wurden und kompatibel sind.
 
-Next, I will guide you through two examples of utilizing WIFI:
+Im Folgenden werde ich Sie durch zwei Beispiele der Nutzung von Wi-Fi führen:
 
 .. toctree::
     :maxdepth: 2

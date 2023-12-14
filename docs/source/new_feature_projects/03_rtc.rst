@@ -1,33 +1,33 @@
 .. _new_rtc:
 
-Real-Time Clock
+Echtzeituhr
 ========================================
 
-The RTC (Real-Time Clock) is integrated into the UNO R4 WiFi's microcontroller (RA4M1). The RTC is an autonomous clock module capable of operating even when the main power supply is disconnected, thanks to a backup power source such as a battery. This makes the RTC incredibly versatile for various applications like scheduling timed tasks in home automation systems or time-stamping individual data points in data logging applications.
+Die RTC (Real-Time Clock, Echtzeituhr) ist in den Mikrocontroller des UNO R4 WiFi (RA4M1) integriert. Die RTC ist ein autonomes Uhrenmodul, das auch dann funktioniert, wenn die Hauptstromversorgung unterbrochen ist, dank einer Backup-Stromquelle wie einer Batterie. Dies macht die RTC äußerst vielseitig einsetzbar, beispielsweise für die Planung zeitgesteuerter Aufgaben in Hausautomatisierungssystemen oder zur Zeitstempelung einzelner Datenpunkte in Datenlogger-Anwendungen.
 
 .. note::
-    The UNO R4 WiFi has a VRTC pin that maintains the onboard RTC's operation even when the board loses power. To utilize this feature, apply a voltage between 1.6 and 3.6 V to the VRTC pin.
+    Der UNO R4 WiFi verfügt über einen VRTC-Pin, der den Betrieb der integrierten RTC auch bei Stromausfall des Boards aufrechterhält. Um diese Funktion zu nutzen, sollte eine Spannung zwischen 1,6 und 3,6 V an den VRTC-Pin angelegt werden.
 
 
 
-Scheduled Repetitive Tasks
+Geplante Wiederkehrende Aufgaben
 ++++++++++++++++++++++++++++++++++++++++++++
 
-In certain use-cases, you may need to execute specific tasks at regular intervals. To establish periodic interrupts, you'll first need to initialize a periodic callback function. Below is an Arduino code example that uses a periodic interrupt to blink an LED every 2 seconds.
+In bestimmten Anwendungsfällen müssen Sie möglicherweise spezifische Aufgaben in regelmäßigen Abständen ausführen. Um periodische Unterbrechungen einzurichten, müssen Sie zunächst eine periodische Rückruffunktion initialisieren. Unten finden Sie ein Arduino-Codebeispiel, das eine periodische Unterbrechung verwendet, um eine LED alle 2 Sekunden blinken zu lassen.
 
 
-**Upload the Code**
+**Code Hochladen**
 
-Open the ``03-rtc.ino`` file located at ``elite-explorer-kit-main\r4_new_feature\03-rtc``, or paste the following code into your Arduino IDE.
+Öffnen Sie die Datei ``03-rtc.ino``, die sich im Verzeichnis ``elite-explorer-kit-main\r4_new_feature\03-rtc`` befindet, oder fügen Sie den folgenden Code in Ihre Arduino IDE ein.
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/48777cc6-f8a5-4646-b221-36c883ed5a62/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-**Code Explanation**
+**Code-Erklärung**
 
-1. Initializing Components and Libraries
+1. Initialisierung von Komponenten und Bibliotheken
 
    .. code-block:: arduino
    
@@ -42,29 +42,29 @@ Open the ``03-rtc.ino`` file located at ``elite-explorer-kit-main\r4_new_feature
        RTC.begin();
      }
    
-   - ``#include "RTC.h"``: Includes the RTC library.
-   - ``volatile bool irqFlag = false;``: Declares a volatile boolean flag. ``volatile`` ensures that the variable can be safely accessed or modified by an interrupt. For more details on ``volatile``, refer to `Arduino volatile documentation <https://www.arduino.cc/reference/en/language/variables/variable-scope-qualifiers/volatile/>`_.
-   - ``bool ledState = false;``: Declares a boolean to keep track of the LED state.
-   - ``const int led = LED_BUILTIN;``: Declares a constant for the built-in LED pin.
-   - ``pinMode(led, OUTPUT);``: Sets the LED pin as an output.
-   - ``Serial.begin(9600);``: Initializes serial communication at 9600 baud rate.
-   - ``RTC.begin();``: Initializes the RTC.
+   - ``#include "RTC.h"``: Bindet die RTC-Bibliothek ein.
+   - ``volatile bool irqFlag = false;``: Deklariert eine volatile Boolesche Flagge. ``volatile`` stellt sicher, dass die Variable durch einen Interrupt sicher zugegriffen oder geändert werden kann. Weitere Details zu ``volatile`` finden Sie in der `Arduino-Volatile-Dokumentation <https://www.arduino.cc/reference/en/language/variables/variable-scope-qualifiers/volatile/>`_.
+   - ``bool ledState = false;``: Deklariert eine Boolesche Variable, um den Zustand der LED zu verfolgen.
+   - ``const int led = LED_BUILTIN;``: Deklariert eine Konstante für den eingebauten LED-Pin.
+   - ``pinMode(led, OUTPUT);``: Stellt den LED-Pin als Ausgang ein.
+   - ``Serial.begin(9600);``: Initialisiert die serielle Kommunikation mit 9600 Baud.
+   - ``RTC.begin();``: Initialisiert die RTC.
 
    .. raw:: html
     
         <br/>
 
-2. Setting Up the Real-Time Clock
+2. Einrichtung der Echtzeituhr
 
    .. code-block:: arduino
    
      RTCTime mytime(30, Month::JUNE, 2023, 13, 37, 00, DayOfWeek::WEDNESDAY, SaveLight::SAVING_TIME_ACTIVE);
      RTC.setTime(mytime);
    
-   - ``RTCTime mytime(...);``: Creates an ``RTCTime`` object and initializes it with a specific date and time.
-   - ``RTC.setTime(mytime);``: Sets the RTC with the initialized time.
+   - ``RTCTime mytime(...);``: Erstellt ein ``RTCTime``-Objekt und initialisiert es mit einem spezifischen Datum und Uhrzeit.
+   - ``RTC.setTime(mytime);``: Stellt die RTC mit der initialisierten Zeit ein.
    
-   Setting and Checking Periodic Callback
+   Periodische Rückruffunktion Einrichten und Überprüfen
    
    .. code-block:: arduino
    
@@ -85,7 +85,7 @@ Open the ``03-rtc.ino`` file located at ``elite-explorer-kit-main\r4_new_feature
        irqFlag = true;
      }
    
-   - ``RTC.setPeriodicCallback(...);``: Sets a periodic callback to trigger every 2 seconds.The period can be specified using the following enumerations:
+   - ``RTC.setPeriodicCallback(...);``: Legt eine periodische Rückruffunktion fest, die alle 2 Sekunden ausgelöst wird. Der Zeitraum kann mit den folgenden Enumerationen angegeben werden:
 
       - ``ONCE_EVERY_2_SEC``
       - ``ONCE_EVERY_1_SEC``
@@ -98,10 +98,10 @@ Open the ``03-rtc.ino`` file located at ``elite-explorer-kit-main\r4_new_feature
       - ``N128_TIMES_EVERY_SEC``
       - ``N256_TIMES_EVERY_SEC``
 
-   - ``void loop() {...}``: Checks if the callback has been triggered. If so, toggles the LED state.
-   - ``void periodicCallback() {...}``: The callback function sets ``irqFlag = true`` when triggered.
+   - ``void loop() {...}``: Überprüft, ob der Rückruf ausgelöst wurde. Wenn ja, ändert den Zustand der LED.
+   - ``void periodicCallback() {...}``: Die Rückruffunktion setzt ``irqFlag = true``, wenn sie ausgelöst wird.
 
 
-**Reference**
+**Referenz**
 
 - |link_r4_rtc|

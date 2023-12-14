@@ -1,29 +1,24 @@
 .. _cpn_ta6586:
 
-TA6586 - Motor Driver Chip
+TA6586 - Motorsteuerungs-Chip
 =================================
 
 .. image:: img/ta6586.png
 
-TA6586 is a monolithic IC designed for driving bi-directional DC motor. It has
-two pins of logic inputs for controlling the direction, forward and backward.
-The circuit feature good anti-interference performance, small standby current and
-low output saturation pressure drop. It has a built-in clamp diode to reverse the impact
-of the release of inductive load current, making it in the drive relays, DC motors,
-stepper motors or control the use of switching power safe and reliable.
-TA6586 is suitable for toy vehicles, remote-controlled aircraft motor drive, automatic
-valve motor, electromagnetic lock drive, precision instruments and other circuits.
+TA6586 ist ein monolithischer IC, der für das Ansteuern von bidirektionalen Gleichstrommotoren entwickelt wurde. Er verfügt über zwei Logikeingangspins zur Steuerung der Richtung, vorwärts und rückwärts.
+Die Schaltung weist eine gute Störfestigkeit, einen geringen Standby-Strom und einen niedrigen Ausgangssättigungsspannungsabfall auf. Sie hat eine eingebaute Klemmdiode, um den Aufprall der Freisetzung des induktiven Laststroms umzukehren, was sie in der Anwendung beim Antrieb von Relais, Gleichstrommotoren, Schrittmotoren oder beim Schalten von Leistung sicher und zuverlässig macht.
+TA6586 eignet sich für Spielzeugfahrzeuge, ferngesteuerte Flugzeugmotoren, automatische Ventilmotoren, elektromagnetische Schlossantriebe, Präzisionsinstrumente und andere Schaltungen.
 
-**Features**
+**Merkmale**
 
-* Low stand-by current: ≦2uA
-* Wide supply voltage range
-* Built-in Brake Function
-* Thermal Shutdown protection
-* Over Current Limit and Short Circuit Protect Function
-* DIP8 Pb-Free package.
+* Geringer Standby-Strom: ≦2uA
+* Breiter Versorgungsspannungsbereich
+* Integrierte Bremsfunktion
+* Thermischer Abschaltschutz
+* Überstrombegrenzung und Kurzschlussschutzfunktion
+* DIP8 Pb-freies Gehäuse.
 
-**Pin Function**
+**Pin-Funktion**
 
 .. image:: img/ta6586_pin1.png
     :width: 30%
@@ -32,14 +27,14 @@ valve motor, electromagnetic lock drive, precision instruments and other circuit
     :width: 75%
 
 
-**Input Truth Table**
+**Eingangswahrheitstabelle**
 
 .. image:: img/ta6586_priciple.png
     :width: 95%
 
-**Example**
+**Beispiel**
 
-* :ref:`basic_motor` (Basic Project)
-* :ref:`basic_pump` (Basic Project)
-* :ref:`fun_smart_fan` (Fun Project)
-* :ref:`fun_plant_monitor` (Fun Project)
+* :ref:`basic_motor` (Grundprojekt)
+* :ref:`basic_pump` (Grundprojekt)
+* :ref:`fun_smart_fan` (Spaßprojekt)
+* :ref:`fun_plant_monitor` (Spaßprojekt)

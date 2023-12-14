@@ -3,38 +3,37 @@
 74HC595
 ==========================
 
-
-Overview
+Überblick
 ----------------------
 
-Generally, there are two ways to drive a single 7-segment display. One way is to connect its 8 pins directly to eight ports on the Uno board, which we have done previously. Or you can connect the 74HC595 to three ports of the UNO board and then the 7-segment display to the 74HC595. In this experiment, we will use the latter. By this way, we can save five ports – considering the Uno board’s limited ports, this is very important. Now let's get started!
+Im Allgemeinen gibt es zwei Möglichkeiten, eine einzelne 7-Segment-Anzeige anzusteuern. Eine Möglichkeit besteht darin, ihre 8 Pins direkt an acht Ports des Uno-Boards anzuschließen, was wir bereits getan haben. Oder Sie können den 74HC595 an drei Ports des UNO-Boards anschließen und dann die 7-Segment-Anzeige an den 74HC595. In diesem Experiment werden wir Letzteres verwenden. Auf diese Weise können wir fünf Ports sparen – in Anbetracht der begrenzten Ports des Uno-Boards ist das sehr wichtig. Lassen Sie uns jetzt beginnen!
 
-Required Components
+Benötigte Komponenten
 ------------------------
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Set zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -49,17 +48,17 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_74hc595`
         - |link_74hc595_buy|
 
-Wiring
+Verdrahtung
 ----------------------
 
 .. image:: img/29-74hc595_bb.png
     :align: center
     :width: 95%
 
-Schematic Diagram
+Schaltplan
 --------------------
 
-In the experiment MR (pin10) is connected to 5V (HIGH Level) and OE (pin 1)  to GND (LOW Level). Therefore, the data is input into the rising edge of SHcp and enters the memory register through the rising edge. We use the shiftout() function to output a 8-bit data to the shift register through DS. In the rising edge of the SHcp, the data in the shift register moves successively one bit in one time, i.e. data in Q1 moves to Q2, and so forth. In the rising edge of STcp, data in the shift register moves into the memory register. All data will be moved to the memory register after 8 times. Then the data in the memory register is output to the bus (Q0-Q7). So the 16 characters are displayed in the 7-segment in turn.
+Im Experiment ist MR (Pin 10) mit 5V (HIGH Level) verbunden und OE (Pin 1) mit GND (LOW Level). Daher werden die Daten in die steigende Flanke von SHcp eingegeben und durch die steigende Flanke in das Speicherregister übertragen. Wir verwenden die Funktion shiftout(), um ein 8-Bit-Datum an das Schieberegister über DS auszugeben. In der steigenden Flanke des SHcp bewegen sich die Daten im Schieberegister sukzessive um ein Bit, d.h. die Daten in Q1 bewegen sich nach Q2 und so weiter. In der steigenden Flanke von STcp bewegen sich die Daten im Schieberegister in das Speicherregister. Alle Daten werden nach 8 Durchgängen in das Speicherregister verschoben. Dann werden die Daten im Speicherregister auf den Bus (Q0-Q7) ausgegeben. So werden die 16 Zeichen nacheinander in der 7-Segment-Anzeige angezeigt.
 
 .. image:: img/29_74hc595_schematic.png
    :align: center
@@ -70,36 +69,36 @@ Code
 
 .. note::
 
-    * You can open the file ``29-74hc595.ino`` under the path of ``elite-explorer-kit-main\basic_project\29-74hc595`` directly.
-    * Or copy this code into Arduino IDE.
+    * Sie können die Datei ``29-74hc595.ino`` direkt im Pfad ``elite-explorer-kit-main\basic_project\29-74hc595`` öffnen.
+    * Oder kopieren Sie diesen Code in die Arduino IDE.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/c7232b3c-61c9-4d7d-849b-55ed406181b1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After uploading the codes to the uno board, you should now see the 7-segment display from 0 to 9 and A to F.
+Nachdem die Codes auf das Uno-Board hochgeladen wurden, sollten Sie jetzt die 7-Segment-Anzeige von 0 bis 9 und A bis F sehen.
     
 
-Code Analysis
+Code-Analyse
 -----------------
 
-**Set the array elements**
+**Setzen der Array-Elemente**
 
 .. code-block:: arduino
 
     int datArray[16] = {252, 96, 218, 242, 102, 182, 190, 224, 254, 246, 238, 62, 156, 122, 158, 142};
 
-This array stores the data of the 16 characters from 0 to F. 252 stands for 0, which you can calculate by yourself. To display 0, the segment g (the middle one) of the 7-segment display must be low level (dim).
+Dieses Array speichert die Daten der 16 Zeichen von 0 bis F. 252 steht für 0, was Sie selbst berechnen können. Um 0 anzuzeigen, muss das Segment g (das mittlere) der 7-Segment-Anzeige auf niedrigem Niveau (dunkel) sein.
 
-Since the segment g is connected to Q1 of the 74HC595, set both Q1 and DP (the dot) as low level and leave the rest pins as high level.
-Therefore, the values of Q7 Q6 Q5 Q4 Q3 Q2 Q1 Q0 are 1 1 1 1 1 1 0 0.
+Da das Segment g mit Q1 des 74HC595 verbunden ist, setzen Sie sowohl Q1 als auch DP (den Punkt) auf niedriges Niveau und lassen Sie die restlichen Pins auf hohem Niveau.
+Daher sind die Werte von Q7 Q6 Q5 Q4 Q3 Q2 Q1 Q0 1 1 1 1 1 1 0 0.
 
-Change the binary numbers into decimal ones:
+Ändern Sie die Binärzahlen in Dezimalzahlen:
 1x2\ :sup:`7`\ +1x2\ :sup:`6`\ +1x2\ :sup:`5`\ +1x2\ :sup:`4`\ +1x2\ :sup:`3`\ +1x2\ :sup:`2`\ +0x2\ :sup:`1`\ +1x2\ :sup:`0`\ =252.
 
-So that's the value for the number **0** to be displayed. You can calculate other characters similarly.
+So ist das der Wert für die Anzeige der Zahl **0**. Sie können andere Zeichen ähnlich berechnen.
 
-**Display 0-F in the 7-segment display**
+**Anzeigen von 0-F in der 7-Segment-Anzeige**
 
 .. code-block:: arduino
 
@@ -121,11 +120,11 @@ So that's the value for the number **0** to be displayed. You can calculate othe
 
     }
 
-Set ``STcp`` as low level first and then high level. It will generate a rising edge pulse of STcp.
+Setzen Sie zuerst ``STcp`` auf niedriges und dann auf hohes Niveau. Es erzeugt einen steigenden Flankenimpuls von STcp.
 
-``shiftOut()`` is used to shift out a byte of data one bit at a time, which means to shift a byte of data in ``dataArray[num]`` to the shifting register with the DS pin. ``MSBFIRST`` means to move from high bits.
+``shiftOut()`` wird verwendet, um ein Byte Daten bitweise auszugeben, was bedeutet, ein Byte Daten in ``dataArray[num]`` mit dem DS-Pin in das Schieberegister zu verschieben. ``MSBFIRST`` bedeutet, von hohen Bits zu verschieben.
 
-After ``digitalWrite(STcp,HIGH)`` is run, the STcp will be at the rising edge. At this time, the data in the shift register will be moved to the memory register.
+Nachdem ``digitalWrite(STcp,HIGH)`` ausgeführt wurde, wird STcp an der steigenden Flanke sein. Zu diesem Zeitpunkt werden die Daten im Schieberegister in das Speicherregister verschoben.
 
-A byte of data will be transferred into the memory register after 8 times. Then the data of memory register is output to the bus (Q0-Q7). You will see a character is displayed on the 7-segment. Then delay for 1000ms. After that line, go back to ``for()``. The loop repeats until all the characters are displayed in the 7-segment display one by one after
-16 times.
+Ein Byte Daten wird nach 8 Mal in das Speicherregister übertragen. Dann werden die Daten des Speicherregisters auf den Bus (Q0-Q7) ausgegeben. Sie sehen ein Zeichen auf der 7-Segment-Anzeige. Dann warten Sie 1000 ms. Danach geht es zurück zur ``for()``-Schleife. Die Schleife wiederholt sich, bis alle Zeichen nacheinander in der 7-Segment-Anzeige nach
+16 Mal angezeigt werden.

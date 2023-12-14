@@ -1,4 +1,4 @@
-Appendix
+Anhang
 ---------------------
 
 .. toctree::

@@ -1,42 +1,42 @@
 .. _basic_joystick:
 
-Joystick Module
+Joystick-Modul
 ==========================
 
 .. https://docs.sunfounder.com/projects/r4-basic-kit/en/latest/projects/joystick_ps2_uno.html#joystick-uno
 
 
-Overview
+Überblick
 ---------------
 
-A joystick is an input device consisting of a stick that pivots on a base and reports its angle or direction to the device it is controlling. Joysticks are often used to control video games and robots. A Joystick PS2 is used here.
+Ein Joystick ist ein Eingabegerät, das aus einem auf einer Basis schwenkbaren Stick besteht und seinen Winkel oder seine Richtung an das zu steuernde Gerät meldet. Joysticks werden häufig zur Steuerung von Videospielen und Robotern verwendet. Hier wird ein Joystick PS2 verwendet.
 
-Required Components
+Benötigte Komponenten
 -------------------------
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir folgende Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Set zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -47,19 +47,19 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_joystick`
         - |link_joystick_buy|
 
-Wiring
+Verdrahtung
 ----------------------
 
 .. image:: img/20-joystick_bb.png
     :align: center
     :width: 70%
 
-Schematic Diagram
+Schaltplan
 ---------------------
 
-This module has two analog outputs (corresponding to X,Y biaxial offsets). 
+Dieses Modul hat zwei analoge Ausgänge (entsprechend den X,Y-Biaxial-Versätzen).
 
-In this experiment, we use the Uno board to detect the moving direction of the Joystick knob.
+In diesem Experiment verwenden wir das Uno-Board, um die Bewegungsrichtung des Joystick-Knopfes zu erkennen.
 
 .. image:: img/20_joystick_schematic.png
     :align: center 
@@ -70,20 +70,20 @@ Code
 
 .. note::
 
-    * You can open the file ``20-joystick.ino`` under the path of ``elite-explorer-kit-main\basic_project\20-joystick`` directly.
-    * Or copy this code into Arduino IDE.
+    * Sie können die Datei ``20-joystick.ino`` direkt im Pfad ``elite-explorer-kit-main\basic_project\20-joystick`` öffnen.
+    * Oder kopieren Sie diesen Code in die Arduino IDE.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/ac0f9910-e53e-43a3-a5ae-ec4d3a3f4aa1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-Now, when you push the rocker, the coordinates of the X and Y axes displayed on the Serial Monitor will change accordingly. Pressing the button will also display the coordinate Z=0.
+Nun, wenn Sie den Rocker bewegen, ändern sich die Koordinaten der X- und Y-Achse auf dem Serial Monitor entsprechend. Wenn Sie den Knopf drücken, wird auch die Koordinate Z=0 angezeigt.
 
 
-Code Analysis
+Code-Analyse
 -------------------
 
-The code is use the serial monitor to print the value of the VRX and VRY pins of the joystick ps2.
+Der Code verwendet den seriellen Monitor, um den Wert der VRX- und VRY-Pins des Joystick ps2 auszugeben.
 
 .. code-block:: arduino
 

@@ -1,32 +1,32 @@
 .. _cpn_oled:
 
-OLED Display Module
+OLED-Display-Modul
 ==========================
 
 .. image:: img/oled.png
     :width: 300
     :align: center
 
-Introduction
+Einführung
 ---------------------------
-An OLED (Organic Light-Emitting Diode) display module is a device that can display text, graphics and images on a thin and flexible screen using organic materials that emit light when electric current is applied.
+Ein OLED-Display (Organic Light-Emitting Diode) ist ein Gerät, das Texte, Grafiken und Bilder auf einem dünnen und flexiblen Bildschirm anzeigen kann, indem es organische Materialien verwendet, die Licht abgeben, wenn ein elektrischer Strom angelegt wird.
 
-The main advantage of an OLED Display is that it emits its own light and doesn’t need another source of backlight. Due to this, OLED Displays often have better contrast, brightness and viewing angles when compared to LCD displays.
+Der Hauptvorteil eines OLED-Displays besteht darin, dass es sein eigenes Licht emittiert und keine andere Hintergrundlichtquelle benötigt. Dadurch haben OLED-Displays oft einen besseren Kontrast, eine bessere Helligkeit und Blickwinkel im Vergleich zu LCD-Displays.
 
-Another important feature of OLED Displays is deep black levels. Since each pixel emits its own light in an OLED Display, to produce black color, the individual pixel can be turned OFF.
+Ein weiteres wichtiges Merkmal von OLED-Displays ist die tiefe Schwarzstufe. Da jeder Pixel in einem OLED-Display sein eigenes Licht emittiert, kann zur Erzeugung der schwarzen Farbe der einzelne Pixel ausgeschaltet werden.
 
-Due to lower power consumption (only pixels which are lit up draw current), OLED displays are also popular in battery operated devices like Smart Watches, Health Trackers and other wearables.
+Aufgrund des geringeren Stromverbrauchs (nur beleuchtete Pixel verbrauchen Strom) sind OLED-Displays auch bei batteriebetriebenen Geräten wie Smartwatches, Gesundheitstrackern und anderen Wearables beliebt.
 
-Principle
+Prinzip
 ---------------------------
-An OLED display module consists of an OLED panel and an OLED driver chip that is mounted on the back of the module. The OLED panel is made of many tiny pixels that can produce different colors of light. Each pixel consists of several layers of organic materials sandwiched between two electrodes (anode and cathode). When electric current flows through the electrodes, the organic materials emit light of different wavelengths depending on their composition.
+Ein OLED-Display-Modul besteht aus einem OLED-Panel und einem OLED-Treiberchip, der auf der Rückseite des Moduls montiert ist. Das OLED-Panel besteht aus vielen kleinen Pixeln, die unterschiedliche Lichtfarben erzeugen können. Jeder Pixel besteht aus mehreren Schichten organischer Materialien, die zwischen zwei Elektroden (Anode und Kathode) eingeschlossen sind. Wenn elektrischer Strom durch die Elektroden fließt, emittieren die organischen Materialien Licht unterschiedlicher Wellenlängen, abhängig von ihrer Zusammensetzung.
 
-The OLED driver chip is a chip that can control the pixels of the OLED panel using a serial communication protocol called I2C (Inter-Integrated Circuit).
+Der OLED-Treiberchip ist ein Chip, der die Pixel des OLED-Panels über ein seriellen Kommunikationsprotokoll namens I2C (Inter-Integrated Circuit) steuern kann.
 
-The OLED driver chip converts the signals from the Arduino into commands for the OLED panel. The Arduino can send data to the OLED driver chip using a library that can control the I2C protocol. One such library is the Adafruit SSD1306 library. With this library, you can initialize the OLED display module, set the brightness level, print text, graphics or images, etc.
+Der OLED-Treiberchip wandelt die Signale vom Arduino in Befehle für das OLED-Panel um. Der Arduino kann Daten an den OLED-Treiberchip senden, indem er eine Bibliothek verwendet, die das I2C-Protokoll steuern kann. Eine solche Bibliothek ist die Adafruit SSD1306-Bibliothek. Mit dieser Bibliothek können Sie das OLED-Displaymodul initialisieren, die Helligkeitsstufe einstellen, Texte, Grafiken oder Bilder ausgeben usw.
 
-**Example**
+**Beispiel**
 
-* :ref:`basic_oled` (Basic Project)
-* :ref:`fun_pong` (Fun Project)
-* :ref:`iot_weathertime_screen` (IoT Project)
+* :ref:`basic_oled` (Grundprojekt)
+* :ref:`fun_pong` (Spaßprojekt)
+* :ref:`iot_weathertime_screen` (IoT-Projekt)

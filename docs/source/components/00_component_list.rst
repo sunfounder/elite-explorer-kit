@@ -1,22 +1,22 @@
-Learn about the Components in Your Kit
-=========================================
+Erfahren Sie mehr über die Komponenten in Ihrem Kit
+==========================================================
 
-Components List
------------------
+Komponentenliste
+-------------------
 
-After opening the package, please check whether the quantity of components is compliance with product description and whether all components are in good condition.
+Bitte überprüfen Sie nach dem Öffnen des Pakets, ob die Anzahl der Komponenten mit der Produktbeschreibung übereinstimmt und ob alle Komponenten in einwandfreiem Zustand sind.
 
-* :download:`Components List </_static/Elite_Explorer_Kit_Components_List.pdf>`
-
-
-Components Introductions
---------------------------
+* :download:`Komponentenliste </_static/Elite_Explorer_Kit_Components_List.pdf>`
 
 
-Below is the introduction to each component, which contains the operating principle of the component and the corresponding projects.
+Einführung in die Komponenten
+-------------------------------
 
 
-**Basic**
+Im Folgenden finden Sie eine Einführung zu jeder Komponente, die das Funktionsprinzip der Komponente und die entsprechenden Projekte enthält.
+
+
+**Grundlegendes**
 
 .. toctree::
     :maxdepth: 1
@@ -37,7 +37,7 @@ Below is the introduction to each component, which contains the operating princi
     component_ta6585
     component_74hc595
 
-**Display**
+**Anzeige**
 
 .. toctree::
     :maxdepth: 1
@@ -50,7 +50,7 @@ Below is the introduction to each component, which contains the operating princi
     component_oled
 
 
-**Sound**
+**Ton**
 
 .. toctree::
     :maxdepth: 1
@@ -58,7 +58,7 @@ Below is the introduction to each component, which contains the operating princi
     component_buzzer
     component_audio_speaker
 
-**Driver**
+**Treiber**
 
 .. toctree::
     :maxdepth: 1
@@ -71,7 +71,7 @@ Below is the introduction to each component, which contains the operating princi
     component_power_module
     
 
-**Controller**
+**Steuerung**
 
 .. toctree::
     :maxdepth: 1

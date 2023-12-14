@@ -1,17 +1,17 @@
 .. _cpn_photoresistor:
 
-Photoresistor
-==============
+Fotowiderstand
+=================
 
 .. image:: img/photoresistor.png
     :width: 200
     :align: center
 
-A photoresistor or photocell is a light-controlled variable resistor. The resistance of a photoresistor decreases with increasing incident light intensity; in other words, it exhibits photo conductivity. 
+Ein Fotowiderstand, auch Fotoleiter genannt, ist ein lichtgesteuerter variabler Widerstand. Der Widerstand eines Fotowiderstands nimmt mit steigender Lichtintensität ab; anders ausgedrückt, zeigt er eine Fotoleitfähigkeit.
 
-A photoresistor can be applied in light-sensitive detector circuits and light-activated and dark-activated switching circuits acting as a resistance semiconductor. In the dark, a photoresistor can have a resistance as high as several megaohms (MΩ), while in the light, a photoresistor can have a resistance as low as a few hundred ohms.
+Fotowiderstände können in lichtempfindlichen Detektorschaltungen sowie in licht- und dunkelaktivierten Schaltkreisen als Widerstands-Halbleiter eingesetzt werden. Im Dunkeln kann der Widerstand eines Fotowiderstands mehrere Megaohm (MΩ) betragen, während er im Hellen auf wenige hundert Ohm sinken kann.
 
-Here is the electronic symbol of photoresistor.
+Hier ist das elektronische Symbol eines Fotowiderstands.
 
 .. image:: img/photoresistor_symbol.png
     :width: 200
@@ -19,7 +19,8 @@ Here is the electronic symbol of photoresistor.
 
 * |link_photoresistor_wiki|
 
-**Example**
+**Beispiel**
 
-* :ref:`basic_photoresistor` (Basic Project)
-* :ref:`fun_light_array` (Fun Project)
+* :ref:`basic_photoresistor` (Grundprojekt)
+* :ref:`fun_light_array` (Spaßprojekt)
+

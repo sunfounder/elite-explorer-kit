@@ -1,65 +1,66 @@
-Simple Webserver
+Einfacher Webserver
 ===========================
 
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/videos/new_feature_projects/wifi.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      Ihr Browser unterstützt das Video-Tag nicht.
    </video>
 
-This simple Arduino program is designed to create a basic WiFi web server, allowing users to control the on and off state of an LED on the Arduino board via a web browser.
+Dieses einfache Arduino-Programm dient dazu, einen grundlegenden WiFi-Webserver zu erstellen. Benutzer können damit den Ein- und Ausschaltzustand einer LED auf dem Arduino-Board über einen Webbrowser steuern.
 
-**Run the Code**
-
-.. note::
-
-    * You can open the file ``01_simple_webserver.ino`` under the path of ``elite-explorer-kit-main\iot_project\01_simple_webserver`` directly.
-    * Or copy this code into Arduino IDE.
+**Ausführen des Codes**
 
 .. note::
-    In the code, SSID and password are stored in ``arduino_secrets.h``. Before uploading this example, you need to modify them with your own WiFi credentials. Additionally, for security purposes, ensure that this information is kept confidential when sharing or storing the code.
+
+    * Die Datei ``01_simple_webserver.ino`` können Sie direkt unter dem Pfad ``elite-explorer-kit-main\iot_project\01_simple_webserver`` öffnen.
+    * Oder kopieren Sie diesen Code in die Arduino IDE.
+
+.. note::
+    Im Code werden SSID und Passwort in ``arduino_secrets.h`` gespeichert. Bevor Sie dieses Beispiel hochladen, müssen Sie diese mit Ihren eigenen WiFi-Anmeldedaten ändern. Zusätzlich sollten Sie diese Informationen geheim halten, wenn Sie den Code teilen oder speichern, um Sicherheitsgründe zu gewährleisten.
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/7ed8f58d-2ed8-4dc9-82cb-7e49b6977ea1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-After uploading the code, you will be able to see the IP address in the serial monitor. You can enter this IP address in your web browser to turn the onboard LED on/off.
+Nach dem Hochladen des Codes können Sie die IP-Adresse im seriellen Monitor sehen. Geben Sie diese IP-Adresse in Ihren Webbrowser ein, um die LED an Bord ein-/auszuschalten.
 
 .. image:: img/01_webserver.png
 
-**How it works?**
+**Wie funktioniert des?**
 
-Here is an explanation of the code:
+Hier ist eine Erklärung des Codes:
 
-1. Header Files and Global Variables:
+1. Header-Dateien und globale Variablen:
 
-   * ``#include "WiFiS3.h"``: This includes the WiFi library for connecting and managing WiFi. This library is included with Arduino UNO R4 Core, so no additional installation is required.
-   * ``#include "arduino_secrets.h"``: This includes sensitive WiFi connection data such as SSID and password.
-   * ``ssid``, ``pass``, ``keyIndex``: These are network credentials used for WiFi connection.
-   * ``led``, ``status``, ``server``: These define the LED pin, WiFi status, and web server object.
+   * ``#include "WiFiS3.h"``: Diese beinhaltet die WiFi-Bibliothek für das Verbinden und Verwalten von WiFi. Diese Bibliothek ist im Arduino UNO R4 Core enthalten, eine zusätzliche Installation ist nicht erforderlich.
+   * ``#include "arduino_secrets.h"``: Diese beinhaltet sensible WiFi-Verbindungsdaten wie SSID und Passwort.
+   * ``ssid``, ``pass``, ``keyIndex``: Dies sind die Netzwerkanmeldeinformationen für die WiFi-Verbindung.
+   * ``led``, ``status``, ``server``: Diese definieren den LED-Pin, den WiFi-Status und das Webserver-Objekt.
 
 2. ``setup()``:
 
-   * Begin serial communication.
-   * Check for the presence of the WiFi module.
-   * Check if the WiFi module's firmware version is up-to-date.
-   * Attempt to connect to the WiFi network.
-   * Start the web server.
-   * Print the WiFi status.
+   * Beginnen Sie mit der seriellen Kommunikation.
+   * Überprüfen Sie das Vorhandensein des WiFi-Moduls.
+   * Überprüfen Sie, ob die Firmware-Version des WiFi-Moduls aktuell ist.
+   * Versuchen Sie, sich mit dem WiFi-Netzwerk zu verbinden.
+   * Starten Sie den Webserver.
+   * Drucken Sie den WiFi-Status aus.
 
 3. ``loop()``:
 
-   * Check for new web client connections.
-   * If there are client connections, read their incoming HTTP requests.
-   * Based on the requests, you can control the on/off state of the LED. For example, if the request is "GET /H," it will turn on the LED; if it's "GET /L," it will turn off the LED.
-   * Send an HTTP response to instruct the user on how to control the LED.
-   * Disconnect the client.
+   * Überprüfen Sie auf neue Webclient-Verbindungen.
+   * Wenn es Client-Verbindungen gibt, lesen Sie deren eingehende HTTP-Anfragen.
+   * Basierend auf den Anfragen können Sie den Ein-/Ausschaltzustand der LED steuern. Wenn beispielsweise die Anfrage „GET /H“ lautet, wird die LED eingeschaltet; bei „GET /L“ wird sie ausgeschaltet.
+   * Senden Sie eine HTTP-Antwort, um den Benutzer anzuleiten, wie er die LED steuern kann.
+   * Trennen Sie die Verbindung zum Client.
 
 4. ``printWifiStatus()``:
 
-   * Print the connected WiFi SSID.
-   * Print the IP address of the Arduino board.
-   * Print the received signal strength.
-   * Explain how to view this page in a web browser.
+   * Drucken Sie die verbundene WiFi-SSID aus.
+   * Drucken Sie die IP-Adresse des Arduino-Boards aus.
+   * Drucken Sie die empfangene Signalstärke aus.
+   * Erklären Sie, wie man diese Seite in einem Webbrowser ansehen kann.
+

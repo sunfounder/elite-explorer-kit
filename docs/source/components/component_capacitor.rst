@@ -1,31 +1,31 @@
 .. _cpn_capacitor:
 
-Capacitor
+Kondensator
 =============
 
 .. image:: img/103_capacitor.png
 .. image:: img/10uf_cap.png
 
-Capacitor, refers to the amount of charge storage under a given potential difference, denoted as C, and the international unit is farad (F). 
-Generally speaking, electric charges move under force in an electric field. When there is a medium between conductors, the movement of electric charges is hindered and the electric charges accumulate on the conductors, resulting in accumulation of electric charges. 
+Ein Kondensator, bezieht sich auf die Menge der Ladungsspeicherung unter einer gegebenen Potentialdifferenz, bezeichnet als C, und die internationale Einheit ist Farad (F). 
+Allgemein gesagt, bewegen sich elektrische Ladungen unter Kraft in einem elektrischen Feld. Wenn sich ein Medium zwischen Leitern befindet, wird die Bewegung der elektrischen Ladungen behindert und die elektrischen Ladungen sammeln sich auf den Leitern an, was zur Ansammlung von elektrischen Ladungen führt.
 
-The amount of stored electric charges is called capacitance. Because capacitors are one of the most widely used electronic components in electronic equipment, they are widely used in direct current isolation, coupling, bypass, filtering, tuning loops, energy conversion, and control circuits. Capacitors are divided into electrolytic capacitors, solid capacitors, etc.
+Die Menge der gespeicherten elektrischen Ladungen wird als Kapazität bezeichnet. Da Kondensatoren eine der am häufigsten verwendeten elektronischen Komponenten in elektronischen Geräten sind, werden sie weit verbreitet in Gleichstromisolierung, Kopplung, Bypass, Filterung, Abstimmkreisen, Energieumwandlung und Steuerungsschaltungen eingesetzt. Kondensatoren werden in Elektrolytkondensatoren, Festkörperkondensatoren usw. unterteilt.
 
-According to material characteristics, capacitors can be divided into: aluminum electrolytic capacitors, film capacitors, tantalum capacitors, ceramic capacitors, super capacitors, etc.
+Nach Materialeigenschaften können Kondensatoren unterteilt werden in: Aluminiumelektrolytkondensatoren, Folienkondensatoren, Tantal-Kondensatoren, Keramikkondensatoren, Superkondensatoren usw.
 
-In this kit, ceramic capacitors and electrolytic capacitors are used. 
+In diesem Kit werden Keramik- und Elektrolytkondensatoren verwendet.
 
-* `Ceramic Capacitor - Wikipedia <https://en.wikipedia.org/wiki/Ceramic_capacitor>`_
+* `Keramikkondensator – Wikipedia <https://en.wikipedia.org/wiki/Ceramic_capacitor>`_
 
-* `Electrolytic Capacitor - Wikipedia <https://en.wikipedia.org/wiki/Electrolytic_capacitor>`_
+* `Elektrolytkondensator – Wikipedia <https://en.wikipedia.org/wiki/Electrolytic_capacitor>`_
 
-There are 103 or 104 label on the ceramic capacitors, which represent the capacitance value, 103=10x10^3pF, 104=10x10^4pF
+Auf den Keramikkondensatoren befinden sich 103- oder 104-Etiketten, die den Kapazitätswert darstellen, 103=10x10^3pF, 104=10x10^4pF
 
-**Unit Conversion**
+**Einheitenumrechnung**
 
     1F=10^3mF=10^6uF=10^9nF=10^12pF
 
-**Example**
+**Beispiel**
 
-* :ref:`basic_button` (Basic Project)
+* :ref:`basic_button` (Grundprojekt)
 

@@ -1,39 +1,39 @@
 .. _basic_ultrasonic_sensor:
 
-Ultrasonic
+Ultraschall
 ==========================
 
-Overview
+Überblick
 --------------------
 
-When you are reversing, you will see the distance between the car and the surrounding obstacles to avoid collision. The device for detecting the distance is an ultrasonic sensor. In this experiment, you will learn how the ultrasonic wave detects the distance.
+Wenn Sie rückwärts fahren, sehen Sie die Entfernung zwischen dem Auto und den umliegenden Hindernissen, um eine Kollision zu vermeiden. Das Gerät zur Entfernungserkennung ist ein Ultraschallsensor. In diesem Experiment lernen Sie, wie die Ultraschallwelle die Entfernung erkennt.
 
-Required Components
+Benötigte Komponenten
 -------------------------
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein komplettes Kit zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Name
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Sie können die Komponenten auch separat über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -47,7 +47,7 @@ You can also buy them separately from the links below.
         - |link_i2clcd1602_buy|
 
 
-Wiring
+Verdrahtung
 ----------------------
 
 .. image:: img/06-ultrasonic_module_bb.png
@@ -58,7 +58,7 @@ Wiring
 
     <br/>
 
-Schematic Diagram
+Schaltplan
 -----------------------
 
 .. image:: img/06_ultrasonic_schematic.png
@@ -71,8 +71,8 @@ Code
 
 .. note::
 
-    * You can open the file ``06-ultrasonic.ino`` under the path of ``elite-explorer-kit-main\basic_project\06-ultrasonic`` directly.
-    * Or copy this code into Arduino IDE.
+    * Sie können die Datei ``06-ultrasonic.ino`` direkt unter dem Pfad ``elite-explorer-kit-main\basic_project\06-ultrasonic`` öffnen.
+    * Oder kopieren Sie diesen Code in die Arduino IDE.
 
 .. raw:: html
 
@@ -82,13 +82,13 @@ Code
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/videos/basic_projects/06_basic_ultrasonic_sensor.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      Ihr Browser unterstützt das Video-Tag nicht.
    </video>
 
-Code Analysis
+Code-Analyse
 ------------------------
 
-**1. Initialize the ultrasonic sensor and LCD1602**
+**1. Initialisieren des Ultraschallsensors und des LCD1602**
 
     .. code-block:: arduino
     
@@ -110,7 +110,7 @@ Code Analysis
        
        }
 
-**2. Display the distance on the LCD1602**
+**2. Anzeige der Entfernung auf dem LCD1602**
 
     .. code-block:: arduino
     
@@ -129,15 +129,15 @@ Code Analysis
          delay(800);                       // Delay for 800 milliseconds before repeating the loop
        }
 
-**3. Convert the time to distance**
+**3. Umrechnung der Zeit in Entfernung**
 
     .. code-block:: arduino
 
         float readDistance(){// ...}
 
-    Here, "PING" refers to the process where the ultrasonic sensor sends out an ultrasonic pulse (or "ping") and then waits for its echo.
+    Hier bezieht sich „PING“ auf den Prozess, bei dem der Ultraschallsensor einen Ultraschallimpuls (oder „Ping“) aussendet und dann auf sein Echo wartet.
     
-    PING is triggered by a HIGH pulse of 2 or more microseconds. (Give a short LOW pulse beforehand to ensure a clean HIGH pulse.)
+    PING wird durch einen HIGH-Puls von 2 oder mehr Mikrosekunden ausgelöst. (Vorher einen kurzen LOW-Puls geben, um einen sauberen HIGH-Puls zu gewährleisten.)
 
     .. code-block:: arduino
 
@@ -147,15 +147,15 @@ Code Analysis
         delayMicroseconds(10);
         digitalWrite(trigPin, LOW); 
 
-    The echo pin is used to read signal from PING, a HIGH pulse whose duration is the time (in microseconds) from the sending of the ping to the reception of echo of the object. We use the following function to obtain the duration.
+    Der Echo-Pin wird verwendet, um das Signal von PING zu lesen, einen HIGH-Puls, dessen Dauer die Zeit (in Mikrosekunden) vom Senden des Pings bis zum Empfang des Echos des Objekts ist. Wir verwenden die folgende Funktion, um die Dauer zu erhalten.
 
     .. code-block:: arduino
 
         pulseIn(echoPin, HIGH);
 
-    The speed of sound is 340 m/s or 29 microseconds per centimeter.
+    Die Schallgeschwindigkeit beträgt 340 m/s oder 29 Mikrosekunden pro Zentimeter.
 
-    This gives the distance travelled by the ping, outbound and return, so we divide by 2 to get the distance of the obstacle.
+    Dies gibt die vom Ping zurückgelegte Strecke, hin und zurück, an, daher teilen wir durch 2, um die Entfernung des Hindernisses zu erhalten.
 
     .. code-block:: arduino
 

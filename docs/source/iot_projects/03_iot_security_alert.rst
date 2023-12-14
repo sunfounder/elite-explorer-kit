@@ -1,44 +1,44 @@
 .. _iot_security_system_ifttt:
 
-Security System via IFTTT
+Sicherheitssystem über IFTTT
 ============================================
 
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
-      <source src="../_static/videos/iot_projects/03_iot_security_alert.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      <source src="../_static/videos/iot_projects/03_iot_security_alert.mp4" type="video/mp4">
+      Ihr Browser unterstützt das Video-Tag nicht.
    </video>
 
-With this project, we create a security device that employs a PIR Sensor to detect intruders or stray animals entering your home. In case of a breach, you will receive an email alert.
+Mit diesem Projekt erstellen wir ein Sicherheitsgerät, das einen PIR-Sensor verwendet, um Eindringlinge oder streunende Tiere, die Ihr Zuhause betreten, zu erkennen. Im Falle eines Einbruchs erhalten Sie eine E-Mail-Benachrichtigung.
 
-We'll utilize Webhooks as the fundamental service. A POST request is sent to IFTTT's service from UNO R4. 
+Wir nutzen Webhooks als grundlegenden Dienst. Eine POST-Anfrage wird von UNO R4 an den IFTTT-Dienst gesendet.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Kit zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch separat über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -47,97 +47,97 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_pir`
         - |link_pir_buy|
 
-**Wiring**
+**Verdrahtung**
 
 .. image:: img/03-ifttt_pir_bb.png
     :width: 90%
     :align: center
 
 
-**Schematic**
+**Schaltplan**
 
 .. image:: img/03-ifttt_pir_schematic.png
    :width: 50%
    :align: center
 
-**Setting up IFTTT**
+**IFTTT einrichten**
 
-IFTTT is a free service that offers various methods to link different data services together.
+IFTTT ist ein kostenloser Dienst, der verschiedene Methoden bietet, um verschiedene Datendienste miteinander zu verknüpfen.
 
-Let's create an Applet that responds to a webhook (custom URL) sending data to IFTTT, which will then send you an email.
+Erstellen wir ein Applet, das auf einen Webhook (benutzerdefinierte URL) reagiert, der Daten an IFTTT sendet, welcher Ihnen dann eine E-Mail sendet.
 
-Please follow the steps below on IFTTT.
+Bitte folgen Sie den untenstehenden Schritten auf IFTTT.
 
-1. Visit |link_ifttt| to log in or create an account.
+1. Besuchen Sie |link_ifttt|, um sich anzumelden oder ein Konto zu erstellen.
 
    .. image:: img/03_ifttt_1.png
        :width: 90%
 
-2. Click on **Create**.
+2. Klicken Sie auf **Create**.
 
    .. image:: img/03_ifttt_2.png
        :width: 90%
 
-3. Add an **If This** event.
+3. Fügen Sie ein **If This** Ereignis hinzu.
 
    .. image:: img/03_ifttt_3.png
        :width: 70%
 
-4. Search for **Webhooks**.
+4. Suchen Sie nach **Webhooks**.
 
    .. image:: img/03_ifttt_4.png
        :width: 70%
 
-5. Select **Receive a web request**.
+5. Wählen Sie **Receive a web request**.
 
    .. image:: img/03_ifttt_5.png
        :width: 90%
 
-6. Fill in the event name (e.g., SecurityWarning), and click **Create trigger**.
+6. Geben Sie den Ereignisnamen ein (z. B. SecurityWarning) und klicken Sie auf **Create trigger**.
 
    .. image:: img/03_ifttt_6.png
        :width: 70%
 
-7. Add a **Then That** event.
+7. Fügen Sie ein **Then That** Ereignis hinzu.
 
    .. image:: img/03_ifttt_7.png
        :width: 70%
 
-8. Search for Email.
+8. Suchen Sie nach E-Mail.
 
    .. image:: img/03_ifttt_8.png
        :width: 80%
 
-9. Choose **Send me an email**.
+9. Wählen Sie **Send me an email**.
 
    .. image:: img/03_ifttt_9.png
        :width: 80%
 
-10. Enter the **Subject** and **Body**, then click **Create action**.
+10. Geben Sie den **Subject** und den **Body** ein, dann klicken Sie auf **Create action**.
 
    .. image:: img/03_ifttt_10.png
        :width: 70%
 
-11. Click **Continue** to finish the setup.
+11. Klicken Sie auf **Continue** um die Einrichtung abzuschließen.
 
    .. image:: img/03_ifttt_11.png
        :width: 70%
 
-12. Adjust the title name as needed.
+12. Passen Sie nach Bedarf den Titelnamen an.
 
    .. image:: img/03_ifttt_12.png
        :width: 80%
 
-13. You'll be automatically redirected to the Applet details page, where you can see that the Applet is currently connected and you can toggle the switch to enable/disable it.
+13. Sie werden automatisch zur Seite mit den Applet-Details weitergeleitet, wo Sie sehen können, dass das Applet derzeit verbunden ist und Sie den Schalter zum Aktivieren/Deaktivieren umlegen können.
 
    .. image:: img/03_ifttt_13.png
        :width: 70%
 
-14. Now that we've created the IFTTT Applet, we also need the webhooks key, which can be obtained from |link_webhooks| to allow your device to access IFTTT.
+14. Nachdem wir das IFTTT-Applet erstellt haben, benötigen wir auch den Webhooks-Schlüssel, den Sie von |link_webhooks| erhalten können, damit Ihr Gerät auf IFTTT zugreifen kann.
 
    .. image:: img/03_ifttt_14.png
 
-15. Copy the webhooks key to "arduino_secrets.h" and fill in your SSID and password.
+15. Kopieren Sie den Webhooks-Schlüssel in „arduino_secrets.h“ und tragen Sie Ihr SSID und Passwort ein.
 
     .. code-block:: arduino
     
@@ -145,67 +145,68 @@ Please follow the steps below on IFTTT.
         #define SECRET_PASS "your_password"        // your network password (used for WPA, or as a key for WEP)
         #define WEBHOOKS_KEY "your_key"
 
-**Run the Code**
+**Den Code ausführen**
 
 .. note::
 
-    * You can open the file ``03_ifttt_pir.ino`` under the path of ``elite-explorer-kit-main\iot_project\03_ifttt_pir`` directly.
-    * Or copy this code into Arduino IDE.
+    * Sie können die Datei ``03_ifttt_pir.ino`` direkt im Pfad ``elite-explorer-kit-main\iot_project\03_ifttt_pir`` öffnen.
+    * Oder kopieren Sie diesen Code in die Arduino IDE.
 
 .. note::
-    In the code, SSID and password are stored in ``arduino_secrets.h``. Before uploading this example, you need to modify them with your own WiFi credentials. Additionally, for security purposes, ensure that this information is kept confidential when sharing or storing the code.
+    Im Code werden SSID und Passwort in ``arduino_secrets.h`` gespeichert. Bevor Sie dieses Beispiel hochladen, müssen Sie sie mit Ihren eigenen WLAN-Anmeldeinformationen ändern. Außerdem sollten Sie aus Sicherheitsgründen diese Informationen vertraulich halten, wenn Sie den Code teilen oder speichern.
 
 .. warning::
-   To prevent your mailbox from being flooded, please debug the :ref:`cpn_pir` beforehand before running the code for this project.
+   Um zu verhindern, dass Ihr Postfach überflutet wird, debuggen Sie bitte den :ref:`cpn_pir` vorher, bevor Sie den Code für dieses Projekt ausführen.
+
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/adec1608-4642-4469-bdf4-8dc3e3e4ce4d/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
  
-**How it works?**
+**Wie funktioniert des?**
 
-1. Include the necessary libraries and header files:
+1. Einbinden der erforderlichen Bibliotheken und Header-Dateien:
 
-   * ``"WiFiS3.h"``: Used for managing Wi-Fi connections.
-   * ``"arduino_secrets.h"``: Contains Wi-Fi network name and password to safeguard sensitive information.
+   * ``"WiFiS3.h"``: Wird verwendet, um Wi-Fi-Verbindungen zu verwalten.
+   * ``"arduino_secrets.h"``: Enthält den Namen und das Passwort des Wi-Fi-Netzwerks, um sensible Informationen zu schützen.
 
-2. Define some global variables and constants:
+2. Definition einiger globaler Variablen und Konstanten:
 
-   * ``ssid``: Name of the Wi-Fi network.
-   * ``pass``: Wi-Fi network password.
-   * ``status``: Status of the Wi-Fi connection.
-   * ``client``: Client used for communicating with the Wi-Fi server.
-   * ``server``: Address of the IFTTT Webhook server.
-   * ``event``: Name of the IFTTT Webhook event.
-   * ``webRequestURL``: Constructed URL for sending HTTP requests, including the Webhook event name and key.
-   * ``pirPin``: Digital pin to which the PIR sensor is connected.
-   * ``motionDetected``: Flag variable to track motion detection.
+   * ``ssid``: Name des Wi-Fi-Netzwerks.
+   * ``pass``: Wi-Fi-Netzwerkpasswort.
+   * ``status``: Status der Wi-Fi-Verbindung.
+   * ``client``: Client zur Kommunikation mit dem Wi-Fi-Server.
+   * ``server``: Adresse des IFTTT Webhook-Servers.
+   * ``event``: Name des IFTTT Webhook-Ereignisses.
+   * ``webRequestURL``: Konstruierte URL für das Senden von HTTP-Anfragen, einschließlich des Webhook-Ereignisnamens und -schlüssels.
+   * ``pirPin``: Digitaler Pin, an den der PIR-Sensor angeschlossen ist.
+   * ``motionDetected``: Flag-Variable zur Verfolgung der Bewegungserkennung.
 
-3. ``setup()`` function:
+3. ``setup()`` Funktion:
 
-   * Initializes serial communication.
-   * Checks for the presence of the Wi-Fi module and outputs its firmware version.
-   * Attempts to connect to the Wi-Fi network, with retries if unsuccessful.
-   * Sets the pin connected to the PIR sensor to input mode.
+   * Initialisiert die serielle Kommunikation.
+   * Überprüft das Vorhandensein des Wi-Fi-Moduls und gibt dessen Firmware-Version aus.
+   * Versucht, eine Verbindung zum Wi-Fi-Netzwerk herzustellen, mit Wiederholungen bei Misserfolg.
+   * Setzt den an den PIR-Sensor angeschlossenen Pin auf Eingabemodus.
 
-4. ``readResponse()`` function:
+4. ``readResponse()`` Funktion:
 
-   * Reads HTTP response data from the IFTTT server and prints it to the serial console.
+   * Liest HTTP-Antwortdaten vom IFTTT-Server und gibt sie auf der seriellen Konsole aus.
 
-5. ``loop()`` function:
+5. ``loop()`` Funktion:
 
-   * Calls the ``readResponse()`` function to read HTTP response data.
-   * Checks for motion using the PIR sensor. If motion is detected and was not detected previously:
-       * Prints "Motion detected!" to the console.
-       * Calls the ``triggerIFTTTEvent()`` function to send an HTTP request to the IFTTT server, triggering the Webhook event.
-       * Sets the ``motionDetected`` flag to ``true`` to indicate motion has been detected.
-   * If no motion is detected, sets the ``motionDetected`` flag to ``false``.
+   * Ruft die Funktion ``readResponse()`` auf, um HTTP-Antwortdaten zu lesen.
+   * Überprüft die Bewegung mithilfe des PIR-Sensors. Wenn eine Bewegung erkannt wird und zuvor nicht erkannt wurde:
+       * Gibt „Motion detected!“ auf der Konsole aus.
+       * Ruft die Funktion ``triggerIFTTTEvent()`` auf, um eine HTTP-Anfrage an den IFTTT-Server zu senden und das Webhook-Ereignis auszulösen.
+       * Setzt das Flag ``motionDetected`` auf ``true``, um anzuzeigen, dass eine Bewegung erkannt wurde.
+   * Wenn keine Bewegung erkannt wird, setzt das Flag ``motionDetected`` auf ``false``.
 
-6. ``triggerIFTTTEvent()`` function:
+6. ``triggerIFTTTEvent()`` Funktion:
 
-   * Establishes a connection with the IFTTT server.
-   * Sends an HTTP GET request, including the URL of the Webhook event and other HTTP headers.
+   * Stellt eine Verbindung mit dem IFTTT-Server her.
+   * Sendet eine HTTP-GET-Anfrage, einschließlich der URL des Webhook-Ereignisses und anderer HTTP-Header.
 
-7. ``printWifiStatus()`` function:
+7. ``printWifiStatus()`` Funktion:
 
-   * Outputs information about the connected Wi-Fi network, including SSID, IP address, and signal strength (RSSI) to the serial console.
+   * Gibt Informationen über das verbundene Wi-Fi-Netzwerk aus, einschließlich SSID, IP-Adresse und Signalstärke (RSSI) auf der seriellen Konsole.

@@ -1,7 +1,7 @@
 .. _basic_projects:
 
-Basic Projects
-====================
+Grundlegende Projekte
+========================
 
 **Sensor**
 
@@ -19,7 +19,7 @@ Basic Projects
     09_basic_gy87
 
 
-**Display**
+**Anzeige**
 
 .. toctree::
     :maxdepth: 1
@@ -32,7 +32,7 @@ Basic Projects
     15_basic_oled
 
 
-**Sound**
+**Ton**
 
 .. toctree::
     :maxdepth: 1
@@ -42,7 +42,7 @@ Basic Projects
     17_basic_audio_speaker
 
 
-**Controller**
+**Steuerung**
 
 .. toctree::
     :maxdepth: 1
@@ -55,7 +55,7 @@ Basic Projects
     23_basic_mpr121_module
 
 
-**Actuator**
+**Aktuator**
 
 .. toctree::
     :maxdepth: 1

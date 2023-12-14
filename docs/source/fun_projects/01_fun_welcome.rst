@@ -1,43 +1,43 @@
 .. _fun_welcome:
 
-Welcome
+Willkommen
 ========================
 
 .. raw:: html
 
    <video loop controls style = "max-width:100%">
       <source src="../_static/videos/fun_projects/01_fun_welcome.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      Ihr Browser unterstützt das Video-Tag nicht.
    </video>
 
-In this project, we will use a PIR sensor to detect human presence and a speaker to simulate a doorbell, similar to the entrance doorbells in convenience stores.
-When a pedestrian appears within the range of the PIR sensor, the speaker will ring, mimicking a doorbell.
+In diesem Projekt verwenden wir einen PIR-Sensor, um menschliche Anwesenheit zu erkennen, und einen Lautsprecher, um eine Türklingel zu simulieren, ähnlich den Eingangstürklingeln in Convenience-Stores.
+Wenn ein Fußgänger in den Bereich des PIR-Sensors kommt, wird der Lautsprecher klingeln und damit eine Türklingel nachahmen.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Kit zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -53,7 +53,7 @@ You can also buy them separately from the links below.
         - \-
 
 
-**Wiring**
+**Verdrahtung**
 
 .. image:: img/01_welcome_bb.png
     :width: 90%
@@ -63,7 +63,7 @@ You can also buy them separately from the links below.
 
    <br/>
 
-**Schematic**
+**Schaltplan**
 
 .. image:: img/01_welcome_schematic.png
    :width: 100%
@@ -72,8 +72,8 @@ You can also buy them separately from the links below.
 
 .. note::
 
-    * You can open the file ``01_welcome.ino`` under the path of ``elite-explorer-kit-main\fun_project\01_welcome`` directly.
-    * Or copy this code into Arduino IDE.
+    * Sie können die Datei ``01_welcome.ino`` direkt unter dem Pfad ``elite-explorer-kit-main\fun_project\01_welcome`` öffnen.
+    * Oder kopieren Sie diesen Code in die Arduino IDE.
 
 .. raw:: html
 
@@ -81,39 +81,40 @@ You can also buy them separately from the links below.
 
 
 
-**How it works?**
+**Wie funktioniert das?**
 
-Here is a step-by-step explanation of the code:
+Hier ist eine schrittweise Erklärung des Codes:
 
-1. Include Header Files:
+1. Headerdateien einbinden:
 
-   Include two header files, ``analogWave.h`` and ``pitches.h``. The ``analogWave.h`` file contains the definition of the ``analogWave`` class, while ``pitches.h`` contains the definitions of musical notes.
+   Zwei Headerdateien, ``analogWave.h`` und ``pitches.h``, einbinden. Die Datei ``analogWave.h`` enthält die Definition der Klasse ``analogWave``, während ``pitches.h`` die Definitionen musikalischer Noten enthält.
 
-2. Instantiate Objects and Define Constants:
+2. Objekte instanziieren und Konstanten definieren:
 
-   Create a ``wave`` object using the ``analogWave`` class and define ``PIR_PIN`` as 2, which is the pin connected to the PIR sensor.
+   Erstellen Sie ein ``wave``-Objekt mit der Klasse ``analogWave`` und definieren Sie ``PIR_PIN`` als 2, welcher der an den PIR-Sensor angeschlossene Pin ist.
 
-3. Melody Array:
+3. Melodie-Array:
 
-   The ``melody`` array defines a musical melody, with each note followed by a number representing its duration. 
-   Negative numbers represent dotted notes (increasing the duration by 50%).
+   Das ``melody``-Array definiert eine musikalische Melodie, wobei jeder Note eine Zahl folgt, die ihre Dauer repräsentiert.
+   Negative Zahlen stellen punktierte Noten dar (die Dauer um 50% erhöhen).
 
-4. Global Variables:
+4. Globale Variablen:
 
-   Define some global variables for sharing data between functions.
+   Definieren Sie einige globale Variablen, um Daten zwischen Funktionen zu teilen.
 
 5. ``setup()``:
 
-   Initialize ``PIR_PIN`` as an input and set the frequency of the sine wave to 10 Hz using ``wave.sine(10)``.
+   Initialisieren Sie ``PIR_PIN`` als Eingang und stellen Sie die Frequenz der Sinuswelle auf 10 Hz mit ``wave.sine(10)`` ein.
 
 6. ``loop()``:
 
-   Continuously monitor the value of the PIR sensor.
-   If human presence is detected (pirValue is HIGH), call the ``playMelody()`` function to play the melody and wait for 10 seconds to prevent repetitive playback of the melody.
+   Überwachen Sie kontinuierlich den Wert des PIR-Sensors.
+   Wenn eine menschliche Anwesenheit erkannt wird (pirValue ist HIGH), rufen Sie die Funktion ``playMelody()`` auf, um die Melodie zu spielen, und warten Sie 10 Sekunden, um das wiederholte Abspielen der Melodie zu verhindern.
 
 7. ``playMelody()``:
 
-   This function calculates the duration of each note based on the data in the ``melody`` array and plays the corresponding note. There is a brief pause between notes.
-   The function sets the frequency of the waveform using ``wave.freq()`` and controls the duration of the notes and pauses between notes using the ``delay()`` function.
+   Diese Funktion berechnet die Dauer jeder Note basierend auf den Daten im ``melody``-Array und spielt die entsprechende Note. Zwischen den Noten gibt es eine kurze Pause.
+   Die Funktion setzt die Frequenz der Wellenform mit ``wave.freq()`` und steuert die Dauer der Noten und Pausen zwischen den Noten mit der Funktion ``delay()``.
 
-   Note: Ensure that the ``pitches.h`` header file indeed exists before running this code.
+   Hinweis: Stellen Sie sicher, dass die Headerdatei ``pitches.h`` tatsächlich existiert, bevor Sie diesen Code ausführen.
+

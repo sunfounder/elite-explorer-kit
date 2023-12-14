@@ -1,44 +1,44 @@
 .. _fun_smart_can:
 
-Smart Can
+Smarter Mülleimer
 =====================
 
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/videos/fun_projects/07_fun_smartcan.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      Ihr Browser unterstützt das Video-Tag nicht.
    </video>
 
-This is an Arduino code designed to control a smart garbage can. 
-When an object is within a 20-centimeter range in front of the garbage can, its lid automatically opens. 
-This project utilizes an SG90 servo motor and an HC-SR04 ultrasonic distance sensor.
+Dies ist ein Arduino-Code, der entwickelt wurde, um einen intelligenten Mülleimer zu steuern.
+Wenn sich ein Objekt in einem Bereich von 20 Zentimetern vor dem Mülleimer befindet, öffnet sich der Deckel automatisch.
+Dieses Projekt nutzt einen SG90-Servomotor und einen HC-SR04-Ultraschall-Entfernungssensor.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Kit zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENVORSTELLUNG
+        - KAUF-LINK
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -51,14 +51,14 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_servo`
         - |link_servo_buy|
 
-**Wiring**
+**Verdrahtung**
 
 .. image:: img/07_smart_trash_can_bb.png
     :width: 70%
     :align: center
 
 
-**Schematic**
+**Schaltplan**
 
 .. image:: img/07_smart_trash_can_schematic.png
    :width: 90%
@@ -68,38 +68,39 @@ You can also buy them separately from the links below.
 
 .. note::
 
-    * You can open the file ``07_smart_trash_can.ino`` under the path of ``elite-explorer-kit-main\fun_project\07_smart_trash_can`` directly.
-    * Or copy this code into Arduino IDE.
+    * Sie können die Datei ``07_smart_trash_can.ino`` direkt unter dem Pfad ``elite-explorer-kit-main\fun_project\07_smart_trash_can`` öffnen.
+    * Oder kopieren Sie diesen Code in die Arduino IDE.
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/509f1bee-6e38-4106-bea7-9b06cdb3719f/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-**How it works?**
+**Wie funktioniert des?**
 
-Here is a step-by-step explanation of the code:
+Hier ist eine schrittweise Erklärung des Codes:
 
-1. Import Libraries and Define Constants/Variables:
+1. Bibliotheken importieren und Konstanten/Variablen definieren:
 
-   The ``Servo.h`` library is imported for controlling the SG90 servo motor.
-   Parameters for the servo motor, ultrasonic sensor, and other required constants and variables are defined.
+   Die Bibliothek ``Servo.h`` wird importiert, um den SG90-Servomotor zu steuern.
+   Parameter für den Servomotor, Ultraschallsensor und andere erforderliche Konstanten und Variablen werden definiert.
 
 2. ``setup()``:
 
-   Initialize serial communication with the computer at a baud rate of 9600.
-   Configure the trigger and echo pins of the ultrasonic sensor.
-   Attach the servo motor to its control pin and set its initial position to the closed angle. After setting the angle, the servo motor is detached to save power.
+   Initialisieren Sie die serielle Kommunikation mit dem Computer mit einer Baudrate von 9600.
+   Konfigurieren Sie die Trigger- und Echopins des Ultraschallsensors.
+   Befestigen Sie den Servomotor an seinem Steuerpin und setzen Sie seine Anfangsposition auf den geschlossenen Winkel. Nachdem der Winkel eingestellt wurde, wird der Servomotor abgetrennt, um Energie zu sparen.
 
 3. ``loop()``:
 
-   Measure distance three times and store the values of each measurement.
-   Calculate the average distance from the three measurements.
-   If the average distance is less than or equal to 20 centimeters (defined distance threshold), the servo motor rotates to the open angle (0 degrees). 
-   Otherwise, the servo motor returns to the closed position (90 degrees) after a one-second delay. The servo motor is detached when not in use to conserve power.
+   Messen Sie die Entfernung dreimal und speichern Sie die Werte jeder Messung.
+   Berechnen Sie die durchschnittliche Entfernung aus den drei Messungen.
+   Wenn die durchschnittliche Entfernung weniger als oder gleich 20 Zentimetern (definierter Abstandsschwellenwert) beträgt, dreht sich der Servomotor auf den offenen Winkel (0 Grad).
+   Andernfalls kehrt der Servomotor nach einer einsekündigen Verzögerung in die geschlossene Position (90 Grad) zurück. Der Servomotor wird abgetrennt, wenn er nicht verwendet wird, um Energie zu sparen.
 
 4. ``readDistance()``:
 
-   Send a pulse to the trigger pin of the ultrasonic sensor.
-   Measure the pulse width of the echo pin and calculate the distance value. 
-   This calculation uses the speed of sound in the air to compute distance based on pulse time.
+   Senden Sie einen Impuls an den Triggerpin des Ultraschallsensors.
+   Messen Sie die Impulsbreite des Echopins und berechnen Sie den Entfernungswert.
+   Diese Berechnung verwendet die Schallgeschwindigkeit in der Luft, um die Entfernung basierend auf der Pulsdauer zu berechnen.
+

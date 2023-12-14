@@ -1,41 +1,41 @@
 .. _basic_photoresistor:
 
-Photoresistor
+Fotowiderstand
 ==========================
 
 .. https://docs.sunfounder.com/projects/vincent-kit/en/latest/arduino/2.26_photoresistor.html
 
-Overview
+Übersicht
 ---------------
 
-In this lesson, you will learn about Photoresistor. Photoresistor is applied in many electronic goods, such as the camera meter, clock radio, alarm device (as beam detector), small night lights, outdoor clock, solar street lamps and etc. Photoresistor is placed in a street lamp to control when the light is turned on. Ambient light falling on the photoresistor causes street lamps to turn on or off.
+In dieser Lektion lernen Sie den Fotowiderstand kennen. Fotowiderstände finden in vielen elektronischen Geräten Anwendung, wie zum Beispiel in Belichtungsmessern von Kameras, Radioweckern, Alarmanlagen (als Strahlendetektoren), kleinen Nachtlichtern, Außenuhren, Straßenlaternen mit Solarenergie und mehr. Ein Fotowiderstand in einer Straßenlampe steuert das Ein- und Ausschalten des Lichts. Umgebungslicht, das auf den Fotowiderstand fällt, bewirkt, dass Straßenlampen ein- oder ausgeschaltet werden.
 
-Required Components
+Benötigte Komponenten
 -------------------------
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Kit zu kaufen. Hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Sie können die Komponenten auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -48,16 +48,16 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_photoresistor`
         - |link_photoresistor_buy|
 
-Wiring
+Verdrahtung
 ----------------------
 
-In this example, we use analog pin ( A0 ) to read the value of photoresistor. One pin of photoresistor is connected to 5V, the other is wired up to A0. Besides, a 10kΩ resistor is needed before the other pin is connected to GND.
+In diesem Beispiel verwenden wir den analogen Pin (A0), um den Wert des Fotowiderstands zu lesen. Ein Pin des Fotowiderstands wird mit 5V verbunden, der andere mit A0. Außerdem wird ein 10kΩ Widerstand benötigt, bevor der andere Pin mit GND verbunden wird.
 
 .. image:: img/01-photoresistor_bb.png
     :align: center
     :width: 80%
 
-Schematic Diagram
+Schaltplan
 -----------------------
 
 .. image:: img/01_photoresistor_schematic.png
@@ -69,8 +69,8 @@ Code
 
 .. note::
 
-    * You can open the file ``01-photoresistor`` under the path of ``elite-explorer-kit-main\basic_project\01-photoresistor`` directly.
-    * Or copy this code into Arduino IDE.
+    * Sie können die Datei ``01-fotowiderstand`` direkt im Pfad ``elite-explorer-kit-main\basic_project\01-fotowiderstand`` öffnen.
+    * Oder kopieren Sie diesen Code in die Arduino IDE.
 
 
 
@@ -79,4 +79,4 @@ Code
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/e6bf007e-b20d-44d0-9ef9-6d57c1ce4c3c/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After uploading the codes to the uno board, you can open the serial monitor to see the read value of the pin. When the ambient light becomes stronger, the reading will increase correspondingly, and the pin reading range is 「0」~「1023」.  However, according to the environmental conditions and the characteristics of the photoresistor, the actual reading range may be smaller than the theoretical range. 
+Nachdem Sie den Code auf das Uno-Board hochgeladen haben, können Sie den seriellen Monitor öffnen, um den ausgelesenen Wert des Pins zu sehen. Wenn das Umgebungslicht stärker wird, steigt auch der Messwert entsprechend an, und der Lesebereich des Pins liegt zwischen 「0」 und 「1023」. Jedoch kann der tatsächliche Lesebereich aufgrund der Umgebungsbedingungen und der Eigenschaften des Fotowiderstands kleiner sein als der theoretische Bereich.

@@ -1,24 +1,22 @@
 .. _cpn_dht11:
 
-Humiture Sensor Module
+Feuchtigkeitssensor-Modul
 =============================
 
-The digital temperature and humidity sensor DHT11 is a composite sensor that contains a calibrated digital signal output of temperature and humidity. 
-The technology of a dedicated digital modules collection and the temperature and humidity sensing technology are applied to ensure that the product has high reliability and excellent long-term stability.
+Der digitale Temperatur- und Feuchtigkeitssensor DHT11 ist ein Verbundsensor, der einen kalibrierten digitalen Signalausgang für Temperatur und Feuchtigkeit enthält.
+Die Technologie von speziellen digitalen Modulsammlungen und die Temperatur- und Feuchtigkeitserfassungstechnologie werden angewandt, um sicherzustellen, dass das Produkt eine hohe Zuverlässigkeit und ausgezeichnete Langzeitstabilität aufweist.
 
-
-Only three pins are available for use: VCC, GND, and DATA. 
-The communication process begins with the DATA line sending start signals to DHT11, and DHT11 receives the signals and returns an answer signal. 
-Then the host receives the answer signal and begins to receive 40-bit humiture data (8-bit humidity integer + 8-bit humidity decimal + 8-bit temperature integer + 8-bit temperature decimal + 8-bit checksum).
+Nur drei Pins stehen zur Verwendung bereit: VCC, GND und DATA.
+Der Kommunikationsprozess beginnt damit, dass die DATA-Leitung Startsignale an DHT11 sendet, und DHT11 empfängt die Signale und gibt ein Antwortsignal zurück.
+Dann empfängt der Host das Antwortsignal und beginnt, 40-Bit-Feuchtigkeitsdaten zu empfangen (8-Bit-Feuchtigkeit ganz + 8-Bit-Feuchtigkeit Dezimal + 8-Bit-Temperatur ganz + 8-Bit-Temperatur Dezimal + 8-Bit-Prüfsumme).
 
 .. image:: img/Dht11.png
 
-
 * |link_dht11_datasheet|
 
-**Example**
+**Beispiel**
 
-* :ref:`basic_humiture_sensor` (Basic Project)
-* :ref:`fun_plant_monitor` (Fun Project)
-* :ref:`iot_arduino_cloud` (IoT Project)
-* :ref:`iot_ble_home` (IoT Project)
+* :ref:`basic_humiture_sensor` (Grundprojekt)
+* :ref:`fun_plant_monitor` (Spaßprojekt)
+* :ref:`iot_arduino_cloud` (IoT-Projekt)
+* :ref:`iot_ble_home` (IoT-Projekt)

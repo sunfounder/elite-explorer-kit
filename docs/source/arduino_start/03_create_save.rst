@@ -1,15 +1,13 @@
-How to create, open or Save the Sketch?
-=======================================
+Wie man einen Sketch erstellt, öffnet oder speichert?
+===========================================================
 
-
-#. When you open the Arduino IDE for the first time or create a new sketch, you will see a page like this, where the Arduino IDE creates a new file for you, which is called a "sketch".
+#. Wenn Sie die Arduino IDE zum ersten Mal öffnen oder einen neuen Sketch erstellen, sehen Sie eine Seite wie diese, auf der die Arduino IDE eine neue Datei für Sie erstellt, die als „Sketch“ bezeichnet wird.
 
    .. image:: img/sp221014_173458.png
 
-   These sketch files have a regular temporary name, from which you can tell the date the file was created. ``sketch_oct14a.ino`` means October 14th first sketch, ``.ino`` is the file format of this sketch.
+   Diese Sketch-Dateien haben einen regulären temporären Namen, an dem Sie das Erstellungsdatum der Datei erkennen können. ``sketch_oct14a.ino`` bedeutet erster Sketch am 14. Oktober, ``.ino`` ist das Dateiformat dieses Sketches.
 
-#. Now let's try to create a new sketch. Copy the following code into the Arduino IDE to replace the original code.
-
+#. Jetzt versuchen wir, einen neuen Sketch zu erstellen. Kopieren Sie den folgenden Code in die Arduino IDE, um den ursprünglichen Code zu ersetzen.
 
    .. image:: img/create1.png
 
@@ -28,12 +26,12 @@ How to create, open or Save the Sketch?
            delay(500);
        }
 
-#. Press ``Ctrl+S`` or click **File** -> **Save**. The Sketch is saved in: ``C:\Users\{your_user}\Documents\Arduino`` by default, you can rename it or find a new path to save it.
+#. Drücken Sie ``Ctrl+S`` oder klicken Sie auf **File** -> **Save**. Der Sketch wird standardmäßig unter ``C:\Users\{your_user}\Documents\Arduino`` gespeichert. Sie können ihn umbenennen oder einen neuen Pfad zum Speichern auswählen.
 
    .. image:: img/create2.png
 
-#. After successful saving, you will see that the name in the Arduino IDE has been updated.
+#. Nach erfolgreichem Speichern sehen Sie, dass der Name in der Arduino IDE aktualisiert wurde.
 
    .. image:: img/create3.png
 
-Please continue with the next section to learn how to upload this created sketch to your Arduino board.
+Bitte fahren Sie mit dem nächsten Abschnitt fort, um zu lernen, wie Sie diesen erstellten Sketch auf Ihr Arduino-Board hochladen.

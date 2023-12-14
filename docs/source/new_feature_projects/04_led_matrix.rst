@@ -1,25 +1,25 @@
 .. _new_led_matrix:
 
-12x8 LED Matrix
+12x8 LED-Matrix
 ========================================
 
-The Arduino UNO R4 WiFi comes with an integrated 12x8 LED Matrix that can be programmed to display a variety of graphics, animations, act as an interface, or even facilitate gaming experiences.
+Das Arduino UNO R4 WiFi ist mit einer integrierten 12x8 LED-Matrix ausgestattet, die so programmiert werden kann, dass sie eine Vielzahl von Grafiken, Animationen darstellt, als Schnittstelle dient oder sogar Spielerlebnisse ermöglicht.
 
 .. image:: img/unor4wifi.webp
     :width: 60%
 
-In this guide, we provide a straightforward example to help you display your desired pattern on the LED Matrix.
+In diesem Leitfaden bieten wir ein einfaches Beispiel, um Ihnen zu helfen, Ihr gewünschtes Muster auf der LED-Matrix anzuzeigen.
 
-How to store LED matrix data in Arduino
------------------------------------------
+Speicherung von LED-Matrix-Daten in Arduino
+-----------------------------------------------
 
-To utilize the LED matrix, you'll need the ``Arduino_LED_Matrix`` library, which is installed along with the Renesas core.
+Um die LED-Matrix zu nutzen, benötigen Sie die Bibliothek ``Arduino_LED_Matrix``, die zusammen mit dem Renesas-Kern installiert wird.
 
-The LED Matrix library for the UNO R4 WiFi operates by creating and loading frames into a buffer to display them. A frame, also known as an "image," represents what is currently shown on the matrix. In an animation consisting of multiple images, each image is considered a frame.
+Die LED-Matrix-Bibliothek für das UNO R4 WiFi funktioniert, indem sie Frames in einen Puffer erstellt und lädt, um sie anzuzeigen. Ein Frame, auch bekannt als „Bild“, stellt dar, was aktuell auf der Matrix angezeigt wird. In einer Animation, die aus mehreren Bildern besteht, wird jedes Bild als Frame betrachtet.
 
-To control the 12x8 LED matrix on the UNO R4 WiFi, a minimum of 96 bits of memory space is required. The library offers two approaches for this.
+Um die 12x8 LED-Matrix auf dem UNO R4 WiFi zu steuern, werden mindestens 96 Bit Speicherplatz benötigt. Die Bibliothek bietet dafür zwei Ansätze.
 
-**One approach uses a two-dimensional array**, with zeros and ones to represent whether the corresponding LED is off or on.  Each number corresponds to an LED on the LED matrix. The following array illustrates a heart-shaped pattern.
+**Ein Ansatz verwendet ein zweidimensionales Array**, mit Nullen und Einsen, um darzustellen, ob die entsprechende LED aus oder an ist. Jede Zahl entspricht einer LED auf der LED-Matrix. Das folgende Array veranschaulicht ein herzförmiges Muster.
 
 .. code-block:: arduino
    
@@ -35,12 +35,12 @@ To control the 12x8 LED matrix on the UNO R4 WiFi, a minimum of 96 bits of memor
      { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }
    };
 
-**Another approach employs an array of 32-bit integers** to maintain the LED matrix status. This method is more compact but slightly more complex. Each ``unsigned long`` stores 32 bits. Hence, for a 12x8 LED matrix, which contains 96 LEDs, you'll need at least three ``unsigned long`` variables.
+**Ein anderer Ansatz verwendet ein Array aus 32-Bit-Ganzzahlen**, um den Status der LED-Matrix zu verwalten. Diese Methode ist kompakter, aber etwas komplexer. Jedes ``unsigned long`` speichert 32 Bit. Daher benötigen Sie für eine 12x8 LED-Matrix, die 96 LEDs enthält, mindestens drei ``unsigned long`` Variablen.
 
-1. Each ``unsigned long`` contains 32 bits, and you can think of these bits as the state of a certain part in an LED matrix.
-2. These ``unsigned long`` variables form an array that encapsulates the complete LED matrix state.
+1. Jedes ``unsigned long`` enthält 32 Bits, und Sie können diese Bits als den Zustand eines bestimmten Teils in einer LED-Matrix betrachten.
+2. Diese ``unsigned long`` Variablen bilden ein Array, das den gesamten Zustand der LED-Matrix umfasst.
 
-Here's a code snippet using three `unsigned long` variables to represent a 12x8 LED matrix.
+Hier ist ein Code-Snippet, das drei ``unsigned long`` Variablen verwendet, um eine 12x8 LED-Matrix darzustellen.
 
 .. code-block:: arduino
 
@@ -51,7 +51,7 @@ Here's a code snippet using three `unsigned long` variables to represent a 12x8 
      0xa0040000  // State of the last 32 LEDs
    };
 
-To better visualize the LED statuses, these values can be converted to binary form, where each bit sequentially represents each LED state from left to right and top to bottom. A 0 indicates off, and a 1 indicates on.
+Um die LED-Zustände besser zu visualisieren, können diese Werte in eine Binärform umgewandelt werden, wobei jedes Bit sequenziell den Zustand jeder LED von links nach rechts und von oben nach unten darstellt. Eine 0 zeigt an, dass sie aus ist, und eine 1, dass sie an ist.
 
 .. code-block:: arduino
 
@@ -59,14 +59,14 @@ To better visualize the LED statuses, these values can be converted to binary fo
    0x42081100 -> 1000010000010000001000100000000
    0xa0040000 -> 10100000000001000000000000000000
 
-Display pattern on LED matrix
+Anzeigemuster auf der LED-Matrix
 -----------------------------------------
 
-Once your pattern is ready, the next step is to transmit this data to the 12x8 LED Matrix. This usually involves invoking library functions and passing the array or variables containing the LED states to these functions.
+Sobald Ihr Muster fertig ist, besteht der nächste Schritt darin, diese Daten auf die 12x8 LED-Matrix zu übertragen. Dies beinhaltet normalerweise das Aufrufen von Bibliotheksfunktionen und das Übergeben des Arrays oder der Variablen, die die LED-Zustände enthalten, an diese Funktionen.
 
-1. Using a two-dimensional Array
+1. Verwendung eines zweidimensionalen Arrays
 
-   To display the pattern stored in a 2D array, you can use the following code:
+   Um das Muster, das in einem 2D-Array gespeichert ist, anzuzeigen, können Sie den folgenden Code verwenden:
    
    .. code-block:: arduino
    
@@ -97,11 +97,11 @@ Once your pattern is ready, the next step is to transmit this data to the 12x8 L
         delay(1000);
       }
    
-   In this code, we use the ``matrix.renderBitmap(frame, 8, 12);`` function to display the LED matrix. Here, 8 and 12 respectively represent the rows and columns of the LED matrix.
+   In diesem Code verwenden wir die Funktion ``matrix.renderBitmap(frame, 8, 12);``, um die LED-Matrix anzuzeigen. Hierbei stehen 8 und 12 jeweils für die Zeilen und Spalten der LED-Matrix.
 
-2. Using an Array of 32-bit integers
+2. Verwendung eines Arrays aus 32-Bit-Ganzzahlen
    
-   To display the pattern stored in an array of ``unsigned long``, use the following code:
+   Um das in einem Array von ``unsigned long`` gespeicherte Muster anzuzeigen, verwenden Sie den folgenden Code:
    
    .. code-block:: arduino
    
@@ -124,86 +124,82 @@ Once your pattern is ready, the next step is to transmit this data to the 12x8 L
         delay(500);
       }
    
-   In this case, we need to use the ``matrix.loadFrame(heart)`` function to display the pattern on the LED matrix.
+   In diesem Fall müssen wir die Funktion ``matrix.loadFrame(heart)`` verwenden, um das Muster auf der LED-Matrix anzuzeigen.
 
 
-Arduino LED Matrix Editor
+Arduino LED-Matrix-Editor
 -----------------------------------------
 
-I recommend using an ``unsigned long`` array to store the state of the LED matrix, as it saves memory on the Arduino. Though this method might not be very intuitive, you can use the |link_led_matrix_editor| as an aid, which helps you generate an ``unsigned long`` array. 
+Ich empfehle, ein Array aus ``unsigned long`` zu verwenden, um den Zustand der LED-Matrix zu speichern, da es Speicherplatz auf dem Arduino spart. Obwohl diese Methode vielleicht nicht sehr intuitiv ist, können Sie den |link_led_matrix_editor| als Hilfsmittel verwenden, der Ihnen hilft, ein Array aus ``unsigned long`` zu generieren.
 
-With the |link_led_matrix_editor| and the ``Arduino_LED_Matrix`` library, you can conveniently create icons or animations and display them on the UNO R4 WiFi board. All you have to do is draw, download the ``.h`` file, and call the ``matrix.play()`` function in your sketch to easily build your next project.
+Mit dem |link_led_matrix_editor| und der Bibliothek ``Arduino_LED_Matrix`` können Sie bequem Symbole oder Animationen erstellen und auf dem UNO R4 WiFi-Board anzeigen. Alles, was Sie tun müssen, ist zu zeichnen, die ``.h``-Datei herunterzuladen und die Funktion ``matrix.play()`` in Ihrem Sketch aufzurufen, um Ihr nächstes Projekt einfach zu realisieren.
 
 
-
-#. Open the LED Matrix Editor
+#. Öffnen Sie den LED-Matrix-Editor
 
    .. image:: img/04_led_matrix_editor_1.png
      :width: 80%
 
-#. Draw your pattern on the center canvas
+#. Zeichnen Sie Ihr Muster auf die zentrale Leinwand
 
    .. image:: img/04_led_matrix_editor_2.png
      :width: 80%
 
-#. Set the frame interval in milliseconds
+#. Stellen Sie das Frame-Intervall in Millisekunden ein
 
    .. image:: img/04_led_matrix_editor_3.png
      :width: 80%
 
-#. You can create a new blank frame or copy and create a new frame from the current frame.
+#. Sie können einen neuen leeren Frame erstellen oder einen neuen Frame aus dem aktuellen Frame kopieren und erstellen.
 
    .. image:: img/04_led_matrix_editor_4.png
      :width: 80%
 
-#. Export the ``.h`` header file
+#. Exportieren Sie die ``.h``-Headerdatei
 
    .. image:: img/04_led_matrix_editor_5.png
      :width: 80%
 
    .. image:: img/04_led_matrix_editor_6.png
 
-   After clicking OK, you'll receive a file named ``animation.h``.
+   Nachdem Sie auf OK geklickt haben, erhalten Sie eine Datei mit dem Namen ``animation.h``.
 
 
-Display Animations
+Animationen Anzeigen
 -----------------------------------------
 
-In the previous steps, we obtained a ``.h`` file that stores a series of frames along with their durations. Next, let's display them on the LED matrix.
+In den vorherigen Schritten haben wir eine ``.h``-Datei erhalten, die eine Reihe von Frames zusammen mit ihren Dauern speichert. Als Nächstes lassen Sie uns diese auf der LED-Matrix anzeigen.
 
-#. First, create a sketch. You can either open the ``04-led_matrix.ino`` file located under the path ``elite-explorer-kit-main\r4_new_feature\04-led_matrix``, or copy this code into the **Arduino IDE**.
+#. Erstellen Sie zuerst einen Sketch. Sie können entweder die Datei ``04-led_matrix.ino`` öffnen, die sich unter dem Pfad ``elite-explorer-kit-main\r4_new_feature\04-led_matrix`` befindet, oder diesen Code in die **Arduino IDE** kopieren.
 
    .. raw:: html
 
       <iframe src=https://create.arduino.cc/editor/sunfounder01/f3712371-7c3d-4a4b-bd98-f74fe43269ed/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-#. If you are using code from the ``elite-explorer-kit-main\r4_new_feature\04-led_matrix`` path, you'll find a tab named ``animation.h`` in the Arduino IDE. Open it and replace the existing code with the .h file you obtained from the website.
+#. Wenn Sie den Code vom Pfad ``elite-explorer-kit-main\r4_new_feature\04-led_matrix`` verwenden, finden Sie in der Arduino IDE einen Tab namens ``animation.h``. Öffnen Sie diesen und ersetzen Sie den vorhandenen Code durch die .h-Datei, die Sie von der Webseite erhalten haben.
 
    .. image:: img/04_animation_h_file.png
      :width: 80%
 
-#. If you have created your own sketch, you need to copy the ``.h`` file obtained from the webpage to the same directory of the sketch.
+#. Wenn Sie Ihren eigenen Sketch erstellt haben, müssen Sie die von der Webseite erhaltene ``.h``-Datei in dasselbe Verzeichnis Ihres Sketches kopieren.
 
-#. After setting up your preferred code in the Arduino IDE and uploading it to your Arduino UNO R4 WiFi, your LED matrix should now display the pattern you defined.
+#. Nachdem Sie Ihren bevorzugten Code in der Arduino IDE eingerichtet und auf Ihr Arduino UNO R4 WiFi hochgeladen haben, sollte Ihre LED-Matrix nun das von Ihnen definierte Muster anzeigen.
 
    .. raw:: html
    
       <video loop autoplay muted style = "max-width:100%">
          <source src="../_static/videos/new_feature_projects/led_matrix.mp4"  type="video/mp4">
-         Your browser does not support the video tag.
+         Ihr Browser unterstützt das Video-Tag nicht.
       </video>
 
-   Congratulations! You've successfully programmed your Arduino UNO R4 WiFi's 12x8 LED Matrix!
+   Herzlichen Glückwunsch! Sie haben erfolgreich die 12x8 LED-Matrix Ihres Arduino UNO R4 WiFi programmiert!
 
 
-**Reference**
+**Referenz**
 
 - |link_r4_led|
 
-**More Projects**
+**Weitere Projekte**
 
-* :ref:`fun_snake` (Fun Project)
-
-
-
+* :ref:`fun_snake` (Spaßprojekt)

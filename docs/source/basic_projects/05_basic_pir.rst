@@ -1,43 +1,41 @@
 .. _basic_pir:
 
-PIR Motion Sensor Module
+PIR-Bewegungssensormodul
 ==========================
 
 .. https://docs.sunfounder.com/projects/kepler-kit/en/latest/cproject/ar_pir.html#ar-pir
 
-
-Overview
+Übersicht
 ---------------
 
-In this lesson, you will learn about PIR motion sensor module. The Passive Infrared(PIR) Motion Sensor is a sensor that detects motion. It is commonly used in security systems and automatic lighting systems. The sensor has two slots that detect infrared radiation. When an object, such as a person, passes in front of the sensor, it detects a change in the amount of infrared radiation and triggers an output signal.
+In dieser Lektion erfahren Sie mehr über das PIR-Bewegungssensormodul. Der passive Infrarot(PIR)-Bewegungssensor ist ein Sensor, der Bewegungen erkennt. Er wird häufig in Sicherheitssystemen und automatischen Beleuchtungssystemen eingesetzt. Der Sensor hat zwei Schlitze, die Infrarotstrahlung detektieren. Wenn ein Objekt, wie eine Person, vor dem Sensor vorbeigeht, erkennt er eine Veränderung in der Menge der Infrarotstrahlung und löst ein Ausgangssignal aus.
 
-
-Required Components
+Benötigte Komponenten
 -------------------------
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein komplettes Kit zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Name
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Sie können die Komponenten auch separat über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -48,7 +46,7 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_pir`
         - |link_pir_buy|
 
-Wiring
+Verdrahtung
 ----------------------
 
 .. image:: img/05-pir_bb.png
@@ -56,7 +54,7 @@ Wiring
    :width: 100%
 
 
-Schematic Diagram
+Schaltplan
 -----------------------
 
 .. image:: img/05-pir_schematic.png
@@ -69,15 +67,15 @@ Code
 
 .. note::
 
-    * You can open the file ``05-pir_motion_sensor.ino`` under the path of ``elite-explorer-kit-main\basic_project\05-pir_motion_sensor`` directly.
-    * Or copy this code into Arduino IDE.
+    * Sie können die Datei ``05-pir_motion_sensor.ino`` direkt unter dem Pfad ``elite-explorer-kit-main\basic_project\05-pir_motion_sensor`` öffnen.
+    * Oder kopieren Sie diesen Code in die Arduino IDE.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/d9fc9198-1538-413d-b501-2cddc8d7cfe6/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After uploading the code to the Arduino Uno board, you can open the serial monitor to observe the sensor's output. When the PIR (passive infrared) motion sensor detects movement, the serial monitor will display the message "Somebody here!" to indicate that motion has been detected. If no motion is detected, the message "Monitoring..." will be shown instead.
+Nachdem der Code auf das Arduino Uno-Board hochgeladen wurde, können Sie den seriellen Monitor öffnen, um die Ausgabe des Sensors zu beobachten. Wenn der PIR-Bewegungssensor eine Bewegung erkennt, zeigt der serielle Monitor die Nachricht „Somebody here!“ an, um anzuzeigen, dass eine Bewegung erkannt wurde. Wird keine Bewegung erkannt, wird stattdessen die Nachricht „Monitoring...“ angezeigt.
 
-The PIR sensor outputs a digital HIGH or LOW signal, corresponding to detected or undetected motion, respectively. Unlike an analog sensor that provides a range of values, the digital output from this PIR sensor will either be HIGH (typically represented as '1') or LOW (typically represented as '0').
+Der PIR-Sensor gibt ein digitales HIGH- oder LOW-Signal aus, je nachdem, ob Bewegung erkannt oder nicht erkannt wird. Im Gegensatz zu einem analogen Sensor, der eine Reihe von Werten liefert, ist der digitale Ausgang dieses PIR-Sensors entweder HIGH (typischerweise als „1“ dargestellt) oder LOW (typischerweise als „0“ dargestellt).
 
-Note that the actual sensitivity and range of detection can vary based on the PIR sensor's characteristics and the environmental conditions. Therefore, it is advisable to calibrate the sensor according to your specific needs.
+Beachten Sie, dass die tatsächliche Empfindlichkeit und der Erfassungsbereich je nach den Eigenschaften des PIR-Sensors und den Umgebungsbedingungen variieren können. Daher ist es ratsam, den Sensor entsprechend Ihren spezifischen Bedürfnissen zu kalibrieren.

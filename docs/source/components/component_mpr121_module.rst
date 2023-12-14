@@ -6,46 +6,39 @@ MPR121
 .. image:: img/mpr121.png
 
 
-* **3.3V**: Power supply
-* **IRQ**: Open Collector Interrupt Output Pin, active low
-* **SCL**: I2C Clock
-* **SDA**: I2C Data
-* **ADD**: I2C Address Select Input Pin. Connect the ADDR pin to the VSS, VDD, SDA or SCL line, the resulting I2C addresses are 0x5A, 0x5B, 0x5C and 0x5D respectively
-* **GND**: Ground
-* **0~11**: Electrode 0~11, electrode is a touch sensor. Typically, electrodes can just be some piece of metal, or a wire. But some times depending on the length of our wire, or the material the electrode is on, it can make triggering the sensor difficult. For this reason, the MPR121 allows you to configure what is needed to trigger and untrigger an electrode.
+* **3.3V**: Stromversorgung
+* **IRQ**: Open-Collector-Interrupt-Ausgangspin, aktiv niedrig
+* **SCL**: I2C-Takt
+* **SDA**: I2C-Daten
+* **ADD**: I2C-Adressauswahl-Eingangspin. Verbindet man den ADDR-Pin mit der VSS-, VDD-, SDA- oder SCL-Leitung, ergeben sich die I2C-Adressen 0x5A, 0x5B, 0x5C und 0x5D
+* **GND**: Masse
+* **0~11**: Elektrode 0~11, Elektrode ist ein Berührungssensor. Typischerweise können Elektroden einfach ein Stück Metall oder ein Draht sein. Manchmal können jedoch die Länge des Drahtes oder das Material, auf dem die Elektrode liegt, das Auslösen des Sensors erschweren. Aus diesem Grund ermöglicht der MPR121, zu konfigurieren, was erforderlich ist, um eine Elektrode auszulösen und wieder zu deaktivieren.
 
-**MPR121 OVERVIEW**
+**ÜBERSICHT MPR121**
 
-The MPR121 is the second generation capacitive touch sensor controller after
-the initial release of the MPR03x series devices. The MPR121 features
-increased internal intelligence, some of the major additions include an
-increased electrode count, a hardware configurable I2C address, an
-expanded filtering system with debounce, and completely independent
-electrodes with auto-configuration built in. The device also features a 13th
-simulated sensing channel dedicated for near proximity detection using the
-multiplexed sensing inputs.
+Der MPR121 ist der Nachfolger des kapazitiven Touchsensor-Controllers nach der Erstveröffentlichung der MPR03x-Serie. Der MPR121 verfügt über erhöhte interne Intelligenz, einige der wichtigen Ergänzungen umfassen eine erhöhte Elektrodenanzahl, eine hardwarekonfigurierbare I2C-Adresse, ein erweitertes Filtersystem mit Entprellung und völlig unabhängige Elektroden mit eingebauter Auto-Konfiguration. Das Gerät verfügt auch über einen 13. simulierten Sensor-Kanal, der für die Näherungserkennung mittels multiplexierter Sensoreingänge gewidmet ist.
 
 * |link_mpr121_datasheet|
 
-**Features**
+**Merkmale**
 
-* Low power operation
-    • 1.71 V to 3.6 V supply operation
-    • 29 μA supply current at 16 ms sampling interval period
-    • 3 μA Stop mode current
-* 12 capacitance sensing inputs
-    • 8 inputs are multifunctional for LED driver and GPIO
-* Complete touch detection
-    • Auto-configuration for each sensing input
-    • Auto-calibration for each sensing input
-    • Touch/release threshold and debounce for touch detection
-* I2C interface, with Interrupt output
-* 3 mm x 3 mm x 0.65 mm 20 lead QFN package
-* -40°C to +85°C operating temperature range
+* Niedriger Stromverbrauch
+    • 1,71 V bis 3,6 V Betriebsspannung
+    • 29 μA Versorgungsstrom bei 16 ms Abtastintervall
+    • 3 μA Strom im Stoppmodus
+* 12 Kapazitätssensoreingänge
+    • 8 Eingänge sind multifunktional für LED-Treiber und GPIO
+* Komplette Berührungserkennung
+    • Auto-Konfiguration für jeden Sensoreingang
+    • Auto-Kalibrierung für jeden Sensoreingang
+    • Berührungs-/Freigabeschwelle und Entprellung für die Berührungserkennung
+* I2C-Schnittstelle mit Interrupt-Ausgang
+* 3 mm x 3 mm x 0,65 mm 20-poliges QFN-Gehäuse
+* Betriebstemperaturbereich von -40°C bis +85°C
 
 
 
-**Example**
+**Beispiel**
 
-* :ref:`basic_mpr121` (Basic Project)
-* :ref:`fun_fruit_piano` (Fun Project)
+* :ref:`basic_mpr121` (Grundprojekt)
+* :ref:`fun_fruit_piano` (Spaßprojekt)

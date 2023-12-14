@@ -5,27 +5,28 @@
 
 .. image:: img/74HC595.png
 
-The 74HC595 consists of an 8−bit shift register and a storage register with three−state parallel outputs. It converts serial input into parallel output so you can save IO ports of an MCU.
-When MR (pin10) is high level and OE (pin13) is low level, data is input in the rising edge of SHcp and goes to the memory register through the rising edge of SHcp. If the two clocks are connected together, the shift register is always one pulse earlier than the memory register. There is a serial shift input pin (Ds), a serial output pin (Q) and an asynchronous reset button (low level) in the memory register. The memory register outputs a Bus with a parallel 8-bit and in three states. When OE is enabled (low level), the data in memory register is output to the bus.
+Der 74HC595 besteht aus einem 8-Bit-Schieberegister und einem Speicherregister mit dreistufigen parallelen Ausgängen. Er wandelt serielle Eingaben in parallele Ausgaben um, sodass Sie IO-Ports eines Mikrocontrollers einsparen können.
+Wenn MR (Pin10) auf hohem Niveau und OE (Pin13) auf niedrigem Niveau ist, werden Daten bei steigender Flanke von SHcp eingegeben und gelangen durch die steigende Flanke von SHcp ins Speicherregister. Wenn die beiden Uhren miteinander verbunden sind, ist das Schieberegister immer einen Impuls früher als das Speicherregister. Im Speicherregister gibt es einen seriellen Schiebeeingangspin (Ds), einen seriellen Ausgangspin (Q) und einen asynchronen Reset-Knopf (niedriges Niveau). Das Speicherregister gibt einen Bus mit parallelen 8-Bit in drei Zuständen aus. Wenn OE aktiviert ist (niedriges Niveau), werden die Daten im Speicherregister auf den Bus ausgegeben.
 
 * |link_74hc595_datasheet|
 
 .. image:: img/74hc595_pin.png
     :width: 600
 
-Pins of 74HC595 and their functions:
+Pins des 74HC595 und ihre Funktionen:
 
-* **Q0-Q7**: 8-bit parallel data output pins, able to control 8 LEDs or 8 pins of 7-segment display directly.
-* **Q7’**: Series output pin, connected to DS of another 74HC595 to connect multiple 74HC595s in series
-* **MR**: Reset pin, active at low level; 
-* **SHcp**: Time sequence input of shift register. On the rising edge, the data in shift register moves successively one bit, i.e. data in Q1 moves to Q2, and so forth. While on the falling edge, the data in shift register remain unchanged.
-* **STcp**: Time sequence input of storage register. On the rising edge, data in the shift register moves into memory register.
-* **CE**: Output enable pin, active at low level. 
-* **DS**: Serial data input pin
-* **VCC**: Positive supply voltage.
-* **GND**: Ground.
+* **Q0-Q7**: 8-Bit parallele Datenausgangspins, können direkt 8 LEDs oder 8 Pins einer 7-Segment-Anzeige steuern.
+* **Q7’**: Serieller Ausgangspin, verbunden mit DS eines anderen 74HC595, um mehrere 74HC595 in Serie zu schalten
+* **MR**: Reset-Pin, aktiv bei niedrigem Pegel;
+* **SHcp**: Zeitsequenzeingang des Schieberegisters. Bei steigender Flanke bewegen sich die Daten im Schieberegister sukzessive um ein Bit, d.h. Daten in Q1 bewegen sich nach Q2 usw. Während bei fallender Flanke die Daten im Schieberegister unverändert bleiben.
+* **STcp**: Zeitsequenzeingang des Speicherregisters. Bei steigender Flanke bewegen sich die Daten im Schieberegister in das Speicherregister.
+* **CE**: Ausgangsaktivierungspin, aktiv bei niedrigem Pegel.
+* **DS**: Serieller Dateneingangspin
+* **VCC**: Positive Versorgungsspannung.
+* **GND**: Masse.
 
-**Example**
+**Beispiel**
 
-* :ref:`basic_74hc595` (Basic Project)
-* :ref:`fun_digital_dice` (Fun Project)
+* :ref:`basic_74hc595` (Grundprojekt)
+* :ref:`fun_digital_dice` (Spaßprojekt)
+

@@ -1,42 +1,42 @@
 .. _fun_fruit_piano:
 
-Fruit Piano
+Obstklavier
 ========================
 
 .. raw:: html
 
    <video loop controls style = "max-width:100%">
       <source src="../_static/videos/fun_projects/02_fun_fruit_piano.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      Ihr Browser unterstützt das Video-Tag nicht.
    </video>
 
-This project is a simple fruit piano that reads input from an MPR121 touch sensor and plays music through a DAC. In other words, we've turned fruits into a keyboard, allowing you to play music by simply touching them.
+Dieses Projekt ist ein einfaches Obstklavier, das Eingaben von einem MPR121-Touchsensor liest und Musik über einen DAC abspielt. Mit anderen Worten, wir haben Früchte in eine Tastatur verwandelt, die es Ihnen ermöglicht, Musik zu spielen, indem Sie sie einfach berühren.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Kit zu kaufen, hier ist der Link: 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -52,7 +52,7 @@ You can also buy them separately from the links below.
         - \-
 
 
-**Wiring**
+**Verdrahtung**
 
 .. image:: img/02_fruit_piano_bb.png
     :width: 80%
@@ -63,7 +63,7 @@ You can also buy them separately from the links below.
    <br/>
 
 
-**Schematic**
+**Schaltplan**
 
 .. image:: img/02_fruit_piano_schematic.png
    :width: 100%
@@ -72,41 +72,41 @@ You can also buy them separately from the links below.
 
 .. note::
 
-    * You can open the file ``02_fruit_piano.ino`` under the path of ``elite-explorer-kit-main\fun_project\02_fruit_piano`` directly.
-    * Or copy this code into Arduino IDE.
+    * Sie können die Datei ``02_fruit_piano.ino`` direkt unter dem Pfad ``elite-explorer-kit-main\fun_project\02_fruit_piano`` öffnen.
+    * Oder kopieren Sie diesen Code in die Arduino IDE.
 
 .. note::
-   To install the library, use the Arduino Library Manager and search for **"Adafruit MPR121"** and install it.
+   Um die Bibliothek zu installieren, verwenden Sie den Arduino-Bibliotheksmanager und suchen Sie nach **„Adafruit MPR121“** und installieren Sie diese.
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/e677c06a-7af1-4846-a507-dd69c0c50aae/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-**How it works?**
+**Wie funktioniert das?**
 
-Here's a step-by-step explanation of the code:
+Hier ist eine schrittweise Erklärung des Codes:
 
-1. Library and Object Initialization:
+1. Bibliotheks- und Objektinitialisierung:
 
-   Import the necessary libraries: ``Wire`` library (for I2C communication), ``Adafruit_MPR121`` library (for driving the MPR121), ``analogWave`` library (for generating analog waveforms), and ``pitches.h`` (which defines the frequencies of notes).
-   Create instances of ``Adafruit_MPR121`` and ``analogWave`` objects.
-   Define a notes array to store the note corresponding to each touch channel.
+   Importieren Sie die notwendigen Bibliotheken: ``Wire``-Bibliothek (für I2C-Kommunikation), ``Adafruit_MPR121``-Bibliothek (zur Steuerung des MPR121), ``analogWave``-Bibliothek (zur Erzeugung analoger Wellenformen) und ``pitches.h`` (definiert die Frequenzen der Noten).
+   Erstellen Sie Instanzen der Objekte ``Adafruit_MPR121`` und ``analogWave``.
+   Definieren Sie ein Noten-Array, um die Note zu speichern, die jedem Berührungskanal entspricht.
 
 2. ``setup()``:
 
-   Initialize Serial communication and wait for it to start.
-   Check and initialize the MPR121; if not found, print an error message on the serial monitor and halt execution.
-   Initialize the ``analogWave`` object and set the initial sine wave frequency to 10Hz.
+   Initialisieren Sie die serielle Kommunikation und warten Sie, bis sie startet.
+   Überprüfen und initialisieren Sie den MPR121; falls nicht gefunden, geben Sie eine Fehlermeldung auf dem seriellen Monitor aus und stoppen Sie die Ausführung.
+   Initialisieren Sie das ``analogWave``-Objekt und setzen Sie die anfängliche Sinuswellenfrequenz auf 10 Hz.
 
 3. ``loop()``:
 
-   Read the currently touched channels of the MPR121.
-   Iterate through all channels, check which one is touched, and play the corresponding note.
-   Add a small delay between each iteration.
+   Lesen Sie die aktuell berührten Kanäle des MPR121.
+   Durchlaufen Sie alle Kanäle, überprüfen Sie, welcher berührt wird, und spielen Sie die entsprechende Note.
+   Fügen Sie eine kleine Verzögerung zwischen jeder Iteration hinzu.
 
-4. Play Note ``playNote()``:
+4. Note abspielen ``playNote()``:
 
-   The ``playNote`` function takes a ``note`` parameter and sets the DAC frequency to play the corresponding note.
-   Delay for a period to play the note.
-   Stop playing the note.
+   Die Funktion ``playNote`` nimmt einen ``note``-Parameter entgegen und setzt die DAC-Frequenz, um die entsprechende Note zu spielen.
+   Verzögern Sie für einen Zeitraum, um die Note zu spielen.
+   Stoppen Sie das Abspielen der Note.

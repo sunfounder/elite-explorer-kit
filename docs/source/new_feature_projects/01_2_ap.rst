@@ -1,18 +1,18 @@
-WiFi-Controlled LED (Access Point)
+WiFi-gesteuerte LED (Access Point)
 ---------------------------------------------------
 
-This project allows you to control an LED light through a web interface. The Arduino board acts as a WiFi access point, creating its own local network that you can connect to with a web browser. Once connected, you can navigate to the device's IP address using the web browser, where you'll find options to turn an LED (connected to the board's pin 13) on and off. The project provides real-time feedback on the LED status via the Serial Monitor, making it easier to debug and understand the flow of operations.
+Dieses Projekt ermöglicht es Ihnen, eine LED über eine Web-Oberfläche zu steuern. Das Arduino-Board fungiert als WiFi-Zugangspunkt und erstellt sein eigenes lokales Netzwerk, mit dem Sie sich über einen Webbrowser verbinden können. Einmal verbunden, können Sie im Webbrowser die IP-Adresse des Geräts aufrufen, wo Sie Optionen finden, um eine LED (an Pin 13 des Boards angeschlossen) ein- und auszuschalten. Das Projekt bietet Echtzeit-Feedback über den LED-Status über den seriellen Monitor, was das Debuggen und Verstehen des Ablaufs der Operationen erleichtert.
 
-1. Upload the code
-========================
+1. Laden Sie den Code hoch
+==============================
 
-Open the ``01-wifi_ap.ino`` file under the path of ``elite-explorer-kit-main\r4_new_feature\01-wifi_ap``, or copy this code into **Arduino IDE**.
+Öffnen Sie die Datei ``01-wifi_ap.ino`` im Pfad ``elite-explorer-kit-main\r4_new_feature\01-wifi_ap`` oder kopieren Sie diesen Code in die **Arduino IDE**.
 
 .. note:: 
-      Wi-Fi® support is enabled via the built-in ``WiFiS3`` library that is shipped with the Arduino UNO R4 Core. Installing the core automatically installs the ``WiFiS3`` library.
+      Wi-Fi® wird über die integrierte ``WiFiS3``-Bibliothek aktiviert, die mit dem Arduino UNO R4 Core geliefert wird. Die Installation des Cores installiert automatisch die ``WiFiS3``-Bibliothek.
 
 
-You still need to create or modify ``arduino_secrets.h``, replace ``SECRET_SSID`` and ``SECRET_PASS`` with the name and password of your WiFi access point. The file should contain:
+Sie müssen auch ``arduino_secrets.h`` erstellen oder bearbeiten, ersetzen Sie ``SECRET_SSID`` und ``SECRET_PASS`` durch den Namen und das Passwort Ihres WiFi-Zugangspunkts. Die Datei sollte enthalten:
 
 .. code:: arduino
 
@@ -28,25 +28,25 @@ You still need to create or modify ``arduino_secrets.h``, replace ``SECRET_SSID`
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/videos/new_feature_projects/wifi.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      Ihr Browser unterstützt das Video-Tag nicht.
    </video>
 
 
-2. Code explanation
+2. Code-Erklärung
 ========================
 
-#. Importing Required Libraries
+#. Importieren erforderlicher Bibliotheken
 
-   Importing the ``WiFiS3`` library for WiFi functionalities and ``arduino_secrets.h`` for sensitive data like passwords.
+   Importieren der ``WiFiS3``-Bibliothek für Wi-Fi-Funktionalitäten und ``arduino_secrets.h`` für sensible Daten wie Passwörter.
   
    .. code-block:: arduino
    
      #include "WiFiS3.h"
      #include "arduino_secrets.h"
 
-#. Configuration and Variable Initialization
+#. Konfiguration und Variableninitialisierung
 
-   Define WiFi SSID, password, and key index along with the LED pin and WiFi status.
+   Definieren Sie WiFi-SSID, Passwort und Schlüsselindex sowie den LED-Pin und den WiFi-Status.
   
    .. code-block:: arduino
    
@@ -57,9 +57,9 @@ You still need to create or modify ``arduino_secrets.h``, replace ``SECRET_SSID`
      int status = WL_IDLE_STATUS;
      WiFiServer server(80);
 
-#. ``setup()`` Function
+#. Funktion ``setup()``
 
-   Initialize the serial communication and configure the WiFi module.
+   Initialisieren der seriellen Kommunikation und Konfigurieren des Wi-Fi-Moduls.
    
    .. code-block:: arduino
    
@@ -73,7 +73,7 @@ You still need to create or modify ``arduino_secrets.h``, replace ``SECRET_SSID`
        server.begin();
      }
 
-   We also check if the firmware version of uno R4 wifi is up to date. If it is not the latest version, a prompt for upgrade will be displayed. You can refer to :ref:`update_firmware` for firmware upgrade.
+   Wir überprüfen auch, ob die Firmware-Version von Uno R4 WiFi auf dem neuesten Stand ist. Wenn nicht, wird eine Aufforderung zum Upgrade angezeigt. Sie können :ref:`update_firmware` für das Firmware-Upgrade konsultieren.
 
    .. code-block:: arduino
 
@@ -84,26 +84,27 @@ You still need to create or modify ``arduino_secrets.h``, replace ``SECRET_SSID`
       }
       ...
 
-   You may want to modify the following code in order to be able to change the default IP of Arduino.
+   Sie möchten möglicherweise den folgenden Code ändern, um die Standard-IP von Arduino ändern zu können.
 
    .. code-block:: arduino
       
       WiFi.config(IPAddress(192,48,56,2));
+
    
 
-#. Main ``loop()`` Function
+#. Hauptfunktion ``loop()``
 
-   The ``loop()`` function in the Arduino code performs several key operations, specifically:
+   Die Funktion ``loop()`` im Arduino-Code führt mehrere Schlüsseloperationen aus, insbesondere:
    
-   1. Checking if a device has connected or disconnected from the access point.
-   2. Listening for incoming clients who make HTTP requests.
-   3. Reading client data and executing actions based on that data—like turning an LED on or off.
+   1. Überprüfen, ob ein Gerät sich mit dem Zugangspunkt verbunden oder getrennt hat.
+   2. Abhören von eingehenden Clients, die HTTP-Anfragen stellen.
+   3. Lesen der Clientdaten und Ausführen von Aktionen basierend auf diesen Daten – wie das Ein- oder Ausschalten einer LED.
    
-   Here, let's break down the ``loop()`` function to make these steps more understandable.
+   Hier zerlegen wir die Funktion ``loop()``, um diese Schritte verständlicher zu machen.
    
-   #. Checking WiFi Status
+   #. Überprüfen des WiFi-Status
 
-      The code first checks if the WiFi status has changed. If a device has connected or disconnected, the serial monitor will display the information accordingly.
+      Zuerst überprüft der Code, ob sich der WiFi-Status geändert hat. Wenn sich ein Gerät verbunden oder getrennt hat, wird die Information entsprechend auf dem seriellen Monitor angezeigt.
    
       .. code-block:: arduino
    
@@ -116,17 +117,17 @@ You still need to create or modify ``arduino_secrets.h``, replace ``SECRET_SSID`
           }
         }
    
-   #. Listening for Incoming Clients
+   #. Abhören von eingehenden Clients
 
-      ``WiFiClient client = server.available();`` waits for incoming clients.
+      ``WiFiClient client = server.available();`` wartet auf eingehende Clients.
      
       .. code-block:: arduino
    
         WiFiClient client = server.available();
    
-   #. Handling Client Requests
+   #. Behandlung von Clientanfragen
 
-      Listens for incoming clients and serves them the HTML web page. When a user clicks on the "Click here to turn the LED on" or "Click here to turn the LED off" links on the served webpage, an HTTP GET request is sent to the Arduino server. Specifically, the URLs "http://yourAddress/H" for turning on the LED and "http://yourAddress/L" for turning it off will be accessed.
+      Lauscht auf eingehende Clients und liefert ihnen die HTML-Webseite. Wenn ein Benutzer auf den Link „Hier klicken, um die LED einzuschalten“ oder „Hier klicken, um die LED auszuschalten“ auf der bereitgestellten Webseite klickt, wird eine HTTP-GET-Anfrage an den Arduino-Server gesendet. Speziell werden die URLs „http://yourAddress/H“ zum Einschalten der LED und „http://yourAddress/L“ zum Ausschalten aufgerufen.
   
       .. code-block:: arduino
 
@@ -141,7 +142,8 @@ You still need to create or modify ``arduino_secrets.h``, replace ``SECRET_SSID`
           // ...
         }
    
-      The Arduino code listens for these incoming GET requests. When it detects ``GET /H`` at the end of an incoming line of text (HTTP header), it sets the LED connected to pin 13 to HIGH, effectively turning it on. Similarly, if it detects ``GET /L``, it sets the LED to LOW, turning it off.
+      Der Arduino-Code lauscht auf diese eingehenden GET-Anfragen. Wenn er am Ende einer eingehenden Textzeile (HTTP-Header) ``GET /H`` erkennt, setzt er die mit Pin 13 verbundene LED auf HIGH und schaltet sie somit ein. Ähnlich wird die LED auf LOW gesetzt und somit ausgeschaltet, wenn ``GET /L`` erkannt wird.
+
      
       .. code-block:: arduino
    
@@ -172,6 +174,6 @@ You still need to create or modify ``arduino_secrets.h``, replace ``SECRET_SSID`
 
 
 
-**Reference**
+**Referenz**
 
 - |link_r4_wifi|

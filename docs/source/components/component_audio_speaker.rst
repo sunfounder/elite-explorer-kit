@@ -1,49 +1,49 @@
 .. _cpn_audio_speaker:
 
-Audio Module and Speaker
-===========================
+Audio-Modul und Lautsprecher
+================================
 
-**Audio Amplifier Module**
+**Audioverstärker-Modul**
 
 .. image:: img/audio_module.jpg
     :width: 500
     :align: center
 
-Audio Amplifier Module contains a HXJ8002 audio power amplifier chip. This chip is a power amplifier with low power supply, that can provide 3W average audio power for a 3Ω BTL load with low harmonic distortion (under 10% threshold distortion at 1KHz) from a 5V DC power supply. This chip can amplify audio signals without any coupling capacitors or bootstrap capacitors.
+Das Audioverstärker-Modul enthält einen HXJ8002-Audioleistungsverstärker-Chip. Dieser Chip ist ein Leistungsverstärker mit niedriger Stromversorgung, der 3W durchschnittliche Audioleistung für eine 3Ω BTL-Last mit geringer harmonischer Verzerrung (unter 10% Schwellenverzerrung bei 1KHz) von einer 5V DC-Stromquelle liefern kann. Dieser Chip kann Audiosignale ohne Kopplungskondensatoren oder Bootstrap-Kondensatoren verstärken.
 
-The module can be supplied by a 2.0V up to 5.5V DC with 10mA operating current (0.6uA for typical standby current) power source and produce a powerful amplified sound into a 3Ω, 4Ω, or 8Ω impedance speaker. This module has an improved pop and clicks circuitry for reducing significantly the transition nose at the powering on and off moment. Tiny size besides high efficiency and low power supplying make it applicable in widely portable and battery-powered projects and microcontrollers.  
+Das Modul kann mit einer 2,0V bis 5,5V DC Stromquelle mit 10mA Betriebsstrom (0,6uA für typischen Standby-Strom) betrieben werden und erzeugt einen kraftvollen verstärkten Klang in einen 3Ω, 4Ω oder 8Ω Impedanzlautsprecher. Dieses Modul verfügt über eine verbesserte Pop- und Klickschaltung zur deutlichen Reduzierung des Übergangsgeräusches beim Ein- und Ausschalten. Die kleine Größe neben hoher Effizienz und niedriger Stromversorgung machen es weit verbreitet in tragbaren und batteriebetriebenen Projekten und Mikrocontrollern einsetzbar.
 
 
 * **IC**: HXJ8002
-* **Input Voltage**: 2V ~ 5.5V
-* **Standby Mode Current**: 0.6uA (typical value)
-* **Output Power**: 3W (3Ω load) , 2.5W (4Ω load) , 1.5W (8Ω load)
-* **Output Speaker Impedance**: 3Ω, 4Ω, 8Ω
-* **Size**: 19.8mm x 14.2mm
+* **Eingangsspannung**: 2V ~ 5.5V
+* **Standby-Modus Strom**: 0.6uA (typischer Wert)
+* **Ausgangsleistung**: 3W (3Ω Last), 2.5W (4Ω Last), 1.5W (8Ω Last)
+* **Ausgangslautsprecherimpedanz**: 3Ω, 4Ω, 8Ω
+* **Größe**: 19.8mm x 14.2mm
 
-**Speaker**
+**Lautsprecher**
 
 .. image:: img/speaker_pic.png
     :width: 300
     :align: center
 
-* **Size**: 20x30x7mm
-* **Impedance**:8ohm
-* **Rate Input Power**: 1.5W 
-* **Max Input Power**: 2.0W
-* **Wire Length**: 10cm
+* **Größe**: 20x30x7mm
+* **Impedanz**: 8ohm
+* **Nennleistung**: 1.5W
+* **Maximale Eingangsleistung**: 2.0W
+* **Kabellänge**: 10cm
 
 .. image:: img/2030_speaker.png
 
-The size chart is as follows:
+Die Größentabelle ist wie folgt:
 
-* :download:`2030 Speaker Datasheet <https://github.com/sunfounder/sf-pdf/raw/master/datasheet/2030-speaker-datasheet.pdf>`
+* :download:`2030 Lautsprecher-Datenblatt <https://github.com/sunfounder/sf-pdf/raw/master/datasheet/2030-speaker-datasheet.pdf>`
 
 
-**Example**
+**Beispiel**
 
-* :ref:`basic_audio_speaker` (Basic Project)
-* :ref:`fun_welcome` (Fun Project)
-* :ref:`fun_fruit_piano` (Fun Project)
+* :ref:`basic_audio_speaker` (Grundprojekt)
+* :ref:`fun_welcome` (Spaßprojekt)
+* :ref:`fun_fruit_piano` (Spaßprojekt)
 * :ref:`new_dac`
 

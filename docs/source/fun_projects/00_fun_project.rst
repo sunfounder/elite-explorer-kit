@@ -1,9 +1,9 @@
 .. _fun_project:
 
-Fun Projects
+Spaßprojekte
 ====================
 
-In this chapter, you will find some fun projects. These projects involve the use of multiple electronic components and illustrate the fundamental logic behind how most programs interact with reality.
+In diesem Kapitel finden Sie einige unterhaltsame Projekte. Diese Projekte beinhalten den Einsatz mehrerer elektronischer Komponenten und veranschaulichen die grundlegende Logik, wie die meisten Programme mit der Realität interagieren.
 
 .. toctree::
     :maxdepth: 1

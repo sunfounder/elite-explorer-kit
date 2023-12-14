@@ -1,25 +1,25 @@
 .. _new_projects:
 
-Explore Arduino® UNO R4 WiFi
+Erkunden Sie Arduino® UNO R4 WiFi
 ========================================
 
 .. image:: img/unor4wifi.webp
     :align: center
     :width: 50%
 
-The **Arduino Uno R4 WiFi board** is the latest addition to the Arduino family, offering a suite of advanced features while maintaining the robustness and versatility you've come to expect. This board brings a significant boost in processing power, thanks to its 32-bit Arm® Cortex®-M4 microcontroller, and it preserves compatibility with the standard form factor and shield stackability of the UNO series.
+Das **Arduino Uno R4 WiFi Board** ist die neueste Ergänzung zur Arduino-Familie und bietet eine Reihe fortschrittlicher Funktionen, während es die Robustheit und Vielseitigkeit bewahrt, die Sie erwarten. Dieses Board bringt einen signifikanten Schub in der Verarbeitungsleistung, dank seines 32-Bit Arm® Cortex®-M4 Mikrocontrollers, und es bewahrt die Kompatibilität mit dem Standard-Formfaktor und der Stapelbarkeit der UNO-Serie.
 
-**What's new about Uno R4 compared to R3?**
+**Was ist neu am Uno R4 im Vergleich zum R3?**
 
-- **Enhanced Processing**: Transition from an 8-bit AVR to a 32-bit Arm® Cortex®-M4 microcontroller.
-- **Memory Upgrade**: Elevate your projects with 32KB of SRAM and 256KB of NAND flash memory.
-- **Advanced Connectivity**: Experience seamless connectivity with USB-C and Wi-Fi.
-- **Improved Performance**: Accomplish more with faster processing and greater memory capacity.
-- **Flexible Power Supply**: Power up your board with up to 24V for broader project possibilities.
+- **Verbesserte Verarbeitung**: Wechsel von einem 8-Bit-AVR zu einem 32-Bit-Arm® Cortex®-M4-Mikrocontroller.
+- **Speicher-Upgrade**: Heben Sie Ihre Projekte mit 32KB SRAM und 256KB NAND-Flash-Speicher an.
+- **Erweiterte Konnektivität**: Erleben Sie nahtlose Konnektivität mit USB-C und Wi-Fi.
+- **Verbesserte Leistung**: Erreichen Sie mehr mit schnellerer Verarbeitung und größerer Speicherkapazität.
+- **Flexible Stromversorgung**: Versorgen Sie Ihr Board mit bis zu 24V für ein breiteres Spektrum an Projekt-Möglichkeiten.
   
-In addition to the above upgrades, the R4 WiFi also introduces the following new features:
+Neben den oben genannten Upgrades führt das R4 WiFi auch die folgenden neuen Funktionen ein:
 
-**New Features**
+**Neue Funktionen**
 
 .. toctree::
     :maxdepth: 2
@@ -32,13 +32,13 @@ In addition to the above upgrades, the R4 WiFi also introduces the following new
     06_hid
 
 
-- **Wi-Fi®**: Provides wireless connectivity ideal for various IoT projects, enabled by the ESP32-S3 module.
-- **Bluetooth®**: Offers short-range wireless communication between devices, also powered by the ESP32-S3 module.
-- **Built-in Real-Time Clock (RTC)**: Ideal for time-sensitive applications. Includes additional pins for battery-powered operation and an "OFF" pin to turn off the board while keeping the RTC running.
-- **12x8 LED Matrix**: A simple way to display data or create animations.
-- **DAC Channel**: Achieve precise analog outputs, perfect for audio projects.
-- **HID Support**: Simulate a mouse or keyboard via USB with built-in HID support.
-- **CAN Protocol Support**: Extend your reach into automotive and industrial applications.
+- **Wi-Fi®**: Bietet drahtlose Konnektivität, ideal für verschiedene IoT-Projekte, ermöglicht durch das ESP32-S3-Modul.
+- **Bluetooth®**: Bietet Kurzstrecken-Drahtloskommunikation zwischen Geräten, ebenfalls angetrieben durch das ESP32-S3-Modul.
+- **Eingebaute Echtzeituhr (RTC)**: Ideal für zeitkritische Anwendungen. Beinhaltet zusätzliche Pins für batteriebetriebene Nutzung und einen "OFF"-Pin, um das Board auszuschalten, während die RTC weiterläuft.
+- **12x8 LED-Matrix**: Eine einfache Möglichkeit, Daten anzuzeigen oder Animationen zu erstellen.
+- **DAC-Kanal**: Erzielen Sie präzise analoge Ausgaben, perfekt für Audioprojekte.
+- **HID-Unterstützung**: Simulieren Sie eine Maus oder Tastatur über USB mit eingebauter HID-Unterstützung.
+- **CAN-Protokoll-Unterstützung**: Erweitern Sie Ihre Reichweite in automotive und industrielle Anwendungen.
 
 .. toctree::
     :maxdepth: 2

@@ -1,43 +1,43 @@
 .. _fun_escape:
 
-GAME - Escape
+SPIEL - Flucht
 ==================================
 
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/videos/fun_projects/11_fun_escape_square.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      Ihr Browser unterstützt das Video-Tag nicht.
    </video>
 
-This game is called "Escape".
-The player's objective is to tilt the MPU6050 sensor to move a pixel on the LED matrix and attempt to maneuver it through an opening in the matrix border (the exit).
+Dieses Spiel heißt „Flucht“.
+Das Ziel des Spielers ist es, den MPU6050-Sensor zu neigen, um einen Pixel auf der LED-Matrix zu bewegen und zu versuchen, ihn durch eine Öffnung im Rand der Matrix (den Ausgang) zu manövrieren.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Kit zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -47,14 +47,14 @@ You can also buy them separately from the links below.
         - \-
 
 
-**Wiring**
+**Verdrahtung**
 
 .. image:: img/11_escape_bb.png
     :width: 80%
     :align: center
 
 
-**Schematic**
+**Schaltplan**
 
 .. image:: img/11_escape_schematic.png
    :width: 70%
@@ -65,44 +65,45 @@ You can also buy them separately from the links below.
 
 .. note::
 
-    * You can open the file ``11_escape_square.ino`` under the path of ``elite-explorer-kit-main\fun_project\11_escape_square`` directly.
-    * Or copy this code into Arduino IDE.
+    * Sie können die Datei ``11_escape_square.ino`` direkt unter dem Pfad ``elite-explorer-kit-main\fun_project\11_escape_square`` öffnen.
+    * Oder kopieren Sie diesen Code in die Arduino IDE.
 
 .. note::
-   To install the library, use the Arduino Library Manager and search for **"Adafruit MPU6050"** and install it.
+   Um die Bibliothek zu installieren, verwenden Sie den Arduino-Bibliotheksmanager und suchen Sie nach **„Adafruit MPU6050“** und installieren Sie diese.
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/6b239445-f921-48fb-a93e-70cc7ef8afc7/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-**How it works?**
+**Wie funktioniert des?**
 
-Here's a detailed explanation of the code:
+Hier ist eine detaillierte Erklärung des Codes:
 
-1. Library Imports and Global Variables:
+1. Bibliotheksimporte und globale Variablen:
 
-   Imported libraries include the LED matrix, Wire (for I2C communication), MPU6050 (motion sensor), and ``Adafruit_Sensor`` library.
-   Initialization of MPU6050 and LED matrix objects.
-   Definition of global variables such as pixelX and pixelY (pixel position), gapStart and side (start position of the gap and which side), level (game difficulty level), and more.
+   Importierte Bibliotheken umfassen die LED-Matrix, Wire (für I2C-Kommunikation), MPU6050 (Bewegungssensor) und die ``Adafruit_Sensor``-Bibliothek.
+   Initialisierung von MPU6050 und LED-Matrix-Objekten.
+   Definition globaler Variablen wie pixelX und pixelY (Pixelposition), gapStart und side (Startposition der Lücke und welche Seite), level (Schwierigkeitsgrad des Spiels) und mehr.
 
 2. ``setup()``:
 
-   Initialize the LED matrix and draw the matrix with the gap.
-   Initialize serial communication and check if the MPU6050 sensor is starting correctly, setting its acceleration range to 2g.
+   Initialisieren Sie die LED-Matrix und zeichnen Sie die Matrix mit der Lücke.
+   Initialisieren Sie die serielle Kommunikation und prüfen Sie, ob der MPU6050-Sensor korrekt startet, und stellen Sie seinen Beschleunigungsbereich auf 2g ein.
 
 3. ``loop()``:
 
-   Periodically update the position of the pixel based on MPU6050 sensor readings.
-   Periodically move the gap's position.
-   Load the new pixel layout and render it on the LED matrix.
-   Check if the pixel has passed through the gap. 
-   If it has, delay for 1.5 seconds to display the success, increase the game difficulty, and reset the pixel's position.
+   Aktualisieren Sie regelmäßig die Position des Pixels basierend auf den MPU6050-Sensorwerten.
+   Verschieben Sie regelmäßig die Position der Lücke.
+   Laden Sie das neue Pixel-Layout und rendern Sie es auf der LED-Matrix.
+   Überprüfen Sie, ob das Pixel durch die Lücke gegangen ist.
+   Wenn ja, warten Sie 1,5 Sekunden, um den Erfolg anzuzeigen, erhöhen Sie den Schwierigkeitsgrad des Spiels und setzen Sie die Pixelposition zurück.
 
-4. Other Functions:
+4. Weitere Funktionen:
 
-   * ``drawSquareWithGap()``: Draw an 8x8 border and create a gap within it.
-   * ``createGap()``: Create a gap of length 2 on the specified side.
-   * ``moveGap()``: Move the gap's position based on the current side and gapStart, changing the side when necessary.
-   * ``movePixelBasedOnMPU()``: Read acceleration data from MPU6050. Move the pixel's position based on the acceleration data (resetting if the pixel goes out of bounds or into walls).
-   * ``resetPixel()``: Reset the pixel's position to the center of the matrix.
-   * ``checkPixelPosition()``: Check if the pixel is on the gap. If it is, increase the game's difficulty level and set the pass flag to true.
+   * ``drawSquareWithGap()``: Zeichnen Sie einen 8x8-Rand und erstellen Sie eine Lücke darin.
+   * ``createGap()``: Erstellen Sie eine 2 Pixel lange Lücke auf der angegebenen Seite.
+   * ``moveGap()``: Verschieben Sie die Position der Lücke basierend auf der aktuellen Seite und gapStart und ändern Sie bei Bedarf die Seite.
+   * ``movePixelBasedOnMPU()``: Lesen Sie die Beschleunigungsdaten von MPU6050. Bewegen Sie die Pixelposition basierend auf den Beschleunigungsdaten (zurücksetzen, wenn das Pixel außerhalb der Grenzen oder in Wände geht).
+   * ``resetPixel()``: Setzen Sie die Pixelposition auf die Mitte der Matrix zurück.
+   * ``checkPixelPosition()``: Überprüfen Sie, ob sich das Pixel auf der Lücke befindet. Wenn ja, erhöhen Sie den Schwierigkeitsgrad des Spiels und setzen Sie das Pass-Flag auf wahr.
+

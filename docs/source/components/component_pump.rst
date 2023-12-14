@@ -1,34 +1,34 @@
 .. _cpn_pump:
 
-DC Water Pump
+DC-Wasserpumpe
 ================
 
 .. image:: img/pump.png
     :width: 40%
 
-This pump essentially functions as a DC motor, operating at a voltage of 3V and a current of 100mA. Upon powering, the pump draws water in from the bottom of its plastic casing and expels it from the outlet pipe. It must always be kept immersed in water to function properly. Reversing the polarity won't turn it into a water intake device; it will only pump water out!
+Diese Pumpe funktioniert im Wesentlichen wie ein Gleichstrommotor, der mit einer Spannung von 3V und einem Strom von 100mA betrieben wird. Bei Stromzufuhr saugt die Pumpe Wasser von unten in ihr Kunststoffgehäuse ein und stößt es aus dem Auslassrohr aus. Sie muss immer in Wasser eingetaucht sein, um ordnungsgemäß zu funktionieren. Eine Umkehrung der Polarität macht sie nicht zu einem Wassereinzugsgerät; sie pumpt lediglich Wasser aus!
 
-It's highly suitable for beginners to create a fountain or plant watering project using this submersible pump, as it is incredibly user-friendly!
-
-
-**Features**
-
-* **Voltage Scope**: DC 3 ~ 4.5V
-* **Operating Current**: 120 ~ 180mA
-* **Power**: 0.36 ~ 0.91W
-* **Max Water Head**: 0.35 ~ 0.55M
-* **Max Flow Rate**: 80 ~ 100 L/H
-* **Continuous Working Life**: 100 hours
-* **Water Fing Grade**: IP68
-* **Driving Mode**: DC, Magnetic Driving
-* **Material**: Engineering Plastic
-* **Outlet Outside Diameter**: 7.8 mm
-* **Outlet Inside Diameter**: 6.5 mm
-* It is a submersible pump and should be used that way. It tends to heat too much that there's a risk of overheating if you turn it on unsubmerged.
-* It comes with a 25cm male wire, allowing for easy insertion into a breadboard.
+Sie eignet sich hervorragend für Anfänger, um ein Springbrunnen- oder Pflanzenbewässerungsprojekt mit dieser Tauchpumpe zu realisieren, da sie unglaublich benutzerfreundlich ist!
 
 
-**Example**
+**Merkmale**
 
-* :ref:`basic_pump` (Basic Project)
-* :ref:`fun_plant_monitor` (Fun Project)
+* **Spannungsbereich**: DC 3 ~ 4,5V
+* **Betriebsstrom**: 120 ~ 180mA
+* **Leistung**: 0,36 ~ 0,91W
+* **Maximale Förderhöhe**: 0,35 ~ 0,55M
+* **Maximale Fördermenge**: 80 ~ 100 L/H
+* **Dauerbetriebsleben**: 100 Stunden
+* **Wasserdichtigkeitsgrad**: IP68
+* **Antriebsmodus**: DC, magnetischer Antrieb
+* **Material**: Technischer Kunststoff
+* **Außendurchmesser des Auslasses**: 7,8 mm
+* **Innendurchmesser des Auslasses**: 6,5 mm
+* Es ist eine Tauchpumpe und sollte auch so verwendet werden. Sie neigt dazu, zu überhitzen, weshalb es ein Risiko einer Überhitzung gibt, wenn Sie sie ungetaucht einschalten.
+* Sie kommt mit einem 25 cm langen männlichen Kabel, das eine einfache Einführung in ein Steckbrett ermöglicht.
+
+
+**Beispiel**
+
+* :ref:`basic_pump` (Grundprojekt)
+* :ref:`fun_plant_monitor` (Spaßprojekt)

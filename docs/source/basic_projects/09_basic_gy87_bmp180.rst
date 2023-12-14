@@ -4,37 +4,37 @@ BMP180
 ==========================
 
 
-Overview
+Überblick
 ---------------
 
-In this tutorial, we delve into the GY-87 IMU module, focusing on the BMP180 sensor for measuring temperature, pressure, and altitude. Ideal for applications like weather monitoring and altitude tracking, this lesson covers interfacing the GY-87 with an Arduino Uno and using the Adafruit BMP085 library. You'll learn how to initialize the BMP180 sensor and read its data on the Arduino Serial Monitor, a crucial skill for projects that require environmental data.
+In diesem Tutorial beschäftigen wir uns mit dem GY-87 IMU-Modul und konzentrieren uns auf den BMP180-Sensor zur Messung von Temperatur, Druck und Höhe. Ideal für Anwendungen wie Wetterüberwachung und Höhenverfolgung behandelt diese Lektion die Verbindung des GY-87 mit einem Arduino Uno und die Verwendung der Adafruit BMP085-Bibliothek. Sie lernen, wie Sie den BMP180-Sensor initialisieren und dessen Daten auf dem Arduino-Seriellen Monitor auslesen können, eine entscheidende Fähigkeit für Projekte, die Umweltdaten benötigen.
 
-Required Components
+Benötigte Komponenten
 -------------------------
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein komplettes Kit zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Name
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Sie können die Komponenten auch separat über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -44,7 +44,7 @@ You can also buy them separately from the links below.
         - \-
 
 
-Wiring
+Verdrahtung
 ----------------------
 
 .. image:: img/09-gy87_bb.png
@@ -56,7 +56,7 @@ Wiring
    <br/>
 
 
-Schematic Diagram
+Schaltplan
 -----------------------
 
 .. image:: img/09_basic_gy87_schematic.png
@@ -69,23 +69,23 @@ Code
 
 .. note::
 
-    * You can open the file ``09-gy87_bmp180.ino`` under the path of ``elite-explorer-kit-main\basic_project\09-gy87_bmp180`` directly.
-    * Or copy this code into Arduino IDE.
+    * Sie können die Datei ``09-gy87_bmp180.ino`` direkt unter dem Pfad ``elite-explorer-kit-main\basic_project\09-gy87_bmp180`` öffnen.
+    * Oder kopieren Sie diesen Code in die Arduino IDE.
 
 .. note:: 
-    To install the library, use the Arduino Library Manager and search for **"Adafruit BMP085 Library"** and install it. 
+    Um die Bibliothek zu installieren, verwenden Sie den Arduino Library Manager und suchen Sie nach **„Adafruit BMP085 Library“** und installieren Sie diese.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/7f7347f7-e1e6-400f-b10c-02ccf300b3b9/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-Code Analysis
+Code-Analyse
 ------------------------
 
 - ``initializeBMP180()``
 
-  Initialize the BMP180 sensor.
+  Initialisieren des BMP180-Sensors.
 
   .. code-block:: arduino
 
@@ -101,7 +101,7 @@ Code Analysis
 
 - ``printBMP180()``
 
-  Print the values ​​read by the BMP180 sensor.
+  Die vom BMP180-Sensor gelesenen Werte ausdrucken.
 
   .. code-block:: arduino
 

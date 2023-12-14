@@ -1,42 +1,42 @@
 .. _fun_digital_dice:
 
-Digital Dice
+Digitaler Würfel
 =======================================
 
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/videos/fun_projects/05_fun_dice.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      Ihr Browser unterstützt das Video-Tag nicht.
    </video>
 
-This code is designed to simulate a rolling dice using a 74HC595 shift register and a 7-segment digital display. The dice roll simulation is activated by directly shaking the tilt switch. Upon this action, the digital display cycles through random numbers between 1 and 6, simulating the rolling of a dice. After a brief interval, the display stops, showing a random number that signifies the outcome of the dice roll.
+Dieser Code ist darauf ausgelegt, einen rollenden Würfel mit einem 74HC595-Schieberegister und einer 7-Segment-Digitalanzeige zu simulieren. Die Würfelwurfsimulation wird durch direktes Schütteln des Neigungsschalters aktiviert. Bei dieser Aktion durchläuft die digitale Anzeige zufällige Zahlen zwischen 1 und 6, was das Rollen eines Würfels simuliert. Nach einer kurzen Pause stoppt die Anzeige und zeigt eine zufällige Zahl an, die das Ergebnis des Würfelwurfs darstellt.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Kit zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENVORSTELLUNG
+        - KAUF-LINK
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -53,7 +53,7 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_7segment`
         - |link_7segment_buy|
 
-**Wiring**
+**Verkabelung**
 
 .. image:: img/05_dice_bb.png
     :width: 80%
@@ -63,7 +63,7 @@ You can also buy them separately from the links below.
 
    <br/>
 
-**Schematic**
+**Schaltplan**
 
 .. image:: img/05_digital_dice_schematic.png
    :width: 100%
@@ -72,42 +72,43 @@ You can also buy them separately from the links below.
 
 .. note::
 
-    * You can open the file ``05_digital_dice.ino`` under the path of ``elite-explorer-kit-main\fun_project\05_digital_dice`` directly.
-    * Or copy this code into Arduino IDE.
+    * Sie können die Datei ``05_digital_dice.ino`` direkt unter dem Pfad ``elite-explorer-kit-main\fun_project\05_digital_dice`` öffnen.
+    * Oder kopieren Sie diesen Code in die Arduino IDE.
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/ff0528b0-a10d-49e8-8916-6cb1fdfdf9a2/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-**How it works?**
+**Wie funktioniert das?**
 
-Here's a detailed explanation of the code:
+Hier ist eine detaillierte Erklärung des Codes:
 
-1. Initialization of variables:
+1. Initialisierung von Variablen:
 
-   ``dataPin``, ``clockPin``, ``latchPin``: Pins for the 74HC595.
-   ``buttonPin``: The digital pin where the button is connected.
-   ``numbers[]``: An array to store the encoding representing numbers 1 through 6 on a common anode digital tube.
+   ``dataPin``, ``clockPin``, ``latchPin``: Pins für den 74HC595.
+   ``buttonPin``: Der digitale Pin, an den der Knopf angeschlossen ist.
+   ``numbers[]``: Ein Array, um die Kodierung zu speichern, die Zahlen 1 bis 6 auf einer gemeinsamen Anoden-Digitalröhre darstellt.
 
-2. Volatile variables:
+2. Flüchtige Variablen:
 
-   rolling: This is a volatile variable indicating whether the dice is currently rolling. 
-   It's declared as volatile since it's accessed both in the interrupt service routine and the main program.
+   rolling: Dies ist eine flüchtige Variable, die angibt, ob der Würfel gerade rollt. 
+   Sie wird als flüchtig deklariert, da sie sowohl in der Interrupt-Service-Routine als auch im Hauptprogramm verwendet wird.
 
 3. ``setup()``:
 
-   Set the modes for the relevant pins.
-   Set the input mode for the button using the internal pull-up resistor.
-   Assign an interrupt to the button, which calls the rollDice function when the button's state changes.
+   Setzen Sie die Modi für die relevanten Pins.
+   Stellen Sie den Eingangsmodus für den Knopf unter Verwendung des internen Pull-Up-Widerstands ein.
+   Weisen Sie dem Knopf einen Interrupt zu, der die Funktion rollDice aufruft, wenn sich der Zustand des Knopfes ändert.
 
 4. ``loop()``:
 
-   It checks if rolling is true. If it is, it continues to display a random number between 1 and 6. If the button has been pressed for more than 500 milliseconds, the rolling stops.
+   Es wird überprüft, ob rolling wahr ist. Wenn ja, wird weiterhin eine zufällige Zahl zwischen 1 und 6 angezeigt. Wenn der Knopf länger als 500 Millisekunden gedrückt wurde, stoppt das Rollen.
 
 5. ``rollDice()``:
 
-   This is the interrupt service routine for the button. It checks if the button is pressed (low level). If it is, the current time is recorded and the rolling begins.
+   Dies ist die Interrupt-Service-Routine für den Knopf. Es wird überprüft, ob der Knopf gedrückt ist (niedriges Niveau). Wenn ja, wird die aktuelle Zeit aufgezeichnet und das Rollen beginnt.
 
 6. ``displayNumber()``:
 
-   This function displays a number on the digital tube. It sends the number to the digital tube through the 74HC595 shift register.
+   Diese Funktion zeigt eine Zahl auf der Digitalröhre an. Sie sendet die Zahl über den 74HC595-Schieberegister an die Digitalröhre.
+

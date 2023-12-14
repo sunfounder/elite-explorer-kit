@@ -1,6 +1,6 @@
 .. _basic_irrecv:
 
-Infrared Receiver
+Infrarot-Empfänger
 ==========================
 
 .. https://docs.sunfounder.com/projects/uno-mega-kit/en/latest/uno/infrared_Receiver_uno.html#receive-uno
@@ -8,37 +8,37 @@ Infrared Receiver
 .. https://docs.sunfounder.com/projects/r4-basic-kit/en/latest/projects/infrared_Receiver_uno.html#receive-uno
 
 
-Overview
+Überblick
 ------------------
 
-An infrared-receiver is a component that receives infrared signals and can independently receive infrared ray and output signals compatible with TTL level. It's similar with a normal plastic-packaged transistor in size and it is suitable for all kinds of infrared remote control and infrared transmission.
+Ein Infrarot-Empfänger ist eine Komponente, die Infrarotsignale empfängt und unabhängig Infrarotstrahlen empfangen und Signale ausgeben kann, die mit TTL-Pegel kompatibel sind. Er ähnelt in der Größe einem normalen, in Kunststoff verpackten Transistor und eignet sich für alle Arten von Infrarot-Fernbedienungen und Infrarot-Übertragungen.
 
-Required Components
+Benötigte Komponenten
 -------------------------
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Set zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -52,7 +52,7 @@ You can also buy them separately from the links below.
         - |link_receiver_buy|
 
 
-Wiring
+Verdrahtung
 ----------------------
 
 .. image:: img/22-ir_receiver_bb.png
@@ -60,7 +60,7 @@ Wiring
     :width: 80%
 
 
-Schematic Diagram
+Schaltplan
 ---------------------
 
 .. image:: img/22_irrecv_schematic.png
@@ -72,29 +72,29 @@ Code
 
 .. note::
 
-    * You can open the file ``22-ir_receiver.ino`` under the path of ``elite-explorer-kit-main\basic_project\22-ir_receiver`` directly.
-    * Or copy this code into Arduino IDE.
+    * Sie können die Datei ``22-ir_receiver.ino`` direkt im Pfad ``elite-explorer-kit-main\basic_project\22-ir_receiver`` öffnen.
+    * Oder kopieren Sie diesen Code in die Arduino IDE.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/92e1cb75-cda1-4fc7-9680-28e28df8dccc/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-* The ``IRremote`` library is used here, you can install it from the **Library Manager**.
+* Hier wird die ``IRremote`` Bibliothek verwendet, die Sie über den **Library Manager** installieren können.
 
     .. image:: img/22_irrecv_lib.png
         :align: center
 
 .. Note::
 
-    * There is a transparent plastic piece at the back of the remote control to cut off the power and pull it out before you use the remote control.
+    * An der Rückseite der Fernbedienung befindet sich ein transparentes Kunststoffteil, um die Stromzufuhr zu unterbrechen. Ziehen Sie es heraus, bevor Sie die Fernbedienung benutzen.
 
 
-Code Analysis
+Code-Analyse
 ---------------------
 
-This code is designed to work with an infrared (IR) remote control using the ``IRremote`` library. Here's the breakdown:
+Dieser Code ist für die Verwendung mit einer Infrarot (IR) Fernbedienung und der ``IRremote`` Bibliothek konzipiert. Hier ist die Aufschlüsselung:
 
-#. Including the library and defining constants. First, the IRremote library is included, and the pin number for the IR receiver is defined as 2.
+#. Einbinden der Bibliothek und Definieren von Konstanten. Zunächst wird die IRremote Bibliothek eingebunden, und die Pinnummer für den IR-Empfänger wird als 2 definiert.
 
    .. code-block:: cpp
  
@@ -102,7 +102,7 @@ This code is designed to work with an infrared (IR) remote control using the ``I
      const int IR_RECEIVE_PIN = 2;
 
 
-#. Initializes serial communication at a baud rate of 9600. Initializes the IR receiver on the specified pin (``IR_RECEIVE_PIN``) and enables LED feedback (if applicable).
+#. Initialisiert die serielle Kommunikation mit einer Baudrate von 9600. Initialisiert den IR-Empfänger am angegebenen Pin (``IR_RECEIVE_PIN``) und aktiviert die LED-Rückmeldung (falls zutreffend).
 
    .. code-block:: arduino
 
@@ -111,7 +111,7 @@ This code is designed to work with an infrared (IR) remote control using the ``I
            IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK);  // Start the IR receiver
        }
 
-#. The loop runs continuously to process incoming IR remote signals.
+#. Die Schleife läuft kontinuierlich, um eingehende IR-Fernbedienungssignale zu verarbeiten.
 
    .. code-block:: arduino
 
@@ -126,16 +126,16 @@ This code is designed to work with an infrared (IR) remote control using the ``I
         }
       }
    
-   * Checks if an IR signal is received and successfully decoded.
-   * Decodes the IR command and stores it in ``decodedValue`` using a custom ``decodeKeyValue()`` function.
-   * Prints the decoded IR value to the serial monitor.
-   * Resumes IR signal reception for the next signal.
+   * Überprüft, ob ein IR-Signal empfangen und erfolgreich decodiert wurde.
+   * Decodiert den IR-Befehl und speichert ihn in ``decodedValue`` mit einer benutzerdefinierten Funktion ``decodeKeyValue()``.
+   * Druckt den decodierten IR-Wert auf den seriellen Monitor.
+   * Setzt den IR-Signalempfang für das nächste Signal fort.
 
    .. raw:: html
 
         <br/>
 
-#. Helper function to map received IR signals to corresponding keys
+#. Hilfsfunktion, um empfangene IR-Signale den entsprechenden Tasten zuzuordnen
 
    .. image:: img/22_irrecv_key.png
       :align: center

@@ -3,37 +3,37 @@
 Motor
 ==========================
 
-Overview
---------
+Überblick
+--------------
 
-In this lesson, you will learn how to use Motor, the working principle of which is that the energized coil is forced to rotate in the magnetic field then the rotor of the motor rotates accordingly on which the pinion gear drives the engine flywheel to rotate.1
+In dieser Lektion lernen Sie, wie man einen Motor verwendet, dessen Arbeitsprinzip darauf beruht, dass die stromdurchflossene Spule im Magnetfeld zur Rotation gezwungen wird und somit der Rotor des Motors entsprechend rotiert, wodurch das Ritzelrad das Schwungrad des Motors antreibt.
 
-Required Components
--------------------
+Benötigte Komponenten
+-----------------------
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Set zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -48,10 +48,10 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_power`
         - \-
 
-Wiring
+Verdrahtung
 ----------------------
 
-In this example, we use Power Supply Module to power the anode and cathode of breadboard.
+In diesem Beispiel verwenden wir das Power Supply Module, um die Anode und Kathode des Breadboards zu versorgen.
 
 .. image:: img/24-motor_bb.png
     :align: center
@@ -61,7 +61,7 @@ In this example, we use Power Supply Module to power the anode and cathode of br
   
   <br/> 
 
-Schematic Diagram
+Schaltplan
 -----------------
 
 .. image:: img/24_motor_schematic.png
@@ -77,22 +77,21 @@ Code
 
 .. note::
 
-    * You can open the file ``24-motor.ino`` under the path of ``elite-explorer-kit-main\basic_project\24-motor`` directly.
-    * Or copy this code into Arduino IDE.
+    * Sie können die Datei ``24-motor.ino`` direkt im Pfad ``elite-explorer-kit-main\basic_project\24-motor`` öffnen.
+    * Oder kopieren Sie diesen Code in die Arduino IDE.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/7376df09-204d-4698-b2a6-106e2d2f00e6/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After uploading the code to the UNO board, you can choose the motor's rotation direction by typing "A" or "B" in the serial monitor.
+Nachdem der Code auf das UNO-Board hochgeladen wurde, können Sie die Drehrichtung des Motors wählen, indem Sie „A“ oder „B“ im seriellen Monitor eingeben.
 
 
-Code Analysis
+Code-Analyse
 --------------------------
 
-
-The motor can be driven by providing a voltage difference between the copper sheets at both sides of the motor. 
-Therefore, you only need to write 0 for the voltage of one side of the copper sheet and 5V for the other side. Modify the written analog signal value to adjust the direction and speed.
+Der Motor kann angetrieben werden, indem man eine Spannungsdifferenz zwischen den Kupferplatten auf beiden Seiten des Motors herstellt.
+Daher müssen Sie nur 0 für die Spannung einer Seite der Kupferplatte und 5V für die andere Seite schreiben. Modifizieren Sie den geschriebenen analogen Signalwert, um die Richtung und Geschwindigkeit anzupassen.
 
 .. code-block:: arduino
 
@@ -108,10 +107,10 @@ Therefore, you only need to write 0 for the voltage of one side of the copper sh
      analogWrite(motorFI, 0);
    }
 
-In this example, Serial.Read() is used to control the direction of motor. 
+In diesem Beispiel wird Serial.Read() verwendet, um die Richtung des Motors zu steuern.
 
-When you type \'A\' in serial monitor, there calls the clockwise (255) function to make the motor rotate with the speed of 255.
-Input \'B\', and the motor will rotate in reverse direction.
+Wenn Sie „A“ im seriellen Monitor eingeben, wird die Funktion clockwise (255) aufgerufen, damit sich der Motor mit der Geschwindigkeit von 255 dreht.
+Geben Sie „B“ ein, und der Motor dreht sich in die entgegengesetzte Richtung.
 
 .. code-block:: arduino
 

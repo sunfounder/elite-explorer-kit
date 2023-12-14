@@ -1,59 +1,56 @@
-How to upload Sketch to the Board?
+Wie man einen Sketch auf das Board hochlädt?
 =============================================
 
-In this section, you will learn how to upload the sketch created previously to the Arduino board, as well as learn about some considerations.
+In diesem Abschnitt lernen Sie, wie Sie den zuvor erstellten Sketch auf das Arduino-Board hochladen, sowie einige wichtige Überlegungen.
 
-**1. Choose Board and port**
+**1. Wählen Sie Board und Port aus**
 
-Arduino development boards usually come with a USB cable. You can use it to connect the board to your computer.
+Arduino-Entwicklungsboards werden normalerweise mit einem USB-Kabel geliefert. Sie können es verwenden, um das Board mit Ihrem Computer zu verbinden.
 
-Select the correct **Board** and **Port** in the Arduino IDE. Normally, Arduino boards are recognized automatically by the computer and assigned a port, so you can select it here.
+Wählen Sie das richtige **Board** und den richtigen **Port** in der Arduino IDE aus. Normalerweise werden Arduino-Boards automatisch vom Computer erkannt und einem Port zugewiesen, sodass Sie ihn hier auswählen können.
 
     .. image:: img/04_upload_1.png
         :width: 90%
 
+Wenn Ihr Board bereits angeschlossen ist, aber nicht erkannt wird, überprüfen Sie, ob das **INSTALLED**-Logo im Abschnitt **Arduino UNO R4 Boards** des **Boards Manager** erscheint. Wenn nicht, scrollen Sie bitte etwas nach unten und klicken Sie auf **INSTALL**.
 
-If your board is already plugged in, but not recognized, check if the **INSTALLED** logo appears in the **Arduino UNO R4 Boards** section of the **Boards Manager**, if not, please scroll down a bit and click on **INSTALL**.
-
-Search **"UNO R4"** in **Boards Manager** and check if the corresponding library is installed.
+Suchen Sie **„UNO R4“** im **Boards Manager** und überprüfen Sie, ob die entsprechende Bibliothek installiert ist.
 
     .. image:: img/04_upload_2.png
         :width: 90%
 
-Reopening the Arduino IDE and re-plugging the Arduino board will fix most of the problems. You can also click **Tools** -> **Board** or **Port** to select them.
+Das Neueröffnen der Arduino IDE und das erneute Anschließen des Arduino-Boards beheben die meisten Probleme. Sie können auch **Tools** -> **Board** oder **Port** anklicken, um sie auszuwählen.
 
+**2. Überprüfen Sie den Sketch**
 
-**2. Verify the Sketch**
-
-After clicking the Verify button, the sketch will be compiled to see if there are any errors.
+Nachdem Sie auf die Schaltfläche Überprüfen geklickt haben, wird der Sketch kompiliert, um zu sehen, ob Fehler vorliegen.
 
     .. image:: img/04_upload_3.png
         :width: 90%
 
-You can use it to find mistakes if you delete some characters or type a few letters by mistake. From the message bar, you can see where and what type of errors occurred. 
+Sie können es verwenden, um Fehler zu finden, wenn Sie einige Zeichen löschen oder versehentlich einige Buchstaben eingeben. In der Nachrichtenleiste können Sie sehen, wo und welche Art von Fehlern aufgetreten sind.
 
     .. image:: img/04_upload_4.png
         :width: 90%
 
-If there are no errors, you will see a message like the one below.
+Wenn keine Fehler vorhanden sind, sehen Sie eine Nachricht wie die folgende.
 
     .. image:: img/04_upload_5.png
         :width: 90%
 
+**3. Sketch hochladen**
 
-**3. Upload sketch**
-
-After completing the above steps, click the **Upload** button to upload this sketch to the board.
+Nachdem Sie die obigen Schritte abgeschlossen haben, klicken Sie auf die Schaltfläche **Upload**, um diesen Sketch auf das Board zu laden.
 
     .. image:: img/04_upload_6.png
         :width: 90%
 
-If successful, you will be able to see the following prompt.
+Wenn es erfolgreich ist, können Sie die folgende Aufforderung sehen.
 
     .. image:: img/04_upload_7.png
         :width: 90%
 
-At the same time, the on-board LED blink.
+Gleichzeitig blinkt die LED auf dem Board.
 
 .. image:: img/04_upload_8.png
     :width: 400
@@ -63,8 +60,5 @@ At the same time, the on-board LED blink.
     
     <br/>
 
-The Arduino board will automatically run the sketch after power is applied after the sketch is uploaded. The running program can be overwritten by uploading a new sketch.
-
-
-
+Das Arduino-Board führt den Sketch automatisch aus, nachdem er hochgeladen wurde und das Board mit Strom versorgt wird. Das laufende Programm kann durch Hochladen eines neuen Sketches überschrieben werden.
 

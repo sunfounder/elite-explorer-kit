@@ -1,42 +1,42 @@
 .. _fun_light_array:
 
-Light-sensitive Array
+Lichtempfindliches Array
 ==========================================
 
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/videos/fun_projects/04_fun_lightarray.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      Ihr Browser unterstützt das Video-Tag nicht.
    </video>
 
-This program converts the readings from a light-dependent resistor into a corresponding number of illuminated LED lights, creating a simple indicator of light brightness.
+Dieses Programm wandelt die Messwerte eines lichtabhängigen Widerstands in eine entsprechende Anzahl beleuchteter LED-Lichter um und schafft so einen einfachen Indikator für die Helligkeit des Lichts.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Kit zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENVORSTELLUNG
+        - KAUF-LINK
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -52,7 +52,7 @@ You can also buy them separately from the links below.
         - |link_photoresistor_buy|
 
 
-**Wiring**
+**Verdrahtung**
 
 .. image:: img/04_light_sensitive_array_bb.png
     :width: 70%
@@ -62,7 +62,7 @@ You can also buy them separately from the links below.
 
    <br/>
 
-**Schematic**
+**Schaltplan**
 
 .. image:: img/04_light_sensitive_array_schematic.png
    :width: 60%
@@ -71,35 +71,36 @@ You can also buy them separately from the links below.
 
 .. note::
 
-    * You can open the file ``04_light_sensitive_array.ino`` under the path of ``elite-explorer-kit-main\fun_project\04_light_sensitive_array`` directly.
-    * Or copy this code into Arduino IDE.
+    * Sie können die Datei ``04_light_sensitive_array.ino`` direkt unter dem Pfad ``elite-explorer-kit-main\fun_project\04_light_sensitive_array`` öffnen.
+    * Oder kopieren Sie diesen Code in die Arduino IDE.
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/9da7af57-c002-41a0-bc84-372e91885d52/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-**How it works?**
+**Wie funktioniert das?**
 
-Here's a step-by-step explanation of the code:
+Hier ist eine schrittweise Erklärung des Codes:
 
-1. Constant and Variable Definitions:
+1. Konstanten- und Variablendefinitionen:
 
-   ``NbrLEDs``: Defines the presence of 8 LEDs.
-   ``ledPins[]``: LEDs are connected to Arduino pins 5 to 12.
-   ``photocellPin``: The photoresistor is connected to Arduino's A0 pin.
-   ``sensorValue``: This variable stores the value read from the photoresistor.
-   ``ledLevel``: This variable stores the number of LEDs based on the sensorValue conversion.
+   ``NbrLEDs``: Definiert die Anwesenheit von 8 LEDs.
+   ``ledPins[]``: LEDs sind an die Arduino-Pins 5 bis 12 angeschlossen.
+   ``photocellPin``: Der Fotowiderstand ist an den A0-Pin des Arduino angeschlossen.
+   ``sensorValue``: Diese Variable speichert den vom Fotowiderstand gelesenen Wert.
+   ``ledLevel``: Diese Variable speichert die Anzahl der LEDs basierend auf der Umwandlung des sensorValue.
 
 2. ``setup()``:
 
-   Configures pins 5 to 12 as output to drive the LEDs.
+   Konfiguriert die Pins 5 bis 12 als Ausgang, um die LEDs anzusteuern.
 
 3. ``loop()``:
 
-   Reads the analog value of the photoresistor from pin A0, typically ranging from 0 to 1023.
-   Uses the map function to map the photoresistor's value from the range 300-1023 to the range 0-8.
-   This means that if the reading from the light-dependent resistor is 300, no LEDs will be lit;
-   if the reading is 1023 or higher, all 8 LEDs will be lit.
+   Liest den analogen Wert des Fotowiderstands vom Pin A0, typischerweise im Bereich von 0 bis 1023.
+   Verwendet die Funktion map, um den Wert des Fotowiderstands von 300-1023 auf den Bereich 0-8 abzubilden.
+   Das bedeutet, dass, wenn die Messung des lichtabhängigen Widerstands 300 beträgt, keine LEDs leuchten werden;
+   wenn die Messung 1023 oder höher ist, werden alle 8 LEDs leuchten.
    
-   The subsequent for loop checks each LED. If its index is less than ledLevel,
-   the LED will be turned on; otherwise, it will be turned off.
+   Die nachfolgende for-Schleife überprüft jede LED. Wenn ihr Index kleiner als ledLevel ist,
+   wird die LED eingeschaltet; andernfalls wird sie ausgeschaltet.
+

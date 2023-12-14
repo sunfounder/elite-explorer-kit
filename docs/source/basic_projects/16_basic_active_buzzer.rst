@@ -1,48 +1,48 @@
 .. _basic_active_buzzer:
 
-Active Buzzer
+Aktiver Summer
 ==========================
 
 .. https://docs.sunfounder.com/projects/3in1-kit-r4/en/latest/basic_project/ar_active_buzzer.html#ar-beep
 
-Overview
+Überblick
 ---------------
 
-The active buzzer is a typical digital output device that is as easy to use as lighting up an LED!
+Der aktive Summer ist ein typisches digitales Ausgabegerät, das genauso einfach zu verwenden ist wie das Aufleuchten einer LED!
 
-Two types of buzzers are included in the kit. 
-We need to use active buzzer. Turn them around, the sealed back (not the exposed PCB) is the one we want.
+Das Kit enthält zwei Arten von Summern. 
+Wir müssen den aktiven Summer verwenden. Drehen Sie sie um, die versiegelte Rückseite (nicht die offene Leiterplatte) ist die, die wir benötigen.
 
 .. image:: img/16_buzzer.png
     :align: center
     :width: 70%
 
-Required Components
+Benötigte Komponenten
 -------------------------
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein komplettes Kit zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Name
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Sie können die Komponenten auch separat über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -57,17 +57,17 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_buzzer`
         - \-
 
-Wiring
+Verdrahtung
 ----------------------
 
 .. note::
-    When connecting the buzzer, make sure to check its pins. The longer pin is the anode and the shorter one is the cathode. It's important not to mix them up, as doing so will prevent the buzzer from producing any sound.
+    Beim Anschließen des Summers achten Sie darauf, seine Pins zu überprüfen. Der längere Pin ist die Anode und der kürzere die Kathode. Es ist wichtig, sie nicht zu verwechseln, da sonst der Summer keinen Ton erzeugen wird.
 
 .. image:: img/16-active_buzzer_bb.png
     :align: center
     :width: 70%
 
-Schematic Diagram
+Schaltplan
 -----------------------
 
 .. image:: img/16_active_buzzer_schematic.png
@@ -79,11 +79,11 @@ Code
 
 .. note::
 
-    * You can open the file ``16-active_buzzer.ino`` under the path of ``elite-explorer-kit-main\basic_project\16-active_buzzer`` directly.
-    * Or copy this code into Arduino IDE.
+    * Sie können die Datei ``16-active_buzzer.ino`` direkt unter dem Pfad ``elite-explorer-kit-main\basic_project\16-active_buzzer`` öffnen.
+    * Oder kopieren Sie diesen Code in die Arduino IDE.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/bde4fd5c-8848-49cd-898f-8a824c836b80/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After the code is uploaded successfully, you will hear a beep every second.
+Nachdem der Code erfolgreich hochgeladen wurde, hören Sie jede Sekunde einen Piepton.

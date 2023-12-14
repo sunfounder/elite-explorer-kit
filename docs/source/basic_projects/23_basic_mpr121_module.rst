@@ -6,37 +6,37 @@ MPR121
 .. https://docs.sunfounder.com/projects/vincent-kit/en/latest/arduino/2.24_mpr121_module.html#ar-mpr121
 
 
-Overview
+Überblick
 ---------------
 
-In this lesson, you will learn how to use MPR121. It's a good option when you want to add a lot of touch switches to your project. The electrode of MPR121 can be extended with a conductor. If you connect a wire to a banana, you can turn the banana into a touch switch, thus realizing projects such as fruit piano.
+In dieser Lektion lernen Sie, wie man MPR121 verwendet. Es ist eine gute Wahl, wenn Sie viele Berührungsschalter zu Ihrem Projekt hinzufügen möchten. Die Elektrode des MPR121 kann mit einem Leiter verlängert werden. Wenn Sie einen Draht an eine Banane anschließen, können Sie die Banane in einen Berührungsschalter verwandeln und so Projekte wie ein Fruchtpiano realisieren.
 
-Required Components
+Benötigte Komponenten
 -------------------------
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Set zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -47,19 +47,19 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_mpr121`
         - \-
 
-Wiring
+Verdrahtung
 ----------------------
 
-In this example, we insert MPR121 into the breadboard. Get the GND of MPR121 connected to GND, 3.3V to 3V3, IRQ to the digital pin 2, SCL to the pin SCL(A5), and SDA to the pin SDA(A4). There are 12 electrodes for touch sensing. 
+In diesem Beispiel setzen wir MPR121 in das Breadboard ein. Verbinden Sie GND von MPR121 mit GND, 3.3V mit 3V3, IRQ mit dem digitalen Pin 2, SCL mit dem Pin SCL(A5) und SDA mit dem Pin SDA(A4). Es gibt 12 Elektroden für die Berührungserkennung.
 
 .. note::
-    MPR121 is powered by 3.3V, not 5V.
+    MPR121 wird mit 3.3V betrieben, nicht mit 5V.
 
 .. image:: img/23-mpr121_bb.png
     :align: center
     :width: 70%
 
-Schematic Diagram
+Schaltplan
 ----------------------
 
 .. image:: img/23_mpr121_schematic.png
@@ -71,8 +71,8 @@ Code
 
 .. note::
 
-    * You can open the file ``23-mpr121.ino`` under the path of ``elite-explorer-kit-main\basic_project\23-mpr121`` directly.
-    * The ``Adafruit MPR121`` library is used here, you can install it from the **Library Manager**.
+    * Sie können die Datei ``23-mpr121.ino`` direkt im Pfad ``elite-explorer-kit-main\basic_project\23-mpr121`` öffnen.
+    * Hier wird die ``Adafruit MPR121`` Bibliothek verwendet, die Sie über den **Library Manager** installieren können.
 
         .. image:: img/22_mpr121_lib.png
             :align: center
@@ -81,25 +81,25 @@ Code
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/de0aa390-de85-43ab-87f7-f380c67c65e8/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After uploading the code to the UNO board, the touch state of pins MPR121 "1" and "0" will be recorded in a 12-bit boolean array. This array will then be printed on the serial monitor.
+Nachdem der Code auf das UNO-Board hochgeladen wurde, wird der Berührungszustand der MPR121-Pins „1“ und „0“ in einem 12-Bit-Boolean-Array erfasst. Dieses Array wird dann auf dem seriellen Monitor ausgegeben.
 
-Code Analysis
+Code-Analyse
 --------------------
-This code facilitates communication and operation of the MPR121 touch sensor. It can detect the status of touch electrodes and print information about touched or released electrodes on the serial interface. If detailed sensor data is required, the relevant code can be uncommented.
+Dieser Code ermöglicht die Kommunikation und Bedienung des MPR121-Berührungssensors. Er kann den Status von Berührungselektroden erkennen und Informationen über berührte oder freigegebene Elektroden auf der seriellen Schnittstelle ausgeben. Wenn detaillierte Sensordaten erforderlich sind, kann der entsprechende Code auskommentiert werden.
 
-Here's an analysis of the code:
+Hier eine Analyse des Codes:
 
-#. Import Libraries:
+#. Bibliotheken importieren:
 
    .. code-block:: arduino
 
        #include <Wire.h>
        #include "Adafruit_MPR121.h"
 
-   * ``Wire.h``: Used for I2C communication.
-   * ``Adafruit_MPR121.h``: Adafruit's MPR121 library for operating the MPR121 touch sensor.
+   * ``Wire.h``: Wird für die I2C-Kommunikation verwendet.
+   * ``Adafruit_MPR121.h``: Adafruits MPR121-Bibliothek zur Bedienung des MPR121-Berührungssensors.
 
-#. Define the ``_BV`` Macro:
+#. Die Makro ``_BV`` definieren:
 
    .. code-block:: arduino
 
@@ -107,19 +107,19 @@ Here's an analysis of the code:
        #define _BV(bit) (1 << (bit)) 
        #endif
    
-   ``_BV(bit)`` defines a macro that converts a given bit into the corresponding binary value, similar to 1 << bit.
+   ``_BV(bit)`` definiert ein Makro, das einen gegebenen Bit in den entsprechenden Binärwert umwandelt, ähnlich wie 1 << bit.
 
-#. Initialize ``Adafruit_MPR121`` Class Instance:
+#. Instanz der Klasse ``Adafruit_MPR121`` initialisieren:
 
    .. code-block:: arduino
 
        Adafruit_MPR121 cap = Adafruit_MPR121();
 
-   Create an instance of the ``Adafruit_MPR121`` class named ``cap``. The ``cap`` object will be used to communicate with and operate the MPR121 touch sensor.
+   Erstellen Sie eine Instanz der Klasse ``Adafruit_MPR121`` namens ``cap``. Das Objekt ``cap`` wird verwendet, um mit dem MPR121-Berührungssensor zu kommunizieren und ihn zu bedienen.
 
-#. ``setup()`` Function:
+#. Funktion ``setup()``:
 
-   Initialize serial communication at a baud rate of 9600. then initialize the MPR121 touch sensor with the default I2C address of 0x5A. If initialization fails, print an error message and enter an infinite loop.
+   Initialisieren Sie die serielle Kommunikation mit einer Baudrate von 9600. Dann initialisieren Sie den MPR121-Berührungssensor mit der Standard-I2C-Adresse 0x5A. Falls die Initialisierung fehlschlägt, geben Sie eine Fehlermeldung aus und treten Sie in eine Endlosschleife ein.
 
    .. code-block:: arduino
 
@@ -141,16 +141,16 @@ Here's an analysis of the code:
            Serial.println("MPR121 found!");
        }
 
-#. ``loop()`` Function:
+#. Funktion ``loop()``:
 
-   * Obtain the current touch status, returned as a 16-bit integer.
+   * Ermitteln Sie den aktuellen Berührungsstatus, der als 16-Bit-Integer zurückgegeben wird.
 
 
      .. code-block:: arduino
 
          currtouched = cap.touched();
 
-   * Iterate through the status of 12 electrodes (numbered from 0 to 11).
+   * Durchlaufen Sie den Status der 12 Elektroden (nummeriert von 0 bis 11).
 
      .. code-block:: arduino
 
@@ -165,16 +165,16 @@ Here's an analysis of the code:
              }
          }
 
-     * If an electrode is touched and wasn't touched before, print "x touched," where x is the electrode number.
-     * If an electrode was touched before but is not touched now, print "x released."
+     * Wenn eine Elektrode berührt wird und vorher nicht berührt wurde, drucken Sie „x berührt“, wobei x die Nummer der Elektrode ist.
+     * Wenn eine Elektrode vorher berührt wurde, aber jetzt nicht mehr berührt wird, drucken Sie „x freigegeben“.
 
-   * Update ``lasttouched`` to store the current touch status for comparison in the next iteration.
+   * Aktualisieren Sie ``lasttouched``, um den aktuellen Berührungsstatus für den Vergleich in der nächsten Iteration zu speichern.
 
      .. code-block:: arduino
 
          lasttouched = currtouched;
 
-   * Debugging Information (Optional Section):
+   * Debugging-Informationen (Optional):
 
      .. code-block:: arduino
 

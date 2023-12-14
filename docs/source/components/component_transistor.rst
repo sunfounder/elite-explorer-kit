@@ -6,25 +6,25 @@ Transistor
 .. image:: img/npn_pnp.png
     :width: 300
 
-Transistor is a semiconductor device that controls current by current. It functions by amplifying weak signal to larger amplitude signal and is also used for non-contact switch. 
+Ein Transistor ist ein Halbleitergerät, das den Strom durch Strom steuert. Seine Funktion besteht darin, schwache Signale in Signale mit größerer Amplitude zu verstärken und wird auch als kontaktloser Schalter verwendet.
 
-A transistor is a three-layer structure composed of P-type and N-type semiconductors. They form the three regions internally. The thinner in the middle is the base region; the other two are both N-type or P-type ones – the smaller region with intense majority carriers is the emitter region, when the other one is the collector region. This composition enables the transistor to be an amplifier. 
-From these three regions, three poles are generated respectively, which are base (b), emitter (e), and collector (c). They form two P-N junctions, namely, the emitter junction and collection junction. The direction of the arrow in the transistor circuit symbol indicates that of the emitter junction. 
+Ein Transistor ist eine dreischichtige Struktur, die aus P-Typ- und N-Typ-Halbleitern besteht. Diese bilden intern drei Regionen. Die dünnere in der Mitte ist die Basisregion; die anderen beiden sind entweder N-Typ oder P-Typ – die kleinere Region mit intensiven Majoritätsträgern ist die Emitterregion, während die andere die Kollektorregion ist. Diese Zusammensetzung ermöglicht es dem Transistor, als Verstärker zu fungieren.
+Aus diesen drei Regionen entstehen jeweils drei Pole, die Basis (b), Emitter (e) und Kollektor (c) genannt werden. Sie bilden zwei P-N-Übergänge, nämlich den Emitterübergang und den Kollektorübergang. Die Richtung des Pfeils im Transistorschaltungssymbol gibt die des Emitterübergangs an.
 
-* `P–N junction - Wikipedia <https://en.wikipedia.org/wiki/P-n_junction>`_
+* `P-N-Übergang – Wikipedia <https://en.wikipedia.org/wiki/P-n_junction>`_
 
-Based on the semiconductor type, transistors can be divided into two groups, the NPN and PNP ones. From the abbreviation, we can tell that the former is made of two N-type semiconductors and one P-type and that the latter is the opposite. See the figure below. 
+Basierend auf dem Halbleitertyp können Transistoren in zwei Gruppen eingeteilt werden, die NPN- und PNP-Typen. Aus der Abkürzung können wir entnehmen, dass die ersteren aus zwei N-Typ-Halbleitern und einem P-Typ bestehen und dass die letzteren das Gegenteil sind. Siehe die Abbildung unten.
 
 .. note::
-    s8550 is PNP transistor and the s8050 is the NPN one, They look very similar, and we need to check carefully to see their labels.
+    Der s8550 ist ein PNP-Transistor und der s8050 ist der NPN-Typ. Sie sehen sehr ähnlich aus, und wir müssen sorgfältig prüfen, um ihre Etiketten zu sehen.
 
 
 .. image:: img/transistor_symbol.png
     :width: 600
 
-When a High level signal goes through an NPN transistor, it is energized. But a PNP one needs a Low level signal to manage it. Both types of transistor are frequently used for contactless switches, just like in this experiment.
+Wenn ein High-Level-Signal durch einen NPN-Transistor fließt, wird er aktiviert. Ein PNP-Typ benötigt jedoch ein Low-Level-Signal zur Steuerung. Beide Transistortypen werden häufig für kontaktlose Schalter verwendet, wie in diesem Experiment.
 
-Put the label side facing us and the pins facing down. The pins from left to right are emitter(e), base(b), and collector(c).
+Stellen Sie den Transistor mit der Etikettenseite zu uns und den Pins nach unten. Die Pins von links nach rechts sind Emitter(e), Basis(b) und Kollektor(c).
 
 .. image:: img/ebc.png
     :width: 150
@@ -33,8 +33,9 @@ Put the label side facing us and the pins facing down. The pins from left to rig
 * |link_s8050_datasheet|
 * |link_s8550_datasheet|
 
-**Example**
+**Beispiel**
 
-* :ref:`basic_relay` (Basic Project)
-* :ref:`basic_active_buzzer` (Basic Project)
-* :ref:`basic_passive_buzzer` (Basic Project)
+* :ref:`basic_relay` (Grundprojekt)
+* :ref:`basic_active_buzzer` (Grundprojekt)
+* :ref:`basic_passive_buzzer` (Grundprojekt)
+

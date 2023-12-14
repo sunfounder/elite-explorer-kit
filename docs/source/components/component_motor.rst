@@ -1,35 +1,35 @@
 .. _cpn_motor:
 
-DC Motor
+Gleichstrommotor
 ===================
 
 .. image:: img/motor.jpeg
     :align: center
 
-This is a 3V DC motor. When you give a high level and a low level to each of the 2 terminals, it will rotate.
+Dies ist ein 3V Gleichstrommotor. Wenn Sie an jeden der 2 Anschlüsse ein hohes und ein niedriges Niveau anlegen, wird er sich drehen.
 
-* **Length**: 25mm
-* **Diameter**: 21mm
-* **Shaft Diameter**: 2mm
-* **Shaft Length**: 8mm
-* **Voltage**: 3-6V
-* **Current**: 0.35-0.4A
-* **Speed at 3V**: 19000 RPM (Rotations Per Minute)
-* **Weight**: Approximately 14g (for one unit)
+* **Länge**: 25mm
+* **Durchmesser**: 21mm
+* **Wellendurchmesser**: 2mm
+* **Wellenlänge**: 8mm
+* **Spannung**: 3-6V
+* **Strom**: 0,35-0,4A
+* **Geschwindigkeit bei 3V**: 19000 U/min (Umdrehungen pro Minute)
+* **Gewicht**: Ungefähr 14g (für eine Einheit)
 
-Direct current (DC) motor is a continuous actuator that converts electrical energy into mechanical energy. DC motors make rotary pumps, fans, compressors, impellers, and other devices work by producing continuous angular rotation.
+Ein Gleichstrommotor ist ein kontinuierlicher Aktuator, der elektrische Energie in mechanische Energie umwandelt. Gleichstrommotoren sorgen dafür, dass rotierende Pumpen, Ventilatoren, Kompressoren, Impeller und andere Geräte durch kontinuierliche Winkelrotation funktionieren.
 
-A DC motor consists of two parts, the fixed part of the motor called the **stator** and the internal part of the motor called the **rotor** (or **armature** of a DC motor) that rotates to produce motion.
-The key to generating motion is to position the armature within the magnetic field of the permanent magnet (whose field extends from the north pole to the south pole). The interaction of the magnetic field and the moving charged particles (the current-carrying wire generates the magnetic field) produces the torque that rotates the armature.
+Ein Gleichstrommotor besteht aus zwei Teilen, dem festen Teil des Motors, der als **Stator** bezeichnet wird, und dem inneren Teil des Motors, der als **Rotor** (oder **Anker** eines Gleichstrommotors) bezeichnet wird und sich dreht, um Bewegung zu erzeugen.
+Der Schlüssel zur Erzeugung von Bewegung ist es, den Anker innerhalb des Magnetfeldes des Permanentmagneten zu positionieren (dessen Feld sich vom Nordpol zum Südpol erstreckt). Die Wechselwirkung des Magnetfeldes und der bewegten geladenen Partikel (der stromführende Draht erzeugt das Magnetfeld) erzeugt das Drehmoment, das den Anker dreht.
 
 .. image:: img/motor_sche.png
     :align: center
 
-Current flows from the positive terminal of the battery through the circuit, through the copper brushes to the commutator, and then to the armature.
-But because of the two gaps in the commutator, this flow reverses halfway through each complete rotation.
-This continuous reversal essentially converts the DC power from the battery to AC, allowing the armature to experience torque in the right direction at the right time to maintain rotation.
+Der Strom fließt vom positiven Pol der Batterie durch den Schaltkreis, über die Kupferbürsten zum Kommutator und dann zum Anker.
+Aber wegen der zwei Lücken im Kommutator kehrt dieser Fluss auf halbem Weg jeder vollständigen Drehung um.
+Diese kontinuierliche Umkehr wandelt die Gleichstromleistung der Batterie im Wesentlichen in Wechselstrom um, wodurch der Anker das Drehmoment in der richtigen Richtung zur richtigen Zeit erfährt, um die Rotation aufrechtzuerhalten.
 
-**Example**
+**Beispiel**
 
-* :ref:`basic_motor` (Basic Project)
-* :ref:`fun_smart_fan` (Fun Project)
+* :ref:`basic_motor` (Grundprojekt)
+* :ref:`fun_smart_fan` (Spaßprojekt)

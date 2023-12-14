@@ -1,23 +1,23 @@
 .. _cpn_breadboard:
 
-Breadboard
+Steckbrett
 ==============
 
 .. image:: img/breadboard.png
     :width: 600
 
-A breadboard is a construction base for prototyping of electronics. Originally the word referred to a literal bread board, a polished piece of wood used for slicing bread. In the 1970s the solderless breadboard (a.k.a. plugboard, a terminal array board) became available and nowadays the term "breadboard" is commonly used to refer to these.
+Ein Steckbrett ist eine Basis für den Prototypenbau in der Elektronik. Ursprünglich bezog sich das Wort auf ein buchstäbliches Brotbrett, ein poliertes Holzstück, das zum Brotschneiden verwendet wurde. In den 1970er Jahren wurde das lötfreie Steckbrett (auch als Steckplatine oder Terminal-Array-Board bekannt) eingeführt, und heute wird der Begriff „Steckbrett“ allgemein für diese verwendet.
 
-It is used to build and test circuits quickly before finishing any circuit design. 
-And it has many holes into which components mentioned above can be inserted like ICs and resistors as well as jumper wires. 
-The breadboard allows you to plug in and remove components easily. 
+Es wird verwendet, um Schaltkreise schnell aufzubauen und zu testen, bevor ein Schaltungsdesign abgeschlossen wird.
+Es hat viele Löcher, in die die oben genannten Komponenten wie ICs und Widerstände sowie Jumperkabel eingefügt werden können.
+Das Steckbrett ermöglicht es Ihnen, Komponenten leicht einzustecken und zu entfernen.
 
-The picture shows the internal structure of a breadboard. 
-Although these holes on the breadboard appear to be independent of each other, they are actually connected to each other through metal strips internally.
+Das Bild zeigt die innere Struktur eines Steckbretts.
+Obwohl diese Löcher auf dem Steckbrett unabhängig voneinander zu sein scheinen, sind sie intern tatsächlich über Metallstreifen miteinander verbunden.
 
 .. image:: img/breadboard_internal.png
     :width: 600
 
-If you want to know more about breadboard, refer to: |link_breadboard_tutorials|
+Wenn Sie mehr über Steckbretter erfahren möchten, schauen Sie hier: |link_breadboard_tutorials|
 
 

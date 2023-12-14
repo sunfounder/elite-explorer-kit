@@ -6,39 +6,39 @@ CherryLight
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
-      <source src="../_static/videos/iot_projects/05_iot_cheerlights.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      <source src="../_static/videos/iot_projects/05_iot_cheerlights.mp4" type="video/mp4">
+      Ihr Browser unterstützt das Video-Tag nicht.
    </video>
 
-CheerLights is a global network of synchronized lights that can be controlled by anyone. Join the |link_cheerlights| LED color-changing community, which allows LEDs around the world to change colors simultaneously.  Place your LEDs in a corner of your office to remind yourself that you are not alone.
+CheerLights ist ein globales Netzwerk synchronisierter Lichter, das von jedem gesteuert werden kann. Treten Sie der |link_cheerlights| LED-Farbwechsel-Community bei, die es ermöglicht, dass LEDs weltweit gleichzeitig ihre Farben ändern. Platzieren Sie Ihre LEDs in einer Ecke Ihres Büros, um sich daran zu erinnern, dass Sie nicht alleine sind.
 
-In this case, we also utilize MQTT, but instead of publishing our own messages, we subscribe to the "cheerlights" topic. This allows us to receive messages sent by others to the "cheerlights" topic and use that information to change the color of our LED strip accordingly.
+In diesem Fall nutzen wir ebenfalls MQTT, aber anstatt unsere eigenen Nachrichten zu veröffentlichen, abonnieren wir das Thema „cheerlights“. Dadurch können wir Nachrichten, die von anderen an das Thema „cheerlights“ gesendet werden, empfangen und diese Informationen verwenden, um die Farbe unseres LED-Streifens entsprechend zu ändern.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Kit zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch separat über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -47,13 +47,13 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_ws2812`
         - |link_ws2812_buy|
 
-**Wiring**
+**Verdrahtung**
 
 .. image:: img/05_cheerlight_bb.png
     :width: 100%
     :align: center
 
-**Schematic**
+**Schaltplan**
 
 .. image:: img/05_cheerlight_schematic.png
     :width: 50%
@@ -63,24 +63,24 @@ You can also buy them separately from the links below.
 
    <br/>
 
-**Install the Library**
+**Bibliothek installieren**
 
-To install the library, use the Arduino Library Manager and search for "ArduinoMqttClient" and "FastLED" and install them.
+Um die Bibliothek zu installieren, verwenden Sie den Arduino Library Manager und suchen Sie nach „ArduinoMqttClient“ und „FastLED“, um sie zu installieren.
 
-``ArduinoMqttClient.h``: Used for MQTT communication.
+``ArduinoMqttClient.h``: Wird für die MQTT-Kommunikation verwendet.
 
-``FastLED.h``: Used to drive the RGB LED Strip.
+``FastLED.h``: Wird verwendet, um den RGB-LED-Streifen zu steuern.
 
-**Run the Code**
+**Code ausführen**
 
-
-.. note::
-
-    * You can open the file ``05_cheerlight.ino`` under the path of ``elite-explorer-kit-main\iot_project\05_cheerlight`` directly.
-    * Or copy this code into Arduino IDE.
 
 .. note::
-    In the code, SSID and password are stored in ``arduino_secrets.h``. Before uploading this example, you need to modify them with your own WiFi credentials. Additionally, for security purposes, ensure that this information is kept confidential when sharing or storing the code.
+
+    * Sie können die Datei ``05_cheerlight.ino`` direkt unter dem Pfad ``elite-explorer-kit-main\iot_project\05_cheerlight`` öffnen.
+    * Oder kopieren Sie diesen Code in die Arduino IDE.
+
+.. note::
+    Im Code werden SSID und Passwort in ``arduino_secrets.h`` gespeichert. Bevor Sie dieses Beispiel hochladen, müssen Sie sie mit Ihren eigenen WLAN-Anmeldeinformationen ändern. Außerdem sollten Sie aus Sicherheitsgründen diese Informationen vertraulich halten, wenn Sie den Code teilen oder speichern.
 
 .. raw:: html
 
@@ -89,58 +89,59 @@ To install the library, use the Arduino Library Manager and search for "ArduinoM
 
 
 
-**Control global @CheerLights devices**
+**Steuern Sie globale @CheerLights-Geräte**
 
-#. Join the |link_discord_server| and utilize the CheerLights bot to set the color. Simply type ``/cheerlights`` in any of the channels on the **CheerLights Discord Server** to activate the bot.
+#. Treten Sie dem |link_discord_server| bei und nutzen Sie den CheerLights-Bot, um die Farbe einzustellen. Geben Sie einfach ``/cheerlights`` in einem der Kanäle des **CheerLights Discord Servers** ein, um den Bot zu aktivieren.
 
    .. image:: img/05_iot_cheerlights_1.png
 
-#. Follow the instructions provided by the bot to set the color. This will allow you to control CheerLights devices globally.
+#. Folgen Sie den Anweisungen des Bots, um die Farbe festzulegen. Dadurch können Sie CheerLights-Geräte weltweit steuern.
 
    .. image:: img/05_iot_cheerlights_2.png
 
-**How it works?**
+**Wie funktioniert des?**
 
-Here are the main parts of the code and explanations of their functions:
+Hier sind die Hauptteile des Codes und Erklärungen ihrer Funktionen:
 
-1. Include the required libraries:
+1. Einbinden der erforderlichen Bibliotheken:
 
-   * ``WiFiS3.h``: Used for handling Wi-Fi connections.
-   * ``ArduinoMqttClient.h``: Used for handling MQTT connections.
-   * ``FastLED.h``: Used for controlling NeoPixel LED strips.
+   * ``WiFiS3.h``: Wird verwendet, um Wi-Fi-Verbindungen zu handhaben.
+   * ``ArduinoMqttClient.h``: Wird verwendet, um MQTT-Verbindungen zu handhaben.
+   * ``FastLED.h``: Wird verwendet, um NeoPixel LED-Streifen zu steuern.
 
-2. Define some constants:
+2. Definition einiger Konstanten:
 
-   * ``NUM_LEDS``: The number of LEDs on the LED strip.
-   * ``DATA_PIN``: The data pin connected to Arduino for controlling the LED strip.
-   * ``arduino_secrets.h``: Header file containing Wi-Fi network name and password to protect sensitive information.
-   * ``broker``: Address of the MQTT server.
-   * ``port``: Port of the MQTT server.
-   * ``topic``: The MQTT topic to subscribe to.
+   * ``NUM_LEDS``: Die Anzahl der LEDs auf dem LED-Streifen.
+   * ``DATA_PIN``: Der Datenpin, der mit Arduino verbunden ist, um den LED-Streifen zu steuern.
+   * ``arduino_secrets.h``: Header-Datei, die den Namen und das Passwort des Wi-Fi-Netzwerks enthält, um sensible Informationen zu schützen.
+   * ``broker``: Adresse des MQTT-Servers.
+   * ``port``: Port des MQTT-Servers.
+   * ``topic``: Das zu abonnierende MQTT-Thema.
 
-3. Define some global variables:
+3. Definition einiger globaler Variablen:
 
-   * ``CRGB leds[NUM_LEDS]``: An array to store LED color data.
-   * ``colorName``: An array of color names supported by the CheerLights project.
-   * ``colorRGB``: An array of RGB color codes corresponding to color names.
+   * ``CRGB leds[NUM_LEDS]``: Ein Array, um LED-Farbdaten zu speichern.
+   * ``colorName``: Ein Array von Farbnamen, die vom CheerLights-Projekt unterstützt werden.
+   * ``colorRGB``: Ein Array von RGB-Farbcodes, die den Farbnamen entsprechen.
 
-4. ``setup()`` function:
+4. ``setup()`` Funktion:
 
-   * Initialize serial communication.
-   * Check if the Wi-Fi module is present and output its firmware version.
-   * Attempt to connect to the Wi-Fi network; if it fails, wait 10 seconds and retry.
-   * Upon successful connection, connect to the MQTT broker (server) and subscribe to the specified topic.
-   * Initialize the NeoPixel LED strip.
+   * Initialisieren der seriellen Kommunikation.
+   * Überprüfen, ob das Wi-Fi-Modul vorhanden ist und dessen Firmware-Version ausgeben.
+   * Versuchen, eine Verbindung zum Wi-Fi-Netzwerk herzustellen; falls es fehlschlägt, 10 Sekunden warten und erneut versuchen.
+   * Nach erfolgreicher Verbindung, Verbindung zum MQTT-Broker (Server) herstellen und das angegebene Thema abonnieren.
+   * Den NeoPixel LED-Streifen initialisieren.
 
-5. ``loop()`` function:
+5. ``loop()`` Funktion:
 
-   * Periodically call the ``mqttClient.poll()`` function to receive MQTT messages and send MQTT keep-alive signals.
-   * Add a 5-second delay to avoid continuous connection.
+   * Periodisch die Funktion ``mqttClient.poll()`` aufrufen, um MQTT-Nachrichten zu empfangen und MQTT-Keep-Alive-Signale zu senden.
+   * Eine 5-Sekunden-Verzögerung hinzufügen, um eine kontinuierliche Verbindung zu vermeiden.
 
-6. ``printWifiData()`` and ``printCurrentNet()`` functions are used to output Wi-Fi network and connection information.
+6. Die Funktionen ``printWifiData()`` und ``printCurrentNet()`` werden verwendet, um Wi-Fi-Netzwerk- und Verbindungsinformationen auszugeben.
 
-7. ``printMacAddress()`` function is used to print the MAC address in hexadecimal format.
+7. Die Funktion ``printMacAddress()`` wird verwendet, um die MAC-Adresse im Hexadezimalformat auszudrucken.
 
-8. ``onMqttMessage()`` function is a callback function triggered when an MQTT message is received. It outputs the received topic and message content, converting the message content to lowercase. If the topic is "cheerlights," it calls the ``setColor()`` function to set the LED strip color.
+8. Die Funktion ``onMqttMessage()`` ist eine Rückruffunktion, die ausgelöst wird, wenn eine MQTT-Nachricht empfangen wird. Sie gibt das empfangene Thema und den Nachrichteninhalt aus und konvertiert den Nachrichteninhalt in Kleinbuchstaben. Wenn das Thema „cheerlights“ ist, ruft sie die Funktion ``setColor()`` auf, um die Farbe des LED-Streifens festzulegen.
 
-9. ``setColor()`` function takes a color name as a parameter, then looks for a matching color in the ``colorName`` array. If a matching color is found, it sets the LED strip's color to the corresponding RGB value and updates the LED strip's color using the ``FastLED.show()`` function.
+9. Die Funktion ``setColor()`` nimmt einen Farbnamen als Parameter und sucht nach einer passenden Farbe im Array ``colorName``. Wenn eine passende Farbe gefunden wird, setzt sie die Farbe des LED-Streifens auf den entsprechenden RGB-Wert und aktualisiert die Farbe des LED-Streifens mit der Funktion ``FastLED.show()``.
+

@@ -1,42 +1,42 @@
 .. _iot_weathertime_screen:
 
-WeatherTime Screen
+WeatherTime Bildschirm
 ===============================
 
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
-      <source src="../_static/videos/iot_projects/06_iot_weather_oled.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      <source src="../_static/videos/iot_projects/06_iot_weather_oled.mp4" type="video/mp4">
+      Ihr Browser unterstützt das Video-Tag nicht.
    </video>
 
-This sketch connects to a WiFi network, fetches weather data from OpenWeatherMap every minute, retrieves the current time from an NTP server, and displays the day, time, and weather information on an OLED screen.
+Dieser Sketch verbindet sich mit einem WLAN-Netzwerk, holt jede Minute Wetterdaten von OpenWeatherMap ab, holt die aktuelle Zeit von einem NTP-Server und zeigt den Tag, die Zeit und die Wetterinformationen auf einem OLED-Bildschirm an.
 
-**Required Components**
+**Benötigte Komponenten**
 
-In this project, we need the following components. 
+Für dieses Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Kit zu kaufen, hier ist der Link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch separat über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -45,13 +45,13 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_oled`
         - |link_oled_buy|
 
-**Wiring**
+**Verdrahtung**
 
 .. image:: img/06_weather_oled_bb.png
     :width: 100%
     :align: center
 
-**Schematic**
+**Schaltplan**
 
 .. image:: img/06_weather_oled_schematic.png
     :width: 60%
@@ -59,38 +59,38 @@ You can also buy them separately from the links below.
 
 **OpenWeather**
 
-Get OpenWeather API keys
+OpenWeather API-Schlüssel erhalten
 
-.. .|link_openweather| is an online service, owned by OpenWeather Ltd, that provides global weather data via API, including current weather data, forecasts, nowcasts and historical weather data for any geographical location.
+.. .|link_openweather| ist ein Online-Dienst von OpenWeather Ltd, der weltweite Wetterdaten über eine API bereitstellt, einschließlich aktueller Wetterdaten, Prognosen, Nowcasts und historischer Wetterdaten für jeden geografischen Standort.
 
-`OpenWeather <https://openweathermap.org/>`_ is an online service, owned by OpenWeather Ltd, that provides global weather data via API, including current weather data, forecasts, nowcasts and historical weather data for any geographical location.
+`OpenWeather <https://openweathermap.org/>`_ ist ein Online-Dienst von OpenWeather Ltd, der weltweite Wetterdaten über eine API bereitstellt, einschließlich aktueller Wetterdaten, Prognosen, Nowcasts und historischer Wetterdaten für jeden geografischen Standort.
 
 
-#. Visit OpenWeather to log in/create an account.
+#. Besuchen Sie OpenWeather, um sich anzumelden/ein Konto zu erstellen.
 
    .. image:: img/06_owm_1.png
 
 
-#. Click into the API page from the navigation bar.
+#. Klicken Sie in der Navigationsleiste auf die API-Seite.
 
    .. image:: img/06_owm_2.png
 
 
-#. Find **Current Weather Data** and click Subscribe.
+#. Finden Sie **Current Weather Data** und klicken Sie auf Abonnieren.
 
    .. image:: img/06_owm_3.png
 
 
-#. Under **Current weather and forecasts collection**, subscribe to the appropriate service. In our project, Free is good enough.
+#. Unter **Current weather and forecasts collection** abonnieren Sie den entsprechenden Dienst. In unserem Projekt reicht die kostenlose Version aus.
 
    .. image:: img/06_owm_4.png
 
 
-#. Copy the Key from the **API keys** page.
+#. Kopieren Sie den Schlüssel von der Seite **API keys**.
 
    .. image:: img/06_owm_5.png
 
-#. Copy it to the ``arduino_secrets.h``.
+#. Kopieren Sie ihn in die ``arduino_secrets.h``.
 
    .. code-block:: Arduino
 
@@ -99,38 +99,38 @@ Get OpenWeather API keys
        #define API_KEY "<OpenWeather_API_KEY>"
        #define LOCATION "<YOUR CITY>"
 
-#. Set the time zone of your location.
+#. Stellen Sie die Zeitzone Ihres Standorts ein.
 
-   Take the capital of Sweden, Stockholm, as an example. Search "stockholm timezone" on Google.
+   Nehmen Sie als Beispiel die Hauptstadt Schwedens, Stockholm. Suchen Sie auf Google nach „Stockholm Zeitzone“.
 
    .. image:: img/06_weather_oled_01.png 
 
-   In the search results, you will see "GMT+1", so you set the parameter of the function below to ``3600 * 1`` seconds.
+   In den Suchergebnissen sehen Sie „GMT+1“, also setzen Sie den Parameter der untenstehenden Funktion auf ``3600 * 1`` Sekunden.
    
    .. code-block:: Arduino
 
       timeClient.setTimeOffset(3600 * 1);  // Adjust for your time zone (this is +1 hour)
 
-**Install the Library**
+**Bibliothek installieren**
 
-To install the library, use the Arduino Library Manager and search for "ArduinoMqttClient", "FastLED", "Adafruit GFX" and "Adafruit SSD1306" and install them.
+Um die Bibliothek zu installieren, verwenden Sie den Arduino-Bibliotheksmanager und suchen Sie nach „ArduinoMqttClient“, „FastLED“, „Adafruit GFX“ und „Adafruit SSD1306“ und installieren Sie diese.
 
-``ArduinoJson.h``: Used for handling JSON data (data obtained from openweathermap).
+``ArduinoJson.h``: Wird verwendet, um JSON-Daten zu verarbeiten (Daten, die von openweathermap erhalten werden).
 
-``NTPClient.h``: Used for obtaining real-time time.
+``NTPClient.h``: Wird verwendet, um die Echtzeit zu erhalten.
 
-``Adafruit_GFX.h``, ``Adafruit_SSD1306.h``: Used for OLED module.
+``Adafruit_GFX.h``, ``Adafruit_SSD1306.h``: Wird für das OLED-Modul verwendet.
 
-**Run the Code**
+**Code ausführen**
 
-
-.. note::
-
-    * You can open the file ``06_weather_oled.ino`` under the path of ``elite-explorer-kit-main\iot_project\06_weather_oled`` directly.
-    * Or copy this code into Arduino IDE.
 
 .. note::
-    In the code, SSID and password are stored in ``arduino_secrets.h``. Before uploading this example, you need to modify them with your own WiFi credentials. Additionally, for security purposes, ensure that this information is kept confidential when sharing or storing the code.
+
+    * Sie können die Datei ``06_weather_oled.ino`` direkt unter dem Pfad ``elite-explorer-kit-main\iot_project\06_weather_oled`` öffnen.
+    * Oder kopieren Sie diesen Code in die Arduino IDE.
+
+.. note::
+    Im Code werden SSID und Passwort in ``arduino_secrets.h`` gespeichert. Bevor Sie dieses Beispiel hochladen, müssen Sie sie mit Ihren eigenen WLAN-Anmeldeinformationen ändern. Außerdem sollten Sie aus Sicherheitsgründen diese Informationen vertraulich halten, wenn Sie den Code teilen oder speichern.
 
 .. raw:: html
 
@@ -138,55 +138,56 @@ To install the library, use the Arduino Library Manager and search for "ArduinoM
 
 
 
-**How it works?**
+**Wie funktioniert des?**
 
 
-1. Libraries and Definitions:
+1. Bibliotheken und Definitionen:
 
-   #. ``WiFiS3.h``: This is likely a library specific to a certain WiFi module or board to manage WiFi connections.
-   #. ``ArduinoJson.h``: This library is used for decoding (and encoding) JSON data.
-   #. ``arduino_secrets.h``: A separate file where sensitive data (like WiFi credentials) are stored. This is a good practice to keep credentials out of the main code.
-   #. **NTPClient & WiFiUdp**: These are used for fetching the current time from an NTP (Network Time Protocol) server.
-   #. **Adafruit libraries**: Used for managing the OLED display.
-   #. **Various global variables**: These include WiFi credentials, server details, and more, which will be used throughout the script.
+   #. ``WiFiS3.h``: Dies ist wahrscheinlich eine spezifische Bibliothek für ein bestimmtes WLAN-Modul oder Board zur Verwaltung von WLAN-Verbindungen.
+   #. ``ArduinoJson.h``: Diese Bibliothek wird für das Dekodieren (und Kodieren) von JSON-Daten verwendet.
+   #. ``arduino_secrets.h``: Eine separate Datei, in der sensible Daten (wie WLAN-Zugangsdaten) gespeichert sind. Dies ist eine gute Praxis, um Zugangsdaten aus dem Hauptcode herauszuhalten.
+   #. **NTPClient & WiFiUdp**: Diese werden verwendet, um die aktuelle Zeit von einem NTP-Server (Network Time Protocol) zu holen.
+   #. **Adafruit-Bibliotheken**: Verwendet für die Verwaltung des OLED-Displays.
+   #. **Verschiedene globale Variablen**: Dazu gehören WLAN-Zugangsdaten, Serverdetails und mehr, die im gesamten Skript verwendet werden.
 
 2. ``setup()``:
 
-   #. It initializes the serial communication.
-   #. Checks and prints the WiFi module's firmware version.
-   #. Tries to connect to the WiFi network using the provided SSID and password.
-   #. Prints the connected WiFi's status (SSID, IP, Signal strength).
-   #. Initializes the OLED display.
-   #. Starts the NTP client to fetch the current time and sets a time offset (in this case, 8 hours which might correspond to a specific timezone).
+   #. Initialisiert die serielle Kommunikation.
+   #. Überprüft und druckt die Firmware-Version des WLAN-Moduls aus.
+   #. Versucht, eine Verbindung zum WLAN-Netzwerk mit der bereitgestellten SSID und dem Passwort herzustellen.
+   #. Gibt den Status des verbundenen WLANs aus (SSID, IP, Signalstärke).
+   #. Initialisiert das OLED-Display.
+   #. Startet den NTP-Client, um die aktuelle Zeit zu holen und legt einen Zeitversatz fest (in diesem Fall 8 Stunden, was einer bestimmten Zeitzone entsprechen könnte).
 
 3. ``read_response()``:
 
-   #. Reads the response from the server, specifically looking for JSON data (denoted by ``{`` and ``}``).
-   #. If JSON data is found, it decodes the data to extract weather details like temperature, humidity, pressure, wind speed, and wind direction.
-   #. Calls the ``displayWeatherData`` function to display the weather information on the OLED screen.
+   #. Liest die Antwort vom Server, insbesondere auf der Suche nach JSON-Daten (gekennzeichnet durch ``{`` und ``}``).
+   #. Wenn JSON-Daten gefunden werden, werden die Daten dekodiert, um Wetterdetails wie Temperatur, Feuchtigkeit, Druck, Windgeschwindigkeit und Windrichtung zu extrahieren.
+   #. Ruft die Funktion ``displayWeatherData`` auf, um die Wetterinformationen auf dem OLED-Bildschirm anzuzeigen.
 
 4. ``httpRequest()``:
 
-   #. Closes any existing connections to ensure the WiFi module's socket is free.
-   #. Tries to connect to the OpenWeatherMap server.
-   #. If connected, sends an HTTP GET request to fetch the weather data for a specific location defined by ``LOCATION`` (likely defined in ``arduino_secrets.h`` or elsewhere).
-   #. Records the time the request was made.
+   #. Schließt alle bestehenden Verbindungen, um sicherzustellen, dass der Socket des WLAN-Moduls frei ist.
+   #. Versucht, eine Verbindung zum OpenWeatherMap-Server herzustellen.
+   #. Wenn verbunden, sendet es eine HTTP-GET-Anfrage, um die Wetterdaten für einen spezifischen Ort zu holen, der durch ``LOCATION`` definiert wird (wahrscheinlich definiert in ``arduino_secrets.h`` oder anderswo).
+   #. Zeichnet die Zeit auf, zu der die Anfrage gestellt wurde.
 
 5. ``loop()``:
 
-   #. Calls the ``read_response`` function to process any incoming data from the server.
-   #. Updates the time from the NTP server.
-   #. Checks if it's time to make another request to the weather server (based on the ``postingInterval``). If so, it calls the ``httpRequest`` function.
+   #. Ruft die Funktion ``read_response`` auf, um alle eingehenden Daten vom Server zu verarbeiten.
+   #. Aktualisiert die Zeit vom NTP-Server.
+   #. Überprüft, ob es Zeit ist, eine weitere Anfrage an den Wetter-Server zu stellen (basierend auf dem ``postingInterval``). Wenn ja, ruft es die Funktion ``httpRequest`` auf.
 
 6. ``printWifiStatus()``:
 
-   #. The SSID of the connected network.
-   #. The local IP address of the board.
-   #. The signal strength (RSSI).
+   #. Die SSID des verbundenen Netzwerks.
+   #. Die lokale IP-Adresse des Boards.
+   #. Die Signalstärke (RSSI).
 
 7. ``displayWeatherData()``:
 
-   #. Clears the OLED screen.
-   #. Displays the current day of the week.
-   #. Displays the current time in HH:MM format.
-   #. Displays the provided weather data (temperature, humidity, pressure, and wind speed).
+   #. Löscht den OLED-Bildschirm.
+   #. Zeigt den aktuellen Wochentag an.
+   #. Zeigt die aktuelle Uhrzeit im HH:MM-Format an.
+   #. Zeigt die bereitgestellten Wetterdaten an (Temperatur, Feuchtigkeit, Druck und Windgeschwindigkeit).
+

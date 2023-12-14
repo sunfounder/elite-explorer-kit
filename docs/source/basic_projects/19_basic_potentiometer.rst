@@ -6,37 +6,37 @@ Potentiometer
 .. https://docs.sunfounder.com/projects/r4-basic-kit/en/latest/projects/controlling_an_led_by_potentiometer_uno.html
 
 
-Overview
+Überblick
 --------------------
 
-In this lesson, let’s see how to change the luminance of an LED by a potentiometer, and receive the data of the potentiometer in Serial Monitor to see its value change.
+In dieser Lektion sehen wir uns an, wie wir die Leuchtkraft einer LED mit einem Potentiometer verändern und die Daten des Potentiometers im Seriellen Monitor ablesen, um seine Wertänderungen zu beobachten.
 
-Required Components
+Benötigte Komponenten
 -------------------------
 
-In this project, we need the following components. 
+In diesem Projekt benötigen wir die folgenden Komponenten.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es ist definitiv praktisch, ein ganzes Kit zu kaufen, hier ist der Link: 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
     *   - Name	
-        - ITEMS IN THIS KIT
+        - ARTIKEL IN DIESEM KIT
         - LINK
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - KOMPONENTENBESCHREIBUNG
+        - KAUF-LINK
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -52,18 +52,18 @@ You can also buy them separately from the links below.
         - |link_potentiometer_buy|
 
 
-Wiring
+Verdrahtung
 ----------------------
 
 .. image:: img/19-potentiometer_bb.png
     :align: center
     :width: 70%
 
-Schematic Diagram
+Schaltplan
 ---------------------------
 
-In this experiment, the potentiometer is used as voltage divider, meaning connecting devices to all of its three pins. Connect the middle pin of the potentiometer to pin A0 and the other two pins to 5V and GND respectively. Therefore, the voltage of the potentiometer is 0-5V. Spin the knob of the potentiometer, and the voltage at pin A0 will change. Then convert that voltage into a digital value (0-1024) with the AD converter in the control board. Through programming, we can use the converted digital value to control the brightness of the LED on the
-control board.
+In diesem Experiment wird das Potentiometer als Spannungsteiler verwendet, was bedeutet, dass Geräte an alle drei Pins angeschlossen werden. Verbinden Sie den mittleren Pin des Potentiometers mit Pin A0 und die anderen beiden Pins mit 5V bzw. GND. Daher liegt die Spannung des Potentiometers zwischen 0-5V. Drehen Sie den Knopf des Potentiometers, und die Spannung an Pin A0 wird sich ändern. Dann wird diese Spannung mit dem AD-Wandler im Steuerboard in einen digitalen Wert (0-1024) umgewandelt. Durch Programmierung können wir den umgewandelten digitalen Wert nutzen, um die Helligkeit der LED auf dem
+Steuerboard zu steuern.
 
 .. image:: img/19_potentiometer_schematic.png
    :align: center
@@ -74,21 +74,21 @@ Code
 
 .. note::
 
-    * You can open the file ``19-potentiometer.ino`` under the path of ``elite-explorer-kit-main\basic_project\19-potentiometer`` directly.
-    * Or copy this code into Arduino IDE.
+    * Sie können die Datei ``19-potentiometer.ino`` direkt unter dem Pfad ``elite-explorer-kit-main\basic_project\19-potentiometer`` öffnen.
+    * Oder kopieren Sie diesen Code in die Arduino IDE.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/fb09e333-4057-40d8-8485-0de2d88c06c1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After uploading the code to the Uno board, you can open the serial monitor to observe the potentiometer's read values. As you turn the potentiometer knob, the read value will change accordingly. The raw analog reading from the potentiometer will range from \(0\) to \(1023\). Simultaneously, the code scales this value to a range of \(0\) to \(255\), which is also displayed on the serial monitor. This scaled value is then used to control the brightness of the connected LED. The LED will become brighter or dimmer based on the scaled value. It's worth noting that while the theoretical range of the potentiometer is \(0\) to \(1023\), the actual range may vary slightly due to hardware tolerances.
+Nachdem der Code auf das Uno-Board hochgeladen wurde, kann der serielle Monitor geöffnet werden, um die gelesenen Werte des Potentiometers zu beobachten. Wenn Sie am Knopf des Potentiometers drehen, ändert sich der gelesene Wert entsprechend. Der rohe Analogwert des Potentiometers reicht von \(0\) bis \(1023\). Gleichzeitig skaliert der Code diesen Wert in einen Bereich von \(0\) bis \(255\), der auch auf dem seriellen Monitor angezeigt wird. Dieser skalierte Wert wird dann verwendet, um die Helligkeit der angeschlossenen LED zu steuern. Die LED wird heller oder dunkler, je nach skaliertem Wert. Es ist anzumerken, dass der theoretische Bereich des Potentiometers \(0\) bis \(1023\) beträgt, der tatsächliche Bereich kann jedoch aufgrund von Hardwaretoleranzen leicht variieren.
 
-Code Analysis
----------------
+Code-Analyse
+--------------
 
-#. Initialization and Setup (Setting Pin Modes and Initializing Serial Communication)
+#. Initialisierung und Einrichtung (Einstellen der Pin-Modi und Initialisieren der seriellen Kommunikation)
 
-   Before we get into the loop, we define which pins we're using and initialize the serial communication.
+   Bevor wir in die Schleife einsteigen, definieren wir, welche Pins wir verwenden und initialisieren die serielle Kommunikation.
 
    .. code-block:: arduino
 
@@ -99,9 +99,9 @@ Code Analysis
         Serial.begin(9600);  // Initialize serial communication with a baud rate of 9600
       }
 
-#. Reading Analog Input (Getting Data from Potentiometer)
+#. Lesen des Analogeingangs (Daten vom Potentiometer abrufen)
 
-   In this segment, we read the analog data from the potentiometer and print it to the serial monitor.
+   In diesem Abschnitt lesen wir die Analogdaten vom Potentiometer und drucken sie auf den seriellen Monitor.
 
    .. code-block:: arduino
 
@@ -109,21 +109,22 @@ Code Analysis
         Serial.print("Input: ");             // Print "Input: " to the serial monitor
         Serial.println(inputValue);          // Print the raw input value to the serial monitor
 
-#. Mapping and Scaling (Converting Potentiometer Data)
+#. Kartierung und Skalierung (Umrechnung der Potentiometer-Daten)
 
-   We scale the raw data from the potentiometer, which is in the range of 0-1023, to a new range of 0-255.
+   Wir skalieren die Rohdaten vom Potentiometer, die im Bereich von 0-1023 liegen, in einen neuen Bereich von 0-255.
 
-   ``map(value, fromLow, fromHigh, toLow, toHigh)`` is used to convert a number from one range to another. For example, if the value is within the range of ``fromLow`` and ``fromHigh``, it will be converted to a corresponding value within the range of ``toLow`` and ``toHigh``, maintaining proportionality between the two ranges.
+   ``map(value, fromLow, fromHigh, toLow, toHigh)`` wird verwendet, um eine Zahl von einem Bereich in einen anderen umzurechnen. Wenn der Wert innerhalb des Bereichs von ``fromLow`` und ``fromHigh`` liegt, wird er in einen entsprechenden Wert innerhalb des Bereichs von ``toLow`` und ``toHigh`` umgewandelt, wobei die Proportionalität zwischen den beiden Bereichen erhalten bleibt.
 
-   In this case, since the LED pin (pin 9) has a range of 0-255, we need to map values in the range of 0-1023 to match that same scale of 0-255.
+   In diesem Fall müssen wir, da der LED-Pin (Pin 9) einen Bereich von 0-255 hat, Werte im Bereich von 0-1023 auf dieselbe Skala von 0-255 abbilden.
 
    .. code-block:: arduino
 
       outputValue = map(inputValue, 0, 1023, 0, 255);  // Map the input value to a new range
 
-#. Controlling LED and Serial Output
+#. Steuerung der LED und serielle Ausgabe
 
-   Finally, we control the LED's brightness based on the scaled value and print the scaled value for monitoring.
+   Schließlich steuern wir die Helligkeit der LED basierend auf dem skalierten Wert und drucken den skalierten Wert zur Überwachung.
+
 
    .. code-block:: arduino
 

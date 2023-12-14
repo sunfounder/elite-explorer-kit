@@ -1,31 +1,14 @@
 .. _cpn_wires:
 
-Jumper Wires
+Jumperkabel
 =====================
 
-Wires that connect two terminals are called jumper wires. There are
-various kinds of jumper wires. Here we focus on those used in
-breadboard. Among others, they are used to transfer electrical signals
-from anywhere on the breadboard to the input/output pins of a
-microcontroller.
+Kabel, die zwei Anschlüsse verbinden, werden als Jumperkabel bezeichnet. Es gibt verschiedene Arten von Jumperkabeln. Hier konzentrieren wir uns auf diejenigen, die auf Steckbrettern verwendet werden. Unter anderem werden sie verwendet, um elektrische Signale von irgendeinem Punkt auf dem Steckbrett zu den Ein-/Ausgangspins eines Mikrocontrollers zu übertragen.
 
-Jump wires are fitted by inserting their "end connectors" into the slots
-provided in the breadboard, beneath whose surface there are a few sets
-of parallel plates that connect the slots in groups of rows or columns
-depending on the area. The "end connectors" are inserted into the
-breadboard, without soldering, in the particular slots that need to be
-connected in the specific prototype.
+Jumperkabel werden eingesteckt, indem ihre "Endanschlüsse" in die vorgesehenen Steckplätze auf dem Steckbrett eingeführt werden, unter dessen Oberfläche sich einige Reihen paralleler Platten befinden, die die Steckplätze in Gruppen von Reihen oder Spalten verbinden, je nach Bereich. Die "Endanschlüsse" werden ohne Löten in die bestimmten Steckplätze eingeführt, die in dem spezifischen Prototyp verbunden werden müssen.
 
-There are three types of jumper wire: Female-to-Female, Male-to-Male,
-and Male-to-Female. The reason we call it Male-to-Female is because it
-has the outstanding tip in one end as well as a sunk female end.
-Male-to-Male means both side are male and Female-to-Female means both
-ends are female.
+Es gibt drei Arten von Jumperkabeln: Weiblich-zu-Weiblich, Männlich-zu-Männlich und Männlich-zu-Weiblich. Der Grund, warum wir es Männlich-zu-Weiblich nennen, liegt daran, dass es an einem Ende eine hervorstehende Spitze sowie ein versenktes weibliches Ende hat. Männlich-zu-Männlich bedeutet, dass beide Seiten männlich sind, und Weiblich-zu-Weiblich bedeutet, dass beide Enden weiblich sind.
 
 .. image:: img/Jumper_Wires.png
 
-
-More than one type of them may be used in a project. The color of the
-jump wires is different but it doesn’t mean their function is different
-accordingly; it's just designed so to better identify the connection
-between each circuit.
+Mehr als ein Typ von ihnen kann in einem Projekt verwendet werden. Die Farbe der Jumperkabel ist unterschiedlich, aber das bedeutet nicht, dass ihre Funktion entsprechend unterschiedlich ist; es ist nur so gestaltet, um die Verbindung zwischen jedem Schaltkreis besser zu identifizieren.

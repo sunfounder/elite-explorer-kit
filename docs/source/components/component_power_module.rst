@@ -3,6 +3,9 @@
 Stromversorgungsmodul
 =====================
 
+.. note::
+    Um den Akku des :ref:`cpn_power` zu schonen, laden Sie ihn bitte vor dem ersten Gebrauch vollständig auf.
+
 Wenn wir einen großen Strom benötigen, um eine Komponente zu betreiben, kann dies die normale Arbeit des Arduino UNO-Boards stark beeinträchtigen. Daher versorgen wir die Komponente separat mit diesem Modul, um sie sicher und stabil laufen zu lassen.
 
 Sie können es einfach in das Steckbrett stecken, um Strom zu liefern. Es bietet eine Spannung von 3,3V und 5V, und Sie können entweder über eine mitgelieferte Jumperkappe verbinden.

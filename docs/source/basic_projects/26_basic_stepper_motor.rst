@@ -59,6 +59,9 @@ Wiring
 
     Although it is possible to power the stepper motor directly from the Arduino, this is not recommended as it can cause electrical noise on its power supply lines, potentially leading to damage of the Arduino.
 
+.. note::
+    To protect the :ref:`cpn_power`'s battery, please fully charge it before using it for the first time.
+
 .. image:: img/26-stepper_motor_bb.png
     :align: center
 

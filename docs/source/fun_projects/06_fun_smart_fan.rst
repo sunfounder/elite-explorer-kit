@@ -62,6 +62,9 @@ You can also buy them separately from the links below.
 
 **Wiring**
 
+.. note::
+    To protect the :ref:`cpn_power`'s battery, please fully charge it before using it for the first time.
+
 .. image:: img/06_smart_fan_bb.png
     :width: 100%
     :align: center

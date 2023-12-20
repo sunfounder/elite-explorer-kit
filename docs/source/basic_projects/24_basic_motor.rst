@@ -53,6 +53,9 @@ Wiring
 
 In this example, we use Power Supply Module to power the anode and cathode of breadboard.
 
+.. note::
+    To protect the :ref:`cpn_power`'s battery, please fully charge it before using it for the first time.
+
 .. image:: img/24-motor_bb.png
     :align: center
     :width: 80%

@@ -1,6 +1,6 @@
 # Sunfounder Elite Explorer Kit
 
-This repository is for Sunfounder Elite Explorer Kit. you can buy it on [our website](https://www.sunfounder.com/), or search sunfounder in Amazon.
+This repository is for Sunfounder Elite Explorer Kit. you can buy it on [our website](https://www.sunfounder.com/collections/arduino-kits/products/sunfounder-elite-explorer-kit-with-official-arduino-uno-r4-wifi), or search sunfounder in [Amazon](https://www.amazon.com/s?k=sunfounder+elite+explorer+kit).
 
 Quick Links:
 
@@ -12,6 +12,7 @@ Quick Links:
 
 <a id="about_this_kit"></a>
 ## About this kit: 
+[Sunfounder Elite Explorer Kit Tutorials](https://docs.sunfounder.com/projects/elite-explorer-kit/en/latest/)
 
 <a id="update"></a>
 ## Update:

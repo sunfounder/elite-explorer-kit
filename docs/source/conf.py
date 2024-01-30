@@ -333,6 +333,10 @@ rst_epilog = """
 
     <a href="https://www.ti.com/lit/ds/symlink/cd74hc595.pdf?ts=1617341564801" target="_blank">74HC595 Datasheet</a>
 
+.. |link_FastLED_lib| raw:: html
+
+    <a href="https://github.com/FastLED/FastLED" target="_blank">FastLED</a>
+
 """
 
 

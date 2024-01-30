@@ -40,7 +40,7 @@ Some libraries are not available through the **Library Manager** and need to be 
 
    .. image:: img/rfid_choose.png
 
-#. After a short while, you will receive a notification indicating a successful installation.
+#. Once the installation is complete, you will receive a notification confirming that the library has been successfully added to your Arduino IDE. The next time you need to use this library, you won't need to repeat the installation process.
 
    .. image:: img/rfid_success.png
 

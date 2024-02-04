@@ -47,11 +47,11 @@ void loop() {
   currtouched = cap.touched();
   
   for (uint8_t i=0; i<12; i++) {
-    // it if *is* touched and *wasnt* touched before, alert!
+    // it if *is* touched and *wasn't* touched before, alert!
     if ((currtouched & _BV(i)) && !(lasttouched & _BV(i)) ) {
       Serial.print(i); Serial.println(" touched");
     }
-    // if it *was* touched and now *isnt*, alert!
+    // if it *was* touched and now *isn't*, alert!
     if (!(currtouched & _BV(i)) && (lasttouched & _BV(i)) ) {
       Serial.print(i); Serial.println(" released");
     }

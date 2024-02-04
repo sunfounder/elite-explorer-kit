@@ -45,14 +45,14 @@ void loop() {
   digital_F(); delay(1000);
 }
 
-void digital_1()  //diaplay 1 to the 7-segment
+void digital_1()  //display 1 to the 7-segment
 {
   turnOffAllSegments();
   digitalWrite(b, HIGH);
   digitalWrite(c, HIGH);
 }
 
-void digital_2()  //diaplay 2 to the 7-segment
+void digital_2()  //display 2 to the 7-segment
 {
   turnOffAllSegments();
   digitalWrite(a, HIGH);
@@ -62,7 +62,7 @@ void digital_2()  //diaplay 2 to the 7-segment
   digitalWrite(d, HIGH);
 }
 
-void digital_3()  //diaplay 3 to the 7-segment
+void digital_3()  //display 3 to the 7-segment
 {
   turnOffAllSegments();
   digitalWrite(a, HIGH);
@@ -71,7 +71,7 @@ void digital_3()  //diaplay 3 to the 7-segment
   digitalWrite(d, HIGH);
   digitalWrite(g, HIGH);
 }
-void digital_4()  //diaplay 4 to the 7-segment
+void digital_4()  //display 4 to the 7-segment
 {
   turnOffAllSegments();
   digitalWrite(b, HIGH);
@@ -80,7 +80,7 @@ void digital_4()  //diaplay 4 to the 7-segment
   digitalWrite(g, HIGH);
 }
 
-void digital_5()  //diaplay 5 to the 7-segment
+void digital_5()  //display 5 to the 7-segment
 {
   turnOffAllSegments();
   digitalWrite(a, HIGH);
@@ -90,7 +90,7 @@ void digital_5()  //diaplay 5 to the 7-segment
   digitalWrite(d, HIGH);
 }
 
-void digital_6()  //diaplay 6 to the 7-segment
+void digital_6()  //display 6 to the 7-segment
 {
   turnOffAllSegments();
   digitalWrite(a, HIGH);
@@ -101,7 +101,7 @@ void digital_6()  //diaplay 6 to the 7-segment
   digitalWrite(g, HIGH);
 }
 
-void digital_7()  //diaplay 7 to the 7-segment
+void digital_7()  //display 7 to the 7-segment
 {
   turnOffAllSegments();
   digitalWrite(a, HIGH);
@@ -109,7 +109,7 @@ void digital_7()  //diaplay 7 to the 7-segment
   digitalWrite(c, HIGH);
 }
 
-void digital_8()  //diaplay 8 to the 7-segment
+void digital_8()  //display 8 to the 7-segment
 {
   turnOffAllSegments();
   digitalWrite(a, HIGH);
@@ -121,7 +121,7 @@ void digital_8()  //diaplay 8 to the 7-segment
   digitalWrite(g, HIGH);
 }
 
-void digital_9()  //diaplay 9 to the 7-segment
+void digital_9()  //display 9 to the 7-segment
 {
   turnOffAllSegments();
   digitalWrite(a, HIGH);
@@ -132,7 +132,7 @@ void digital_9()  //diaplay 9 to the 7-segment
   digitalWrite(g, HIGH);
 }
 
-void digital_A()  //diaplay A to the 7-segment
+void digital_A()  //display A to the 7-segment
 {
   turnOffAllSegments();
   digitalWrite(a, HIGH);
@@ -143,7 +143,7 @@ void digital_A()  //diaplay A to the 7-segment
   digitalWrite(g, HIGH);
 }
 
-void digital_b()  //diaplay b to the 7-segment
+void digital_b()  //display b to the 7-segment
 {
   turnOffAllSegments();
   digitalWrite(c, HIGH);
@@ -153,7 +153,7 @@ void digital_b()  //diaplay b to the 7-segment
   digitalWrite(g, HIGH);
 }
 
-void digital_C()  //diaplay C to the 7-segment
+void digital_C()  //display C to the 7-segment
 {
   turnOffAllSegments();
   digitalWrite(a, HIGH);
@@ -162,7 +162,7 @@ void digital_C()  //diaplay C to the 7-segment
   digitalWrite(d, HIGH);
 }
 
-void digital_d()  //diaplay d to the 7-segment
+void digital_d()  //display d to the 7-segment
 {
   turnOffAllSegments();
   digitalWrite(b, HIGH);
@@ -172,7 +172,7 @@ void digital_d()  //diaplay d to the 7-segment
   digitalWrite(g, HIGH);
 }
 
-void digital_E()  //diaplay E to the 7-segment
+void digital_E()  //display E to the 7-segment
 {
   turnOffAllSegments();
   digitalWrite(a, HIGH);
@@ -182,7 +182,7 @@ void digital_E()  //diaplay E to the 7-segment
   digitalWrite(g, HIGH);
 }
 
-void digital_F()  //diaplay F to the 7-segment
+void digital_F()  //display F to the 7-segment
 {
   turnOffAllSegments();
   digitalWrite(a, HIGH);

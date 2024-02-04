@@ -97,19 +97,19 @@ The code may be a little long for this experiment. But the syntax is simple. Let
 
 .. code-block:: arduino
 
-   digital_1(); //diaplay 1 to the 7-segment
+   digital_1(); //display 1 to the 7-segment
 
    delay(1000); //wait for a second
 
-   digital_2(); //diaplay 2 to the 7-segment
+   digital_2(); //display 2 to the 7-segment
 
    delay(1000); //wait for a second
 
-   digital_3(); //diaplay 3 to the 7-segment
+   digital_3(); //display 3 to the 7-segment
 
    delay(1000); //wait for a second
 
-   digital_4(); //diaplay 4 to the 7-segment
+   digital_4(); //display 4 to the 7-segment
 
 
 Calling these functions into the loop() is to let the 7-Segment display 0-F. The functions are shown below. Take ``digital_2()`` for example:
@@ -118,7 +118,7 @@ Calling these functions into the loop() is to let the 7-Segment display 0-F. The
 
 .. code-block:: arduino
 
-   void digital_2()  //diaplay 2 to the 7-segment
+   void digital_2()  //display 2 to the 7-segment
    {
      turnOffAllSegments();
      digitalWrite(a, HIGH);

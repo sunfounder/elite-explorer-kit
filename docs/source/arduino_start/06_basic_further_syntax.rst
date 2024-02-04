@@ -94,10 +94,10 @@ A better programming convention is to insert a structure that requires curly bra
 
 
 
-Commment ``//``
+Comment ``//``
 ---------------
 
-Commment is the part of the sketch that the compiler ignores. They are usually used to tell others how the program works.
+Comment is the part of the sketch that the compiler ignores. They are usually used to tell others how the program works.
 
 If we write two adjacent slashes in a line of code, the compiler will ignore anything up to the end of the line.
 
@@ -157,7 +157,7 @@ Comment is very useful in programming, and several common uses are listed below.
 .. note:: 
     Use the shortcut ``Ctrl+/`` to help you quickly comment or uncomment your code.
 
-Commment ``/**/``
+Comment ``/**/``
 ------------------
 
 Same as ``//`` for comments. This type of comment can be more than one line long, and once the compiler reads ``/*``, it ignores anything that follows until it encounters ``*/``.

@@ -5,7 +5,7 @@
   before moving to the next one.
   
   Board: Arduino Uno R4
-  Component: Temperature and humidity module(DHT11)
+  Component: WS2812 RGB LEDs Strip
   Library: https://github.com/FastLED/FastLED  (FastLED by Daniel Garcia)
 */
 

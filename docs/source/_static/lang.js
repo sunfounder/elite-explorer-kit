@@ -1,5 +1,11 @@
 function changeLanguage() {
 
+    let hostname = window.location.hostname; 
+
+    if (hostname === '127.0.0.1' || hostname === 'localhost' || hostname.startsWith('192.168.')) {
+        return;
+    }
+
     let supportLangs = {
         'en': ['This documentation is also available in', 'English', 'Never show again'],
         'de': ['Diese Dokumentation ist auch in', 'Deutsch', 'Nie wieder anzeigen'],

@@ -47,6 +47,7 @@ With SunFounder, programming Arduino gets an upgrade. The Elite Explorer Kit, co
 
     About Elite Explorer Kit <self>
     components/00_component_list
+    video_lesson/video_lesson
     arduino_start/00_get_start
     download_the_code
     basic_projects/00_basic_project

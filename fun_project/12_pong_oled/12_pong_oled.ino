@@ -26,9 +26,6 @@
 #define OLED_RESET 4  // Reset pin # (or -1 if sharing Arduino reset pin)
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
-// void drawCourt();
-
-
 // ball set
 const unsigned long BALL_RATE = 16;
 int ball_x = 64, ball_y = 32;
@@ -46,7 +43,7 @@ const uint8_t CPU_X = 12;
 int8_t cpu_y = 16;
 const uint8_t PLAYER_X = 115;
 int8_t player_y = 16;
-int paddle_speed = 2;
+int paddle_speed = 3;
 
 // score
 uint8_t player_score = 0;
@@ -55,15 +52,19 @@ uint8_t cpu_score = 0;
 
 void setup() {
   Serial.begin(115200);
-  display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
 
+  randomSeed(analogRead(A0));
+  ball_dir_x = random(0, 2) * 2 - 1;
+  ball_dir_y = random(0, 2) * 2 - 1;
+
+  display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
   display.display();
-  unsigned long start = millis();
 
   pinMode(UP_BUTTON, INPUT);
   pinMode(DOWN_BUTTON, INPUT);
-  digitalWrite(UP_BUTTON, 1);
-  digitalWrite(DOWN_BUTTON, 1);
+
+  unsigned long start = millis();
+
   display.clearDisplay();
   drawCourt();
 
@@ -92,10 +93,12 @@ void loop() {
   if (time > ball_update) {
     int new_x = ball_x + ball_dir_x * ball_speed;
     int8_t new_y = ball_y + ball_dir_y * ball_speed;
+
     // Check if it hits the horizontal walls.
-    if (new_y <= 0 || new_y >= 63) {
+    if (new_y <= 0 || new_y >= SCREEN_HEIGHT - 1) {
       ball_dir_y = -ball_dir_y;
       new_y += ball_dir_y + ball_dir_y * ball_speed;
+      displayScore();
     }
 
     // Check if it hits the CPU paddle
@@ -113,7 +116,7 @@ void loop() {
     }
 
     // Check if it hits the vertical walls
-    if (new_x <= 0 || new_x >= 127) {
+    if (new_x <= 0 || new_x >= SCREEN_WIDTH - 1) {
       if (new_x <= 1) {
         player_score++;
       }
@@ -185,14 +188,16 @@ bool crossesCpuPaddle(uint8_t old_x, uint8_t new_x, uint8_t ball_y) {
 }
 
 void drawCourt() {
-  display.drawRect(0, 0, 128, 64, WHITE);
+  display.drawRect(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, WHITE);
 }
 
 void displayScore() {
   display.fillRect(SCREEN_WIDTH / 2 - 20, 10, 60, 10, BLACK);// clear
+  
   display.setCursor(SCREEN_WIDTH / 2 - 20, 10);  
   display.setTextSize(1);
   display.setTextColor(WHITE);
+
   display.print(cpu_score);
   display.print(" - ");
   display.print(player_score);

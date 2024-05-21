@@ -1,10 +1,25 @@
+ .. note::
+
+    Hallo und willkommen in der SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasten-Gemeinschaft auf Facebook! Tauchen Sie tiefer ein in die Welt von Raspberry Pi, Arduino und ESP32 mit anderen Enthusiasten.
+
+    **Warum beitreten?**
+
+    - **Expertenunterstützung**: Lösen Sie Nachverkaufsprobleme und technische Herausforderungen mit Hilfe unserer Gemeinschaft und unseres Teams.
+    - **Lernen & Teilen**: Tauschen Sie Tipps und Anleitungen aus, um Ihre Fähigkeiten zu verbessern.
+    - **Exklusive Vorschauen**: Erhalten Sie frühzeitigen Zugang zu neuen Produktankündigungen und exklusiven Einblicken.
+    - **Spezialrabatte**: Genießen Sie exklusive Rabatte auf unsere neuesten Produkte.
+    - **Festliche Aktionen und Gewinnspiele**: Nehmen Sie an Gewinnspielen und Feiertagsaktionen teil.
+
+    👉 Sind Sie bereit, mit uns zu erkunden und zu erschaffen? Klicken Sie auf [|link_sf_facebook|] und treten Sie heute bei!
+
+
 Mit Wi-Fi verbinden
-----------------------------------------
+======================
 
 Dieses Tutorial führt Sie durch die wesentlichen Schritte, um Ihr Arduino-Board mit einem Wi-Fi-Netzwerk zu verbinden. Sie lernen, wie Sie das Wi-Fi-Modul initialisieren, seine Firmware überprüfen und sicher einem Netzwerk mit SSID und Passwort beitreten. Sobald Sie verbunden sind, erfahren Sie, wie Sie wichtige Netzwerkinformationen wie die IP- und MAC-Adressen Ihres Geräts sowie die Signalstärke des Netzwerks direkt über die serielle Konsole überwachen. Dieses Tutorial dient sowohl als praktischer Leitfaden für die Wi-Fi-Konnektivität als auch als Einführung in die Netzwerküberwachung mit Arduino, um eine zuverlässige Wi-Fi-Verbindung herzustellen und aufrechtzuerhalten.
 
-1. Laden Sie den Code hoch
-==============================
+Laden Sie den Code hoch
+----------------------------
 
 Öffnen Sie die Datei ``01-wifi_connect.ino`` im Pfad ``elite-explorer-kit-main\r4_new_feature\01-wifi_connect`` oder kopieren Sie diesen Code in die **Arduino IDE**.
 
@@ -32,7 +47,7 @@ Sie müssen auch ``arduino_secrets.h`` erstellen oder bearbeiten, ersetzen Sie `
 
 
 2. Code-Erklärung
-========================
+----------------------
 
 1. Einbinden von Bibliotheken und Geheimdaten
 

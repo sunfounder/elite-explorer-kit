@@ -1,10 +1,24 @@
+ .. note::
+   
+    Hallo und willkommen in der SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasten-Gemeinschaft auf Facebook! Tauchen Sie tiefer ein in die Welt von Raspberry Pi, Arduino und ESP32 mit anderen Enthusiasten.
+
+    **Warum beitreten?**
+
+    - **Expertenunterstützung**: Lösen Sie Nachverkaufsprobleme und technische Herausforderungen mit Hilfe unserer Gemeinschaft und unseres Teams.
+    - **Lernen & Teilen**: Tauschen Sie Tipps und Anleitungen aus, um Ihre Fähigkeiten zu verbessern.
+    - **Exklusive Vorschauen**: Erhalten Sie frühzeitigen Zugang zu neuen Produktankündigungen und exklusiven Einblicken.
+    - **Spezialrabatte**: Genießen Sie exklusive Rabatte auf unsere neuesten Produkte.
+    - **Festliche Aktionen und Gewinnspiele**: Nehmen Sie an Gewinnspielen und Feiertagsaktionen teil.
+
+    👉 Sind Sie bereit, mit uns zu erkunden und zu erschaffen? Klicken Sie auf [|link_sf_facebook|] und treten Sie heute bei!
+
 WiFi-gesteuerte LED (Access Point)
----------------------------------------------------
+=====================================
 
 Dieses Projekt ermöglicht es Ihnen, eine LED über eine Web-Oberfläche zu steuern. Das Arduino-Board fungiert als WiFi-Zugangspunkt und erstellt sein eigenes lokales Netzwerk, mit dem Sie sich über einen Webbrowser verbinden können. Einmal verbunden, können Sie im Webbrowser die IP-Adresse des Geräts aufrufen, wo Sie Optionen finden, um eine LED (an Pin 13 des Boards angeschlossen) ein- und auszuschalten. Das Projekt bietet Echtzeit-Feedback über den LED-Status über den seriellen Monitor, was das Debuggen und Verstehen des Ablaufs der Operationen erleichtert.
 
 1. Laden Sie den Code hoch
-==============================
+-------------------------------
 
 Öffnen Sie die Datei ``01-wifi_ap.ino`` im Pfad ``elite-explorer-kit-main\r4_new_feature\01-wifi_ap`` oder kopieren Sie diesen Code in die **Arduino IDE**.
 
@@ -33,7 +47,7 @@ Sie müssen auch ``arduino_secrets.h`` erstellen oder bearbeiten, ersetzen Sie `
 
 
 2. Code-Erklärung
-========================
+--------------------
 
 #. Importieren erforderlicher Bibliotheken
 

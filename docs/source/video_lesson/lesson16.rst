@@ -15,7 +15,7 @@
 LESSON 16: Understanding If Statements and Conditionals
 =========================================================
 
-Comming Soon...
+Coming Soon...
 
 **Video**
 

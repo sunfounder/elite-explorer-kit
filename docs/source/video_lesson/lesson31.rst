@@ -15,7 +15,7 @@
 LESSON 31: Measuring Temperature and Humidity Using the DHT11
 ===============================================================
 
-Comming Soon...
+Coming Soon...
 
 **Video**
 

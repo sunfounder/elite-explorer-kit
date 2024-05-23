@@ -15,7 +15,7 @@
 LESSON 21: Understanding While Loops
 ======================================
 
-Comming Soon...
+Coming Soon...
 
 **Video**
 

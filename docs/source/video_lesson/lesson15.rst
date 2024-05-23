@@ -15,7 +15,7 @@
 LESSON 15: Controlling LED Based on User Input From Serial Monitor
 ====================================================================
 
-Comming Soon...
+Coming Soon...
 
 **Video**
 

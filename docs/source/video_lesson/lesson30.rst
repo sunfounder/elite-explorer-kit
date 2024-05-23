@@ -15,7 +15,7 @@
 LESSON 30: Create a One Player Pong Game on the R4 WiFi Matrix
 ================================================================
 
-Comming Soon...
+Coming Soon...
 
 **Video**
 

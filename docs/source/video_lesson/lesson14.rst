@@ -15,7 +15,7 @@
 LESSON 14: Read User Input From the Serial Monitor
 ====================================================
 
-Comming Soon...
+Coming Soon...
 
 **Video**
 

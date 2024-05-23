@@ -15,7 +15,7 @@
 LESSON 19: Mixing Colors with an RGB LED
 ==========================================
 
-Comming Soon...
+Coming Soon...
 
 **Video**
 

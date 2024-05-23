@@ -15,7 +15,7 @@
 LESSON 17: Control Multiple LED from the Serial Monitor
 =========================================================
 
-Comming Soon...
+Coming Soon...
 
 **Video**
 

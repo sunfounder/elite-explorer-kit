@@ -15,7 +15,7 @@
 LESSON 25: Make a Toggle Switch with Button Switch
 ====================================================
 
-Comming Soon...
+Coming Soon...
 
 **Video**
 

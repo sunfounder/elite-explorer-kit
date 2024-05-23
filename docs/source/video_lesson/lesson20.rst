@@ -15,7 +15,7 @@
 LESSON 20: For Loops in Arduino
 =================================
 
-Comming Soon...
+Coming Soon...
 
 **Video**
 

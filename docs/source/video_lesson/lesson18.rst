@@ -15,7 +15,7 @@
 LESSON 18: Controlling RGB LED with an Arduino
 ================================================
 
-Comming Soon...
+Coming Soon...
 
 **Video**
 

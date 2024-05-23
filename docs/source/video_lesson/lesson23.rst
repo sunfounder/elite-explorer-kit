@@ -15,7 +15,7 @@
 LESSON 23: Control a Servo with a Potentiometer
 =================================================
 
-Comming Soon...
+Coming Soon...
 
 **Video**
 

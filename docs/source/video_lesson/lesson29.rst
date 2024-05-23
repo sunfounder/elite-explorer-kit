@@ -15,7 +15,7 @@
 LESSON 29: Create a Bouncing Pixel on the R4 WiFi LED Matrix
 ==============================================================
 
-Comming Soon...
+Coming Soon...
 
 **Video**
 

@@ -15,7 +15,7 @@
 LESSON 27: Using Internal Pullup Resistors on Arduino
 =======================================================
 
-Comming Soon...
+Coming Soon...
 
 **Video**
 

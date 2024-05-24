@@ -341,6 +341,19 @@ rst_epilog = """
 
     <a href="https://github.com/FastLED/FastLED" target="_blank">FastLED</a>
 
+.. |link_analogReadResolution| raw:: html
+
+    <a href="https://www.arduino.cc/reference/en/language/functions/analog-io/analogreadresolution/" target="_blank">Arduino Reference - analogReadResolution()</a>
+
+.. |link_r4_minima_adc| raw:: html
+
+    <a href="https://docs.arduino.cc/tutorials/uno-r4-minima/adc-resolution/" target="_blank">Arduino UNO R4 Minima ADC Resolution</a>
+
+.. |link_r4_wifi_adc| raw:: html
+
+    <a href="https://docs.arduino.cc/tutorials/uno-r4-wifi/adc-resolution/" target="_blank">Arduino UNO R4 WiFi ADC Resolution</a>
+
+
 """
 
 
@@ -353,9 +366,6 @@ rst_epilog += """
 .. |link_Elite_Explorer_kit| raw:: html
 
     <a href="https://www.sunfounder.com/collections/arduino-kits/products/sunfounder-elite-explorer-kit-with-official-arduino-uno-r4-wifi?ref=tiktok1" target="_blank">Elite Explorer Kit</a>
-
-    
-
 
 .. |link_Uno_R3_buy| raw:: html
 

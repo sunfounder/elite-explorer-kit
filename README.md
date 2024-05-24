@@ -1,6 +1,6 @@
 # Sunfounder Elite Explorer Kit
 
-This repository is for Sunfounder Elite Explorer Kit. you can buy it on [our website](https://www.sunfounder.com/collections/arduino-kits/products/sunfounder-elite-explorer-kit-with-official-arduino-uno-r4-wifi), or search sunfounder in [Amazon](https://www.amazon.com/s?k=sunfounder+elite+explorer+kit).
+This repository is for the Elite Explorer Kit. You can [buy it on our website](https://www.sunfounder.com/collections/arduino-kits/products/sunfounder-elite-explorer-kit-with-official-arduino-uno-r4-wifi) or search for "Sunfounder" on [Amazon](https://www.amazon.com/SunFounder-Bluetooth-Tutorials-Beginners-Engineers/dp/B0CR6K5WKK).
 
 Quick Links:
 
@@ -16,6 +16,10 @@ Quick Links:
 
 <a id="update"></a>
 ## Update:
+
+2023-12-06: - First release in English.
+
+2024-05-24: - Add ADC resolution switching example for Arduino Uno R4
 
 <a id="about_sunfounder"></a>
 ## About SunFounder

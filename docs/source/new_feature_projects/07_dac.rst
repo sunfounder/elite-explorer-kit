@@ -35,7 +35,7 @@ Play Music with DAC
 
 **Upload the Code**
 
-Open the ``05-dac.ino`` file located at ``elite-explorer-kit-main\r4_new_feature\05-dac``, or paste the following code into your Arduino IDE.
+Open the ``07-dac.ino`` file located at ``elite-explorer-kit-main\r4_new_feature\07-dac``, or paste the following code into your Arduino IDE.
 
 .. note:: 
     Please place the ``pitches.h`` file in the same directory as the code to ensure proper functioning.

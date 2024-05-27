@@ -30,7 +30,7 @@ Here's a simple example that demonstrates mouse cursor control using a button.
 
 **Circuit Diagram**
 
-.. image:: img/06_hid_1_bb.png
+.. image:: img/05_hid_1_bb.png
   :width: 70%
   :align: center
 
@@ -75,13 +75,13 @@ Upon pressing either button, the Arduino employs the ``Keyboard.press()`` and ``
 
 **Circuit Diagram**
 
-.. image:: img/06_hid_2_bb.png
+.. image:: img/05_hid_2_bb.png
   :width: 70%
   :align: center
 
 **Upload the Code**
 
-Open the ``06-hid_keyboard.ino`` file located at ``elite-explorer-kit-main\r4_new_feature\06-hid_keyboard``, or paste the following code into your Arduino IDE.
+Open the ``05-hid_keyboard.ino`` file located at ``elite-explorer-kit-main\r4_new_feature\05-hid_keyboard``, or paste the following code into your Arduino IDE.
 
 .. raw:: html
 

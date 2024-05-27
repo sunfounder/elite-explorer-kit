@@ -21,7 +21,7 @@ The Arduino Uno R4 WiFi comes equipped with a built-in DAC (Digital-to-Analog Co
 
 The DAC on the Uno R4 WiFi boasts up to 12-bit resolution, delivering true analog output capabilities that outperform those of PWM pins.
 
-.. image:: img/05_dac.png
+.. image:: img/07_dac.png
   :width: 70%
 
 Play Music with DAC
@@ -29,7 +29,7 @@ Play Music with DAC
 
 **Circuit Diagram**
 
-.. image:: img/05_dac_bb.png
+.. image:: img/07_dac_bb.png
   :width: 100%
   :align: center
 

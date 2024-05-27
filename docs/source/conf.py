@@ -86,7 +86,7 @@ html_css_files = [
 
 # Multi-language
 
-language = 'en' # Before running make html, set the language.
+language = 'de' # Before running make html, set the language.
 locale_dirs = ['locale/'] # .po files for other languages are placed in the locale/ folder.
 
 gettext_compact = False # Support for generating the contents of the folders inside source/ into other languages.
@@ -336,6 +336,18 @@ rst_epilog = """
 .. |link_74hc595_datasheet| raw:: html
 
     <a href="https://www.ti.com/lit/ds/symlink/cd74hc595.pdf?ts=1617341564801" target="_blank">74HC595 Datasheet</a>
+
+.. |link_analogReadResolution| raw:: html
+
+    <a href="https://www.arduino.cc/reference/en/language/functions/analog-io/analogreadresolution/" target="_blank">Arduino Reference - analogReadResolution()</a>
+
+.. |link_r4_minima_adc| raw:: html
+
+    <a href="https://docs.arduino.cc/tutorials/uno-r4-minima/adc-resolution/" target="_blank">Arduino UNO R4 Minima ADC Resolution</a>
+
+.. |link_r4_wifi_adc| raw:: html
+
+    <a href="https://docs.arduino.cc/tutorials/uno-r4-wifi/adc-resolution/" target="_blank">Arduino UNO R4 WiFi ADC Resolution</a>
 
 """
 

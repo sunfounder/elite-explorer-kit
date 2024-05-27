@@ -42,17 +42,16 @@ Neben den oben genannten Upgrades führt das R4 WiFi auch die folgenden neuen Fu
     02_bluetooth
     03_rtc
     04_led_matrix
-    05_dac
-    06_hid
+    05_hid
+    06_adc
+    07_dac
 
 
 - **Wi-Fi®**: Bietet drahtlose Konnektivität, ideal für verschiedene IoT-Projekte, ermöglicht durch das ESP32-S3-Modul.
 - **Bluetooth®**: Bietet Kurzstrecken-Drahtloskommunikation zwischen Geräten, ebenfalls angetrieben durch das ESP32-S3-Modul.
 - **Eingebaute Echtzeituhr (RTC)**: Ideal für zeitkritische Anwendungen. Beinhaltet zusätzliche Pins für batteriebetriebene Nutzung und einen "OFF"-Pin, um das Board auszuschalten, während die RTC weiterläuft.
 - **12x8 LED-Matrix**: Eine einfache Möglichkeit, Daten anzuzeigen oder Animationen zu erstellen.
-- **DAC-Kanal**: Erzielen Sie präzise analoge Ausgaben, perfekt für Audioprojekte.
 - **HID-Unterstützung**: Simulieren Sie eine Maus oder Tastatur über USB mit eingebauter HID-Unterstützung.
+- **DAC-Kanal**: Erzielen Sie präzise analoge Ausgaben, perfekt für Audioprojekte.
+- **14-Bit ADC**: Der verbesserte Analog-Digital-Wandler (ADC) im Arduino Uno R4 bietet eine Auflösung von bis zu 14 Bit. Dies ermöglicht eine präzisere und detailliertere Erfassung analoger Signale im Vergleich zur 10-Bit-Auflösung früherer Versionen.
 - **CAN-Protokoll-Unterstützung**: Erweitern Sie Ihre Reichweite in automotive und industrielle Anwendungen.
-
-.. toctree::
-    :maxdepth: 2

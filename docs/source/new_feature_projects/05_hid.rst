@@ -30,13 +30,13 @@ Hier ist ein einfaches Beispiel, das die Steuerung des Mauszeigers mit einem Kno
 
 **Schaltplan**
 
-.. image:: img/06_hid_1_bb.png
+.. image:: img/05_hid_1_bb.png
   :width: 70%
   :align: center
 
 **Code Hochladen**
 
-Öffnen Sie die Datei ``06-hid_mouse.ino``, die sich unter ``elite-explorer-kit-main\r4_new_feature\06-hid_mouse`` befindet, oder fügen Sie den folgenden Code in Ihre Arduino IDE ein.
+Öffnen Sie die Datei ``05-hid_mouse.ino``, die sich unter ``elite-explorer-kit-main\r4_new_feature\05-hid_mouse`` befindet, oder fügen Sie den folgenden Code in Ihre Arduino IDE ein.
 
 .. warning::
     Wenn Sie den Befehl ``Mouse.move()`` verwenden, übernimmt das Arduino die Kontrolle über die Maus Ihres Computers! Um sicherzustellen, dass Sie die Kontrolle über Ihren Computer nicht verlieren, während Sie einen Sketch mit dieser Funktion ausführen, richten Sie ein zuverlässiges Steuerungssystem ein, bevor Sie ``Mouse.move()`` aufrufen. Dieser Sketch enthält einen Druckknopf, um die Maus zu aktivieren, sodass sie erst nach Betätigung des Knopfes funktioniert.
@@ -75,13 +75,13 @@ Bei Betätigung eines der Knöpfe verwendet das Arduino die Funktionen ``Keyboar
 
 **Schaltplan**
 
-.. image:: img/06_hid_2_bb.png
+.. image:: img/05_hid_2_bb.png
   :width: 70%
   :align: center
 
 **Code Hochladen**
 
-Öffnen Sie die Datei ``06-hid_keyboard.ino``, die sich unter ``elite-explorer-kit-main\r4_new_feature\06-hid_keyboard`` befindet, oder fügen Sie den folgenden Code in Ihre Arduino IDE ein.
+Öffnen Sie die Datei ``05-hid_keyboard.ino``, die sich unter ``elite-explorer-kit-main\r4_new_feature\05-hid_keyboard`` befindet, oder fügen Sie den folgenden Code in Ihre Arduino IDE ein.
 
 .. raw:: html
 

@@ -21,7 +21,7 @@ Das Arduino Uno R4 WiFi ist mit einem integrierten DAC (Digital-Analog-Wandler) 
 
 Der DAC auf dem Uno R4 WiFi bietet eine Auflösung von bis zu 12 Bit und liefert echte analoge Ausgabefähigkeiten, die die Leistung von PWM-Pins übertreffen.
 
-.. image:: img/05_dac.png
+.. image:: img/07_dac.png
   :width: 70%
 
 Musik mit DAC abspielen
@@ -29,13 +29,13 @@ Musik mit DAC abspielen
 
 **Schaltplan**
 
-.. image:: img/05_dac_bb.png
+.. image:: img/07_dac_bb.png
   :width: 100%
   :align: center
 
 **Code Hochladen**
 
-Öffnen Sie die Datei ``05-dac.ino``, die sich unter ``elite-explorer-kit-main\r4_new_feature\05-dac`` befindet, oder fügen Sie den folgenden Code in Ihre Arduino IDE ein.
+Öffnen Sie die Datei ``07-dac.ino``, die sich unter ``elite-explorer-kit-main\r4_new_feature\07-dac`` befindet, oder fügen Sie den folgenden Code in Ihre Arduino IDE ein.
 
 .. note:: 
     Bitte platzieren Sie die Datei ``pitches.h`` im selben Verzeichnis wie den Code, um eine ordnungsgemäße Funktion zu gewährleisten.

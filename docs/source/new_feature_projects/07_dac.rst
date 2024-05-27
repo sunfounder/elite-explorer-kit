@@ -21,7 +21,7 @@ Arduino Uno R4 WiFiには、内蔵のDAC（デジタル・アナログ・コン�
 
 Uno R4 WiFiのDACは最大12ビットの分解能を誇り、PWMピンの性能を上回る真のアナログ出力能力を提供します。
 
-.. image:: img/05_dac.png
+.. image:: img/07_dac.png
   :width: 70%
 
 DACを使用して音楽を再生する
@@ -29,13 +29,13 @@ DACを使用して音楽を再生する
 
 **回路図**
 
-.. image:: img/05_dac_bb.png
+.. image:: img/07_dac_bb.png
   :width: 100%
   :align: center
 
 **コードのアップロード**
 
-``elite-explorer-kit-main\r4_new_feature\05-dac`` にある ``05-dac.ino`` ファイルを開くか、以下のコードをArduino IDEに貼り付けてください。
+``elite-explorer-kit-main\r4_new_feature\07-dac`` にある ``07-dac.ino`` ファイルを開くか、以下のコードをArduino IDEに貼り付けてください。
 
 .. note:: 
     正常な動作を確保するために、コードと同じディレクトリに ``pitches.h`` ファイルを配置してください。

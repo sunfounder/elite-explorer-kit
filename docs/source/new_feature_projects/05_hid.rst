@@ -30,13 +30,13 @@ Arduino Uno R4 WiFiを使用してマウスを制御するのは簡単です。 
 
 **回路図**
 
-.. image:: img/06_hid_1_bb.png
+.. image:: img/05_hid_1_bb.png
   :width: 70%
   :align: center
 
 **コードのアップロード**
 
-``elite-explorer-kit-main\r4_new_feature\06-hid_mouse`` にある ``06-hid_mouse.ino`` ファイルを開くか、以下のコードをArduino IDEに貼り付けてください。
+``elite-explorer-kit-main\r4_new_feature\05-hid_mouse`` にある ``05-hid_mouse.ino`` ファイルを開くか、以下のコードをArduino IDEに貼り付けてください。
 
 .. warning::
     ``Mouse.move()`` コマンドを使用すると、Arduinoがコンピュータのマウスを制御します！この機能を使用してスケッチを実行する際に、コンピュータの制御を失わないように、 ``Mouse.move()`` を呼び出す前に信頼性のあるコントロールシステムを設定してください。このスケッチには、マウスを切り替えるためのプッシュボタンが含まれており、ボタンを押すとスケッチが実行されるようになります。
@@ -76,13 +76,13 @@ Arduino Uno R4 WiFiは、キーボードエミュレーションの機能も提�
 
 **回路図**
 
-.. image:: img/06_hid_2_bb.png
+.. image:: img/05_hid_2_bb.png
   :width: 70%
   :align: center
 
 **コードのアップロード**
 
-``elite-explorer-kit-main\r4_new_feature\06-hid_keyboard`` にある ``06-hid_keyboard.ino`` ファイルを開くか、以下のコードをArduino IDEに貼り付けてください。
+``elite-explorer-kit-main\r4_new_feature\05-hid_keyboard`` にある ``05-hid_keyboard.ino`` ファイルを開くか、以下のコードをArduino IDEに貼り付けてください。
 
 .. raw:: html
 

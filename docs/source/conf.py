@@ -353,6 +353,9 @@ rst_epilog = """
 
     <a href="https://docs.arduino.cc/tutorials/uno-r4-wifi/adc-resolution/" target="_blank">Arduino UNO R4 WiFi ADC Resolution</a>
 
+.. |link_fastled_3_7_0| raw:: html
+
+    <a href="https://github.com/FastLED/FastLED/blob/master/release_notes.md#fastled-370" target="_blank">FastLED 3.7.0</a>
 
 """
 

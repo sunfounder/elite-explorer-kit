@@ -15,7 +15,14 @@
 LESSON 19: Mixing Colors with an RGB LED
 ==========================================
 
-Comming Soon...
+This lesson demonstrates how to create a user-controlled RGB LED system using the Arduino, where the user can choose different colors based on input through the serial monitor. Here’s a brief overview of what you will learn:
+
+1. **Reviewing Previous Homework**:Recapping the assignment from Lesson 18, which involved controlling an RGB LED to produce various colors by mixing red, green, and blue lights.
+2. **Setting Up the Circuit**:Detailed instructions on how to correctly connect an RGB LED and its current-limiting resistors to the Arduino. Each color channel (red, green, blue) is connected to a digital pin (pins 9, 10, and 11), and the common cathode (long leg) is connected to ground.
+3. **Writing the Code**:Step-by-step coding instructions to:Define the pins for each color channel of the RGB LED.Set up the serial monitor for user input.Use analog write commands to adjust the brightness of each color channel to mix different colors.Convert user input to lowercase to handle different cases.Handle various user inputs to produce specific colors (red, green, blue, cyan, magenta, yellow, orange, white) by mixing the RGB values appropriately.
+4. **Debugging Tips**:Guidance on troubleshooting common issues such as:Ensuring proper capitalization and syntax in the code.Checking for missing semicolons and incorrect curly braces.Adjusting RGB values to get the correct color output by tweaking brightness levels.
+5. **Practical Applications**:Examples of mixing colors using RGB values to produce a wide range of colors. 
+6. **Homework Assignment**:Flash the RGB LED in a sequence of red, green, blue, wait for a second, and repeat this sequence 25 times.Ensure the program stops after 25 cycles.Create a short video of the solution, post it on YouTube, and link back to the lesson for review.
 
 **Video**
 

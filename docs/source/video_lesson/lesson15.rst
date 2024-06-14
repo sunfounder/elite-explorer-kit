@@ -15,7 +15,14 @@
 LESSON 15: Controlling LED Based on User Input From Serial Monitor
 ====================================================================
 
-Comming Soon...
+This lesson demonstrates how to create a user-interactive program using the Arduino, focusing on obtaining user input through the serial monitor and performing different operations based on the input. Here’s a brief overview of what you will learn:
+
+1. **Reviewing Previous Homework**: Recapping the assignment from Lesson 14, which involved controlling the brightness of an LED by getting input from the user on the serial monitor.
+2. **Setting Up the Circuit**: Instructions on how to correctly connect an LED and a resistor to the Arduino, ensuring that each component is properly configured for the experiment.
+3. **Writing the Code**: Step-by-step coding instructions to read user input from the serial monitor and use it to adjust the LED’s brightness. This includes mathematical calculations to translate the user's input into a value that the Arduino can use to control the LED brightness.
+4. **Exponential Scaling**: Explanation of how to use exponential scaling to ensure that the perceived brightness of the LED increases smoothly across the range of user inputs.
+5. **Debugging Tips**: Guidance on troubleshooting common issues such as incorrect readings or errors in the output that affect the LED brightness.
+6. **Homework Assignment**: creating a program that asks the user for a brightness level (between 0 and 10) for an LED and then sets the LED brightness accordingly. 
 
 **Video**
 

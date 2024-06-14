@@ -15,7 +15,16 @@
 LESSON 16: Understanding If Statements and Conditionals
 =========================================================
 
-Comming Soon...
+This lesson demonstrates how to use if statements and conditionals to execute code based on specific conditions using the Arduino. Here’s a brief overview of what you will learn:
+
+1. **Reviewing Previous Homework**:Recapping the assignment from Lesson 15, which involved controlling the brightness of an LED by getting input from the user on the serial monitor.
+2. **Setting Up the Circuit**:Instructions on how to correctly connect an LED and a resistor to the Arduino, ensuring that each component is properly configured for the experiment.
+3. **Writing the Code**:Step-by-step coding instructions to:Get a number from the user.Check if the number is positive, negative, or zero using if statements.Provide feedback to the user based on the input.
+4. **Using If Statements and Conditionals**:Explanation of if statements and conditionals, which are used to execute code only if certain conditions are met. This includes:Checking if a number is positive, negative, or zero.Implementing compound conditionals using logical operators such as AND (&&) and OR (||).
+5. **Exponential Scaling**:An example of how to apply exponential scaling in a different context to ensure smooth changes in perceived outcomes based on user inputs.
+6. **Debugging Tips**:Guidance on troubleshooting common issues such as incorrect logical conditions or unexpected behaviors in the code. Emphasis on the importance of handling boundary conditions correctly.
+7. **Practical Applications**:Examples of more complex conditional statements to check for even and odd numbers, handle different cases for string inputs, and convert string inputs to a consistent case for comparison.
+8. **Homework Assignment**:creating a program that asks the user which LED (red, green, or yellow) they want to turn on and then turns on the selected LED. This reinforces the concepts learned and encourages students to build and test circuits.
 
 **Video**
 

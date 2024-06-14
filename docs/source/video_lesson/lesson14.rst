@@ -15,7 +15,16 @@
 LESSON 14: Read User Input From the Serial Monitor
 ====================================================
 
-Comming Soon...
+This lesson demonstrates how to create a user-interactive program using the Arduino, focusing on obtaining user input through the serial monitor and performing different operations based on the input. Here’s a brief overview of what you will learn:
+
+1. **Introduction to User Input via Serial Monitor** : An introduction to the concept of reading user input from the Arduino serial monitor, which is essential for interactive projects.
+2. **Setting Up Serial Communication**: Detailed instructions on setting up serial communication in the Arduino code, using Serial.begin(9600) to initialize the serial monitor.
+3. **Reading Different Data Types**: Step-by-step guidance on how to read various data types from the user:Integers: Using Serial.parseInt() to read integer values.Floats: Using Serial.parseFloat() to read floating-point numbers.Strings: Using Serial.readString() to read strings.
+4. **Implementing a While Loop for Waiting on User Input**: Explanation of how to implement a while loop to wait for user input, ensuring the program does not proceed until the user has entered the required data.
+5. **Error Handling with Serial Input**: Tips on handling errors related to incorrect data types and ensuring the serial monitor is set to 'No line ending' to prevent additional characters from being read as input.
+6. **Practical Application and Example Code**: An example project where the user is asked for a number, a float, and a string, demonstrating how to capture and use these inputs effectively. The provided code shows how to ask for input, wait for it, and then read and process the input.
+7. **Homework Assignment**: creating a program that asks the user for a brightness level (between 0 and 255) for an LED and then sets the LED brightness accordingly. 
+
 
 **Video**
 

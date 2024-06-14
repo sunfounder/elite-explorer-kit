@@ -67,6 +67,7 @@ SunFounderとともに、Arduinoのプログラミングがアップグレード
     fun_projects/00_fun_project
     iot_projects/00_iot_project
     appendix/appendix
+    video_lesson/video_lesson
 
 
 .. toctree::

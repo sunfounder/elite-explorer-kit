@@ -125,7 +125,7 @@ Initialize the RFID.
 
     uchar request(uchar reqMode, uchar *TagType);
 
-Search card and read card type, and the function will return the current read status of RFID and return MI_OK if successed.
+Search card and read card type, and the function will return the current read status of RFID and return MI_OK if succeeded.
 
 * ``reqMode``: Search methods. PICC_REQIDL is defined that 0x26 command bits (Search the cards that does not in the sleep mode in the antenna area).
 * ``*TagType``: It is used to store card type, and its value can be 4byte (e.g. 0x0400).
@@ -144,6 +144,6 @@ into the specific card type and returns a string. If passed 0x0400,
 
 Prevent conflict, and read the card serial number. The function will
 return the current reading status of RFID. It returns MI_OK if
-successed.
+succeeded.
 
 * ``*serNum``: It is used to store the card serial number, and return the 4 bytes card serial number. The 5th byte is recheck byte(e.g. e.g. my magnetic card ID is 5AE4C955).

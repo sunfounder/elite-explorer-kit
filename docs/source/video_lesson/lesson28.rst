@@ -15,7 +15,7 @@
 LESSON 28: Using the LED Matrix on the Arduino R4 WiFi
 ========================================================
 
-Comming Soon...
+Coming Soon...
 
 **Video**
 

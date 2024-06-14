@@ -1,7 +1,4 @@
-WiFi-Controlled LED (Access Point)
----------------------------------------------------
-
-This project allows you to control an LED light through a web interface. The Arduino board acts as a WiFi access point, creating its own local network that you can connect to with a web browser. Once connected, you can navigate to the device's IP address using the web browser, where you'll find options to turn an LED (connected to the board's pin 13) on and off. The project provides real-time feedback on the LED status via the Serial Monitor, making it easier to debug and understand the flow of operations... note::
+.. note::
 
     Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
 
@@ -15,7 +12,10 @@ This project allows you to control an LED light through a web interface. The Ard
 
     👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
 
+WiFi-Controlled LED (Access Point)
+---------------------------------------------------
 
+This project allows you to control an LED light through a web interface. The Arduino board acts as a WiFi access point, creating its own local network that you can connect to with a web browser. Once connected, you can navigate to the device's IP address using the web browser, where you'll find options to turn an LED (connected to the board's pin 13) on and off. The project provides real-time feedback on the LED status via the Serial Monitor, making it easier to debug and understand the flow of operations.
 
 1. Upload the code
 ========================
@@ -43,22 +43,7 @@ You still need to create or modify ``arduino_secrets.h``, replace ``SECRET_SSID`
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/videos/new_feature_projects/wifi.mp4"  type="video/mp4">
       Your browser does not support the video tag.
-   </video>.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
-
-
+   </video>
 
 2. Code explanation
 ========================

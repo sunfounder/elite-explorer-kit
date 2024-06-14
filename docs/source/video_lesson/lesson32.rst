@@ -15,7 +15,7 @@
 LESSON 32: Show Temperature and Humidity on the LED Matrix
 ============================================================
 
-Comming Soon...
+Coming Soon...
 
 **Video**
 

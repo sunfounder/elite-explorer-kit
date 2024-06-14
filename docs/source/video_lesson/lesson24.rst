@@ -15,7 +15,7 @@
 LESSON 24: Make a Button Switch With a Pullup Resistor
 ========================================================
 
-Comming Soon...
+Coming Soon...
 
 **Video**
 

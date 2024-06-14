@@ -15,6 +15,7 @@
 LESSON 19: Mixing Colors with an RGB LED
 ==========================================
 
+<<<<<<< HEAD
 This lesson demonstrates how to create a user-controlled RGB LED system using the Arduino, where the user can choose different colors based on input through the serial monitor. Here’s a brief overview of what you will learn:
 
 1. **Reviewing Previous Homework**:Recapping the assignment from Lesson 18, which involved controlling an RGB LED to produce various colors by mixing red, green, and blue lights.
@@ -23,6 +24,9 @@ This lesson demonstrates how to create a user-controlled RGB LED system using th
 4. **Debugging Tips**:Guidance on troubleshooting common issues such as:Ensuring proper capitalization and syntax in the code.Checking for missing semicolons and incorrect curly braces.Adjusting RGB values to get the correct color output by tweaking brightness levels.
 5. **Practical Applications**:Examples of mixing colors using RGB values to produce a wide range of colors. 
 6. **Homework Assignment**:Flash the RGB LED in a sequence of red, green, blue, wait for a second, and repeat this sequence 25 times.Ensure the program stops after 25 cycles.Create a short video of the solution, post it on YouTube, and link back to the lesson for review.
+=======
+Coming Soon...
+>>>>>>> edd38900a1501b948a6c3d4d0d7d957025a4affb
 
 **Video**
 

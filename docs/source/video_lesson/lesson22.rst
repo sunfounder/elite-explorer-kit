@@ -15,7 +15,7 @@
 LESSON 22: Control a Servo With Your Arduino
 ==============================================
 
-Comming Soon...
+Coming Soon...
 
 **Video**
 

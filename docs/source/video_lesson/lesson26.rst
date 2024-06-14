@@ -15,7 +15,7 @@
 LESSON 26: Control RGB LED Color with Pushbuttons
 ===================================================
 
-Comming Soon...
+Coming Soon...
 
 **Video**
 

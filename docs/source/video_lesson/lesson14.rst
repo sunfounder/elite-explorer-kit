@@ -15,6 +15,7 @@
 LESSON 14: Read User Input From the Serial Monitor
 ====================================================
 
+<<<<<<< HEAD
 This lesson demonstrates how to create a user-interactive program using the Arduino, focusing on obtaining user input through the serial monitor and performing different operations based on the input. Here’s a brief overview of what you will learn:
 
 1. **Introduction to User Input via Serial Monitor** : An introduction to the concept of reading user input from the Arduino serial monitor, which is essential for interactive projects.
@@ -25,6 +26,9 @@ This lesson demonstrates how to create a user-interactive program using the Ardu
 6. **Practical Application and Example Code**: An example project where the user is asked for a number, a float, and a string, demonstrating how to capture and use these inputs effectively. The provided code shows how to ask for input, wait for it, and then read and process the input.
 7. **Homework Assignment**: creating a program that asks the user for a brightness level (between 0 and 255) for an LED and then sets the LED brightness accordingly. 
 
+=======
+Coming Soon...
+>>>>>>> edd38900a1501b948a6c3d4d0d7d957025a4affb
 
 **Video**
 

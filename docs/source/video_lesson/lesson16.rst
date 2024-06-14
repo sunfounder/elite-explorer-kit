@@ -15,7 +15,6 @@
 LESSON 16: Understanding If Statements and Conditionals
 =========================================================
 
-<<<<<<< HEAD
 This lesson demonstrates how to use if statements and conditionals to execute code based on specific conditions using the Arduino. Here’s a brief overview of what you will learn:
 
 1. **Reviewing Previous Homework**:Recapping the assignment from Lesson 15, which involved controlling the brightness of an LED by getting input from the user on the serial monitor.
@@ -26,9 +25,6 @@ This lesson demonstrates how to use if statements and conditionals to execute co
 6. **Debugging Tips**:Guidance on troubleshooting common issues such as incorrect logical conditions or unexpected behaviors in the code. Emphasis on the importance of handling boundary conditions correctly.
 7. **Practical Applications**:Examples of more complex conditional statements to check for even and odd numbers, handle different cases for string inputs, and convert string inputs to a consistent case for comparison.
 8. **Homework Assignment**:creating a program that asks the user which LED (red, green, or yellow) they want to turn on and then turns on the selected LED. This reinforces the concepts learned and encourages students to build and test circuits.
-=======
-Coming Soon...
->>>>>>> edd38900a1501b948a6c3d4d0d7d957025a4affb
 
 **Video**
 

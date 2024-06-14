@@ -15,7 +15,6 @@
 LESSON 17: Control Multiple LED from the Serial Monitor
 =========================================================
 
-<<<<<<< HEAD
 This lesson demonstrates how to create a user-controlled LED system using the Arduino, where the user can turn on and off different LEDs based on input through the serial monitor. Here’s a brief overview of what you will learn:
 
 1. **Reviewing Previous Homework**:Recapping the assignment from Lesson 16, which involved making a circuit with three LEDs (red, yellow, and green) and controlling them based on user input.
@@ -24,10 +23,6 @@ This lesson demonstrates how to create a user-controlled LED system using the Ar
 4. **Debugging Tips**:Guidance on troubleshooting common issues such as missing semicolons, incorrect curly braces, and ensuring all LEDs are correctly turned off when a new LED is turned on.
 5. **Practical Applications**:Examples of using if statements to handle user input and control multiple outputs (LEDs) based on that input. 
 6. **Homework Assignment**: Extending the project by asking the user for both the LED color and the desired brightness. 
-
-=======
-Coming Soon...
->>>>>>> edd38900a1501b948a6c3d4d0d7d957025a4affb
 
 **Video**
 

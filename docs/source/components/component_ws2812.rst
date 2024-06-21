@@ -56,4 +56,4 @@ LED with low driving voltage, environmental protection and energy saving, high b
 **Example**
 
 * :ref:`basic_ws2812` (Basic Project)
-* :ref:`iot_cherrylight` (IoT Project)
+* :ref:`iot_cheerlights` (IoT Project)

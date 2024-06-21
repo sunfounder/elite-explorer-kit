@@ -12,9 +12,9 @@
 
     👉 私たちと一緒に探索し、創造する準備はできていますか？[|link_sf_facebook|]をクリックして今すぐ参加しましょう！
 
-.. _iot_cherrylight:
+.. _iot_cheerlights:
 
-CherryLight
+CheerLights
 ===============================
 
 .. raw:: html

@@ -50,5 +50,5 @@ WS2812Bは、制御回路とRGBチップが5050コンポーネントのパッケ
 **例**
 
 * :ref:`basic_ws2812` (基本プロジェクト)
-* :ref:`iot_cherrylight` (IoTプロジェクト)
+* :ref:`iot_cheerlights` (IoTプロジェクト)
 

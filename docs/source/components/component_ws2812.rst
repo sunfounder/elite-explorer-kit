@@ -56,5 +56,5 @@ LED mit niedriger Ansteuerspannung, Umweltschutz und Energieeinsparung, hohe Hel
 **Beispiel**
 
 * :ref:`basic_ws2812` (Grundprojekt)
-* :ref:`iot_cherrylight` (IoT-Projekt)
+* :ref:`iot_cheerlights` (IoT-Projekt)
 

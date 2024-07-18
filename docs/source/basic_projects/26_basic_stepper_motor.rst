@@ -113,13 +113,13 @@ Code-Analyse
        #include <Stepper.h>  // Include the Stepper library
 
        #define STEPS 2038                   // Define the number of steps per revolution for the motor
-       Stepper stepper(STEPS, 2, 3, 4, 5);  // Initialize stepper object and set pin connections (IN1, IN2, IN3, IN4)
+       Stepper stepper(STEPS, 2, 3, 4, 5);  // Initialize stepper object and set pin connections (IN1, IN3, IN2, IN4)
 
    Binden Sie die Kopfdatei ``Stepper.h`` ein, setzen Sie die Schritte auf 2038 und initialisieren Sie den Schrittmotor mit der Funktion stepper().
 
    ``STEPS``: Die Anzahl der Schritte in einer Umdrehung Ihres Motors. Für diesen Schrittmotor beträgt dieser Wert 2038.
 
-   ``Stepper(steps, pin1, pin2, pin3, pin4)``: Diese Funktion erstellt eine neue Instanz der Stepper-Klasse, die einen bestimmten Schrittmotor repräsentiert, der an Ihrem Arduino-Board angeschlossen ist. Die Pins pin1, pin2, pin3 und pin4 entsprechen den IN1-, IN2-, IN3- und IN4-Pins am ULN2003-Treiber.
+   ``Stepper(steps, pin1, pin2, pin3, pin4)``: Diese Funktion erstellt eine neue Instanz der Stepper-Klasse, die einen bestimmten Schrittmotor repräsentiert, der an Ihrem Arduino-Board angeschlossen ist. Die Pins pin1, pin2, pin3 und pin4 entsprechen den IN1-, IN3-, IN2- und IN4-Pins am ULN2003-Treiber.
    
 
 2. **loop() Funktion**

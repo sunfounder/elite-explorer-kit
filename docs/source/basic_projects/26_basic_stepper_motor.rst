@@ -113,13 +113,13 @@
        #include <Stepper.h>  // Include the Stepper library
 
        #define STEPS 2038                   // Define the number of steps per revolution for the motor
-       Stepper stepper(STEPS, 2, 3, 4, 5);  // Initialize stepper object and set pin connections (IN1, IN2, IN3, IN4)
+       Stepper stepper(STEPS, 2, 3, 4, 5);  // Initialize stepper object and set pin connections (IN1, IN3, IN2, IN4)
 
    ヘッダーファイル ``Stepper.h`` をインクルードし、ステップを2038に設定してから、stepper()関数でステッパーを初期化します。
 
    ``STEPS``: モーターが1回転するために必要なステップ数。このステッピングモーターでは、この値は2038です。
 
-   ``Stepper(steps, pin1, pin2, pin3, pin4)``: この関数は、Arduinoボードに接続された特定のステッピングモーターを表すStepperクラスの新しいインスタンスを作成します。ピンpin1, pin2, pin3, およびpin4は、ULN2003ドライバーのIN1, IN2, IN3, およびIN4ピンに対応しています。
+   ``Stepper(steps, pin1, pin2, pin3, pin4)``: この関数は、Arduinoボードに接続された特定のステッピングモーターを表すStepperクラスの新しいインスタンスを作成します。ピンpin1, pin2, pin3, およびpin4は、ULN2003ドライバーのIN1, IN3, IN2, およびIN4ピンに対応しています。
    
 
 2. **loop()関数**

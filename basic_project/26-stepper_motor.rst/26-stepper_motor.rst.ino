@@ -10,7 +10,7 @@
 #include <Stepper.h>  // Include the Stepper library
 
 #define STEPS 2038                   // Define the number of steps per revolution for the motor
-Stepper stepper(STEPS, 2, 3, 4, 5);  // Initialize stepper object and set pin connections (IN1, IN2, IN3, IN4)
+Stepper stepper(STEPS, 2, 3, 4, 5);  // Initialize stepper object and set pin connections (IN1, IN3, IN2, IN4)
 
 void setup() {
 }

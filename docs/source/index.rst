@@ -23,6 +23,7 @@ SunFounder Elite Explorerキットをお選びいただき、ありがとうご�
         * |link_german_tutorials|
         * |link_jp_tutorials|
         * |link_en_tutorials|
+        * |link_fr_tutorials|
 
     ご希望の言語でドキュメントにアクセスするために、それぞれのリンクをクリックしてください。
 

@@ -23,6 +23,7 @@ Thanks for choosing our Elite Explorer Kit.
         * |link_german_tutorials|
         * |link_jp_tutorials|
         * |link_en_tutorials|
+        * |link_fr_tutorials|
     
     Please click on the respective links to access the document in your preferred language.
 

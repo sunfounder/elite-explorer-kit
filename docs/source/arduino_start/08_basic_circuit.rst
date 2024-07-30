@@ -1,23 +1,23 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour et bienvenue dans la communauté SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts sur Facebook ! Plongez plus profondément dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes post-vente et les défis techniques grâce à l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux nouvelles annonces de produits et aux avant-goûts.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et concours** : Participez à des concours et promotions de fêtes.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et à créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
-How to Build the Circuit
-========================
+Comment construire le circuit
+====================================
 
-Many of the things you use every day are powered by electricity, like the lights in your house and the computer you're reading.
+Beaucoup des objets que vous utilisez quotidiennement sont alimentés par l'électricité, comme les lumières de votre maison et l'ordinateur sur lequel vous lisez ceci.
 
-To use electricity, you must build an electrical circuit. Basically, a circuit is a path through which electricity flows, or an electronic circuit, and is made up of electrical devices and components (appliances) that are connected in a certain way, such as resistors, capacitors, power supplies, and switches.
+Pour utiliser l'électricité, vous devez construire un circuit électrique. En gros, un circuit est un chemin par lequel l'électricité circule, ou un circuit électronique, et il est composé de dispositifs et de composants électriques (appareils) connectés d'une certaine manière, comme des résistances, des condensateurs, des sources d'alimentation et des interrupteurs.
 
 .. image:: img/circuit.png
     :align: center
@@ -27,22 +27,20 @@ To use electricity, you must build an electrical circuit. Basically, a circuit i
     
     <br/>
 
-A circuit is a closed path in which electrons move to create an electric current. To flow current, there must be a conducting path between the positive terminal of the power supply and the negative terminal, which is called a closed circuit (if it is broken, it is called an open circuit.) .
+Un circuit est un chemin fermé dans lequel les électrons se déplacent pour créer un courant électrique. Pour que le courant circule, il doit y avoir un chemin conducteur entre la borne positive de l'alimentation et la borne négative, ce qu'on appelle un circuit fermé (s'il est interrompu, on l'appelle un circuit ouvert).
 
-
-
-The Arduino Board has some power output pins (positive) and some ground pins (negative).
-You can use these pins as the positive and negative sides of the power supply by plugging the power source into the board.
+La carte Arduino possède des broches de sortie d'alimentation (positives) et des broches de masse (négatives).
+Vous pouvez utiliser ces broches comme les côtés positif et négatif de l'alimentation en branchant la source d'alimentation dans la carte.
 
 .. image:: img/08_circuit_1.png
     :align: center
     :width: 70%
 
-With electricity, you can create works with light, sound, and motion.
-You can light up an LED by connecting the long pin to the positive terminal and the short pin to the negative terminal.
-However, doing this directly can quickly damage not just the LED but also risk harming the pins of your UNO R4 board. To avoid this, it's essential to add a 1kΩ resistor into the circuit, protecting both the LED and the UNO R4's pins.
+Avec l'électricité, vous pouvez créer des œuvres avec la lumière, le son et le mouvement.
+Vous pouvez allumer une LED en connectant la broche longue à la borne positive et la broche courte à la borne négative.
+Cependant, faire cela directement peut rapidement endommager non seulement la LED, mais aussi risquer de nuire aux broches de votre carte UNO R4. Pour éviter cela, il est essentiel d'ajouter une résistance de 1 kΩ dans le circuit, protégeant ainsi à la fois la LED et les broches de l'UNO R4.
 
-The circuit they form is shown below.
+Le circuit qu'ils forment est montré ci-dessous.
 
 .. image:: img/08_circuit_2.png
     :align: center
@@ -52,31 +50,29 @@ The circuit they form is shown below.
     
     <br/>
 
-You may have questions this time: how do I build this circuit? Hold the wires by hand, or tape the pins and wires?
+Vous pouvez vous demander comment construire ce circuit. Tenir les fils à la main ou coller les broches et les fils ?
 
-In this situation, solderless breadboards will be your strongest allies.
+Dans cette situation, les breadboards sans soudure seront vos meilleurs alliés.
 
 .. _bc_bb:
 
-Hello, Breadboard!
+Bonjour, Breadboard !
 ------------------------------
 
-
-A breadboard is a rectangular plastic plate with a bunch of small holes. 
-These holes allow us to easily insert electronic components and build electronic circuits. 
-Breadboards do not permanently fix electronic components, so we can easily repair a circuit and start over if something goes wrong.
+Un breadboard est une plaque rectangulaire en plastique avec une multitude de petits trous.
+Ces trous nous permettent d'insérer facilement des composants électroniques et de construire des circuits électroniques.
+Les breadboards ne fixent pas de manière permanente les composants électroniques, nous pouvons donc facilement réparer un circuit et recommencer en cas de problème.
 
 .. note::
-    There is no need for special tools to use breadboards. However, many electronic components are very small, and a pair of tweezers can help us to pick up small parts better.
+    Il n'est pas nécessaire d'utiliser des outils spéciaux pour utiliser les breadboards. Cependant, de nombreux composants électroniques sont très petits, et une paire de pinces peut nous aider à mieux manipuler les petites pièces.
 
-On the Internet, we can find a lot of information about breadboards.
+Sur Internet, nous pouvons trouver de nombreuses informations sur les breadboards.
 
-* `How to Use a Breadboard - Science Buddies <https://www.sciencebuddies.org/science-fair-projects/references/how-to-use-a-breadboard#pth-smd>`_
+* `Comment utiliser un Breadboard - Science Buddies <https://www.sciencebuddies.org/science-fair-projects/references/how-to-use-a-breadboard#pth-smd>`_
 
-* `What is a BREADBOARD? - Makezine <https://cdn.makezine.com/uploads/2012/10/breadboardworkshop.pdf>`_
+* `Qu'est-ce qu'un BREADBOARD ? - Makezine <https://cdn.makezine.com/uploads/2012/10/breadboardworkshop.pdf>`_
 
-
-Here are some things you should know about breadboards.
+Voici quelques informations importantes sur les breadboards.
 
 .. image:: ../components/img/breadboard_internal.png
     :align: center
@@ -86,11 +82,11 @@ Here are some things you should know about breadboards.
 
    <br/>
 
-#. Each half-row group (such as column A-E in row 1 or column F-J in row 3) is connected. Therefore, if an electrical signal flows in from A1, it can flow out from B1, C1, D1, E1, but not from F1 or A2.
+#. Chaque groupe de demi-lignes (comme la colonne A-E de la ligne 1 ou la colonne F-J de la ligne 3) est connecté. Par conséquent, si un signal électrique entre par A1, il peut sortir par B1, C1, D1, E1, mais pas par F1 ou A2.
 
-#. In most cases, both sides of the breadboard are used as power buses, and the holes in each column (about 50 holes) are connected together. As a general rule, positive power supplies are connected to the holes near the red wire, and negative power supplies are connected to the holes near the blue wire.
+#. Dans la plupart des cas, les deux côtés du breadboard sont utilisés comme bus d'alimentation, et les trous de chaque colonne (environ 50 trous) sont connectés ensemble. En règle générale, les alimentations positives sont connectées aux trous près du fil rouge, et les alimentations négatives sont connectées aux trous près du fil bleu.
 
-**Let us follow the direction of the current to build the circuit!**
+**Suivons la direction du courant pour construire le circuit !**
 
 .. image:: img/08_circuit_3.png
     :align: center
@@ -100,32 +96,32 @@ Here are some things you should know about breadboards.
     
     <br/>
 
-1. In this circuit, we use the 5V pin of the board to power the LED. Use a male-to-male (M2M) jumper wire to connect it to the red power bus.
-#. To protect the LED and the UNO R4's pins, the current must pass through a 1k ohm resistor. Connect one end (either end) of the resistor to the red power bus, and the other end to the free row of the breadboard.
+1. Dans ce circuit, nous utilisons la broche 5V de la carte pour alimenter la LED. Utilisez un fil de connexion mâle-mâle (M2M) pour le connecter au bus d'alimentation rouge.
+#. Pour protéger la LED et les broches de l'UNO R4, le courant doit passer par une résistance de 1k ohm. Connectez une extrémité (n'importe laquelle) de la résistance au bus d'alimentation rouge et l'autre extrémité à une rangée libre du breadboard.
 
    .. note::
-        The color ring of the 1000 ohm :ref:`cpn_resistor` is red, black, black, brown and brown.
+        L'anneau de couleur de la résistance de 1000 ohms :ref:`cpn_resistor` est rouge, noir, noir, marron et marron.
 
-#. If you pick up the LED, you will see that one of its leads is longer than the other. Connect the longer lead to the same row as the resistor, and the shorter lead to the other row.
+#. Si vous prenez la LED, vous verrez que l'une de ses pattes est plus longue que l'autre. Connectez la patte longue à la même rangée que la résistance, et la patte courte à l'autre rangée.
 
    .. note::
-        The longer lead is the anode, which represents the positive side of the circuit; the shorter lead is the cathode, which represents the negative side. 
+        La patte longue est l'anode, qui représente le côté positif du circuit ; la patte courte est la cathode, qui représente le côté négatif.
 
-        The anode needs to be connected to the GPIO pin through a resistor; the cathode needs to be connected to the GND pin.
+        L'anode doit être connectée à la broche GPIO via une résistance ; la cathode doit être connectée à la broche GND.
 
-#. Using a male-to-male (M2M) jumper wire, connect the LED short pin to the breadboard's negative power bus.
-#. Connect the GND pin of board to the negative power bus using a jumper.
+#. Utilisez un fil de connexion mâle-mâle (M2M) pour connecter la patte courte de la LED au bus d'alimentation négatif du breadboard.
+#. Connectez la broche GND de la carte au bus d'alimentation négatif à l'aide d'un fil de connexion.
 
-Beware of short circuits
-------------------------------
-Short circuits can occur when two components that shouldn't be connected are "accidentally" connected. 
-This kit includes resistors, transistors, capacitors, LEDs, etc. that have long metal pins that can bump into each other and cause a short. Some circuits are simply prevented from functioning properly when a short occurs. Occasionally, a short circuit can damage components permanently, especially between the power supply and the ground bus, causing the circuit to get very hot, melting the plastic on the breadboard and even burning the components!
+Attention aux courts-circuits
+---------------------------------
+Les courts-circuits peuvent se produire lorsque deux composants qui ne devraient pas être connectés le sont "accidentellement".
+Ce kit comprend des résistances, des transistors, des condensateurs, des LEDs, etc., qui ont de longues pattes métalliques pouvant se toucher et provoquer un court-circuit. Certains circuits sont simplement empêchés de fonctionner correctement lorsqu'un court-circuit se produit. Parfois, un court-circuit peut endommager les composants de manière permanente, en particulier entre l'alimentation et le bus de masse, ce qui peut rendre le circuit très chaud, faire fondre le plastique du breadboard et même brûler les composants !
 
-Therefore, always make sure that the pins of all the electronics on the breadboard are not touching each other.
+Par conséquent, assurez-vous toujours que les pattes de tous les composants électroniques sur le breadboard ne se touchent pas.
 
-Direction of the circuit
--------------------------------
-There is an orientation to circuits, and the orientation plays a significant role in certain electronic components. There are some devices with polarity, which means they must be connected correctly based on their positive and negative poles. Circuits built with the wrong orientation will not function properly.
+Orientation du circuit
+----------------------------------
+Les circuits ont une orientation, et celle-ci joue un rôle important pour certains composants électroniques. Certains dispositifs ont une polarité, ce qui signifie qu'ils doivent être connectés correctement en fonction de leurs pôles positif et négatif. Les circuits construits avec la mauvaise orientation ne fonctionneront pas correctement.
 
 .. image:: img/08_circuit_4.png
     :align: center
@@ -135,62 +131,56 @@ There is an orientation to circuits, and the orientation plays a significant rol
     
     <br/>
 
-If you reverse the LED in this simple circuit that we built earlier, you will find that it no longer works.
+Si vous inversez la LED dans ce simple circuit que nous avons construit précédemment, vous constaterez qu'elle ne fonctionne plus.
 
-In contrast, some devices have no direction, such as the resistors in this circuit, so you can try inverting them without affecting the LEDs' normal operation.
+En revanche, certains dispositifs n'ont pas de direction, comme les résistances dans ce circuit, vous pouvez donc essayer de les inverser sans affecter le fonctionnement normal des LEDs.
 
-Most components and modules with labels such as "+", "-", "GND", "VCC" or have pins of different lengths must be connected to the circuit in a specific way.
+La plupart des composants et modules portant des étiquettes telles que "+", "-", "GND", "VCC" ou ayant des pattes de différentes longueurs doivent être connectés au circuit d'une manière spécifique.
 
-
-Protection of the circuit
+Protection du circuit
 -------------------------------------
 
-Current is the rate at which electrons flow past a point in a complete electrical circuit. At its most basic, current = flow. An ampere (AM-pir), or amp, is the international unit used for measuring current. It expresses the quantity of electrons (sometimes called "electrical charge") flowing past a point in a circuit over a given time.
+Le courant est la vitesse à laquelle les électrons passent par un point dans un circuit électrique complet. À son niveau le plus basique, le courant = débit. Un ampère (AM-pir), ou ampère, est l'unité internationale utilisée pour mesurer le courant. Il exprime la quantité d'électrons (parfois appelée "charge électrique") passant par un point dans un circuit sur une période donnée.
 
-The driving force (voltage) behind the flow of current is called voltage and is measured in volts (V).
+La force motrice (tension) derrière le flux de courant est appelée tension et est mesurée en volts (V).
 
-Resistance (R) is the property of the material that restricts the flow of current, and it is measured in ohms (Ω).
+La résistance (R) est la propriété du matériau qui restreint le flux de courant, et elle est mesurée en ohms (Ω).
 
-According to Ohm's law (as long as the temperature remains constant), current, voltage, and resistance are proportional.
-A circuit's current is proportional to its voltage and inversely proportional to its resistance. 
+Selon la loi d'Ohm (tant que la température reste constante), le courant, la tension et la résistance sont proportionnels.
+Le courant d'un circuit est proportionnel à sa tension et inversement proportionnel à sa résistance.
 
-Therefore, current (I) = voltage (V) / resistance (R).
+Par conséquent, courant (I) = tension (V) / résistance (R).
 
-* `Ohm's law - Wikipedia <https://en.wikipedia.org/wiki/Ohm%27s_law>`_
+* `Loi d'Ohm - Wikipedia <https://en.wikipedia.org/wiki/Ohm%27s_law>`_
 
-About Ohm's law we can do a simple experiment.
+À propos de la loi d'Ohm, nous pouvons faire une simple expérience.
 
 .. image:: img/08_circuit_5.png
     :width: 55%
 
-By changing the wire connecting 5V to 3.3V , the LED gets dimmer.
-If you change the resistor from 1000 ohm to 2000 ohm (color ring: red, black, black, brown, and brown), you will notice that the LED becomes dimmer than before. The larger the resistor, the dimmer the LED.
+En changeant le fil reliant 5V à 3.3V, la LED devient plus faible.
+Si vous changez la résistance de 1000 ohms à 2000 ohms (anneau de couleur : rouge, noir, noir, marron et marron), vous remarquerez que la LED devient plus faible qu'avant. Plus la résistance est grande, plus la LED est faible.
 
-Most packaged modules only require access to the proper voltage (usually 3.3V or 5V), such as ultrasonic module.
+La plupart des modules emballés ne nécessitent qu'un accès à la tension appropriée (généralement 3,3 V ou 5 V), comme le module à ultrasons.
 
-However, in your self-built circuits, you need to be aware of the supply voltage and resistor usage for electrical devices.
+Cependant, dans vos circuits auto-construits, vous devez être conscient de la tension d'alimentation et de l'utilisation des résistances pour les dispositifs électriques.
 
+Par exemple, les LEDs consomment généralement 20 mA de courant, et leur chute de tension est d'environ 1,8 V. Selon la loi d'Ohm, si nous utilisons une alimentation de 5 V, nous devons connecter une résistance d'au moins 160 ohms ((5-1,8)/20 mA) pour ne pas brûler la LED.
 
-As an example, LEDs usually consume 20mA of current, and their voltage drop is about 1.8V. According to Ohm's law, if we use 5V power supply, we need to connect a minimum of 160ohm ((5-1.8)/20mA) resistor in order not to burn out the LED.
+Contrôler un circuit avec Arduino
+--------------------------------------
 
+Maintenant que nous avons une compréhension de base de la programmation Arduino et des circuits électroniques, il est temps d'aborder la question la plus cruciale : Comment contrôler les circuits avec Arduino ?
 
+En termes simples, la façon dont Arduino contrôle un circuit est en changeant le niveau des broches de la carte. Par exemple, lors du contrôle d'une LED embarquée, il s'agit d'écrire un signal de niveau haut ou bas sur la broche 13.
 
-Control circuit with Arduino
---------------------------------
-
-Now that we have a basic understanding of Arduino programming and electronic circuits, it's time to face the most critical question: How to control circuits with Arduino?
-
-Simply put, the way Arduino controls a circuit is by changing the level of the pins on the board. For example, when controlling an on-board LED, it is writing a high or low level signal to pin 13.
-
-
-Now let's try to code the Arduino board to control the blinking LED on the breadboard. Build the circuit so that the LED is connected to pin 9.
+Essayons maintenant de programmer la carte Arduino pour contrôler le clignotement de la LED sur le breadboard. Construisez le circuit de manière à ce que la LED soit connectée à la broche 9.
 
 .. image:: img/08_circuit_6.png
     :width: 400
     :align: center
 
-
-Next, upload this sketch to the Arduino development board.
+Ensuite, téléversez ce sketch sur la carte de développement Arduino.
 
 .. code-block:: C
 
@@ -208,7 +198,7 @@ Next, upload this sketch to the Arduino development board.
         delay(delayTime);
     }
 
-This sketch is very similar to the one we used to control the blinking of the on-board LED, the difference is that the value of ``ledPin`` has been changed to 9.
-This is because we are trying to control the level of pin 9 this time.
+Ce sketch est très similaire à celui que nous avons utilisé pour contrôler le clignotement de la LED embarquée, la différence est que la valeur de ``ledPin`` a été changée à 9.
+C'est parce que cette fois nous essayons de contrôler le niveau de la broche 9.
 
-Now you can see the LED on the breadboard blinking.
+Vous pouvez maintenant voir la LED sur le breadboard clignoter.

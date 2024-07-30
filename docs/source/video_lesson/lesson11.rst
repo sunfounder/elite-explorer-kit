@@ -1,31 +1,32 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions exclusives** : Profitez de réductions exclusives sur nos produits les plus récents.
+    - **Promotions festives et cadeaux** : Participez à des concours et des promotions festives.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
-LESSON 11: Pulse Width Modulation (PWM) Simulation of Analog Voltages
-=======================================================================
+LEÇON 11 : Simulation de tensions analogiques par modulation de largeur d'impulsion (PWM)
+=============================================================================================
 
-This lesson explores the fundamentals of Pulse Width Modulation (PWM) as a method for simulating analog voltages using Arduino's digital pins. Here’s a brief overview of what you will learn:
+Cette leçon explore les fondamentaux de la modulation de largeur d'impulsion (PWM) en tant que méthode pour simuler des tensions analogiques à l'aide des broches numériques de l'Arduino. Voici un bref aperçu de ce que vous allez apprendre :
 
-1. **Understanding PWM**: Delve into the basics of PWM and its role in simulating analog outputs from digital signals, essential for controlling devices like LEDs in variable intensities.
-2. **Digital vs. Analog Signals**: Contrast the nature of digital outputs, which are either fully on or off, with the needs of applications requiring a range of outputs, and how PWM bridges this gap.
-3. **Setting Up PWM on Arduino**: Learn the specific setup for PWM on Arduino, including selecting the correct pins (those marked with a squiggly line) and configuring them in the IDE.
-4. **Practical PWM Application**: Implement a practical exercise to control an LED's brightness using PWM, illustrating the concept of varying voltage levels over time.
-5. **Homework Assignment**: Enhance understanding by experimenting with different PWM values to vary an LED's brightness, reinforcing the practical applications of PWM learned in the lesson.
+1. **Comprendre la PWM** : Plongez dans les bases de la PWM et son rôle dans la simulation de sorties analogiques à partir de signaux numériques, essentiel pour contrôler des dispositifs comme les LED à intensités variables.
+2. **Signaux numériques vs. analogiques** : Contrastez la nature des sorties numériques, qui sont soit totalement activées soit désactivées, avec les besoins des applications nécessitant une gamme de sorties, et comment la PWM comble cette lacune.
+3. **Configuration de la PWM sur Arduino** : Apprenez la configuration spécifique de la PWM sur Arduino, y compris le choix des broches correctes (celles marquées d'une ligne ondulée) et leur configuration dans l'IDE.
+4. **Application pratique de la PWM** : Mettez en œuvre un exercice pratique pour contrôler la luminosité d'une LED à l'aide de la PWM, illustrant le concept de niveaux de tension variables dans le temps.
+5. **Devoirs** : Renforcez la compréhension en expérimentant avec différentes valeurs de PWM pour faire varier la luminosité d'une LED, consolidant les applications pratiques de la PWM apprises dans la leçon.
 
 
-**Video**
+**Vidéo**
 
 .. raw:: html
 
-    <iframe width="700" height="500" src="https://www.youtube.com/embed/4QUH5D_6XVc?si=o9Q1tTC1X1B9teef" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="700" height="500" src="https://www.youtube.com/embed/4QUH5D_6XVc?si=o9Q1tTC1X1B9teef" title="Lecteur vidéo YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+

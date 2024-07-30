@@ -1,16 +1,16 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour et bienvenue dans la communauté SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts sur Facebook ! Plongez plus profondément dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes post-vente et les défis techniques grâce à l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux nouvelles annonces de produits et aux avant-goûts.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et concours** : Participez à des concours et promotions de fêtes.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et à créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _basic_photoresistor:
 
@@ -19,37 +19,37 @@ Photoresistor
 
 .. https://docs.sunfounder.com/projects/vincent-kit/en/latest/arduino/2.26_photoresistor.html
 
-Overview
----------------
+Aperçu
+------------------
 
-In this lesson, you will learn about Photoresistor. Photoresistor is applied in many electronic goods, such as the camera meter, clock radio, alarm device (as beam detector), small night lights, outdoor clock, solar street lamps and etc. Photoresistor is placed in a street lamp to control when the light is turned on. Ambient light falling on the photoresistor causes street lamps to turn on or off.
+Dans cette leçon, vous allez découvrir la photorésistance. La photorésistance est utilisée dans de nombreux produits électroniques, tels que le posemètre d'appareil photo, le radio-réveil, le dispositif d'alarme (comme détecteur de faisceau), les petites veilleuses, les horloges extérieures, les lampes de rue solaires, etc. La photorésistance est placée dans une lampe de rue pour contrôler l'allumage de la lumière. La lumière ambiante tombant sur la photorésistance provoque l'allumage ou l'extinction des lampes de rue.
 
-Required Components
--------------------------
+Composants nécessaires
+----------------------------
 
-In this project, we need the following components. 
+Dans ce projet, nous avons besoin des composants suivants.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est certainement pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nom
+        - ARTICLES DANS CE KIT
+        - LIEN
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément à partir des liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -62,16 +62,16 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_photoresistor`
         - |link_photoresistor_buy|
 
-Wiring
+Câblage
 ----------------------
 
-In this example, we use analog pin ( A0 ) to read the value of photoresistor. One pin of photoresistor is connected to 5V, the other is wired up to A0. Besides, a 10kΩ resistor is needed before the other pin is connected to GND.
+Dans cet exemple, nous utilisons la broche analogique (A0) pour lire la valeur de la photorésistance. Une broche de la photorésistance est connectée au 5V, l'autre est reliée à A0. De plus, une résistance de 10kΩ est nécessaire avant que l'autre broche ne soit connectée à la masse (GND).
 
 .. image:: img/01-photoresistor_bb.png
     :align: center
     :width: 80%
 
-Schematic Diagram
+Schéma
 -----------------------
 
 .. image:: img/01_photoresistor_schematic.png
@@ -83,8 +83,8 @@ Code
 
 .. note::
 
-    * You can open the file ``01-photoresistor`` under the path of ``elite-explorer-kit-main\basic_project\01-photoresistor`` directly.
-    * Or copy this code into Arduino IDE.
+    * Vous pouvez ouvrir le fichier ``01-photoresistor`` sous le chemin ``elite-explorer-kit-main\basic_project\01-photoresistor`` directement.
+    * Ou copiez ce code dans l'IDE Arduino.
 
 
 
@@ -93,4 +93,4 @@ Code
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/e6bf007e-b20d-44d0-9ef9-6d57c1ce4c3c/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After uploading the codes to the uno board, you can open the serial monitor to see the read value of the pin. When the ambient light becomes stronger, the reading will increase correspondingly, and the pin reading range is 「0」~「1023」.  However, according to the environmental conditions and the characteristics of the photoresistor, the actual reading range may be smaller than the theoretical range. 
+Après avoir téléversé le code sur la carte uno, vous pouvez ouvrir le moniteur série pour voir la valeur lue de la broche. Lorsque la lumière ambiante devient plus forte, la lecture augmentera en conséquence, et la plage de lecture de la broche est de « 0 » à « 1023 ». Cependant, selon les conditions environnementales et les caractéristiques de la photorésistance, la plage de lecture réelle peut être inférieure à la plage théorique.

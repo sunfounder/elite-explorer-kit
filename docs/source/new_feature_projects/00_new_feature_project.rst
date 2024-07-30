@@ -1,39 +1,39 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez au cœur des Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions exclusives** : Profitez de réductions exclusives sur nos produits les plus récents.
+    - **Promotions festives et cadeaux** : Participez à des concours et des promotions festives.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _new_projects:
 
-Explore Arduino® UNO R4 WiFi
+Explorez Arduino® UNO R4 WiFi
 ========================================
 
 .. image:: img/unor4wifi.webp
     :align: center
     :width: 50%
 
-The **Arduino Uno R4 WiFi board** is the latest addition to the Arduino family, offering a suite of advanced features while maintaining the robustness and versatility you've come to expect. This board brings a significant boost in processing power, thanks to its 32-bit Arm® Cortex®-M4 microcontroller, and it preserves compatibility with the standard form factor and shield stackability of the UNO series.
+La **carte Arduino Uno R4 WiFi** est la dernière addition à la famille Arduino, offrant un ensemble de fonctionnalités avancées tout en maintenant la robustesse et la polyvalence que vous attendez. Cette carte apporte une amélioration significative de la puissance de traitement grâce à son microcontrôleur 32 bits Arm® Cortex®-M4, tout en préservant la compatibilité avec le facteur de forme standard et la superposition des shields de la série UNO.
 
-**What's new about Uno R4 compared to R3?**
+**Quoi de neuf avec l'Uno R4 par rapport à l'Uno R3 ?**
 
-- **Enhanced Processing**: Transition from an 8-bit AVR to a 32-bit Arm® Cortex®-M4 microcontroller.
-- **Memory Upgrade**: Elevate your projects with 32KB of SRAM and 256KB of NAND flash memory.
-- **Advanced Connectivity**: Experience seamless connectivity with USB-C and Wi-Fi.
-- **Improved Performance**: Accomplish more with faster processing and greater memory capacity.
-- **Flexible Power Supply**: Power up your board with up to 24V for broader project possibilities.
+- **Traitement amélioré** : Transition d'un microcontrôleur AVR 8 bits à un microcontrôleur 32 bits Arm® Cortex®-M4.
+- **Mémoire améliorée** : Améliorez vos projets avec 32KB de SRAM et 256KB de mémoire flash NAND.
+- **Connectivité avancée** : Profitez d'une connectivité fluide avec USB-C et Wi-Fi.
+- **Performance améliorée** : Réalisez plus avec un traitement plus rapide et une plus grande capacité de mémoire.
+- **Alimentation flexible** : Alimentez votre carte avec jusqu'à 24V pour des possibilités de projets plus larges.
   
-In addition to the above upgrades, the R4 WiFi also introduces the following new features:
+En plus des améliorations ci-dessus, l'Uno R4 WiFi introduit également les nouvelles fonctionnalités suivantes :
 
-**New Features**
+**Nouvelles fonctionnalités**
 
 .. toctree::
     :maxdepth: 2
@@ -46,14 +46,14 @@ In addition to the above upgrades, the R4 WiFi also introduces the following new
     06_14_bit_adc
     07_dac
 
-- **Wi-Fi®**: Provides wireless connectivity ideal for various IoT projects, enabled by the ESP32-S3 module.
-- **Bluetooth®**: Offers short-range wireless communication between devices, also powered by the ESP32-S3 module.
-- **Built-in Real-Time Clock (RTC)**: Ideal for time-sensitive applications. Includes additional pins for battery-powered operation and an "OFF" pin to turn off the board while keeping the RTC running.
-- **12x8 LED Matrix**: A simple way to display data or create animations.
-- **DAC Channel**: Achieve precise analog outputs, perfect for audio projects.
-- **14-bit ADC**: The upgraded Analog-to-Digital Converter (ADC) in the Arduino Uno R4 offers a resolution of up to 14 bits. This allows for more precise and detailed reading of analog signals compared to the 10-bit resolution of previous versions. 
-- **HID Support**: Simulate a mouse or keyboard via USB with built-in HID support.
-- **CAN Protocol Support**: Extend your reach into automotive and industrial applications.
+- **Wi-Fi®** : Offre une connectivité sans fil idéale pour divers projets IoT, activée par le module ESP32-S3.
+- **Bluetooth®** : Offre une communication sans fil à courte portée entre les appareils, également alimentée par le module ESP32-S3.
+- **Horloge temps réel intégrée (RTC)** : Idéale pour les applications sensibles au temps. Comprend des broches supplémentaires pour un fonctionnement sur batterie et une broche "OFF" pour éteindre la carte tout en maintenant le RTC en fonctionnement.
+- **Matrice LED 12x8** : Un moyen simple d'afficher des données ou de créer des animations.
+- **Canal DAC** : Réalisez des sorties analogiques précises, parfait pour les projets audio.
+- **ADC 14 bits** : Le Convertisseur Analogique-Numérique (ADC) amélioré de l'Arduino Uno R4 offre une résolution allant jusqu'à 14 bits. Cela permet une lecture plus précise et détaillée des signaux analogiques par rapport à la résolution de 10 bits des versions précédentes.
+- **Support HID** : Simulez une souris ou un clavier via USB avec un support HID intégré.
+- **Support du protocole CAN** : Étendez vos projets aux applications automobiles et industrielles.
 
 .. toctree::
     :maxdepth: 2

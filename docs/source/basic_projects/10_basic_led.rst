@@ -1,50 +1,50 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts sur Facebook ! Plongez au cœur de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques grâce à l'aide de notre communauté et de notre équipe.
+    - **Apprendre & Partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-goûts.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos nouveaux produits.
+    - **Promotions festives et tirages au sort** : Participez à des tirages au sort et des promotions de vacances.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _basic_led:
 
-LED module
+Module LED
 ==========================
 
-Just as printing "Hello, world!" is the first step in learning to program, using a program to drive an LED is the traditional introduction to learning physical programming.
+Tout comme l'impression de "Hello, world !" est la première étape pour apprendre à programmer, utiliser un programme pour piloter une LED est l'introduction traditionnelle à la programmation physique.
 
-Required Components
+Composants requis
 -------------------------
 
-In this project, we need the following components. 
+Pour ce projet, nous avons besoin des composants suivants. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est certainement pratique d'acheter un kit complet, voici le lien : 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nom	
+        - ARTICLES DANS CE KIT
+        - LIEN
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément à partir des liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -57,7 +57,7 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_led`
         - |link_led_buy|
 
-Wiring
+Câblage
 ----------------------
 
 .. image:: img/10-led_bb.png
@@ -65,7 +65,7 @@ Wiring
     :width: 60%
 
 
-Schematic Diagram
+Schéma de câblage
 -----------------------
 
 .. image:: img/10_led_schematic.png
@@ -78,8 +78,8 @@ Code
 
 .. note::
 
-   * You can open the file ``10-led.ino`` under the path of ``elite-explorer-kit-main\basic_project\10-led``. 
-   * Or copy this code into **Arduino IDE**.
+   * Vous pouvez ouvrir le fichier ``10-led.ino`` sous le chemin ``elite-explorer-kit-main\basic_project\10-led``. 
+   * Ou copiez ce code dans **Arduino IDE**.
 
 .. raw:: html
 
@@ -92,19 +92,19 @@ Code
       Your browser does not support the video tag.
    </video>
 
-After the code is uploaded successfully, you will see the LED connected to digital pin 9 of the Arduino board start to blink. The LED will turn on for half a second and then turn off for another half a second, repeating this cycle continuously as the program runs.
+Une fois le code téléversé avec succès, vous verrez la LED connectée à la broche numérique 9 de la carte Arduino commencer à clignoter. La LED s'allumera pendant une demi-seconde puis s'éteindra pendant une autre demi-seconde, répétant ce cycle continuellement tant que le programme est en cours d'exécution.
 
-Code Analysis
+Analyse du code
 ------------------------
 
-Here, we connect the LED to the digital pin 9, so we need to declare an ``int`` variable called ``ledpin`` at the beginning of the program and assign a value of 9.
+Ici, nous connectons la LED à la broche numérique 9, donc nous devons déclarer une variable ``int`` appelée ``ledPin`` au début du programme et lui attribuer une valeur de 9.
 
 .. code-block:: arduino
 
     const int ledPin = 9;
 
 
-Now, initialize the pin in the ``setup()`` function, where you need to initialize the pin to ``OUTPUT`` mode.
+Maintenant, initialisez la broche dans la fonction ``setup()``, où vous devez initialiser la broche en mode ``OUTPUT``.
 
 .. code-block:: arduino
 
@@ -112,21 +112,21 @@ Now, initialize the pin in the ``setup()`` function, where you need to initializ
         pinMode(ledPin, OUTPUT);
     }
 
-In ``loop()``, ``digitalWrite()`` is used to provide 5V high level signal for ledpin, which will cause voltage difference between LED pins and light LED up.
+Dans la fonction ``loop()``, ``digitalWrite()`` est utilisé pour fournir un signal de niveau haut de 5V à la broche ledPin, ce qui entraînera une différence de tension entre les broches de la LED et l'allumera.
 
 .. code-block:: arduino
 
     digitalWrite(ledPin, HIGH);
 
-If the level signal is changed to LOW, the ledPin’s signal will be returned to 0 V to turn LED off.
+Si le signal de niveau est changé en LOW, le signal de la broche ledPin sera ramené à 0 V pour éteindre la LED.
 
 .. code-block:: arduino
 
     digitalWrite(ledPin, LOW);
 
 
-An interval between on and off is required to allow people to see the change, 
-so we use a ``delay(1000)`` code to let the controller do nothing for 1000 ms.
+Un intervalle entre l'allumage et l'extinction est nécessaire pour permettre aux 
+gens de voir le changement, nous utilisons donc un code ``delay(1000)`` pour que le contrôleur ne fasse rien pendant 1000 ms.
 
 .. code-block:: arduino
 

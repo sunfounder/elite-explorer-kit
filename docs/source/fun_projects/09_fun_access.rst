@@ -1,60 +1,60 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez dans l'univers du Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions exclusives** : Profitez de réductions exclusives sur nos produits les plus récents.
+    - **Promotions festives et cadeaux** : Participez à des concours et des promotions festives.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _fun_access:
 
-Access Control System
+Système de Contrôle d'Accès
 ======================================
 
 .. raw:: html
 
    <video loop controls style = "max-width:100%">
       <source src="../_static/videos/fun_projects/09_fun_access.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      Votre navigateur ne supporte pas la balise vidéo.
    </video>
 
-The primary function of this code is to perform user authentication using an RFID module. 
-If the authentication is successful, it controls a stepper motor to open the door and emits a sound through a buzzer to indicate the authentication result. 
-If the authentication fails, the door will not open.
+La fonction principale de ce code est d'effectuer l'authentification des utilisateurs à l'aide d'un module RFID. 
+Si l'authentification est réussie, il contrôle un moteur pas à pas pour ouvrir la porte et émet un son via un buzzer pour indiquer le résultat de l'authentification. 
+Si l'authentification échoue, la porte ne s'ouvrira pas.
 
-You can open the serial monitor to view the ID of your RFID card and re-config the password in this code.
+Vous pouvez ouvrir le moniteur série pour voir l'ID de votre carte RFID et reconfigurer le mot de passe dans ce code.
 
-**Required Components**
+**Composants nécessaires**
 
-In this project, we need the following components. 
+Dans ce projet, nous avons besoin des composants suivants.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est certainement pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nom	
+        - ARTICLES DANS CE KIT
+        - LIEN
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément à partir des liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -72,10 +72,10 @@ You can also buy them separately from the links below.
         - \-
 
 
-**Wiring**
+**Câblage**
 
 .. note::
-    To protect the :ref:`cpn_power`'s battery, please fully charge it before using it for the first time.
+    Pour protéger la batterie de la :ref:`cpn_power`, veuillez la charger complètement avant de l'utiliser pour la première fois.
 
 .. image:: img/09_access_bb.png
     :width: 100%
@@ -85,7 +85,7 @@ You can also buy them separately from the links below.
 
    <br/>
 
-**Schematic**
+**Schéma**
 
 .. image:: img/09_access_schematic.png
     :width: 100%
@@ -99,42 +99,43 @@ You can also buy them separately from the links below.
 
 .. note::
 
-    * You can open the file ``09_access_control_system.ino`` under the path of ``elite-explorer-kit-main\fun_project09_access_control_system`` directly.
-    * Or copy this code into Arduino IDE.
+    * Vous pouvez ouvrir le fichier ``09_access_control_system.ino`` sous le chemin ``elite-explorer-kit-main\fun_project09_access_control_system`` directement.
+    * Ou copiez ce code dans l'IDE Arduino.
 
 .. note::
 
-    * The ``RFID1`` library is used here. The library can be found in the ``elite-explorer-kit-main/library/`` directory, or you can click here :download:`RFID1.zip </_static/RFID1.zip>` to download it. Refer to :ref:`manual_install_lib` for a tutorial on how to install it.
+    * La bibliothèque ``RFID1`` est utilisée ici. La bibliothèque se trouve dans le répertoire ``elite-explorer-kit-main/library/``, ou vous pouvez cliquer ici :download:`RFID1.zip </_static/RFID1.zip>` pour la télécharger. Reportez-vous à :ref:`manual_install_lib` pour un tutoriel sur son installation.
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/3486dd4e-a76e-478f-b5a4-a86281f7f374/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-**How it works?**
+**Comment ça marche ?**
 
-Below is a step-by-step explanation of the code:
+Voici une explication étape par étape du code :
 
-1. **Include Library Files**: You have included three library files: ``rfid1.h``, ``Stepper.h``, and ``Wire.h``. These libraries are used to communicate with the RFID module, stepper motor, and for I2C communication.
+1. **Inclure les fichiers de bibliothèque** : Vous avez inclus trois fichiers de bibliothèque : ``rfid1.h``, ``Stepper.h`` et ``Wire.h``. Ces bibliothèques sont utilisées pour communiquer avec le module RFID, le moteur pas à pas et pour la communication I2C.
 
-2. **Constant Definitions**: You have defined some constants, including ``ID_LEN`` (length of the ID), ``stepsPerRevolution`` (steps per revolution for the stepper motor), ``rolePerMinute`` (stepper motor's speed), as well as the four stepper motor pins (IN1, IN2, IN3, IN4), buzzer pin (``buzPin``), and variables related to authentication.
+2. **Définitions des constantes** : Vous avez défini certaines constantes, notamment ``ID_LEN`` (longueur de l'ID), ``stepsPerRevolution`` (pas par révolution pour le moteur pas à pas), ``rolePerMinute`` (vitesse du moteur pas à pas), ainsi que les quatre broches du moteur pas à pas (IN1, IN2, IN3, IN4), la broche du buzzer (``buzPin``) et les variables liées à l'authentification.
 
-3. **Variable Definitions**: You've defined variables such as an array to store the read user ID (``userIdRead``), authenticated user ID (``userId``), and a boolean variable (``approved``) to indicate successful authentication.
+3. **Définitions des variables** : Vous avez défini des variables telles qu'un tableau pour stocker l'ID utilisateur lu (``userIdRead``), l'ID utilisateur authentifié (``userId``) et une variable booléenne (``approved``) pour indiquer le succès de l'authentification.
 
-4. **Object Instantiation**: You've created instances of two objects: ``RFID1 rfid`` and ``Stepper stepper`` for interacting with the RFID module and stepper motor, respectively.
+4. **Instantiation des objets** : Vous avez créé des instances de deux objets : ``RFID1 rfid`` et ``Stepper stepper`` pour interagir avec le module RFID et le moteur pas à pas, respectivement.
 
-5. ``setup()``: In the ``setup()`` function, you initialize the stepper motor's speed, set the buzzer pin as an output, and initialize the RFID module.
+5. ``setup()`` : Dans la fonction ``setup()``, vous initialisez la vitesse du moteur pas à pas, définissez la broche du buzzer comme une sortie et initialisez le module RFID.
 
-6. ``loop()``: In the ``loop()`` function, your main logic runs. If ``approved`` is 0 (indicating not authenticated yet), it calls the ``rfidRead()`` function to read data from the RFID module and then clears the ``userIdRead`` array. If ``approved`` is 1 (indicating successful authentication), it calls the ``openDoor()`` function to open the door and resets ``approved`` to 0.
+6. ``loop()`` : Dans la fonction ``loop()``, votre logique principale s'exécute. Si ``approved`` est 0 (indiquant non authentifié), il appelle la fonction ``rfidRead()`` pour lire les données du module RFID, puis efface le tableau ``userIdRead``. Si ``approved`` est 1 (indiquant une authentification réussie), il appelle la fonction ``openDoor()`` pour ouvrir la porte et réinitialise ``approved`` à 0.
 
-7. ``beep()``: This function controls the buzzer sound based on the ``duration`` and ``frequency`` parameters provided.
+7. ``beep()`` : Cette fonction contrôle le son du buzzer en fonction des paramètres ``duration`` et ``frequency`` fournis.
 
-8. ``verifyPrint()``: This function produces different buzzer sounds based on the ``result`` parameter to indicate whether authentication was successful.
+8. ``verifyPrint()`` : Cette fonction produit différents sons de buzzer en fonction du paramètre ``result`` pour indiquer si l'authentification a réussi ou échoué.
 
-9. ``openDoor()``: This function controls the stepper motor to open the door to a certain angle (``doorStep``) and then waits for a period before closing the door.
+9. ``openDoor()`` : Cette fonction contrôle le moteur pas à pas pour ouvrir la porte à un certain angle (``doorStep``) puis attend une période avant de refermer la porte.
 
-10. ``rfidRead()``: This function reads data from the RFID module, first calling ``getId()`` to get the user ID and then ``idVerify()`` to verify if the user ID matches the authenticated ID.
+10. ``rfidRead()`` : Cette fonction lit les données du module RFID, appelle d'abord ``getId()`` pour obtenir l'ID utilisateur, puis ``idVerify()`` pour vérifier si l'ID utilisateur correspond à l'ID authentifié.
 
-11. ``getId()``: This function retrieves the user ID from the RFID module and stores it in the ``userIdRead`` array. It emits a beep if reading fails.
+11. ``getId()`` : Cette fonction récupère l'ID utilisateur du module RFID et le stocke dans le tableau ``userIdRead``. Elle émet un bip en cas d'échec de la lecture.
 
-12. ``idVerify()``: This function verifies if the user ID matches the authenticated ID and produces a sound indicating successful or failed authentication.
+12. ``idVerify()`` : Cette fonction vérifie si l'ID utilisateur correspond à l'ID authentifié et produit un son indiquant une authentification réussie ou échouée.
+

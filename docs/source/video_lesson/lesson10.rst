@@ -1,31 +1,32 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions exclusives** : Profitez de réductions exclusives sur nos produits les plus récents.
+    - **Promotions festives et cadeaux** : Participez à des concours et des promotions festives.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
-LESSON 10: Writing Analog Voltages With the Arduino
-=====================================================
+LEÇON 10 : Écrire des tensions analogiques avec l'Arduino
+==============================================================
 
-This lesson teaches how to control the brightness of an LED by writing analog voltages using the Arduino. Here’s a brief overview of what you will learn:
+Cette leçon vous apprend à contrôler la luminosité d'une LED en écrivant des tensions analogiques avec l'Arduino. Voici un bref aperçu de ce que vous allez apprendre :
 
-1. **Introduction to Analog Output**: Understand the basics of analog outputs compared to digital, learning why and how they allow for varying levels of power output rather than just on/off states.
-2. **Setting up the Arduino**: Review how to set up the Arduino IDE and configure the board for analog output, specifically focusing on using PWM pins.
-3. **Building the Circuit**: Instructions on constructing a circuit with an LED and resistor, emphasizing the importance of connecting to PWM-capable pins for analog functionality.
-4. **Programming for Variable Brightness**: Writing code to adjust the LED's brightness using the `analogWrite()` function, demonstrating the effect of different values on LED brightness.
-5. **Homework Assignment**: Develop a program that incrementally changes the LED's brightness from dimmest to brightest and then back to dimmest, reinforcing the lesson's concepts through a dynamic display.
+1. **Introduction à la sortie analogique** : Comprendre les bases des sorties analogiques par rapport aux sorties numériques, apprendre pourquoi et comment elles permettent des niveaux de puissance variables plutôt que de simples états marche/arrêt.
+2. **Configuration de l'Arduino** : Revoir comment configurer l'IDE Arduino et configurer la carte pour la sortie analogique, en se concentrant spécifiquement sur l'utilisation des broches PWM.
+3. **Construction du circuit** : Instructions pour construire un circuit avec une LED et une résistance, en soulignant l'importance de se connecter aux broches compatibles PWM pour la fonctionnalité analogique.
+4. **Programmation pour une luminosité variable** : Écrire du code pour ajuster la luminosité de la LED en utilisant la fonction `analogWrite()`, démontrant l'effet de différentes valeurs sur la luminosité de la LED.
+5. **Devoirs** : Développer un programme qui change progressivement la luminosité de la LED, de la plus faible à la plus élevée puis de nouveau à la plus faible, renforçant les concepts de la leçon par un affichage dynamique.
 
 
-**Video**
+**Vidéo**
 
 .. raw:: html
 
-    <iframe width="700" height="500" src="https://www.youtube.com/embed/lTzOvBYNo3U?si=o9Q1tTC1X1B9teef" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="700" height="500" src="https://www.youtube.com/embed/lTzOvBYNo3U?si=o9Q1tTC1X1B9teef" title="Lecteur vidéo YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+

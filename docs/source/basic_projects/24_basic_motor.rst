@@ -1,53 +1,53 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour et bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez au cœur des Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-goûts.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos nouveaux produits.
+    - **Promotions festives et cadeaux** : Participez à des cadeaux et des promotions spéciales pendant les fêtes.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _basic_motor:
 
-Motor
+Moteur
 ==========================
 
-Overview
+Aperçu
 --------
 
-In this lesson, you will learn how to use Motor, the working principle of which is that the energized coil is forced to rotate in the magnetic field then the rotor of the motor rotates accordingly on which the pinion gear drives the engine flywheel to rotate.1
+Dans cette leçon, vous apprendrez à utiliser un moteur, dont le principe de fonctionnement repose sur le fait qu'une bobine sous tension est forcée de tourner dans un champ magnétique, entraînant ainsi la rotation du rotor du moteur. L'engrenage pignon entraîne alors le volant moteur à tourner.
 
-Required Components
--------------------
+Composants nécessaires
+-----------------------------
 
-In this project, we need the following components. 
+Pour ce projet, nous avons besoin des composants suivants. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est très pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nom	
+        - ARTICLES DANS CE KIT
+        - LIEN
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DU COMPOSANT
+        - LIEN D'ACHAT
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -62,13 +62,13 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_power`
         - \-
 
-Wiring
+Câblage
 ----------------------
 
-In this example, we use Power Supply Module to power the anode and cathode of breadboard.
+Dans cet exemple, nous utilisons un module d'alimentation pour alimenter l'anode et la cathode de la breadboard.
 
 .. note::
-    To protect the :ref:`cpn_power`'s battery, please fully charge it before using it for the first time.
+    Pour protéger la batterie du :ref:`cpn_power`, veuillez la charger complètement avant de l'utiliser pour la première fois.
 
 .. image:: img/24-motor_bb.png
     :align: center
@@ -78,8 +78,8 @@ In this example, we use Power Supply Module to power the anode and cathode of br
   
   <br/> 
 
-Schematic Diagram
------------------
+Schéma de câblage
+-------------------------
 
 .. image:: img/24_motor_schematic.png
     :align: center
@@ -94,63 +94,62 @@ Code
 
 .. note::
 
-    * You can open the file ``24-motor.ino`` under the path of ``elite-explorer-kit-main\basic_project\24-motor`` directly.
-    * Or copy this code into Arduino IDE.
+    * Vous pouvez ouvrir le fichier ``24-motor.ino`` sous le chemin ``elite-explorer-kit-main\basic_project\24-motor`` directement.
+    * Ou copier ce code dans l'IDE Arduino.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/7376df09-204d-4698-b2a6-106e2d2f00e6/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After uploading the code to the UNO board, you can choose the motor's rotation direction by typing "A" or "B" in the serial monitor.
+Après avoir téléversé le code sur la carte UNO, vous pouvez choisir la direction de rotation du moteur en tapant "A" ou "B" dans le moniteur série.
 
 
-Code Analysis
+Analyse du code
 --------------------------
 
-
-The motor can be driven by providing a voltage difference between the copper sheets at both sides of the motor. 
-Therefore, you only need to write 0 for the voltage of one side of the copper sheet and 5V for the other side. Modify the written analog signal value to adjust the direction and speed.
+Le moteur peut être entraîné en fournissant une différence de tension entre les plaques de cuivre des deux côtés du moteur. 
+Ainsi, il suffit d'écrire 0 pour la tension d'un côté de la plaque de cuivre et 5V pour l'autre côté. Modifiez la valeur du signal analogique écrit pour ajuster la direction et la vitesse.
 
 .. code-block:: arduino
 
-   // Function to rotate the motor clockwise
+   // Fonction pour faire tourner le moteur dans le sens horaire
    void clockwise(int Speed) {
      analogWrite(motorBI, 0);
      analogWrite(motorFI, Speed);
    }
    
-   // Function to rotate the motor anticlockwise
+   // Fonction pour faire tourner le moteur dans le sens antihoraire
    void anticlockwise(int Speed) {
      analogWrite(motorBI, Speed);
      analogWrite(motorFI, 0);
    }
 
-In this example, Serial.Read() is used to control the direction of motor. 
+Dans cet exemple, Serial.Read() est utilisé pour contrôler la direction du moteur. 
 
-When you type \'A\' in serial monitor, there calls the clockwise (255) function to make the motor rotate with the speed of 255.
-Input \'B\', and the motor will rotate in reverse direction.
+Lorsque vous tapez "A" dans le moniteur série, la fonction clockwise(255) est appelée pour faire tourner le moteur à une vitesse de 255. 
+Entrez "B", et le moteur tournera dans le sens inverse.
 
 .. code-block:: arduino
 
    void loop() {
-     // Check if there is available data on the serial port
+     // Vérifiez s'il y a des données disponibles sur le port série
      if (Serial.available() > 0) {
-       int incomingByte = Serial.read(); // Read incoming data
+       int incomingByte = Serial.read(); // Lire les données entrantes
        
-       // Determine motor direction based on user input
+       // Déterminez la direction du moteur en fonction de l'entrée utilisateur
        switch (incomingByte) {
          case 'A':
-           clockwise(255); // Rotate motor clockwise
-           Serial.println("The motor rotates clockwise.");
+           clockwise(255); // Faire tourner le moteur dans le sens horaire
+           Serial.println("Le moteur tourne dans le sens horaire.");
            break;
          case 'B':
-           anticlockwise(255); // Rotate motor anticlockwise
-           Serial.println("The motor rotates anticlockwise.");
+           anticlockwise(255); // Faire tourner le moteur dans le sens antihoraire
+           Serial.println("Le moteur tourne dans le sens antihoraire.");
            break;
        }
      }
      
-     delay(3000); // Wait for 3 seconds
-     stopMotor(); // Stop the motor
+     delay(3000); // Attendre 3 secondes
+     stopMotor(); // Arrêter le moteur
    }
 

@@ -1,31 +1,32 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez-vous dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions exclusives** : Profitez de réductions exclusives sur nos produits les plus récents.
+    - **Promotions festives et cadeaux** : Participez à des concours et des promotions festives.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
-LESSON 6: Create a Binary Counter With Arduino
-================================================
+LEÇON 6 : Créer un Compteur Binaire avec Arduino
+=====================================================
 
-This lesson guides you through the intriguing process of building a binary counter using an Arduino Uno R4 WiFi and the Sunfounder Elite Explorer Kit. Here's a succinct summary of what you'll learn:
+Cette leçon vous guide à travers le processus fascinant de création d'un compteur binaire à l'aide d'un Arduino Uno R4 WiFi et du Sunfounder Elite Explorer Kit. Voici un résumé succinct de ce que vous allez apprendre :
 
-1. **Setup and Tools Introduction**: Starting with the essentials, the lesson introduces the tools and setup required for the project, including the Arduino Uno R4 WiFi and components from the Sunfounder Elite Explorer Kit.
-2. **Review of Basics**: It revisits fundamental concepts like turning LEDs on and off, using resistors, and setting up pin modes on the Arduino.
-3. **Binary Counting**: The core of the lesson, where you'll learn to program the Arduino to count in binary using LEDs, making the abstract concept of binary numbers tangible.
-4. **Code Implementation**: Detailed walkthrough on writing and implementing the Arduino code to control the LEDs and make them count in binary from 0 to 15.
-5. **Homework Challenge**: The lesson concludes with a homework assignment challenging you to expand the binary counter by adding another LED, enabling the system to count up to 31 in binary.
+1. **Installation et Introduction aux Outils** : En commençant par l'essentiel, la leçon présente les outils et la configuration nécessaires pour le projet, y compris l'Arduino Uno R4 WiFi et les composants du Sunfounder Elite Explorer Kit.
+2. **Révision des Bases** : Revue des concepts fondamentaux tels que l'allumage et l'extinction des LED, l'utilisation des résistances et la configuration des modes des broches sur l'Arduino.
+3. **Comptage Binaire** : Le cœur de la leçon, où vous apprendrez à programmer l'Arduino pour compter en binaire en utilisant des LED, rendant ainsi le concept abstrait des nombres binaires tangible.
+4. **Implémentation du Code** : Explications détaillées sur l'écriture et l'implémentation du code Arduino pour contrôler les LED et les faire compter en binaire de 0 à 15.
+5. **Défi de Devoir** : La leçon se termine par un devoir vous mettant au défi d'étendre le compteur binaire en ajoutant une autre LED, permettant ainsi au système de compter jusqu'à 31 en binaire.
 
 
-**Video**
+**Vidéo**
 
 .. raw:: html
 
-    <iframe width="700" height="500" src="https://www.youtube.com/embed/KEtut8pzXZA?si=o9Q1tTC1X1B9teef" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="700" height="500" src="https://www.youtube.com/embed/KEtut8pzXZA?si=o9Q1tTC1X1B9teef" title="Lecteur vidéo YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+

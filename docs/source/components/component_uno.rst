@@ -1,88 +1,88 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts sur Facebook ! Plongez dans l'univers du Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions exclusives** : Profitez de réductions exclusives sur nos produits les plus récents.
+    - **Promotions festives et cadeaux** : Participez à des concours et des promotions festives.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _uno_r4_wifi:
 
 Arduino Uno R4 WiFi
-=================================
+============================
 
-**Overview**
+**Aperçu**
 
-The Arduino UNO R4 WiFi represents the pinnacle of IoT and wireless innovation. Equipped with the power of the RA4M1 microcontroller by Renesas and further enhanced by an ESP32-S3 coprocessor, this board is meticulously crafted to meet the evolving demands of modern-day makers. Whether you're a newcomer to the Arduino world or a seasoned tech enthusiast, the UNO R4 WiFi ensures top-notch performance, all while maintaining the trusted form factor and 5 V operating voltage.
+L'Arduino UNO R4 WiFi représente le summum de l'innovation IoT et sans fil. Équipée de la puissance du microcontrôleur RA4M1 de Renesas et renforcée par un coprocesseur ESP32-S3, cette carte est méticuleusement conçue pour répondre aux exigences évolutives des créateurs modernes. Que vous soyez un nouveau venu dans le monde Arduino ou un passionné de technologie chevronné, l'UNO R4 WiFi garantit des performances de premier ordre, tout en maintenant le format et la tension de fonctionnement de 5 V de confiance.
 
-Venturing further into the Arduino domain, the UNO R4 WiFi emerges as a symbol of connectivity, efficiency, and ingenuity. 
+En explorant davantage le domaine Arduino, l'UNO R4 WiFi émerge comme un symbole de connectivité, d'efficacité et d'ingéniosité.
 
 .. image:: img/unor4.jpg
     :width: 70%
 
-Here's what the Arduino UNO R4 WiFi offers:
+Voici ce que propose l'Arduino UNO R4 WiFi :
 
-* **Seamless Integration with UNO Ecosystem:** Staying true to its heritage, the UNO R4 WiFi guarantees compatibility with the iconic UNO form factor, pinout, and 5 V operating voltage. Transitioning from previous versions is effortless, thanks to the harmonious design and the expansive Arduino UNO ecosystem.
-* **Supercharged Memory and Processing:** Step into a realm of faster computations and intricate projects. The UNO R4 WiFi not only boasts enhanced memory but also operates with a clock speed that's three times quicker, ensuring your projects run smoothly and efficiently.
-* **Diverse On-Board Peripherals:** From a 12-bit DAC and CAN BUS to an OP AMP and a unique SWD port, the UNO R4 WiFi is equipped with features that elevate your project capabilities. Dive into a realm of endless possibilities and unleash your creativity.
-* **Connectivity at its Best:** With integrated Wi-Fi® and Bluetooth® Low Energy, the UNO R4 WiFi paves the way to the Internet of Things. Whether crafting a smart home system or an interactive dashboard, this board has your back.
-* **Interactive 12×8 LED Matrix:** Illuminate your projects with dynamic animations or real-time sensor data visualization, all without the need for external hardware.
-* **Advanced Safety Mechanisms:** The board's innate ability to detect and prevent potentially harmful operations, such as division by zero, ensures a seamless experience. Plus, with detailed feedback on the serial monitor, you're always in the loop.
-* **Qwiic Connector for Rapid Prototyping:** Broaden your project scope with the Qwiic connector. With a vast range of I2C-compatible modules available, prototyping becomes a breeze.
+* **Intégration transparente avec l'écosystème UNO** : Fidèle à son héritage, l'UNO R4 WiFi garantit une compatibilité avec le format emblématique de l'UNO, son brochage et sa tension de fonctionnement de 5 V. La transition depuis les versions précédentes est sans effort, grâce à la conception harmonieuse et à l'écosystème expansif de l'Arduino UNO.
+* **Mémoire et traitement superchargés** : Entrez dans un univers de calculs plus rapides et de projets complexes. L'UNO R4 WiFi ne se contente pas de disposer d'une mémoire améliorée, elle fonctionne également à une vitesse d'horloge trois fois plus rapide, assurant à vos projets de fonctionner de manière fluide et efficace.
+* **Périphériques embarqués divers** : Du DAC 12 bits et du CAN BUS à l'OP AMP et au port SWD unique, l'UNO R4 WiFi est équipée de fonctionnalités qui élèvent les capacités de vos projets. Plongez dans un univers de possibilités infinies et libérez votre créativité.
+* **Connectivité optimale** : Avec le Wi-Fi® intégré et le Bluetooth® Low Energy, l'UNO R4 WiFi ouvre la voie à l'Internet des objets. Que vous conceviez un système de maison intelligente ou un tableau de bord interactif, cette carte est votre alliée.
+* **Matrice LED 12×8 interactive** : Illuminez vos projets avec des animations dynamiques ou des visualisations de données en temps réel, sans besoin de matériel externe.
+* **Mécanismes de sécurité avancés** : La capacité innée de la carte à détecter et à prévenir les opérations potentiellement dangereuses, comme la division par zéro, assure une expérience sans faille. De plus, avec des retours détaillés sur le moniteur série, vous êtes toujours informé.
+* **Connecteur Qwiic pour prototypage rapide** : Élargissez la portée de vos projets avec le connecteur Qwiic. Avec une vaste gamme de modules compatibles I2C disponibles, le prototypage devient un jeu d'enfant.
 
-Step into the future of making with the Arduino UNO R4 WiFi. Whether you're aiming to integrate wireless functionalities, explore the vast IoT landscape, or simply upgrade your existing setup, this board is the ideal partner for your upcoming ventures.
+Entrez dans le futur de la création avec l'Arduino UNO R4 WiFi. Que vous souhaitiez intégrer des fonctionnalités sans fil, explorer l'immense paysage IoT ou simplement mettre à niveau votre configuration existante, cette carte est le partenaire idéal pour vos projets à venir.
 
-**Tech specs**
+**Caractéristiques techniques**
 
-+-----------------+---------------------------+-------------------------+
-| Board           | Name                      | Arduino® UNO R4 WiFi    |
-+=================+===========================+=========================+
-| Microcontroller | Renesas RA4M1 (Arm® Cortex®-M4)                     |
-+-----------------+---------------------------+-------------------------+
-| USB             | USB-C®                    | Programming Port        |
-+-----------------+---------------------------+-------------------------+
-| Pins            | Digital I/O Pins          | 14                      |
-+-----------------+---------------------------+-------------------------+
-| Pins            | Analog input pins         | 6                       |
-|                 +---------------------------+-------------------------+
-|                 | DAC                       | 1                       |
-|                 +---------------------------+-------------------------+
-|                 | PWM pins                  | 6                       |
-+-----------------+---------------------------+-------------------------+
-| Communication   | UART                      | Yes, 1x                 |
-|                 +---------------------------+-------------------------+
-|                 | I2C                       | Yes, 1x                 |
-|                 +---------------------------+-------------------------+
-|                 | SPI                       | Yes, 1x                 |
-|                 +---------------------------+-------------------------+
-|                 | CAN                       | Yes 1 CAN Bus           |
-+-----------------+---------------------------+-------------------------+
-| Power           | Circuit operating voltage | 5 V (ESP32-S3 is 3.3 V) |
-|                 +---------------------------+-------------------------+
-|                 | Input voltage (VIN)       | 6-24 V                  |
-|                 +---------------------------+-------------------------+
-|                 | DC Current per I/O Pin    | 8 mA                    |
-+-----------------+---------------------------+-------------------------+
-| Clock speed     | Main core                 | 48 MHz                  |
-|                 +---------------------------+-------------------------+
-|                 | ESP32-S3                  | up to 240 MHz           |
-+-----------------+---------------------------+-------------------------+
-| Memory          | RA4M1                     | 256 kB Flash, 32 kB RAM |
-|                 +---------------------------+-------------------------+
-|                 | ESP32-S3                  | 384 kB ROM, 512 kB SRAM |
-+-----------------+---------------------------+-------------------------+
-| Dimensions      | Width                     | 68.85 mm                |
-|                 +---------------------------+-------------------------+
-|                 | Length                    | 53.34 mm                |
-+-----------------+---------------------------+-------------------------+
++-----------------+--------------------------------------+--------------------------+
+| Carte           | Nom                                  | Arduino® UNO R4 WiFi     |
++=================+======================================+==========================+
+| Microcontrôleur | Renesas RA4M1 (Arm® Cortex®-M4)                                 |
++-----------------+--------------------------------------+--------------------------+
+| USB             | USB-C®                               | Port de programmation    |
++-----------------+--------------------------------------+--------------------------+
+| Broches         | Broches I/O numériques               | 14                       |
++-----------------+--------------------------------------+--------------------------+
+| Broches         | Broches d'entrée analogiques         | 6                        |
+|                 +--------------------------------------+--------------------------+
+|                 | DAC                                  | 1                        |
+|                 +-----------------------------------------------------------------+ 
+|                 | Broches PWM                          | 6                        |
++-----------------+--------------------------------------+--------------------------+
+| Communication   | UART                                 | Oui, 1x                  |
+|                 +--------------------------------------+--------------------------+
+|                 | I2C                                  | Oui, 1x                  |
+|                 +--------------------------------------+--------------------------+
+|                 | SPI                                  | Oui, 1x                  |
+|                 +--------------------------------------+--------------------------+
+|                 | CAN                                  | Oui, 1 CAN Bus           |
++-----------------+--------------------------------------+--------------------------+
+| Alimentation    | Tension de fonctionnement du circuit | 5 V (ESP32-S3 est 3.3 V) |
+|                 +--------------------------------------+--------------------------+
+|                 | Tension d'entrée (VIN)               | 6-24 V                   |
+|                 +--------------------------------------+--------------------------+
+|                 | Courant continu par broche I/O       | 8 mA                     |
++-----------------+--------------------------------------+--------------------------+
+| Vitesse d'horloge | Coeur principal                    | 48 MHz                   |
+|                 +--------------------------------------+--------------------------+
+|                 | ESP32-S3                             | jusqu'à 240 MHz          |
++-----------------+--------------------------------------+--------------------------+
+| Mémoire         | RA4M1                                | 256 kB Flash, 32 kB RAM  |
+|                 +--------------------------------------+--------------------------+
+|                 | ESP32-S3                             | 384 kB ROM, 512 kB SRAM  |
++-----------------+--------------------------------------+--------------------------+
+| Dimensions      | Largeur                              | 68.85 mm                 |
+|                 +--------------------------------------+--------------------------+
+|                 | Longueur                             | 53.34 mm                 |
++-----------------+--------------------------------------+--------------------------+
 
-**Pinout**
+**Brochage**
 
 .. image:: img/unor4_wifi_pinout.png
     :width: 100%
@@ -91,3 +91,4 @@ Step into the future of making with the Arduino UNO R4 WiFi. Whether you're aimi
 * |link_r4_wifi_schematic|
 * |link_r4_Wifi_doc|
 * |link_r4_Wifi_cheatsheet|
+

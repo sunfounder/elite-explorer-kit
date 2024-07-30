@@ -1,53 +1,53 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts sur Facebook ! Plongez au cœur de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques grâce à l'aide de notre communauté et de notre équipe.
+    - **Apprendre & Partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-goûts.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos nouveaux produits.
+    - **Promotions festives et tirages au sort** : Participez à des tirages au sort et des promotions de vacances.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _basic_rgb_led:
 
-RGB LED
+LED RVB
 ==========================
 
-Overview
----------------
+Vue d'ensemble
+-------------------
 
-In this lesson, we will use PWM to control an RGB LED to flash various kinds of color. When different PWM values are set to the R, G, and B pins of the LED, its brightness will be different. When the three different colors are mixed, we can see that the RGB LED flashes different colors.
+Dans cette leçon, nous utiliserons le PWM pour contrôler une LED RVB afin qu'elle clignote en différentes couleurs. Lorsque différentes valeurs PWM sont définies pour les broches R, G et B de la LED, sa luminosité varie. Lorsque les trois couleurs différentes sont mélangées, nous pouvons voir que la LED RVB clignote en différentes couleurs.
 
-Required Components
+Composants requis
 -------------------------
 
-In this project, we need the following components. 
+Pour ce projet, nous avons besoin des composants suivants. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est certainement pratique d'acheter un kit complet, voici le lien : 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nom	
+        - ARTICLES DANS CE KIT
+        - LIEN
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément à partir des liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -63,43 +63,41 @@ You can also buy them separately from the links below.
 PWM
 --------
 
-Pulse width modulation, or PWM, is a technique for getting analog results with digital means. Digital control is used to create a square wave, a signal switched between on and off. This on-off pattern can simulate voltages in between full on (5 Volts) and off (0 Volts) by changing the portion of the time the signal spends on versus the time that the signal spends off. The duration of "on time" is called pulse width. To get varying analog values, you change, or modulate, that width. If you repeat this on-off pattern fast enough with some device, an LED for example, it would be like this: the signal is a steady voltage between 0 and 5V controlling the brightness of the LED. (See the PWM description on the official website of Arduino).
+La modulation de largeur d'impulsion, ou PWM, est une technique pour obtenir des résultats analogiques avec des moyens numériques. Le contrôle numérique est utilisé pour créer une onde carrée, un signal basculant entre marche et arrêt. Ce motif marche-arrêt peut simuler des tensions entre marche complète (5 Volts) et arrêt (0 Volts) en changeant la proportion du temps pendant lequel le signal est en marche par rapport au temps pendant lequel le signal est en arrêt. La durée du "temps de marche" est appelée largeur d'impulsion. Pour obtenir des valeurs analogiques variables, vous changez, ou modulez, cette largeur. Si vous répétez ce motif marche-arrêt assez rapidement avec un appareil, une LED par exemple, cela ressemblerait à ceci : le signal est une tension stable entre 0 et 5V contrôlant la luminosité de la LED. (Voir la description du PWM sur le site officiel d'Arduino).
 
-In the graphic below, the green lines represent a regular time period. This duration or period is the inverse of the PWM frequency. In other words, with Arduino's PWM frequency at about 500Hz, the green lines would measure 2 milliseconds each.
+Dans le graphique ci-dessous, les lignes vertes représentent une période régulière. Cette durée ou période est l'inverse de la fréquence PWM. En d'autres termes, avec une fréquence PWM d'environ 500Hz sur Arduino, les lignes vertes mesureraient chacune 2 millisecondes.
 
 .. image:: img/11_rgbled_pwm.jpeg
    :align: center
    :width: 60%
 
 
-A call to analogWrite() is on a scale of 0 - 255, such that analogWrite(255) requests a 100% duty cycle (always on), and analogWrite(127) is a 50% duty cycle (on half the time) for example. 
+Un appel à analogWrite() se fait sur une échelle de 0 à 255, de sorte que analogWrite(255) demande un cycle de service de 100 % (toujours allumé), et analogWrite(127) est un cycle de service de 50 % (allumé la moitié du temps), par exemple. 
 
-You will find that the smaller the PWM value is, the smaller the value will be after being converted into voltage. Then the LED becomes dimmer accordingly. Therefore, we can control the brightness of the LED by controlling the PWM value.
+Vous constaterez que plus la valeur PWM est petite, plus la valeur sera petite après conversion en tension. Ensuite, la LED devient plus faible en conséquence. Par conséquent, nous pouvons contrôler la luminosité de la LED en contrôlant la valeur PWM.
 
 
-
-Wiring
+Câblage
 ----------------------
 
 .. image:: img/11-rgb_led_bb.png
     :align: center
     :width: 70%
 
-Schematic Diagram
+Schéma de câblage
 -----------------------
 
 .. image:: img/11-rgb_led_schematic.png
     :align: center
     :width: 80%
 
-
 Code
 ---------------
 
 .. note::
 
-    * You can open the file ``11-rgb_led.ino`` under the path of ``elite-explorer-kit-main\basic_project\11-rgb_led`` directly.
-    * Or copy this code into Arduino IDE.
+    * Vous pouvez ouvrir le fichier ``11-rgb_led.ino`` sous le chemin ``elite-explorer-kit-main\basic_project\11-rgb_led`` directement.
+    * Ou copiez ce code dans Arduino IDE.
 
 .. raw:: html
 
@@ -112,29 +110,28 @@ Code
       Your browser does not support the video tag.
    </video>
 
-Once the code is successfully uploaded, you will observe the RGB LED flashing in a circular pattern of red, green, and blue initially. It will then proceed to flash in the sequence of red, orange, yellow, green, blue, indigo, and purple.
+Une fois le code téléversé avec succès, vous observerez la LED RVB clignoter dans un motif circulaire de rouge, vert et bleu au début. Elle continuera ensuite à clignoter dans l'ordre suivant : rouge, orange, jaune, vert, bleu, indigo et violet.
 
 
-Code Analysis
+Analyse du code
 --------------------
 
-**Set the color**
+**Définir la couleur**
 
-Here use the ``color()`` function to set the color of the RGB LED. In the
-code, it is set to flash 7 different colors.
+Ici, nous utilisons la fonction ``color()`` pour définir la couleur de la LED RVB. Dans le code, elle est configurée pour clignoter en 7 couleurs différentes.
 
-You can use the paint tool on your computer to get the RGB value.
+Vous pouvez utiliser l'outil de peinture sur votre ordinateur pour obtenir la valeur RVB.
 
-1. Open the paint tool on your computer and click to Edit colors.
+1. Ouvrez l'outil de peinture sur votre ordinateur et cliquez sur Modifier les couleurs.
 
    .. image:: img/11_rgbled_color1.png
       :align: center
 
 
-2. Select one color, then you can see the RGB value of this color. Fill them in the code.
+2. Sélectionnez une couleur, puis vous pourrez voir la valeur RVB de cette couleur. Remplissez-les dans le code.
    
    .. note:: 
-      Due to hardware and environmental factors, the colors displayed on computer screens and RGB LEDs may vary even when using the same RGB values.
+      En raison de facteurs matériels et environnementaux, les couleurs affichées sur les écrans d'ordinateur et les LED RVB peuvent varier même en utilisant les mêmes valeurs RVB.
 
    .. image:: img/11_rgbled_color2.png
       :align: center
@@ -149,41 +146,41 @@ You can use the paint tool on your computer to get the RGB value.
    
        {
    
-         // Basic colors:
+         // Couleurs de base:
    
-         color(255, 0, 0); // turn the RGB LED red
+         color(255, 0, 0); // allumer la LED RVB en rouge
    
-         delay(1000); // delay for 1 second
+         delay(1000); // délai de 1 seconde
    
-         color(0,255, 0); // turn the RGB LED green
+         color(0,255, 0); // allumer la LED RVB en vert
    
-         delay(1000); // delay for 1 second
+         delay(1000); // délai de 1 seconde
    
-         color(0, 0, 255); // turn the RGB LED blue
+         color(0, 0, 255); // allumer la LED RVB en bleu
    
-         delay(1000); // delay for 1 second
+         delay(1000); // délai de 1 seconde
    
-         // Example blended colors:
+         // Exemples de couleurs mélangées:
    
-         color(255,0,252); // turn the RGB LED red
+         color(255,0,252); // allumer la LED RVB en rouge
    
-         delay(1000); // delay for 1 second
+         delay(1000); // délai de 1 seconde
    
-         color(237,109,0); // turn the RGB LED orange
+         color(237,109,0); // allumer la LED RVB en orange
    
-         delay(1000); // delay for 1 second
+         delay(1000); // délai de 1 seconde
    
-         color(255,215,0); // turn the RGB LED yellow
+         color(255,215,0); // allumer la LED RVB en jaune
    
          ......
    
    
-**color() function**
+**fonction color()**
 
 .. code-block:: arduino
 
     void color (int red, int green, int blue)
-    // the color generating function
+    // la fonction génératrice de couleur
 
     {
 
@@ -195,6 +192,6 @@ You can use the paint tool on your computer to get the RGB value.
 
     }
 
-Define three unsigned char variables, red, green and blue. Write their values to ``redPin``, ``greenPin`` and ``bluePin``. For example, color(128,0,128) is to write 128 to ``redPin``, 0 to ``greenPin`` and 128 to ``bluePin``. Then the result is the LED flashing purple.
+Définissez trois variables unsigned char, red, green et blue. Écrivez leurs valeurs à ``redPin``, ``greenPin`` et ``bluePin``. Par exemple, color(128,0,128) consiste à écrire 128 à ``redPin``, 0 à ``greenPin`` et 128 à ``bluePin``. Le résultat est la LED clignotant en violet.
 
-**analogWrite()**: Writes an analog value (PWM wave) to a pin. It has nothing to do with an analog pin, but is just for PWM pins. You do not need to call the ``pinMode()`` to set the pin as output before calling ``analogWrite()``.
+**analogWrite()**: Écrit une valeur analogique (onde PWM) sur une broche. Cela n'a rien à voir avec une broche analogique, mais concerne uniquement les broches PWM. Vous n'avez pas besoin d'appeler ``pinMode()`` pour définir la broche comme sortie avant d'appeler ``analogWrite()``.

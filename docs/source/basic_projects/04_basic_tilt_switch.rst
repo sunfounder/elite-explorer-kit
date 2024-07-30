@@ -1,55 +1,55 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour et bienvenue dans la communauté SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts sur Facebook ! Plongez plus profondément dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes post-vente et les défis techniques grâce à l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux nouvelles annonces de produits et aux avant-goûts.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et concours** : Participez à des concours et promotions de fêtes.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et à créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _basic_tilt_switch:
 
-Tilt Switch
+Interrupteur à bascule
 ==========================
 
 .. https://docs.sunfounder.com/projects/vincent-kit/en/latest/arduino/2.17_tilt_switch.html#ar-tilt
 
-Overview
+Aperçu
 ---------------
 
-In this lesson, you will learn about tilt switch. Tilt switch can be used to detect whether objects tilt, which is of great value in practical applications. It can be used to judge the tilt of bridges, buildings, transmission line tower and so on, so it has an important guiding function in carrying out maintenance work.
+Dans cette leçon, vous allez découvrir l'interrupteur à bascule. L'interrupteur à bascule peut être utilisé pour détecter si des objets sont inclinés, ce qui est d'une grande utilité dans les applications pratiques. Il peut être utilisé pour juger de l'inclinaison des ponts, des bâtiments, des tours de lignes de transmission, etc., ce qui a une fonction de guidage importante dans la réalisation des travaux de maintenance.
 
-Required Components
+Composants nécessaires
 -------------------------
 
-In this project, we need the following components. 
+Dans ce projet, nous avons besoin des composants suivants.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est certainement pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nom
+        - ARTICLES DANS CE KIT
+        - LIEN
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément à partir des liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -62,17 +62,16 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_tilt_switch`
         - \-
 
-Fritzing Circuit
+Circuit Fritzing
 ---------------------
 
-In this example, digital pin 2 is used to read the signal of Tilt
-Switch.
+Dans cet exemple, la broche numérique 2 est utilisée pour lire le signal de l'interrupteur à bascule.
 
 .. image:: img/04-tilt_switch_bb.png
    :align: center
    :width: 85%
 
-Schematic Diagram
+Schéma
 -----------------------
 
 .. image:: img/04_tilt_switch_schematic.png
@@ -85,11 +84,11 @@ Code
 
 .. note::
 
-    * You can open the file ``04-tilt_switch.ino`` under the path of ``elite-explorer-kit-main\basic_project\04-tilt_switch`` directly.
-    * Or copy this code into Arduino IDE.
+    * Vous pouvez ouvrir le fichier ``04-tilt_switch.ino`` sous le chemin ``elite-explorer-kit-main\basic_project\04-tilt_switch`` directement.
+    * Ou copiez ce code dans l'IDE Arduino.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/d85d75d9-e491-424c-93be-95e1f4e99549/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-Once the codes are uploaded to the uno r4 board, you can open the serial monitor to view the pin readings. The readings will display either "1" or "0" depending on whether the Tilt Switch is in a vertical position (with the internal metal ball making contact with the Wire Pins) or tilted.
+Une fois les codes téléversés sur la carte uno r4, vous pouvez ouvrir le moniteur série pour voir les lectures des broches. Les lectures afficheront soit "1" soit "0" selon que l'interrupteur à bascule est en position verticale (avec la bille métallique interne en contact avec les broches métalliques) ou incliné.

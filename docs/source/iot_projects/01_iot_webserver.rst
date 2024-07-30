@@ -1,18 +1,18 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez dans l'univers du Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions exclusives** : Profitez de réductions exclusives sur nos produits les plus récents.
+    - **Promotions festives et cadeaux** : Participez à des concours et des promotions festives.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
-Simple Webserver
+Serveur Web Simple
 ===========================
 
 .. raw:: html
@@ -22,58 +22,59 @@ Simple Webserver
       Your browser does not support the video tag.
    </video>
 
-This simple Arduino program is designed to create a basic WiFi web server, allowing users to control the on and off state of an LED on the Arduino board via a web browser.
+Ce programme Arduino simple est conçu pour créer un serveur web WiFi de base, permettant aux utilisateurs de contrôler l'état d'allumage et d'extinction d'une LED sur la carte Arduino via un navigateur web.
 
-**Run the Code**
-
-.. note::
-
-    * You can open the file ``01_simple_webserver.ino`` under the path of ``elite-explorer-kit-main\iot_project\01_simple_webserver`` directly.
-    * Or copy this code into Arduino IDE.
+**Exécution du code**
 
 .. note::
-    In the code, SSID and password are stored in ``arduino_secrets.h``. Before uploading this example, you need to modify them with your own WiFi credentials. Additionally, for security purposes, ensure that this information is kept confidential when sharing or storing the code.
+
+    * Vous pouvez ouvrir le fichier ``01_simple_webserver.ino`` sous le chemin ``elite-explorer-kit-main\iot_project\01_simple_webserver`` directement.
+    * Ou copiez ce code dans l'IDE Arduino.
+
+.. note::
+    Dans le code, le SSID et le mot de passe sont stockés dans ``arduino_secrets.h``. Avant de télécharger cet exemple, vous devez les modifier avec vos propres identifiants WiFi. De plus, pour des raisons de sécurité, assurez-vous que ces informations restent confidentielles lors du partage ou du stockage du code.
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/7ed8f58d-2ed8-4dc9-82cb-7e49b6977ea1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-After uploading the code, you will be able to see the IP address in the serial monitor. You can enter this IP address in your web browser to turn the onboard LED on/off.
+Après avoir téléchargé le code, vous pourrez voir l'adresse IP dans le moniteur série. Vous pouvez entrer cette adresse IP dans votre navigateur web pour allumer/éteindre la LED intégrée.
 
 .. image:: img/01_webserver.png
 
-**How it works?**
+**Comment ça fonctionne ?**
 
-Here is an explanation of the code:
+Voici une explication du code :
 
-1. Header Files and Global Variables:
+1. Fichiers d'en-tête et variables globales :
 
-   * ``#include "WiFiS3.h"``: This includes the WiFi library for connecting and managing WiFi. This library is included with Arduino UNO R4 Core, so no additional installation is required.
-   * ``#include "arduino_secrets.h"``: This includes sensitive WiFi connection data such as SSID and password.
-   * ``ssid``, ``pass``, ``keyIndex``: These are network credentials used for WiFi connection.
-   * ``led``, ``status``, ``server``: These define the LED pin, WiFi status, and web server object.
+   * ``#include "WiFiS3.h"`` : Inclut la bibliothèque WiFi pour se connecter et gérer le WiFi. Cette bibliothèque est incluse avec Arduino UNO R4 Core, donc aucune installation supplémentaire n'est requise.
+   * ``#include "arduino_secrets.h"`` : Inclut les données sensibles de connexion WiFi telles que le SSID et le mot de passe.
+   * ``ssid``, ``pass``, ``keyIndex`` : Ces éléments sont les identifiants réseau utilisés pour la connexion WiFi.
+   * ``led``, ``status``, ``server`` : Définissent la broche de la LED, le statut WiFi et l'objet serveur web.
 
-2. ``setup()``:
+2. ``setup()`` :
 
-   * Begin serial communication.
-   * Check for the presence of the WiFi module.
-   * Check if the WiFi module's firmware version is up-to-date.
-   * Attempt to connect to the WiFi network.
-   * Start the web server.
-   * Print the WiFi status.
+   * Commence la communication série.
+   * Vérifie la présence du module WiFi.
+   * Vérifie si la version du firmware du module WiFi est à jour.
+   * Tente de se connecter au réseau WiFi.
+   * Démarre le serveur web.
+   * Imprime le statut WiFi.
 
-3. ``loop()``:
+3. ``loop()`` :
 
-   * Check for new web client connections.
-   * If there are client connections, read their incoming HTTP requests.
-   * Based on the requests, you can control the on/off state of the LED. For example, if the request is "GET /H," it will turn on the LED; if it's "GET /L," it will turn off the LED.
-   * Send an HTTP response to instruct the user on how to control the LED.
-   * Disconnect the client.
+   * Vérifie les nouvelles connexions des clients web.
+   * S'il y a des connexions clients, lit leurs requêtes HTTP entrantes.
+   * En fonction des requêtes, vous pouvez contrôler l'état d'allumage/extinction de la LED. Par exemple, si la requête est "GET /H", elle allume la LED ; si c'est "GET /L", elle éteint la LED.
+   * Envoie une réponse HTTP pour instruire l'utilisateur sur la manière de contrôler la LED.
+   * Déconnecte le client.
 
-4. ``printWifiStatus()``:
+4. ``printWifiStatus()`` :
 
-   * Print the connected WiFi SSID.
-   * Print the IP address of the Arduino board.
-   * Print the received signal strength.
-   * Explain how to view this page in a web browser.
+   * Imprime le SSID WiFi connecté.
+   * Imprime l'adresse IP de la carte Arduino.
+   * Imprime la force du signal reçu.
+   * Explique comment visualiser cette page dans un navigateur web.
+

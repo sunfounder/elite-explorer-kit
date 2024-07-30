@@ -1,57 +1,56 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez dans l'univers du Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions exclusives** : Profitez de réductions exclusives sur nos produits les plus récents.
+    - **Promotions festives et cadeaux** : Participez à des concours et des promotions festives.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _fun_smart_fan:
 
-Smart Fan
+Ventilateur Intelligent
 =================================
 
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/videos/fun_projects/06_fun_smartfan.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      Votre navigateur ne supporte pas la balise vidéo.
    </video>
 
-This Arduino project automatically adjusts the fan's speed to maintain the temperature within a suitable range.
-Additionally, users can enter manual mode through a button to operate the fan at maximum speed.
+Ce projet Arduino ajuste automatiquement la vitesse du ventilateur pour maintenir la température dans une plage appropriée. De plus, les utilisateurs peuvent entrer en mode manuel via un bouton pour faire fonctionner le ventilateur à vitesse maximale.
 
-**Required Components**
+**Composants nécessaires**
 
-In this project, we need the following components. 
+Dans ce projet, nous avons besoin des composants suivants.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est certainement pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nom	
+        - ARTICLES DANS CE KIT
+        - LIEN
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément à partir des liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -74,10 +73,10 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_power`
         - \-
 
-**Wiring**
+**Câblage**
 
 .. note::
-    To protect the :ref:`cpn_power`'s battery, please fully charge it before using it for the first time.
+    Pour protéger la batterie de la :ref:`cpn_power`, veuillez la charger complètement avant de l'utiliser pour la première fois.
 
 .. image:: img/06_smart_fan_bb.png
     :width: 100%
@@ -87,7 +86,7 @@ You can also buy them separately from the links below.
 
    <br/>
 
-**Schematic**
+**Schéma**
 
 .. image:: img/06_smart_fan_schematic.png
    :width: 80%
@@ -97,38 +96,41 @@ You can also buy them separately from the links below.
 
 .. note::
 
-    * You can open the file ``06_smart_fan.ino`` under the path of ``elite-explorer-kit-main\fun_project\06_smart_fan`` directly.
-    * Or copy this code into Arduino IDE.
+    * Vous pouvez ouvrir le fichier ``06_smart_fan.ino`` sous le chemin ``elite-explorer-kit-main\fun_project\06_smart_fan`` directement.
+    * Ou copiez ce code dans l'IDE Arduino.
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/ba484912-14d6-4125-83a0-73a107904144/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
+**Comment ça marche ?**
 
-**How it works?**
+Voici une explication étape par étape du code :
 
-Here is a step-by-step explanation of the code:
 
-1. Constants and Variable Definitions:
+1. Définition des constantes et des variables :
 
-   Use ``#define`` to define the pins for various hardware connections.
-   ``TEMP_THRESHOLD`` is defined as 25°C, which is the temperature threshold to start the fan.
-   ``manualMode``: A boolean variable that indicates whether it is in manual mode.
+   Utilisez ``#define`` pour définir les broches pour les diverses connexions matérielles.
+   ``TEMP_THRESHOLD`` est défini à 25°C, ce qui est le seuil de température pour démarrer le ventilateur.
+   ``manualMode`` : Une variable booléenne qui indique si le mode manuel est activé.
 
-2. ``setup()``:
 
-   Set the mode for relevant pins (output, input, input with pull-up).
-   Initially set to automatic mode, so ``LED_AUTO`` is lit while ``LED_MANUAL`` is off.
+2. ``setup()`` :
 
-3. ``loop()``:
+   Définissez le mode des broches pertinentes (sortie, entrée, entrée avec pull-up).
+   Initialement réglé en mode automatique, donc ``LED_AUTO`` est allumé tandis que ``LED_MANUAL`` est éteint.
 
-   Monitor the button's state. When the button is pressed, it toggles the mode and changes the LED's status.
-   In manual mode, the fan operates at maximum speed.
-   In automatic mode, the code first reads the voltage value from the temperature sensor and converts it to a temperature value. 
-   If the temperature exceeds the threshold, the fan's speed is adjusted based on the temperature.
 
-4. ``voltageToTemperature()``:
+3. ``loop()`` :
 
-   This is an auxiliary function used to convert the voltage value from the temperature sensor into a temperature value (in Celsius).
-   The function uses the standard formula for a thermistor to estimate the temperature.
-   The return value is in degrees Celsius.
+   Surveillez l'état du bouton. Lorsque le bouton est pressé, il bascule le mode et change le statut de la LED.
+   En mode manuel, le ventilateur fonctionne à vitesse maximale.
+   En mode automatique, le code lit d'abord la valeur de tension du capteur de température et la convertit en une valeur de température.
+   Si la température dépasse le seuil, la vitesse du ventilateur est ajustée en fonction de la température.
+
+4. ``voltageToTemperature()`` :
+
+   Il s'agit d'une fonction auxiliaire utilisée pour convertir la valeur de tension du capteur de température en une valeur de température (en Celsius).
+   La fonction utilise la formule standard pour une thermistance afin d'estimer la température.
+   La valeur de retour est en degrés Celsius.
+

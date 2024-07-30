@@ -1,48 +1,46 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions exclusives** : Profitez de réductions exclusives sur nos produits les plus récents.
+    - **Promotions festives et cadeaux** : Participez à des concours et des promotions festives.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _cpn_pump:
 
-DC Water Pump
-================
+Pompe à eau DC
+====================
 
 .. image:: img/pump.png
     :width: 40%
 
-This pump essentially functions as a DC motor, operating at a voltage of 3V and a current of 100mA. Upon powering, the pump draws water in from the bottom of its plastic casing and expels it from the outlet pipe. It must always be kept immersed in water to function properly. Reversing the polarity won't turn it into a water intake device; it will only pump water out!
+Cette pompe fonctionne essentiellement comme un moteur DC, opérant à une tension de 3V et un courant de 100mA. Lorsqu'elle est alimentée, la pompe aspire l'eau par le bas de son boîtier en plastique et l'expulse par le tuyau de sortie. Elle doit toujours être immergée dans l'eau pour fonctionner correctement. Inverser la polarité ne la transformera pas en dispositif d'admission d'eau ; elle continuera simplement à pomper l'eau vers l'extérieur !
 
-It's highly suitable for beginners to create a fountain or plant watering project using this submersible pump, as it is incredibly user-friendly!
+Elle est particulièrement adaptée aux débutants pour créer un projet de fontaine ou d'arrosage de plantes avec cette pompe submersible, car elle est incroyablement facile à utiliser !
 
+**Caractéristiques**
 
-**Features**
+* **Plage de tension** : DC 3 ~ 4.5V
+* **Courant de fonctionnement** : 120 ~ 180mA
+* **Puissance** : 0.36 ~ 0.91W
+* **Hauteur de refoulement maximale** : 0.35 ~ 0.55M
+* **Débit maximal** : 80 ~ 100 L/H
+* **Durée de vie de travail continue** : 100 heures
+* **Indice de protection contre l'eau** : IP68
+* **Mode de conduite** : DC, entraînement magnétique
+* **Matériau** : plastique technique
+* **Diamètre extérieur de la sortie** : 7.8 mm
+* **Diamètre intérieur de la sortie** : 6.5 mm
+* Il s'agit d'une pompe submersible et elle doit être utilisée de cette manière. Elle a tendance à chauffer au point de risquer la surchauffe si vous la faites fonctionner hors de l'eau.
+* Elle est fournie avec un fil mâle de 25 cm, permettant une insertion facile dans une plaque de prototypage.
 
-* **Voltage Scope**: DC 3 ~ 4.5V
-* **Operating Current**: 120 ~ 180mA
-* **Power**: 0.36 ~ 0.91W
-* **Max Water Head**: 0.35 ~ 0.55M
-* **Max Flow Rate**: 80 ~ 100 L/H
-* **Continuous Working Life**: 100 hours
-* **Water Fing Grade**: IP68
-* **Driving Mode**: DC, Magnetic Driving
-* **Material**: Engineering Plastic
-* **Outlet Outside Diameter**: 7.8 mm
-* **Outlet Inside Diameter**: 6.5 mm
-* It is a submersible pump and should be used that way. It tends to heat too much that there's a risk of overheating if you turn it on unsubmerged.
-* It comes with a 25cm male wire, allowing for easy insertion into a breadboard.
+**Exemple**
 
-
-**Example**
-
-* :ref:`basic_pump` (Basic Project)
-* :ref:`fun_plant_monitor` (Fun Project)
+* :ref:`basic_pump` (Projet de base)
+* :ref:`fun_plant_monitor` (Projet amusant)

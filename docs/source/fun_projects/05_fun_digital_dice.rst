@@ -1,56 +1,56 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez dans l'univers du Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions exclusives** : Profitez de réductions exclusives sur nos produits les plus récents.
+    - **Promotions festives et cadeaux** : Participez à des concours et des promotions festives.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _fun_digital_dice:
 
-Digital Dice
+Dé numérique
 =======================================
 
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/videos/fun_projects/05_fun_dice.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      Votre navigateur ne supporte pas la balise vidéo.
    </video>
 
-This code is designed to simulate a rolling dice using a 74HC595 shift register and a 7-segment digital display. The dice roll simulation is activated by directly shaking the tilt switch. Upon this action, the digital display cycles through random numbers between 1 and 6, simulating the rolling of a dice. After a brief interval, the display stops, showing a random number that signifies the outcome of the dice roll.
+Ce code est conçu pour simuler un lancer de dé en utilisant un registre à décalage 74HC595 et un afficheur numérique à 7 segments. La simulation du lancer de dé est activée en secouant directement l'interrupteur à bascule. Dès cette action, l'afficheur numérique fait défiler des nombres aléatoires entre 1 et 6, simulant le lancer d'un dé. Après un bref intervalle, l'affichage s'arrête, montrant un nombre aléatoire qui indique le résultat du lancer de dé.
 
-**Required Components**
+**Composants nécessaires**
 
-In this project, we need the following components. 
+Dans ce projet, nous avons besoin des composants suivants.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est certainement pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nom
+        - ARTICLES DANS CE KIT
+        - LIEN
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément à partir des liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -67,7 +67,7 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_7segment`
         - |link_7segment_buy|
 
-**Wiring**
+**Câblage**
 
 .. image:: img/05_dice_bb.png
     :width: 80%
@@ -77,7 +77,7 @@ You can also buy them separately from the links below.
 
    <br/>
 
-**Schematic**
+**Schéma**
 
 .. image:: img/05_digital_dice_schematic.png
    :width: 100%
@@ -86,42 +86,44 @@ You can also buy them separately from the links below.
 
 .. note::
 
-    * You can open the file ``05_digital_dice.ino`` under the path of ``elite-explorer-kit-main\fun_project\05_digital_dice`` directly.
-    * Or copy this code into Arduino IDE.
+    * Vous pouvez ouvrir le fichier ``05_digital_dice.ino`` sous le chemin ``elite-explorer-kit-main\fun_project\05_digital_dice`` directement.
+    * Ou copiez ce code dans l'IDE Arduino.
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/ff0528b0-a10d-49e8-8916-6cb1fdfdf9a2/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-**How it works?**
+**Comment ça marche ?**
 
-Here's a detailed explanation of the code:
+Voici une explication détaillée du code :
 
-1. Initialization of variables:
+1. Initialisation des variables :
 
-   ``dataPin``, ``clockPin``, ``latchPin``: Pins for the 74HC595.
-   ``buttonPin``: The digital pin where the button is connected.
-   ``numbers[]``: An array to store the encoding representing numbers 1 through 6 on a common anode digital tube.
+   ``dataPin``, ``clockPin``, ``latchPin`` : Broches pour le 74HC595.
+   ``buttonPin`` : La broche numérique où le bouton est connecté.
+   ``numbers[]`` : Un tableau pour stocker le codage représentant les chiffres de 1 à 6 sur un afficheur numérique à anode commune.
 
-2. Volatile variables:
 
-   rolling: This is a volatile variable indicating whether the dice is currently rolling. 
-   It's declared as volatile since it's accessed both in the interrupt service routine and the main program.
+2. Variables volatiles :
 
-3. ``setup()``:
+   rolling : C'est une variable volatile indiquant si le dé est en cours de roulement. 
+   Elle est déclarée comme volatile car elle est accessible à la fois dans la routine de service d'interruption et dans le programme principal.
 
-   Set the modes for the relevant pins.
-   Set the input mode for the button using the internal pull-up resistor.
-   Assign an interrupt to the button, which calls the rollDice function when the button's state changes.
+3. ``setup()`` :
 
-4. ``loop()``:
+   Configure les modes des broches pertinentes.
+   Configure la broche du bouton en mode entrée en utilisant la résistance pull-up interne.
+   Assigne une interruption au bouton, qui appelle la fonction ``rollDice`` lorsque l'état du bouton change.
 
-   It checks if rolling is true. If it is, it continues to display a random number between 1 and 6. If the button has been pressed for more than 500 milliseconds, the rolling stops.
+4. ``loop()`` :
 
-5. ``rollDice()``:
+   Vérifie si ``rolling`` est vrai. Si c'est le cas, il continue d'afficher un nombre aléatoire entre 1 et 6. Si le bouton a été pressé pendant plus de 500 millisecondes, le roulement s'arrête.
 
-   This is the interrupt service routine for the button. It checks if the button is pressed (low level). If it is, the current time is recorded and the rolling begins.
+5. ``rollDice()`` :
 
-6. ``displayNumber()``:
+   C'est la routine de service d'interruption pour le bouton. Elle vérifie si le bouton est pressé (niveau bas). Si c'est le cas, l'heure actuelle est enregistrée et le roulement commence.
 
-   This function displays a number on the digital tube. It sends the number to the digital tube through the 74HC595 shift register.
+6. ``displayNumber()`` :
+
+   Cette fonction affiche un nombre sur le tube numérique. Elle envoie le nombre au tube numérique via le registre à décalage 74HC595.
+

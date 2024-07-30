@@ -1,16 +1,16 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez dans l'univers du Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions exclusives** : Profitez de réductions exclusives sur nos produits les plus récents.
+    - **Promotions festives et cadeaux** : Participez à des concours et des promotions festives.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _fun_hue:
 
@@ -21,37 +21,36 @@ HueDial
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/videos/fun_projects/03_fun_huedial.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      Votre navigateur ne supporte pas la balise vidéo.
    </video>
 
-This example controls the color of an RGB LED based on the position of a rotary knob. 
-Different positions of the knob correspond to different HUE values, which are then translated into RGB color values, resulting in a color change for the RGB LED.
+Cet exemple contrôle la couleur d'une LED RVB en fonction de la position d'un bouton rotatif. Différentes positions du bouton correspondent à différentes valeurs de TEINTE, qui sont ensuite traduites en valeurs de couleur RVB, entraînant un changement de couleur pour la LED RVB.
 
-**Required Components**
+**Composants nécessaires**
 
-In this project, we need the following components. 
+Dans ce projet, nous avons besoin des composants suivants.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est certainement pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nom	
+        - ARTICLES DANS CE KIT
+        - LIEN
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément à partir des liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -66,7 +65,7 @@ You can also buy them separately from the links below.
     *   - :ref:`potentiometer`
         - |link_potentiometer_buy|
 
-**Wiring**
+**Câblage**
 
 .. image:: img/03_hue_dial_bb.png
     :width: 70%
@@ -76,52 +75,52 @@ You can also buy them separately from the links below.
 
    <br/>
 
-**Schematic**
+**Schéma**
 
 .. image:: img/03_hue_schematic.png
    :width: 80%
    :align: center
 
-
 **Code**
 
 .. note::
 
-    * You can open the file ``03_huedial.ino`` under the path of ``elite-explorer-kit-main\fun_project\03_huedial`` directly.
-    * Or copy this code into Arduino IDE.
+    * Vous pouvez ouvrir le fichier ``03_huedial.ino`` sous le chemin ``elite-explorer-kit-main\fun_project\03_huedial`` directement.
+    * Ou copiez ce code dans l'IDE Arduino.
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/0ad800d4-77bb-454f-8976-a078da71ec35/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-**How it works?**
+**Comment ça marche ?**
 
-Here's a detailed explanation of the code:
+Voici une explication détaillée du code :
 
-1. Global Variable Definitions:
+1. Définition des variables globales :
 
-   ``redPin``, ``greenPin``, and ``bluePin``: These define the PWM pins connected to the red, green, and blue LEDs, respectively.
-   ``KNOB_PIN``: Defines the analog input pin connected to the rotary knob.
+   ``redPin``, ``greenPin`` et ``bluePin`` : Ces variables définissent les broches PWM connectées respectivement aux LEDs rouges, vertes et bleues.
+   ``KNOB_PIN`` : Définit la broche d'entrée analogique connectée au bouton rotatif.
 
-2. ``setup()``:
+2. ``setup()`` :
 
-   Set the pins for the RGB LED as output.
-   By default, analog pins are set as inputs, so there's no need to set the input mode for the knob's pin.
+   Configurez les broches pour la LED RVB en sortie.
+   Par défaut, les broches analogiques sont configurées en entrée, il n'est donc pas nécessaire de définir le mode d'entrée pour la broche du bouton.
 
-3. ``loop()``:
+3. ``loop()`` :
 
-   Read the value of the rotary knob. This value ranges from 0 to 1023.
-   Normalize the knob's value to a range of 0-1.
-   Convert the normalized value to a HUE value ranging from 0-360.
-   Convert the HUE value to RGB values.
-   Update the LED's color using these RGB values.
+   Lisez la valeur du bouton rotatif. Cette valeur varie de 0 à 1023.
+   Normalisez la valeur du bouton à une plage de 0 à 1.
+   Convertissez la valeur normalisée en une valeur de TEINTE allant de 0 à 360.
+   Convertissez la valeur de TEINTE en valeurs RVB.
+   Mettez à jour la couleur de la LED en utilisant ces valeurs RVB.
 
-4. ``setColor()``:
+4. ``setColor()`` :
 
-   Set the appropriate PWM values for each LED pin using the ``analogWrite()`` function to set the color of the RGB LED.
+   Définissez les valeurs PWM appropriées pour chaque broche de LED en utilisant la fonction ``analogWrite()`` pour définir la couleur de la LED RVB.
 
-5. ``HUEtoRGB()``:
+5. ``HUEtoRGB()`` :
 
-   This function converts HUE values to RGB values using the HSL to RGB conversion method but focuses only on the HUE component, keeping saturation and brightness at 100%.
-   The algorithm is divided into 6 stages, each covering 60 degrees.
-   It calculates RGB values for each HUE stage and then scales these values to a range of 0-255, which is the expected range for the ``analogWrite()`` function.
+   Cette fonction convertit les valeurs de TEINTE en valeurs RVB en utilisant la méthode de conversion HSL en RVB, mais se concentre uniquement sur le composant TEINTE, en gardant la saturation et la luminosité à 100%.
+   L'algorithme est divisé en 6 étapes, chacune couvrant 60 degrés.
+   Il calcule les valeurs RVB pour chaque étape de TEINTE, puis les échelonne à une plage de 0-255, qui est la plage attendue pour la fonction ``analogWrite()``.
+

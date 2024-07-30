@@ -1,60 +1,56 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi & Arduino & ESP32 sur Facebook ! Plongez plus profondément dans Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Bénéficiez d'un accès anticipé aux nouvelles annonces de produits et avant-premières.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et cadeaux** : Participez à des tirages au sort et des promotions de vacances.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 SunFounder Elite Explorer Kit
-=======================================================
+===================================
 
-Thanks for choosing our Elite Explorer Kit.
+Merci d'avoir choisi notre Elite Explorer Kit.
 
 .. note::
-    This document is available in the following languages.
+    Ce document est disponible dans les langues suivantes.
 
         * |link_german_tutorials|
         * |link_jp_tutorials|
         * |link_en_tutorials|
     
-    Please click on the respective links to access the document in your preferred language.
+    Veuillez cliquer sur les liens respectifs pour accéder au document dans la langue de votre choix.
 
 .. image:: img/elite_explorer_kit_cover.png
     :width: 800
 
+Fatigué des kits Arduino basiques avec des projets limités ? Envie de construire des systèmes IoT avancés mais vous ne savez pas par où commencer ?
 
-Tired of basic Arduino kits with limited projects? Eager to build advanced IoT systems but don't know where to begin?
+Ne cherchez pas plus loin que le SunFounder Elite Explorer Kit avec le tout nouveau Arduino Uno R4 WiFi !
 
-Look no further than the SunFounder Elite Explorer Kit with the all-new Arduino Uno R4 WiFi!
+La puissante carte Arduino Uno R4 WiFi représente un saut en avant pour la plateforme d'électronique open-source la plus populaire au monde. Avec son processeur 32 bits, sa mémoire étendue, son USB-C et son WiFi/Bluetooth intégré, le R4 ouvre des possibilités infinies.
 
-The powerful Arduino Uno R4 WiFi board represents a giant leap forward for the world's most popular open-source electronics platform. With its 32-bit processor, expanded memory, USB-C, and built-in WiFi/Bluetooth, R4 unlocks endless possibilities.
+Notre Elite Kit libère tout le potentiel du R4 avec une multitude de composants pour réaliser des projets créatifs, des générateurs de musique aux moniteurs de plantes. Des tutoriels simples vous enseignent les bases tandis que des projets guidés vous permettent de construire des ventilateurs automatisés, des serrures RFID et des robots contrôlés par smartphone.
 
-Our Elite Kit unleashes R4's full potential with a massive array of components to build creative projects, from music makers to plant monitors. Simple tutorials teach you the basics while guided projects let you construct automated fans, RFID door locks, and smartphone-controlled robots.
+Explorez le monde de l'IoT avec des serveurs web WiFi, des tableaux de bord cloud, des réseaux MQTT et plus encore. Le kit transforme le R4 en un outil de prototypage IoT polyvalent limité seulement par votre imagination.
 
-Explore the world of IoT with WiFi web servers, cloud dashboards, MQTT networks, and more. The kit transforms R4 into a versatile IoT prototyping tool constrained only by your imagination.
-
-With SunFounder, programming Arduino gets an upgrade. The Elite Explorer Kit, combined with the groundbreaking Uno R4 WiFi, is the ultimate all-in-one solution for mastering Arduino and building advanced DIY electronics projects. Order today and let your creativity soar!
+Avec SunFounder, la programmation Arduino prend une nouvelle dimension. L'Elite Explorer Kit, combiné avec le révolutionnaire Uno R4 WiFi, est la solution ultime tout-en-un pour maîtriser Arduino et réaliser des projets électroniques DIY avancés. Commandez dès aujourd'hui et laissez libre cours à votre créativité !
 
 
-.. **About the display language**
 
-.. This document is available in other languages as well. To switch the display language, kindly click on the Read the Docs icon located in the lower left corner of the page.
+.. **À propos de la langue d'affichage**
+
+.. Ce document est également disponible dans d'autres langues. Pour changer la langue d'affichage, veuillez cliquer sur l'icône Read the Docs située dans le coin inférieur gauche de la page.
 
 .. .. image:: img/translation.png
 ..     :align: center
 
-.. .. raw:: html
-
-..     <br/>
-
-**Contents**
+.. **Sommaire**
 
 .. toctree::
     :maxdepth: 2
@@ -78,6 +74,6 @@ With SunFounder, programming Arduino gets an upgrade. The Elite Explorer Kit, co
 
 
 
-**Copyright Notice**
+**Avis de droits d'auteur**
 
-All contents including but not limited to texts, images, and code in this manual are owned by the SunFounder Company. You should only use it for personal study,investigation, enjoyment, or other non-commercial or nonprofit purposes, under therelated regulations and copyrights laws, without infringing the legal rights of the author and relevant right holders. For any individual or organization that uses these for commercial profit without permission, the Company reserves the right to take legal action.
+Tous les contenus, y compris mais sans s'y limiter, les textes, les images et les codes de ce manuel sont la propriété de la société SunFounder. Vous devez les utiliser uniquement pour des études personnelles, des enquêtes, des loisirs ou d'autres fins non commerciales ou à but non lucratif, conformément aux réglementations et lois sur les droits d'auteur, sans porter atteinte aux droits légaux de l'auteur et des titulaires de droits concernés. Pour toute personne ou organisation utilisant ces contenus à des fins commerciales sans autorisation, la société se réserve le droit d'engager des poursuites judiciaires.

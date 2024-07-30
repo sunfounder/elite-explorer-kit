@@ -1,53 +1,53 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour et bienvenue dans la communauté SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts sur Facebook ! Plongez plus profondément dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes post-vente et les défis techniques grâce à l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux nouvelles annonces de produits et aux avant-goûts.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et concours** : Participez à des concours et promotions de fêtes.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et à créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _basic_ultrasonic_sensor:
 
-Ultrasonic
+Ultrason
 ==========================
 
-Overview
+Aperçu
 --------------------
 
-When you are reversing, you will see the distance between the car and the surrounding obstacles to avoid collision. The device for detecting the distance is an ultrasonic sensor. In this experiment, you will learn how the ultrasonic wave detects the distance.
+Lorsque vous reculez, vous voyez la distance entre la voiture et les obstacles environnants pour éviter les collisions. L'appareil qui détecte la distance est un capteur à ultrasons. Dans cette expérience, vous apprendrez comment l'onde ultrasonore détecte la distance.
 
-Required Components
+Composants nécessaires
 -------------------------
 
-In this project, we need the following components. 
+Dans ce projet, nous avons besoin des composants suivants.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est certainement pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nom
+        - ARTICLES DANS CE KIT
+        - LIEN
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément à partir des liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -61,7 +61,7 @@ You can also buy them separately from the links below.
         - |link_i2clcd1602_buy|
 
 
-Wiring
+Câblage
 ----------------------
 
 .. image:: img/06-ultrasonic_module_bb.png
@@ -72,21 +72,20 @@ Wiring
 
     <br/>
 
-Schematic Diagram
+Schéma
 -----------------------
 
 .. image:: img/06_ultrasonic_schematic.png
     :align: center
     :width: 100%
 
-
 Code
 --------
 
 .. note::
 
-    * You can open the file ``06-ultrasonic.ino`` under the path of ``elite-explorer-kit-main\basic_project\06-ultrasonic`` directly.
-    * Or copy this code into Arduino IDE.
+    * Vous pouvez ouvrir le fichier ``06-ultrasonic.ino`` sous le chemin ``elite-explorer-kit-main\basic_project\06-ultrasonic`` directement.
+    * Ou copiez ce code dans l'IDE Arduino.
 
 .. raw:: html
 
@@ -98,60 +97,60 @@ Code
       <source src="../_static/videos/basic_projects/06_basic_ultrasonic_sensor.mp4"  type="video/mp4">
       Your browser does not support the video tag.
    </video>
-
-Code Analysis
+   
+Analyse du code
 ------------------------
 
-**1. Initialize the ultrasonic sensor and LCD1602**
+**1. Initialisation du capteur ultrasonique et de l'écran LCD1602**
 
     .. code-block:: arduino
     
        #include <LiquidCrystal_I2C.h>
        
-       LiquidCrystal_I2C lcd(0x27, 16, 2);  // initialize the Liquid Crystal Display object with the I2C address 0x27, 16 columns and 2 rows
+       LiquidCrystal_I2C lcd(0x27, 16, 2);  // initialiser l'objet écran LCD avec l'adresse I2C 0x27, 16 colonnes et 2 rangées
        
-       // Define the pin numbers for the ultrasonic sensor
+       // Définir les numéros de broches pour le capteur ultrasonique
        const int echoPin = 3;
        const int trigPin = 4;
        
        void setup() {
-         pinMode(echoPin, INPUT);               // Set echo pin as input
-         pinMode(trigPin, OUTPUT);              // Set trig pin as output
+         pinMode(echoPin, INPUT);               // Définir la broche echo en tant qu'entrée
+         pinMode(trigPin, OUTPUT);              // Définir la broche trig en tant que sortie
        
-         lcd.init();       // initialize the LCD
-         lcd.clear();      // clear the LCD display
-         lcd.backlight();  // Make sure backlight is on
+         lcd.init();       // initialiser l'écran LCD
+         lcd.clear();      // effacer l'écran LCD
+         lcd.backlight();  // Assurer que le rétroéclairage est activé
        
        }
 
-**2. Display the distance on the LCD1602**
+**2. Afficher la distance sur l'écran LCD1602**
 
     .. code-block:: arduino
     
        void loop() {
-         float distance = readDistance();  // Call the function to read the sensor data and get the distance
+         float distance = readDistance();  // Appeler la fonction pour lire les données du capteur et obtenir la distance
        
-         lcd.setCursor(0, 0);         //Place the cursor at Line 1, Column 1. From here the characters are to be displayed
-         lcd.print("Distance:");      ////Print Distance: on the LCD
-         lcd.setCursor(0, 1);         //Set the cursor at Line 1, Column 0
-         lcd.print("               ");  //Here is to leave some spaces after the characters so as to clear the previous characters that may still remain.
-         lcd.setCursor(7, 1);         //Set the cursor at Line 1, Column 7.
-         lcd.print(distance);         // print on the LCD the value of the distance converted from the time between ping sending and receiving.
-         lcd.setCursor(14, 1);        //Set the cursor at Line 1, Column 14.
-         lcd.print("cm");             //print the unit "cm"
+         lcd.setCursor(0, 0);         // Placer le curseur à la ligne 1, colonne 1. C'est ici que les caractères seront affichés
+         lcd.print("Distance:");      // Afficher "Distance:" sur l'écran LCD
+         lcd.setCursor(0, 1);         // Placer le curseur à la ligne 1, colonne 0
+         lcd.print("               ");  // Ajouter des espaces après les caractères pour effacer les précédents qui pourraient encore rester
+         lcd.setCursor(7, 1);         // Placer le curseur à la ligne 1, colonne 7
+         lcd.print(distance);         // Afficher sur l'écran LCD la valeur de la distance convertie depuis le temps entre l'envoi et la réception du ping
+         lcd.setCursor(14, 1);        // Placer le curseur à la ligne 1, colonne 14
+         lcd.print("cm");             // Afficher l'unité "cm"
        
-         delay(800);                       // Delay for 800 milliseconds before repeating the loop
+         delay(800);                  // Attendre 800 millisecondes avant de répéter la boucle
        }
 
-**3. Convert the time to distance**
+**3. Conversion du temps en distance**
 
     .. code-block:: arduino
 
         float readDistance(){// ...}
 
-    Here, "PING" refers to the process where the ultrasonic sensor sends out an ultrasonic pulse (or "ping") and then waits for its echo.
+    Ici, "PING" fait référence au processus où le capteur ultrasonique envoie une impulsion ultrasonique (ou "ping") et attend ensuite son écho.
     
-    PING is triggered by a HIGH pulse of 2 or more microseconds. (Give a short LOW pulse beforehand to ensure a clean HIGH pulse.)
+    Le PING est déclenché par une impulsion HIGH de 2 microsecondes ou plus. (Donner une courte impulsion LOW avant pour assurer une impulsion HIGH propre.)
 
     .. code-block:: arduino
 
@@ -161,16 +160,16 @@ Code Analysis
         delayMicroseconds(10);
         digitalWrite(trigPin, LOW); 
 
-    The echo pin is used to read signal from PING, a HIGH pulse whose duration is the time (in microseconds) from the sending of the ping to the reception of echo of the object. We use the following function to obtain the duration.
+    La broche echo est utilisée pour lire le signal du PING, une impulsion HIGH dont la durée est le temps (en microsecondes) entre l'envoi du ping et la réception de l'écho de l'objet. Nous utilisons la fonction suivante pour obtenir la durée.
 
     .. code-block:: arduino
 
         pulseIn(echoPin, HIGH);
 
-    The speed of sound is 340 m/s or 29 microseconds per centimeter.
+    La vitesse du son est de 340 m/s ou 29 microsecondes par centimètre.
 
-    This gives the distance travelled by the ping, outbound and return, so we divide by 2 to get the distance of the obstacle.
+    Cela donne la distance parcourue par le ping, aller-retour, donc nous divisons par 2 pour obtenir la distance de l'obstacle.
 
     .. code-block:: arduino
 
-        float distance = pulseIn(echoPin, HIGH) / 29.00 / 2;     // Formula: (340m/s * 1us) / 2
+        float distance = pulseIn(echoPin, HIGH) / 29.00 / 2;     // Formule : (340m/s * 1us) / 2

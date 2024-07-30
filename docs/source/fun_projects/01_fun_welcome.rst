@@ -1,57 +1,57 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez dans l'univers du Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions exclusives** : Profitez de réductions exclusives sur nos produits les plus récents.
+    - **Promotions festives et cadeaux** : Participez à des concours et des promotions festives.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _fun_welcome:
 
-Welcome
+Bienvenue
 ========================
 
 .. raw:: html
 
    <video loop controls style = "max-width:100%">
       <source src="../_static/videos/fun_projects/01_fun_welcome.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      Votre navigateur ne supporte pas la balise vidéo.
    </video>
 
-In this project, we will use a PIR sensor to detect human presence and a speaker to simulate a doorbell, similar to the entrance doorbells in convenience stores.
-When a pedestrian appears within the range of the PIR sensor, the speaker will ring, mimicking a doorbell.
+Dans ce projet, nous utiliserons un capteur PIR pour détecter la présence humaine et un haut-parleur pour simuler une sonnette, similaire aux sonnettes d'entrée dans les magasins de proximité.
+Lorsqu'un piéton apparaît dans la zone de détection du capteur PIR, le haut-parleur sonne, imitant une sonnette.
 
-**Required Components**
+**Composants nécessaires**
 
-In this project, we need the following components. 
+Dans ce projet, nous avons besoin des composants suivants.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est certainement pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nom	
+        - ARTICLES DANS CE KIT
+        - LIEN
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément à partir des liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -67,7 +67,7 @@ You can also buy them separately from the links below.
         - \-
 
 
-**Wiring**
+**Câblage**
 
 .. image:: img/01_welcome_bb.png
     :width: 90%
@@ -77,7 +77,7 @@ You can also buy them separately from the links below.
 
    <br/>
 
-**Schematic**
+**Schéma**
 
 .. image:: img/01_welcome_schematic.png
    :width: 100%
@@ -86,8 +86,8 @@ You can also buy them separately from the links below.
 
 .. note::
 
-    * You can open the file ``01_welcome.ino`` under the path of ``elite-explorer-kit-main\fun_project\01_welcome`` directly.
-    * Or copy this code into Arduino IDE.
+    * Vous pouvez ouvrir le fichier ``01_welcome.ino`` sous le chemin ``elite-explorer-kit-main\fun_project\01_welcome`` directement.
+    * Ou copiez ce code dans l'IDE Arduino.
 
 .. raw:: html
 
@@ -95,39 +95,40 @@ You can also buy them separately from the links below.
 
 
 
-**How it works?**
+**Comment ça marche ?**
 
-Here is a step-by-step explanation of the code:
+Voici une explication étape par étape du code :
 
-1. Include Header Files:
+1. Inclure les fichiers d'en-tête :
 
-   Include two header files, ``analogWave.h`` and ``pitches.h``. The ``analogWave.h`` file contains the definition of the ``analogWave`` class, while ``pitches.h`` contains the definitions of musical notes.
+   Inclure deux fichiers d'en-tête, ``analogWave.h`` et ``pitches.h``. Le fichier ``analogWave.h`` contient la définition de la classe ``analogWave``, tandis que ``pitches.h`` contient les définitions des notes musicales.
 
-2. Instantiate Objects and Define Constants:
+2. Instancier les objets et définir les constantes :
 
-   Create a ``wave`` object using the ``analogWave`` class and define ``PIR_PIN`` as 2, which is the pin connected to the PIR sensor.
+   Créer un objet ``wave`` en utilisant la classe ``analogWave`` et définir ``PIR_PIN`` comme étant 2, qui est la broche connectée au capteur PIR.
 
-3. Melody Array:
+3. Tableau des mélodies :
 
-   The ``melody`` array defines a musical melody, with each note followed by a number representing its duration. 
-   Negative numbers represent dotted notes (increasing the duration by 50%).
+   Le tableau ``melody`` définit une mélodie musicale, chaque note étant suivie d'un nombre représentant sa durée. 
+   Les nombres négatifs représentent des notes pointées (augmentant la durée de 50%).
 
-4. Global Variables:
+4. Variables globales :
 
-   Define some global variables for sharing data between functions.
+   Définir quelques variables globales pour partager les données entre les fonctions.
 
-5. ``setup()``:
+5. ``setup()`` :
 
-   Initialize ``PIR_PIN`` as an input and set the frequency of the sine wave to 10 Hz using ``wave.sine(10)``.
+   Initialiser ``PIR_PIN`` comme une entrée et définir la fréquence de l'onde sinusoïdale à 10 Hz en utilisant ``wave.sine(10)``.
 
-6. ``loop()``:
+6. ``loop()`` :
 
-   Continuously monitor the value of the PIR sensor.
-   If human presence is detected (pirValue is HIGH), call the ``playMelody()`` function to play the melody and wait for 10 seconds to prevent repetitive playback of the melody.
+   Surveiller continuellement la valeur du capteur PIR.
+   Si une présence humaine est détectée (pirValue est HIGH), appeler la fonction ``playMelody()`` pour jouer la mélodie et attendre 10 secondes pour éviter la lecture répétitive de la mélodie.
 
-7. ``playMelody()``:
+7. ``playMelody()`` :
 
-   This function calculates the duration of each note based on the data in the ``melody`` array and plays the corresponding note. There is a brief pause between notes.
-   The function sets the frequency of the waveform using ``wave.freq()`` and controls the duration of the notes and pauses between notes using the ``delay()`` function.
+   Cette fonction calcule la durée de chaque note en fonction des données dans le tableau ``melody`` et joue la note correspondante. Il y a une courte pause entre les notes.
+   La fonction définit la fréquence de l'onde en utilisant ``wave.freq()`` et contrôle la durée des notes et les pauses entre les notes en utilisant la fonction ``delay()``.
 
-   Note: Ensure that the ``pitches.h`` header file indeed exists before running this code.
+   Note : Assurez-vous que le fichier d'en-tête ``pitches.h`` existe bien avant d'exécuter ce code.
+

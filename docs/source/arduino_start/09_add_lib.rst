@@ -1,77 +1,77 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour et bienvenue dans la communauté SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts sur Facebook ! Plongez plus profondément dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes post-vente et les défis techniques grâce à l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux nouvelles annonces de produits et aux avant-goûts.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et concours** : Participez à des concours et promotions de fêtes.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et à créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _add_libraries:
 
-How to add libraries? (Important)
-======================================
+Comment ajouter des bibliothèques ? (Important)
+==================================================
 
-A library is a collection of pre-written code or functions that extend the capabilities of the Arduino IDE. Libraries provide ready-to-use code for various functionalities, allowing you to save time and effort in coding complex features.
+Une bibliothèque est un ensemble de code ou de fonctions pré-écrites qui étendent les capacités de l'IDE Arduino. Les bibliothèques fournissent du code prêt à l'emploi pour diverses fonctionnalités, vous permettant de gagner du temps et des efforts dans la programmation de fonctions complexes.
 
 
-Using the Library Manager
--------------------------------
+Utilisation du gestionnaire de bibliothèques
+------------------------------------------------
 
-Many libraries are available directly through the Arduino Library Manager. You can access the Library Manager by following these steps:
+De nombreuses bibliothèques sont disponibles directement via le gestionnaire de bibliothèques Arduino. Vous pouvez accéder au gestionnaire de bibliothèques en suivant ces étapes :
 
-#. In the **Library Manager**, you can search for the desired library by name or browse through different categories.
+#. Dans le **gestionnaire de bibliothèques**, vous pouvez rechercher la bibliothèque souhaitée par nom ou parcourir différentes catégories.
 
    .. note::
 
-      In projects where library installation is required, there will be prompts indicating which libraries to install. Follow the instructions provided, such as "The DHT sensor library library is used here, you can install it from the Library Manager." Simply install the recommended libraries as prompted.
+      Dans les projets nécessitant l'installation de bibliothèques, des indications vous indiqueront quelles bibliothèques installer. Suivez les instructions fournies, comme "La bibliothèque du capteur DHT est utilisée ici, vous pouvez l'installer depuis le gestionnaire de bibliothèques." Installez simplement les bibliothèques recommandées comme indiqué.
 
    .. image:: img/install_lib3.png
 
-#. Once you find the library you want to install, click on it and then click the **Install** button.
+#. Une fois que vous avez trouvé la bibliothèque que vous souhaitez installer, cliquez dessus, puis cliquez sur le bouton **Installer**.
 
    .. image:: img/install_lib2.png
 
-#. The Arduino IDE will automatically download and install the library for you.
+#. L'IDE Arduino téléchargera et installera automatiquement la bibliothèque pour vous.
 
 .. _manual_install_lib:
 
-Manual Installation
+Installation manuelle
 -----------------------
 
-Some libraries are not available through the **Library Manager** and need to be manually installed. To install these libraries, follow these steps:
+Certaines bibliothèques ne sont pas disponibles via le **gestionnaire de bibliothèques** et doivent être installées manuellement. Pour installer ces bibliothèques, suivez ces étapes :
 
-#. Open the Arduino IDE and go to **Sketch** -> **Include Library** -> **Add .ZIP Library**.
+#. Ouvrez l'IDE Arduino et allez dans **Sketch** -> **Include Library** -> **Add .ZIP Library**.
 
    .. image:: img/add_lib_zip.png
 
-#. Navigate to the directory where the library files are located, such as the ``elite-explorer-kit-main/library/`` folder, and select the library file and click **Open**.
+#. Naviguez jusqu'au répertoire où se trouvent les fichiers de la bibliothèque, comme le dossier ``elite-explorer-kit-main/library/``, sélectionnez le fichier de la bibliothèque et cliquez sur **Ouvrir**.
 
    .. image:: img/rfid_choose.png
 
-#. Once the installation is complete, you will receive a notification confirming that the library has been successfully added to your Arduino IDE. The next time you need to use this library, you won't need to repeat the installation process.
+#. Une fois l'installation terminée, vous recevrez une notification confirmant que la bibliothèque a été ajoutée avec succès à votre IDE Arduino. La prochaine fois que vous aurez besoin d'utiliser cette bibliothèque, vous n'aurez pas besoin de répéter le processus d'installation.
 
    .. image:: img/rfid_success.png
 
-#. Repeat the same process to add other libraries.
+#. Répétez le même processus pour ajouter d'autres bibliothèques.
 
 
-Library Location
------------------------
+Emplacement des bibliothèques
+----------------------------------
 
-The libraries installed using either of the above methods can be found in the default library directory of the Arduino IDE, which is usually located at ``C:\Users\xxx\Documents\Arduino\libraries``.
+Les bibliothèques installées en utilisant l'une des méthodes ci-dessus se trouvent dans le répertoire de bibliothèques par défaut de l'IDE Arduino, qui se trouve généralement à l'emplacement ``C:\Users\xxx\Documents\Arduino\libraries``.
 
-If your library directory is different, you can check it by going to **File** -> **Preferences**.
+Si votre répertoire de bibliothèques est différent, vous pouvez le vérifier en allant dans **Fichier** -> **Préférences**.
 
 .. image:: img/install_lib1.png
 
 
 
-**Reference**
+**Référence**
 
 * |link_install_arduino_lib|

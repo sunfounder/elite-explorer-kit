@@ -1,23 +1,23 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour et bienvenue dans la communauté SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts sur Facebook ! Plongez plus profondément dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes post-vente et les défis techniques grâce à l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux nouvelles annonces de produits et aux avant-goûts.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et concours** : Participez à des concours et promotions de fêtes.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et à créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _basic_projects:
 
-Basic Projects
+Projets de base
 ====================
 
-**Sensor**
+**Capteur**
 
 .. toctree::
     :maxdepth: 1
@@ -33,7 +33,7 @@ Basic Projects
     09_basic_gy87
 
 
-**Display**
+**Affichage**
 
 .. toctree::
     :maxdepth: 1
@@ -46,7 +46,7 @@ Basic Projects
     15_basic_oled
 
 
-**Sound**
+**Son**
 
 .. toctree::
     :maxdepth: 1
@@ -56,7 +56,7 @@ Basic Projects
     17_basic_audio_speaker
 
 
-**Controller**
+**Contrôleur**
 
 .. toctree::
     :maxdepth: 1
@@ -69,7 +69,7 @@ Basic Projects
     23_basic_mpr121_module
 
 
-**Actuator**
+**Actionneur**
 
 .. toctree::
     :maxdepth: 1
@@ -81,7 +81,7 @@ Basic Projects
     28_basic_relay
     
     
-**Chip**
+**Puce**
 
 .. toctree::
     :maxdepth: 1

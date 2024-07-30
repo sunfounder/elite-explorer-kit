@@ -1,56 +1,56 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez dans l'univers du Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions exclusives** : Profitez de réductions exclusives sur nos produits les plus récents.
+    - **Promotions festives et cadeaux** : Participez à des concours et des promotions festives.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _fun_light_array:
 
-Light-sensitive Array
+Array sensible à la lumière
 ==========================================
 
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/videos/fun_projects/04_fun_lightarray.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      Votre navigateur ne supporte pas la balise vidéo.
    </video>
 
-This program converts the readings from a light-dependent resistor into a corresponding number of illuminated LED lights, creating a simple indicator of light brightness.
+Ce programme convertit les lectures d'une résistance dépendante de la lumière en un nombre correspondant de lumières LED allumées, créant ainsi un indicateur simple de la luminosité.
 
-**Required Components**
+**Composants nécessaires**
 
-In this project, we need the following components. 
+Dans ce projet, nous avons besoin des composants suivants.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est certainement pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nom	
+        - ARTICLES DANS CE KIT
+        - LIEN
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément à partir des liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -65,8 +65,7 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_photoresistor`
         - |link_photoresistor_buy|
 
-
-**Wiring**
+**Câblage**
 
 .. image:: img/04_light_sensitive_array_bb.png
     :width: 70%
@@ -76,7 +75,7 @@ You can also buy them separately from the links below.
 
    <br/>
 
-**Schematic**
+**Schéma**
 
 .. image:: img/04_light_sensitive_array_schematic.png
    :width: 60%
@@ -85,35 +84,34 @@ You can also buy them separately from the links below.
 
 .. note::
 
-    * You can open the file ``04_light_sensitive_array.ino`` under the path of ``elite-explorer-kit-main\fun_project\04_light_sensitive_array`` directly.
-    * Or copy this code into Arduino IDE.
+    * Vous pouvez ouvrir le fichier ``04_light_sensitive_array.ino`` sous le chemin ``elite-explorer-kit-main\fun_project\04_light_sensitive_array`` directement.
+    * Ou copiez ce code dans l'IDE Arduino.
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/9da7af57-c002-41a0-bc84-372e91885d52/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-**How it works?**
+**Comment ça marche ?**
 
-Here's a step-by-step explanation of the code:
+Voici une explication détaillée du code :
 
-1. Constant and Variable Definitions:
+1. Définitions des constantes et des variables :
 
-   ``NbrLEDs``: Defines the presence of 8 LEDs.
-   ``ledPins[]``: LEDs are connected to Arduino pins 5 to 12.
-   ``photocellPin``: The photoresistor is connected to Arduino's A0 pin.
-   ``sensorValue``: This variable stores the value read from the photoresistor.
-   ``ledLevel``: This variable stores the number of LEDs based on the sensorValue conversion.
+   ``NbrLEDs`` : Définit la présence de 8 LEDs.
+   ``ledPins[]`` : Les LEDs sont connectées aux broches 5 à 12 de l'Arduino.
+   ``photocellPin`` : La photorésistance est connectée à la broche A0 de l'Arduino.
+   ``sensorValue`` : Cette variable stocke la valeur lue de la photorésistance.
+   ``ledLevel`` : Cette variable stocke le nombre de LEDs allumées en fonction de la conversion de sensorValue.
 
-2. ``setup()``:
+2. ``setup()`` :
 
-   Configures pins 5 to 12 as output to drive the LEDs.
+   Configure les broches 5 à 12 comme sorties pour contrôler les LEDs.
 
-3. ``loop()``:
+3. ``loop()`` :
 
-   Reads the analog value of the photoresistor from pin A0, typically ranging from 0 to 1023.
-   Uses the map function to map the photoresistor's value from the range 300-1023 to the range 0-8.
-   This means that if the reading from the light-dependent resistor is 300, no LEDs will be lit;
-   if the reading is 1023 or higher, all 8 LEDs will be lit.
+   Lit la valeur analogique de la photorésistance à partir de la broche A0, généralement comprise entre 0 et 1023.
+   Utilise la fonction map pour convertir la valeur de la photorésistance de la plage 300-1023 à la plage 0-8.
+   Cela signifie que si la lecture de la photorésistance est de 300, aucune LED ne s'allumera ; si la lecture est de 1023 ou plus, les 8 LEDs s'allumeront.
    
-   The subsequent for loop checks each LED. If its index is less than ledLevel,
-   the LED will be turned on; otherwise, it will be turned off.
+   La boucle suivante vérifie chaque LED. Si son index est inférieur à ledLevel, la LED s'allumera ; sinon, elle s'éteindra.
+

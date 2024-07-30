@@ -1,36 +1,36 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts sur Facebook ! Plongez dans l'univers du Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions exclusives** : Profitez de réductions exclusives sur nos produits les plus récents.
+    - **Promotions festives et cadeaux** : Participez à des concours et des promotions festives.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _cpn_tilt_switch:
 
-Tilt Switch
-=============================
-
+Interrupteur à Inclinaison
+================================
 
 .. image:: img/tilt_switch.png
     :width: 80
     :align: center
 
-The tilt switch used here is a ball one with a metal ball inside. It is used to detect inclinations of a small angle.
+L'interrupteur à inclinaison utilisé ici est un modèle à bille avec une bille métallique à l'intérieur. Il est utilisé pour détecter de petites inclinaisons angulaires.
 
-The principle is very simple. When the switch is tilted in a certain angle, the ball inside rolls down and touches the two contacts connected to the pins outside, thus triggering circuits. Otherwise the ball will stay away from the contacts, thus breaking the circuits.
+Le principe est très simple. Lorsque l'interrupteur est incliné à un certain angle, la bille à l'intérieur roule et touche les deux contacts connectés aux broches extérieures, déclenchant ainsi les circuits. Sinon, la bille reste éloignée des contacts, interrompant ainsi les circuits.
 
 .. image:: img/tilt_symbol.png
     :width: 600
 
 * |link_sw520d_datasheet|
 
-**Example**
+**Exemple**
 
-* :ref:`basic_tilt_switch` (Basic Project)
+* :ref:`basic_tilt_switch` (Projet de base)
+

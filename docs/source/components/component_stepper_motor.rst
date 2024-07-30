@@ -1,55 +1,53 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts sur Facebook ! Plongez dans l'univers du Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions exclusives** : Profitez de réductions exclusives sur nos produits les plus récents.
+    - **Promotions festives et cadeaux** : Participez à des concours et des promotions festives.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _cpn_stepper_motor:
 
-Stepper Motor
+Moteur Pas à Pas
 =========================
 
 .. image:: img/stepper_motor2.jpeg
    :align: center
 
-Stepper motors, due to their unique design, can be controlled to a high degree of accuracy without any feedback mechanisms. The shaft of a stepper, mounted with a series of magnets, is controlled by a series of electromagnetic coils that are charged positively and negatively in a specific sequence, precisely moving it forward or backward in small
-"steps".
+Les moteurs pas à pas, grâce à leur conception unique, peuvent être contrôlés avec une grande précision sans aucun mécanisme de rétroaction. L'arbre du moteur pas à pas, monté avec une série d'aimants, est contrôlé par une série de bobines électromagnétiques qui sont chargées positivement et négativement dans une séquence spécifique, le déplaçant précisément vers l'avant ou vers l'arrière par petits "pas".
 
-**Principle**
+**Principe**
 
-There are two types of steppers, unipolars and bipolars, and it is very important to know which type you are working with. In this experiment, we will use a unipolar stepper.
+Il existe deux types de moteurs pas à pas, les unipolaires et les bipolaires, et il est très important de savoir avec quel type vous travaillez. Dans cette expérience, nous utiliserons un moteur pas à pas unipolaire.
 
-The stepper motor is a four-phase one, which uses a unipolarity DC power supply. As long as you electrify all phase windings of the motor by an appropriate timing sequence, you can make it rotate step by step. The schematic diagram of a four-phase reactive stepper motor:
+Le moteur pas à pas est un moteur à quatre phases, qui utilise une alimentation en courant continu unipolaire. Tant que vous alimentez toutes les phases du moteur avec une séquence de temporisation appropriée, vous pouvez le faire tourner pas à pas. Le schéma d'un moteur pas à pas réactif à quatre phases est le suivant :
 
 .. image:: img/stepper_motor3.png
    :align: center
 
-In the figure, in the middle of the motor is a rotor - a gear-shaped permanent magnet. Around the rotor, 0 to 5 are teeth. Then more outside, there are 8 magnetic poles, with each two opposite ones connected by coil winding. So they form four pairs from A to D, which is called a phase. It has four lead wires to be connected with switches SA, SB, SC, and SD. Therefore, the four phases are in parallel in the circuit, and the two magnetic poles in one phase are in series.
+Dans la figure, au milieu du moteur se trouve un rotor - un aimant permanent en forme de dent. Autour du rotor, de 0 à 5 se trouvent des dents. Plus à l'extérieur, il y a 8 pôles magnétiques, chaque paire opposée étant connectée par un enroulement de bobine. Ils forment ainsi quatre paires de A à D, appelées phase. Il a quatre fils conducteurs à connecter avec les interrupteurs SA, SB, SC et SD. Par conséquent, les quatre phases sont en parallèle dans le circuit, et les deux pôles magnétiques d'une phase sont en série.
 
-**Here's how a 4-phase stepper motor works:**
+**Voici comment fonctionne un moteur pas à pas à 4 phases :**
 
-At the beginning, switch SB is power on, switch SA, SC, and SD is power off, and B-phase magnetic poles align with tooth 0 and 3 of the rotor. At the same time, tooth 1 and 4 generate staggered teeth with C- and D-phase poles. Tooth 2 and 5 generate staggered teeth with D- and A-phase poles. When switch SC is power on, switch SB, SA, and SD is power off, the rotor rotates under magnetic field of C-phase winding and that between tooth 1 and 4. Then tooth 1 and 4 align with the magnetic poles of C-phase winding. While tooth 0 and 3 generate staggered teeth with A- and B-phase poles, and tooth 2 and 5 generate staggered teeth with the magnetic poles of A- and D-phase poles. The similar situation goes on and on. Energize the A, B, C and D phases in turn, and the rotor will rotate in the order of A, B, C and D.
+Au début, l'interrupteur SB est allumé, les interrupteurs SA, SC et SD sont éteints, et les pôles magnétiques de la phase B s'alignent avec les dents 0 et 3 du rotor. En même temps, les dents 1 et 4 créent des dents décalées avec les pôles des phases C et D. Les dents 2 et 5 créent des dents décalées avec les pôles magnétiques des phases D et A. Lorsque l'interrupteur SC est allumé, les interrupteurs SB, SA et SD sont éteints, le rotor tourne sous l'effet du champ magnétique de l'enroulement de la phase C et celui entre les dents 1 et 4. Ensuite, les dents 1 et 4 s'alignent avec les pôles magnétiques de l'enroulement de la phase C. Tandis que les dents 0 et 3 créent des dents décalées avec les pôles des phases A et B, et les dents 2 et 5 créent des dents décalées avec les pôles magnétiques des phases A et D. La situation similaire se répète. Alimentez successivement les phases A, B, C et D, et le rotor tournera dans l'ordre des phases A, B, C et D.
 
-The four-phase stepper motor has three operating modes: single four-step, double four-step, and eight-step. The step angle for the single four-step and double four-step are the same, but the driving torque for the single four-step is smaller. The step angle of the eight-step is half that of the single four-step and double four-step. Thus, the eight-step operating mode can keep high driving torque and improve control accuracy. In this experiment, we let the stepper motor work in the eight-step mode.
+Le moteur pas à pas à quatre phases a trois modes de fonctionnement : le mode simple à quatre pas, le mode double à quatre pas et le mode à huit pas. L'angle de pas pour le mode simple à quatre pas et le mode double à quatre pas est le même, mais le couple de commande pour le mode simple à quatre pas est plus faible. L'angle de pas du mode à huit pas est la moitié de celui des modes simple à quatre pas et double à quatre pas. Ainsi, le mode de fonctionnement à huit pas peut maintenir un couple de commande élevé et améliorer la précision du contrôle. Dans cette expérience, nous faisons fonctionner le moteur pas à pas en mode à huit pas.
 
-**ULN2003 Module**
+**Module ULN2003**
 
 .. image:: img/uln2003.png
     :align: center
 
-To apply the motor in the circuit, a driver board needs to be used. Stepper Motor Driver-ULN2003 is a 7-channel inverter circuit. That is, when the input end is at high level, the output end of ULN2003 is at low level, and vice versa. If we supply high level to IN1, and low level to IN2, IN3 and IN4, then the output end OUT1 is at low level, and all the other output ends are at high level. So D1 lights up, switch SA is power on, and the stepper motor rotates one step. The similar case repeats on and on. Therefore, just give the stepper motor a specific timing sequence, it will rotate step by step. The ULN2003 here is used to provide particular timing sequences for the stepper motor.
+Pour appliquer le moteur dans le circuit, une carte de pilote doit être utilisée. Le pilote de moteur pas à pas ULN2003 est un circuit inverseur à 7 canaux. C'est-à-dire que lorsque l'entrée est à un niveau haut, la sortie de l'ULN2003 est à un niveau bas, et vice versa. Si nous alimentons le niveau haut à IN1, et le niveau bas à IN2, IN3 et IN4, alors la sortie OUT1 est à un niveau bas, et toutes les autres sorties sont à un niveau haut. Ainsi, D1 s'allume, l'interrupteur SA est allumé, et le moteur pas à pas tourne d'un pas. Le cas similaire se répète. Par conséquent, il suffit de donner une séquence de temporisation spécifique au moteur pas à pas, il tournera pas à pas. L'ULN2003 ici est utilisé pour fournir des séquences de temporisation particulières pour le moteur pas à pas.
 
 
-**Example**
+**Exemple**
 
-
-* :ref:`basic_stepper_motor` (Basic Project)
-* :ref:`fun_access` (Fun Project)
+* :ref:`basic_stepper_motor` (Projet de base)
+* :ref:`fun_access` (Projet amusant)

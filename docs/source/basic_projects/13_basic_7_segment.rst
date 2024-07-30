@@ -1,56 +1,55 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts sur Facebook ! Plongez au cœur de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques grâce à l'aide de notre communauté et de notre équipe.
+    - **Apprendre & Partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-goûts.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos nouveaux produits.
+    - **Promotions festives et tirages au sort** : Participez à des tirages au sort et des promotions de vacances.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _basic_7segment:
 
-7-segment Display
+Afficheur 7 segments
 ==========================
 
 .. https://docs.sunfounder.com/projects/uno-mega-kit/en/latest/uno/7_segment_display_uno.html#segmeng-uno
 
-
-Overview
+Vue d'ensemble
 -------------------
 
-A 7-segment display is a device that can display numerals and letters. It's made up of seven LEDs connected in parallel. Different letters/numbers can be shown by connecting pins on the display to the power source and enabling the related pins, thus turning on the corresponding LED segments. In this lesson let's learn how to display specific characters on it.
+Un afficheur 7 segments est un dispositif capable d'afficher des chiffres et des lettres. Il est composé de sept LED connectées en parallèle. Différentes lettres/chiffres peuvent être affichés en connectant les broches de l'afficheur à la source d'alimentation et en activant les broches correspondantes, allumant ainsi les segments LED correspondants. Dans cette leçon, apprenons à afficher des caractères spécifiques.
 
-Required Components
+Composants requis
 ------------------------
 
-In this project, we need the following components. 
+Pour ce projet, nous avons besoin des composants suivants. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est certainement pratique d'acheter un kit complet, voici le lien : 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nom	
+        - ARTICLES DANS CE KIT
+        - LIEN
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément à partir des liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -63,7 +62,7 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_7segment`
         - |link_7segment_buy|
 
-Wiring
+Câblage
 ----------------------
 
 .. image:: img/13-7_segment_display_bb.png
@@ -71,10 +70,10 @@ Wiring
     :width: 70%
 
 
-Schematic Diagram
+Schéma de câblage
 ------------------------
 
-In this experiment, connect each of pin a-g of the 7-Segment Display to one 1000 ohm current limiting resistor respectively and then to pin 4-11. GND connects to GND. By programming, we can set one or several of pin4-11 as High level to light up the corresponding LED(s).
+Dans cette expérience, connectez chaque broche a-g de l'afficheur 7 segments à une résistance de limitation de courant de 1000 ohms respectivement, puis aux broches 4-11. GND se connecte à GND. En programmant, nous pouvons définir une ou plusieurs des broches 4-11 en niveau haut pour allumer les LED correspondantes.
 
 .. image:: img/13-7_segment_display_schematic.png
     :align: center
@@ -85,8 +84,8 @@ Code
 
 .. note::
 
-    * You can open the file ``13-7_segment.ino`` under the path of ``elite-explorer-kit-main\basic_project\13-7_segment`` directly.
-    * Or copy this code into Arduino IDE.
+    * Vous pouvez ouvrir le fichier ``13-7_segment.ino`` sous le chemin ``elite-explorer-kit-main\basic_project\13-7_segment`` directement.
+    * Ou copiez ce code dans Arduino IDE.
 
 
 .. raw:: html
@@ -102,37 +101,37 @@ Code
 
    <br/><br/>
 
-Code Analysis
+Analyse du code
 ----------------------
 
-The code may be a little long for this experiment. But the syntax is simple. Let's take a look.
+Le code peut sembler un peu long pour cette expérience. Mais la syntaxe est simple. Jetons un coup d'œil.
 
-**Call the function in loop()**
-
-.. code-block:: arduino
-
-   digital_1(); //display 1 to the 7-segment
-
-   delay(1000); //wait for a second
-
-   digital_2(); //display 2 to the 7-segment
-
-   delay(1000); //wait for a second
-
-   digital_3(); //display 3 to the 7-segment
-
-   delay(1000); //wait for a second
-
-   digital_4(); //display 4 to the 7-segment
-
-
-Calling these functions into the loop() is to let the 7-Segment display 0-F. The functions are shown below. Take ``digital_2()`` for example:
-
-**Detailed analysis of digital_2()**
+**Appeler la fonction dans loop()**
 
 .. code-block:: arduino
 
-   void digital_2()  //display 2 to the 7-segment
+   digital_1(); //afficher 1 sur le 7 segments
+
+   delay(1000); //attendre une seconde
+
+   digital_2(); //afficher 2 sur le 7 segments
+
+   delay(1000); //attendre une seconde
+
+   digital_3(); //afficher 3 sur le 7 segments
+
+   delay(1000); //attendre une seconde
+
+   digital_4(); //afficher 4 sur le 7 segments
+
+
+Appeler ces fonctions dans la loop() permet d'afficher 0-F sur l'afficheur 7 segments. Les fonctions sont montrées ci-dessous. Prenons ``digital_2()`` comme exemple :
+
+**Analyse détaillée de digital_2()**
+
+.. code-block:: arduino
+
+   void digital_2()  //afficher 2 sur le 7 segments
    {
      turnOffAllSegments();
      digitalWrite(a, HIGH);
@@ -145,6 +144,7 @@ Calling these functions into the loop() is to let the 7-Segment display 0-F. The
 .. image:: img/13_7segment.jpeg
    :align: center
 
-First, we need to understand how the numeral **2** appears on the 7-Segment display. It is achieved by powering on segments a, b, d, e, and g. In programming, pins connected to these segments are set to a High level while c and f are set to Low level. We start by using the function ``turnOffAllSegments()`` to turn off all segments and then light up the required ones.
+Tout d'abord, nous devons comprendre comment le chiffre **2** apparaît sur l'afficheur 7 segments. Cela est réalisé en alimentant les segments a, b, d, e et g. En programmation, les broches connectées à ces segments sont définies à un niveau haut tandis que c et f sont définies à un niveau bas. Nous commençons par utiliser la fonction ``turnOffAllSegments()`` pour éteindre tous les segments puis allumer ceux requis.
 
-After running this part, the 7-segment will display **2**. Similarly, the display of other characters are the same. Since the letters b and d in upper case, namely **B** and **D**, would look the same with **8** and **0** on the display, they are displayed in lower case instead.
+
+Après avoir exécuté cette partie, l'afficheur 7 segments affichera **2**. De même, l'affichage d'autres caractères se fait de la même manière. Étant donné que les lettres B et D en majuscules, c'est-à-dire **B** et **D**, ressembleraient à **8** et **0** sur l'afficheur, elles sont affichées en minuscules à la place.

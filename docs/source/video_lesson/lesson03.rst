@@ -1,31 +1,31 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez-vous dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions exclusives** : Profitez de réductions exclusives sur nos produits les plus récents.
+    - **Promotions festives et cadeaux** : Participez à des concours et des promotions festives.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
-LESSON 3: Blink an LED With the Arduino
-=========================================
+LEÇON 3 : Faire Clignoter une LED avec l'Arduino
+=====================================================
 
-This lesson is part of a tutorial series designed to help learners think like engineers by using the Arduino R4 WiFi board. In this session, Paul Mcarter walks through building and programming a simple LED circuit to blink in an SOS pattern using the Arduino. The lesson covers a practical application of earlier tutorials and introduces basic electronic concepts such as using a breadboard, managing circuit schematics, and programming the Arduino to manipulate hardware outputs. Here's what you will learn:
+Cette leçon fait partie d'une série de tutoriels conçue pour aider les apprenants à penser comme des ingénieurs en utilisant la carte Arduino R4 WiFi. Dans cette session, Paul Mcarter explique comment construire et programmer un circuit LED simple pour clignoter selon un motif SOS en utilisant l'Arduino. La leçon couvre une application pratique des tutoriels précédents et introduit des concepts électroniques de base tels que l'utilisation d'une plaque d'essai, la gestion des schémas de circuits et la programmation de l'Arduino pour manipuler les sorties matérielles. Voici ce que vous apprendrez :
 
-1. **Review of Homework**: The instructor reviews a homework assignment which involved blinking an LED using Arduino, building on concepts taught in earlier lessons.
-2. **Circuit Building**: Detailed guidance on constructing a circuit with an LED and resistor on a breadboard, including how to connect these components to the Arduino board correctly.
-3. **Programming the Arduino**: Step-by-step coding instructions in the Arduino IDE to control the LED. This includes writing digital outputs, and implementing the ``pinMode`` and ``digitalWrite`` functions.
-4. **Debugging Tips**: Practical advice on debugging common errors in code, such as typos or incorrect pin setups, and emphasizes the importance of checking your work and understanding error messages.
-5. **Homework Assignment**: For further practice, learners are tasked to create a circuit with four LEDs that blink simultaneously, each requiring separate control through the Arduino. 
+1. **Revue des Devoirs** : L'instructeur passe en revue un devoir qui consistait à faire clignoter une LED avec l'Arduino, en se basant sur les concepts enseignés dans les leçons précédentes.
+2. **Construction du Circuit** : Guide détaillé pour construire un circuit avec une LED et une résistance sur une plaque d'essai, y compris comment connecter correctement ces composants à la carte Arduino.
+3. **Programmation de l'Arduino** : Instructions de codage étape par étape dans l'IDE Arduino pour contrôler la LED. Cela inclut l'écriture de sorties numériques et l'implémentation des fonctions ``pinMode`` et ``digitalWrite``.
+4. **Conseils de Débogage** : Conseils pratiques pour déboguer les erreurs courantes dans le code, comme les fautes de frappe ou les configurations de broches incorrectes, et insiste sur l'importance de vérifier son travail et de comprendre les messages d'erreur.
+5. **Devoir à la Maison** : Pour une pratique supplémentaire, les apprenants doivent créer un circuit avec quatre LED qui clignotent simultanément, chacune nécessitant un contrôle séparé via l'Arduino.
 
-
-**Video**
+**Vidéo**
 
 .. raw:: html
 
-    <iframe width="700" height="500" src="https://www.youtube.com/embed/0SENIWPdPhQ?si=o9Q1tTC1X1B9teef" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="700" height="500" src="https://www.youtube.com/embed/0SENIWPdPhQ?si=o9Q1tTC1X1B9teef" title="Lecteur vidéo YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+

@@ -1,49 +1,49 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts sur Facebook ! Plongez dans l'univers du Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions exclusives** : Profitez de réductions exclusives sur nos produits les plus récents.
+    - **Promotions festives et cadeaux** : Participez à des concours et des promotions festives.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _cpn_motor:
 
-DC Motor
-===================
+Moteur à courant continu (DC)
+==================================
 
 .. image:: img/motor.jpeg
     :align: center
 
-This is a 3V DC motor. When you give a high level and a low level to each of the 2 terminals, it will rotate.
+Voici un moteur à courant continu (DC) de 3V. Lorsque vous appliquez un niveau élevé et un niveau bas à chacun des deux terminaux, il tourne.
 
-* **Length**: 25mm
-* **Diameter**: 21mm
-* **Shaft Diameter**: 2mm
-* **Shaft Length**: 8mm
-* **Voltage**: 3-6V
-* **Current**: 0.35-0.4A
-* **Speed at 3V**: 19000 RPM (Rotations Per Minute)
-* **Weight**: Approximately 14g (for one unit)
+* **Longueur** : 25 mm
+* **Diamètre** : 21 mm
+* **Diamètre de l'axe** : 2 mm
+* **Longueur de l'axe** : 8 mm
+* **Tension** : 3-6V
+* **Courant** : 0,35-0,4A
+* **Vitesse à 3V** : 19000 tr/min (Tours Par Minute)
+* **Poids** : Environ 14g (par unité)
 
-Direct current (DC) motor is a continuous actuator that converts electrical energy into mechanical energy. DC motors make rotary pumps, fans, compressors, impellers, and other devices work by producing continuous angular rotation.
+Un moteur à courant continu (DC) est un actionneur continu qui convertit l'énergie électrique en énergie mécanique. Les moteurs DC font fonctionner des pompes rotatives, des ventilateurs, des compresseurs, des hélices et d'autres dispositifs en produisant une rotation angulaire continue.
 
-A DC motor consists of two parts, the fixed part of the motor called the **stator** and the internal part of the motor called the **rotor** (or **armature** of a DC motor) that rotates to produce motion.
-The key to generating motion is to position the armature within the magnetic field of the permanent magnet (whose field extends from the north pole to the south pole). The interaction of the magnetic field and the moving charged particles (the current-carrying wire generates the magnetic field) produces the torque that rotates the armature.
+Un moteur DC se compose de deux parties, la partie fixe du moteur appelée le **stator** et la partie interne du moteur appelée le **rotor** (ou **induit** d'un moteur DC) qui tourne pour produire le mouvement. 
+La clé pour générer du mouvement est de positionner l'induit dans le champ magnétique de l'aimant permanent (dont le champ s'étend du pôle nord au pôle sud). L'interaction du champ magnétique et des particules chargées en mouvement (le fil conducteur de courant génère le champ magnétique) produit le couple qui fait tourner l'induit.
 
 .. image:: img/motor_sche.png
     :align: center
 
-Current flows from the positive terminal of the battery through the circuit, through the copper brushes to the commutator, and then to the armature.
-But because of the two gaps in the commutator, this flow reverses halfway through each complete rotation.
-This continuous reversal essentially converts the DC power from the battery to AC, allowing the armature to experience torque in the right direction at the right time to maintain rotation.
+Le courant circule depuis la borne positive de la batterie à travers le circuit, via les balais en cuivre jusqu'au collecteur, puis vers l'induit. 
+Mais en raison des deux espaces dans le collecteur, ce flux s'inverse à mi-chemin de chaque rotation complète. 
+Cette inversion continue convertit essentiellement l'alimentation DC de la batterie en AC, permettant à l'induit de ressentir le couple dans la bonne direction au bon moment pour maintenir la rotation.
 
-**Example**
+**Exemple**
 
 * :ref:`basic_motor` (Basic Project)
 * :ref:`fun_smart_fan` (Fun Project)

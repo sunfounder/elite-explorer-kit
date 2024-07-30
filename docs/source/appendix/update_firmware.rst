@@ -1,63 +1,63 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour et bienvenue dans la communauté SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts sur Facebook ! Plongez plus profondément dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes post-vente et les défis techniques grâce à l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux nouvelles annonces de produits et aux avant-goûts.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et concours** : Participez à des concours et promotions de fêtes.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et à créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
     
 .. _update_firmware:
 
-Update the radio module firmware on your UNO R4 WiFi board
-==============================================================
+Mettre à jour le firmware du module radio sur votre carte UNO R4 WiFi
+=============================================================================
 
 .. https://forum.arduino.cc/t/radio-module-firmware-version-0-2-0-is-now-available/1147361
 
-1. Connect the UNO R4 WiFi board to your computer with the USB cable.
-2. If you have the Arduino IDE Serial Monitor or Serial Plotter running, close them.
+1. Connectez la carte UNO R4 WiFi à votre ordinateur avec le câble USB.
+2. Si vous avez l'IDE Arduino Serial Monitor ou Serial Plotter en cours d'exécution, fermez-les.
 
-   You can close Serial Monitor by clicking the X icon that appears on its tab when selected:
+   Vous pouvez fermer le moniteur série en cliquant sur l'icône X qui apparaît sur son onglet lorsqu'il est sélectionné :
 
    .. image:: img/close_serial_monitor2.png
       :width: 85%
 
-3. Select Tools > Firmware Updater from the Arduino IDE menus.
-   The "Firmware Updater" dialog will open.
+3. Sélectionnez Outils > Mise à jour du firmware dans les menus de l'IDE Arduino.
+   La boîte de dialogue "Mise à jour du firmware" s'ouvrira.
 
    .. image:: img/update_firmware_1.png
          :width: 70%
 
-4. Select the UNO R4 WiFi from the "Select Board" menu in the "Firmware Updater" dialog.
-5. Click the "CHECK UPDATES" button.
-   An "INSTALL" button will be added to the dialog.
+4. Sélectionnez l'UNO R4 WiFi dans le menu "Sélectionner la carte" de la boîte de dialogue "Mise à jour du firmware".
+5. Cliquez sur le bouton "VÉRIFIER LES MISES À JOUR".
+   Un bouton "INSTALLER" sera ajouté à la boîte de dialogue.
 
    .. image:: img/update_firmware_2.png
          :width: 85%
 
-6. Click the "INSTALL" button.
-   An "Installing firmware" process will start, as indicated by the message near the bottom of the dialog.
+6. Cliquez sur le bouton "INSTALLER".
+   Un processus d'installation du firmware commencera, comme indiqué par le message en bas de la boîte de dialogue.
 
    .. image:: img/update_firmware_3.png
          :width: 85%
 
-7. Wait for the firmware update process to finish successfully, as indicated by the message in the dialog:
-   Firmware successfully installed.
+7. Attendez la fin du processus de mise à jour du firmware, comme indiqué par le message dans la boîte de dialogue :
+   Firmware installé avec succès.
 
    .. image:: img/update_firmware_4.png
          :width: 85%
 
-8. Click the X icon in the dialog.
-   The dialog will close.
-9. Disconnect the USB cable of the UNO R4 WiFi board from your computer.
-10. Connect the UNO R4 WiFi board to your computer with the USB cable again.
+8. Cliquez sur l'icône X dans la boîte de dialogue.
+   La boîte de dialogue se fermera.
+9. Déconnectez le câble USB de la carte UNO R4 WiFi de votre ordinateur.
+10. Reconnectez la carte UNO R4 WiFi à votre ordinateur avec le câble USB.
 
 
-**Reference**
+**Référence**
 
 - |link_update_firmware|

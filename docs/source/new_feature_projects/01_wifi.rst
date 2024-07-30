@@ -1,25 +1,25 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez au cœur de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions exclusives** : Profitez de réductions exclusives sur nos produits les plus récents.
+    - **Promotions festives et cadeaux** : Participez à des concours et des promotions festives.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _new_wifi:
 
 Wi-Fi
 ========================================
 
-The Arduino UNO R4 WiFi comes with a built-in ESP32-S3 module, allowing you to connect to Wi-Fi® networks and perform network operations. It supports protocols such as HTTPS, MQTT, and UDP, which have been tested and are compatible. 
+L'Arduino UNO R4 WiFi est équipé d'un module ESP32-S3 intégré, vous permettant de vous connecter à des réseaux Wi-Fi® et d'effectuer des opérations réseau. Il prend en charge des protocoles tels que HTTPS, MQTT et UDP, qui ont été testés et sont compatibles.
 
-Next, I will guide you through two examples of utilizing WIFI:
+Ensuite, je vais vous guider à travers deux exemples d'utilisation du WIFI :
 
 .. toctree::
     :maxdepth: 2

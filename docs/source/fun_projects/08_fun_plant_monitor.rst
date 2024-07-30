@@ -1,57 +1,57 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez dans l'univers du Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions exclusives** : Profitez de réductions exclusives sur nos produits les plus récents.
+    - **Promotions festives et cadeaux** : Participez à des concours et des promotions festives.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _fun_plant_monitor:
 
-Plant Monitor
+Moniteur de Plantes
 ============================
 
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/videos/fun_projects/08_fun_plant_monitor.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      Votre navigateur ne supporte pas la balise vidéo.
    </video>
 
-This project automatically waters plants by activating a water pump when the soil humidity falls below a specific threshold.
-Additionally, it displays temperature, humidity, and soil moisture on an LCD screen, providing users with insights into the plant's growth environment.
+Ce projet arrose automatiquement les plantes en activant une pompe à eau lorsque l'humidité du sol tombe en dessous d'un seuil spécifique.
+De plus, il affiche la température, l'humidité et l'humidité du sol sur un écran LCD, fournissant aux utilisateurs des informations sur l'environnement de croissance des plantes.
 
-**Required Components**
+**Composants nécessaires**
 
-In this project, we need the following components. 
+Dans ce projet, nous avons besoin des composants suivants.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est certainement pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nom	
+        - ARTICLES DANS CE KIT
+        - LIEN
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément à partir des liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -72,10 +72,10 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_power`
         - \-
 
-**Wiring**
+**Câblage**
 
 .. note::
-    To protect the :ref:`cpn_power`'s battery, please fully charge it before using it for the first time.
+    Pour protéger la batterie de la :ref:`cpn_power`, veuillez la charger complètement avant de l'utiliser pour la première fois.
 
 .. image:: img/08_plant_monitor_bb.png
     :width: 100%
@@ -85,7 +85,7 @@ You can also buy them separately from the links below.
 
    <br/>
 
-**Schematic**
+**Schéma**
 
 .. image:: img/08_plant_monitor_schematic.png
    :width: 100%
@@ -99,35 +99,37 @@ You can also buy them separately from the links below.
 
 .. note::
 
-    * You can open the file ``08_plant_monitor.ino`` under the path of ``elite-explorer-kit-main\fun_project\08_plant_monitor`` directly.
-    * Or copy this code into Arduino IDE.
+    * Vous pouvez ouvrir le fichier ``08_plant_monitor.ino`` sous le chemin ``elite-explorer-kit-main\fun_project\08_plant_monitor`` directement.
+    * Ou copiez ce code dans l'IDE Arduino.
 
 .. note::
-   To install the library, use the Arduino Library Manager and search for **"DHT sensor library"** and **"LiquidCrystal I2C"** and install them.
+   Pour installer la bibliothèque, utilisez le gestionnaire de bibliothèque Arduino et recherchez **"DHT sensor library"** et **"LiquidCrystal I2C"** et installez-les.
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/a9d6c9c7-0d7f-4dc2-84b6-9dbda15c89ae/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-**How it works?**
+**Comment ça marche ?**
 
-Here is a detailed explanation of the code:
+Voici une explication détaillée du code :
 
-1. Library Inclusions and Constants/Variables:
+1. Inclusion des bibliothèques et définition des constantes/variables :
 
-   Import ``Wire.h``, ``LiquidCrystal_I2C.h``, and ``DHT.h`` libraries.
-   Define pin numbers and other parameters related to DHT11, soil moisture sensor, and the water pump.
+   Importez les bibliothèques ``Wire.h``, ``LiquidCrystal_I2C.h`` et ``DHT.h``.
+   Définissez les numéros de broche et d'autres paramètres liés au DHT11, au capteur d'humidité du sol et à la pompe à eau.
 
-2. ``setup()``:
 
-   Initialize the pin modes related to the soil moisture sensor and the water pump.
-   Turn off the water pump initially.
-   Initialize the LCD display and turn on the backlight.
-   Start the DHT sensor.
+2. ``setup()`` :
 
-3. ``loop()``:
+   Initialisez les modes de broche relatifs au capteur d'humidité du sol et à la pompe à eau.
+   Éteignez initialement la pompe à eau.
+   Initialisez l'affichage LCD et allumez le rétroéclairage.
+   Démarrez le capteur DHT.
 
-   Read humidity and temperature from the DHT sensor.
-   Read soil moisture from the soil moisture sensor.
-   Display temperature and humidity values on the LCD screen, then clear the screen and display the soil moisture value.
-   Determine whether to activate the water pump based on soil moisture. If the soil moisture is below 500 (a configurable threshold), activate the water pump for 1 second.
+3. ``loop()`` :
+
+   Lisez l'humidité et la température à partir du capteur DHT.
+   Lisez l'humidité du sol à partir du capteur d'humidité du sol.
+   Affichez les valeurs de température et d'humidité sur l'écran LCD, puis effacez l'écran et affichez la valeur de l'humidité du sol.
+   Déterminez s'il faut activer la pompe à eau en fonction de l'humidité du sol. Si l'humidité du sol est inférieure à 500 (un seuil configurable), activez la pompe à eau pendant 1 seconde.
+

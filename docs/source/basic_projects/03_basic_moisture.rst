@@ -1,59 +1,59 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour et bienvenue dans la communauté SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts sur Facebook ! Plongez plus profondément dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes post-vente et les défis techniques grâce à l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux nouvelles annonces de produits et aux avant-goûts.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et concours** : Participez à des concours et promotions de fêtes.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et à créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _basic_moisture:
 
-Soil Moisture
+Humidité du sol
 ==========================
 
 .. https://docs.sunfounder.com/projects/3in1-kit-r4/en/latest/basic_project/ar_moisture.html
 
-Overview
+Aperçu
 ---------------
 
-In the agricultural industry, crops cannot directly acquire inorganic elements from the soil. Instead, water present in the soil acts as a solvent to dissolve these elements.
+Dans l'industrie agricole, les cultures ne peuvent pas directement acquérir les éléments inorganiques du sol. Au lieu de cela, l'eau présente dans le sol agit comme un solvant pour dissoudre ces éléments.
 
-Crops absorb moisture from the soil through their root system to obtain nutrients and facilitate growth.
+Les cultures absorbent l'humidité du sol par leur système racinaire pour obtenir des nutriments et faciliter leur croissance.
 
-During the growth and development of crops, there are varying requirements for soil temperature. Hence, it is necessary to use a soil moisture sensor.
+Pendant la croissance et le développement des cultures, les besoins en température du sol varient. Il est donc nécessaire d'utiliser un capteur d'humidité du sol.
 
-Required Components
+Composants nécessaires
 -------------------------
 
-In this project, we need the following components. 
+Dans ce projet, nous avons besoin des composants suivants.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est certainement pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nom
+        - ARTICLES DANS CE KIT
+        - LIEN
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément à partir des liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -64,14 +64,14 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_soil_moisture`
         - |link_soil_moisture_buy|
 
-Wiring
+Câblage
 ----------------------
 
 .. image:: img/03-soil_moisture_bb.png
     :align: center
     :width: 80%
 
-Schematic Diagram
+Schéma
 -----------------------
 
 .. image:: img/03_moisture_schematic.webp
@@ -83,13 +83,13 @@ Code
 
 .. note::
 
-    * Open the ``03-moisture.ino`` file under the path of ``elite-explorer-kit-main\basic_project\03-moisture``.
-    * Or copy this code into **Arduino IDE**.
+    * Ouvrez le fichier ``03-moisture.ino`` sous le chemin ``elite-explorer-kit-main\basic_project\03-moisture``.
+    * Ou copiez ce code dans l'**Arduino IDE**.
     
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/c585dd77-2e8a-4839-a908-d22e1d6e93aa/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-Once the code is successfully uploaded, the serial monitor will print out the soil moisture value.
+Une fois le code téléversé avec succès, le moniteur série affichera la valeur de l'humidité du sol.
 
-By inserting the module into the soil and watering it, the value of the soil moisture sensor will become smaller.
+En insérant le module dans le sol et en l'arrosant, la valeur du capteur d'humidité du sol diminuera.

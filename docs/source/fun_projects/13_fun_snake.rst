@@ -1,57 +1,57 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez dans l'univers du Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions exclusives** : Profitez de réductions exclusives sur nos produits les plus récents.
+    - **Promotions festives et cadeaux** : Participez à des concours et des promotions festives.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _fun_snake:
 
-GAME - Snake
+JEU - Snake
 =========================
 
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/videos/fun_projects/13_fun_snake.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      Votre navigateur ne supporte pas la balise vidéo.
    </video>
 
-This example implements the classic Snake game on an 8x12 LED matrix using the R4 Wifi board.
-Players control the snake's direction using a dual-axis joystick.
+Cet exemple implémente le jeu classique Snake sur une matrice LED 8x12 en utilisant la carte R4 Wifi.
+Les joueurs contrôlent la direction du serpent à l'aide d'un joystick à double axe.
 
-**Required Components**
+**Composants nécessaires**
 
-In this project, we need the following components. 
+Dans ce projet, nous avons besoin des composants suivants. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est certainement pratique d'acheter un kit complet, voici le lien : 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nom	
+        - ARTICLES DANS CE KIT
+        - LIEN
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément à partir des liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -60,14 +60,14 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_joystick`
         - |link_joystick_buy|
 
-**Wiring**
+**Câblage**
 
 .. image:: img/13_snake_bb.png
     :width: 80%
     :align: center
 
 
-**Schematic**
+**Schéma**
 
 .. image:: img/13_snake_schematic.png
    :width: 80%
@@ -78,57 +78,57 @@ You can also buy them separately from the links below.
 
 .. note::
 
-    * You can open the file ``13_snake.ino`` under the path of ``elite-explorer-kit-main\fun_project\13_snake`` directly.
-    * Or copy this code into Arduino IDE.
+    * Vous pouvez ouvrir le fichier ``13_snake.ino`` sous le chemin ``elite-explorer-kit-main\fun_project\13_snake`` directement.
+    * Ou copiez ce code dans l'IDE Arduino.
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/df370ec5-d1b5-4ae7-b3b9-e97e0eb9a872/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-**How it works?**
+**Comment ça marche ?**
 
-Here's a detailed explanation of the code:
+Voici une explication détaillée du code :
 
-1. Variable Definition and Initialization
+1. Définition et initialisation des variables
 
-   Import the ``Arduino_LED_Matrix`` library for LED matrix operations.
-   matrix is an instance of the LED matrix.
-   ``frame`` and ``flatFrame`` are arrays used to store and process pixel information on the screen.
-   The snake is represented as an array of ``Point`` structures, where each point has an x and y coordinate.
-   food represents the position of the food.
-   ``direction`` is the current movement direction of the snake.
+   Importez la bibliothèque ``Arduino_LED_Matrix`` pour les opérations sur la matrice LED.
+   matrix est une instance de la matrice LED.
+   ``frame`` et ``flatFrame`` sont des tableaux utilisés pour stocker et traiter les informations de pixels à l'écran.
+   Le serpent est représenté comme un tableau de structures ``Point``, où chaque point a une coordonnée x et y.
+   food représente la position de la nourriture.
+   ``direction`` est la direction de déplacement actuelle du serpent.
 
 2. ``setup()`` 
 
-   Initialize the X and Y axes of the joystick as inputs.
-   Start the LED matrix.
-   Initialize the snake's starting position in the center of the screen.
-   Generate the initial position of the food randomly.
+   Initialisez les axes X et Y du joystick comme entrées.
+   Démarrez la matrice LED.
+   Initialisez la position de départ du serpent au centre de l'écran.
+   Générez la position initiale de la nourriture de manière aléatoire.
 
 3. ``loop()`` 
 
-   Determine the snake's direction based on the readings from the joystick.
-   Move the snake.
-   Check if the snake's head collides with the food. 
-   If it does, the snake grows, and new food is generated at a new location.
-   Check if the snake collides with itself. If it does, reset the game.
-   Draw the current game state (snake and food positions) on the LED matrix.
-   Add a delay to control the game's speed.
+   Déterminez la direction du serpent en fonction des lectures du joystick.
+   Déplacez le serpent.
+   Vérifiez si la tête du serpent entre en collision avec la nourriture. 
+   Si c'est le cas, le serpent grandit et de la nouvelle nourriture est générée à un nouvel emplacement.
+   Vérifiez si le serpent entre en collision avec lui-même. Si c'est le cas, réinitialisez le jeu.
+   Dessinez l'état actuel du jeu (positions du serpent et de la nourriture) sur la matrice LED.
+   Ajoutez un délai pour contrôler la vitesse du jeu.
 
 4. ``moveSnake()`` 
 
-   Move each part of the snake to the position of the previous part, starting from the tail and moving to the head.
-   Move the snake's head based on its direction.
+   Déplacez chaque partie du serpent à la position de la partie précédente, en commençant par la queue et en allant vers la tête.
+   Déplacez la tête du serpent en fonction de sa direction.
 
 5. ``generateFood()`` 
 
-   Generate all possible food positions.
-   Check if each position overlaps with any part of the snake. If it doesn't overlap, the position is considered a possible food location.
-   Randomly select a possible food location.
+   Générez toutes les positions possibles pour la nourriture.
+   Vérifiez si chaque position chevauche une partie du serpent. Si elle ne chevauche pas, la position est considérée comme une position possible pour la nourriture.
+   Sélectionnez aléatoirement une position possible pour la nourriture.
 
 6. ``drawFrame()`` 
 
-   Clear the current frame.
-   Draw the snake and food on the frame.
-   Flatten the two-dimensional frame array into a one-dimensional array (flatFrame) and load it onto the LED matrix.
+   Effacez le cadre actuel.
+   Dessinez le serpent et la nourriture sur le cadre.
+   Aplatissez le tableau à deux dimensions frame en un tableau à une dimension (flatFrame) et chargez-le sur la matrice LED.

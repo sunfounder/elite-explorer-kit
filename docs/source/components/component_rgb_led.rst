@@ -1,43 +1,44 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts sur Facebook ! Plongez dans l'univers du Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions exclusives** : Profitez de réductions exclusives sur nos produits les plus récents.
+    - **Promotions festives et cadeaux** : Participez à des concours et des promotions festives.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _cpn_rgb_led:
 
-RGB LED
+LED RGB
 =================
 
 .. image:: img/rgb_led.png
     :width: 100
     
-RGB LEDs emit light in various colors. An RGB LED packages three LEDs of red, green, and blue into a transparent or semitransparent plastic shell. It can display various colors by changing the input voltage of the three pins and superimpose them, which, according to statistics, can create 16,777,216 different colors. 
+Les LED RGB émettent de la lumière dans différentes couleurs. Une LED RGB regroupe trois LED rouge, verte et bleue dans une coque en plastique transparente ou semi-transparente. Elle peut afficher différentes couleurs en changeant la tension d'entrée des trois broches et en les superposant, ce qui, selon les statistiques, peut créer 16 777 216 couleurs différentes. 
 
 .. image:: img/rgb_light.png
     :width: 600
 
-RGB LEDs can be categorized into common anode and common cathode ones. In this kit, the latter is used. The **common cathode**, or CC, means to connect the cathodes of the three LEDs. After you connect it with GND and plug in the three pins, the LED will flash the corresponding color. 
+Les LED RGB peuvent être classées en anode commune et cathode commune. Dans ce kit, ce dernier est utilisé. La **cathode commune**, ou CC, signifie connecter les cathodes des trois LED. Après l'avoir connectée à la masse (GND) et branché les trois broches, la LED affichera la couleur correspondante. 
 
-Its circuit symbol is shown as figure.
+Son symbole de circuit est montré sur la figure.
 
 .. image:: img/rgb_symbol.png
     :width: 300
 
-An RGB LED has 4 pins: the longest one is GND; the others are Red, Green and Blue. Touch its plastic shell and you will find a cut. The pin closest to the cut is the first pin, marked as Red, then GND, Green and Blue in turn. 
+Une LED RGB a 4 broches : la plus longue est GND ; les autres sont Rouge, Vert et Bleu. Touchez sa coque en plastique et vous trouverez une entaille. La broche la plus proche de l'entaille est la première broche, marquée comme Rouge, puis GND, Vert et Bleu dans cet ordre. 
 
 .. image:: img/rgb_pin.jpg
     :width: 200
 
-**Example**
+**Exemple**
 
-* :ref:`basic_rgb_led` (Basic Project)
-* :ref:`fun_hue` (Fun Project)
+* :ref:`basic_rgb_led` (Projet de base)
+* :ref:`fun_hue` (Projet amusant)
+

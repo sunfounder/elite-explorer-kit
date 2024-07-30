@@ -1,16 +1,16 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez plus profondément dans le monde des Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre & Partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux nouvelles annonces de produits et aux aperçus exclusifs.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos produits les plus récents.
+    - **Promotions festives et cadeaux** : Participez à des concours et à des promotions de vacances.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et à créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _basic_gy87_bmp180:
 
@@ -18,37 +18,37 @@ BMP180
 ==========================
 
 
-Overview
+Aperçu
 ---------------
 
-In this tutorial, we delve into the GY-87 IMU module, focusing on the BMP180 sensor for measuring temperature, pressure, and altitude. Ideal for applications like weather monitoring and altitude tracking, this lesson covers interfacing the GY-87 with an Arduino Uno and using the Adafruit BMP085 library. You'll learn how to initialize the BMP180 sensor and read its data on the Arduino Serial Monitor, a crucial skill for projects that require environmental data.
+Dans ce tutoriel, nous explorons le module IMU GY-87, en nous concentrant sur le capteur BMP180 pour mesurer la température, la pression et l'altitude. Idéal pour des applications telles que la surveillance météorologique et le suivi de l'altitude, cette leçon couvre l'interfaçage du GY-87 avec un Arduino Uno et l'utilisation de la bibliothèque Adafruit BMP085. Vous apprendrez à initialiser le capteur BMP180 et à lire ses données sur le moniteur série Arduino, une compétence cruciale pour les projets nécessitant des données environnementales.
 
-Required Components
+Composants nécessaires
 -------------------------
 
-In this project, we need the following components. 
+Dans ce projet, nous avons besoin des composants suivants. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est très pratique d'acheter un kit complet, voici le lien : 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - Elite Explorer Kit
+    *   - Nom	
+        - ÉLÉMENTS DANS CE KIT
+        - LIEN
+    *   - Kit Elite Explorer
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -58,7 +58,7 @@ You can also buy them separately from the links below.
         - \-
 
 
-Wiring
+Câblage
 ----------------------
 
 .. image:: img/09-gy87_bb.png
@@ -70,7 +70,7 @@ Wiring
    <br/>
 
 
-Schematic Diagram
+Schéma de connexion
 -----------------------
 
 .. image:: img/09_basic_gy87_schematic.png
@@ -83,39 +83,39 @@ Code
 
 .. note::
 
-    * You can open the file ``09-gy87_bmp180.ino`` under the path of ``elite-explorer-kit-main\basic_project\09-gy87_bmp180`` directly.
-    * Or copy this code into Arduino IDE.
+    * Vous pouvez ouvrir le fichier ``09-gy87_bmp180.ino`` sous le chemin ``elite-explorer-kit-main\basic_project\09-gy87_bmp180`` directement.
+    * Ou copiez ce code dans l'IDE Arduino.
 
 .. note:: 
-    To install the library, use the Arduino Library Manager and search for **"Adafruit BMP085 Library"** and install it. 
+    Pour installer la bibliothèque, utilisez le gestionnaire de bibliothèques Arduino et recherchez **"Adafruit BMP085 Library"** et installez-la. 
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/7f7347f7-e1e6-400f-b10c-02ccf300b3b9/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-Code Analysis
+Analyse du code
 ------------------------
 
 - ``initializeBMP180()``
 
-  Initialize the BMP180 sensor.
+  Initialiser le capteur BMP180.
 
   .. code-block:: arduino
 
      void initializeBMP180() {
-       // Start BMP180 initialization
+       // Démarrer l'initialisation du BMP180
        if (!bmp.begin()) {
          Serial.println("Could not find a valid BMP180 sensor, check wiring!");
          while (1)
-           ;  // Halt if sensor not found
+           ;  // Arrêt si le capteur n'est pas trouvé
        }
        Serial.println("BMP180 Found!");
      }
 
 - ``printBMP180()``
 
-  Print the values ​​read by the BMP180 sensor.
+  Imprimer les valeurs lues par le capteur BMP180.
 
   .. code-block:: arduino
 
@@ -130,8 +130,8 @@ Code Analysis
        Serial.print(bmp.readPressure());
        Serial.println(" Pa");
      
-       // Calculate altitude assuming 'standard' barometric
-       // pressure of 1013.25 millibar = 101325 Pascal
+       // Calculer l'altitude en supposant une pression barométrique 'standard'
+       // de 1013,25 millibars = 101325 Pascal
        Serial.print("Altitude = ");
        Serial.print(bmp.readAltitude());
        Serial.println(" meters");

@@ -1,66 +1,66 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour et bienvenue dans la communauté SunFounder des passionnés de Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez au cœur de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions exclusives** : Profitez de réductions exclusives sur nos produits les plus récents.
+    - **Promotions festives et cadeaux** : Participez à des concours et des promotions festives.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _new_dac:
 
-Digital-to-Analog Converter (DAC)
-========================================
+Convertisseur numérique-analogique (DAC)
+==============================================
 
-The Arduino Uno R4 WiFi comes equipped with a built-in DAC (Digital-to-Analog Converter) feature. A DAC is crucial for converting digital signals into their analog counterparts, a functionality that's particularly vital in applications like audio processing, analog signal generation, and other scenarios requiring precise analog output.
+L'Arduino Uno R4 WiFi est doté d'un convertisseur numérique-analogique (DAC) intégré. Un DAC est crucial pour convertir des signaux numériques en leurs équivalents analogiques, une fonctionnalité particulièrement vitale dans des applications telles que le traitement audio, la génération de signaux analogiques et d'autres scénarios nécessitant une sortie analogique précise.
 
-The DAC on the Uno R4 WiFi boasts up to 12-bit resolution, delivering true analog output capabilities that outperform those of PWM pins.
+Le DAC de l'Uno R4 WiFi offre une résolution allant jusqu'à 12 bits, fournissant des capacités de sortie analogique véritable qui surpassent celles des broches PWM.
 
 .. image:: img/07_dac.png
   :width: 70%
 
-Play Music with DAC
-++++++++++++++++++++
+Jouer de la musique avec le DAC
+++++++++++++++++++++++++++++++++++++++
 
-**Circuit Diagram**
+**Schéma de circuit**
 
 .. image:: img/07_dac_bb.png
   :width: 100%
   :align: center
 
-**Upload the Code**
+**Téléverser le code**
 
-Open the ``07-dac.ino`` file located at ``elite-explorer-kit-main\r4_new_feature\07-dac``, or paste the following code into your Arduino IDE.
+Ouvrez le fichier ``07-dac.ino`` situé dans ``elite-explorer-kit-main\r4_new_feature\07-dac``, ou copiez le code suivant dans votre Arduino IDE.
 
 .. note:: 
-    Please place the ``pitches.h`` file in the same directory as the code to ensure proper functioning.
+    Veuillez placer le fichier ``pitches.h`` dans le même répertoire que le code pour assurer un fonctionnement correct.
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/93e0379e-1d2d-4d9c-a603-42b3335e8e05/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-This project leverages the Arduino and DAC (Digital-to-Analog Converter) to play the iconic Super Mario Bros theme song. It utilizes a library called ``analogWave`` for sine wave generation and another library, ``pitches.h``, for defining note frequencies.
+Ce projet utilise l'Arduino et le DAC (convertisseur numérique-analogique) pour jouer le thème emblématique de Super Mario Bros. Il utilise une bibliothèque appelée ``analogWave`` pour la génération d'ondes sinusoïdales et une autre bibliothèque, ``pitches.h``, pour définir les fréquences des notes.
 
-- ``melody[]``: This array contains the notes to be played along with their durations. Notes are represented by predefined pitches (e.g., ``NOTE_E5``), and durations are represented in terms of beats (e.g., 4 signifies a quarter note). You can try composing your own melody by changing the notes and durations in the melody[] array. If you are interested, there is a repository on GitHub (|link_arduino_songs|) that provides Arduino code for playing different songs. Although their approach may be different from this project, you can refer to their notes and durations. (Simply replace the ``melody[]`` in the corresponding track with the code in this project.)
+- ``melody[]`` : Ce tableau contient les notes à jouer ainsi que leurs durées. Les notes sont représentées par des hauteurs prédéfinies (par exemple, ``NOTE_E5``) et les durées sont représentées en termes de temps (par exemple, 4 signifie une noire). Vous pouvez essayer de composer votre propre mélodie en changeant les notes et les durées dans le tableau melody[]. Si vous êtes intéressé, il existe un référentiel sur GitHub (|link_arduino_songs|) qui fournit du code Arduino pour jouer différentes chansons. Bien que leur approche puisse être différente de celle de ce projet, vous pouvez vous référer à leurs notes et durées. (Il suffit de remplacer le ``melody[]`` dans la piste correspondante par le code de ce projet.)
 
-- ``tempo`` : The tempo for this project is set at 200 BPM (Beats Per Minute), which is used to calculate the duration of each note. Modifying this value will change the speed of the song's performance.
+- ``tempo`` : Le tempo pour ce projet est fixé à 200 BPM (battements par minute), qui est utilisé pour calculer la durée de chaque note. Modifier cette valeur changera la vitesse de l'exécution de la chanson.
 
-- **Sine Wave Generator**: The ``analogWave`` library's ``sine`` function initializes a 10 Hz sine wave generator, which is used for outputting the notes via DAC.
+- **Générateur d'ondes sinusoïdales** : La fonction ``sine`` de la bibliothèque ``analogWave`` initialise un générateur d'ondes sinusoïdales à 10 Hz, qui est utilisé pour la sortie des notes via le DAC.
 
-- **Note Duration**: Based on the set tempo and the beat count for each note, the duration for each note is calculated.
+- **Durée de la note** : En fonction du tempo défini et du nombre de battements pour chaque note, la durée de chaque note est calculée.
 
-- **Play and Pause**: Each note plays for 85% of its calculated duration, followed by a 15% pause to distinguish between notes.
+- **Lecture et pause** : Chaque note est jouée pendant 85% de sa durée calculée, suivie d'une pause de 15% pour distinguer les notes.
 
-- **Loop**: Upon completing the melody, the code automatically resets and starts playing again.
+- **Boucle** : Une fois la mélodie terminée, le code se réinitialise automatiquement et commence à rejouer.
 
-This is an example that demonstrates how to use Arduino and external hardware (DAC) to generate music. It also shows how to use arrays and loops to simplify the logic of music playback.
+Cet exemple montre comment utiliser Arduino et du matériel externe (DAC) pour générer de la musique. Il montre également comment utiliser des tableaux et des boucles pour simplifier la logique de la lecture musicale.
 
 
-**Reference**
+**Référence**
 
 - |link_r4_dac|

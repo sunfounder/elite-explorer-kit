@@ -1,51 +1,49 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez dans l'univers du Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions exclusives** : Profitez de réductions exclusives sur nos produits les plus récents.
+    - **Promotions festives et cadeaux** : Participez à des concours et des promotions festives.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
-.. _iot_arduino_cloud:
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 Arduino IoT Cloud
 ===========================
 
-This example demonstrates code for communicating with the Arduino IoT Cloud. Its purpose is to connect to the Arduino IoT Cloud and interact with cloud variables. Here, we send the temperature values read from the DHT11 sensor to the Arduino IoT Cloud, allowing us to monitor it from the cloud.
+Cet exemple montre comment communiquer avec le Cloud Arduino IoT. Il permet de se connecter au Cloud Arduino IoT et d'interagir avec les variables cloud. Ici, nous envoyons les valeurs de température lues par le capteur DHT11 au Cloud Arduino IoT, nous permettant ainsi de les surveiller depuis le cloud.
 
 .. image:: img/02_cloud.png
 
-**Required Components**
+**Composants nécessaires**
 
-In this project, we need the following components. 
+Pour ce projet, nous avons besoin des composants suivants. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est définitivement pratique d'acheter un kit complet, voici le lien : 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nom	
+        - ARTICLES DANS CE KIT
+        - LIEN
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément à partir des liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DU COMPOSANT
+        - LIEN D'ACHAT
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -56,7 +54,7 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_dht11`
         - |link_humiture_buy|
 
-**Wiring**
+**Câblage**
 
 .. image:: img/02_arduino_iot_cloud_bb.png
     :width: 90%
@@ -67,158 +65,158 @@ You can also buy them separately from the links below.
     <br/>
 
 
-**Schematic**
+**Schéma**
 
 .. image:: img/02_arduino_iot_cloud_schematic.png
   :width: 40%
   :align: center
 
 
-**Install Arduino Create Agent**
+**Installer l'agent Arduino Create**
 
-1. Visit the address https://create.arduino.cc/getting-started/plugin/welcome.
+1. Visitez l'adresse https://create.arduino.cc/getting-started/plugin/welcome.
 
-2. Click START.
+2. Cliquez sur START.
 
   .. image:: img/02_install_agent_2.png
      :width: 95%
 
-3. Choose the version that suits your computer, and it will download an installation package.
+3. Choisissez la version adaptée à votre ordinateur, et un paquet d'installation sera téléchargé.
 
   .. image:: img/02_install_agent_3.png
      :width: 95%
 
-4. Install the agent.
+4. Installez l'agent.
 
   .. image:: img/02_install_agent_4.png
     :width: 85%
 
-5. After installation, go back to your browser, and you will see the following interface.
+5. Après l'installation, retournez à votre navigateur, et vous verrez l'interface suivante.
 
   .. image:: img/02_install_agent_5.png
      :width: 95%
 
-6. Click NEXT, and then you can GO TO the web editor.
+6. Cliquez sur NEXT, puis vous pouvez accéder à l'éditeur web.
 
   .. image:: img/02_install_agent_6.png
      :width: 95%
 
-**Using Arduino IoT Cloud**
+**Utiliser le Cloud Arduino IoT**
 
-1. First, you need to log in or register with Arduino. 
+1. Tout d'abord, vous devez vous connecter ou vous inscrire sur Arduino. 
 
   https://login.arduino.cc/login
 
-2. Once logged in, click on IoT Cloud in the upper right corner.
+2. Une fois connecté, cliquez sur IoT Cloud dans le coin supérieur droit.
 
    .. image:: img/02_iot_cloud_2.png
 
 
-3. Create a new thing.
+3. Créez une nouvelle chose.
 
    .. image:: img/02_iot_cloud_3.png
   
-4. Associate your device.
+4. Associez votre appareil.
 
    .. image:: img/02_iot_cloud_4.png
 
 
-5. Set up a new device.
+5. Configurez un nouvel appareil.
 
    .. image:: img/02_iot_cloud_5.png
 
 
-6. Choose your Arduino board.
+6. Choisissez votre carte Arduino.
  
    .. image:: img/02_iot_cloud_6.png
 
 
-7. Wait for a moment, and your UNO R4 WiFi will be detected. Continue by clicking configure.
+7. Attendez un moment, et votre UNO R4 WiFi sera détecté. Continuez en cliquant sur configure.
  
    .. image:: img/02_iot_cloud_7.png
 
  
-8. Give your device a name.
+8. Donnez un nom à votre appareil.
 
   .. image:: img/02_iot_cloud_8.png
 
 
-9. Make your device IoT-ready, and remember to save the secret key.
+9. Rendez votre appareil compatible IoT, et n'oubliez pas de sauvegarder la clé secrète.
 
   .. image:: img/02_iot_cloud_9.png
 
 
-10. Wait for a few minutes.
+10. Attendez quelques minutes.
 
   .. image:: img/02_iot_cloud_10.png
 
 
-.. 5. Select Arduino UNO R4 WiFi.
+.. 5. Sélectionnez Arduino UNO R4 WiFi.
 
 .. .. image:: img/sp231016_164654.png
 
-11. Configure WiFi.
+11. Configurez le WiFi.
 
   .. image:: img/02_iot_cloud_11.png
 
 
-12. Here you will need to enter your WiFi password and secret key.
+12. Ici, vous devrez entrer votre mot de passe WiFi et la clé secrète.
 
   .. image:: img/02_iot_cloud_12.png
 
 
-13. Add a variable.
+13. Ajoutez une variable.
 
   .. image:: img/02_iot_cloud_13.png
 
 
-14. Here, we want to display the temperature in IoT Cloud, so we configure a read-only float variable.
+14. Ici, nous voulons afficher la température dans le Cloud IoT, donc nous configurons une variable float en lecture seule.
 
   .. image:: img/02_iot_cloud_14.png
 
 
-15. After completion, go to the sketch.
+15. Après avoir terminé, allez au sketch.
 
   .. image:: img/02_iot_cloud_15.png
 
 
-16. Open the full editor.
+16. Ouvrez l'éditeur complet.
 
   .. image:: img/02_iot_cloud_16.png
 
 
-17. Click on Libraries on the right side, then Library Manager.
+17. Cliquez sur Libraries à droite, puis sur Library Manager.
 
   .. image:: img/02_iot_cloud_17.png
 
 
-18. Search for the DHT sensor library and check it.
+18. Recherchez la bibliothèque du capteur DHT et cochez-la.
 
   .. image:: img/02_iot_cloud_18.png
 
 
-19. Now, we need to edit the code. You can see that the editor has already prepared the IoT Cloud-related code for you. You just need to add the specific functionality you need. In this example, we added code to read the temperature using the DHT11 sensor.
+19. Maintenant, nous devons éditer le code. Vous pouvez voir que l'éditeur a déjà préparé le code lié au Cloud IoT pour vous. Vous n'avez qu'à ajouter les fonctionnalités spécifiques dont vous avez besoin. Dans cet exemple, nous avons ajouté du code pour lire la température à l'aide du capteur DHT11.
 
   .. code-block::
       :emphasize-lines: 1,2,3,22,23,24,32,55,56
   
-      // DHT sensor library - Version: Latest 
+      // Bibliothèque du capteur DHT - Version: Dernière 
       #include <DHT.h>
       #include <DHT_U.h>
   
       /* 
-      Sketch generated by the Arduino IoT Cloud Thing "Untitled"
+      Sketch généré par le Cloud Arduino IoT "Sans titre"
       https://create.arduino.cc/cloud/things/260edac8-34f9-4e2e-9214-ba0c20994220 
   
-      Arduino IoT Cloud Variables description
+      Description des variables du Cloud Arduino IoT
   
-      The following variables are automatically generated and updated when changes are made to the Thing
+      Les variables suivantes sont automatiquement générées et mises à jour lorsque des modifications sont apportées à la chose
   
       float temperature;
   
-      Variables which are marked as READ/WRITE in the Cloud Thing will also have functions
-      which are called when their values are changed from the Dashboard.
-      These functions are generated with the Thing and added at the end of this sketch.
+      Les variables marquées comme LECTURE/ÉCRITURE dans la chose Cloud auront également des fonctions
+      qui sont appelées lorsque leurs valeurs sont modifiées depuis le tableau de bord.
+      Ces fonctions sont générées avec la chose et ajoutées à la fin de ce sketch.
       */
   
       #include "thingProperties.h"
@@ -228,25 +226,25 @@ You can also buy them separately from the links below.
       DHT dht(DHTPIN, DHTTYPE);
   
       void setup() {
-          // Initialize serial and wait for port to open:
+          // Initialisez la communication série et attendez l'ouverture du port :
           Serial.begin(9600);
-          // This delay gives the chance to wait for a Serial Monitor without blocking if none is found
+          // Ce délai donne la possibilité d'attendre un moniteur série sans bloquer s'il n'est pas trouvé
           delay(1500); 
   
           dht.begin();
   
-          // Defined in thingProperties.h
+          // Défini dans thingProperties.h
           initProperties();
   
-          // Connect to Arduino IoT Cloud
+          // Connectez-vous au Cloud Arduino IoT
           ArduinoCloud.begin(ArduinoIoTPreferredConnection);
           
           /*
-              The following function allows you to obtain more information
-              related to the state of network and IoT Cloud connection and errors
-              the higher number the more granular information you’ll get.
-              The default is 0 (only errors).
-              Maximum is 4
+              La fonction suivante vous permet d'obtenir plus d'informations
+              relatives à l'état du réseau et à la connexion au Cloud IoT ainsi que des erreurs
+              plus le nombre est élevé, plus l'information est granulaire.
+              La valeur par défaut est 0 (seulement les erreurs).
+              Le maximum est 4
           */
           setDebugMessageLevel(2);
           ArduinoCloud.printDebugInfo();
@@ -254,67 +252,68 @@ You can also buy them separately from the links below.
   
       void loop() {
           ArduinoCloud.update();
-          // Your code here 
+          // Votre code ici 
           
           float temp = dht.readTemperature();  
           temperature = temp;
           
       }
  
-20. Upload the code. You may be prompted to update; follow the prompts to complete.
+20. Téléchargez le code. Vous pourriez être invité à mettre à jour ; suivez les invites pour terminer.
 
   .. image:: img/02_iot_cloud_20.png
 
 
-21. Return to IoT CLOUD.
+21. Retournez au CLOUD IoT.
 
   .. image:: img/02_iot_cloud_21.png
 
 
-22. Click on the menu in the top left corner.
+22. Cliquez sur le menu dans le coin supérieur gauche.
   
   .. image:: img/02_iot_cloud_22.png
 
 
-23. Click on the dashboard.
+23. Cliquez sur le tableau de bord.
   
   .. image:: img/02_iot_cloud_23.png
 
 
-24. Create dashboard.
+24. Créez un tableau de bord.
   
   .. image:: img/02_iot_cloud_24.png
 
 
-25. There are many widgets available; here, we choose a value widget for displaying the temperature.
+25. De nombreux widgets sont disponibles ; ici, nous choisissons un widget de valeur pour afficher la température.
 
   .. image:: img/02_iot_cloud_25.png
 
 
-26. After clicking, a widget settings interface will appear, where you can connect the widget to the cloud variable you created earlier.
+26. Après avoir cliqué, une interface de paramètres de widget apparaîtra, où vous pourrez connecter le widget à la variable cloud que vous avez créée précédemment.
 
   .. image:: img/02_iot_cloud_26.png
 
 
-27. Now, you can view the sensor readings on Arduino IoT Cloud.
+27. Maintenant, vous pouvez voir les lectures des capteurs sur le Cloud Arduino IoT.
 
   .. image:: img/02_iot_cloud_27.png
 
 
-**How it works?**
+**Comment ça fonctionne ?**
 
-After configuring the IoT Cloud (device setup, network setup, creating cloud variables), you will notice that the sketch on the cloud updates automatically. So, most of the code is already written for you.
+Après avoir configuré le Cloud IoT (configuration de l'appareil, configuration du réseau, création de variables cloud), vous remarquerez que le sketch sur le cloud se met à jour automatiquement. Ainsi, la plupart du code est déjà écrit pour vous.
 
-Open the editor, and you will see that this sketch contains four files:
+Ouvrez l'éditeur, et vous verrez que ce sketch contient quatre fichiers :
 
-``main.ino``: Used to initialize the Arduino and perform the main loop tasks. Additionally, it includes logic for connecting and communicating with the Arduino IoT Cloud.
+``main.ino``: Utilisé pour initialiser l'Arduino et exécuter les tâches principales de la boucle. De plus, il inclut la logique de connexion et de communication avec le Cloud Arduino IoT.
 
-``thingProperties.h``: This file is used to define variables and functions in the Arduino IoT Cloud. It contains declarations of cloud variables and their associated callback functions. In the provided code, it is used to initialize cloud properties (e.g., the temperature variable) and connect to the Arduino IoT Cloud.
+``thingProperties.h``: Ce fichier est utilisé pour définir des variables et des fonctions dans le Cloud Arduino IoT. Il contient les déclarations des variables cloud et leurs fonctions de rappel associées. Dans le code fourni, il est utilisé pour initialiser les propriétés cloud (par exemple, la variable température) et se connecter au Cloud Arduino IoT.
 
-``Secret``: Used to store sensitive or private information, such as WiFi passwords or API keys. This sensitive information is typically not exposed directly in the code but is stored in the Secret file to enhance security.
+``Secret``: Utilisé pour stocker des informations sensibles ou privées, telles que les mots de passe WiFi ou les clés API. Ces informations sensibles ne sont généralement pas exposées directement dans le code mais sont stockées dans le fichier Secret pour améliorer la sécurité.
 
-``ReadMe.adoc``: Contains project documentation or other relevant information for easier understanding and use of the project. This file usually does not contain executable code but rather documents and descriptive information.
+``ReadMe.adoc``: Contient la documentation du projet ou d'autres informations pertinentes pour une meilleure compréhension et utilisation du projet. Ce fichier ne contient généralement pas de code exécutable mais plutôt des informations documentaires et descriptives.
 
-We need to add some code for the DHT11 sensor. This code is identical to what you would use on your local IDE. The only difference is that you need to assign the value read from the DHT11 to the cloud variable ``temperature``.
+Nous devons ajouter du code pour le capteur DHT11. Ce code est identique à celui que vous utiliseriez sur votre IDE local. La seule différence est que vous devez assigner la valeur lue par le DHT11 à la variable cloud ``temperature``.
 
-(Note: You should never modify ``thingProperties.h`` and ``Secret``. They will be modified when you make changes using the Thing editor.)
+(Remarque : Vous ne devez jamais modifier ``thingProperties.h`` et ``Secret``. Ils seront modifiés lorsque vous apportez des changements en utilisant l'éditeur Thing.)
+

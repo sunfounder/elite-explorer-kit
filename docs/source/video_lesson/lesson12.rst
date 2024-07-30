@@ -1,31 +1,32 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions exclusives** : Profitez de réductions exclusives sur nos produits les plus récents.
+    - **Promotions festives et cadeaux** : Participez à des concours et des promotions festives.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
-LESSON 12: Read Analog Voltages on the Arduino
-================================================
+LEÇON 12 : Lire les tensions analogiques avec l'Arduino
+=======================================================
 
-This lesson explores how to read analog voltages using the Arduino, expanding upon previous lessons on digital and analog outputs. Here’s a brief overview of what you will learn:
+Cette leçon explore comment lire les tensions analogiques avec l'Arduino, en développant les leçons précédentes sur les sorties numériques et analogiques. Voici un bref aperçu de ce que vous allez apprendre :
 
-1. **Introduction to Analog Reading**: Understand the basic principles of reading analog voltages with the Arduino, emphasizing the importance of not exceeding the 5-volt input limit to avoid damage.
-2. **Using a Potentiometer**: Learn how to use a potentiometer to create a variable voltage source that can be read by the Arduino, demonstrating the setup through a practical circuit-building exercise.
-3. **Practical Application and Circuit Building**: Follow step-by-step instructions to build a circuit that includes a potentiometer and how to connect it to the Arduino for reading voltage variations.
-4. **Coding for Analog Reading**: Dive into the code required to read and interpret analog voltages, including setting up the Arduino sketch to display these voltages.
-5. **Homework Assignment**: Solidify your learning by adjusting the potentiometer to change the LED brightness linked to the voltage read by the Arduino, reinforcing the concepts of analog input and output.
+1. **Introduction à la lecture analogique** : Comprendre les principes de base de la lecture des tensions analogiques avec l'Arduino, en insistant sur l'importance de ne pas dépasser la limite d'entrée de 5 volts pour éviter les dommages.
+2. **Utilisation d'un potentiomètre** : Apprenez à utiliser un potentiomètre pour créer une source de tension variable qui peut être lue par l'Arduino, démontrant la configuration à travers un exercice pratique de construction de circuit.
+3. **Application pratique et construction de circuit** : Suivez des instructions étape par étape pour construire un circuit incluant un potentiomètre et comment le connecter à l'Arduino pour lire les variations de tension.
+4. **Codage pour la lecture analogique** : Plongez dans le code nécessaire pour lire et interpréter les tensions analogiques, y compris la configuration de l'esquisse Arduino pour afficher ces tensions.
+5. **Devoirs** : Consolidation de votre apprentissage en ajustant le potentiomètre pour changer la luminosité de la LED liée à la tension lue par l'Arduino, renforçant les concepts d'entrée et de sortie analogiques.
 
 
-**Video**
+**Vidéo**
 
 .. raw:: html
 
-    <iframe width="700" height="500" src="https://www.youtube.com/embed/Vp5u_8KAzFw?si=o9Q1tTC1X1B9teef" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="700" height="500" src="https://www.youtube.com/embed/Vp5u_8KAzFw?si=o9Q1tTC1X1B9teef" title="Lecteur vidéo YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+

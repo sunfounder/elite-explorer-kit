@@ -1,38 +1,37 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi & Arduino & ESP32 sur Facebook ! Plongez plus profondément dans l'univers du Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions exclusives** : Profitez de réductions exclusives sur nos produits les plus récents.
+    - **Promotions festives et cadeaux** : Participez à des concours et des promotions festives.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _cpn_mfrc522:
 
-MFRC522 Module
+Module MFRC522
 =====================
 
 **RFID**
 
-Radio Frequency Identification (RFID) refers to technologies that involve using wireless communication between an object (or tag) and an interrogating device (or reader) to automatically track and identify such objects. The tag transmission range is limited to several meters from the reader. A clear line of sight between the reader and tag is not necessarily required.
+La Radio Frequency Identification (RFID) désigne les technologies utilisant la communication sans fil entre un objet (ou étiquette) et un dispositif d'interrogation (ou lecteur) pour suivre et identifier automatiquement ces objets. La portée de transmission de l'étiquette est limitée à quelques mètres du lecteur. Une ligne de vue claire entre le lecteur et l'étiquette n'est pas nécessaire.
 
-Most tags contain at least one integrated circuit (IC) and an antenna. The microchip stores information and is responsible for managing the radio frequency (RF) communication with the reader. Passive tags do not have an independent energy source and depend on an external electromagnetic signal, provided by the reader, to power their operations. Active tags contain an independent energy source, such as a battery. Thus, they may have increased processing, transmission capabilities and range.
+La plupart des étiquettes contiennent au moins un circuit intégré (IC) et une antenne. La puce stocke des informations et est responsable de la gestion de la communication radiofréquence (RF) avec le lecteur. Les étiquettes passives n'ont pas de source d'énergie indépendante et dépendent d'un signal électromagnétique externe fourni par le lecteur pour alimenter leurs opérations. Les étiquettes actives contiennent une source d'énergie indépendante, telle qu'une batterie. Elles peuvent ainsi avoir des capacités de traitement et de transmission accrues ainsi qu'une portée étendue.
 
 .. image:: img/mfrc522.png
 
-
 **MFRC522**
 
-MFRC522 is a kind of integrated read and write card chip. It is commonly used in the radio at 13.56MHz. Launched by the NXP Company, it is a low-voltage, low-cost, and small-sized non-contact card chip, a best choice of intelligent instrument and portable handheld device.
+Le MFRC522 est un type de puce de lecture et d'écriture de cartes intégrée. Il est couramment utilisé pour les communications radio à 13,56 MHz. Lancé par la société NXP, c'est une puce de carte sans contact à faible tension, faible coût et petite taille, un excellent choix pour les instruments intelligents et les appareils portables.
 
-The MF RC522 uses advanced modulation and demodulation concept which fully presented in all types of 13.56MHz passive contactless communication methods and protocols. In addition, it supports rapid CRYPTO1 encryption algorithm to verify MIFARE products. MFRC522 also supports MIFARE series of high-speed non-contact communication, with a two-way data transmission rate up to 424kbit/s. As a new member of the 13.56MHz highly integrated reader card series, MF RC522 is much similar to the existing MF RC500 and MF RC530 but there also exists great differences. It communicates with the host machine via the serial manner which needs less wiring. You can choose between SPI, I2C and serial UART mode (similar to RS232), which helps reduce the connection, save PCB board space (smaller size), and reduce cost.
+Le MF RC522 utilise un concept avancé de modulation et de démodulation, pleinement présent dans tous les types de méthodes et protocoles de communication sans contact passifs à 13,56 MHz. De plus, il prend en charge l'algorithme de cryptage rapide CRYPTO1 pour vérifier les produits MIFARE. Le MFRC522 prend également en charge la communication sans contact haute vitesse de la série MIFARE, avec un taux de transmission de données bidirectionnel allant jusqu'à 424 kbit/s. En tant que nouveau membre de la série de lecteurs de cartes hautement intégrés à 13,56 MHz, le MF RC522 est très similaire aux MF RC500 et MF RC530 existants, mais présente également de grandes différences. Il communique avec la machine hôte via un mode série nécessitant moins de câblage. Vous pouvez choisir entre les modes SPI, I2C et UART série (similaire à RS232), ce qui aide à réduire les connexions, à économiser de l'espace sur la carte PCB (taille plus petite) et à réduire les coûts.
 
-**Example**
+**Exemple**
 
 * :ref:`basic_mfrc522` (Basic Project)
 * :ref:`fun_access` (Fun Project)

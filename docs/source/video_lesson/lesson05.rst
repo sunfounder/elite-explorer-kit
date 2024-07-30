@@ -1,30 +1,31 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez-vous dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions exclusives** : Profitez de réductions exclusives sur nos produits les plus récents.
+    - **Promotions festives et cadeaux** : Participez à des concours et des promotions festives.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
-LESSON 5: Explaining How Computers Work Based On Binary Numbers
-=================================================================
+LEÇON 5 : Expliquer le Fonctionnement des Ordinateurs Basé sur les Nombres Binaires
+========================================================================================
 
-This lesson delves into the workings of computers and microcontrollers like Arduino, unraveling the magic behind modern electronics through practical examples and exercises. Here’s a brief overview of what you will learn:
+Cette leçon explore le fonctionnement des ordinateurs et des microcontrôleurs comme l'Arduino, dévoilant la magie derrière l'électronique moderne à travers des exemples pratiques et des exercices. Voici un aperçu de ce que vous allez apprendre :
 
-1. **Understanding Modern Electronics**: A look into how devices from Arduinos to personal computers operate, demystifying the process by which these devices execute tasks.
-2. **The Role of Numbers in Computing**: Exploring how everything in computing from text to colors is represented by numbers, forming the basic language of computers.
-3. **Introduction to Binary Numbers**: Learning how binary numbers function and their pivotal role in computing, laying the groundwork for further practical applications.
-4. **Building a Binary Counter**: Practical exercise to program an Arduino to count in binary using LEDs, illustrating the concepts of binary numbers in a tangible format.
-5. **Homework Assignment**: Developing a binary counter with LEDs, including creating a video demonstration of the working circuit and code, reinforcing learning through hands-on application.
+1. **Comprendre l'Électronique Moderne** : Une exploration de la manière dont les appareils, des Arduinos aux ordinateurs personnels, fonctionnent, démystifiant le processus par lequel ces appareils exécutent des tâches.
+2. **Le Rôle des Nombres en Informatique** : Découverte de la façon dont tout en informatique, du texte aux couleurs, est représenté par des nombres, formant le langage de base des ordinateurs.
+3. **Introduction aux Nombres Binaires** : Apprentissage du fonctionnement des nombres binaires et de leur rôle crucial en informatique, posant les bases pour des applications pratiques futures.
+4. **Construire un Compteur Binaire** : Exercice pratique pour programmer un Arduino afin de compter en binaire en utilisant des LED, illustrant les concepts des nombres binaires de manière tangible.
+5. **Devoir à la Maison** : Développement d'un compteur binaire avec des LED, y compris la création d'une démonstration vidéo du circuit fonctionnel et du code, renforçant l'apprentissage par une application pratique.
 
-**Video**
+**Vidéo**
 
 .. raw:: html
 
-    <iframe width="700" height="500" src="https://www.youtube.com/embed/cSOpMpynXAI?si=o9Q1tTC1X1B9teef" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="700" height="500" src="https://www.youtube.com/embed/cSOpMpynXAI?si=o9Q1tTC1X1B9teef" title="Lecteur vidéo YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+

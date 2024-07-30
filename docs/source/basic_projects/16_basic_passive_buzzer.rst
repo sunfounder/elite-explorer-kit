@@ -1,58 +1,58 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts sur Facebook ! Plongez au cœur de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques grâce à l'aide de notre communauté et de notre équipe.
+    - **Apprendre & Partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-goûts.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos nouveaux produits.
+    - **Promotions festives et tirages au sort** : Participez à des tirages au sort et des promotions de vacances.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _basic_passive_buzzer:
 
-Passive Buzzer
+Buzzer Passif
 ==========================
 
 .. https://docs.sunfounder.com/projects/3in1-kit-r4/en/latest/basic_project/ar_tone_notone.html#ar-passive-buzzer
 
 
-Overview
----------------
+Vue d'ensemble
+------------------
 
-In this project, use these two functions to make the passive buzzer vibrate and produce sound. The function ``tone()`` generates a square wave with a specified frequency (and 50% duty cycle) on a pin. A duration can be specified, or the wave continues until ``noTone()`` is called.
-Similar to the active buzzer, the passive buzzer also utilizes electromagnetic induction to operate.
-The difference is that a passive buzzer does not have its own oscillating source, so it will not emit sound if DC signals are used.However, this allows the passive buzzer to adjust its own oscillation frequency and produce different notes such as "do, re, mi, fa, sol, la, ti".
+Dans ce projet, utilisez ces deux fonctions pour faire vibrer le buzzer passif et produire du son. La fonction ``tone()`` génère une onde carrée avec une fréquence spécifiée (et un cycle de service de 50 %) sur une broche. Une durée peut être spécifiée, ou l'onde continue jusqu'à ce que ``noTone()`` soit appelée.
+Tout comme le buzzer actif, le buzzer passif utilise également l'induction électromagnétique pour fonctionner.
+La différence est qu'un buzzer passif n'a pas sa propre source d'oscillation, il ne produira donc pas de son si des signaux CC sont utilisés. Cependant, cela permet au buzzer passif d'ajuster sa propre fréquence d'oscillation et de produire différentes notes telles que "do, ré, mi, fa, sol, la, si".
 
-Required Components
+Composants requis
 -------------------------
 
-In this project, we need the following components. 
+Pour ce projet, nous avons besoin des composants suivants. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est certainement pratique d'acheter un kit complet, voici le lien : 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nom	
+        - ARTICLES DANS CE KIT
+        - LIEN
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément à partir des liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -67,18 +67,17 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_buzzer`
         - |link_passive_buzzer_buy|
 
-
-Wiring
+Câblage
 ----------------------
 
 .. note::
-    When connecting the buzzer, make sure to check its pins. The longer pin is the anode and the shorter one is the cathode. It's important not to mix them up, as doing so will prevent the buzzer from producing any sound.
+    Lors de la connexion du buzzer, assurez-vous de vérifier ses broches. La broche la plus longue est l'anode et la plus courte est la cathode. Il est important de ne pas les mélanger, car cela empêcherait le buzzer de produire du son.
 
 .. image:: img/16-passive_buzzer_bb.png
     :align: center
     :width: 70%
 
-Schematic Diagram
+Schéma de câblage
 -----------------------
 
 .. image:: img/16_passive_buzzer_schematic.png
@@ -90,23 +89,23 @@ Code
 
 .. note::
 
-    * You can open the file ``16-passive_buzzer.ino`` under the path of ``elite-explorer-kit-main\basic_project\16-passive_buzzer`` directly.
-    * Or copy this code into Arduino IDE.
+    * Vous pouvez ouvrir le fichier ``16-passive_buzzer.ino`` sous le chemin ``elite-explorer-kit-main\basic_project\16-passive_buzzer`` directement.
+    * Ou copiez ce code dans Arduino IDE.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/7936cad2-3605-40a0-a9fc-573f934ab6b1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-At the time when you finish uploading the codes to the R4 board, you can hear a melody containing seven notes. 
+Lorsque vous avez terminé de téléverser le code sur la carte R4, vous pouvez entendre une mélodie contenant sept notes.
 
-Code Analysis
+Analyse du code
 ------------------------
 
-1. Including the pitches library:
-   This library provides the frequency values for various musical notes, allowing you to use musical notation in your code.
+1. Inclusion de la bibliothèque pitches:
+   Cette bibliothèque fournit les valeurs de fréquence pour diverses notes de musique, vous permettant d'utiliser la notation musicale dans votre code.
 
    .. note::
-      Please place the ``pitches.h`` file in the same directory as the code to ensure proper functioning. |link_pitches|
+      Veuillez placer le fichier ``pitches.h`` dans le même répertoire que le code pour assurer son bon fonctionnement. |link_pitches|
 
       .. image:: img/16_passive_buzzer_piches.png
 
@@ -114,13 +113,13 @@ Code Analysis
        
       #include "pitches.h"
 
-2. Defining constants and arrays:
+2. Définition des constantes et des tableaux :
 
-   * ``buzzerPin`` is the digital pin on the Arduino where the buzzer is connected.
+   * ``buzzerPin`` est la broche numérique sur l'Arduino où le buzzer est connecté.
 
-   * ``melody[]`` is an array that stores the sequence of notes to be played.
+   * ``melody[]`` est un tableau qui stocke la séquence des notes à jouer.
 
-   * ``noteDurations[]`` is an array that stores the duration of each note in the melody.
+   * ``noteDurations[]`` est un tableau qui stocke la durée de chaque note de la mélodie.
 
    .. code-block:: arduino
    
@@ -132,17 +131,15 @@ Code Analysis
         4, 8, 8, 4, 4, 4, 4, 4
       };
 
-3. Playing the melody:
+3. Jouer la mélodie :
 
-   * The ``for`` loop iterates over each note in the melody.
+   * La boucle ``for`` itère sur chaque note de la mélodie.
 
-   * The ``tone()`` function plays a note on the buzzer for a specific duration.
+   * La fonction ``tone()`` joue une note sur le buzzer pour une durée spécifique.
 
-   * A delay is added between notes to distinguish them.
+   * Un délai est ajouté entre les notes pour les distinguer.
 
-   * The ``noTone()`` function stops the sound.
-
-
+   * La fonction ``noTone()`` arrête le son.
 
    .. code-block:: arduino
    
@@ -156,7 +153,7 @@ Code Analysis
         }
       }
 
-4. Empty loop function:
-   Since the melody is played only once in the setup, there's no code in the loop function.
+4. Fonction loop vide :
+   Comme la mélodie est jouée une seule fois dans le setup, il n'y a pas de code dans la fonction loop.
 
-5. Feel free to experiment with altering the notes and durations in the ``melody[]`` and ``noteDurations[]`` arrays to create your own melodies. If you're interested, there is a GitHub repository (|link_arduino-songs|) that offers Arduino code for playing various songs. While their approach may differ from this project, you can consult their notes and durations for reference.
+5. N'hésitez pas à expérimenter en modifiant les notes et les durées dans les tableaux ``melody[]`` et ``noteDurations[]`` pour créer vos propres mélodies. Si cela vous intéresse, il existe un dépôt GitHub (|link_arduino-songs|) qui propose du code Arduino pour jouer diverses chansons. Bien que leur approche puisse différer de ce projet, vous pouvez consulter leurs notes et durées à titre de référence.

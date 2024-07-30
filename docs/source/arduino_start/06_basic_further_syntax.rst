@@ -1,86 +1,86 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour et bienvenue dans la communauté SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts sur Facebook ! Plongez plus profondément dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes post-vente et les défis techniques grâce à l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des conseils et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux nouvelles annonces de produits et aux avant-goûts.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos derniers produits.
+    - **Promotions festives et concours** : Participez à des concours et promotions de fêtes.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et à créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
-Sketch Writing Rule
-================================
-
-
-If you ask a friend to turn on the lights for you, you can say "Turn on the lights.", or "Lights on, bro.", you can use any tone of voice you want.
-
-However, if you want the Arduino board to do something for you, you need to follow the Arduino program writing rules to type in the commands.
-
-This chapter contains the basic rules of the Arduino language and will help you understand how to translate natural language into code.
-
-Of course, this is a process that takes time to get familiar with, and it is also the most error-prone part of the process for newbies, so if you make mistakes often, it's okay, just try a few more times.
+Règles d'écriture des sketches
+==================================
 
 
-Semicolon ``;``
----------------
+Si vous demandez à un ami d'allumer les lumières, vous pouvez dire "Allume les lumières.", ou "Lumières allumées, mec.", vous pouvez utiliser le ton que vous voulez.
 
-Just like writing a letter, where you write a period at the end of each sentence as the end, the Arduino language requires you to use ``;`` to tell the board the end of the command.
+Cependant, si vous voulez que la carte Arduino fasse quelque chose pour vous, vous devez suivre les règles de programmation Arduino pour taper les commandes.
 
-Take the familiar "onboard LED blinking" example. A healthy sketch should look like this.
+Ce chapitre contient les règles de base du langage Arduino et vous aidera à comprendre comment traduire le langage naturel en code.
 
-Example:
+Bien sûr, c'est un processus qui prend du temps pour se familiariser, et c'est aussi la partie la plus sujette aux erreurs pour les débutants. Donc, si vous faites souvent des erreurs, ce n'est pas grave, essayez juste quelques fois de plus.
+
+
+Point-virgule ``;``
+----------------------
+
+Tout comme l'écriture d'une lettre, où vous mettez un point à la fin de chaque phrase pour indiquer la fin, le langage Arduino exige que vous utilisiez ``;`` pour indiquer la fin de la commande.
+
+Prenons l'exemple familier du clignotement de la LED embarquée. Un sketch correct devrait ressembler à ceci.
+
+Exemple :
 
 .. code-block:: C
 
     void setup() {
-        // put your setup code here, to run once:
+        // placez votre code d'initialisation ici, il s'exécutera une seule fois :
         pinMode(13,OUTPUT); 
     }
 
     void loop() {
-        // put your main code here, to run repeatedly:
+        // placez votre code principal ici, il s'exécutera en boucle :
         digitalWrite(13,HIGH);
         delay(500);
         digitalWrite(13,LOW);
         delay(500);
     }
 
-Next, let's take a look at the following two sketches and guess if they can be correctly recognized by Arduino before running them.
+Ensuite, examinons les deux sketches suivants et devinons s'ils peuvent être correctement reconnus par Arduino avant de les exécuter.
 
-Sketch A:
+Sketch A :
 
 .. code-block:: C
     :emphasize-lines: 8,9,10,11
 
     void setup() {
-        // put your setup code here, to run once:
+        // placez votre code d'initialisation ici, il s'exécutera une seule fois :
         pinMode(13,OUTPUT); 
     }
 
     void loop() {
-        // put your main code here, to run repeatedly:
+        // placez votre code principal ici, il s'exécutera en boucle :
         digitalWrite(13,HIGH)
         delay(500)
         digitalWrite(13,LOW)
         delay(500)
     }
 
-Sketch B:
+Sketch B :
 
 .. code-block:: C
     :emphasize-lines: 8,9,10,11,12,13,14,15,16
 
     void setup() {
-        // put your setup code here, to run once:
+        // placez votre code d'initialisation ici, il s'exécutera une seule fois :
         pinMode(13,OUTPUT);
     }
     
     void loop() {
-        // put your main code here, to run repeatedly:
+        // placez votre code principal ici, il s'exécutera en boucle :
         digitalWrite(13,
     HIGH);  delay
         (500
@@ -92,72 +92,72 @@ Sketch B:
         ;
     }
 
-The result is that **Sketch A** reports an error and **Sketch B** runs.
+Le résultat est que **Sketch A** signale une erreur et que **Sketch B** fonctionne.
 
-* The errors in **Sketch A** are missing ``;`` and although it looks normal, the Arduino can't read it.
-* **Sketch B**, looks anti-human, but in fact, indentation, line breaks and spaces in statements are things that do not exist in Arduino programs, so to the Arduino compiler, it looks the same as in the example.
+* Les erreurs dans **Sketch A** sont dues à l'absence de ``;``, et bien qu'il semble normal, Arduino ne peut pas le lire.
+* **Sketch B** semble inhumain, mais en fait, l'indentation, les sauts de ligne et les espaces dans les instructions sont des éléments qui n'existent pas dans les programmes Arduino. Pour le compilateur Arduino, il apparaît donc comme dans l'exemple.
 
-However, please don't write your code as **Sketch B**, because it is usually natural people who write and view the code, so don't get yourself into trouble.
-
-
-Curlybraces ``{}``
-------------------
-
-``{}`` is the main component of the Arduino programming language, and they must appear in pairs. 
-A better programming convention is to insert a structure that requires curly braces by typing the right curly brace directly after typing the left curly brace, and then moving the cursor between the curly braces to insert the statement.
+Cependant, ne rédigez pas votre code comme **Sketch B**, car ce sont généralement des personnes naturelles qui écrivent et consultent le code, alors ne vous compliquez pas la vie.
 
 
+Accolades ``{}``
+--------------------
 
-Comment ``//``
----------------
+Les accolades ``{}`` sont l'un des composants principaux du langage de programmation Arduino, et elles doivent apparaître par paires. 
+Une meilleure convention de programmation consiste à insérer une structure nécessitant des accolades en tapant l'accolade droite directement après avoir tapé l'accolade gauche, puis à déplacer le curseur entre les accolades pour insérer l'instruction.
 
-Comment is the part of the sketch that the compiler ignores. They are usually used to tell others how the program works.
 
-If we write two adjacent slashes in a line of code, the compiler will ignore anything up to the end of the line.
 
-If we create a new sketch, it comes with two comments, and if we remove these two comments, the sketch will not be affected in any way.
+Commentaires ``//``
+----------------------
+
+Le commentaire est la partie du sketch que le compilateur ignore. Ils sont généralement utilisés pour expliquer le fonctionnement du programme.
+
+Si nous écrivons deux barres obliques adjacentes dans une ligne de code, le compilateur ignorera tout jusqu'à la fin de la ligne.
+
+Si nous créons un nouveau sketch, il est accompagné de deux commentaires, et si nous supprimons ces deux commentaires, le sketch ne sera pas affecté de quelque manière que ce soit.
 
 .. code-block:: C
     :emphasize-lines: 2,7
 
     void setup() {
-        // put your setup code here, to run once:
+        // placez votre code d'initialisation ici, il s'exécutera une seule fois :
 
     }
 
     void loop() {
-        // put your main code here, to run repeatedly:
+        // placez votre code principal ici, il s'exécutera en boucle :
 
     }
 
 
-Comment is very useful in programming, and several common uses are listed below.
+Les commentaires sont très utiles en programmation, et plusieurs usages courants sont listés ci-dessous.
 
-* Usage A: Tell yourself or others what this section of code does.
+* Usage A : Dites-vous ou dites aux autres ce que fait cette section de code.
 
 .. code-block:: C
 
     void setup() {
-        pinMode(13,OUTPUT); //Set pin 13 to output mode, it controls the onboard LED
+        pinMode(13,OUTPUT);  // Réglez le pin 13 en mode sortie, il contrôle la LED embarquée
     }
 
     void loop() {
-        digitalWrite(13,HIGH); // Activate the onboard LED by setting pin 13 high
-        delay(500); // Status quo for 500 ms
-        digitalWrite(13,LOW); // Turn off the onboard LED
-        delay(500);// Status quo for 500 ms
+        digitalWrite(13,HIGH); // Activez la LED embarquée en mettant le pin 13 à HIGH
+        delay(500); // Maintenez l'état pendant 500 ms
+        digitalWrite(13, LOW); // Éteignez la LED embarquée
+        delay(500);// Maintenez l'état pendant 500 ms
     }
 
-* Usage B: Temporarily invalidate some statements (without deleting them) and uncomment them when you need to use them, so you don't have to rewrite them. This is very useful when debugging code and trying to locate program errors.
+* Usage B : Invalidez temporairement certaines instructions (sans les supprimer) et décommentez-les lorsque vous avez besoin de les utiliser, ainsi vous n'avez pas besoin de les réécrire. Ceci est très utile lors du débogage du code et de la tentative de localisation des erreurs du programme.
 
 .. code-block:: C
     :emphasize-lines: 3,4,5,6
 
     void setup() {
         pinMode(13,OUTPUT);
-        // digitalWrite(13,HIGH);
+        // digitalWrite(13, HIGH);
         // delay(1000);
-        // digitalWrite(13,LOW);
+        // digitalWrite(13, LOW);
         // delay(1000);
     }
 
@@ -169,19 +169,19 @@ Comment is very useful in programming, and several common uses are listed below.
     }    
 
 .. note:: 
-    Use the shortcut ``Ctrl+/`` to help you quickly comment or uncomment your code.
+    Utilisez le raccourci ``Ctrl+/`` pour vous aider à commenter ou décommenter rapidement votre code.
 
-Comment ``/**/``
-------------------
+Commentaires ``/**/``
+-----------------------
 
-Same as ``//`` for comments. This type of comment can be more than one line long, and once the compiler reads ``/*``, it ignores anything that follows until it encounters ``*/``.
+Même utilisation que ``//`` pour les commentaires. Ce type de commentaire peut s'étendre sur plusieurs lignes, et une fois que le compilateur lit ``/*``, il ignore tout ce qui suit jusqu'à ce qu'il rencontre ``*/``.
 
-Example 1:
+Exemple 1 :
 
 .. code-block:: C
     :emphasize-lines: 1,8,9,10,11
 
-    /* Blink */
+    /* Clignoter */
 
     void setup() {
         pinMode(13,OUTPUT); 
@@ -189,8 +189,8 @@ Example 1:
 
     void loop() {
         /*
-        The following code will blink the onboard LED
-        You can modify the number in delay() to change the blinking frequency
+        Le code suivant fera clignoter la LED embarquée
+        Vous pouvez modifier le nombre dans delay() pour changer la fréquence de clignotement
         */
         digitalWrite(13,HIGH); 
         delay(500); 
@@ -202,15 +202,15 @@ Example 1:
 ``#define``
 --------------
 
-This is a useful C++ tool.
+C'est un outil utile en C++.
 
 .. code-block:: C
 
     #define identifier token-string
 
-The compiler automatically replaces ``identifier`` with ``token-string`` when it reads it, which is usually used for constant definitions.
+Le compilateur remplace automatiquement ``identifier`` par ``token-string`` lorsqu'il le lit, ce qui est généralement utilisé pour les définitions de constantes.
 
-As an example, here is a sketch that uses define, which improves the readability of the code.
+Par exemple, voici un sketch utilisant define, ce qui améliore la lisibilité du code.
 
 .. code-block:: C
     :emphasize-lines: 1,2
@@ -229,7 +229,7 @@ As an example, here is a sketch that uses define, which improves the readability
         delay(DELAY_TIME);
     }
 
-To the compiler, it actually looks like this.
+Pour le compilateur, il apparaît en fait comme ceci.
 
 .. code-block:: C
 
@@ -244,12 +244,12 @@ To the compiler, it actually looks like this.
         delay(500);
     }
 
-We can see that the ``identifier`` is replaced and does not exist inside the program.
-Therefore, there are several caveats when using it.
+Nous pouvons voir que l'``identifier`` est remplacé et n'existe pas à l'intérieur du programme.
+Par conséquent, il y a plusieurs précautions à prendre lors de son utilisation.
 
-1. A ``token-string`` can only be modified manually and cannot be converted into other values by arithmetic in the program.
+1. Un ``token-string`` ne peut être modifié manuellement et ne peut être converti en d'autres valeurs par des calculs dans le programme.
 
-2. Avoid using symbols such as ``;``. For example.
+2. Évitez d'utiliser des symboles tels que ``;``. Par exemple :
 
 .. code-block:: C
     :emphasize-lines: 1
@@ -264,18 +264,18 @@ Therefore, there are several caveats when using it.
         digitalWrite(ONBOARD_LED,HIGH); 
     }
 
-The compiler will recognize it as the following, which is what will be reported as an error.
+Le compilateur le reconnaîtra comme suit, ce qui sera signalé comme une erreur.
 
 .. code-block:: C
     :emphasize-lines: 2,6
 
     void setup() {
-        pinMode(13;,OUTPUT); 
+        pinMode(13;, OUTPUT); 
     }
 
     void loop() {
-        digitalWrite(13;,HIGH); 
+        digitalWrite(13;, HIGH); 
     }
 
 .. note:: 
-    A naming convention for ``#define`` is to capitalize ``identifier`` to avoid confusion with variables.
+    Une convention de dénomination pour ``#define`` est de mettre l'``identifier`` en majuscules pour éviter toute confusion avec les variables.

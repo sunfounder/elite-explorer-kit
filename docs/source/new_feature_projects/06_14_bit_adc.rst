@@ -1,76 +1,76 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour et bienvenue dans la communauté SunFounder des passionnés de Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez au cœur de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions exclusives** : Profitez de réductions exclusives sur nos produits les plus récents.
+    - **Promotions festives et cadeaux** : Participez à des concours et des promotions festives.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _new_adc:
 
-Analog-to-Digital Converter (ADC) (up to 14bit)
-================================================
+Convertisseur analogique-numérique (ADC) (jusqu'à 14 bits)
+=================================================================
 
-In contemporary electronic projects, accurately reading and processing analog signals is essential. Analog-to-Digital Converters (ADCs) transform analog signals into digital ones for microcontroller handling. The Arduino Uno R4 has seen significant advancements here, owing to its more powerful processor. While the previous generation, the Arduino Uno R3, had a maximum resolution of 10 bits, the ADC resolution of the Arduino Uno R4 is now 14 bits. This improvement allows for more precise values from analog signals, enhancing the refinement and accuracy of data collection and processing.
+Dans les projets électroniques modernes, il est essentiel de lire et de traiter avec précision les signaux analogiques. Les convertisseurs analogique-numérique (ADC) transforment les signaux analogiques en signaux numériques pour être traités par le microcontrôleur. L'Arduino Uno R4 a connu des avancées significatives dans ce domaine, grâce à son processeur plus puissant. Alors que la génération précédente, l'Arduino Uno R3, avait une résolution maximale de 10 bits, la résolution ADC de l'Arduino Uno R4 est désormais de 14 bits. Cette amélioration permet d'obtenir des valeurs plus précises à partir des signaux analogiques, améliorant ainsi la finesse et la précision de la collecte et du traitement des données.
 
-Set ADC resolution
----------------------
+Définir la résolution de l'ADC
+------------------------------------
 
-The standard resolution on the Arduino board is set to 10 bits (0-1023). The UNO R4 WiFi supports up to 14-bit(0-16383) resolution, providing more precise values from analog signals. To update the resolution, you only need to use the ``analogReadResolution()`` command.
+La résolution standard sur la carte Arduino est fixée à 10 bits (0-1023). L'UNO R4 WiFi prend en charge une résolution allant jusqu'à 14 bits (0-16383), fournissant des valeurs plus précises à partir des signaux analogiques. Pour mettre à jour la résolution, il suffit d'utiliser la commande ``analogReadResolution()``.
 
 .. code-block:: arduino
 
    void setup() {
-     // open a serial connection
+     // ouvrir une connexion série
      Serial.begin(9600);
    }
    
    void loop() {
-     // read the input on A0 at default resolution (10 bits)
-     // and send it out the serial connection
+     // lire l'entrée sur A0 à la résolution par défaut (10 bits)
+     // et l'envoyer sur la connexion série
      analogReadResolution(10);
      Serial.print("ADC 10-bit (default) : ");
      Serial.print(analogRead(A0));
    
-     // change the resolution to 12 bits and read A0
+     // changer la résolution à 12 bits et lire A0
      analogReadResolution(12);
      Serial.print(", 12-bit : ");
      Serial.print(analogRead(A0));
    
-     // change the resolution to 14 bits and read A0
+     // changer la résolution à 14 bits et lire A0
      analogReadResolution(14);
      Serial.print(", 16-bit : ");
      Serial.print(analogRead(A0));
    
-     // change the resolution to 8 bits and read A0
+     // changer la résolution à 8 bits et lire A0
      analogReadResolution(8);
      Serial.print(", 8-bit : ");
      Serial.println(analogRead(A0));
    
-     // a little delay to not hog Serial Monitor
+     // un petit délai pour ne pas saturer le moniteur série
      delay(100);
    }
 
 
-Notes and Warnings
----------------------
+Remarques et avertissements
+-----------------------------------
 
-When setting the ADC resolution, consider the following points:
+Lors de la définition de la résolution de l'ADC, prenez en compte les points suivants :
 
-1. **Hardware Capability Limits**: If you set the ``analogReadResolution()`` value higher than the board’s capabilities, the Arduino will only report back at its highest resolution, padding the extra bits with zeros. For example, using the Uno R4 with ``analogReadResolution(16)`` will give an approximated 16-bit number, with the first 14 bits containing the actual ADC reading and the last 2 bits padded with zeros.
+1. **Limites des capacités matérielles** : Si vous définissez la valeur ``analogReadResolution()`` à un niveau supérieur aux capacités de la carte, l'Arduino ne rapportera que sa résolution maximale, en remplissant les bits supplémentaires avec des zéros. Par exemple, utiliser l'Uno R4 avec ``analogReadResolution(16)`` donnera un nombre approximatif de 16 bits, avec les 14 premiers bits contenant la lecture réelle de l'ADC et les 2 derniers bits remplis de zéros.
 
-2. **Lower Resolution Settings**: If you set the ``analogReadResolution()`` value lower than the board’s capabilities, the extra least significant bits read from the ADC will be discarded. This allows you to work with a simplified range if your application does not require full resolution.
+2. **Réglages de résolution inférieure** : Si vous définissez la valeur ``analogReadResolution()`` à un niveau inférieur aux capacités de la carte, les bits de poids faible supplémentaires lus à partir de l'ADC seront supprimés. Cela vous permet de travailler avec une plage simplifiée si votre application ne nécessite pas une résolution complète.
 
-Understanding these considerations will help you effectively utilize the ADC capabilities of the Arduino Uno R4, ensuring optimal performance and accuracy for your specific application.
+Comprendre ces considérations vous aidera à utiliser efficacement les capacités de l'ADC de l'Arduino Uno R4, garantissant des performances optimales et une précision pour votre application spécifique.
 
 
-**Reference**
+**Référence**
 - |link_analogReadResolution|
 - |link_r4_minima_adc|
 - |link_r4_wifi_adc|

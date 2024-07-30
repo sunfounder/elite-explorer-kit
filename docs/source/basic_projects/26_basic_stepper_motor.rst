@@ -1,57 +1,57 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez au cœur des Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-goûts.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos nouveaux produits.
+    - **Promotions festives et cadeaux** : Participez à des cadeaux et des promotions spéciales pendant les fêtes.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _basic_stepper_motor:
 
-Stepper Motor
+Moteur Pas à Pas
 ==========================
 
 .. https://docs.sunfounder.com/projects/r4-basic-kit/en/latest/projects/stepper_motor_uno.html#stepper-uno
 
-Overview
+Aperçu
 ---------------
 
-In this lesson, you will learn about controlling Stepper Motors, specifically the 28BYJ-48 model, using a ULN2003 driver and an Arduino Uno R4. Stepper motors are used in a variety of applications such as 3D printers, CNC machines, robotics, and even in common household appliances. Their precise control allows for intricate movements, making them ideal for projects that require high positional accuracy.
+Dans cette leçon, vous apprendrez à contrôler les moteurs pas à pas, en particulier le modèle 28BYJ-48, en utilisant un pilote ULN2003 et un Arduino Uno R4. Les moteurs pas à pas sont utilisés dans une variété d'applications telles que les imprimantes 3D, les machines CNC, la robotique et même dans les appareils électroménagers courants. Leur contrôle précis permet des mouvements complexes, ce qui les rend idéaux pour des projets nécessitant une haute précision de positionnement.
 
-In this project, we will be configuring the 28BYJ-48 stepper motor to rotate in both clockwise and counter-clockwise directions at different speeds. Stepper motors like these are often used in automated systems to rotate objects or drive mechanisms that require precise control. For example, they can be used in automatic curtains, where the curtains open or close at specific times or under specific conditions. By understanding how to control a stepper motor's rotation and speed, you'll be well on your way to incorporating them into your own electronic projects.
+Dans ce projet, nous allons configurer le moteur pas à pas 28BYJ-48 pour tourner dans les directions horaire et antihoraire à différentes vitesses. Les moteurs pas à pas comme celui-ci sont souvent utilisés dans les systèmes automatisés pour faire tourner des objets ou entraîner des mécanismes nécessitant un contrôle précis. Par exemple, ils peuvent être utilisés dans des rideaux automatiques, où les rideaux s'ouvrent ou se ferment à des moments spécifiques ou sous des conditions spécifiques. En comprenant comment contrôler la rotation et la vitesse d'un moteur pas à pas, vous serez bien préparé à les intégrer dans vos propres projets électroniques.
 
-Required Components
+Composants nécessaires
 -------------------------
 
-In this project, we need the following components. 
+Pour ce projet, nous avons besoin des composants suivants. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est très pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nom	
+        - ARTICLES DANS CE KIT
+        - LIEN
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DU COMPOSANT
+        - LIEN D'ACHAT
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -65,22 +65,22 @@ You can also buy them separately from the links below.
         - \-
 
 
-Wiring
+Câblage
 ----------------------
 
 .. warning::
-    Due to the high power consumption of the stepper motor, it is advisable to use an external 5V power supply instead of relying on the Arduino.
+    En raison de la haute consommation d'énergie du moteur pas à pas, il est conseillé d'utiliser une alimentation externe de 5V au lieu de se fier à l'Arduino.
 
-    Although it is possible to power the stepper motor directly from the Arduino, this is not recommended as it can cause electrical noise on its power supply lines, potentially leading to damage of the Arduino.
+    Bien qu'il soit possible d'alimenter le moteur pas à pas directement à partir de l'Arduino, cela n'est pas recommandé car cela peut provoquer des interférences électriques sur ses lignes d'alimentation, pouvant potentiellement endommager l'Arduino.
 
 .. note::
-    To protect the :ref:`cpn_power`'s battery, please fully charge it before using it for the first time.
+    Pour protéger la batterie du :ref:`cpn_power`, veuillez la charger complètement avant de l'utiliser pour la première fois.
 
 .. image:: img/26-stepper_motor_bb.png
     :align: center
 
 
-Schematic Diagram
+Schéma de câblage
 -----------------------
 
 .. image:: img/26_stepper_motor_schematic.png
@@ -93,72 +93,67 @@ Code
 
 .. note::
 
-    * You can open the file ``26-stepper_motor.ino`` under the path of ``elite-explorer-kit-main\basic_project\26-stepper_motor.rst`` directly.
-    * Or copy this code into Arduino IDE.
+    * Vous pouvez ouvrir le fichier ``26-stepper_motor.ino`` sous le chemin ``elite-explorer-kit-main\basic_project\26-stepper_motor.rst`` directement.
+    * Ou copier ce code dans l'IDE Arduino.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/ce640f07-39a0-418a-9114-901df676ff32/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After uploading the code to the Arduino Uno board, the 28BYJ-48 stepper motor will start to rotate, driven by the ULN2003 driver. Initially, the motor will rotate in a clockwise direction at a speed of 5 RPM (revolutions per minute) for one complete revolution. After completing the clockwise rotation, the motor will pause for 1 second.
+Après avoir téléversé le code sur la carte Arduino Uno, le moteur pas à pas 28BYJ-48 commencera à tourner, entraîné par le pilote ULN2003. Initialement, le moteur tournera dans le sens horaire à une vitesse de 5 RPM (tours par minute) pour une révolution complète. Après avoir terminé la rotation horaire, le moteur s'arrêtera pendant 1 seconde.
 
-Subsequently, the motor will rotate in a counter-clockwise direction at an increased speed of 15 RPM for another complete revolution. Again, the motor will pause for 1 second after the counter-clockwise rotation. The rotation and pause cycle will continue indefinitely as long as the Arduino remains powered. 
+Ensuite, le moteur tournera dans le sens antihoraire à une vitesse augmentée de 15 RPM pour une autre révolution complète. Encore une fois, le moteur s'arrêtera pendant 1 seconde après la rotation antihoraire. Le cycle de rotation et de pause continuera indéfiniment tant que l'Arduino restera alimenté.
 
 
-
-Code Analysis
+Analyse du code
 -----------------
 
-1. **Initialize the stepper**
+1. **Initialisation du moteur pas à pas**
 
    .. code-block:: arduino
    
-       #include <Stepper.h>  // Include the Stepper library
+       #include <Stepper.h>  // Inclure la bibliothèque Stepper
 
-       #define STEPS 2038                   // Define the number of steps per revolution for the motor
-       Stepper stepper(STEPS, 2, 3, 4, 5);  // Initialize stepper object and set pin connections (IN1, IN3, IN2, IN4)
+       #define STEPS 2038                   // Définir le nombre de pas par révolution pour le moteur
+       Stepper stepper(STEPS, 2, 3, 4, 5);  // Initialiser l'objet stepper et définir les connexions de broches (IN1, IN3, IN2, IN4)
 
-   Include a head file ``Stepper.h``, set the steps to 2038 and then initialize the stepper with a function stepper().
+   Inclure un fichier d'en-tête ``Stepper.h``, définir les pas à 2038 et initialiser ensuite le stepper avec une fonction stepper().
 
-   ``STEPS``: The number of steps in one revolution of your motor. For this stepper motor, this value is 2038.
+   ``STEPS``: Le nombre de pas dans une révolution de votre moteur. Pour ce moteur pas à pas, cette valeur est de 2038.
 
-   ``Stepper(steps, pin1, pin2, pin3, pin4)``: This function creates a new instance of the Stepper class that represents a particular stepper motor attached to your Arduino board. The pins pin1, pin2, pin3, and pin4 correspond to the IN1, IN3, IN2, and IN4 pins on the ULN2003 driver.
+   ``Stepper(steps, pin1, pin2, pin3, pin4)``: Cette fonction crée une nouvelle instance de la classe Stepper qui représente un moteur pas à pas particulier connecté à votre carte Arduino. Les broches pin1, pin2, pin3 et pin4 correspondent aux broches IN1, IN3, IN2 et IN4 sur le pilote ULN2003.
    
 
-2. **loop() function**
+2. **Fonction loop()**
 
    .. code-block:: arduino
    
       void loop() {
-        // Rotate clockwise at 5 RPM
+        // Tourner dans le sens horaire à 5 RPM
         stepper.setSpeed(5);
-        stepper.step(STEPS);  // Rotate one full revolution clockwise
-        delay(1000);          // Wait for 1 second
+        stepper.step(STEPS);  // Tourner d'une révolution complète dans le sens horaire
+        delay(1000);          // Attendre 1 seconde
       
-        // Rotate counter-clockwise at 15 RPM
+        // Tourner dans le sens antihoraire à 15 RPM
         stepper.setSpeed(15);
-        stepper.step(-STEPS);  // Rotate one full revolution counter-clockwise
-        delay(1000);           // Wait for 1 second
+        stepper.step(-STEPS);  // Tourner d'une révolution complète dans le sens antihoraire
+        delay(1000);           // Attendre 1 seconde
       }
    
-   The main program rotates the stepper motor continuously, completing one full clockwise circle at 5 RPM and then one full counter-clockwise circle at 15 RPM.
+   Le programme principal fait tourner le moteur pas à pas continuellement, complétant un cercle complet dans le sens horaire à 5 RPM puis un cercle complet dans le sens antihoraire à 15 RPM.
 
 
-   - ``setSpeed(rpms)``: Sets the motor speed in rotations per minute (RPMs). This function doesn't make the motor turn, just sets the speed at which it will when you call step().
+   - ``setSpeed(rpms)``: Définit la vitesse du moteur en rotations par minute (RPM). Cette fonction ne fait pas tourner le moteur, elle définit simplement la vitesse à laquelle il tournera lorsque vous appellerez step().
 
-     - ``rpms``: the speed at which the motor should turn in rotations per minute - a positive number (long)
+     - ``rpms``: la vitesse à laquelle le moteur doit tourner en rotations par minute - un nombre positif (long)
    
    .. raw::html
 
         <br/>
 
    
-   - ``step(steps)``: This function rotates the motor by a specified number of steps, using the speed set in the most recent call to setSpeed(). It is important to note that this function operates in a blocking manner, meaning it will wait until the motor has completed its movement before allowing control to proceed to the next line in your sketch. 
+   - ``step(steps)``: Cette fonction fait tourner le moteur d'un nombre de pas spécifié, en utilisant la vitesse définie dans le dernier appel à setSpeed(). Il est important de noter que cette fonction fonctionne de manière bloquante, ce qui signifie qu'elle attendra que le moteur ait terminé son mouvement avant de permettre au contrôle de passer à la ligne suivante de votre croquis. 
    
-     For instance, if you were to set the speed at 1 RPM and called step(2038) on a motor with 2038 steps, it would take one full minute for this function to execute. To achieve more precise control, it is recommended to maintain a higher speed and only move a few steps with each call to step().
+     Par exemple, si vous définissez la vitesse à 1 RPM et appelez step(2038) sur un moteur avec 2038 pas, il faudra une minute entière pour que cette fonction s'exécute. Pour obtenir un contrôle plus précis, il est recommandé de maintenir une vitesse plus élevée et de ne déplacer que quelques pas à chaque appel à step().
    
-     - ``steps``: the number of steps to turn the motor - positive to turn one direction, negative to turn the other (int).
-
-
-
-
+     - ``steps``: le nombre de pas pour faire tourner le moteur - positif pour tourner dans un sens, négatif pour tourner dans l'autre (int).

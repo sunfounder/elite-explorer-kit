@@ -1,33 +1,35 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions exclusives** : Profitez de réductions exclusives sur nos produits les plus récents.
+    - **Promotions festives et cadeaux** : Participez à des concours et des promotions festives.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
-LESSON 14: Read User Input From the Serial Monitor
-====================================================
+LEÇON 14 : Lire les entrées utilisateur depuis le moniteur série
+===========================================================================
 
-This lesson demonstrates how to create a user-interactive program using the Arduino, focusing on obtaining user input through the serial monitor and performing different operations based on the input. Here’s a brief overview of what you will learn:
+Cette leçon démontre comment créer un programme interactif utilisant l'Arduino, en se concentrant sur l'obtention des entrées utilisateur via le moniteur série et en effectuant différentes opérations en fonction de l'entrée. Voici un bref aperçu de ce que vous allez apprendre :
 
-1. **Introduction to User Input via Serial Monitor** : An introduction to the concept of reading user input from the Arduino serial monitor, which is essential for interactive projects.
-2. **Setting Up Serial Communication**: Detailed instructions on setting up serial communication in the Arduino code, using Serial.begin(9600) to initialize the serial monitor.
-3. **Reading Different Data Types**: Step-by-step guidance on how to read various data types from the user:Integers: Using Serial.parseInt() to read integer values.Floats: Using Serial.parseFloat() to read floating-point numbers.Strings: Using Serial.readString() to read strings.
-4. **Implementing a While Loop for Waiting on User Input**: Explanation of how to implement a while loop to wait for user input, ensuring the program does not proceed until the user has entered the required data.
-5. **Error Handling with Serial Input**: Tips on handling errors related to incorrect data types and ensuring the serial monitor is set to 'No line ending' to prevent additional characters from being read as input.
-6. **Practical Application and Example Code**: An example project where the user is asked for a number, a float, and a string, demonstrating how to capture and use these inputs effectively. The provided code shows how to ask for input, wait for it, and then read and process the input.
-7. **Homework Assignment**: creating a program that asks the user for a brightness level (between 0 and 255) for an LED and then sets the LED brightness accordingly. 
+1. **Introduction à la saisie utilisateur via le moniteur série** : Une introduction au concept de lecture des entrées utilisateur depuis le moniteur série de l'Arduino, essentiel pour les projets interactifs.
+2. **Configuration de la communication série** : Instructions détaillées sur la configuration de la communication série dans le code Arduino, en utilisant Serial.begin(9600) pour initialiser le moniteur série.
+3. **Lecture de différents types de données** : Guide étape par étape sur la façon de lire divers types de données de l'utilisateur :
+   - Entiers : Utilisation de Serial.parseInt() pour lire des valeurs entières.
+   - Flottants : Utilisation de Serial.parseFloat() pour lire des nombres à virgule flottante.
+   - Chaînes : Utilisation de Serial.readString() pour lire des chaînes de caractères.
+4. **Implémentation d'une boucle While pour attendre les entrées utilisateur** : Explication de la façon d'implémenter une boucle while pour attendre les entrées utilisateur, en s'assurant que le programme ne se poursuit pas tant que l'utilisateur n'a pas saisi les données requises.
+5. **Gestion des erreurs avec les entrées série** : Conseils sur la gestion des erreurs liées aux types de données incorrects et sur la configuration du moniteur série en "Pas de fin de ligne" pour éviter que des caractères supplémentaires ne soient lus comme entrée.
+6. **Application pratique et exemple de code** : Un projet exemple où l'utilisateur est invité à entrer un nombre, un flottant et une chaîne de caractères, démontrant comment capturer et utiliser ces entrées efficacement. Le code fourni montre comment demander une entrée, attendre celle-ci, puis lire et traiter l'entrée.
+7. **Devoirs** : Créer un programme qui demande à l'utilisateur un niveau de luminosité (entre 0 et 255) pour une LED et ajuste ensuite la luminosité de la LED en conséquence.
 
-
-**Video**
+**Vidéo**
 
 .. raw:: html
 
-    <iframe width="700" height="500" src="https://www.youtube.com/embed/GpsP5zySI_A?si=o9Q1tTC1X1B9teef" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+       <iframe width="700" height="500" src="https://www.youtube.com/embed/GpsP5zySI_A?si=o9Q1tTC1X1B9teef" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

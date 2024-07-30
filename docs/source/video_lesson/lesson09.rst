@@ -1,31 +1,32 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez-vous dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions exclusives** : Profitez de réductions exclusives sur nos produits les plus récents.
+    - **Promotions festives et cadeaux** : Participez à des concours et des promotions festives.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
-LESSON 9: Using the Serial Port to Print to the Serial Monitor
-================================================================
+LEÇON 9 : Utiliser le port série pour afficher sur le moniteur série
+====================================================================
 
-This lesson focuses on using the serial port to transmit data from the Arduino to the computer's screen, specifically through the serial monitor. Here’s a brief overview of what you will learn:
+Cette leçon se concentre sur l'utilisation du port série pour transmettre des données de l'Arduino à l'écran de l'ordinateur, en particulier via le moniteur série. Voici un bref aperçu de ce que vous allez apprendre :
 
-1. **Introduction to Serial Communication**: Understanding the basics of serial communication between Arduino and your desktop computer.
-2. **Setting up the Arduino Environment**: Configuring the Arduino IDE, selecting the correct board, port, and basic sketch setup to ensure everything is ready for serial communication.
-3. **Developing a Simple Counting Program**: Writing a program that counts numbers and uses the serial port to display these numbers on the computer screen.
-4. **Enhancing Program Functionality**: Incorporating various data types and string manipulations to format and present data effectively on the serial monitor.
-5. **Homework Assignment**: Applying the concepts learned by modifying an LED blink program to include serial communication, reinforcing the lesson through practical application.
+1. **Introduction à la communication série** : Comprendre les bases de la communication série entre l'Arduino et votre ordinateur de bureau.
+2. **Configuration de l'environnement Arduino** : Configurer l'IDE Arduino, sélectionner la carte correcte, le port et la configuration de base du sketch pour garantir que tout est prêt pour la communication série.
+3. **Développement d'un programme de comptage simple** : Écrire un programme qui compte des nombres et utilise le port série pour afficher ces nombres sur l'écran de l'ordinateur.
+4. **Amélioration de la fonctionnalité du programme** : Intégrer différents types de données et des manipulations de chaînes pour formater et présenter efficacement les données sur le moniteur série.
+5. **Devoirs** : Appliquer les concepts appris en modifiant un programme de clignotement de LED pour inclure la communication série, renforçant ainsi la leçon par une application pratique.
 
 
-**Video**
+**Vidéo**
 
 .. raw:: html
 
-    <iframe width="700" height="500" src="https://www.youtube.com/embed/4N-Q28lTzqE?si=o9Q1tTC1X1B9teef" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="700" height="500" src="https://www.youtube.com/embed/4N-Q28lTzqE?si=o9Q1tTC1X1B9teef" title="Lecteur vidéo YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+

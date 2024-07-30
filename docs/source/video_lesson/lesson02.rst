@@ -1,61 +1,59 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté des passionnés de SunFounder Raspberry Pi, Arduino et ESP32 sur Facebook ! Plongez-vous dans l'univers de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre et partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-premières.
+    - **Réductions exclusives** : Profitez de réductions exclusives sur nos produits les plus récents.
+    - **Promotions festives et cadeaux** : Participez à des concours et des promotions festives.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
-LESSON 2: How to Build Circuits With a Breadboard
-===================================================
+LEÇON 2 : Comment Construire des Circuits avec une Plaque d'Essai
+=============================================================================
 
-This lesson is delivered by Paul Mcarter. It's designed to enhance your skills in creating and understanding electronic circuits using a breadboard. Here’s what you will learn:
+Cette leçon est animée par Paul Mcarter. Elle est conçue pour améliorer vos compétences dans la création et la compréhension des circuits électroniques à l'aide d'une plaque d'essai. Voici ce que vous apprendrez :
 
-1. **Understanding the Circuit Design**: How to visualize and plan your circuit with a schematic representation, ensuring correct assembly and functionality.
-2. **Building the Circuit**: Step-by-step guidance on constructing a circuit to blink an external LED using pin 13 of the Arduino.
-3. **Implementing the Resistor**: The importance of using a resistor to limit current in your circuit, including how to select the correct resistor value using Ohm’s Law.
-4. **Configuring the Breadboard**: Detailed explanation of how a breadboard functions, including how to use it to connect components effectively.
-5. **Coding for Control**: Instructions on programming the Arduino to control the blinking pattern of the LED to signal SOS in Morse code.
-6. **Homework Assignment**: Your task is to complete the circuit setup, write the program for the SOS signal, and share your project on YouTube as a practical demonstration of your learning.
+1. **Comprendre la conception du circuit** : Comment visualiser et planifier votre circuit avec une représentation schématique, en garantissant un assemblage et une fonctionnalité corrects.
+2. **Construire le circuit** : Guide étape par étape pour construire un circuit permettant de faire clignoter une LED externe en utilisant la broche 13 de l'Arduino.
+3. **Utilisation de la résistance** : L'importance de l'utilisation d'une résistance pour limiter le courant dans votre circuit, y compris comment sélectionner la valeur correcte de la résistance en utilisant la loi d'Ohm.
+4. **Configurer la plaque d'essai** : Explication détaillée du fonctionnement d'une plaque d'essai, y compris comment l'utiliser pour connecter efficacement les composants.
+5. **Programmer le contrôle** : Instructions pour programmer l'Arduino afin de contrôler le motif de clignotement de la LED pour signaler SOS en code Morse.
+6. **Devoir à la maison** : Votre tâche consiste à compléter la configuration du circuit, à écrire le programme pour le signal SOS et à partager votre projet sur YouTube comme démonstration pratique de votre apprentissage.
 
 
-
-**Video**
+**Vidéo**
 
 .. raw:: html
 
-    <iframe width="700" height="500" src="https://www.youtube.com/embed/S1NJJRpWHpA?si=o9Q1tTC1X1B9teef" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="700" height="500" src="https://www.youtube.com/embed/S1NJJRpWHpA?si=o9Q1tTC1X1B9teef" title="Lecteur vidéo YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
     <br/><br/>
 
+**LEÇON SUPPLÉMENTAIRE**
 
+Cette leçon est un tutoriel supplémentaire traitant des confusions courantes d'une leçon précédente. Voici un aperçu concis :
 
-**SUPPLEMENTAL Lesson**
-
-This lesson is a supplemental tutorial addressing common confusions from a previous lesson. Here's a concise overview:
-
-1. **Clarification Purpose**: This video responds to viewer confusion regarding the selection of a current limiting resistor for an LED in an Arduino project, ensuring no component damage upon activation.
+1. **Objectif de clarification** : Cette vidéo répond aux confusions des spectateurs concernant le choix d'une résistance de limitation de courant pour une LED dans un projet Arduino, en veillant à ce qu'aucun composant ne soit endommagé lors de l'activation.
    
-2. **Basic Concepts and Corrections**: It reiterates the correct process shown in the original lesson but delves deeper to help viewers fully understand the calculations and avoid common mistakes.
+2. **Concepts de base et corrections** : Elle réitère le processus correct montré dans la leçon originale mais approfondit pour aider les spectateurs à comprendre pleinement les calculs et éviter les erreurs courantes.
    
-3. **Detailed Explanation on Resistor Calculation**: The tutorial provides an in-depth explanation of calculating the resistor value needed to safely operate an LED without exceeding the current limitations of Arduino Uno R4's digital pins.
+3. **Explication détaillée du calcul de la résistance** : Le tutoriel fournit une explication approfondie du calcul de la valeur de la résistance nécessaire pour faire fonctionner une LED en toute sécurité sans dépasser les limites de courant des broches numériques de l'Arduino Uno R4.
    
-4. **Circuit Analysis and Design Strategy**: It discusses circuit design considerations to prevent potential damage due to current overload, explaining the voltage drop across the diode and resistor and how these affect the total current through the circuit.
+4. **Analyse du circuit et stratégie de conception** : Il aborde les considérations de conception du circuit pour éviter les dommages potentiels dus à une surcharge de courant, expliquant la chute de tension à travers la diode et la résistance et comment ces éléments affectent le courant total dans le circuit.
    
-5. **Practical Circuit Design Tips**: The video covers how to design circuits that account for worst-case scenarios, ensuring the Arduino remains protected under all conditions.
+5. **Conseils pratiques pour la conception de circuits** : La vidéo couvre comment concevoir des circuits qui tiennent compte des scénarios les plus défavorables, garantissant que l'Arduino reste protégé en toutes circonstances.
    
-6. **Feedback and Interactive Approach**: The presenter seeks viewer feedback on the utility of supplemental lessons, indicating a responsive and adaptive teaching approach.
+6. **Retour d'information et approche interactive** : Le présentateur sollicite les retours des spectateurs sur l'utilité des leçons supplémentaires, indiquant une approche pédagogique réactive et adaptative.
 
-This lesson equips beginners with the knowledge to design safer and more effective Arduino projects, emphasizing critical thinking in electronic design.
+Cette leçon dote les débutants des connaissances nécessaires pour concevoir des projets Arduino plus sûrs et plus efficaces, en mettant l'accent sur la pensée critique dans la conception électronique.
 
-**Video**
+**Vidéo**
 
 .. raw:: html
 
-    <iframe width="700" height="500" src="https://www.youtube.com/embed/_kpiHFGB_ys?si=KpZfDEI0EazFt-4g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe width="700" height="500" src="https://www.youtube.com/embed/_kpiHFGB_ys?si=KpZfDEI0EazFt-4g" title="Lecteur vidéo YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+

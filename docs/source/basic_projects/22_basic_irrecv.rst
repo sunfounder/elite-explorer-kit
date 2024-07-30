@@ -1,20 +1,20 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour et bienvenue dans la communauté SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts sur Facebook ! Plongez plus profondément dans Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques avec l'aide de notre communauté et de notre équipe.
+    - **Apprendre & Partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux aperçus.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos nouveaux produits.
+    - **Promotions festives et cadeaux** : Participez à des cadeaux et à des promotions de fêtes.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _basic_irrecv:
 
-Infrared Receiver
+Récepteur Infrarouge
 ==========================
 
 .. https://docs.sunfounder.com/projects/uno-mega-kit/en/latest/uno/infrared_Receiver_uno.html#receive-uno
@@ -22,37 +22,37 @@ Infrared Receiver
 .. https://docs.sunfounder.com/projects/r4-basic-kit/en/latest/projects/infrared_Receiver_uno.html#receive-uno
 
 
-Overview
+Aperçu
 ------------------
 
-An infrared-receiver is a component that receives infrared signals and can independently receive infrared ray and output signals compatible with TTL level. It's similar with a normal plastic-packaged transistor in size and it is suitable for all kinds of infrared remote control and infrared transmission.
+Un récepteur infrarouge est un composant qui reçoit des signaux infrarouges et peut indépendamment recevoir des rayons infrarouges et produire des signaux compatibles avec le niveau TTL. Il est de taille similaire à un transistor encapsulé dans du plastique et convient à tous les types de télécommandes infrarouges et de transmissions infrarouges.
 
-Required Components
+Composants nécessaires
 -------------------------
 
-In this project, we need the following components. 
+Pour ce projet, nous avons besoin des composants suivants.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est certainement pratique d'acheter un kit complet, voici le lien :
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nom	
+        - ARTICLES DANS CE KIT
+        - LIEN
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément via les liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -66,7 +66,7 @@ You can also buy them separately from the links below.
         - |link_receiver_buy|
 
 
-Wiring
+Câblage
 ----------------------
 
 .. image:: img/22-ir_receiver_bb.png
@@ -74,7 +74,7 @@ Wiring
     :width: 80%
 
 
-Schematic Diagram
+Schéma de câblage
 ---------------------
 
 .. image:: img/22_irrecv_schematic.png
@@ -86,70 +86,68 @@ Code
 
 .. note::
 
-    * You can open the file ``22-ir_receiver.ino`` under the path of ``elite-explorer-kit-main\basic_project\22-ir_receiver`` directly.
-    * Or copy this code into Arduino IDE.
+    * Vous pouvez ouvrir le fichier ``22-ir_receiver.ino`` sous le chemin ``elite-explorer-kit-main\basic_project\22-ir_receiver`` directement.
+    * Ou copiez ce code dans l'IDE Arduino.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/92e1cb75-cda1-4fc7-9680-28e28df8dccc/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-* The ``IRremote`` library is used here, you can install it from the **Library Manager**.
+* La bibliothèque ``IRremote`` est utilisée ici, vous pouvez l'installer depuis le **Gestionnaire de Bibliothèques**.
 
     .. image:: img/22_irrecv_lib.png
         :align: center
 
-.. Note::
+.. note::
 
-    * There is a transparent plastic piece at the back of the remote control to cut off the power and pull it out before you use the remote control.
+    * Il y a une pièce en plastique transparent à l'arrière de la télécommande pour couper l'alimentation, retirez-la avant d'utiliser la télécommande.
 
-
-Code Analysis
+Analyse du code
 ---------------------
 
-This code is designed to work with an infrared (IR) remote control using the ``IRremote`` library. Here's the breakdown:
+Ce code est conçu pour fonctionner avec une télécommande infrarouge (IR) en utilisant la bibliothèque ``IRremote``. Voici le détail :
 
-#. Including the library and defining constants. First, the IRremote library is included, and the pin number for the IR receiver is defined as 2.
+#. Inclusion de la bibliothèque et définition des constantes. Tout d'abord, la bibliothèque IRremote est incluse et le numéro de broche pour le récepteur IR est défini comme étant 2.
 
    .. code-block:: cpp
  
      #include <IRremote.h>
      const int IR_RECEIVE_PIN = 2;
 
-
-#. Initializes serial communication at a baud rate of 9600. Initializes the IR receiver on the specified pin (``IR_RECEIVE_PIN``) and enables LED feedback (if applicable).
+#. Initialisation de la communication série à un débit de 9600 bauds. Initialisation du récepteur IR sur la broche spécifiée (``IR_RECEIVE_PIN``) et activation du retour d'information LED (si applicable).
 
    .. code-block:: arduino
 
        void setup() {
-           Serial.begin(9600);                                     // Start serial communication at 9600 baud rate
-           IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK);  // Start the IR receiver
+           Serial.begin(9600);                                     // Démarrer la communication série à 9600 bauds
+           IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK);  // Démarrer le récepteur IR
        }
 
-#. The loop runs continuously to process incoming IR remote signals.
+#. La boucle s'exécute en continu pour traiter les signaux entrants de la télécommande IR.
 
    .. code-block:: arduino
 
       void loop() {
-        // Check if there is any incoming IR signal
+        // Vérifie s'il y a un signal IR entrant
         if (IrReceiver.decode()) {
-          // IrReceiver.printIRResultShort(&Serial);                 // Print the received data in one line
-          // Serial.println(IrReceiver.decodedIRData.command, HEX);  // Print the command in hexadecimal format
-          Serial.println(decodeKeyValue(IrReceiver.decodedIRData.command));  // Map and print the decoded IR signal to corresponding key value
+          // IrReceiver.printIRResultShort(&Serial);                 // Imprimer les données reçues en une ligne
+          // Serial.println(IrReceiver.decodedIRData.command, HEX);  // Imprimer la commande en format hexadécimal
+          Serial.println(decodeKeyValue(IrReceiver.decodedIRData.command));  // Mapper et imprimer le signal IR décodé à la valeur de la touche correspondante
       
-          IrReceiver.resume();  // Enable receiving of the next value
+          IrReceiver.resume();  // Activer la réception de la prochaine valeur
         }
       }
-   
-   * Checks if an IR signal is received and successfully decoded.
-   * Decodes the IR command and stores it in ``decodedValue`` using a custom ``decodeKeyValue()`` function.
-   * Prints the decoded IR value to the serial monitor.
-   * Resumes IR signal reception for the next signal.
+
+   * Vérifie si un signal IR est reçu et décodé avec succès.
+   * Décode la commande IR et la stocke dans ``decodedValue`` en utilisant une fonction personnalisée ``decodeKeyValue()``.
+   * Imprime la valeur IR décodée sur le moniteur série.
+   * Reprend la réception des signaux IR pour le signal suivant.
 
    .. raw:: html
 
         <br/>
 
-#. Helper function to map received IR signals to corresponding keys
+#. Fonction auxiliaire pour mapper les signaux IR reçus aux touches correspondantes
 
    .. image:: img/22_irrecv_key.png
       :align: center
@@ -157,9 +155,9 @@ This code is designed to work with an infrared (IR) remote control using the ``I
 
    .. code-block:: arduino
 
-      // Function to map received IR signals to corresponding keys
+      // Fonction pour mapper les signaux IR reçus aux touches correspondantes
       String decodeKeyValue(long result) {
-        // Each case corresponds to a specific IR command
+        // Chaque case correspond à une commande IR spécifique
         switch (result) {
           case 0x16:
             return "0";

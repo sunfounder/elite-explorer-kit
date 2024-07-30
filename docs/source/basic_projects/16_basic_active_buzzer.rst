@@ -1,62 +1,62 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Bonjour, bienvenue dans la communauté SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts sur Facebook ! Plongez au cœur de Raspberry Pi, Arduino et ESP32 avec d'autres passionnés.
 
-    **Why Join?**
+    **Pourquoi nous rejoindre ?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Support d'experts** : Résolvez les problèmes après-vente et les défis techniques grâce à l'aide de notre communauté et de notre équipe.
+    - **Apprendre & Partager** : Échangez des astuces et des tutoriels pour améliorer vos compétences.
+    - **Aperçus exclusifs** : Accédez en avant-première aux annonces de nouveaux produits et aux avant-goûts.
+    - **Réductions spéciales** : Profitez de réductions exclusives sur nos nouveaux produits.
+    - **Promotions festives et tirages au sort** : Participez à des tirages au sort et des promotions de vacances.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
 .. _basic_active_buzzer:
 
-Active Buzzer
+Buzzer Actif
 ==========================
 
 .. https://docs.sunfounder.com/projects/3in1-kit-r4/en/latest/basic_project/ar_active_buzzer.html#ar-beep
 
-Overview
----------------
+Vue d'ensemble
+-------------------
 
-The active buzzer is a typical digital output device that is as easy to use as lighting up an LED!
+Le buzzer actif est un dispositif de sortie numérique typique aussi facile à utiliser qu'une LED !
 
-Two types of buzzers are included in the kit. 
-We need to use active buzzer. Turn them around, the sealed back (not the exposed PCB) is the one we want.
+Deux types de buzzers sont inclus dans le kit.
+Nous devons utiliser le buzzer actif. Retournez-les, le dos scellé (pas le PCB exposé) est celui que nous voulons.
 
 .. image:: img/16_buzzer.png
     :align: center
     :width: 70%
 
-Required Components
--------------------------
+Composants requis
+----------------------------
 
-In this project, we need the following components. 
+Pour ce projet, nous avons besoin des composants suivants. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Il est certainement pratique d'acheter un kit complet, voici le lien : 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nom	
+        - ARTICLES DANS CE KIT
+        - LIEN
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Vous pouvez également les acheter séparément à partir des liens ci-dessous.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCTION DES COMPOSANTS
+        - LIEN D'ACHAT
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -71,17 +71,17 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_buzzer`
         - \-
 
-Wiring
+Câblage
 ----------------------
 
 .. note::
-    When connecting the buzzer, make sure to check its pins. The longer pin is the anode and the shorter one is the cathode. It's important not to mix them up, as doing so will prevent the buzzer from producing any sound.
+    Lors de la connexion du buzzer, assurez-vous de vérifier ses broches. La broche la plus longue est l'anode et la plus courte est la cathode. Il est important de ne pas les mélanger, car cela empêcherait le buzzer de produire du son.
 
 .. image:: img/16-active_buzzer_bb.png
     :align: center
     :width: 70%
 
-Schematic Diagram
+Schéma de câblage
 -----------------------
 
 .. image:: img/16_active_buzzer_schematic.png
@@ -93,11 +93,11 @@ Code
 
 .. note::
 
-    * You can open the file ``16-active_buzzer.ino`` under the path of ``elite-explorer-kit-main\basic_project\16-active_buzzer`` directly.
-    * Or copy this code into Arduino IDE.
+    * Vous pouvez ouvrir le fichier ``16-active_buzzer.ino`` sous le chemin ``elite-explorer-kit-main\basic_project\16-active_buzzer`` directement.
+    * Ou copiez ce code dans Arduino IDE.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/bde4fd5c-8848-49cd-898f-8a824c836b80/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After the code is uploaded successfully, you will hear a beep every second.
+Après avoir téléversé le code avec succès, vous entendrez un bip toutes les secondes.

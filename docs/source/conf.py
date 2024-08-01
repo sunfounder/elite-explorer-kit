@@ -113,6 +113,15 @@ rst_epilog = """
 
     <a href="https://docs.sunfounder.com/projects/elite-explorer-kit/en/latest/" target="_blank">English Online-tutorials</a>
 
+.. |link_fr_tutorials| raw:: html
+
+    <a href="https://docs.sunfounder.com/projects/elite-explorer-kit/en/latest/" target="_blank">Tutoriels en ligne en français</a>
+
+.. |link_es_tutorials| raw:: html
+
+    <a href="https://docs.sunfounder.com/projects/elite-explorer-kit/es/latest/" target="_blank">Tutoriels en ligne en français</a>
+
+
 
     
 

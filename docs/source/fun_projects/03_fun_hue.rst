@@ -1,21 +1,21 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    ¡Hola! ¡Bienvenido a la comunidad de entusiastas de SunFounder Raspberry Pi & Arduino & ESP32 en Facebook! Sumérgete en el mundo de Raspberry Pi, Arduino y ESP32 junto a otros apasionados.
 
-    **Why Join?**
+    **¿Por qué unirse?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Soporte de expertos**: Resuelve problemas postventa y desafíos técnicos con la ayuda de nuestra comunidad y equipo.
+    - **Aprender y compartir**: Intercambia consejos y tutoriales para mejorar tus habilidades.
+    - **Avances exclusivos**: Accede anticipadamente a anuncios de nuevos productos y adelantos exclusivos.
+    - **Descuentos especiales**: Disfruta de descuentos exclusivos en nuestros productos más recientes.
+    - **Promociones festivas y sorteos**: Participa en sorteos y promociones de temporada.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 ¿Listo para explorar y crear con nosotros? Haz clic en [|link_sf_facebook|] y únete hoy mismo!
 
 .. _fun_hue:
 
 HueDial
-========================================
+=========
 
 .. raw:: html
 
@@ -24,34 +24,33 @@ HueDial
       Your browser does not support the video tag.
    </video>
 
-This example controls the color of an RGB LED based on the position of a rotary knob. 
-Different positions of the knob correspond to different HUE values, which are then translated into RGB color values, resulting in a color change for the RGB LED.
+Este ejemplo controla el color de un LED RGB basado en la posición de un mando giratorio. Diferentes posiciones del mando corresponden a diferentes valores de HUE, que luego se traducen en valores de color RGB, resultando en un cambio de color para el LED RGB.
 
-**Required Components**
+**Componentes necesarios**
 
-In this project, we need the following components. 
+En este proyecto, necesitamos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nombre
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado desde los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DEL COMPONENTE
+        - ENLACE DE COMPRA
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -66,7 +65,7 @@ You can also buy them separately from the links below.
     *   - :ref:`potentiometer`
         - |link_potentiometer_buy|
 
-**Wiring**
+**Cableado**
 
 .. image:: img/03_hue_dial_bb.png
     :width: 70%
@@ -76,52 +75,53 @@ You can also buy them separately from the links below.
 
    <br/>
 
-**Schematic**
+**Esquema**
 
 .. image:: img/03_hue_schematic.png
    :width: 80%
    :align: center
 
 
-**Code**
+**Código**
 
 .. note::
 
-    * You can open the file ``03_huedial.ino`` under the path of ``elite-explorer-kit-main\fun_project\03_huedial`` directly.
-    * Or copy this code into Arduino IDE.
+    * Puedes abrir el archivo ``03_huedial.ino`` bajo la ruta ``elite-explorer-kit-main\fun_project\03_huedial`` directamente.
+    * O copia este código en Arduino IDE.
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/0ad800d4-77bb-454f-8976-a078da71ec35/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-**How it works?**
+**¿Cómo funciona?**
 
-Here's a detailed explanation of the code:
+Aquí hay una explicación detallada del código:
 
-1. Global Variable Definitions:
+1. Definiciones de Variables Globales:
 
-   ``redPin``, ``greenPin``, and ``bluePin``: These define the PWM pins connected to the red, green, and blue LEDs, respectively.
-   ``KNOB_PIN``: Defines the analog input pin connected to the rotary knob.
+   ``redPin``, ``greenPin`` y ``bluePin``: Estos definen los pines PWM conectados a los LEDs rojo, verde y azul, respectivamente.
+   ``KNOB_PIN``: Define el pin de entrada analógica conectado al mando giratorio.
 
 2. ``setup()``:
 
-   Set the pins for the RGB LED as output.
-   By default, analog pins are set as inputs, so there's no need to set the input mode for the knob's pin.
+   Configura los pines para el LED RGB como salida.
+   Por defecto, los pines analógicos están configurados como entradas, por lo que no es necesario configurar el modo de entrada para el pin del mando.
 
 3. ``loop()``:
 
-   Read the value of the rotary knob. This value ranges from 0 to 1023.
-   Normalize the knob's value to a range of 0-1.
-   Convert the normalized value to a HUE value ranging from 0-360.
-   Convert the HUE value to RGB values.
-   Update the LED's color using these RGB values.
+   Lee el valor del mando giratorio. Este valor varía de 0 a 1023.
+   Normaliza el valor del mando a un rango de 0-1.
+   Convierte el valor normalizado a un valor de HUE que va de 0 a 360.
+   Convierte el valor de HUE a valores RGB.
+   Actualiza el color del LED usando estos valores RGB.
 
 4. ``setColor()``:
 
-   Set the appropriate PWM values for each LED pin using the ``analogWrite()`` function to set the color of the RGB LED.
+   Establece los valores PWM apropiados para cada pin del LED usando la función ``analogWrite()`` para configurar el color del LED RGB.
 
 5. ``HUEtoRGB()``:
 
-   This function converts HUE values to RGB values using the HSL to RGB conversion method but focuses only on the HUE component, keeping saturation and brightness at 100%.
-   The algorithm is divided into 6 stages, each covering 60 degrees.
-   It calculates RGB values for each HUE stage and then scales these values to a range of 0-255, which is the expected range for the ``analogWrite()`` function.
+   Esta función convierte valores de HUE a valores RGB usando el método de conversión de HSL a RGB pero se enfoca solo en el componente HUE, manteniendo la saturación y el brillo al 100%.
+   El algoritmo se divide en 6 etapas, cada una cubriendo 60 grados.
+   Calcula valores RGB para cada etapa de HUE y luego escala estos valores a un rango de 0-255, que es el rango esperado para la función ``analogWrite()``.
+

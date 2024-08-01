@@ -1,31 +1,31 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Hola, ¡bienvenido a la Comunidad de Entusiastas de SunFounder para Raspberry Pi, Arduino y ESP32 en Facebook! Sumérgete en el mundo de Raspberry Pi, Arduino y ESP32 junto a otros entusiastas.
 
-    **Why Join?**
+    **¿Por qué unirse?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Soporte experto**: Resuelve problemas postventa y desafíos técnicos con la ayuda de nuestra comunidad y equipo.
+    - **Aprende y comparte**: Intercambia consejos y tutoriales para mejorar tus habilidades.
+    - **Avances exclusivos**: Obtén acceso anticipado a anuncios de nuevos productos y adelantos exclusivos.
+    - **Descuentos especiales**: Disfruta de descuentos exclusivos en nuestros productos más recientes.
+    - **Promociones y sorteos festivos**: Participa en sorteos y promociones festivas.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 ¿Listo para explorar y crear con nosotros? Haz clic en [|link_sf_facebook|] y únete hoy mismo.
 
-LESSON 10: Writing Analog Voltages With the Arduino
-=====================================================
+LECCIÓN 10: Escribiendo Voltajes Analógicos con el Arduino
+================================================================
 
-This lesson teaches how to control the brightness of an LED by writing analog voltages using the Arduino. Here’s a brief overview of what you will learn:
+Esta lección enseña cómo controlar el brillo de un LED escribiendo voltajes analógicos usando el Arduino. Aquí tienes un breve resumen de lo que aprenderás:
 
-1. **Introduction to Analog Output**: Understand the basics of analog outputs compared to digital, learning why and how they allow for varying levels of power output rather than just on/off states.
-2. **Setting up the Arduino**: Review how to set up the Arduino IDE and configure the board for analog output, specifically focusing on using PWM pins.
-3. **Building the Circuit**: Instructions on constructing a circuit with an LED and resistor, emphasizing the importance of connecting to PWM-capable pins for analog functionality.
-4. **Programming for Variable Brightness**: Writing code to adjust the LED's brightness using the `analogWrite()` function, demonstrating the effect of different values on LED brightness.
-5. **Homework Assignment**: Develop a program that incrementally changes the LED's brightness from dimmest to brightest and then back to dimmest, reinforcing the lesson's concepts through a dynamic display.
-
+1. **Introducción a la salida analógica**: Entender los conceptos básicos de las salidas analógicas en comparación con las digitales, aprendiendo por qué y cómo permiten niveles variables de salida de potencia en lugar de solo estados de encendido/apagado.
+2. **Configuración del Arduino**: Repasar cómo configurar el IDE de Arduino y configurar la placa para salida analógica, enfocándose específicamente en el uso de pines PWM.
+3. **Construcción del circuito**: Instrucciones para construir un circuito con un LED y una resistencia, enfatizando la importancia de conectarse a pines compatibles con PWM para la funcionalidad analógica.
+4. **Programación para brillo variable**: Escribir código para ajustar el brillo del LED usando la función `analogWrite()`, demostrando el efecto de diferentes valores en el brillo del LED.
+5. **Tarea**: Desarrollar un programa que cambie incrementalmente el brillo del LED desde el más tenue hasta el más brillante y luego de vuelta al más tenue, reforzando los conceptos de la lección a través de una demostración dinámica.
 
 **Video**
 
 .. raw:: html
 
-    <iframe width="700" height="500" src="https://www.youtube.com/embed/lTzOvBYNo3U?si=o9Q1tTC1X1B9teef" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="700" height="500" src="https://www.youtube.com/embed/lTzOvBYNo3U?si=o9Q1tTC1X1B9teef" title="Reproductor de video de YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+

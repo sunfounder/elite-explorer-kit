@@ -1,31 +1,32 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Hola, ¡bienvenido a la Comunidad de Entusiastas de SunFounder para Raspberry Pi, Arduino y ESP32 en Facebook! Sumérgete en el mundo de Raspberry Pi, Arduino y ESP32 junto a otros entusiastas.
 
-    **Why Join?**
+    **¿Por qué unirse?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Soporte experto**: Resuelve problemas postventa y desafíos técnicos con la ayuda de nuestra comunidad y equipo.
+    - **Aprende y comparte**: Intercambia consejos y tutoriales para mejorar tus habilidades.
+    - **Avances exclusivos**: Obtén acceso anticipado a anuncios de nuevos productos y adelantos exclusivos.
+    - **Descuentos especiales**: Disfruta de descuentos exclusivos en nuestros productos más recientes.
+    - **Promociones y sorteos festivos**: Participa en sorteos y promociones festivas.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 ¿Listo para explorar y crear con nosotros? Haz clic en [|link_sf_facebook|] y únete hoy mismo.
 
-LESSON 13: Dimmable LED Controlled by a Potentiometer
-=======================================================
+LECCIÓN 13: LED Regulable Controlado por un Potenciómetro
+===============================================================
 
-This lesson demonstrates how to create a dimmable LED controlled by a potentiometer using an Arduino, building on previous lessons on reading analog values and controlling output through PWM. Here’s a brief overview of what you will learn:
+Esta lección demuestra cómo crear un LED regulable controlado por un potenciómetro utilizando un Arduino, basándose en lecciones anteriores sobre lectura de valores analógicos y control de salida a través de PWM. Aquí tienes un breve resumen de lo que aprenderás:
 
-1. **Reviewing Previous Homework**: Recapping the assignment from Lesson 12, which involved using a potentiometer to control the brightness of an LED.
-2. **Setting Up the Circuit**: Detailed instructions on how to correctly connect a potentiometer and an LED to the Arduino, ensuring that each component is properly configured for the experiment.
-3. **Writing the Code**: Step-by-step coding instructions to read the analog value from the potentiometer and use it to adjust the LED’s brightness through PWM. This includes mathematical calculations to translate the potentiometer's variable resistance into a voltage value that the Arduino can use to control the LED.
-4. **Debugging Tips**: Guidance on troubleshooting common issues such as incorrect readings from the potentiometer or errors in the PWM output that affects the LED brightness.
-5. **Homework Assignment**: Extending the lesson’s project by experimenting with different mappings of potentiometer readings to LED brightness to understand linear versus exponential scaling and its perceptual impacts on LED dimming.
+1. **Revisión de la Tarea Anterior**: Recapitulación de la asignación de la Lección 12, que consistía en usar un potenciómetro para controlar el brillo de un LED.
+2. **Configuración del Circuito**: Instrucciones detalladas sobre cómo conectar correctamente un potenciómetro y un LED al Arduino, asegurándose de que cada componente esté configurado adecuadamente para el experimento.
+3. **Escritura del Código**: Instrucciones paso a paso para leer el valor analógico del potenciómetro y usarlo para ajustar el brillo del LED a través de PWM. Esto incluye cálculos matemáticos para traducir la resistencia variable del potenciómetro en un valor de voltaje que el Arduino puede usar para controlar el LED.
+4. **Consejos de Depuración**: Orientación sobre cómo solucionar problemas comunes, como lecturas incorrectas del potenciómetro o errores en la salida PWM que afectan el brillo del LED.
+5. **Tarea**: Ampliar el proyecto de la lección experimentando con diferentes mapeos de lecturas del potenciómetro al brillo del LED para entender la escala lineal versus exponencial y sus impactos perceptuales en la atenuación del LED.
 
 
 **Video**
 
 .. raw:: html
 
-    <iframe width="700" height="500" src="https://www.youtube.com/embed/PXf51k0alGU?si=o9Q1tTC1X1B9teef" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="700" height="500" src="https://www.youtube.com/embed/PXf51k0alGU?si=o9Q1tTC1X1B9teef" title="Reproductor de video de YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+

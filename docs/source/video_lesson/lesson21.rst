@@ -1,31 +1,33 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Hola, ¡bienvenido a la Comunidad de Entusiastas de SunFounder para Raspberry Pi, Arduino y ESP32 en Facebook! Sumérgete en el mundo de Raspberry Pi, Arduino y ESP32 junto a otros entusiastas.
 
-    **Why Join?**
+    **¿Por qué unirse?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Soporte experto**: Resuelve problemas postventa y desafíos técnicos con la ayuda de nuestra comunidad y equipo.
+    - **Aprende y comparte**: Intercambia consejos y tutoriales para mejorar tus habilidades.
+    - **Avances exclusivos**: Obtén acceso anticipado a anuncios de nuevos productos y adelantos exclusivos.
+    - **Descuentos especiales**: Disfruta de descuentos exclusivos en nuestros productos más recientes.
+    - **Promociones y sorteos festivos**: Participa en sorteos y promociones festivas.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 ¿Listo para explorar y crear con nosotros? Haz clic en [|link_sf_facebook|] y únete hoy mismo.
 
-LESSON 21: Understanding While Loops
-======================================
-This lesson demonstrates how to use while loops in Arduino to create a user-controlled RGB LED blinking system based on input through the serial monitor. Here’s a brief overview of what you will learn:
+LECCIÓN 21: Comprendiendo los Bucles While
+================================================
 
-1. **Reviewing Previous Homework**: Recapping the assignment from Lesson 20, which involved blinking an RGB LED in a red-green-blue sequence a user-specified number of times using a while loop instead of a for loop.
-2. **Setting Up the Circuit**: Detailed instructions on how to correctly connect an RGB LED and its current-limiting resistors to the Arduino. Each color channel (red, green, blue) is connected to a PWM digital pin (pins 9, 10, and 11), and the common cathode (long leg) is connected to ground.
-3. **Writing the Code**: Step-by-step coding instructions to:Define the pins for each color channel of the RGB LED.Set up the serial monitor for user input.Use digital write commands to control the on/off state of each color channel.Implement a while loop to control the number of blink cycles based on user input.Ensure the program stops after the specified number of blinks.
-4. **Debugging Tips**: Guidance on troubleshooting common issues such as:Correcting syntax errors in the code.Ensuring the program loops the correct number of times.Handling user input correctly and stopping the program after the specified cycles.Initializing and incrementing loop counters properly.
-5. **Practical Applications**: Examples of using while loops to repeat a sequence of actions a specified number of times. The lesson emphasizes the importance of getting user input to control the behavior of the program and ensuring the loop counter is correctly managed.
-6. **Testing and Debugging**: Emphasis on thoroughly testing code under various conditions to ensure reliability. 
-7. **Homework Assignment**: Repeating the blink sequence a user-specified number of times without using a for loop.Ensure the program stops after the specified number of blinks.
+Esta lección muestra cómo usar bucles while en Arduino para crear un sistema de parpadeo de LED RGB controlado por el usuario basado en la entrada a través del monitor serial. Aquí tienes un breve resumen de lo que aprenderás:
+
+1. **Revisión de la Tarea Anterior**: Recapitulación de la tarea de la Lección 20, que consistía en hacer parpadear un LED RGB en una secuencia rojo-verde-azul un número de veces especificado por el usuario usando un bucle while en lugar de un bucle for.
+2. **Configuración del Circuito**: Instrucciones detalladas sobre cómo conectar correctamente un LED RGB y sus resistencias limitadoras de corriente al Arduino. Cada canal de color (rojo, verde, azul) se conecta a un pin digital PWM (pines 9, 10 y 11), y el cátodo común (pata larga) se conecta a tierra.
+3. **Escritura del Código**: Instrucciones paso a paso para:Definir los pines para cada canal de color del LED RGB.Configurar el monitor serial para la entrada del usuario.Usar comandos de escritura digital para controlar el estado de encendido/apagado de cada canal de color.Implementar un bucle while para controlar el número de ciclos de parpadeo basado en la entrada del usuario.Asegurarse de que el programa se detenga después del número especificado de parpadeos.
+4. **Consejos de Depuración**: Orientación sobre cómo solucionar problemas comunes tales como:Corregir errores de sintaxis en el código.Asegurarse de que el programa se repita el número correcto de veces.Manejar correctamente la entrada del usuario y detener el programa después de los ciclos especificados.Inicializar e incrementar correctamente los contadores de bucle.
+5. **Aplicaciones Prácticas**: Ejemplos de uso de bucles while para repetir una secuencia de acciones un número especificado de veces. La lección enfatiza la importancia de obtener la entrada del usuario para controlar el comportamiento del programa y asegurar que el contador del bucle se gestione correctamente.
+6. **Pruebas y Depuración**: Énfasis en probar el código a fondo bajo diversas condiciones para garantizar la fiabilidad.
+7. **Tarea**: Repetir la secuencia de parpadeos un número especificado de veces por el usuario sin usar un bucle for. Asegurarse de que el programa se detenga después del número especificado de parpadeos.
 
 **Video**
 
 .. raw:: html
 
-    <iframe width="700" height="500" src="https://www.youtube.com/embed/Cw_i7l_RFVE?si=o9Q1tTC1X1B9teef" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="700" height="500" src="https://www.youtube.com/embed/Cw_i7l_RFVE?si=o9Q1tTC1X1B9teef" title="Reproductor de video de YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+

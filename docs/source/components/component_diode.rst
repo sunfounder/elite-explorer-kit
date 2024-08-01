@@ -1,50 +1,50 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Hola, bienvenido a la Comunidad de Entusiastas de SunFounder para Raspberry Pi, Arduino y ESP32 en Facebook. Profundiza en Raspberry Pi, Arduino y ESP32 con otros entusiastas.
 
-    **Why Join?**
+    **¿Por qué unirse?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Soporte experto**: Resuelve problemas postventa y desafíos técnicos con la ayuda de nuestra comunidad y equipo.
+    - **Aprende y comparte**: Intercambia consejos y tutoriales para mejorar tus habilidades.
+    - **Vistas previas exclusivas**: Obtén acceso anticipado a nuevos anuncios de productos y adelantos.
+    - **Descuentos especiales**: Disfruta de descuentos exclusivos en nuestros productos más nuevos.
+    - **Promociones y sorteos festivos**: Participa en sorteos y promociones de temporada.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 ¿Listo para explorar y crear con nosotros? Haz clic en [|link_sf_facebook|] y únete hoy mismo.
 
 .. _cpn_diode:
 
-Diode
+Diodo
 =================
 
 
-A diode is an electronic component with two electrodes. It allows current to flow in only one direction, which is often called the "Rectifying" function.
-Thus, a diode can be thought of as an electronic version of a check valve.
+Un diodo es un componente electrónico con dos electrodos. Permite que la corriente fluya en una sola dirección, lo que a menudo se llama la función de "rectificación".
+Así, un diodo puede considerarse como una versión electrónica de una válvula de retención.
 
-Because of its unidirectional conductivity, the diode is used in almost all electronic circuits of some complexity. It is one of the first semiconductor devices and has a wide range of applications.
+Debido a su conductividad unidireccional, el diodo se utiliza en casi todos los circuitos electrónicos de cierta complejidad. Es uno de los primeros dispositivos semiconductores y tiene una amplia gama de aplicaciones.
 
-According to its use classification, it can be divided into detector diodes, rectifier diodes, limiter diodes, voltage regulator diodes, etc. 
+Según su uso, se puede clasificar en diodos detectores, diodos rectificadores, diodos limitadores, diodos reguladores de voltaje, etc.
 
-Rectifier diodes and voltage regulator diodes are included in this kit.
+Este kit incluye diodos rectificadores y diodos reguladores de voltaje.
 
-**Rectifier Diode**
+**Diodo Rectificador**
 
 .. image:: img/in4007_diode.png
 .. image:: img/symbol_rectifier_diode.png
     :width: 200
 
-A rectifier diode is a semiconductor diode, used to rectify AC (alternating current) to DC (direct current) using the rectifier bridge application. The alternative of rectifier diode through the Schottky barrier is mainly valued within digital electronics. This diode is capable to conduct the values of current which changes from mA to a few kA & voltages up to a few kV.
+Un diodo rectificador es un diodo semiconductor, utilizado para rectificar CA (corriente alterna) a CC (corriente continua) mediante la aplicación de un puente rectificador. La alternativa del diodo rectificador a través de la barrera Schottky se valora principalmente en la electrónica digital. Este diodo es capaz de conducir valores de corriente que varían desde mA hasta unos pocos kA y voltajes de hasta unos pocos kV.
 
-The designing of rectifier diodes can be done with Silicon material and they are capable of conducting high electric current values. These diodes are not famous but still used Ge or gallium arsenide-based semiconductor diodes. Ge diodes have less allowable reversed voltage as well as a lesser allowable junction temperature. The Ge diode has a benefit as compared to Si diode that is low threshold voltage value while operating in a forward-bias.
+El diseño de los diodos rectificadores se realiza con material de silicio y son capaces de conducir altos valores de corriente eléctrica. Estos diodos no son famosos pero aún se utilizan diodos semiconductores basados en Ge o arseniuro de galio. Los diodos de Ge tienen menos voltaje inverso permitido y una menor temperatura de unión permitida. El diodo de Ge tiene una ventaja en comparación con el diodo de Si, que es un bajo valor de voltaje umbral al operar en polarización directa.
 
 * |link_general_purpose_diode|
 
 
-**Zener Diode**
+**Diodo Zener**
 
-A Zener diode is a special type of diode designed to reliably allow current to flow "backwards" when a certain set reverse voltage, known as the Zener voltage, is reached.
+Un diodo Zener es un tipo especial de diodo diseñado para permitir de manera confiable que la corriente fluya "hacia atrás" cuando se alcanza un voltaje inverso establecido, conocido como el voltaje Zener.
 
-This diode is a semiconductor device that has a very high resistance up to the critical reverse breakdown voltage. At this critical breakdown point, the reverse resistance is reduced to a very small value, and the current increases while the voltage remains constant in this low resistance region.
+Este diodo es un dispositivo semiconductor que tiene una resistencia muy alta hasta el voltaje crítico de ruptura inversa. En este punto crítico de ruptura, la resistencia inversa se reduce a un valor muy pequeño y la corriente aumenta mientras el voltaje permanece constante en esta región de baja resistencia.
 
 .. image:: img/zener_diode.png
 .. image:: img/symbol-zener-diode.jpg
@@ -52,6 +52,8 @@ This diode is a semiconductor device that has a very high resistance up to the c
 
 * |link_zener_diode|
 
-**Example**
 
- * :ref:`basic_relay` (Basic Project)
+**Ejemplo**
+
+ * :ref:`basic_relay` (Proyecto Básico)
+

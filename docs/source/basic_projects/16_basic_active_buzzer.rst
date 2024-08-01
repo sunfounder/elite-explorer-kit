@@ -1,62 +1,62 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Hola, ¡bienvenido a la Comunidad de Entusiastas de SunFounder Raspberry Pi & Arduino & ESP32 en Facebook! Sumérgete más en Raspberry Pi, Arduino y ESP32 con otros entusiastas.
 
-    **Why Join?**
+    **¿Por qué unirse?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Soporte de expertos**: Resuelve problemas postventa y desafíos técnicos con la ayuda de nuestra comunidad y equipo.
+    - **Aprende y comparte**: Intercambia consejos y tutoriales para mejorar tus habilidades.
+    - **Vistas previas exclusivas**: Obtén acceso anticipado a nuevos anuncios de productos y adelantos.
+    - **Descuentos especiales**: Disfruta de descuentos exclusivos en nuestros productos más nuevos.
+    - **Promociones y sorteos festivos**: Participa en sorteos y promociones de temporada.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 ¿Listo para explorar y crear con nosotros? Haz clic en [|link_sf_facebook|] y únete hoy mismo.
 
 .. _basic_active_buzzer:
 
-Active Buzzer
+Zumbador activo
 ==========================
 
 .. https://docs.sunfounder.com/projects/3in1-kit-r4/en/latest/basic_project/ar_active_buzzer.html#ar-beep
 
-Overview
----------------
+Descripción general
+----------------------
 
-The active buzzer is a typical digital output device that is as easy to use as lighting up an LED!
+El zumbador activo es un dispositivo típico de salida digital que es tan fácil de usar como encender un LED.
 
-Two types of buzzers are included in the kit. 
-We need to use active buzzer. Turn them around, the sealed back (not the exposed PCB) is the one we want.
+En el kit se incluyen dos tipos de zumbadores.
+Necesitamos usar el zumbador activo. Gíralos, el reverso sellado (no el PCB expuesto) es el que queremos.
 
 .. image:: img/16_buzzer.png
     :align: center
     :width: 70%
 
-Required Components
+Componentes necesarios
 -------------------------
 
-In this project, we need the following components. 
+En este proyecto, necesitamos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nombre	
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN A LOS COMPONENTES
+        - ENLACE DE COMPRA
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -71,33 +71,33 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_buzzer`
         - \-
 
-Wiring
+Conexión
 ----------------------
 
 .. note::
-    When connecting the buzzer, make sure to check its pins. The longer pin is the anode and the shorter one is the cathode. It's important not to mix them up, as doing so will prevent the buzzer from producing any sound.
+    Al conectar el zumbador, asegúrate de verificar sus pines. El pin más largo es el ánodo y el más corto es el cátodo. Es importante no mezclarlos, ya que hacerlo impedirá que el zumbador produzca sonido.
 
 .. image:: img/16-active_buzzer_bb.png
     :align: center
     :width: 70%
 
-Schematic Diagram
+Diagrama esquemático
 -----------------------
 
 .. image:: img/16_active_buzzer_schematic.png
     :align: center
     :width: 80%
 
-Code
+Código
 ---------------
 
 .. note::
 
-    * You can open the file ``16-active_buzzer.ino`` under the path of ``elite-explorer-kit-main\basic_project\16-active_buzzer`` directly.
-    * Or copy this code into Arduino IDE.
+    * Puedes abrir el archivo ``16-active_buzzer.ino`` directamente en la ruta ``elite-explorer-kit-main\basic_project\16-active_buzzer``.
+    * O copia este código en Arduino IDE.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/bde4fd5c-8848-49cd-898f-8a824c836b80/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After the code is uploaded successfully, you will hear a beep every second.
+Después de que el código se cargue con éxito, escucharás un pitido cada segundo.

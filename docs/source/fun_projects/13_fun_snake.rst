@@ -1,20 +1,20 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Hola, bienvenido a la Comunidad de Entusiastas de SunFounder Raspberry Pi & Arduino & ESP32 en Facebook. Sumérgete en el mundo de Raspberry Pi, Arduino y ESP32 junto a otros entusiastas.
 
-    **Why Join?**
+    **¿Por qué unirse?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Soporte de expertos**: Resuelve problemas postventa y desafíos técnicos con la ayuda de nuestra comunidad y equipo.
+    - **Aprender y compartir**: Intercambia consejos y tutoriales para mejorar tus habilidades.
+    - **Avances exclusivos**: Accede anticipadamente a anuncios de nuevos productos y adelantos exclusivos.
+    - **Descuentos especiales**: Disfruta de descuentos exclusivos en nuestros productos más recientes.
+    - **Promociones festivas y sorteos**: Participa en sorteos y promociones de temporada.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 ¿Listo para explorar y crear con nosotros? Haz clic en [|link_sf_facebook|] y únete hoy mismo!
 
 .. _fun_snake:
 
-GAME - Snake
+JUEGO - Snake
 =========================
 
 .. raw:: html
@@ -24,34 +24,34 @@ GAME - Snake
       Your browser does not support the video tag.
    </video>
 
-This example implements the classic Snake game on an 8x12 LED matrix using the R4 Wifi board.
-Players control the snake's direction using a dual-axis joystick.
+Este ejemplo implementa el clásico juego de Snake en una matriz de LED de 8x12 utilizando la placa R4 Wifi.
+Los jugadores controlan la dirección de la serpiente usando un joystick de doble eje.
 
-**Required Components**
+**Componentes necesarios**
 
-In this project, we need the following components. 
+En este proyecto, necesitamos los siguientes componentes. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí está el enlace: 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nombre	
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado desde los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DEL COMPONENTE
+        - ENLACE DE COMPRA
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -60,75 +60,76 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_joystick`
         - |link_joystick_buy|
 
-**Wiring**
+**Cableado**
 
 .. image:: img/13_snake_bb.png
     :width: 80%
     :align: center
 
 
-**Schematic**
+**Esquema**
 
 .. image:: img/13_snake_schematic.png
    :width: 80%
    :align: center
 
 
-**Code**
+**Código**
 
 .. note::
 
-    * You can open the file ``13_snake.ino`` under the path of ``elite-explorer-kit-main\fun_project\13_snake`` directly.
-    * Or copy this code into Arduino IDE.
+    * Puedes abrir el archivo ``13_snake.ino`` bajo la ruta de ``elite-explorer-kit-main\fun_project\13_snake`` directamente.
+    * O copiar este código en Arduino IDE.
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/df370ec5-d1b5-4ae7-b3b9-e97e0eb9a872/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-**How it works?**
+**¿Cómo funciona?**
 
-Here's a detailed explanation of the code:
+Aquí tienes una explicación detallada del código:
 
-1. Variable Definition and Initialization
+1. Definición e Inicialización de Variables
 
-   Import the ``Arduino_LED_Matrix`` library for LED matrix operations.
-   matrix is an instance of the LED matrix.
-   ``frame`` and ``flatFrame`` are arrays used to store and process pixel information on the screen.
-   The snake is represented as an array of ``Point`` structures, where each point has an x and y coordinate.
-   food represents the position of the food.
-   ``direction`` is the current movement direction of the snake.
+   Importa la biblioteca ``Arduino_LED_Matrix`` para las operaciones con la matriz de LED.
+   matrix es una instancia de la matriz de LED.
+   ``frame`` y ``flatFrame`` son matrices utilizadas para almacenar y procesar la información de los píxeles en la pantalla.
+   La serpiente se representa como una matriz de estructuras ``Point``, donde cada punto tiene una coordenada x y una y.
+   food representa la posición de la comida.
+   ``direction`` es la dirección de movimiento actual de la serpiente.
 
 2. ``setup()`` 
 
-   Initialize the X and Y axes of the joystick as inputs.
-   Start the LED matrix.
-   Initialize the snake's starting position in the center of the screen.
-   Generate the initial position of the food randomly.
+   Inicializa los ejes X e Y del joystick como entradas.
+   Inicia la matriz de LED.
+   Inicializa la posición inicial de la serpiente en el centro de la pantalla.
+   Genera la posición inicial de la comida de manera aleatoria.
 
 3. ``loop()`` 
 
-   Determine the snake's direction based on the readings from the joystick.
-   Move the snake.
-   Check if the snake's head collides with the food. 
-   If it does, the snake grows, and new food is generated at a new location.
-   Check if the snake collides with itself. If it does, reset the game.
-   Draw the current game state (snake and food positions) on the LED matrix.
-   Add a delay to control the game's speed.
+   Determina la dirección de la serpiente basándose en las lecturas del joystick.
+   Mueve la serpiente.
+   Verifica si la cabeza de la serpiente colisiona con la comida. 
+   Si es así, la serpiente crece y se genera nueva comida en una nueva ubicación.
+   Verifica si la serpiente colisiona consigo misma. Si es así, reinicia el juego.
+   Dibuja el estado actual del juego (posiciones de la serpiente y la comida) en la matriz de LED.
+   Agrega un retraso para controlar la velocidad del juego.
 
 4. ``moveSnake()`` 
 
-   Move each part of the snake to the position of the previous part, starting from the tail and moving to the head.
-   Move the snake's head based on its direction.
+   Mueve cada parte de la serpiente a la posición de la parte anterior, comenzando desde la cola y moviéndose hacia la cabeza.
+   Mueve la cabeza de la serpiente basándose en su dirección.
 
 5. ``generateFood()`` 
 
-   Generate all possible food positions.
-   Check if each position overlaps with any part of the snake. If it doesn't overlap, the position is considered a possible food location.
-   Randomly select a possible food location.
+   Genera todas las posibles posiciones de comida.
+   Verifica si cada posición se superpone con alguna parte de la serpiente. Si no se superpone, la posición se considera una ubicación posible para la comida.
+   Selecciona aleatoriamente una ubicación posible para la comida.
 
 6. ``drawFrame()`` 
 
-   Clear the current frame.
-   Draw the snake and food on the frame.
-   Flatten the two-dimensional frame array into a one-dimensional array (flatFrame) and load it onto the LED matrix.
+   Limpia el marco actual.
+   Dibuja la serpiente y la comida en el marco.
+   Aplana la matriz bidimensional del marco en una matriz unidimensional (flatFrame) y la carga en la matriz de LED.
+

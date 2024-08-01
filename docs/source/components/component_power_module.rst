@@ -1,28 +1,28 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    ¡Hola! ¡Bienvenido a la comunidad de entusiastas de SunFounder Raspberry Pi & Arduino & ESP32 en Facebook! Sumérgete en el mundo de Raspberry Pi, Arduino y ESP32 junto a otros apasionados.
 
-    **Why Join?**
+    **¿Por qué unirse?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Soporte de expertos**: Resuelve problemas postventa y desafíos técnicos con la ayuda de nuestra comunidad y equipo.
+    - **Aprender y compartir**: Intercambia consejos y tutoriales para mejorar tus habilidades.
+    - **Avances exclusivos**: Accede anticipadamente a anuncios de nuevos productos y adelantos exclusivos.
+    - **Descuentos especiales**: Disfruta de descuentos exclusivos en nuestros productos más recientes.
+    - **Promociones festivas y sorteos**: Participa en sorteos y promociones de temporada.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 ¿Listo para explorar y crear con nosotros? Haz clic en [|link_sf_facebook|] y únete hoy mismo.
 
 .. _cpn_power:
 
-Power Supply Module
-=====================
+Módulo de Fuente de Alimentación
+=====================================
 
 .. note::
-    To protect the :ref:`cpn_power`'s battery, please fully charge it before using it for the first time.
+    Para proteger la batería del :ref:`cpn_power`, por favor cárguela completamente antes de usarla por primera vez.
 
-When we need a large current to drive a component, which will severely interfere with the normal work of Arduino UNO board. Therefore, we separately supply power for the component by this module to make it run safely and steadily.
+Cuando necesitamos una gran corriente para alimentar un componente, esto puede interferir gravemente con el funcionamiento normal de la placa Arduino UNO. Por lo tanto, proporcionamos energía separada para el componente con este módulo para que funcione de manera segura y estable.
 
-You can just plug it in the breadboard to supply power. It provides a voltage of 3.3V and 5V, and you can connect either via a jumper cap included.
+Puedes simplemente conectarlo en la placa de pruebas para suministrar energía. Proporciona un voltaje de 3.3V y 5V, y puedes conectar cualquiera de ellos mediante un puente incluido.
 
 .. image:: img/power_supply_new.png
     :width: 95%
@@ -32,19 +32,18 @@ You can just plug it in the breadboard to supply power. It provides a voltage of
 
     <br/>
 
-**Features and specifications**
+**Características y especificaciones**
 
-* Charge Input: USB Type-C, 5V
-* Output Voltage: 5V, 3.3V (adjustable via jumpers. 0V, 3.3V, and 5V configuration)
-* Output Current: 5V/1.5A, 3.3V/1A
-* ON-OFF Switch Available
-* Two Independent Channel
-* USB (Type-A) Output Available
-* Battery: 3.7V 14500 Lithium-ion Battery, 500mAh
-* Dimension: 52mm x 32mm x 24mm (L x W x H)
+* Entrada de carga: USB Tipo-C, 5V
+* Voltaje de salida: 5V, 3.3V (ajustable mediante puentes: 0V, 3.3V y 5V)
+* Corriente de salida: 5V/1.5A, 3.3V/1A
+* Interruptor ON-OFF disponible
+* Dos canales independientes
+* Salida USB (Tipo-A) disponible
+* Batería: Batería de ion de litio 14500 de 3.7V, 500mAh
+* Dimensiones: 52mm x 32mm x 24mm (L x A x H)
 
-
-**Example**
+**Ejemplo**
 
 * :ref:`basic_motor` (Basic Project)
 * :ref:`basic_pump` (Basic Project)

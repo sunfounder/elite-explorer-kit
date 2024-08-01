@@ -1,21 +1,21 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Hola, ¡bienvenido a la Comunidad de Entusiastas de SunFounder Raspberry Pi & Arduino & ESP32 en Facebook! Sumérgete en el mundo de Raspberry Pi, Arduino y ESP32 junto a otros entusiastas.
 
-    **Why Join?**
+    **¿Por qué unirse?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Soporte de expertos**: Resuelve problemas postventa y desafíos técnicos con la ayuda de nuestra comunidad y equipo.
+    - **Aprender y compartir**: Intercambia consejos y tutoriales para mejorar tus habilidades.
+    - **Avances exclusivos**: Accede anticipadamente a anuncios de nuevos productos y adelantos exclusivos.
+    - **Descuentos especiales**: Disfruta de descuentos exclusivos en nuestros productos más recientes.
+    - **Promociones festivas y sorteos**: Participa en sorteos y promociones de temporada.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 ¿Listo para explorar y crear con nosotros? Haz clic en [|link_sf_facebook|] y únete hoy mismo!
 
 .. _fun_guess_number:
 
-GAME - Guess Number
-============================
+JUEGO - Adivina el Número
+==============================
 
 .. raw:: html
 
@@ -24,39 +24,39 @@ GAME - Guess Number
       Your browser does not support the video tag.
    </video>
 
-Guessing Numbers is an entertaining party game where you and your friends take turns entering a number (0~99). 
-The range becomes narrower with each number input until a player correctly guesses the answer. 
-The player who guesses correctly is declared the loser and subjected to a penalty. 
-For instance, if the secret number is 51, which the players cannot see, and player 1 inputs 50, 
-the number range prompt changes to 50~99. If player 2 inputs 70, the number range becomes 50~70. 
-If player 3 inputs 51, they are the unlucky one. 
-In this game, we use an IR Remote Controller to input numbers and an LCD to display outcomes.
+Adivina el Número es un juego de fiesta entretenido en el que tú y tus amigos se turnan para introducir un número (0~99). 
+El rango se estrecha con cada número ingresado hasta que un jugador adivina correctamente la respuesta. 
+El jugador que adivina correctamente es declarado el perdedor y se le aplica una penalización. 
+Por ejemplo, si el número secreto es 51, que los jugadores no pueden ver, y el jugador 1 ingresa 50, 
+el rango de números cambia a 50~99. Si el jugador 2 ingresa 70, el rango de números se convierte en 50~70. 
+Si el jugador 3 ingresa 51, es el desafortunado. 
+En este juego, utilizamos un Controlador Remoto IR para ingresar números y una pantalla LCD para mostrar los resultados.
 
-**Required Components**
+**Componentes necesarios**
 
-In this project, we need the following components. 
+En este proyecto, necesitamos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nombre
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado desde los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DEL COMPONENTE
+        - ENLACE DE COMPRA
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -70,72 +70,70 @@ You can also buy them separately from the links below.
         - |link_receiver_buy|
 
 
-
-**Wiring**
+**Cableado**
 
 .. image:: img/10_guess_number_bb.png
     :width: 90%
     :align: center
 
 
-**Schematic**
+**Esquema**
 
 .. image:: img/10_guess_number_schematic.png
    :width: 100%
    :align: center
 
-**Code**
+**Código**
 
 .. note::
 
-    * You can open the file ``10_guess_number.ino`` under the path of ``elite-explorer-kit-main\fun_project\10_guess_number`` directly.
-    * Or copy this code into Arduino IDE.
+    * Puedes abrir el archivo ``10_guess_number.ino`` bajo la ruta de ``elite-explorer-kit-main\fun_project\10_guess_number`` directamente.
+    * O copiar este código en Arduino IDE.
 
 .. note::
-   To install the library, use the Arduino Library Manager and search for **"IRremote"** and **"LiquidCrystal I2C"** and install them.
+   Para instalar la biblioteca, utiliza el Administrador de Bibliotecas de Arduino y busca **"IRremote"** y **"LiquidCrystal I2C"** e instálalas.
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/935cd2e8-23e1-4af8-bdf5-94ac00f10e8b/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
+**¿Cómo funciona?**
 
+1. Importación de bibliotecas y definición de variables globales:
 
-**How it works?**
-
-1. Library Imports and Global Variable Definitions:
-
-   Three libraries are imported: ``Wire`` for I2C communication, ``LiquidCrystal_I2C`` for controlling the LCD display, and ``IRremote`` for receiving signals from the infrared remote controller.
-   Several global variables are defined to store the game's state and settings.
+   Se importan tres bibliotecas: ``Wire`` para la comunicación I2C, ``LiquidCrystal_I2C`` para controlar la pantalla LCD y ``IRremote`` para recibir señales del control remoto infrarrojo.
+   Se definen varias variables globales para almacenar el estado y configuraciones del juego.
 
 2. ``setup()`` 
 
-   Initialize the LCD display and turn on the backlight.
-   Initialize serial communication with a baud rate of 9600.
-   Start the infrared receiver.
-   Call the ``initNewValue()`` function to set the initial game state.
+   Inicializa la pantalla LCD y enciende la retroiluminación.
+   Inicializa la comunicación serie con una velocidad de 9600 baudios.
+   Inicia el receptor infrarrojo.
+   Llama a la función ``initNewValue()`` para establecer el estado inicial del juego.
 
 3. ``loop()`` 
 
-   Check if a signal is received from the infrared remote controller.
-   Decode the received infrared signal.
-   Update the game state or perform corresponding actions based on the decoded value (number or command).
+   Comprueba si se recibe una señal del control remoto infrarrojo.
+   Decodifica la señal infrarroja recibida.
+   Actualiza el estado del juego o realiza acciones correspondientes basadas en el valor decodificado (número o comando).
 
 4. ``initNewValue()`` 
 
-   Use ``analogRead`` to initialize the random number seed, ensuring different random numbers are generated each time.
-   Generate a random number between 0 and 98 as the lucky number (the number players need to guess).
-   Reset upper and lower limit prompts.
-   Display a welcome message on the LCD.
-   Reset the input number.
+   Utiliza ``analogRead`` para inicializar la semilla de número aleatorio, asegurando que se generen números aleatorios diferentes cada vez.
+   Genera un número aleatorio entre 0 y 98 como el número afortunado (el número que los jugadores deben adivinar).
+   Restablece los límites superior e inferior.
+   Muestra un mensaje de bienvenida en la pantalla LCD.
+   Restablece el número ingresado.
 
 5. ``detectPoint()`` 
 
-   Check the relationship between the player's input number and the lucky number.
-   If the input number is greater than the lucky number, update the upper limit prompt.
-   If the input number is smaller than the lucky number, update the lower limit prompt.
-   If the player inputs the correct number, reset the input and return true.
+   Comprueba la relación entre el número ingresado por el jugador y el número afortunado.
+   Si el número ingresado es mayor que el número afortunado, actualiza el límite superior.
+   Si el número ingresado es menor que el número afortunado, actualiza el límite inferior.
+   Si el jugador ingresa el número correcto, restablece la entrada y devuelve verdadero.
 
 6. ``lcdShowInput()`` 
 
-   Display the player's input and the current upper and lower limit prompts on the LCD.
-   If the player guesses correctly, display a success message and pause for 5 seconds before restarting the game.
+   Muestra el número ingresado por el jugador y los límites superior e inferior actuales en la pantalla LCD.
+   Si el jugador adivina correctamente, muestra un mensaje de éxito y pausa durante 5 segundos antes de reiniciar el juego.
+

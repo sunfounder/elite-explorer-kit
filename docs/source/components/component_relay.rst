@@ -1,49 +1,49 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    ¡Hola! ¡Bienvenido a la comunidad de entusiastas de SunFounder Raspberry Pi & Arduino & ESP32 en Facebook! Sumérgete en el mundo de Raspberry Pi, Arduino y ESP32 junto a otros apasionados.
 
-    **Why Join?**
+    **¿Por qué unirse?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Soporte de expertos**: Resuelve problemas postventa y desafíos técnicos con la ayuda de nuestra comunidad y equipo.
+    - **Aprender y compartir**: Intercambia consejos y tutoriales para mejorar tus habilidades.
+    - **Avances exclusivos**: Accede anticipadamente a anuncios de nuevos productos y adelantos exclusivos.
+    - **Descuentos especiales**: Disfruta de descuentos exclusivos en nuestros productos más recientes.
+    - **Promociones festivas y sorteos**: Participa en sorteos y promociones de temporada.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 ¿Listo para explorar y crear con nosotros? Haz clic en [|link_sf_facebook|] y únete hoy mismo.
 
 .. _cpn_realy:
 
-Relay
-==========================================
+Relé
+=======
 
 .. image:: img/relay_pic.png
     :width: 200
     :align: center
 
-As we may know, relay is a device which is used to provide connection between two or more points or devices in response to the input signal applied. In other words, relays provide isolation between the controller and the device as devices may work on AC as well as on DC. However, they receive signals from a microcontroller which works on DC hence requiring a relay to bridge the gap. Relay is extremely useful when you need to control a large amount of current or voltage with small electrical signal.
+Como sabemos, el relé es un dispositivo que se utiliza para proporcionar conexión entre dos o más puntos o dispositivos en respuesta a la señal de entrada aplicada. En otras palabras, los relés proporcionan aislamiento entre el controlador y el dispositivo, ya que los dispositivos pueden funcionar con CA (corriente alterna) así como con CC (corriente continua). Sin embargo, reciben señales de un microcontrolador que funciona con CC, por lo tanto, se requiere un relé para cerrar la brecha. El relé es extremadamente útil cuando necesitas controlar una gran cantidad de corriente o voltaje con una pequeña señal eléctrica.
 
-There are 5 parts in every relay:
+Hay 5 partes en cada relé:
 
 .. image:: img/relay142.jpeg
 
-**Electromagnet** - It consists of an iron core wounded by coil of wires. When electricity is passed through, it becomes magnetic. Therefore, it is called electromagnet.
+**Electroimán** - Consiste en un núcleo de hierro enrollado con una bobina de cables. Cuando se pasa electricidad a través de él, se vuelve magnético. Por lo tanto, se llama electroimán.
 
-**Armature** - The movable magnetic strip is known as armature. When current flows through them, the coil is it energized thus producing a magnetic field which is used to make or break the normally open (N/O) or normally close (N/C) points. And the armature can be moved with direct current (DC) as well as alternating current (AC).
+**Armadura** - La tira magnética móvil se conoce como armadura. Cuando la corriente fluye a través de ella, la bobina se energiza, produciendo un campo magnético que se usa para hacer o romper los puntos normalmente abiertos (N/O) o normalmente cerrados (N/C). La armadura se puede mover con corriente continua (CC) así como con corriente alterna (CA).
 
-**Spring** - When no currents flow through the coil on the electromagnet, the spring pulls the armature away so the circuit cannot be completed.
+**Resorte** - Cuando no fluye corriente a través de la bobina del electroimán, el resorte tira de la armadura hacia atrás, por lo que el circuito no puede completarse.
 
-Set of electrical **contacts** - There are two contact points:
+Conjunto de **contactos eléctricos** - Hay dos puntos de contacto:
 
--  Normally open - connected when the relay is activated, and disconnected when it is inactive.
+- Normalmente abierto: conectado cuando el relé está activado, y desconectado cuando está inactivo.
 
--  Normally close - not connected when the relay is activated, and connected when it is inactive.
+- Normalmente cerrado: no conectado cuando el relé está activado, y conectado cuando está inactivo.
 
-**Molded frame** - Relays are covered with plastic for protection.
+**Marco moldeado** - Los relés están cubiertos de plástico para protección.
 
-The working principle of relay is simple. When power is supplied to the relay, currents start flowing through the control coil; as a result, the electromagnet starts energizing. Then the armature is attracted to the coil, pulling down the moving contact together thus connecting with the normally open contacts. So the circuit with the load is energized. Then breaking the circuit would a similar case, as the moving contact will be pulled up to the normally closed contacts under the force of the spring. In this way, the switching on and off of the relay can control the state
-of a load circuit.
+El principio de funcionamiento del relé es simple. Cuando se suministra energía al relé, la corriente comienza a fluir a través de la bobina de control; como resultado, el electroimán comienza a energizarse. Luego, la armadura es atraída hacia la bobina, bajando el contacto móvil y conectándose con los contactos normalmente abiertos. Así, el circuito con la carga se energiza. Romper el circuito sería un caso similar, ya que el contacto móvil será empujado hacia arriba a los contactos normalmente cerrados bajo la fuerza del resorte. De esta manera, el encendido y apagado del relé puede controlar el estado de un circuito de carga.
 
-**Example**
+
+**Ejemplo**
 
 * :ref:`basic_relay` (Basic Project)

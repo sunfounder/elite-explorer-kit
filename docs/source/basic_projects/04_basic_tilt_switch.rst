@@ -1,55 +1,55 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    ¡Hola, bienvenido a la Comunidad de Entusiastas de SunFounder Raspberry Pi, Arduino y ESP32 en Facebook! Sumérgete más profundamente en Raspberry Pi, Arduino y ESP32 con otros entusiastas.
 
-    **Why Join?**
+    **¿Por qué unirse?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Soporte experto**: Resuelve problemas postventa y desafíos técnicos con la ayuda de nuestra comunidad y equipo.
+    - **Aprende y comparte**: Intercambia consejos y tutoriales para mejorar tus habilidades.
+    - **Avances exclusivos**: Obtén acceso anticipado a nuevos anuncios de productos y adelantos.
+    - **Descuentos especiales**: Disfruta de descuentos exclusivos en nuestros productos más nuevos.
+    - **Promociones festivas y sorteos**: Participa en sorteos y promociones de temporada.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 ¿Listo para explorar y crear con nosotros? Haz clic en [|link_sf_facebook|] y únete hoy mismo!
 
 .. _basic_tilt_switch:
 
-Tilt Switch
-==========================
+Interruptor de Inclinación
+===============================
 
 .. https://docs.sunfounder.com/projects/vincent-kit/en/latest/arduino/2.17_tilt_switch.html#ar-tilt
 
-Overview
----------------
+Descripción general
+---------------------------
 
-In this lesson, you will learn about tilt switch. Tilt switch can be used to detect whether objects tilt, which is of great value in practical applications. It can be used to judge the tilt of bridges, buildings, transmission line tower and so on, so it has an important guiding function in carrying out maintenance work.
+En esta lección, aprenderás sobre el interruptor de inclinación. El interruptor de inclinación puede utilizarse para detectar si los objetos se inclinan, lo que tiene un gran valor en aplicaciones prácticas. Puede utilizarse para juzgar la inclinación de puentes, edificios, torres de líneas de transmisión, etc., por lo que tiene una función de guía importante en la realización de trabajos de mantenimiento.
 
-Required Components
+Componentes necesarios
 -------------------------
 
-In this project, we need the following components. 
+En este proyecto, necesitamos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nombre	
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado desde los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DEL COMPONENTE
+        - ENLACE DE COMPRA
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -62,17 +62,16 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_tilt_switch`
         - \-
 
-Fritzing Circuit
+Circuito Fritzing
 ---------------------
 
-In this example, digital pin 2 is used to read the signal of Tilt
-Switch.
+En este ejemplo, se utiliza el pin digital 2 para leer la señal del interruptor de inclinación.
 
 .. image:: img/04-tilt_switch_bb.png
    :align: center
    :width: 85%
 
-Schematic Diagram
+Diagrama esquemático
 -----------------------
 
 .. image:: img/04_tilt_switch_schematic.png
@@ -80,16 +79,16 @@ Schematic Diagram
    :width: 70%
 
 
-Code
+Código
 ----------
 
 .. note::
 
-    * You can open the file ``04-tilt_switch.ino`` under the path of ``elite-explorer-kit-main\basic_project\04-tilt_switch`` directly.
-    * Or copy this code into Arduino IDE.
+    * Puedes abrir el archivo ``04-tilt_switch.ino`` en la ruta ``elite-explorer-kit-main\basic_project\04-tilt_switch`` directamente.
+    * O copiar este código en Arduino IDE.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/d85d75d9-e491-424c-93be-95e1f4e99549/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-Once the codes are uploaded to the uno r4 board, you can open the serial monitor to view the pin readings. The readings will display either "1" or "0" depending on whether the Tilt Switch is in a vertical position (with the internal metal ball making contact with the Wire Pins) or tilted.
+Una vez que los códigos se cargan en la placa uno r4, puedes abrir el monitor serial para ver las lecturas del pin. Las lecturas mostrarán "1" o "0" dependiendo de si el interruptor de inclinación está en posición vertical (con la bola de metal interna haciendo contacto con los pines) o inclinado.

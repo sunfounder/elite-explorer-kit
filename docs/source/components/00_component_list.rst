@@ -1,36 +1,34 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    ¡Hola! Bienvenido a la Comunidad de Entusiastas de SunFounder para Raspberry Pi, Arduino y ESP32 en Facebook. Profundiza en el mundo de Raspberry Pi, Arduino y ESP32 con otros entusiastas.
 
-    **Why Join?**
+    **¿Por qué unirse?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Soporte experto**: Resuelve problemas postventa y desafíos técnicos con la ayuda de nuestra comunidad y equipo.
+    - **Aprende y comparte**: Intercambia consejos y tutoriales para mejorar tus habilidades.
+    - **Vistas previas exclusivas**: Obtén acceso anticipado a nuevos anuncios de productos y adelantos.
+    - **Descuentos especiales**: Disfruta de descuentos exclusivos en nuestros productos más nuevos.
+    - **Promociones y sorteos festivos**: Participa en sorteos y promociones de temporada.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 ¿Listo para explorar y crear con nosotros? Haz clic en [|link_sf_facebook|] y únete hoy mismo.
 
-Learn about the Components in Your Kit
-=========================================
+Conoce los Componentes de tu Kit
+===================================
 
-Components List
------------------
+Lista de Componentes
+-----------------------
 
-After opening the package, please check whether the quantity of components is compliance with product description and whether all components are in good condition.
+Después de abrir el paquete, verifica si la cantidad de componentes es conforme con la descripción del producto y si todos los componentes están en buen estado.
 
 * :download:`Components List </_static/Elite_Explorer_Kit_Components_List.pdf>`
 
+Introducción a los Componentes
+------------------------------
 
-Components Introductions
---------------------------
-
-
-Below is the introduction to each component, which contains the operating principle of the component and the corresponding projects.
+A continuación, se presenta la introducción a cada componente, que contiene el principio de funcionamiento del componente y los proyectos correspondientes.
 
 
-**Basic**
+**Básico**
 
 .. toctree::
     :maxdepth: 1
@@ -51,7 +49,7 @@ Below is the introduction to each component, which contains the operating princi
     component_ta6585
     component_74hc595
 
-**Display**
+**Pantalla**
 
 .. toctree::
     :maxdepth: 1
@@ -64,7 +62,7 @@ Below is the introduction to each component, which contains the operating princi
     component_oled
 
 
-**Sound**
+**Sonido**
 
 .. toctree::
     :maxdepth: 1
@@ -85,7 +83,7 @@ Below is the introduction to each component, which contains the operating princi
     component_power_module
     
 
-**Controller**
+**Controlador**
 
 .. toctree::
     :maxdepth: 1
@@ -112,4 +110,3 @@ Below is the introduction to each component, which contains the operating princi
     component_humiture_sensor
     component_mfrc522
     component_gy87
-

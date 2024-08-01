@@ -1,21 +1,21 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    ¡Hola! ¡Bienvenido a la comunidad de entusiastas de SunFounder Raspberry Pi & Arduino & ESP32 en Facebook! Sumérgete en el mundo de Raspberry Pi, Arduino y ESP32 junto a otros apasionados.
 
-    **Why Join?**
+    **¿Por qué unirse?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Soporte de expertos**: Resuelve problemas postventa y desafíos técnicos con la ayuda de nuestra comunidad y equipo.
+    - **Aprender y compartir**: Intercambia consejos y tutoriales para mejorar tus habilidades.
+    - **Avances exclusivos**: Accede anticipadamente a anuncios de nuevos productos y adelantos exclusivos.
+    - **Descuentos especiales**: Disfruta de descuentos exclusivos en nuestros productos más recientes.
+    - **Promociones festivas y sorteos**: Participa en sorteos y promociones de temporada.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 ¿Listo para explorar y crear con nosotros? Haz clic en [|link_sf_facebook|] y únete hoy mismo!
 
 .. _fun_light_array:
 
-Light-sensitive Array
-==========================================
+Array Sensible a la Luz
+===========================
 
 .. raw:: html
 
@@ -24,33 +24,33 @@ Light-sensitive Array
       Your browser does not support the video tag.
    </video>
 
-This program converts the readings from a light-dependent resistor into a corresponding number of illuminated LED lights, creating a simple indicator of light brightness.
+Este programa convierte las lecturas de una fotorresistencia en un número correspondiente de luces LED iluminadas, creando un simple indicador de brillo de luz.
 
-**Required Components**
+**Componentes necesarios**
 
-In this project, we need the following components. 
+En este proyecto, necesitamos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nombre
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado desde los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DEL COMPONENTE
+        - ENLACE DE COMPRA
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -66,7 +66,7 @@ You can also buy them separately from the links below.
         - |link_photoresistor_buy|
 
 
-**Wiring**
+**Cableado**
 
 .. image:: img/04_light_sensitive_array_bb.png
     :width: 70%
@@ -76,44 +76,43 @@ You can also buy them separately from the links below.
 
    <br/>
 
-**Schematic**
+**Esquema**
 
 .. image:: img/04_light_sensitive_array_schematic.png
    :width: 60%
 
-**Code**
+**Código**
 
 .. note::
 
-    * You can open the file ``04_light_sensitive_array.ino`` under the path of ``elite-explorer-kit-main\fun_project\04_light_sensitive_array`` directly.
-    * Or copy this code into Arduino IDE.
+    * Puedes abrir el archivo ``04_light_sensitive_array.ino`` bajo la ruta ``elite-explorer-kit-main\fun_project\04_light_sensitive_array`` directamente.
+    * O copia este código en Arduino IDE.
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/9da7af57-c002-41a0-bc84-372e91885d52/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-**How it works?**
+**¿Cómo funciona?**
 
-Here's a step-by-step explanation of the code:
+Aquí hay una explicación paso a paso del código:
 
-1. Constant and Variable Definitions:
+1. Definiciones de Constantes y Variables:
 
-   ``NbrLEDs``: Defines the presence of 8 LEDs.
-   ``ledPins[]``: LEDs are connected to Arduino pins 5 to 12.
-   ``photocellPin``: The photoresistor is connected to Arduino's A0 pin.
-   ``sensorValue``: This variable stores the value read from the photoresistor.
-   ``ledLevel``: This variable stores the number of LEDs based on the sensorValue conversion.
+   ``NbrLEDs``: Define la presencia de 8 LEDs.
+   ``ledPins[]``: Los LEDs están conectados a los pines 5 a 12 de Arduino.
+   ``photocellPin``: La fotorresistencia está conectada al pin A0 de Arduino.
+   ``sensorValue``: Esta variable almacena el valor leído de la fotorresistencia.
+   ``ledLevel``: Esta variable almacena el número de LEDs basados en la conversión de sensorValue.
 
 2. ``setup()``:
 
-   Configures pins 5 to 12 as output to drive the LEDs.
+   Configura los pines 5 a 12 como salida para controlar los LEDs.
 
 3. ``loop()``:
 
-   Reads the analog value of the photoresistor from pin A0, typically ranging from 0 to 1023.
-   Uses the map function to map the photoresistor's value from the range 300-1023 to the range 0-8.
-   This means that if the reading from the light-dependent resistor is 300, no LEDs will be lit;
-   if the reading is 1023 or higher, all 8 LEDs will be lit.
+   Lee el valor analógico de la fotorresistencia desde el pin A0, típicamente en un rango de 0 a 1023.
+   Usa la función map para mapear el valor de la fotorresistencia desde el rango 300-1023 al rango 0-8.
+   Esto significa que si la lectura de la fotorresistencia es 300, no se encenderá ningún LED; si la lectura es 1023 o superior, se encenderán los 8 LEDs.
    
-   The subsequent for loop checks each LED. If its index is less than ledLevel,
-   the LED will be turned on; otherwise, it will be turned off.
+   El siguiente bucle for verifica cada LED. Si su índice es menor que ledLevel, el LED se encenderá; de lo contrario, se apagará.
+

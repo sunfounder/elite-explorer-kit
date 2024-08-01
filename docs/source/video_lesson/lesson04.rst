@@ -1,32 +1,33 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    ¡Hola! Bienvenido a la Comunidad de Entusiastas de SunFounder para Raspberry Pi, Arduino y ESP32 en Facebook. Sumérgete en el mundo de Raspberry Pi, Arduino y ESP32 junto a otros entusiastas.
 
-    **Why Join?**
+    **¿Por qué unirse?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Soporte experto**: Resuelve problemas postventa y desafíos técnicos con la ayuda de nuestra comunidad y equipo.
+    - **Aprende y comparte**: Intercambia consejos y tutoriales para mejorar tus habilidades.
+    - **Avances exclusivos**: Obtén acceso anticipado a anuncios de nuevos productos y adelantos exclusivos.
+    - **Descuentos especiales**: Disfruta de descuentos exclusivos en nuestros productos más recientes.
+    - **Promociones y sorteos festivos**: Participa en sorteos y promociones festivas.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 ¿Listo para explorar y crear con nosotros? Haz clic en [|link_sf_facebook|] y únete hoy mismo.
 
-LESSON 4: Building Clean and Neat Circuits on a Breadboard
-============================================================
+LECCIÓN 4: Construyendo Circuitos Limpios y Ordenados en una Placa de Pruebas
+====================================================================================
 
-This lesson is part of a tutorial series designed to teach engineering concepts using the Arduino platform. Here's a concise overview of what you'll learn:
+Esta lección forma parte de una serie de tutoriales diseñados para enseñar conceptos de ingeniería utilizando la plataforma Arduino. Aquí tienes un resumen conciso de lo que aprenderás:
 
-1. **Introduction to the Lesson**: An overview of building neat and clean circuits on a breadboard, crucial for efficient troubleshooting and reliable operation.
-2. **Starting with Basic Connections**: Setting up LEDs on the breadboard with uniform orientation for easy management and troubleshooting.
-3. **Improving Circuit Layout**: Strategies for arranging components and wiring to minimize errors and enhance clarity.
-4. **Using Better Tools and Components**: Recommendations for tools and specialized components like Bojack wires to keep breadboard setups tidy and organized.
-5. **Final Adjustments and Tips**: Cutting and adjusting components like resistors for a snug fit on the breadboard to prevent short circuits and disconnections.
-6. **Homework Assignment**: A practical task to create varied blinking patterns with LEDs, requiring a video submission of the working circuit and code.
+1. **Introducción a la Lección**: Una visión general sobre la construcción de circuitos limpios y ordenados en una placa de pruebas, crucial para una solución de problemas eficiente y una operación fiable.
+2. **Comenzando con Conexiones Básicas**: Configuración de LEDs en la placa de pruebas con una orientación uniforme para una fácil gestión y solución de problemas.
+3. **Mejorando el Diseño del Circuito**: Estrategias para organizar componentes y cableado para minimizar errores y mejorar la claridad.
+4. **Usando Mejores Herramientas y Componentes**: Recomendaciones de herramientas y componentes especializados como los cables Bojack para mantener las configuraciones de la placa de pruebas ordenadas y organizadas.
+5. **Ajustes Finales y Consejos**: Cortar y ajustar componentes como resistencias para un ajuste perfecto en la placa de pruebas y evitar cortocircuitos y desconexiones.
+6. **Tarea para el Hogar**: Una tarea práctica para crear patrones de parpadeo variados con LEDs, requiriendo la presentación de un video del circuito funcionando y el código correspondiente.
 
 
 **Video**
 
 .. raw:: html
 
-    <iframe width="700" height="500" src="https://www.youtube.com/embed/JUptf53Ni0A?si=o9Q1tTC1X1B9teef" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="700" height="500" src="https://www.youtube.com/embed/JUptf53Ni0A?si=o9Q1tTC1X1B9teef" title="Reproductor de video de YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+

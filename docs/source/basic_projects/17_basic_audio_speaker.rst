@@ -1,53 +1,53 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Hola, ¡bienvenido a la Comunidad de Entusiastas de SunFounder Raspberry Pi & Arduino & ESP32 en Facebook! Sumérgete en el mundo de Raspberry Pi, Arduino y ESP32 con otros entusiastas.
 
-    **Why Join?**
+    **¿Por qué unirse?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Soporte experto**: Resuelve problemas postventa y desafíos técnicos con la ayuda de nuestra comunidad y equipo.
+    - **Aprende y comparte**: Intercambia consejos y tutoriales para mejorar tus habilidades.
+    - **Vistas previas exclusivas**: Obtén acceso anticipado a nuevos anuncios de productos y adelantos.
+    - **Descuentos especiales**: Disfruta de descuentos exclusivos en nuestros productos más nuevos.
+    - **Promociones y sorteos festivos**: Participa en sorteos y promociones de temporada.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 ¿Listo para explorar y crear con nosotros? Haz clic en [|link_sf_facebook|] y únete hoy mismo.
 
 .. _basic_audio_speaker:
 
-Audio Module and Speaker
+Módulo de Audio y Altavoz
 ==========================
 
-Overview
----------------
-In this lesson, you will learn about the Audio Module and Speaker when used with an Arduino Uno board. These components are widely utilized in various electronic applications, including musical toys, DIY sound systems, alarms, and even sophisticated musical instruments. By combining an Arduino with an Audio Module and Speaker, you can create a simple yet effective melody player.
+Descripción general
+---------------------
 
+En esta lección, aprenderás sobre el módulo de audio y el altavoz cuando se usan con una placa Arduino Uno. Estos componentes se utilizan ampliamente en diversas aplicaciones electrónicas, incluyendo juguetes musicales, sistemas de sonido DIY, alarmas e incluso instrumentos musicales sofisticados. Combinando un Arduino con un módulo de audio y un altavoz, puedes crear un reproductor de melodías simple pero efectivo.
 
-Required Components
+Componentes necesarios
 -------------------------
 
-In this project, we need the following components. 
+En este proyecto, necesitamos los siguientes componentes. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí está el enlace: 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nombre	
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN A LOS COMPONENTES
+        - ENLACE DE COMPRA
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -60,48 +60,46 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_audio_speaker`
         - \-
 
-
-Wiring
+Conexión
 ----------------------
 
-As this is a mono amplifier, you can connect pin 8 to the L or R pin of the audio amplifier module.
+Dado que este es un amplificador mono, puedes conectar el pin 8 al pin L o R del módulo amplificador de audio.
 
-The 10K resistor is used to reduce high-frequency noise and lower the audio volume. It forms an RC low-pass filter with the parasitic capacitance of the DAC and audio amplifier. This filter decreases the amplitude of high-frequency signals, effectively reducing high-frequency noise. So, adding the 10K resistor makes the music sound softer and eliminates unwanted high-frequency noise.
+La resistencia de 10K se utiliza para reducir el ruido de alta frecuencia y bajar el volumen del audio. Forma un filtro RC de paso bajo con la capacitancia parásita del DAC y el amplificador de audio. Este filtro disminuye la amplitud de las señales de alta frecuencia, reduciendo efectivamente el ruido de alta frecuencia. Por lo tanto, agregar la resistencia de 10K hace que la música suene más suave y elimina el ruido de alta frecuencia no deseado.
 
 .. image:: img/17-audio_bb.png
     :align: center
     :width: 100%
 
-Schematic Diagram
+Diagrama esquemático
 -----------------------
 
 .. image:: img/17-audio_schematic.png
     :align: center
     :width: 80%
 
-
-Code
+Código
 ---------------
 
 .. note::
 
-    * You can open the file ``17-speaker.ino`` under the path of ``elite-explorer-kit-main\basic_project\17-speaker`` directly.
-    * Or copy this code into Arduino IDE.
+    * Puedes abrir el archivo ``17-speaker.ino`` directamente en la ruta ``elite-explorer-kit-main\basic_project\17-speaker``.
+    * O copia este código en Arduino IDE.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/33b690b5-0be6-434d-83d7-5bfcfce3775e/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
     
-At the time when you finish uploading the codes to the R4 board, you can hear a melody containing seven notes. 
+Al terminar de cargar el código en la placa R4, escucharás una melodía que contiene siete notes.
 
-Code Analysis
+Análisis del Código
 ------------------------
 
-1. Including the pitches library:
-   This library provides the frequency values for various musical notes, allowing you to use musical notation in your code.
+1. Incluir la biblioteca de tonos:
+   Esta biblioteca proporciona los valores de frecuencia para varias notes musicales, permitiendo usar noteción musical en tu código.
 
    .. note::
-      Please place the ``pitches.h`` file in the same directory as the code to ensure proper functioning. |link_pitches|
+      Coloca el archivo ``pitches.h`` en el mismo directorio que el código para asegurar un funcionamiento correcto. |link_pitches|
 
       .. image:: img/16_passive_buzzer_piches.png
 
@@ -109,13 +107,13 @@ Code Analysis
        
       #include "pitches.h"
 
-2. Defining constants and arrays:
+2. Definir constantes y arreglos:
 
-   * ``speakerPin`` is the digital pin on the Arduino where the speaker is connected.
+   * ``speakerPin`` es el pin digital en el Arduino donde se conecta el altavoz.
 
-   * ``melody[]`` is an array that stores the sequence of notes to be played.
+   * ``melody[]`` es un arreglo que almacena la secuencia de notes a reproducir.
 
-   * ``noteDurations[]`` is an array that stores the duration of each note in the melody.
+   * ``noteDurations[]`` es un arreglo que almacena la duración de cada note en la melodía.
 
    .. code-block:: arduino
    
@@ -127,15 +125,15 @@ Code Analysis
         4, 8, 8, 4, 4, 4, 4, 4
       };
 
-3. Playing the melody:
+3. Reproducir la melodía:
 
-   * The ``for`` loop iterates over each note in the melody.
+   * El bucle ``for`` itera sobre cada note de la melodía.
 
-   * The ``tone()`` function plays a note on the spekaer for a specific duration.
+   * La función ``tone()`` reproduce una note en el altavoz por una duración específica.
 
-   * A delay is added between notes to distinguish them.
+   * Se añade una demora entre notes para distinguirlas.
 
-   * The ``noTone()`` function stops the sound.
+   * La función ``noTone()`` detiene el sonido.
 
 
 
@@ -151,7 +149,7 @@ Code Analysis
         }
       }
 
-4. Empty loop function:
-   Since the melody is played only once in the setup, there's no code in the loop function.
+4. Función de bucle vacía:
+   Dado que la melodía se reproduce solo una vez en el setup, no hay código en la función loop.
 
-5. Feel free to experiment with altering the notes and durations in the ``melody[]`` and ``noteDurations[]`` arrays to create your own melodies. If you're interested, there is a GitHub repository (|link_arduino-songs|) that offers Arduino code for playing various songs. While their approach may differ from this project, you can consult their notes and durations for reference.
+5. Siéntete libre de experimentar con la alteración de las notes y duraciones en los arreglos ``melody[]`` y ``noteDurations[]`` para crear tus propias melodías. Si te interesa, hay un repositorio en GitHub (|link_arduino-songs|) que ofrece código Arduino para reproducir varias canciones. Aunque su enfoque puede diferir de este proyecto, puedes consultar sus notes y duraciones como referencia.

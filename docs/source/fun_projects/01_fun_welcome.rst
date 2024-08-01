@@ -1,21 +1,21 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    ¡Hola! ¡Bienvenido a la comunidad de entusiastas de SunFounder Raspberry Pi & Arduino & ESP32 en Facebook! Sumérgete en el mundo de Raspberry Pi, Arduino y ESP32 junto a otros apasionados.
 
-    **Why Join?**
+    **¿Por qué unirse?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Soporte de expertos**: Resuelve problemas postventa y desafíos técnicos con la ayuda de nuestra comunidad y equipo.
+    - **Aprender y compartir**: Intercambia consejos y tutoriales para mejorar tus habilidades.
+    - **Avances exclusivos**: Accede anticipadamente a anuncios de nuevos productos y adelantos exclusivos.
+    - **Descuentos especiales**: Disfruta de descuentos exclusivos en nuestros productos más recientes.
+    - **Promociones festivas y sorteos**: Participa en sorteos y promociones de temporada.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 ¿Listo para explorar y crear con nosotros? Haz clic en [|link_sf_facebook|] y únete hoy mismo!
 
 .. _fun_welcome:
 
-Welcome
-========================
+Bienvenida
+============
 
 .. raw:: html
 
@@ -24,34 +24,35 @@ Welcome
       Your browser does not support the video tag.
    </video>
 
-In this project, we will use a PIR sensor to detect human presence and a speaker to simulate a doorbell, similar to the entrance doorbells in convenience stores.
-When a pedestrian appears within the range of the PIR sensor, the speaker will ring, mimicking a doorbell.
+En este proyecto, utilizaremos un sensor PIR para detectar la presencia humana y un 
+altavoz para simular un timbre, similar a los timbres de entrada en las tiendas de 
+conveniencia. Cuando un peatón aparezca dentro del rango del sensor PIR, el altavoz sonará, imitando un timbre.
 
-**Required Components**
+**Componentes necesarios**
 
-In this project, we need the following components. 
+En este proyecto, necesitamos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nombre
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado desde los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DEL COMPONENTE
+        - ENLACE DE COMPRA
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -67,7 +68,7 @@ You can also buy them separately from the links below.
         - \-
 
 
-**Wiring**
+**Cableado**
 
 .. image:: img/01_welcome_bb.png
     :width: 90%
@@ -77,17 +78,17 @@ You can also buy them separately from the links below.
 
    <br/>
 
-**Schematic**
+**Esquema**
 
 .. image:: img/01_welcome_schematic.png
    :width: 100%
 
-**Code**
+**Código**
 
 .. note::
 
-    * You can open the file ``01_welcome.ino`` under the path of ``elite-explorer-kit-main\fun_project\01_welcome`` directly.
-    * Or copy this code into Arduino IDE.
+    * Puedes abrir el archivo ``01_welcome.ino`` bajo la ruta ``elite-explorer-kit-main\fun_project\01_welcome`` directamente.
+    * O copia este código en Arduino IDE.
 
 .. raw:: html
 
@@ -95,39 +96,40 @@ You can also buy them separately from the links below.
 
 
 
-**How it works?**
+**¿Cómo funciona?**
 
-Here is a step-by-step explanation of the code:
+Aquí hay una explicación paso a paso del código:
 
-1. Include Header Files:
+1. Incluir archivos de cabecera:
 
-   Include two header files, ``analogWave.h`` and ``pitches.h``. The ``analogWave.h`` file contains the definition of the ``analogWave`` class, while ``pitches.h`` contains the definitions of musical notes.
+   Incluye dos archivos de cabecera, ``analogWave.h`` y ``pitches.h``. El archivo ``analogWave.h`` contiene la definición de la clase ``analogWave``, mientras que ``pitches.h`` contiene las definiciones de notes musicales.
 
-2. Instantiate Objects and Define Constants:
+2. Instanciar objetos y definir constantes:
 
-   Create a ``wave`` object using the ``analogWave`` class and define ``PIR_PIN`` as 2, which is the pin connected to the PIR sensor.
+   Crea un objeto ``wave`` usando la clase ``analogWave`` y define ``PIR_PIN`` como 2, que es el pin conectado al sensor PIR.
 
-3. Melody Array:
+3. Array de melodía:
 
-   The ``melody`` array defines a musical melody, with each note followed by a number representing its duration. 
-   Negative numbers represent dotted notes (increasing the duration by 50%).
+   El array ``melody`` define una melodía musical, con cada note seguida de un número que representa su duración.
+   Los números negativos representan notes punteadas (aumentando la duración en un 50%).
 
-4. Global Variables:
+4. Variables globales:
 
-   Define some global variables for sharing data between functions.
+   Define algunas variables globales para compartir datos entre funciones.
 
 5. ``setup()``:
 
-   Initialize ``PIR_PIN`` as an input and set the frequency of the sine wave to 10 Hz using ``wave.sine(10)``.
+   Inicializa ``PIR_PIN`` como entrada y establece la frecuencia de la onda sinusoidal a 10 Hz usando ``wave.sine(10)``.
 
 6. ``loop()``:
 
-   Continuously monitor the value of the PIR sensor.
-   If human presence is detected (pirValue is HIGH), call the ``playMelody()`` function to play the melody and wait for 10 seconds to prevent repetitive playback of the melody.
+   Monitorea continuamente el valor del sensor PIR.
+   Si se detecta presencia humana (pirValue es ALTO), llama a la función ``playMelody()`` para reproducir la melodía y espera 10 segundos para prevenir la reproducción repetitiva de la melodía.
 
 7. ``playMelody()``:
 
-   This function calculates the duration of each note based on the data in the ``melody`` array and plays the corresponding note. There is a brief pause between notes.
-   The function sets the frequency of the waveform using ``wave.freq()`` and controls the duration of the notes and pauses between notes using the ``delay()`` function.
+   Esta función calcula la duración de cada note basada en los datos en el array ``melody`` y reproduce la note correspondiente. Hay una breve pausa entre notes.
+   La función establece la frecuencia de la forma de onda usando ``wave.freq()`` y controla la duración de las notes y las pausas entre notes usando la función ``delay()``.
 
-   Note: Ensure that the ``pitches.h`` header file indeed exists before running this code.
+   note: Asegúrate de que el archivo de cabecera ``pitches.h`` exista antes de ejecutar este código.
+

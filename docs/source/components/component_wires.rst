@@ -1,45 +1,41 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    ¡Hola! ¡Bienvenido a la comunidad de entusiastas de SunFounder Raspberry Pi & Arduino & ESP32 en Facebook! Sumérgete en el mundo de Raspberry Pi, Arduino y ESP32 junto a otros apasionados.
 
-    **Why Join?**
+    **¿Por qué unirse?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Soporte de expertos**: Resuelve problemas postventa y desafíos técnicos con la ayuda de nuestra comunidad y equipo.
+    - **Aprender y compartir**: Intercambia consejos y tutoriales para mejorar tus habilidades.
+    - **Avances exclusivos**: Accede anticipadamente a anuncios de nuevos productos y adelantos exclusivos.
+    - **Descuentos especiales**: Disfruta de descuentos exclusivos en nuestros productos más recientes.
+    - **Promociones festivas y sorteos**: Participa en sorteos y promociones de temporada.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 ¿Listo para explorar y crear con nosotros? Haz clic en [|link_sf_facebook|] y únete hoy mismo.
 
 .. _cpn_wires:
 
-Jumper Wires
-=====================
+Cables de Puente
+===================
 
-Wires that connect two terminals are called jumper wires. There are
-various kinds of jumper wires. Here we focus on those used in
-breadboard. Among others, they are used to transfer electrical signals
-from anywhere on the breadboard to the input/output pins of a
-microcontroller.
+Los cables que conectan dos terminales se llaman cables de puente. Existen varios tipos de 
+cables de puente. Aquí nos enfocamos en los que se usan en la placa de pruebas. Entre otras 
+cosas, se utilizan para transferir señales eléctricas desde cualquier lugar de la placa de 
+pruebas a los pines de entrada/salida de un microcontrolador.
 
-Jump wires are fitted by inserting their "end connectors" into the slots
-provided in the breadboard, beneath whose surface there are a few sets
-of parallel plates that connect the slots in groups of rows or columns
-depending on the area. The "end connectors" are inserted into the
-breadboard, without soldering, in the particular slots that need to be
-connected in the specific prototype.
+Los cables de puente se colocan insertando sus "conectores terminales" en las ranuras 
+provistas en la placa de pruebas, debajo de cuya superficie hay varios conjuntos de placas 
+paralelas que conectan las ranuras en grupos de filas o columnas según el área. Los 
+"conectores terminales" se insertan en la placa de pruebas, sin soldadura, en las ranuras 
+particulares que necesitan conectarse en el prototipo específico.
 
-There are three types of jumper wire: Female-to-Female, Male-to-Male,
-and Male-to-Female. The reason we call it Male-to-Female is because it
-has the outstanding tip in one end as well as a sunk female end.
-Male-to-Male means both side are male and Female-to-Female means both
-ends are female.
+Hay tres tipos de cables de puente: Hembra a Hembra, Macho a Macho y Macho a Hembra. La razón 
+por la que se llama Macho a Hembra es porque tiene la punta saliente en un extremo y un 
+extremo hembra hundido en el otro. Macho a Macho significa que ambos lados son macho y Hembra 
+a Hembra significa que ambos extremos son hembra.
 
 .. image:: img/Jumper_Wires.png
 
 
-More than one type of them may be used in a project. The color of the
-jump wires is different but it doesn’t mean their function is different
-accordingly; it's just designed so to better identify the connection
-between each circuit.
+En un proyecto se puede usar más de un tipo de ellos. El color de los cables de puente es 
+diferente, pero no significa que su función sea diferente; está diseñado así para identificar 
+mejor la conexión entre cada circuito.

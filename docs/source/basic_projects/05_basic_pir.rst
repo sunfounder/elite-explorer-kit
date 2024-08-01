@@ -1,57 +1,57 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    ¡Hola, bienvenido a la Comunidad de Entusiastas de SunFounder Raspberry Pi, Arduino y ESP32 en Facebook! Sumérgete más profundamente en Raspberry Pi, Arduino y ESP32 con otros entusiastas.
 
-    **Why Join?**
+    **¿Por qué unirse?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Soporte experto**: Resuelve problemas postventa y desafíos técnicos con la ayuda de nuestra comunidad y equipo.
+    - **Aprende y comparte**: Intercambia consejos y tutoriales para mejorar tus habilidades.
+    - **Avances exclusivos**: Obtén acceso anticipado a nuevos anuncios de productos y adelantos.
+    - **Descuentos especiales**: Disfruta de descuentos exclusivos en nuestros productos más nuevos.
+    - **Promociones festivas y sorteos**: Participa en sorteos y promociones de temporada.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 ¿Listo para explorar y crear con nosotros? Haz clic en [|link_sf_facebook|] y únete hoy mismo!
 
 .. _basic_pir:
 
-PIR Motion Sensor Module
-==========================
+Módulo Sensor de Movimiento PIR
+======================================
 
 .. https://docs.sunfounder.com/projects/kepler-kit/en/latest/cproject/ar_pir.html#ar-pir
 
 
-Overview
----------------
-
-In this lesson, you will learn about PIR motion sensor module. The Passive Infrared(PIR) Motion Sensor is a sensor that detects motion. It is commonly used in security systems and automatic lighting systems. The sensor has two slots that detect infrared radiation. When an object, such as a person, passes in front of the sensor, it detects a change in the amount of infrared radiation and triggers an output signal.
-
-
-Required Components
+Descripción general
 -------------------------
 
-In this project, we need the following components. 
+En esta lección, aprenderás sobre el módulo sensor de movimiento PIR. El sensor de movimiento pasivo infrarrojo (PIR) es un sensor que detecta movimiento. Se usa comúnmente en sistemas de seguridad y sistemas de iluminación automática. El sensor tiene dos ranuras que detectan la radiación infrarroja. Cuando un objeto, como una persona, pasa frente al sensor, detecta un cambio en la cantidad de radiación infrarroja y activa una señal de salida.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+
+Componentes necesarios
+-------------------------
+
+En este proyecto, necesitamos los siguientes componentes.
+
+Es definitivamente conveniente comprar un kit completo, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nombre
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado desde los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DEL COMPONENTE
+        - ENLACE DE COMPRA
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -62,7 +62,7 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_pir`
         - |link_pir_buy|
 
-Wiring
+Cableado
 ----------------------
 
 .. image:: img/05-pir_bb.png
@@ -70,7 +70,7 @@ Wiring
    :width: 100%
 
 
-Schematic Diagram
+Diagrama esquemático
 -----------------------
 
 .. image:: img/05-pir_schematic.png
@@ -78,20 +78,20 @@ Schematic Diagram
    :width: 50%
 
 
-Code
+Código
 ---------------
 
 .. note::
 
-    * You can open the file ``05-pir_motion_sensor.ino`` under the path of ``elite-explorer-kit-main\basic_project\05-pir_motion_sensor`` directly.
-    * Or copy this code into Arduino IDE.
+    * Puedes abrir el archivo ``05-pir_motion_sensor.ino`` en la ruta ``elite-explorer-kit-main\basic_project\05-pir_motion_sensor`` directamente.
+    * O copiar este código en Arduino IDE.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/d9fc9198-1538-413d-b501-2cddc8d7cfe6/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After uploading the code to the Arduino Uno board, you can open the serial monitor to observe the sensor's output. When the PIR (passive infrared) motion sensor detects movement, the serial monitor will display the message "Somebody here!" to indicate that motion has been detected. If no motion is detected, the message "Monitoring..." will be shown instead.
+Después de subir el código a la placa Arduino Uno, puedes abrir el monitor serial para observar la salida del sensor. Cuando el sensor de movimiento PIR (infrarrojo pasivo) detecta movimiento, el monitor serial mostrará el mensaje "¡Alguien está aquí!" para indicar que se ha detectado movimiento. Si no se detecta movimiento, se mostrará el mensaje "Monitoreando..." en su lugar.
 
-The PIR sensor outputs a digital HIGH or LOW signal, corresponding to detected or undetected motion, respectively. Unlike an analog sensor that provides a range of values, the digital output from this PIR sensor will either be HIGH (typically represented as '1') or LOW (typically represented as '0').
+El sensor PIR emite una señal digital ALTA o BAJA, correspondiente a movimiento detectado o no detectado, respectivamente. A diferencia de un sensor analógico que proporciona un rango de valores, la salida digital de este sensor PIR será ALTA (típicamente representada como '1') o BAJA (típicamente representada como '0').
 
-Note that the actual sensitivity and range of detection can vary based on the PIR sensor's characteristics and the environmental conditions. Therefore, it is advisable to calibrate the sensor according to your specific needs.
+Ten en cuenta que la sensibilidad y el rango de detección reales pueden variar según las características del sensor PIR y las condiciones ambientales. Por lo tanto, es recomendable calibrar el sensor según tus necesidades específicas.

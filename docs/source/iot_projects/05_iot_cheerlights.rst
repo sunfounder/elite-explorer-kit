@@ -1,16 +1,16 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    ¡Hola! Bienvenido a la Comunidad de Entusiastas de SunFounder para Raspberry Pi, Arduino y ESP32 en Facebook. Sumérgete en el mundo de Raspberry Pi, Arduino y ESP32 junto a otros entusiastas.
 
-    **Why Join?**
+    **¿Por qué unirse?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Soporte Experto**: Resuelve problemas postventa y desafíos técnicos con la ayuda de nuestra comunidad y equipo.
+    - **Aprende y Comparte**: Intercambia consejos y tutoriales para mejorar tus habilidades.
+    - **Avances Exclusivos**: Obtén acceso anticipado a anuncios de nuevos productos y adelantos exclusivos.
+    - **Descuentos Especiales**: Disfruta de descuentos exclusivos en nuestros productos más recientes.
+    - **Promociones Festivas y Sorteos**: Participa en sorteos y promociones festivas.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 ¿Listo para explorar y crear con nosotros? Haz clic en [|link_sf_facebook|] y únete hoy mismo.
 
 .. _iot_cheerlights:
 
@@ -24,35 +24,35 @@ CheerLights
       Your browser does not support the video tag.
    </video>
 
-CheerLights is a global network of synchronized lights that can be controlled by anyone. Join the |link_cheerlights| LED color-changing community, which allows LEDs around the world to change colors simultaneously.  Place your LEDs in a corner of your office to remind yourself that you are not alone.
+CheerLights es una red global de luces sincronizadas que pueden ser controladas por cualquiera. Únete a la comunidad de cambio de color de LEDs de |link_cheerlights|, que permite a los LEDs de todo el mundo cambiar de color simultáneamente. Coloca tus LEDs en una esquina de tu oficina para recordarte que no estás solo.
 
-In this case, we also utilize MQTT, but instead of publishing our own messages, we subscribe to the "cheerlights" topic. This allows us to receive messages sent by others to the "cheerlights" topic and use that information to change the color of our LED strip accordingly.
+En este caso, también utilizamos MQTT, pero en lugar de publicar nuestros propios mensajes, nos suscribimos al tema "cheerlights". Esto nos permite recibir mensajes enviados por otros al tema "cheerlights" y usar esa información para cambiar el color de nuestra tira de LEDs en consecuencia.
 
-**Required Components**
+**Componentes Requeridos**
 
-In this project, we need the following components. 
+En este proyecto, necesitamos los siguientes componentes. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí está el enlace: 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nombre	
+        - Ítems en este Kit
+        - Enlace
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado desde los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - Introducción del Componente
+        - Enlace de Compra
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -61,13 +61,13 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_ws2812`
         - |link_ws2812_buy|
 
-**Wiring**
+**Conexiones**
 
 .. image:: img/05_cheerlight_bb.png
     :width: 100%
     :align: center
 
-**Schematic**
+**Esquemático**
 
 .. image:: img/05_cheerlight_schematic.png
     :width: 50%
@@ -77,30 +77,30 @@ You can also buy them separately from the links below.
 
    <br/>
 
-**Install the Library**
+**Instalar la Biblioteca**
 
-To install the library, use the Arduino Library Manager and search for "ArduinoMqttClient" and "FastLED" and install them.
+Para instalar la biblioteca, utiliza el Administrador de Bibliotecas de Arduino y busca "ArduinoMqttClient" y "FastLED" e instálalas.
 
-``ArduinoMqttClient.h``: Used for MQTT communication.
+``ArduinoMqttClient.h``: Utilizada para la comunicación MQTT.
 
-``FastLED.h``: Used to drive the RGB LED Strip.
+``FastLED.h``: Utilizada para controlar la tira de LEDs RGB.
 
 .. important::
-    With the release of |link_fastled_3_7_0|, the FastLED library now officially supports the Arduino UNO R4. Therefore, you no longer need to manually install the development version. Simply update or install the FastLED library using the Arduino Library Manager.
+    Con el lanzamiento de |link_fastled_3_7_0|, la biblioteca FastLED ahora admite oficialmente el Arduino UNO R4. Por lo tanto, ya no necesitas instalar manualmente la versión de desarrollo. Simplemente actualiza o instala la biblioteca FastLED utilizando el Administrador de Bibliotecas de Arduino.
 
 .. warning::
-    **[Outdated]** Since the |link_FastLED_lib| library has not officially released a version supporting Arduino R4 yet, you'll need to download :download:`the latest development code of the FastLED library <https://codeload.github.com/FastLED/FastLED/zip/refs/heads/master>` and overwrite the existing FastLED library files. For detailed instructions on how to do this, please refer to the :ref:`manual_install_lib` section. (This note will be retracted when the FastLED library officially releases an update that supports the Arduino UNO R4.)
+    **[Desactualizado]** Dado que la biblioteca |link_FastLED_lib| aún no ha lanzado una versión que admita oficialmente el Arduino R4, necesitarás descargar :download:`el último código de desarrollo de la biblioteca FastLED <https://codeload.github.com/FastLED/FastLED/zip/refs/heads/master>` y sobrescribir los archivos existentes de la biblioteca FastLED. Para obtener instrucciones detalladas sobre cómo hacer esto, consulta la sección :ref:`manual_install_lib`. (Esta note se retirará cuando la biblioteca FastLED lance oficialmente una actualización que admita el Arduino UNO R4.)
 
-**Run the Code**
+**Ejecutar el Código**
 
-
-.. note::
-
-    * You can open the file ``05_cheerlight.ino`` under the path of ``elite-explorer-kit-main\iot_project\05_cheerlight`` directly.
-    * Or copy this code into Arduino IDE.
 
 .. note::
-    In the code, SSID and password are stored in ``arduino_secrets.h``. Before uploading this example, you need to modify them with your own WiFi credentials. Additionally, for security purposes, ensure that this information is kept confidential when sharing or storing the code.
+
+    * Puedes abrir el archivo ``05_cheerlight.ino`` bajo la ruta ``elite-explorer-kit-main\iot_project\05_cheerlight`` directamente.
+    * O copia este código en el IDE de Arduino.
+
+.. note::
+    En el código, SSID y contraseña se almacenan en ``arduino_secrets.h``. Antes de subir este ejemplo, necesitas modificarlos con tus propias credenciales de WiFi. Adicionalmente, por motivos de seguridad, asegúrate de mantener esta información confidencial al compartir o almacenar el código.
 
 .. raw:: html
 
@@ -109,58 +109,59 @@ To install the library, use the Arduino Library Manager and search for "ArduinoM
 
 
 
-**Control global @CheerLights devices**
+**Controla dispositivos globales @CheerLights**
 
-#. Join the |link_discord_server| and utilize the CheerLights bot to set the color. Simply type ``/cheerlights`` in any of the channels on the **CheerLights Discord Server** to activate the bot.
+#. Únete al |link_discord_server| y utiliza el bot de CheerLights para configurar el color. Simplemente escribe ``/cheerlights`` en cualquiera de los canales del **Servidor de Discord de CheerLights** para activar el bot.
 
    .. image:: img/05_iot_cheerlights_1.png
 
-#. Follow the instructions provided by the bot to set the color. This will allow you to control CheerLights devices globally.
+#. Sigue las instrucciones proporcionadas por el bot para configurar el color. Esto te permitirá controlar los dispositivos de CheerLights a nivel global.
 
    .. image:: img/05_iot_cheerlights_2.png
 
-**How it works?**
+**¿Cómo funciona?**
 
-Here are the main parts of the code and explanations of their functions:
+Aquí están las principales partes del código y sus explicaciones:
 
-1. Include the required libraries:
+1. Incluir las bibliotecas requeridas:
 
-   * ``WiFiS3.h``: Used for handling Wi-Fi connections.
-   * ``ArduinoMqttClient.h``: Used for handling MQTT connections.
-   * ``FastLED.h``: Used for controlling NeoPixel LED strips.
+   * ``WiFiS3.h``: Utilizada para manejar las conexiones Wi-Fi.
+   * ``ArduinoMqttClient.h``: Utilizada para manejar las conexiones MQTT.
+   * ``FastLED.h``: Utilizada para controlar las tiras de LEDs NeoPixel.
 
-2. Define some constants:
+2. Definir algunas constantes:
 
-   * ``NUM_LEDS``: The number of LEDs on the LED strip.
-   * ``DATA_PIN``: The data pin connected to Arduino for controlling the LED strip.
-   * ``arduino_secrets.h``: Header file containing Wi-Fi network name and password to protect sensitive information.
-   * ``broker``: Address of the MQTT server.
-   * ``port``: Port of the MQTT server.
-   * ``topic``: The MQTT topic to subscribe to.
+   * ``NUM_LEDS``: El número de LEDs en la tira de LEDs.
+   * ``DATA_PIN``: El pin de datos conectado a Arduino para controlar la tira de LEDs.
+   * ``arduino_secrets.h``: Archivo de encabezado que contiene el nombre y la contraseña de la red Wi-Fi para proteger la información sensible.
+   * ``broker``: Dirección del servidor MQTT.
+   * ``port``: Puerto del servidor MQTT.
+   * ``topic``: El tema MQTT al que suscribirse.
 
-3. Define some global variables:
+3. Definir algunas variables globales:
 
-   * ``CRGB leds[NUM_LEDS]``: An array to store LED color data.
-   * ``colorName``: An array of color names supported by the CheerLights project.
-   * ``colorRGB``: An array of RGB color codes corresponding to color names.
+   * ``CRGB leds[NUM_LEDS]``: Una matriz para almacenar los datos de color de los LEDs.
+   * ``colorName``: Una matriz de nombres de colores compatibles con el proyecto CheerLights.
+   * ``colorRGB``: Una matriz de códigos de color RGB correspondientes a los nombres de colores.
 
-4. ``setup()`` function:
+4. Función ``setup()``:
 
-   * Initialize serial communication.
-   * Check if the Wi-Fi module is present and output its firmware version.
-   * Attempt to connect to the Wi-Fi network; if it fails, wait 10 seconds and retry.
-   * Upon successful connection, connect to the MQTT broker (server) and subscribe to the specified topic.
-   * Initialize the NeoPixel LED strip.
+   * Inicializa la comunicación serial.
+   * Verifica si el módulo Wi-Fi está presente y muestra su versión de firmware.
+   * Intenta conectarse a la red Wi-Fi; si falla, espera 10 segundos y reintenta.
+   * Una vez conectado, conéctate al broker MQTT (servidor) y suscríbete al tema especificado.
+   * Inicializa la tira de LEDs NeoPixel.
 
-5. ``loop()`` function:
+5. Función ``loop()``:
 
-   * Periodically call the ``mqttClient.poll()`` function to receive MQTT messages and send MQTT keep-alive signals.
-   * Add a 5-second delay to avoid continuous connection.
+   * Llama periódicamente a la función ``mqttClient.poll()`` para recibir mensajes MQTT y enviar señales de mantenimiento de conexión MQTT.
+   * Agrega un retraso de 5 segundos para evitar una conexión continua.
 
-6. ``printWifiData()`` and ``printCurrentNet()`` functions are used to output Wi-Fi network and connection information.
+6. Las funciones ``printWifiData()`` y ``printCurrentNet()`` se utilizan para mostrar información sobre la red Wi-Fi y la conexión.
 
-7. ``printMacAddress()`` function is used to print the MAC address in hexadecimal format.
+7. La función ``printMacAddress()`` se utiliza para mostrar la dirección MAC en formato hexadecimal.
 
-8. ``onMqttMessage()`` function is a callback function triggered when an MQTT message is received. It outputs the received topic and message content, converting the message content to lowercase. If the topic is "cheerlights," it calls the ``setColor()`` function to set the LED strip color.
+8. La función ``onMqttMessage()`` es una función de callback que se activa cuando se recibe un mensaje MQTT. Muestra el tema del mensaje recibido y su contenido, convirtiendo el contenido del mensaje a minúsculas. Si el tema es "cheerlights", llama a la función ``setColor()`` para establecer el color de la tira de LEDs.
 
-9. ``setColor()`` function takes a color name as a parameter, then looks for a matching color in the ``colorName`` array. If a matching color is found, it sets the LED strip's color to the corresponding RGB value and updates the LED strip's color using the ``FastLED.show()`` function.
+9. La función ``setColor()`` toma un nombre de color como parámetro, luego busca un color coincidente en la matriz ``colorName``. Si se encuentra un color coincidente, establece el color de la tira de LEDs al valor RGB correspondiente y actualiza el color de la tira de LEDs usando la función ``FastLED.show()``.
+

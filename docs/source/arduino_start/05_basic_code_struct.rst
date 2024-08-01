@@ -1,68 +1,68 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    ¡Hola, bienvenido a la Comunidad de Entusiastas de SunFounder Raspberry Pi, Arduino y ESP32 en Facebook! Sumérgete más profundamente en Raspberry Pi, Arduino y ESP32 con otros entusiastas.
 
-    **Why Join?**
+    **¿Por qué unirse?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Soporte experto**: Resuelve problemas postventa y desafíos técnicos con la ayuda de nuestra comunidad y equipo.
+    - **Aprende y comparte**: Intercambia consejos y tutoriales para mejorar tus habilidades.
+    - **Avances exclusivos**: Obtén acceso anticipado a nuevos anuncios de productos y adelantos.
+    - **Descuentos especiales**: Disfruta de descuentos exclusivos en nuestros productos más nuevos.
+    - **Promociones festivas y sorteos**: Participa en sorteos y promociones de temporada.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 ¿Listo para explorar y crear con nosotros? Haz clic en [|link_sf_facebook|] y únete hoy mismo!
 
-Arduino Program Structure
-===========================
+Estructura del programa Arduino
+=======================================
 
-Let's take a look at the new sketch file. Although it has a few lines of code itself, it is actually an "empty" sketch. 
-Uploading this sketch to the development board will cause nothing to happen.
+Vamos a echar un vistazo al nuevo archivo de sketch. Aunque tiene unas pocas líneas de código, en realidad es un sketch "vacío". 
+Subir este sketch a la placa de desarrollo no causará ningún efecto.
 
 .. code-block:: C
 
     void setup() {
-    // put your setup code here, to run once:
+    // pon tu código de configuración aquí, para ejecutarse una vez:
 
     }
 
     void loop() {
-    // put your main code here, to run repeatedly:
+    // pon tu código principal aquí, para ejecutarse repetidamente:
 
     }
 
-If we remove ``setup()`` and ``loop()`` and make the sketch a real ``blank`` file, you will find that it does not pass the verification. 
-They are the equivalent of the human skeleton, and they are indispensable.
+Si eliminamos ``setup()`` y ``loop()`` y hacemos que el sketch sea un archivo realmente ``en blanco``, verás que no pasa la verificación. 
+Son el equivalente al esqueleto humano y son indispensables.
 
-During sketching, ``setup()`` is run first, and the code inside it (inside ``{}``) is run after the board is powered up or reset and only once. 
-``loop()`` is used to write the main feature, and the code inside it will run in a loop after ``setup()`` is executed.
+Durante la ejecución del sketch, primero se ejecuta ``setup()``, y el código dentro de ella (dentro de ``{}``) se ejecuta después de que la placa esté encendida o reiniciada, y solo una vez. 
+``loop()`` se usa para escribir la función principal, y el código dentro de ella se ejecutará en un bucle después de que ``setup()`` se haya ejecutado.
 
-To better understand setup() and loop(), let's use four sketches. Their purpose is to make the on-board LED of the Arduino blink. Please run each experiment in turn and record their specific effects.
+Para entender mejor ``setup()`` y ``loop()``, vamos a utilizar cuatro sketches. Su propósito es hacer que el LED a bordo del Arduino parpadee. Por favor, ejecuta cada experimento por turno y registra sus efectos específicos.
 
-* Sketch 1: Make the on-board LED blink continuously.
+* Sketch 1: Hacer que el LED a bordo parpadee continuamente.
 
 .. code-block:: C
     :emphasize-lines: 8,9,10,11
 
     void setup() {
-        // put your setup code here, to run once:
+        // pon tu código de configuración aquí, para ejecutarse una vez:
         pinMode(13,OUTPUT); 
     }
 
     void loop() {
-        // put your main code here, to run repeatedly:
+        // pon tu código principal aquí, para ejecutarse repetidamente:
         digitalWrite(13,HIGH);
         delay(500);
         digitalWrite(13,LOW);
         delay(500);
     }
 
-* Sketch 2: Make the on-board LED blink only once. 
+* Sketch 2: Hacer que el LED a bordo parpadee solo una vez. 
 
 .. code-block:: C
     :emphasize-lines: 4,5,6,7
 
     void setup() {
-        // put your setup code here, to run once:
+        // pon tu código de configuración aquí, para ejecutarse una vez:
         pinMode(13,OUTPUT);
         digitalWrite(13,HIGH);
         delay(500);
@@ -71,16 +71,16 @@ To better understand setup() and loop(), let's use four sketches. Their purpose 
     }
 
     void loop() {
-        // put your main code here, to run repeatedly:
+        // pon tu código principal aquí, para ejecutarse repetidamente:
     }
 
-* Sketch 3: Make the on-board LED blink slowly once and then blink quickly. 
+* Sketch 3: Hacer que el LED a bordo parpadee lentamente una vez y luego parpadee rápidamente. 
 
 .. code-block:: C
     :emphasize-lines: 4,5,6,7,12,13,14,15
 
     void setup() {
-        // put your setup code here, to run once:
+        // pon tu código de configuración aquí, para ejecutarse una vez:
         pinMode(13,OUTPUT);
         digitalWrite(13,HIGH);
         delay(1000);
@@ -89,20 +89,20 @@ To better understand setup() and loop(), let's use four sketches. Their purpose 
     }
 
     void loop() {
-        // put your main code here, to run repeatedly:
+        // pon tu código principal aquí, para ejecutarse repetidamente:
         digitalWrite(13,HIGH);
         delay(200);
         digitalWrite(13,LOW);
         delay(200);
     }    
 
-* Sketch 4: Report an error.
+* Sketch 4: Reportar un error.
 
 .. code-block:: C
     :emphasize-lines: 6,7,8,9
 
     void setup() {
-        // put your setup code here, to run once:
+        // pon tu código de configuración aquí, para ejecutarse una vez:
         pinMode(13,OUTPUT);
     }
 
@@ -112,17 +112,15 @@ To better understand setup() and loop(), let's use four sketches. Their purpose 
     delay(1000);
 
     void loop() {
-        // put your main code here, to run repeatedly:
+        // pon tu código principal aquí, para ejecutarse repetidamente:
     }    
 
-With the help of these sketches, we can summarize several features of ``setup-loop``.
+Con la ayuda de estos sketches, podemos resumir varias características de ``setup-loop``.
 
-* ``loop()`` will be run repeatedly after the board is powered up. 
-* ``setup()`` will run only once after the board is powered up. 
-* After the board is powered up, ``setup()`` will run first, followed by ``loop()``. 
-* The code needs to be written within the ``{}`` scope of ``setup()`` or ``loop()``, out of the framework will be an error.
+* ``loop()`` se ejecutará repetidamente después de que la placa esté encendida. 
+* ``setup()`` se ejecutará solo una vez después de que la placa esté encendida. 
+* Después de que la placa esté encendida, ``setup()`` se ejecutará primero, seguido de ``loop()``. 
+* El código debe escribirse dentro del alcance de ``{}`` de ``setup()`` o ``loop()``, fuera del marco será un error.
 
 .. note::  
-    Statements such as ``digitalWrite(13,HIGH)`` are used to control the on-board LED, and we will talk about their usage in detail in later chapters.
-
-
+    Declaraciones como ``digitalWrite(13,HIGH)`` se utilizan para controlar el LED a bordo, y hablaremos sobre su uso en detalle en capítulos posteriores.

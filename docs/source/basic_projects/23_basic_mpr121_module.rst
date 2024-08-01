@@ -1,16 +1,16 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    ¡Hola! Bienvenido a la Comunidad de Entusiastas de SunFounder Raspberry Pi & Arduino & ESP32 en Facebook. Sumérgete en el mundo de Raspberry Pi, Arduino y ESP32 con otros entusiastas.
 
-    **Why Join?**
+    **¿Por qué unirse?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Soporte experto**: Resuelve problemas postventa y desafíos técnicos con la ayuda de nuestra comunidad y equipo.
+    - **Aprende y comparte**: Intercambia consejos y tutoriales para mejorar tus habilidades.
+    - **Vistas previas exclusivas**: Obtén acceso anticipado a nuevos anuncios de productos y adelantos.
+    - **Descuentos especiales**: Disfruta de descuentos exclusivos en nuestros productos más nuevos.
+    - **Promociones y sorteos festivos**: Participa en sorteos y promociones de temporada.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 ¿Listo para explorar y crear con nosotros? Haz clic en [|link_sf_facebook|] y únete hoy mismo.
 
 .. _basic_mpr121:
 
@@ -20,37 +20,37 @@ MPR121
 .. https://docs.sunfounder.com/projects/vincent-kit/en/latest/arduino/2.24_mpr121_module.html#ar-mpr121
 
 
-Overview
----------------
+Descripción general
+---------------------
 
-In this lesson, you will learn how to use MPR121. It's a good option when you want to add a lot of touch switches to your project. The electrode of MPR121 can be extended with a conductor. If you connect a wire to a banana, you can turn the banana into a touch switch, thus realizing projects such as fruit piano.
+En esta lección, aprenderás a usar el MPR121. Es una buena opción cuando deseas agregar muchos interruptores táctiles a tu proyecto. El electrodo del MPR121 se puede extender con un conductor. Si conectas un cable a un plátano, puedes convertir el plátano en un interruptor táctil, realizando así proyectos como un piano de frutas.
 
-Required Components
--------------------------
+Componentes necesarios
+---------------------------
 
-In this project, we need the following components. 
+En este proyecto, necesitamos los siguientes componentes. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí está el enlace: 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nombre	
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN A LOS COMPONENTES
+        - ENLACE DE COMPRA
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -61,32 +61,32 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_mpr121`
         - \-
 
-Wiring
+Conexión
 ----------------------
 
-In this example, we insert MPR121 into the breadboard. Get the GND of MPR121 connected to GND, 3.3V to 3V3, IRQ to the digital pin 2, SCL to the pin SCL(A5), and SDA to the pin SDA(A4). There are 12 electrodes for touch sensing. 
+En este ejemplo, insertamos el MPR121 en la placa de pruebas. Conecta el GND del MPR121 a GND, 3.3V a 3V3, IRQ al pin digital 2, SCL al pin SCL (A5) y SDA al pin SDA (A4). Hay 12 electrodos para la detección táctil. 
 
 .. note::
-    MPR121 is powered by 3.3V, not 5V.
+    El MPR121 funciona con 3.3V, no con 5V.
 
 .. image:: img/23-mpr121_bb.png
     :align: center
     :width: 70%
 
-Schematic Diagram
-----------------------
+Diagrama esquemático
+-----------------------
 
 .. image:: img/23_mpr121_schematic.png
    :align: center
    :width: 70%
 
-Code
+Código
 --------
 
 .. note::
 
-    * You can open the file ``23-mpr121.ino`` under the path of ``elite-explorer-kit-main\basic_project\23-mpr121`` directly.
-    * The ``Adafruit MPR121`` library is used here, you can install it from the **Library Manager**.
+    * Puedes abrir el archivo ``23-mpr121.ino`` directamente en la ruta ``elite-explorer-kit-main\basic_project\23-mpr121``.
+    * La biblioteca ``Adafruit MPR121`` se utiliza aquí, puedes instalarla desde el **Administrador de Bibliotecas**.
 
         .. image:: img/22_mpr121_lib.png
             :align: center
@@ -95,25 +95,25 @@ Code
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/de0aa390-de85-43ab-87f7-f380c67c65e8/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After uploading the code to the UNO board, the touch state of pins MPR121 "1" and "0" will be recorded in a 12-bit boolean array. This array will then be printed on the serial monitor.
+Después de cargar el código en la placa UNO, el estado táctil de los pines MPR121 "1" y "0" se registrará en una matriz booleana de 12 bits. Esta matriz se imprimirá luego en el monitor serial.
 
-Code Analysis
+Análisis del código
 --------------------
-This code facilitates communication and operation of the MPR121 touch sensor. It can detect the status of touch electrodes and print information about touched or released electrodes on the serial interface. If detailed sensor data is required, the relevant code can be uncommented.
+Este código facilita la comunicación y operación del sensor táctil MPR121. Puede detectar el estado de los electrodos táctiles e imprimir información sobre los electrodos tocados o liberados en la interfaz serial. Si se requieren datos detallados del sensor, se puede descomentar el código relevante.
 
-Here's an analysis of the code:
+Aquí tienes un análisis del código:
 
-#. Import Libraries:
+#. Importar bibliotecas:
 
    .. code-block:: arduino
 
        #include <Wire.h>
        #include "Adafruit_MPR121.h"
 
-   * ``Wire.h``: Used for I2C communication.
-   * ``Adafruit_MPR121.h``: Adafruit's MPR121 library for operating the MPR121 touch sensor.
+   * ``Wire.h``: Utilizada para la comunicación I2C.
+   * ``Adafruit_MPR121.h``: Biblioteca MPR121 de Adafruit para operar el sensor táctil MPR121.
 
-#. Define the ``_BV`` Macro:
+#. Definir la macro ``_BV``:
 
    .. code-block:: arduino
 
@@ -121,33 +121,33 @@ Here's an analysis of the code:
        #define _BV(bit) (1 << (bit)) 
        #endif
    
-   ``_BV(bit)`` defines a macro that converts a given bit into the corresponding binary value, similar to 1 << bit.
+   ``_BV(bit)`` define una macro que convierte un bit dado en el valor binario correspondiente, similar a 1 << bit.
 
-#. Initialize ``Adafruit_MPR121`` Class Instance:
+#. Inicializar la instancia de la clase ``Adafruit_MPR121``:
 
    .. code-block:: arduino
 
        Adafruit_MPR121 cap = Adafruit_MPR121();
 
-   Create an instance of the ``Adafruit_MPR121`` class named ``cap``. The ``cap`` object will be used to communicate with and operate the MPR121 touch sensor.
+   Crear una instancia de la clase ``Adafruit_MPR121`` llamada ``cap``. El objeto ``cap`` se utilizará para comunicarse y operar el sensor táctil MPR121.
 
-#. ``setup()`` Function:
+#. Función ``setup()``:
 
-   Initialize serial communication at a baud rate of 9600. then initialize the MPR121 touch sensor with the default I2C address of 0x5A. If initialization fails, print an error message and enter an infinite loop.
+   Inicializar la comunicación serial a una velocidad de 9600 baudios, luego inicializar el sensor táctil MPR121 con la dirección I2C predeterminada de 0x5A. Si la inicialización falla, imprimir un mensaje de error y entrar en un bucle infinito.
 
    .. code-block:: arduino
 
        void setup() {
            Serial.begin(9600);
            
-           while (!Serial) { // needed to keep leonardo/micro from starting too fast!
+           while (!Serial) { // Necesario para evitar que Leonardo/Micro arranque demasiado rápido
                delay(10);
            }
            
            Serial.println("Adafruit MPR121 Capacitive Touch sensor test"); 
            
-           // Default address is 0x5A, if tied to 3.3V its 0x5B
-           // If tied to SDA its 0x5C and if SCL then 0x5D
+           // La dirección predeterminada es 0x5A, si está conectado a 3.3V es 0x5B
+           // Si está conectado a SDA es 0x5C y si es a SCL es 0x5D
            if (!cap.begin(0x5A)) {
                Serial.println("MPR121 not found, check wiring?");
                while (1);
@@ -155,21 +155,20 @@ Here's an analysis of the code:
            Serial.println("MPR121 found!");
        }
 
-#. ``loop()`` Function:
+#. Función ``loop()``:
 
-   * Obtain the current touch status, returned as a 16-bit integer.
-
+   * Obtener el estado táctil actual, devuelto como un entero de 16 bits.
 
      .. code-block:: arduino
 
          currtouched = cap.touched();
 
-   * Iterate through the status of 12 electrodes (numbered from 0 to 11).
+   * Iterar a través del estado de 12 electrodos (numerados del 0 al 11).
 
      .. code-block:: arduino
 
          for (uint8_t i=0; i<12; i++) {
-             // it if *is* touched and *wasnt* touched before, alert!
+             // si *está* tocado y *no estaba* tocado antes, alertar
              if ((currtouched & _BV(i)) && !(lasttouched & _BV(i)) ) {
                  Serial.print(i); Serial.println(" touched");
              }
@@ -179,20 +178,20 @@ Here's an analysis of the code:
              }
          }
 
-     * If an electrode is touched and wasn't touched before, print "x touched," where x is the electrode number.
-     * If an electrode was touched before but is not touched now, print "x released."
+     * Si un electrodo está tocado y no estaba tocado antes, imprimir "x tocado," donde x es el número de electrodo.
+     * Si un electrodo estaba tocado antes pero ahora no lo está, imprimir "x liberado."
 
-   * Update ``lasttouched`` to store the current touch status for comparison in the next iteration.
+   * Actualizar ``lasttouched`` para almacenar el estado táctil actual para comparación en la siguiente iteración.
 
      .. code-block:: arduino
 
          lasttouched = currtouched;
 
-   * Debugging Information (Optional Section):
+   * Información de depuración (sección opcional):
 
      .. code-block:: arduino
 
-         // debugging info, what
+         // Información de depuración
          Serial.print("\t\t\t\t\t\t\t\t\t\t\t\t\t 0x"); Serial.println(cap.touched(), HEX);
          Serial.print("Filt: ");
          for (uint8_t i=0; i<12; i++) {

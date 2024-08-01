@@ -1,55 +1,55 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    ¡Hola! Bienvenido a la Comunidad de Entusiastas de SunFounder Raspberry Pi & Arduino & ESP32 en Facebook. Sumérgete en el mundo de Raspberry Pi, Arduino y ESP32 con otros entusiastas.
 
-    **Why Join?**
+    **¿Por qué unirse?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Soporte experto**: Resuelve problemas postventa y desafíos técnicos con la ayuda de nuestra comunidad y equipo.
+    - **Aprende y comparte**: Intercambia consejos y tutoriales para mejorar tus habilidades.
+    - **Vistas previas exclusivas**: Obtén acceso anticipado a nuevos anuncios de productos y adelantos.
+    - **Descuentos especiales**: Disfruta de descuentos exclusivos en nuestros productos más nuevos.
+    - **Promociones y sorteos festivos**: Participa en sorteos y promociones de temporada.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 ¿Listo para explorar y crear con nosotros? Haz clic en [|link_sf_facebook|] y únete hoy mismo.
 
 .. _basic_keypad:
 
-Keypad
+Teclado
 ==========================
 
 .. https://docs.sunfounder.com/projects/vincent-kit-de/en/latest/arduino/2.19_keypad.html#ar-keypad
 
-Overview
--------------
+Descripción general
+-----------------------
 
-In this lesson, you will learn to use Keypad. Keypad can be applied into various kinds of devices, including mobile phone, fax machine, microwave oven and so on. It is commonly used in user input.
+En esta lección, aprenderás a usar un teclado. El teclado puede aplicarse en varios dispositivos, incluidos teléfonos móviles, máquinas de fax, microondas, entre otros. Es comúnmente utilizado para la entrada de datos del usuario.
 
-Required Components
+Componentes necesarios
 -------------------------
 
-In this project, we need the following components. 
+En este proyecto, necesitamos los siguientes componentes. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí está el enlace: 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nombre	
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN A LOS COMPONENTES
+        - ENLACE DE COMPRA
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -58,40 +58,40 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_keypad`
         - |link_keypad_buy|
 
-Wiring
+Conexión
 ----------------------
 
 .. image:: img/21-keypad_bb.png
     :align: center
 
-Schematic Diagram
+Diagrama esquemático
 ----------------------
 
 .. image:: img/21_keypad_schematic.png
    :align: center
    :width: 70%
 
-Code
+Código
 -----------
 
 
 .. note::
 
-    * You can open the file ``21-keypad.ino`` under the path of ``elite-explorer-kit-main\basic_project\21-keypad`` directly.
-    * To install the library, use the Arduino Library Manager and search for **"Adafruit Keypad"** and install it. 
+    * Puedes abrir el archivo ``21-keypad.ino`` directamente en la ruta ``elite-explorer-kit-main\basic_project\21-keypad``.
+    * Para instalar la biblioteca, utiliza el Administrador de Bibliotecas de Arduino y busca **"Adafruit Keypad"** y luego instálala. 
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/25fd4116-92d4-4ee4-b3ba-6707f4334629/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After uploading the codes to the UNO board, on the serial monitor, you can see the value of the key currently pressed on the Keypad.
+Después de subir el código a la placa UNO, en el monitor serie, podrás ver el valor de la tecla presionada en el teclado.
 
-Code Analysis
--------------------
+Análisis del código
+----------------------
 
-1. Including the Library
+1. Incluir la biblioteca
 
-   We start by including the ``Adafruit_Keypad`` library, which allows us to easily interface with the keypad.
+   Comenzamos incluyendo la biblioteca ``Adafruit_Keypad``, que nos permite interfazar fácilmente con el teclado.
 
    .. code-block:: arduino
 
@@ -99,10 +99,10 @@ Code Analysis
 
    .. note::
 
-      * To install the library, use the Arduino Library Manager and search for **"Adafruit Keypad"** and install it. 
+      * Para instalar la biblioteca, utiliza el Administrador de Bibliotecas de Arduino y busca **"Adafruit Keypad"** y luego instálala. 
 
 
-2. Keypad Configuration
+2. Configuración del teclado
 
    .. code-block:: arduino
 
@@ -117,26 +117,26 @@ Code Analysis
      byte rowPins[ROWS] = { 2, 3, 4, 5 };
      byte colPins[COLS] = { 8, 9, 10, 11 };
 
-   - The ``ROWS`` and ``COLS`` constants define the dimensions of the keypad. 
-   - ``keys`` is a 2D array storing the label for each button on the keypad.
-   - ``rowPins`` and ``colPins`` are arrays that store the Arduino pins connected to the keypad rows and columns.
+   - Las constantes ``ROWS`` y ``COLS`` definen las dimensiones del teclado. 
+   - ``keys`` es un array 2D que almacena la etiqueta de cada botón en el teclado.
+   - ``rowPins`` y ``colPins`` son arrays que almacenan los pines de Arduino conectados a las filas y columnas del teclado.
 
    .. raw:: html
 
       <br/>
 
 
-3. Initialize Keypad
+3. Inicializar el teclado
 
-   Create an instance of ``Adafruit_Keypad`` called ``myKeypad`` and initialize it.
+   Crear una instancia de ``Adafruit_Keypad`` llamada ``myKeypad`` e inicializarla.
 
    .. code-block:: arduino
 
      Adafruit_Keypad myKeypad = Adafruit_Keypad(makeKeymap(keys), rowPins, colPins, ROWS, COLS);
 
-4. setup() Function
+4. Función setup()
 
-   Initialize Serial communication and the custom keypad.
+   Inicializar la comunicación Serial y el teclado personalizado.
 
    .. code-block:: arduino
 
@@ -145,9 +145,9 @@ Code Analysis
        myKeypad.begin();
      }
 
-5. Main Loop
+5. Bucle principal
 
-   Check for key events and display them in the Serial Monitor.
+   Verificar eventos de teclas y mostrarlos en el Monitor Serie.
 
    .. code-block:: arduino
 

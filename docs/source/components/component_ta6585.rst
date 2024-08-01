@@ -1,43 +1,44 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    ¡Hola! ¡Bienvenido a la comunidad de entusiastas de SunFounder Raspberry Pi & Arduino & ESP32 en Facebook! Sumérgete en el mundo de Raspberry Pi, Arduino y ESP32 junto a otros apasionados.
 
-    **Why Join?**
+    **¿Por qué unirse?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Soporte de expertos**: Resuelve problemas postventa y desafíos técnicos con la ayuda de nuestra comunidad y equipo.
+    - **Aprender y compartir**: Intercambia consejos y tutoriales para mejorar tus habilidades.
+    - **Avances exclusivos**: Accede anticipadamente a anuncios de nuevos productos y adelantos exclusivos.
+    - **Descuentos especiales**: Disfruta de descuentos exclusivos en nuestros productos más recientes.
+    - **Promociones festivas y sorteos**: Participa en sorteos y promociones de temporada.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 ¿Listo para explorar y crear con nosotros? Haz clic en [|link_sf_facebook|] y únete hoy mismo.
 
 .. _cpn_ta6586:
 
-TA6586 - Motor Driver Chip
-=================================
+TA6586 - Chip Controlador de Motor
+==================================
 
 .. image:: img/ta6586.png
 
-TA6586 is a monolithic IC designed for driving bi-directional DC motor. It has
-two pins of logic inputs for controlling the direction, forward and backward.
-The circuit feature good anti-interference performance, small standby current and
-low output saturation pressure drop. It has a built-in clamp diode to reverse the impact
-of the release of inductive load current, making it in the drive relays, DC motors,
-stepper motors or control the use of switching power safe and reliable.
-TA6586 is suitable for toy vehicles, remote-controlled aircraft motor drive, automatic
-valve motor, electromagnetic lock drive, precision instruments and other circuits.
+El TA6586 es un CI monolítico diseñado para controlar motores de CC bidireccionales. Tiene dos 
+pines de entradas lógicas para controlar la dirección, hacia adelante y hacia atrás. El circuito 
+presenta buen rendimiento antiinterferente, baja corriente en modo de espera y baja caída de 
+presión de saturación de salida. Tiene un diodo de protección incorporado para revertir el 
+impacto de la liberación de corriente de carga inductiva, haciéndolo seguro y confiable en 
+el uso de relés de accionamiento, motores de CC, motores paso a paso o en el control de 
+energía conmutada. El TA6586 es adecuado para vehículos de juguete, motores de aviones 
+teledirigidos, motores de válvulas automáticas, accionamiento de cerraduras electromagnéticas, 
+instrumentos de precisión y otros circuitos.
 
-**Features**
+**Características**
 
-* Low stand-by current: ≦2uA
-* Wide supply voltage range
-* Built-in Brake Function
-* Thermal Shutdown protection
-* Over Current Limit and Short Circuit Protect Function
-* DIP8 Pb-Free package.
+* Baja corriente en modo de espera: ≦2uA
+* Amplio rango de voltaje de alimentación
+* Función de freno incorporada
+* Protección contra sobrecalentamiento
+* Función de limitación de corriente y protección contra cortocircuitos
+* Paquete DIP8 libre de plomo
 
-**Pin Function**
+**Función de los Pines**
 
 .. image:: img/ta6586_pin1.png
     :width: 30%
@@ -45,13 +46,12 @@ valve motor, electromagnetic lock drive, precision instruments and other circuit
 .. image:: img/ta6586_pin.png
     :width: 75%
 
-
-**Input Truth Table**
+**Tabla de Verdad de Entrada**
 
 .. image:: img/ta6586_priciple.png
     :width: 95%
 
-**Example**
+**Ejemplo**
 
 * :ref:`basic_motor` (Basic Project)
 * :ref:`basic_pump` (Basic Project)

@@ -1,53 +1,53 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    ¡Hola! Bienvenido a la Comunidad de Entusiastas de SunFounder Raspberry Pi, Arduino y ESP32 en Facebook. Sumérgete en el mundo de Raspberry Pi, Arduino y ESP32 junto a otros entusiastas.
 
-    **Why Join?**
+    **¿Por qué unirse?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Soporte experto**: Resuelve problemas postventa y desafíos técnicos con la ayuda de nuestra comunidad y equipo.
+    - **Aprende y comparte**: Intercambia consejos y tutoriales para mejorar tus habilidades.
+    - **Avances exclusivos**: Obtén acceso anticipado a nuevos anuncios de productos y adelantos.
+    - **Descuentos especiales**: Disfruta de descuentos exclusivos en nuestros productos más recientes.
+    - **Promociones festivas y sorteos**: Participa en sorteos y promociones de temporada.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 ¿Listo para explorar y crear con nosotros? Haz clic en [|link_sf_facebook|] y únete hoy mismo.
 
 .. _basic_ws2812:
 
-WS2812 RGB LEDs Strip
-==========================
+Tira de LEDs RGB WS2812
+=============================
 
-Overview
----------------
+Descripción general
+----------------------
 
-In this lesson, you will learn about NeoPixel LEDs and how to control them using the FastLED library on an Arduino Uno R4. NeoPixel LEDs are widely used in various applications like home decor, wearables, and event lighting. The FastLED library simplifies the process of programming these LEDs. Here, a chain of 8 NeoPixel LEDs is connected to an Arduino, and each LED in the sequence is lit up in blue color momentarily before turning off, moving on to the next LED in the chain. This basic example can serve as the foundation for more complex light patterns or interactive lighting projects.
+En esta lección, aprenderás sobre los LEDs NeoPixel y cómo controlarlos utilizando la biblioteca FastLED en un Arduino Uno R4. Los LEDs NeoPixel se utilizan ampliamente en diversas aplicaciones como la decoración del hogar, prendas de vestir y la iluminación de eventos. La biblioteca FastLED simplifica el proceso de programación de estos LEDs. Aquí, una cadena de 8 LEDs NeoPixel está conectada a un Arduino, y cada LED en la secuencia se enciende momentáneamente en color azul antes de apagarse, moviéndose al siguiente LED en la cadena. Este ejemplo básico puede servir como base para patrones de luz más complejos o proyectos de iluminación interactiva.
 
-Required Components
+Componentes necesarios
 -------------------------
 
-In this project, we need the following components. 
+En este proyecto, necesitamos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí tienes el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nombre	
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN AL COMPONENTE
+        - ENLACE DE COMPRA
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -56,38 +56,34 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_ws2812`
         - |link_ws2812_buy|
 
-Wiring
+Conexión
 ----------------------
 
 .. image:: img/12-ws2812_bb.png
     :align: center
 
-Schematic Diagram
+Diagrama esquemático
 -----------------------
 
 .. image:: img/12_ws2812_schematic.png
     :align: center
     :width: 80%
 
-Code
+Código
 ---------------
 
 .. note::
 
-    * You can open the file ``12-ws2812.ino`` under the path of ``elite-explorer-kit-main\basic_project\12-ws2812`` directly.
-    * Or copy this code into Arduino IDE.
+    * Puedes abrir el archivo ``12-ws2812.ino`` en la ruta ``elite-explorer-kit-main\basic_project\12-ws2812`` directamente.
+    * O copiar este código en Arduino IDE.
 
 .. note:: 
-    To install the library, use the Arduino Library Manager and search for **"FastLED"** and install it. 
+    Para instalar la biblioteca, utiliza el Administrador de Bibliotecas de Arduino y busca **"FastLED"** e instálala. 
 
 .. important::
-    With the release of |link_fastled_3_7_0|, the FastLED library now officially supports the Arduino UNO R4. Therefore, you no longer need to manually install the development version. Simply update or install the FastLED library using the Arduino Library Manager.
-
+    Con el lanzamiento de |link_fastled_3_7_0|, la biblioteca FastLED ahora admite oficialmente el Arduino UNO R4. Por lo tanto, ya no necesitas instalar manualmente la versión de desarrollo. Simplemente actualiza o instala la biblioteca FastLED utilizando el Administrador de Bibliotecas de Arduino.
 .. warning::
-    **[Outdated]** Since the |link_FastLED_lib| library has not officially released a version supporting Arduino R4 yet, you'll need to download :download:`the latest development code of the FastLED library <https://codeload.github.com/FastLED/FastLED/zip/refs/heads/master>` and overwrite the existing FastLED library files. For detailed instructions on how to do this, please refer to the :ref:`manual_install_lib` section. (This note will be retracted when the FastLED library officially releases an update that supports the Arduino UNO R4.)
-
-
-
+    **[Desactualizado]** Dado que la biblioteca |link_FastLED_lib| aún no ha lanzado oficialmente una versión compatible con Arduino R4, tendrás que descargar :download:`el último código de desarrollo de la biblioteca FastLED <https://codeload.github.com/FastLED/FastLED/zip/refs/heads/master>` y sobrescribir los archivos existentes de la biblioteca FastLED. Para obtener instrucciones detalladas sobre cómo hacerlo, consulta la sección :ref:`manual_install_lib`. (Esta note será retirada cuando la biblioteca FastLED lance oficialmente una actualización que admita el Arduino UNO R4.)
 
 .. raw:: html
 
@@ -100,48 +96,47 @@ Code
       Your browser does not support the video tag.
    </video>
 
-After the code is uploaded successfully, you will see each LED in the chain of 8 NeoPixel LEDs light up one at a time in a blue color. The program will loop through this sequence continuously, turning off each LED before moving on to the next. With a short delay between each LED, the lighting effect will appear as a traveling blue dot along the chain.
+Después de cargar el código correctamente, verás que cada LED en la cadena de 8 LEDs NeoPixel se enciende uno a la vez en color azul. El programa recorrerá esta secuencia continuamente, apagando cada LED antes de pasar al siguiente. Con un breve retraso entre cada LED, el efecto de iluminación aparecerá como un punto azul que viaja a lo largo de la cadena.
 
-
-Code Analysis
+Análisis del código
 ------------------------
 
-1. Import Library and Setup Constants
+1. Importar la biblioteca y configurar constantes
 
-   - Importing the ``FastLED`` library to use its functions.
-   - Defining the number of LEDs and the data pin they are connected to.
+   - Importar la biblioteca ``FastLED`` para utilizar sus funciones.
+   - Definir el número de LEDs y el pin de datos al que están conectados.
    
    .. code-block:: arduino
    
-      #include <FastLED.h>  // Include FastLED library
-      #define NUM_LEDS 8    // Number of LEDs in the chain
-      #define DATA_PIN 6    // Data pin for LED control
+      #include <FastLED.h>  // Incluir biblioteca FastLED
+      #define NUM_LEDS 8    // Número de LEDs en la cadena
+      #define DATA_PIN 6    // Pin de datos para el control de LED
 
-2. Initialize LED Array
+2. Inicializar la matriz de LEDs
    
-   Creating an array of ``CRGB`` type to store the color information of each LED.
+   Crear una matriz de tipo ``CRGB`` para almacenar la información de color de cada LED.
 
    .. code-block:: arduino
 
-      CRGB leds[NUM_LEDS];  // Array to hold LED color data
+      CRGB leds[NUM_LEDS];  // Matriz para almacenar datos de color de los LEDs
 
-3. Initialize LEDs in Setup
+3. Inicializar los LEDs en Setup
 
-   Using ``FastLED.addLeds`` to initialize the LEDs.
+   Utilizar ``FastLED.addLeds`` para inicializar los LEDs.
 
    .. code-block:: arduino
 
       void setup() {
-        FastLED.addLeds<NEOPIXEL, DATA_PIN>(leds, NUM_LEDS);  // Initialize LEDs
+        FastLED.addLeds<NEOPIXEL, DATA_PIN>(leds, NUM_LEDS);  // Inicializar LEDs
       }
 
-4. Control LEDs in Loop
+4. Controlar los LEDs en Loop
    
-   Looping through each LED to set it to blue, display it, clear it, and then delay.
+   Recorrer cada LED para configurarlo en azul, mostrarlo, despejarlo y luego retrasar.
 
-   - The ``leds`` array serves as a color buffer for your LED strip. Each element in this array corresponds to an individual LED on your physical strip, and its color value determines the color that the LED will display. The order of elements in the array matches the order of LEDs on the strip, starting from the first LED (which corresponds to ``leds[0]``) through to the last LED. To change the color of a specific LED on your strip, you simply modify the corresponding element in the ``leds`` array. You can use |fastled_color| or set colors using RGB (Taking green as an example, use ``leds[dot] = CRGB::Green`` or ``leds[dot] = CRGB(0, 255, 0);``).
+   - La matriz ``leds`` sirve como un búfer de color para tu tira de LEDs. Cada elemento en esta matriz corresponde a un LED individual en tu tira física, y su valor de color determina el color que el LED mostrará. El orden de los elementos en la matriz coincide con el orden de los LEDs en la tira, comenzando desde el primer LED (que corresponde a ``leds[0]``) hasta el último LED. Para cambiar el color de un LED específico en tu tira, simplemente modifica el elemento correspondiente en la matriz ``leds``. Puedes usar |fastled_color| o establecer colores usando RGB (Tomando el verde como ejemplo, usa ``leds[dot] = CRGB::Green`` o ``leds[dot] = CRGB(0, 255, 0);``).
 
-   - The ``FastLED.show();`` function updates the LED strip with new color data, making changes visible. It is like hitting the "publish" button for your LED strip after making edits and adjustments in the code.
+   - La función ``FastLED.show();`` actualiza la tira de LEDs con nuevos datos de color, haciendo que los cambios sean visibles. Es como presionar el botón de "publicar" para tu tira de LEDs después de realizar ediciones y ajustes en el código.
 
    .. raw:: html
 
@@ -151,9 +146,9 @@ Code Analysis
 
       void loop() {
         for (int dot = 0; dot < NUM_LEDS; dot++) {
-          leds[dot] = CRGB::Blue;   // Set the current LED to blue
-          FastLED.show();           // Update LEDs
-          leds[dot] = CRGB::Black;  // Clear the current LED
-          delay(30);                // Wait for a short period before moving to the next LED
+          leds[dot] = CRGB::Blue;   // Configurar el LED actual en azul
+          FastLED.show();           // Actualizar LEDs
+          leds[dot] = CRGB::Black;  // Despejar el LED actual
+          delay(30);                // Esperar un breve período antes de pasar al siguiente LED
         }
       }

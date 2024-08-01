@@ -1,30 +1,31 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Hola, ¡bienvenido a la Comunidad de Entusiastas de SunFounder para Raspberry Pi, Arduino y ESP32 en Facebook! Sumérgete en el mundo de Raspberry Pi, Arduino y ESP32 junto a otros entusiastas.
 
-    **Why Join?**
+    **¿Por qué unirse?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Soporte experto**: Resuelve problemas postventa y desafíos técnicos con la ayuda de nuestra comunidad y equipo.
+    - **Aprende y comparte**: Intercambia consejos y tutoriales para mejorar tus habilidades.
+    - **Avances exclusivos**: Obtén acceso anticipado a anuncios de nuevos productos y adelantos exclusivos.
+    - **Descuentos especiales**: Disfruta de descuentos exclusivos en nuestros productos más recientes.
+    - **Promociones y sorteos festivos**: Participa en sorteos y promociones festivas.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 ¿Listo para explorar y crear con nosotros? Haz clic en [|link_sf_facebook|] y únete hoy mismo.
 
-LESSON 8: Using Variables in Arduino
-======================================
+LECCIÓN 8: Uso de variables en Arduino
+============================================
 
-This lesson introduces the concept of using variables in Arduino programming, enhancing flexibility and maintainability of code. Here’s a brief overview of what you will learn:
+Esta lección introduce el concepto de usar variables en la programación de Arduino, mejorando la flexibilidad y mantenibilidad del código. Aquí tienes un breve resumen de lo que aprenderás:
 
-1. **Setup and Introduction**: Setting up the necessary components for an Arduino project using the SunFounder kit, preparing for a practical programming session.
-2. **Understanding Variables**: Learning why and how to use variables in Arduino programs to replace hard-coded numbers, which enhances code flexibility and maintainability.
-3. **Practical Example with LED and Morse Code**: Implementing a Morse code SOS signal using variables to control the LED states and timings, showing practical application of variables.
-4. **Improving Code with Variables**: Demonstrating how to improve and simplify program modifications by using variables instead of fixed values, which saves time and reduces errors in larger programs.
-5. **Homework Assignment**: Applying the concepts learned to create a circuit with two LEDs (red and green), where the green LED blinks quickly five times and the red LED blinks slowly ten times, reinforcing the use of variables in controlling different aspects of a program.
+1. **Configuración e introducción**: Configuración de los componentes necesarios para un proyecto de Arduino utilizando el kit de SunFounder, preparándose para una sesión práctica de programación.
+2. **Comprensión de las variables**: Aprender por qué y cómo usar variables en los programas de Arduino para reemplazar números codificados, lo que mejora la flexibilidad y mantenibilidad del código.
+3. **Ejemplo práctico con LED y código Morse**: Implementación de una señal SOS en código Morse utilizando variables para controlar los estados y tiempos de los LED, mostrando la aplicación práctica de las variables.
+4. **Mejora del código con variables**: Demostración de cómo mejorar y simplificar las modificaciones del programa usando variables en lugar de valores fijos, lo que ahorra tiempo y reduce errores en programas más grandes.
+5. **Tarea**: Aplicar los conceptos aprendidos para crear un circuito con dos LEDs (rojo y verde), donde el LED verde parpadea rápidamente cinco veces y el LED rojo parpadea lentamente diez veces, reforzando el uso de variables para controlar diferentes aspectos de un programa.
 
 **Video**
 
 .. raw:: html
 
-    <iframe width="700" height="500" src="https://www.youtube.com/embed/Ucvwq5hFc3U?si=o9Q1tTC1X1B9teef" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="700" height="500" src="https://www.youtube.com/embed/Ucvwq5hFc3U?si=o9Q1tTC1X1B9teef" title="Reproductor de video de YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+

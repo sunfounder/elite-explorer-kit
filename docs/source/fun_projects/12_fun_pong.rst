@@ -1,20 +1,20 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Hola, bienvenido a la Comunidad de Entusiastas de SunFounder Raspberry Pi & Arduino & ESP32 en Facebook! Sumérgete en el mundo de Raspberry Pi, Arduino y ESP32 junto a otros entusiastas.
 
-    **Why Join?**
+    **¿Por qué unirse?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Soporte de expertos**: Resuelve problemas postventa y desafíos técnicos con la ayuda de nuestra comunidad y equipo.
+    - **Aprender y compartir**: Intercambia consejos y tutoriales para mejorar tus habilidades.
+    - **Avances exclusivos**: Accede anticipadamente a anuncios de nuevos productos y adelantos exclusivos.
+    - **Descuentos especiales**: Disfruta de descuentos exclusivos en nuestros productos más recientes.
+    - **Promociones festivas y sorteos**: Participa en sorteos y promociones de temporada.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 ¿Listo para explorar y crear con nosotros? Haz clic en [|link_sf_facebook|] y únete hoy mismo!
 
 .. _fun_pong:
 
-GAME - Pong
+JUEGO - Pong
 =================================
 
 .. raw:: html
@@ -24,43 +24,43 @@ GAME - Pong
       Your browser does not support the video tag.
    </video>
 
-This is a simple Pong game designed using an OLED display and an Arduino board.
-In the Pong game, players compete against the computer, controlling a vertical paddle to bounce back a bouncing ball. 
-The goal is to prevent the ball from passing your paddle's edge, or else the opponent scores.
+Este es un simple juego de Pong diseñado usando una pantalla OLED y una placa Arduino.
+En el juego de Pong, los jugadores compiten contra la computadora, controlando una pala vertical para devolver una pelota que rebota. 
+El objetivo es evitar que la pelota pase el borde de la pala del jugador, de lo contrario, el oponente anote.
 
-The game mechanics can be divided into the following parts:
+La mecánica del juego se puede dividir en las siguientes partes:
 
-1. Ball Movement - The ball moves along its current direction at a set speed. Whenever the ball collides with a paddle, its speed increases, making the game more challenging.
+1. Movimiento de la pelota: La pelota se mueve a lo largo de su dirección actual a una velocidad establecida. Cada vez que la pelota choca con una pala, su velocidad aumenta, haciendo el juego más desafiante.
 
-2. Paddle Movement - Used to block the ball's movement, the paddle can move up or down. Players control their own paddle using buttons, while the computer's paddle automatically follows the ball's position.
+2. Movimiento de la pala: Utilizada para bloquear el movimiento de la pelota, la pala puede moverse hacia arriba o hacia abajo. Los jugadores controlan su propia pala usando botones, mientras que la pala de la computadora sigue automáticamente la posición de la pelota.
 
-3. Scoring - Whenever the ball goes beyond the left or right edge of the screen, the corresponding player or CPU scores.
+3. Puntuación: Cada vez que la pelota pasa más allá del borde izquierdo o derecho de la pantalla, el jugador correspondiente o la CPU anoten.
 
-**Required Components**
+**Componentes necesarios**
 
-In this project, we need the following components. 
+En este proyecto, necesitamos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nombre
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado desde los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DEL COMPONENTE
+        - ENLACE DE COMPRA
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -78,67 +78,68 @@ You can also buy them separately from the links below.
         - \-
 
 
-**Wiring**
+**Cableado**
 
 .. note::
-    To protect the :ref:`cpn_power`'s battery, please fully charge it before using it for the first time.
+    Para proteger la batería del :ref:`cpn_power`, cárgala completamente antes de usarla por primera vez.
 
 .. image:: img/12_pong_bb.png
     :width: 100%
     :align: center
 
 
-**Schematic**
+**Esquema**
 
 .. image:: img/12_pong_schematic.png
     :width: 100%
     :align: center
 
-**Code**
+**Código**
 
 .. note::
 
-    * You can open the file ``12_pong_oled.ino`` under the path of ``elite-explorer-kit-main\fun_project\12_pong_oled`` directly.
-    * Or copy this code into Arduino IDE.
+    * Puedes abrir el archivo ``12_pong_oled.ino`` bajo la ruta de ``elite-explorer-kit-main\fun_project\12_pong_oled`` directamente.
+    * O copiar este código en Arduino IDE.
 
 .. note::
-   To install the library, use the Arduino Library Manager and search for **"Adafruit SSD1306"** and **"Adafruit GFX"** and install them.
+   Para instalar la biblioteca, utiliza el Administrador de Bibliotecas de Arduino y busca **"Adafruit SSD1306"** y **"Adafruit GFX"** e instálalas.
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/86dbb549-d425-4f42-8b5b-28d486e3f7f8/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-**How it works?**
+**¿Cómo funciona?**
 
-The program structure can be divided into the following five parts:
+La estructura del programa se puede dividir en las siguientes cinco partes:
 
-1. Import Necessary Libraries - Used to control the OLED screen and read button inputs.
+1. Importar bibliotecas necesarias: Usadas para controlar la pantalla OLED y leer entradas de botones.
 
-2. Define Constants and Global Variables:
+2. Definir constantes y variables globales:
 
-   Definitions for OLED screen width and height.
-   Definitions for buttons and OLED reset pins.
-   Position, speed, size, and direction of the ball and paddles.
-   Scores for player and CPU.
+   Definiciones para el ancho y la altura de la pantalla OLED.
+   Definiciones para los botones y pines de reinicio de la OLED.
+   Posición, velocidad, tamaño y dirección de la pelota y las palas.
+   Puntuaciones para el jugador y la CPU.
 
-3. Initialization:
+3. Inicialización:
 
-   Initialize serial communication, the OLED screen, and display the initial interface.
-   Set buttons as inputs and connect pull-up resistors.
-   Draw the playing field.
+   Inicializa la comunicación serie, la pantalla OLED y muestra la interfaz inicial.
+   Configura los botones como entradas y conecta resistencias pull-up.
+   Dibuja el campo de juego.
 
-4. Main Loop:
+4. Bucle principal:
 
-   Read button states.
-   Move the ball based on the set refresh rate.
-   Detect collisions between the ball and paddles or walls, adjusting the ball's direction and speed accordingly.
-   Update the screen with scores based on scoring events.
-   Refresh paddle positions.
+   Lee los estados de los botones.
+   Mueve la pelota según la tasa de refresco establecida.
+   Detecta colisiones entre la pelota y las palas o las paredes, ajustando la dirección y velocidad de la pelota en consecuencia.
+   Actualiza la pantalla con las puntuaciones basadas en los eventos de puntuación.
+   Refresca las posiciones de las palas.
 
-5. Additional Functions:
+5. Funciones adicionales:
 
-   ``crossesPlayerPaddle`` and ``crossesCpuPaddle`` - Used to detect whether the ball collides with the player's or CPU's paddle.
+   ``crossesPlayerPaddle`` y ``crossesCpuPaddle`` - Usadas para detectar si la pelota colisiona con la pala del jugador o de la CPU.
    
-   ``drawCourt`` - Draws the playing field on the OLED screen.
+   ``drawCourt`` - Dibuja el campo de juego en la pantalla OLED.
 
-   ``displayScore`` - Displays the player's and CPU's scores on the screen.
+   ``displayScore`` - Muestra las puntuaciones del jugador y la CPU en la pantalla.
+

@@ -1,55 +1,55 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    ¡Hola, bienvenido a la Comunidad de Entusiastas de SunFounder Raspberry Pi, Arduino y ESP32 en Facebook! Sumérgete más profundamente en Raspberry Pi, Arduino y ESP32 con otros entusiastas.
 
-    **Why Join?**
+    **¿Por qué unirse?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Soporte experto**: Resuelve problemas postventa y desafíos técnicos con la ayuda de nuestra comunidad y equipo.
+    - **Aprende y comparte**: Intercambia consejos y tutoriales para mejorar tus habilidades.
+    - **Avances exclusivos**: Obtén acceso anticipado a nuevos anuncios de productos y adelantos.
+    - **Descuentos especiales**: Disfruta de descuentos exclusivos en nuestros productos más nuevos.
+    - **Promociones festivas y sorteos**: Participa en sorteos y promociones de temporada.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 ¿Listo para explorar y crear con nosotros? Haz clic en [|link_sf_facebook|] y únete hoy mismo!
 
 .. _basic_thermistor:
 
-Thermistor
+Termistor
 ==========================
 
 .. https://docs.sunfounder.com/projects/vincent-kit/en/latest/arduino/2.27_thermistor.html#ar-thermistor
 
-Overview
--------------
+Descripción general
+-----------------------
 
-In this lesson, you will learn how to use thermistor. Thermistor can be used as electronic circuit components for temperature compensation of instrument circuits. In the current meter, flowmeter, gas analyzer, and other devices. It can also be used for overheating protection, contactless relay, constant temperature, automatic gain control, motor start, time delay, color TV automatic degaussing, fire alarm and temperature compensation.
+En esta lección, aprenderás a usar un termistor. El termistor puede usarse como componente de circuito electrónico para la compensación de temperatura de los circuitos de instrumentos. En el amperímetro, caudalímetro, analizador de gases y otros dispositivos. También puede usarse para protección contra sobrecalentamiento, relé sin contacto, temperatura constante, control automático de ganancia, arranque de motores, retardo de tiempo, desmagnetización automática de televisores en color, alarma de incendios y compensación de temperatura.
 
-Required Components
--------------------------
+Componentes necesarios
+-----------------------------
 
-In this project, we need the following components. 
+En este proyecto, necesitamos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nombre
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado desde los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DEL COMPONENTE
+        - ENLACE DE COMPRA
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -62,35 +62,34 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_thermistor`
         - |link_thermistor_buy|
 
-Wiring
-----------------------
+Cableado
+------------------------
 
-In this example, we use the analog pin A0 to get the value of Thermistor. One pin of thermistor is connected to 5V, and the other is wired up to A0. At the same time, a 10kΩ resistor is connected with the other pin before connecting to GND.
+En este ejemplo, usamos el pin analógico A0 para obtener el valor del termistor. Un pin del termistor está conectado a 5V, y el otro está conectado a A0. Al mismo tiempo, una resistencia de 10kΩ está conectada con el otro pin antes de conectarlo a GND.
 
 .. image:: img/02-thermistor_bb.png
     :align: center
     :width: 70%
 
-Schematic Diagram
------------------------
+Diagrama esquemático
+-------------------------
 
 .. image:: img/02_thermistor_schematic.png
    :align: center
    :width: 70%
 
-Code
+Código
 -----------
 
 .. note::
 
-    * You can open the file ``02-thermistor.ino`` under the path of ``elite-explorer-kit-main\basic_project\02-thermistor`` directly.
-    * Or copy this code into Arduino IDE.
+    * Puedes abrir el archivo ``02-thermistor.ino`` directamente en la ruta ``elite-explorer-kit-main\basic_project\02-thermistor``.
+    * O copiar este código en el IDE de Arduino.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/be5dbe68-b57d-41f0-9fc0-237b99acbe3f/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After uploading the code to the uno r4 board, you can open the serial monitor to check the current temperature. 
+Después de subir el código a la placa uno r4, puedes abrir el monitor serial para verificar la temperatura actual.
 
-The Kelvin temperature is calculated using the formula **T\ K\ =1/(ln(R\ T/R\ N)/B+1/T\ N)**. This equation is derived from the |link_steinhart_hart| and simplifies calculations. You can also find more information about this formula on the detailed introduction page of the :ref:`cpn_thermistor`.
-
+La temperatura en Kelvin se calcula utilizando la fórmula **T\ K\ =1/(ln(R\ T/R\ N)/B+1/T\ N)**. Esta ecuación se deriva del |link_steinhart_hart| y simplifica los cálculos. También puedes encontrar más información sobre esta fórmula en la página de introducción detallada del :ref:`cpn_thermistor`.

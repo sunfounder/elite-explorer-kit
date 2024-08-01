@@ -1,98 +1,98 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    ¡Hola! Bienvenido a la Comunidad de Entusiastas de SunFounder para Raspberry Pi, Arduino y ESP32 en Facebook. Sumérgete en el mundo de Raspberry Pi, Arduino y ESP32 junto a otros entusiastas.
 
-    **Why Join?**
+    **¿Por qué unirse?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Soporte Experto**: Resuelve problemas postventa y desafíos técnicos con la ayuda de nuestra comunidad y equipo.
+    - **Aprende y Comparte**: Intercambia consejos y tutoriales para mejorar tus habilidades.
+    - **Avances Exclusivos**: Obtén acceso anticipado a anuncios de nuevos productos y adelantos exclusivos.
+    - **Descuentos Especiales**: Disfruta de descuentos exclusivos en nuestros productos más recientes.
+    - **Promociones Festivas y Sorteos**: Participa en sorteos y promociones festivas.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 ¿Listo para explorar y crear con nosotros? Haz clic en [|link_sf_facebook|] y únete hoy mismo.
 
 .. _new_bluetooth:
 
 Bluetooth
 ========================================
 
-Equipped with the ESP32 module, the UNO R4 WiFi board offers both Bluetooth® LE and Bluetooth® 5 functionalities, supporting speeds up to 2 Mbps. The ESP32 module comes with an integrated trace-antenna, eliminating the need for an external antenna to take advantage of the board's connectivity features.
+Equipado con el módulo ESP32, la placa UNO R4 WiFi ofrece funcionalidades de Bluetooth® LE y Bluetooth® 5, soportando velocidades de hasta 2 Mbps. El módulo ESP32 viene con una antena de traza integrada, eliminando la necesidad de una antena externa para aprovechar las características de conectividad de la placa.
 
 .. note::
-    The trace antenna in ESP32 module is shared with the Bluetooth® module, which means that you cannot use Bluetooth® and Wi-Fi® at the same time.
+    La antena de traza en el módulo ESP32 se comparte con el módulo Bluetooth®, lo que significa que no se puede usar Bluetooth® y Wi-Fi® al mismo tiempo.
 
-Basic Concepts of BLE
-++++++++++++++++++++++++
+Conceptos Básicos de BLE
+++++++++++++++++++++++++++++
 
-**Bluetooth Low Energy (BLE)** is a low-power wireless communication technology, designed specifically for short-range interactions. Distinguished from classic Bluetooth, BLE focuses on power efficiency and rapid connection, making it an ideal choice for a range of applications including Internet of Things (IoT) devices and health monitoring equipment.
+**Bluetooth Low Energy (BLE)** es una tecnología de comunicación inalámbrica de baja potencia, diseñada específicamente para interacciones de corto alcance. A diferencia del Bluetooth clásico, BLE se enfoca en la eficiencia energética y la conexión rápida, lo que la hace ideal para una variedad de aplicaciones, incluidos los dispositivos del Internet de las Cosas (IoT) y los equipos de monitoreo de salud.
 
-BLE communications rely on two key protocols: **GATT (Generic Attribute Profile)** and **GAP (Generic Access Profile)**. GATT is used for data exchange, while GAP is responsible for device discovery and connection.
+Las comunicaciones BLE se basan en dos protocolos clave: **GATT (Generic Attribute Profile)** y **GAP (Generic Access Profile)**. GATT se utiliza para el intercambio de datos, mientras que GAP se encarga del descubrimiento de dispositivos y la conexión.
 
 .. image:: img/02_ble_relationships.png
  :width: 100%
 
 
-Peripheral Devices (Typically GATT Servers)
---------------------------------------------------
+Dispositivos Periféricos (Normalmente Servidores GATT)
+----------------------------------------------------------
 
-In the BLE network, **peripheral devices** primarily broadcast data to be discovered and accessed by central devices (typically acting as GATT clients). Such devices are usually sensors or small hardware like heart rate monitors, temperature sensors, or smart bulbs.
+En la red BLE, los **dispositivos periféricos** principalmente transmiten datos para ser descubiertos y accesados por dispositivos centrales (que suelen actuar como clientes GATT). Estos dispositivos son usualmente sensores o hardware pequeño como monitores de ritmo cardíaco, sensores de temperatura o bombillas inteligentes.
 
-In the BLE communication model, peripheral devices often provide one or more **services**, each containing a set of **characteristics**. These services and characteristics collaboratively enable specific functionalities or use-cases, allowing central devices to read or manipulate relevant data.
+En el modelo de comunicación BLE, los dispositivos periféricos suelen proporcionar uno o más **servicios**, cada uno de los cuales contiene un conjunto de **características**. Estos servicios y características colaboran para habilitar funcionalidades específicas o casos de uso, permitiendo que los dispositivos centrales lean o manipulen los datos relevantes.
 
-- **Services**
+- **Servicios**
 
-  In BLE, Services act as high-level abstractions used to organize and encapsulate related Characteristics. Services in BLE can be categorized into standard services and custom services based on their origin and purpose.
+  En BLE, los servicios actúan como abstracciones de alto nivel utilizadas para organizar y encapsular características relacionadas. Los servicios en BLE pueden categorizarse en servicios estándar y servicios personalizados según su origen y propósito.
 
-  - Standard Services: Defined by the Bluetooth SIG (Bluetooth Special Interest Group), these are intended for specific functions. For example, the heart rate service for heart rate monitors, device information service providing manufacturer, model, and version details, and battery service indicating battery level and status.
-  - Custom Services: These are defined by developers or device manufacturers to meet the requirements of specific applications or devices. For instance, a smart home device manufacturer might define a custom service to control light color and brightness.
+  - Servicios Estándar: Definidos por el SIG de Bluetooth (Special Interest Group), están destinados a funciones específicas. Por ejemplo, el servicio de ritmo cardíaco para monitores de ritmo cardíaco, el servicio de información del dispositivo que proporciona detalles del fabricante, modelo y versión, y el servicio de batería que indica el nivel y estado de la batería.
+  - Servicios Personalizados: Definidos por desarrolladores o fabricantes de dispositivos para satisfacer las necesidades de aplicaciones o dispositivos específicos. Por ejemplo, un fabricante de dispositivos para el hogar inteligente podría definir un servicio personalizado para controlar el color y el brillo de la luz.
 
-- **Characteristics**
+- **Características**
 
-  Characteristics in BLE are the fundamental units of data exposed by the peripheral devices. They are enclosed within a Service and define various types of data and the operations that can be performed on them. Each characteristic is identified by a UUID and has a set of associated attributes like value, descriptor, and permissions.
+  Las características en BLE son las unidades fundamentales de datos expuestas por los dispositivos periféricos. Están contenidas dentro de un servicio y definen varios tipos de datos y las operaciones que se pueden realizar sobre ellos. Cada característica está identificada por un UUID y tiene un conjunto de atributos asociados como valor, descriptor y permisos.
 
-  - Permissions: In BLE, each characteristic is associated with a set of permissions that dictate whether the characteristic is readable, writable, or notify-able. This helps in securing the data and defining how to interact with it.
+  - Permisos: En BLE, cada característica está asociada con un conjunto de permisos que dictan si la característica es legible, escribible o notificable. Esto ayuda a proteger los datos y definir cómo interactuar con ellos.
 
 - **UUID**
 
-  Services, characteristics, and descriptors are collectively identified as attributes, each having a unique UUID. The Bluetooth SIG has reserved a set of UUIDs for standard attributes. These UUIDs are usually represented as 16-bit or 32-bit identifiers in the BLE protocol for efficiency, rather than the 128 bits required for a full UUID. For instance, the Device Information service is represented by the short code 0x180A.
+  Los servicios, características y descriptores se identifican colectivamente como atributos, cada uno con un UUID único. El SIG de Bluetooth ha reservado un conjunto de UUIDs para atributos estándar. Estos UUIDs generalmente se representan como identificadores de 16 bits o 32 bits en el protocolo BLE por eficiencia, en lugar de los 128 bits requeridos para un UUID completo. Por ejemplo, el servicio de información del dispositivo se representa con el código corto 0x180A.
 
 
 
-Central Devices (Typically GATT Clients)
---------------------------------------------------
+Dispositivos Centrales (Normalmente Clientes GATT)
+----------------------------------------------------
 
-**Central devices** in the BLE network scan for nearby peripheral devices and establish connections to acquire or control data. These devices are generally more complex and feature-rich, such as smartphones, tablets, or specialized gateway hardware. They are responsible for discovering peripheral devices, connecting to them, and accessing or subscribing to services and characteristics offered by the peripherals to serve various applications or solve specific problems.
+Los **dispositivos centrales** en la red BLE escanean dispositivos periféricos cercanos y establecen conexiones para adquirir o controlar datos. Estos dispositivos son generalmente más complejos y ricos en funciones, como teléfonos inteligentes, tabletas o hardware de puerta de enlace especializado. Son responsables de descubrir dispositivos periféricos, conectarse a ellos y acceder o suscribirse a los servicios y características ofrecidos por los periféricos para servir diversas aplicaciones o resolver problemas específicos.
 
-Central devices interact with characteristics in the following ways:
+Los dispositivos centrales interactúan con las características de las siguientes maneras:
 
-- **Read**: Request the peripheral device to send the current value of a characteristic. This is commonly used for characteristics that don't change often, like configuration settings or version numbers.
-- **Write**: Modify the value of a characteristic, typically used for command-like operations, like instructing a peripheral device to turn a motor on or off.
-- **Subscribe**: Request the peripheral device to continuously send updated values of a characteristic, eliminating the need for the central device to repeatedly request this data.
+- **Leer**: Solicita al dispositivo periférico que envíe el valor actual de una característica. Esto se usa comúnmente para características que no cambian a menudo, como configuraciones o números de versión.
+- **Escribir**: Modifica el valor de una característica, típicamente utilizado para operaciones de comando, como instruir a un dispositivo periférico para encender o apagar un motor.
+- **Suscribirse**: Solicita al dispositivo periférico que envíe continuamente valores actualizados de una característica, eliminando la necesidad de que el dispositivo central solicite repetidamente estos datos.
 
 
 
-Example: Bluetooth-Controlled LED
+Ejemplo: LED Controlado por Bluetooth
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-In this example, the Arduino acts as a peripheral device in a Bluetooth Low Energy (BLE) network. It offers a custom BLE service designed to control an onboard LED. This service includes a characteristic that can be read and written by a central device, such as a smartphone. Once the central device connects to the Arduino, it can change the LED state by writing to this characteristic. The Arduino's serial monitor displays debugging information, including the LED's current state and the MAC address of the connected central device.
+En este ejemplo, el Arduino actúa como un dispositivo periférico en una red Bluetooth Low Energy (BLE). Ofrece un servicio BLE personalizado diseñado para controlar un LED integrado. Este servicio incluye una característica que puede ser leída y escrita por un dispositivo central, como un teléfono inteligente. Una vez que el dispositivo central se conecta al Arduino, puede cambiar el estado del LED escribiendo en esta característica. El monitor serial del Arduino muestra información de depuración, incluido el estado actual del LED y la dirección MAC del dispositivo central conectado.
 
-**Upload the Code**
+**Cargar el Código**
 
-Open the ``02-bluetooth.ino`` file located at ``elite-explorer-kit-main\r4_new_feature\02-bluetooth``, or paste the following code into your Arduino IDE.
+Abre el archivo ``02-bluetooth.ino`` ubicado en ``elite-explorer-kit-main\r4_new_feature\02-bluetooth``, o pega el siguiente código en tu IDE de Arduino.
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/44d76bb7-9f0a-4004-b3fe-9a88999c5f06/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-**Connect Arduino R4 via Bluetooth**
+**Conectar Arduino R4 a través de Bluetooth**
 
-To interact with the services and characteristics created in this sketch, we should utilize a generic Bluetooth® Low Energy central app such as LightBlue (available for iOS and Android) or nRF Connect (for Android). 
+Para interactuar con los servicios y características creados en este boceto, deberíamos utilizar una aplicación central genérica de Bluetooth® Low Energy como LightBlue (disponible para iOS y Android) o nRF Connect (para Android).
 
-Let's take LightBlue as an example to demonstrate how to control Arduino's LED via Bluetooth.
+Tomemos LightBlue como ejemplo para demostrar cómo controlar el LED del Arduino a través de Bluetooth.
 
-1. Download the **LightBlue** app from the |link_lightblue_apple| (for iOS) or |link_lightblue_google| (for Android).
+1. Descarga la aplicación **LightBlue** desde |link_lightblue_apple| (para iOS) o |link_lightblue_google| (para Android).
 
    .. image:: img/02_lightblue.png
     :width: 90%
@@ -101,9 +101,9 @@ Let's take LightBlue as an example to demonstrate how to control Arduino's LED v
 
       <br/><br/>
 
-2. Connecting Arduino with Your Smartphone via Bluetooth
+2. Conectar Arduino con tu Smartphone vía Bluetooth
    
-   Navigate to your Bluetooth settings and locate the device named "UNO R4 LED". Proceed to connect to it.
+   Navega a la configuración de Bluetooth y localiza el dispositivo llamado "UNO R4 LED". Procede a conectarte a él.
 
    .. image:: img/02_connect.png
     :width: 90%
@@ -112,55 +112,55 @@ Let's take LightBlue as an example to demonstrate how to control Arduino's LED v
 
       <br/>
 
-3. Interacting with Arduino via Bluetooth Using LightBlue
+3. Interactuar con Arduino vía Bluetooth Usando LightBlue
 
-   Launch LightBlue and tap on the **Bonded** tab located at the bottom of the interface. Here, you'll see a list of BLE devices that your smartphone has previously paired with. Locate **UNO R4 LED** and tap **CONNECT**.
+   Abre LightBlue y toca en la pestaña **Bonded** ubicada en la parte inferior de la interfaz. Aquí verás una lista de dispositivos BLE que tu smartphone ha emparejado previamente. Localiza **UNO R4 LED** y toca en **CONNECT**.
 
    .. image:: img/02_lightblue_1.png
     :width: 90%
 
-   Once connected, you'll gain access to detailed information about the "UNO R4 LED" Bluetooth device. Scroll down to find "ledService (**19B10000-E8F2-537E-4F6C-D104768A1214**)" and "switchCharacteristic (**19B10001-E8F2-537E-4F6C-D104768A1214**)".
+   Una vez conectado, obtendrás acceso a información detallada sobre el dispositivo Bluetooth "UNO R4 LED". Desplázate hacia abajo para encontrar "ledService (**19B10000-E8F2-537E-4F6C-D104768A1214**)" y "switchCharacteristic (**19B10001-E8F2-537E-4F6C-D104768A1214**)".
 
-   Tap on the 19B10001-E8F2-537E-4F6C-D104768A1214 Characteristic. You'll notice that this Characteristic is both readable and writable, allowing you to both read from and write to it.
+   Toca en la Característica 19B10001-E8F2-537E-4F6C-D104768A1214. noterás que esta Característica es tanto legible como escribible, permitiéndote leer y escribir en ella.
   
    .. image:: img/02_lightblue_2.png
     :width: 90%
 
-   Continue scrolling to the **WRITTEN VALUES** section. Input '**1**' into the text box to set the Characteristic value to 1, which will **turn on the onboard LED of the Arduino R4**.
+   Sigue desplazándote hasta la sección **WRITTEN VALUES**. Ingresa '**1**' en el cuadro de texto para establecer el valor de la Característica en 1, lo que **encenderá el LED integrado del Arduino R4**.
 
    .. image:: img/02_lightblue_3.png
     :width: 90%
 
-   Similarly, you can set this value to '**0**' to **turn off the onboard LED**.
+   Del mismo modo, puedes establecer este valor en '**0**' para **apagar el LED integrado**.
 
    .. image:: img/02_lightblue_4.png
     :width: 90%
 
 
 
-**Code explanation**
+**Explicación del Código**
 
-#. Initialize BLE and LED
+#. Inicializar BLE y LED
 
    .. note::
-      When defining services and characteristic, we need to use UUIDs to identify them. To avoid UUID conflicts and make it easier for you to use, you can use the UUID generation tool at |link_uuid_gen_tool|.
+      Al definir servicios y características, necesitamos usar UUIDs para identificarlos. Para evitar conflictos de UUID y facilitarte su uso, puedes usar la herramienta de generación de UUID en |link_uuid_gen_tool|.
 
    .. code-block:: arduino
    
       #include <ArduinoBLE.h>
-      BLEService ledService("19B10000-E8F2-537E-4F6C-D104768A1214"); // Bluetooth® Low Energy LED Service
+      BLEService ledService("19B10000-E8F2-537E-4F6C-D104768A1214"); // Servicio de LED para Bluetooth® Low Energy
       BLEByteCharacteristic switchCharacteristic("19B10001-E8F2-537E-4F6C-D104768A1214", BLERead | BLEWrite);
-      const int ledPin = LED_BUILTIN; // pin to use for the LED
+      const int ledPin = LED_BUILTIN; // pin para usar con el LED
 
-   - Include the ArduinoBLE library.
-   - Define the BLE service and characteristic. 
-   - Assign the built-in LED pin to ``ledPin``.
+   - Incluye la biblioteca ArduinoBLE.
+   - Define el servicio BLE y la característica.
+   - Asigna el pin del LED integrado a ``ledPin``.
 
    .. raw:: html
 
       <br/>
 
-#. ``setup()`` Function
+#. Función ``setup()``
 
    .. code-block:: arduino
    
@@ -181,16 +181,16 @@ Let's take LightBlue as an example to demonstrate how to control Arduino's LED v
         Serial.println("BLE LED Peripheral");
       }
 
-   - Initialize serial communication.
-   - Set the LED pin as output.
-   - Initialize the BLE and add the service and characteristics.
-   - Start BLE advertising.
+   - Inicializa la comunicación serial.
+   - Configura el pin del LED como salida.
+   - Inicializa BLE y agrega el servicio y las características.
+   - Inicia la publicidad de BLE.
 
    .. raw:: html
 
       <br/>
 
-#. ``loop()`` Function
+#. Función ``loop()``
 
    .. code-block:: arduino
    
@@ -216,10 +216,10 @@ Let's take LightBlue as an example to demonstrate how to control Arduino's LED v
       }
    
 
-   - Listen for BLE central devices to connect.
-   - If a central device is connected, read the characteristic value to control the LED. If a value other than 0 is received, turn on the LED. If 0 is received, turn off the LED.
+   - Escucha a dispositivos centrales BLE para conectarse.
+   - Si un dispositivo central se conecta, lee el valor de la característica para controlar el LED. Si se recibe un valor distinto de 0, enciende el LED. Si se recibe 0, apaga el LED.
 
 
-**Reference**
+**Referencia**
 
 - |link_r4_bluetooth|

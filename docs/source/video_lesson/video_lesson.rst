@@ -1,29 +1,27 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    ¡Hola! Bienvenido a la Comunidad de Entusiastas de SunFounder para Raspberry Pi, Arduino y ESP32 en Facebook. Sumérgete en el mundo de Raspberry Pi, Arduino y ESP32 con otros entusiastas.
 
-    **Why Join?**
+    **¿Por qué unirse?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Soporte experto**: Resuelve problemas postventa y desafíos técnicos con la ayuda de nuestra comunidad y equipo.
+    - **Aprende y comparte**: Intercambia consejos y tutoriales para mejorar tus habilidades.
+    - **Avances exclusivos**: Obtén acceso anticipado a anuncios de nuevos productos y adelantos exclusivos.
+    - **Descuentos especiales**: Disfruta de descuentos exclusivos en nuestros productos más recientes.
+    - **Promociones y sorteos festivos**: Participa en sorteos y promociones festivas.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 ¿Listo para explorar y crear con nosotros? Haz clic en [|link_sf_facebook|] y únete hoy mismo.
 
-Arduino Video Lessons for Absolute Beginners
-======================================================
+Lecciones de Video de Arduino para Principiantes Absolutos
+===============================================================
 
-Delve into the world of Arduino with our comprehensive video course tailored for absolute beginners. This series of 32 detailed lessons covers everything from foundational concepts to advanced applications, providing a step-by-step guide through the essentials of electronics and programming. Whether you're a student, hobbyist, or aspiring enthusiast, this course empowers you to embark on engaging Arduino projects for personal interests, academic pursuits, or career ventures.
+Sumérgete en el mundo de Arduino con nuestro completo curso en video diseñado para principiantes absolutos. Esta serie de 32 lecciones detalladas cubre desde conceptos básicos hasta aplicaciones avanzadas, proporcionando una guía paso a paso a través de los fundamentos de la electrónica y la programación. Ya seas estudiante, aficionado o aspirante a entusiasta, este curso te capacitará para emprender proyectos interesantes con Arduino para intereses personales, estudios académicos o desarrollos profesionales.
 
-By the course's conclusion, you'll have developed a solid understanding of both theory and practical application in Arduino electronics and programming. Equipped with essential skills, you'll confidently tackle more complex projects and continue your exploration in this dynamic field. Enroll today and embark on your Arduino journey to unleash the potential of DIY electronics!
+Al final del curso, habrás desarrollado una sólida comprensión tanto de la teoría como de la aplicación práctica en la electrónica y programación con Arduino. Equipado con habilidades esenciales, abordarás proyectos más complejos con confianza y continuarás tu exploración en este campo dinámico. ¡Inscríbete hoy y comienza tu viaje con Arduino para desatar el potencial de la electrónica DIY!
 
-`All New Arduino R4 WiFi LESSONS for Absolute Beginners - YouTube Playlist <https://youtube.com/playlist?list=PLGs0VKk2DiYyn0wN335MXpbi3PRJTMmex&feature=shared>`_
+`Todas las Nuevas LECCIONES de Arduino R4 WiFi para Principiantes Absolutos - Lista de Reproducción en YouTube <https://youtube.com/playlist?list=PLGs0VKk2DiYyn0wN335MXpbi3PRJTMmex&feature=shared>`_
 
-    
-
-**Catalog**
+**Catálogo**
 
 .. toctree::
     :maxdepth: 1
@@ -59,4 +57,4 @@ By the course's conclusion, you'll have developed a solid understanding of both 
     lesson29
     lesson30
     lesson31
-    lesson32    
+    lesson32

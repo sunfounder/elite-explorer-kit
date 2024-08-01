@@ -1,20 +1,20 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    ¡Hola! Bienvenido a la Comunidad de Entusiastas de SunFounder para Raspberry Pi, Arduino y ESP32 en Facebook. Sumérgete en el mundo de Raspberry Pi, Arduino y ESP32 junto a otros entusiastas.
 
-    **Why Join?**
+    **¿Por qué unirse?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Soporte Experto**: Resuelve problemas postventa y desafíos técnicos con la ayuda de nuestra comunidad y equipo.
+    - **Aprende y Comparte**: Intercambia consejos y tutoriales para mejorar tus habilidades.
+    - **Avances Exclusivos**: Obtén acceso anticipado a anuncios de nuevos productos y adelantos exclusivos.
+    - **Descuentos Especiales**: Disfruta de descuentos exclusivos en nuestros productos más recientes.
+    - **Promociones Festivas y Sorteos**: Participa en sorteos y promociones festivas.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 ¿Listo para explorar y crear con nosotros? Haz clic en [|link_sf_facebook|] y únete hoy mismo.
 
 .. _iot_weathertime_screen:
 
-WeatherTime Screen
+Pantalla WeatherTime
 ===============================
 
 .. raw:: html
@@ -24,33 +24,33 @@ WeatherTime Screen
       Your browser does not support the video tag.
    </video>
 
-This sketch connects to a WiFi network, fetches weather data from OpenWeatherMap every minute, retrieves the current time from an NTP server, and displays the day, time, and weather information on an OLED screen.
+Este sketch se conecta a una red WiFi, obtiene datos meteorológicos de OpenWeatherMap cada minuto, recupera la hora actual de un servidor NTP y muestra el día, la hora y la información meteorológica en una pantalla OLED.
 
-**Required Components**
+**Componentes Requeridos**
 
-In this project, we need the following components. 
+En este proyecto, necesitamos los siguientes componentes. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí está el enlace: 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nombre	
+        - Ítems en este Kit
+        - Enlace
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado desde los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - Introducción del Componente
+        - Enlace de Compra
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -59,13 +59,13 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_oled`
         - |link_oled_buy|
 
-**Wiring**
+**Conexiones**
 
 .. image:: img/06_weather_oled_bb.png
     :width: 100%
     :align: center
 
-**Schematic**
+**Esquemático**
 
 .. image:: img/06_weather_oled_schematic.png
     :width: 60%
@@ -73,78 +73,73 @@ You can also buy them separately from the links below.
 
 **OpenWeather**
 
-Get OpenWeather API keys
+Obten las claves API de OpenWeather
 
-.. .|link_openweather| is an online service, owned by OpenWeather Ltd, that provides global weather data via API, including current weather data, forecasts, nowcasts and historical weather data for any geographical location.
+.. .|link_openweather| es un servicio en línea, propiedad de OpenWeather Ltd, que proporciona datos meteorológicos globales a través de API, incluyendo datos meteorológicos actuales, pronósticos, ahora y datos meteorológicos históricos para cualquier ubicación geográfica.
 
-`OpenWeather <https://openweathermap.org/>`_ is an online service, owned by OpenWeather Ltd, that provides global weather data via API, including current weather data, forecasts, nowcasts and historical weather data for any geographical location.
+`OpenWeather <https://openweathermap.org/>`_ es un servicio en línea, propiedad de OpenWeather Ltd, que proporciona datos meteorológicos globales a través de API, incluyendo datos meteorológicos actuales, pronósticos, ahora y datos meteorológicos históricos para cualquier ubicación geográfica.
 
-
-#. Visit OpenWeather to log in/create an account.
+#. Visita OpenWeather para iniciar sesión/crear una cuenta.
 
    .. image:: img/06_owm_1.png
 
-
-#. Click into the API page from the navigation bar.
+#. Haz clic en la página de API desde la barra de navegación.
 
    .. image:: img/06_owm_2.png
 
-
-#. Find **Current Weather Data** and click Subscribe.
+#. Encuentra **Current Weather Data** y haz clic en Suscribirse.
 
    .. image:: img/06_owm_3.png
 
-
-#. Under **Current weather and forecasts collection**, subscribe to the appropriate service. In our project, Free is good enough.
+#. Bajo **Current weather and forecasts collection**, suscríbete al servicio apropiado. En nuestro proyecto, la opción Gratis es suficiente.
 
    .. image:: img/06_owm_4.png
 
-
-#. Copy the Key from the **API keys** page.
+#. Copia la clave de la página de **API keys**.
 
    .. image:: img/06_owm_5.png
 
-#. Copy it to the ``arduino_secrets.h``.
+#. Copia la clave en ``arduino_secrets.h``.
 
    .. code-block:: Arduino
 
-       #define SECRET_SSID "<SSID>"        // your network SSID (name)
-       #define SECRET_PASS "<PASSWORD>"        // your network password 
+       #define SECRET_SSID "<SSID>"        // tu SSID de red (nombre)
+       #define SECRET_PASS "<PASSWORD>"        // tu contraseña de red 
        #define API_KEY "<OpenWeather_API_KEY>"
        #define LOCATION "<YOUR CITY>"
 
-#. Set the time zone of your location.
+#. Establece la zona horaria de tu ubicación.
 
-   Take the capital of Sweden, Stockholm, as an example. Search "stockholm timezone" on Google.
+   Tomando como ejemplo la capital de Suecia, Estocolmo, busca "stockholm timezone" en Google.
 
    .. image:: img/06_weather_oled_01.png 
 
-   In the search results, you will see "GMT+1", so you set the parameter of the function below to ``3600 * 1`` seconds.
+   En los resultados de búsqueda, verás "GMT+1", por lo que debes establecer el parámetro de la función a continuación en ``3600 * 1`` segundos.
    
    .. code-block:: Arduino
 
-      timeClient.setTimeOffset(3600 * 1);  // Adjust for your time zone (this is +1 hour)
+      timeClient.setTimeOffset(3600 * 1);  // Ajusta según tu zona horaria (esto es +1 hora)
 
-**Install the Library**
+**Instalar la Biblioteca**
 
-To install the library, use the Arduino Library Manager and search for "ArduinoMqttClient", "FastLED", "Adafruit GFX" and "Adafruit SSD1306" and install them.
+Para instalar la biblioteca, utiliza el Administrador de Bibliotecas de Arduino y busca "ArduinoMqttClient", "FastLED", "Adafruit GFX" y "Adafruit SSD1306" e instálalas.
 
-``ArduinoJson.h``: Used for handling JSON data (data obtained from openweathermap).
+``ArduinoJson.h``: Usada para manejar datos JSON (datos obtenidos de openweathermap).
 
-``NTPClient.h``: Used for obtaining real-time time.
+``NTPClient.h``: Usada para obtener la hora en tiempo real.
 
-``Adafruit_GFX.h``, ``Adafruit_SSD1306.h``: Used for OLED module.
+``Adafruit_GFX.h``, ``Adafruit_SSD1306.h``: Usadas para el módulo OLED.
 
-**Run the Code**
+**Ejecutar el Código**
 
-
-.. note::
-
-    * You can open the file ``06_weather_oled.ino`` under the path of ``elite-explorer-kit-main\iot_project\06_weather_oled`` directly.
-    * Or copy this code into Arduino IDE.
 
 .. note::
-    In the code, SSID and password are stored in ``arduino_secrets.h``. Before uploading this example, you need to modify them with your own WiFi credentials. Additionally, for security purposes, ensure that this information is kept confidential when sharing or storing the code.
+
+    * Puedes abrir el archivo ``06_weather_oled.ino`` bajo la ruta ``elite-explorer-kit-main\iot_project\06_weather_oled`` directamente.
+    * O copia este código en el IDE de Arduino.
+
+.. note::
+    En el código, SSID y contraseña se almacenan en ``arduino_secrets.h``. Antes de subir este ejemplo, necesitas modificarlos con tus propias credenciales de WiFi. Adicionalmente, por motivos de seguridad, asegúrate de mantener esta información confidencial al compartir o almacenar el código.
 
 .. raw:: html
 
@@ -152,55 +147,56 @@ To install the library, use the Arduino Library Manager and search for "ArduinoM
 
 
 
-**How it works?**
+**¿Cómo funciona?**
 
 
-1. Libraries and Definitions:
+1. Bibliotecas y Definiciones:
 
-   #. ``WiFiS3.h``: This is likely a library specific to a certain WiFi module or board to manage WiFi connections.
-   #. ``ArduinoJson.h``: This library is used for decoding (and encoding) JSON data.
-   #. ``arduino_secrets.h``: A separate file where sensitive data (like WiFi credentials) are stored. This is a good practice to keep credentials out of the main code.
-   #. **NTPClient & WiFiUdp**: These are used for fetching the current time from an NTP (Network Time Protocol) server.
-   #. **Adafruit libraries**: Used for managing the OLED display.
-   #. **Various global variables**: These include WiFi credentials, server details, and more, which will be used throughout the script.
+   #. ``WiFiS3.h``: Probablemente una biblioteca específica para un módulo WiFi o placa para gestionar las conexiones WiFi.
+   #. ``ArduinoJson.h``: Esta biblioteca se utiliza para decodificar (y codificar) datos JSON.
+   #. ``arduino_secrets.h``: Un archivo separado donde se almacenan datos sensibles (como credenciales de WiFi). Es una buena práctica mantener las credenciales fuera del código principal.
+   #. **NTPClient & WiFiUdp**: Se utilizan para obtener la hora actual de un servidor NTP (Network Time Protocol).
+   #. **Bibliotecas de Adafruit**: Usadas para gestionar la pantalla OLED.
+   #. **Varias variables globales**: Incluyen credenciales de WiFi, detalles del servidor y más, que se utilizarán en todo el script.
 
 2. ``setup()``:
 
-   #. It initializes the serial communication.
-   #. Checks and prints the WiFi module's firmware version.
-   #. Tries to connect to the WiFi network using the provided SSID and password.
-   #. Prints the connected WiFi's status (SSID, IP, Signal strength).
-   #. Initializes the OLED display.
-   #. Starts the NTP client to fetch the current time and sets a time offset (in this case, 8 hours which might correspond to a specific timezone).
+   #. Inicializa la comunicación serial.
+   #. Verifica y muestra la versión del firmware del módulo WiFi.
+   #. Intenta conectarse a la red WiFi utilizando el SSID y la contraseña proporcionados.
+   #. Muestra el estado del WiFi conectado (SSID, IP, intensidad de señal).
+   #. Inicializa la pantalla OLED.
+   #. Inicia el cliente NTP para obtener la hora actual y establece un desfase horario (en este caso, 1 hora, que podría corresponder a una zona horaria específica).
 
 3. ``read_response()``:
 
-   #. Reads the response from the server, specifically looking for JSON data (denoted by ``{`` and ``}``).
-   #. If JSON data is found, it decodes the data to extract weather details like temperature, humidity, pressure, wind speed, and wind direction.
-   #. Calls the ``displayWeatherData`` function to display the weather information on the OLED screen.
+   #. Lee la respuesta del servidor, buscando específicamente datos JSON (denotedos por ``{`` y ``}``).
+   #. Si se encuentran datos JSON, se decodifican para extraer detalles meteorológicos como temperatura, humedad, presión, velocidad del viento y dirección del viento.
+   #. Llama a la función ``displayWeatherData`` para mostrar la información meteorológica en la pantalla OLED.
 
 4. ``httpRequest()``:
 
-   #. Closes any existing connections to ensure the WiFi module's socket is free.
-   #. Tries to connect to the OpenWeatherMap server.
-   #. If connected, sends an HTTP GET request to fetch the weather data for a specific location defined by ``LOCATION`` (likely defined in ``arduino_secrets.h`` or elsewhere).
-   #. Records the time the request was made.
+   #. Cierra cualquier conexión existente para asegurar que el socket del módulo WiFi esté libre.
+   #. Intenta conectarse al servidor de OpenWeatherMap.
+   #. Si se conecta, envía una solicitud HTTP GET para obtener los datos meteorológicos de una ubicación específica definida por ``LOCATION`` (probablemente definida en ``arduino_secrets.h`` o en otro lugar).
+   #. Registra la hora en que se hizo la solicitud.
 
 5. ``loop()``:
 
-   #. Calls the ``read_response`` function to process any incoming data from the server.
-   #. Updates the time from the NTP server.
-   #. Checks if it's time to make another request to the weather server (based on the ``postingInterval``). If so, it calls the ``httpRequest`` function.
+   #. Llama a la función ``read_response`` para procesar cualquier dato entrante del servidor.
+   #. Actualiza la hora desde el servidor NTP.
+   #. Verifica si es momento de hacer otra solicitud al servidor meteorológico (basado en ``postingInterval``). Si es así, llama a la función ``httpRequest``.
 
 6. ``printWifiStatus()``:
 
-   #. The SSID of the connected network.
-   #. The local IP address of the board.
-   #. The signal strength (RSSI).
+   #. El SSID de la red conectada.
+   #. La dirección IP local de la placa.
+   #. La intensidad de la señal (RSSI).
 
 7. ``displayWeatherData()``:
 
-   #. Clears the OLED screen.
-   #. Displays the current day of the week.
-   #. Displays the current time in HH:MM format.
-   #. Displays the provided weather data (temperature, humidity, pressure, and wind speed).
+   #. Borra la pantalla OLED.
+   #. Muestra el día de la semana actual.
+   #. Muestra la hora actual en formato HH:MM.
+   #. Muestra los datos meteorológicos proporcionados (temperatura, humedad, presión y velocidad del viento).
+

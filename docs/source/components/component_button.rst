@@ -1,57 +1,52 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Hola, ¡bienvenido a la Comunidad de Entusiastas de SunFounder para Raspberry Pi, Arduino y ESP32 en Facebook! Profundiza en Raspberry Pi, Arduino y ESP32 con otros entusiastas.
 
-    **Why Join?**
+    **¿Por qué unirse?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Soporte experto**: Resuelve problemas postventa y desafíos técnicos con la ayuda de nuestra comunidad y equipo.
+    - **Aprende y comparte**: Intercambia consejos y tutoriales para mejorar tus habilidades.
+    - **Vistas previas exclusivas**: Obtén acceso anticipado a nuevos anuncios de productos y adelantos.
+    - **Descuentos especiales**: Disfruta de descuentos exclusivos en nuestros productos más nuevos.
+    - **Promociones y sorteos festivos**: Participa en sorteos y promociones de temporada.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 ¿Listo para explorar y crear con nosotros? Haz clic en [|link_sf_facebook|] y únete hoy mismo.
 
 .. _cpn_button:
 
-Button
+Botón
 ==========
 
 .. image:: img/button.png
     :width: 400
     :align: center
 
-Buttons are a common component used to control electronic devices. They are usually used as switches to connect or break circuits. Although buttons come in a variety of sizes and shapes, the one used here is a 6mm mini-button as shown in the following pictures.
-Pin 1 is connected to pin 2 and pin 3 to pin 4. So you just need to connect either of pin 1 and pin 2 to pin 3 or pin 4.
+Los botones son componentes comunes utilizados para controlar dispositivos electrónicos. Por lo general, se usan como interruptores para conectar o desconectar circuitos. Aunque los botones vienen en una variedad de tamaños y formas, el que se usa aquí es un mini botón de 6 mm como se muestra en las siguientes imágenes. 
+El pin 1 está conectado al pin 2 y el pin 3 al pin 4. Por lo tanto, solo necesitas conectar cualquiera de los pines 1 y 2 al 3 o 4.
 
-The following is the internal structure of a button. The symbol on the right below is usually used to represent a button in circuits. 
+La siguiente es la estructura interna de un botón. El símbolo de la derecha abajo se usa normalmente para representar un botón en los circuitos.
 
 .. image:: img/button_symbol.png
     :width: 400
     :align: center
 
-Since the pin 1 is connected to pin 2, and pin 3 to pin 4, when the button is pressed, the 4 pins are connected, thus closing the circuit.
+Dado que el pin 1 está conectado al pin 2 y el pin 3 al pin 4, cuando se presiona el botón, los 4 pines se conectan, cerrando así el circuito.
 
 .. image:: img/button2.png
     :width: 600
     :align: center
 
-
-In this kit, we provide two types of buttons. The one mentioned earlier is a small button, and there is also a large button. They have the same principle, only different in size.
+En este kit, proporcionamos dos tipos de botones. El mencionado anteriormente es un botón pequeño, y también hay un botón grande. Tienen el mismo principio, solo que son de diferente tamaño.
 
 .. image:: img/button3.png
     :width: 300
     :align: center
 
-
-
-**Example**
+**Ejemplo**
 
 * :ref:`basic_button` (Basic Project)
 * :ref:`fun_digital_dice` (Fun Project)
 * :ref:`fun_smart_fan` (Fun Project)
 * :ref:`fun_pong` (Fun Project)
 * :ref:`iot_mqtt_publish` (IoT Project)
-* :ref:`new_hid_keyboard` 
-
-
+* :ref:`new_hid_keyboard`

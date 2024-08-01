@@ -1,58 +1,58 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    ¡Hola, bienvenido a la Comunidad de Entusiastas de SunFounder Raspberry Pi, Arduino y ESP32 en Facebook! Sumérgete más profundamente en Raspberry Pi, Arduino y ESP32 con otros entusiastas.
 
-    **Why Join?**
+    **¿Por qué unirse?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Soporte experto**: Resuelve problemas postventa y desafíos técnicos con la ayuda de nuestra comunidad y equipo.
+    - **Aprende y comparte**: Intercambia consejos y tutoriales para mejorar tus habilidades.
+    - **Avances exclusivos**: Obtén acceso anticipado a nuevos anuncios de productos y adelantos.
+    - **Descuentos especiales**: Disfruta de descuentos exclusivos en nuestros productos más nuevos.
+    - **Promociones festivas y sorteos**: Participa en sorteos y promociones de temporada.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 ¿Listo para explorar y crear con nosotros? Haz clic en [|link_sf_facebook|] y únete hoy mismo!
 
-Introduce of Arduino IDE
+Introducción al Arduino IDE
 =================================
 
 .. image:: img/sp_ide_2.png
 
-1. **Verify**: Compile your code. Any syntax problem will be prompted with errors.
+1. **Verificar**: Compila tu código. Cualquier problema de sintaxis se indicará con errores.
 
-2. **Upload**: Upload the code to your board. When you click the button, the RX and TX LEDs on the board will flicker fast and won't stop until the upload is done.
+2. **Subir**: Sube el código a tu placa. Cuando haces clic en el botón, los LEDs RX y TX en la placa parpadearán rápidamente y no se detendrán hasta que la subida haya terminado.
 
-3. **Debug**: For line-by-line error checking.
+3. **Depurar**: Para la verificación de errores línea por línea.
 
-4. **Select Board**: Quick setup board and port.
+4. **Seleccionar placa**: Configuración rápida de la placa y el puerto.
 
-5. **Serial Plotter**: Check the change of reading value.
+5. **Trazador serial**: Verifica el cambio en los valores de lectura.
 
-6. **Serial Monitor**: Click the button and a window will appear. It receives the data sent from your control board. It is very useful for debugging.
+6. **Monitor serial**: Haz clic en el botón y aparecerá una ventana. Recibe los datos enviados desde tu placa de control. Es muy útil para la depuración.
 
-7. **File**: Click the menu and a drop-down list will appear, including file creating, opening, saving, closing, some parameter configuring, etc.
+7. **Archivo**: Haz clic en el menú y aparecerá una lista desplegable, que incluye creación, apertura, guardado y cierre de archivos, configuración de algunos parámetros, etc.
 
-8. **Edit**: Click the menu. On the drop-down list, there are some editing operations like **Cut**, **Copy**, **Paste**, **Find**, and so on, with their corresponding shortcuts.
+8. **Editar**: Haz clic en el menú. En la lista desplegable, hay algunas operaciones de edición como **Cortar**, **Copiar**, **Pegar**, **Buscar**, y más, con sus correspondientes atajos.
 
-9. **Sketch**: Includes operations like **Verify**, **Upload**, **Add** files, etc. A more important function is **Include Library** – where you can add libraries.
+9. **Sketch**: Incluye operaciones como **Verificar**, **Subir**, **Añadir** archivos, etc. Una función más importante es **Incluir Biblioteca** – donde puedes añadir bibliotecas.
 
-10. **Tool**: Includes some tools – the most frequently used Board (the board you use) and Port (the port your board is at). Every time you want to upload the code, you need to select or check them.
+10. **Herramienta**: Incluye algunas herramientas – las más frecuentemente usadas son Placa (la placa que usas) y Puerto (el puerto en el que está tu placa). Cada vez que quieras subir el código, necesitas seleccionarlas o verificarlas.
 
-11. **Help**: If you're a beginner, you may check the options under the menu and get the help you need, including operations in IDE, introduction information, troubleshooting, code explanation, etc.
+11. **Ayuda**: Si eres principiante, puedes revisar las opciones en el menú y obtener la ayuda que necesitas, incluyendo operaciones en el IDE, información introductoria, solución de problemas, explicación de código, etc.
 
-12. **Output Bar**: Switch the output tab here.
+12. **Barra de salida**: Cambia la pestaña de salida aquí.
 
-13. **Output Window**: Print information.
+13. **Ventana de salida**: Imprime información.
 
-14. **Board and Port**: Here you can preview the board and port selected for code upload. You can select them again by **Tools** -> **Board** / **Port** if any is incorrect.
+14. **Placa y puerto**: Aquí puedes previsualizar la placa y el puerto seleccionados para la subida de código. Puedes seleccionarlos nuevamente en **Herramientas** -> **Placa** / **Puerto** si alguno es incorrecto.
 
-15. The editing area of the IDE. You can write code here.
+15. El área de edición del IDE. Aquí puedes escribir código.
 
-16. **Sketchbook**: For managing sketch files.
+16. **Cuaderno de bocetos**: Para gestionar archivos de sketches.
 
-17. **Board Manager**: For managing board driver.
+17. **Administrador de placas**: Para gestionar los controladores de placas.
 
-18. **Library Manager**: For managing your library files.
+18. **Administrador de bibliotecas**: Para gestionar tus archivos de bibliotecas.
 
-19. **Debug**: Help debugging code.
+19. **Depurar**: Ayuda a depurar el código.
 
-20. **Search**: Search the codes from your sketches.
+20. **Buscar**: Busca el código en tus sketches.

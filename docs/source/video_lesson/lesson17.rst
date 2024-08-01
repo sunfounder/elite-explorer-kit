@@ -1,31 +1,32 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Hola, ¡bienvenido a la Comunidad de Entusiastas de SunFounder para Raspberry Pi, Arduino y ESP32 en Facebook! Sumérgete en el mundo de Raspberry Pi, Arduino y ESP32 junto a otros entusiastas.
 
-    **Why Join?**
+    **¿Por qué unirse?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Soporte experto**: Resuelve problemas postventa y desafíos técnicos con la ayuda de nuestra comunidad y equipo.
+    - **Aprende y comparte**: Intercambia consejos y tutoriales para mejorar tus habilidades.
+    - **Avances exclusivos**: Obtén acceso anticipado a anuncios de nuevos productos y adelantos exclusivos.
+    - **Descuentos especiales**: Disfruta de descuentos exclusivos en nuestros productos más recientes.
+    - **Promociones y sorteos festivos**: Participa en sorteos y promociones festivas.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 ¿Listo para explorar y crear con nosotros? Haz clic en [|link_sf_facebook|] y únete hoy mismo.
 
-LESSON 17: Control Multiple LED from the Serial Monitor
-=========================================================
+LECCIÓN 17: Controlar Múltiples LEDs desde el Monitor Serial
+==================================================================
 
-This lesson demonstrates how to create a user-controlled LED system using the Arduino, where the user can turn on and off different LEDs based on input through the serial monitor. Here’s a brief overview of what you will learn:
+Esta lección muestra cómo crear un sistema de control de LEDs utilizando el Arduino, donde el usuario puede encender y apagar diferentes LEDs en función de la entrada a través del monitor serial. Aquí tienes un breve resumen de lo que aprenderás:
 
-1. **Reviewing Previous Homework**:Recapping the assignment from Lesson 16, which involved making a circuit with three LEDs (red, yellow, and green) and controlling them based on user input.
-2. **Setting Up the Circuit**:Detailed instructions on how to correctly connect three LEDs and their current-limiting resistors to the Arduino. Each LED's long leg (anode) is connected to a digital pin, and the short leg (cathode) is connected to ground through a resistor.
-3. **Writing the Code:Step-by-step coding instructions to**:Define the pins for each LED,Set up the serial monitor for user input,Use if statements to turn on the specified LED and ensure all other LEDs are turned off,Convert user input to lowercase to handle different cases.
-4. **Debugging Tips**:Guidance on troubleshooting common issues such as missing semicolons, incorrect curly braces, and ensuring all LEDs are correctly turned off when a new LED is turned on.
-5. **Practical Applications**:Examples of using if statements to handle user input and control multiple outputs (LEDs) based on that input. 
-6. **Homework Assignment**: Extending the project by asking the user for both the LED color and the desired brightness. 
+1. **Revisión de la Tarea Anterior**: Recapitulación de la tarea de la Lección 16, que consistía en hacer un circuito con tres LEDs (rojo, amarillo y verde) y controlarlos en función de la entrada del usuario.
+2. **Configuración del Circuito**: Instrucciones detalladas sobre cómo conectar correctamente tres LEDs y sus resistencias limitadoras de corriente al Arduino. La pata larga (ánodo) de cada LED está conectada a un pin digital, y la pata corta (cátodo) está conectada a tierra a través de una resistencia.
+3. **Escritura del Código**: Instrucciones paso a paso para:Definir los pines para cada LED,Configurar el monitor serial para la entrada del usuario,Usar declaraciones if para encender el LED especificado y asegurarse de que todos los demás LEDs estén apagados,Convertir la entrada del usuario a minúsculas para manejar diferentes casos.
+4. **Consejos de Depuración**: Orientación sobre cómo solucionar problemas comunes como la falta de punto y coma, llaves incorrectas y asegurarse de que todos los LEDs estén apagados correctamente cuando se encienda un nuevo LED.
+5. **Aplicaciones Prácticas**: Ejemplos de cómo usar declaraciones if para manejar la entrada del usuario y controlar múltiples salidas (LEDs) en función de esa entrada.
+6. **Tarea**: Ampliar el proyecto pidiendo al usuario tanto el color del LED como el brillo deseado.
 
 **Video**
 
 .. raw:: html
 
-    <iframe width="700" height="500" src="https://www.youtube.com/embed/Ai7uqYHt_Yc?si=o9Q1tTC1X1B9teef" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="700" height="500" src="https://www.youtube.com/embed/Ai7uqYHt_Yc?si=o9Q1tTC1X1B9teef" title="Reproductor de video de YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+

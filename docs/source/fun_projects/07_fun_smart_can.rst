@@ -1,21 +1,21 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    ¡Hola! Bienvenido a la comunidad de entusiastas de SunFounder Raspberry Pi & Arduino & ESP32 en Facebook. Sumérgete en el mundo de Raspberry Pi, Arduino y ESP32 junto a otros entusiastas.
 
-    **Why Join?**
+    **¿Por qué unirse?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Soporte de expertos**: Resuelve problemas postventa y desafíos técnicos con ayuda de nuestra comunidad y equipo.
+    - **Aprender y compartir**: Intercambia consejos y tutoriales para mejorar tus habilidades.
+    - **Avances exclusivos**: Accede anticipadamente a anuncios de nuevos productos y adelantos exclusivos.
+    - **Descuentos especiales**: Disfruta de descuentos exclusivos en nuestros productos más recientes.
+    - **Promociones festivas y sorteos**: Participa en sorteos y promociones de temporada.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 ¿Listo para explorar y crear con nosotros? Haz clic en [|link_sf_facebook|] y únete hoy mismo!
 
 .. _fun_smart_can:
 
-Smart Can
-=====================
+Basurero Inteligente
+=========================
 
 .. raw:: html
 
@@ -24,35 +24,35 @@ Smart Can
       Your browser does not support the video tag.
    </video>
 
-This is an Arduino code designed to control a smart garbage can. 
-When an object is within a 20-centimeter range in front of the garbage can, its lid automatically opens. 
-This project utilizes an SG90 servo motor and an HC-SR04 ultrasonic distance sensor.
+Este es un código Arduino diseñado para controlar un basurero inteligente. 
+Cuando un objeto se encuentra dentro de un rango de 20 centímetros frente al basurero, su tapa se abre automáticamente. 
+Este proyecto utiliza un motor servo SG90 y un sensor de distancia ultrasónico HC-SR04.
 
-**Required Components**
+**Componentes necesarios**
 
-In this project, we need the following components. 
+En este proyecto, necesitamos los siguientes componentes.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí está el enlace:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nombre
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado desde los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN DEL COMPONENTE
+        - ENLACE DE COMPRA
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -65,55 +65,56 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_servo`
         - |link_servo_buy|
 
-**Wiring**
+**Cableado**
 
 .. image:: img/07_smart_trash_can_bb.png
     :width: 70%
     :align: center
 
 
-**Schematic**
+**Esquema**
 
 .. image:: img/07_smart_trash_can_schematic.png
    :width: 90%
    :align: center
 
-**Code**
+**Código**
 
 .. note::
 
-    * You can open the file ``07_smart_trash_can.ino`` under the path of ``elite-explorer-kit-main\fun_project\07_smart_trash_can`` directly.
-    * Or copy this code into Arduino IDE.
+    * Puedes abrir el archivo ``07_smart_trash_can.ino`` bajo la ruta ``elite-explorer-kit-main\fun_project\07_smart_trash_can`` directamente.
+    * O copiar este código en Arduino IDE.
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/509f1bee-6e38-4106-bea7-9b06cdb3719f/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-**How it works?**
+**¿Cómo funciona?**
 
-Here is a step-by-step explanation of the code:
+Aquí hay una explicación paso a paso del código:
 
-1. Import Libraries and Define Constants/Variables:
+1. Importar bibliotecas y definir constantes/variables:
 
-   The ``Servo.h`` library is imported for controlling the SG90 servo motor.
-   Parameters for the servo motor, ultrasonic sensor, and other required constants and variables are defined.
+   Se importa la biblioteca ``Servo.h`` para controlar el motor servo SG90.
+   Se definen los parámetros para el motor servo, el sensor ultrasónico y otras constantes y variables necesarias.
 
 2. ``setup()``:
 
-   Initialize serial communication with the computer at a baud rate of 9600.
-   Configure the trigger and echo pins of the ultrasonic sensor.
-   Attach the servo motor to its control pin and set its initial position to the closed angle. After setting the angle, the servo motor is detached to save power.
+   Inicializa la comunicación serial con la computadora a una velocidad de 9600 baudios.
+   Configura los pines de disparo y eco del sensor ultrasónico.
+   Conecta el motor servo a su pin de control y establece su posición inicial en el ángulo cerrado. Después de establecer el ángulo, el motor servo se desactiva para ahorrar energía.
 
 3. ``loop()``:
 
-   Measure distance three times and store the values of each measurement.
-   Calculate the average distance from the three measurements.
-   If the average distance is less than or equal to 20 centimeters (defined distance threshold), the servo motor rotates to the open angle (0 degrees). 
-   Otherwise, the servo motor returns to the closed position (90 degrees) after a one-second delay. The servo motor is detached when not in use to conserve power.
+   Mide la distancia tres veces y almacena los valores de cada medición.
+   Calcula la distancia promedio de las tres mediciones.
+   Si la distancia promedio es menor o igual a 20 centímetros (umbral de distancia definido), el motor servo gira al ángulo de apertura (0 grados). 
+   De lo contrario, el motor servo vuelve a la posición cerrada (90 grados) después de un retraso de un segundo. El motor servo se desactiva cuando no está en uso para conservar energía.
 
 4. ``readDistance()``:
 
-   Send a pulse to the trigger pin of the ultrasonic sensor.
-   Measure the pulse width of the echo pin and calculate the distance value. 
-   This calculation uses the speed of sound in the air to compute distance based on pulse time.
+   Envía un pulso al pin de disparo del sensor ultrasónico.
+   Mide el ancho del pulso del pin de eco y calcula el valor de la distancia.
+   Este cálculo utiliza la velocidad del sonido en el aire para calcular la distancia basada en el tiempo del pulso.
+

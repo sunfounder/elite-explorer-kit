@@ -1,47 +1,46 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Hola, bienvenido a la Comunidad de Entusiastas de SunFounder para Raspberry Pi, Arduino y ESP32 en Facebook. Sumérgete en el mundo de Raspberry Pi, Arduino y ESP32 junto a otros entusiastas.
 
-    **Why Join?**
+    **¿Por qué unirse?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Soporte experto**: Resuelve problemas postventa y desafíos técnicos con la ayuda de nuestra comunidad y equipo.
+    - **Aprende y comparte**: Intercambia consejos y tutoriales para mejorar tus habilidades.
+    - **Avances exclusivos**: Obtén acceso anticipado a anuncios de nuevos productos y adelantos exclusivos.
+    - **Descuentos especiales**: Disfruta de descuentos exclusivos en nuestros productos más recientes.
+    - **Promociones y sorteos festivos**: Participa en sorteos y promociones festivas.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 ¿Listo para explorar y crear con nosotros? Haz clic en [|link_sf_facebook|] y únete hoy mismo.
 
 .. _new_rtc:
 
-Real-Time Clock
+Reloj en Tiempo Real (RTC)
 ========================================
 
-The RTC (Real-Time Clock) is integrated into the UNO R4 WiFi's microcontroller (RA4M1). The RTC is an autonomous clock module capable of operating even when the main power supply is disconnected, thanks to a backup power source such as a battery. This makes the RTC incredibly versatile for various applications like scheduling timed tasks in home automation systems or time-stamping individual data points in data logging applications.
+El RTC (Reloj en Tiempo Real) está integrado en el microcontrolador (RA4M1) del UNO R4 WiFi. El RTC es un módulo de reloj autónomo capaz de funcionar incluso cuando la fuente de alimentación principal está desconectada, gracias a una fuente de energía de respaldo como una batería. Esto hace que el RTC sea increíblemente versátil para diversas aplicaciones como la programación de tareas en sistemas de automatización del hogar o la estampación temporal de datos en aplicaciones de registro de datos.
 
 .. note::
-    The UNO R4 WiFi has a VRTC pin that maintains the onboard RTC's operation even when the board loses power. To utilize this feature, apply a voltage between 1.6 and 3.6 V to the VRTC pin.
+    El UNO R4 WiFi tiene un pin VRTC que mantiene la operación del RTC integrado incluso cuando la placa pierde energía. Para utilizar esta característica, aplica un voltaje entre 1.6 y 3.6 V al pin VRTC.
 
 
-
-Scheduled Repetitive Tasks
+Tareas Repetitivas Programadas
 ++++++++++++++++++++++++++++++++++++++++++++
 
-In certain use-cases, you may need to execute specific tasks at regular intervals. To establish periodic interrupts, you'll first need to initialize a periodic callback function. Below is an Arduino code example that uses a periodic interrupt to blink an LED every 2 seconds.
+En ciertos casos de uso, es posible que necesites ejecutar tareas específicas a intervalos regulares. Para establecer interrupciones periódicas, primero necesitarás inicializar una función de callback periódica. A continuación, se muestra un ejemplo de código Arduino que utiliza una interrupción periódica para hacer parpadear un LED cada 2 segundos.
 
 
-**Upload the Code**
+**Cargar el Código**
 
-Open the ``03-rtc.ino`` file located at ``elite-explorer-kit-main\r4_new_feature\03-rtc``, or paste the following code into your Arduino IDE.
+Abre el archivo ``03-rtc.ino`` ubicado en ``elite-explorer-kit-main\r4_new_feature\03-rtc``, o pega el siguiente código en tu IDE de Arduino.
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/48777cc6-f8a5-4646-b221-36c883ed5a62/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-**Code Explanation**
+**Explicación del Código**
 
-1. Initializing Components and Libraries
+1. Inicializando Componentes y Bibliotecas
 
    .. code-block:: arduino
    
@@ -56,29 +55,29 @@ Open the ``03-rtc.ino`` file located at ``elite-explorer-kit-main\r4_new_feature
        RTC.begin();
      }
    
-   - ``#include "RTC.h"``: Includes the RTC library.
-   - ``volatile bool irqFlag = false;``: Declares a volatile boolean flag. ``volatile`` ensures that the variable can be safely accessed or modified by an interrupt. For more details on ``volatile``, refer to `Arduino volatile documentation <https://www.arduino.cc/reference/en/language/variables/variable-scope-qualifiers/volatile/>`_.
-   - ``bool ledState = false;``: Declares a boolean to keep track of the LED state.
-   - ``const int led = LED_BUILTIN;``: Declares a constant for the built-in LED pin.
-   - ``pinMode(led, OUTPUT);``: Sets the LED pin as an output.
-   - ``Serial.begin(9600);``: Initializes serial communication at 9600 baud rate.
-   - ``RTC.begin();``: Initializes the RTC.
+   - ``#include "RTC.h"``: Incluye la biblioteca RTC.
+   - ``volatile bool irqFlag = false;``: Declara una bandera booleana volátil. ``volatile`` asegura que la variable pueda ser accedida o modificada de manera segura por una interrupción. Para más detalles sobre ``volatile``, consulta la `documentación de Arduino sobre volatile <https://www.arduino.cc/reference/en/language/variables/variable-scope-qualifiers/volatile/>`_.
+   - ``bool ledState = false;``: Declara una variable booleana para llevar el control del estado del LED.
+   - ``const int led = LED_BUILTIN;``: Declara una constante para el pin del LED integrado.
+   - ``pinMode(led, OUTPUT);``: Configura el pin del LED como salida.
+   - ``Serial.begin(9600);``: Inicializa la comunicación serial a 9600 baudios.
+   - ``RTC.begin();``: Inicializa el RTC.
 
    .. raw:: html
     
         <br/>
 
-2. Setting Up the Real-Time Clock
+2. Configurando el Reloj en Tiempo Real
 
    .. code-block:: arduino
    
      RTCTime mytime(30, Month::JUNE, 2023, 13, 37, 00, DayOfWeek::WEDNESDAY, SaveLight::SAVING_TIME_ACTIVE);
      RTC.setTime(mytime);
    
-   - ``RTCTime mytime(...);``: Creates an ``RTCTime`` object and initializes it with a specific date and time.
-   - ``RTC.setTime(mytime);``: Sets the RTC with the initialized time.
+   - ``RTCTime mytime(...);``: Crea un objeto ``RTCTime`` y lo inicializa con una fecha y hora específicas.
+   - ``RTC.setTime(mytime);``: Configura el RTC con la hora inicializada.
    
-   Setting and Checking Periodic Callback
+   Configurando y Verificando el Callback Periódico
    
    .. code-block:: arduino
    
@@ -99,7 +98,7 @@ Open the ``03-rtc.ino`` file located at ``elite-explorer-kit-main\r4_new_feature
        irqFlag = true;
      }
    
-   - ``RTC.setPeriodicCallback(...);``: Sets a periodic callback to trigger every 2 seconds.The period can be specified using the following enumerations:
+   - ``RTC.setPeriodicCallback(...);``: Establece un callback periódico para activarse cada 2 segundos. El periodo puede ser especificado utilizando las siguientes enumeraciones:
 
       - ``ONCE_EVERY_2_SEC``
       - ``ONCE_EVERY_1_SEC``
@@ -112,10 +111,10 @@ Open the ``03-rtc.ino`` file located at ``elite-explorer-kit-main\r4_new_feature
       - ``N128_TIMES_EVERY_SEC``
       - ``N256_TIMES_EVERY_SEC``
 
-   - ``void loop() {...}``: Checks if the callback has been triggered. If so, toggles the LED state.
-   - ``void periodicCallback() {...}``: The callback function sets ``irqFlag = true`` when triggered.
+   - ``void loop() {...}``: Verifica si el callback ha sido activado. Si es así, cambia el estado del LED.
+   - ``void periodicCallback() {...}``: La función de callback establece ``irqFlag = true`` cuando se activa.
 
 
-**Reference**
+**Referencia**
 
 - |link_r4_rtc|

@@ -1,16 +1,16 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    ¡Hola! Bienvenido a la Comunidad de Entusiastas de SunFounder para Raspberry Pi, Arduino y ESP32 en Facebook. Profundiza en el mundo de Raspberry Pi, Arduino y ESP32 con otros entusiastas.
 
-    **Why Join?**
+    **¿Por qué unirse?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Soporte experto**: Resuelve problemas postventa y desafíos técnicos con la ayuda de nuestra comunidad y equipo.
+    - **Aprende y comparte**: Intercambia consejos y tutoriales para mejorar tus habilidades.
+    - **Vistas previas exclusivas**: Obtén acceso anticipado a nuevos anuncios de productos y adelantos.
+    - **Descuentos especiales**: Disfruta de descuentos exclusivos en nuestros productos más nuevos.
+    - **Promociones y sorteos festivos**: Participa en sorteos y promociones de temporada.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 ¿Listo para explorar y crear con nosotros? Haz clic en [|link_sf_facebook|] y únete hoy mismo.
 
 .. _basic_servo:
 
@@ -19,37 +19,37 @@ Servo
 
 .. https://docs.sunfounder.com/projects/r4-basic-kit/en/latest/projects/servo_uno.html#servo-uno
 
-Overview
----------------
+Descripción general
+----------------------
 
-In this lesson, you will explore the use of Arduino and Servo Motors. Focusing on the Arduino Uno and the SG90 servo motor, you'll learn how to program the Arduino to control the servo's sweeping motion. This technique is essential in various applications like robotics and automated systems.
+En esta lección, explorarás el uso de Arduino y servomotores. Enfocándote en el Arduino Uno y el servomotor SG90, aprenderás cómo programar el Arduino para controlar el movimiento de barrido del servo. Esta técnica es esencial en varias aplicaciones como la robótica y los sistemas automatizados.
 
-Required Components
+Componentes necesarios
 -------------------------
 
-In this project, we need the following components. 
+En este proyecto, necesitamos los siguientes componentes. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí está el enlace: 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nombre
+        - ELEMENTOS EN ESTE KIT
+        - ENLACE
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado en los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUCCIÓN A LOS COMPONENTES
+        - ENLACE DE COMPRA
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -58,8 +58,8 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_servo`
         - |link_servo_buy|
 
-Wiring
-----------------------
+Conexión
+----------
 
 .. image:: img/27-servo_bb.png
     :align: center
@@ -69,40 +69,39 @@ Wiring
 
    <br/>
 
-Schematic Diagram
------------------------
+Diagrama esquemático
+----------------------
 
 .. image:: img/27_servo_schematic.png
     :align: center
     :width: 60%
 
-Code
----------------
+Código
+----------
 
 .. note::
 
-    * You can open the file ``27-servo.ino`` under the path of ``elite-explorer-kit-main\basic_project\27-servo`` directly.
-    * Or copy this code into Arduino IDE.
+    * Puedes abrir el archivo ``27-servo.ino`` en la ruta ``elite-explorer-kit-main\basic_project\27-servo`` directamente.
+    * O copiar este código en Arduino IDE.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/c57ddb7a-0acb-4a64-938a-0a0abfc0ec4b/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-Code Analysis
-------------------------
+Análisis del código
+----------------------
 
-
-1. Here, the ``Servo`` library is included which allows for easy control of the servo motor. The pin connected to the servo and the initial angle of the servo are also defined.
+1. Aquí, se incluye la librería ``Servo`` que permite un fácil control del servomotor. Se define el pin conectado al servo y el ángulo inicial del servo.
 
    .. code-block:: arduino
 
       #include <Servo.h>
-      const int servoPin = 9;  // Define the servo pin
-      int angle = 0;           // Initialize the angle variable to 0 degrees
-      Servo servo;             // Create a servo object
+      const int servoPin = 9;  // Definir el pin del servo
+      int angle = 0;           // Inicializar la variable de ángulo a 0 grados
+      Servo servo;             // Crear un objeto servo
 
-2. The ``setup()`` function runs once when the Arduino starts. The servo is attached to the defined pin using the ``attach()`` function.
+2. La función ``setup()`` se ejecuta una vez cuando el Arduino se inicia. El servo se conecta al pin definido usando la función ``attach()``.
 
    .. code-block:: arduino
 
@@ -110,17 +109,17 @@ Code Analysis
         servo.attach(servoPin);
       }
 
-3. The main loop has two ``for`` loops. The first loop increases the angle from 0 to 180 degrees, and the second loop decreases the angle from 180 to 0 degrees. The ``servo.write(angle)`` command sets the servo to the specified angle. The ``delay(15)`` causes the servo to wait for 15 milliseconds before moving to the next angle, controlling the speed of the scanning movement.
+3. El bucle principal tiene dos bucles ``for``. El primer bucle aumenta el ángulo de 0 a 180 grados, y el segundo bucle disminuye el ángulo de 180 a 0 grados. El comando ``servo.write(angle)`` establece el servo en el ángulo especificado. El ``delay(15)`` hace que el servo espere 15 milisegundos antes de moverse al siguiente ángulo, controlando la velocidad del movimiento de barrido.
 
    .. code-block:: arduino
 
       void loop() {
-        // scan from 0 to 180 degrees
+        // barrido de 0 a 180 grados
         for (angle = 0; angle < 180; angle++) {
           servo.write(angle);
           delay(15);
         }
-        // now scan back from 180 to 0 degrees
+        // ahora barrer de 180 a 0 grados
         for (angle = 180; angle > 0; angle--) {
           servo.write(angle);
           delay(15);

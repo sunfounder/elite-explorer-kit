@@ -1,31 +1,32 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Hola, ¡bienvenido a la Comunidad de Entusiastas de SunFounder para Raspberry Pi, Arduino y ESP32 en Facebook! Sumérgete en el mundo de Raspberry Pi, Arduino y ESP32 junto a otros entusiastas.
 
-    **Why Join?**
+    **¿Por qué unirse?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Soporte experto**: Resuelve problemas postventa y desafíos técnicos con la ayuda de nuestra comunidad y equipo.
+    - **Aprende y comparte**: Intercambia consejos y tutoriales para mejorar tus habilidades.
+    - **Avances exclusivos**: Obtén acceso anticipado a anuncios de nuevos productos y adelantos exclusivos.
+    - **Descuentos especiales**: Disfruta de descuentos exclusivos en nuestros productos más recientes.
+    - **Promociones y sorteos festivos**: Participa en sorteos y promociones festivas.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 ¿Listo para explorar y crear con nosotros? Haz clic en [|link_sf_facebook|] y únete hoy mismo.
 
-LESSON 9: Using the Serial Port to Print to the Serial Monitor
-================================================================
+LECCIÓN 9: Usar el puerto serie para imprimir en el monitor serie
+=====================================================================
 
-This lesson focuses on using the serial port to transmit data from the Arduino to the computer's screen, specifically through the serial monitor. Here’s a brief overview of what you will learn:
+Esta lección se centra en el uso del puerto serie para transmitir datos desde el Arduino a la pantalla de la computadora, específicamente a través del monitor serie. Aquí tienes un breve resumen de lo que aprenderás:
 
-1. **Introduction to Serial Communication**: Understanding the basics of serial communication between Arduino and your desktop computer.
-2. **Setting up the Arduino Environment**: Configuring the Arduino IDE, selecting the correct board, port, and basic sketch setup to ensure everything is ready for serial communication.
-3. **Developing a Simple Counting Program**: Writing a program that counts numbers and uses the serial port to display these numbers on the computer screen.
-4. **Enhancing Program Functionality**: Incorporating various data types and string manipulations to format and present data effectively on the serial monitor.
-5. **Homework Assignment**: Applying the concepts learned by modifying an LED blink program to include serial communication, reinforcing the lesson through practical application.
+1. **Introducción a la comunicación serie**: Comprender los conceptos básicos de la comunicación serie entre Arduino y tu computadora de escritorio.
+2. **Configuración del entorno de Arduino**: Configurar el IDE de Arduino, seleccionar la placa correcta, el puerto y la configuración básica del sketch para asegurar que todo esté listo para la comunicación serie.
+3. **Desarrollo de un programa simple de conteo**: Escribir un programa que cuente números y utilice el puerto serie para mostrar estos números en la pantalla de la computadora.
+4. **Mejora de la funcionalidad del programa**: Incorporar varios tipos de datos y manipulaciones de cadenas para formatear y presentar datos de manera efectiva en el monitor serie.
+5. **Tarea**: Aplicar los conceptos aprendidos modificando un programa de parpadeo de LED para incluir la comunicación serie, reforzando la lección a través de la aplicación práctica.
 
 
 **Video**
 
 .. raw:: html
 
-    <iframe width="700" height="500" src="https://www.youtube.com/embed/4N-Q28lTzqE?si=o9Q1tTC1X1B9teef" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="700" height="500" src="https://www.youtube.com/embed/4N-Q28lTzqE?si=o9Q1tTC1X1B9teef" title="Reproductor de video de YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+

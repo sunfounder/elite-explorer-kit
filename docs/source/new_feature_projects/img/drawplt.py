@@ -61,7 +61,7 @@ nx.draw(G_requested, pos_manual, with_labels=True,
 edge_labels_requested = nx.get_edge_attributes(G_requested, 'relation')
 nx.draw_networkx_edge_labels(G_requested, pos_manual, edge_labels=edge_labels_requested)
 
-# Add updated descriptions as annotations with the manual layout
+# Add updated descriptions as annotetions with the manual layout
 for node, (x, y) in pos_manual.items():
     description = G_requested.nodes[node]['description']
     plt.text(x, y - 0.4, s=description, horizontalalignment='center', fontsize=9)

@@ -1,30 +1,31 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Hola, ¡bienvenido a la Comunidad de Entusiastas de SunFounder para Raspberry Pi, Arduino y ESP32 en Facebook! Sumérgete en el mundo de Raspberry Pi, Arduino y ESP32 junto a otros entusiastas.
 
-    **Why Join?**
+    **¿Por qué unirse?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Soporte experto**: Resuelve problemas postventa y desafíos técnicos con la ayuda de nuestra comunidad y equipo.
+    - **Aprende y comparte**: Intercambia consejos y tutoriales para mejorar tus habilidades.
+    - **Avances exclusivos**: Obtén acceso anticipado a anuncios de nuevos productos y adelantos exclusivos.
+    - **Descuentos especiales**: Disfruta de descuentos exclusivos en nuestros productos más recientes.
+    - **Promociones y sorteos festivos**: Participa en sorteos y promociones festivas.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 ¿Listo para explorar y crear con nosotros? Haz clic en [|link_sf_facebook|] y únete hoy mismo.
 
-LESSON 18: Controlling RGB LED with an Arduino
-================================================
+LECCIÓN 18: Controlar un LED RGB con un Arduino
+====================================================
 
-This lesson demonstrates how to use an RGB LED with an Arduino to create different colors by combining red, green, and blue light, building on previous lessons about controlling LEDs and using the Arduino's PWM capabilities. Here’s a brief overview of what you will learn:
+Esta lección muestra cómo usar un LED RGB con un Arduino para crear diferentes colores combinando luces rojas, verdes y azules, basándose en lecciones anteriores sobre el control de LEDs y el uso de las capacidades PWM del Arduino. Aquí tienes un breve resumen de lo que aprenderás:
 
-1. **Reviewing Previous Homework**:Recapping the assignment from Lesson 17, which involved creating a circuit with three LEDs (red, yellow, and green) and controlling them based on user input.
-2. **Setting Up the Circuit**:Detailed instructions on how to correctly connect an RGB LED to the Arduino. The RGB LED has four legs: one common ground and three for the red, green, and blue LEDs. Each color channel requires a separate current-limiting resistor to prevent crosstalk and ensure proper operation.
-3. **Writing the Code**:Step-by-step coding instructions to:Define the pins for each color channel of the RGB LED.Set up the serial monitor for user input.Use digital write commands to turn on and off each color channel.Convert user input to lowercase to handle different cases.
-4. **Practical Applications**:Examples of controlling the RGB LED to produce various colors by turning on different combinations of the red, green, and blue LEDs. 
-5. **Homework Assignment**:Extending the project by asking the user for specific colors, including red, green, blue, cyan, magenta, yellow, orange, and white. 
+1. **Revisión de la Tarea Anterior**: Recapitulación de la tarea de la Lección 17, que consistía en crear un circuito con tres LEDs (rojo, amarillo y verde) y controlarlos en función de la entrada del usuario.
+2. **Configuración del Circuito**: Instrucciones detalladas sobre cómo conectar correctamente un LED RGB al Arduino. El LED RGB tiene cuatro patas: una común a tierra y tres para los LEDs rojo, verde y azul. Cada canal de color requiere una resistencia limitadora de corriente separada para evitar la diafonía y asegurar un funcionamiento adecuado.
+3. **Escritura del Código**: Instrucciones paso a paso para: Definir los pines para cada canal de color del LED RGB. Configurar el monitor serial para la entrada del usuario. Usar comandos de escritura digital para encender y apagar cada canal de color. Convertir la entrada del usuario a minúsculas para manejar diferentes casos.
+4. **Aplicaciones Prácticas**: Ejemplos de control del LED RGB para producir varios colores encendiendo diferentes combinaciones de los LEDs rojo, verde y azul.
+5. **Tarea**: Ampliar el proyecto pidiendo al usuario colores específicos, incluyendo rojo, verde, azul, cian, magenta, amarillo, naranja y blanco.
 
 **Video**
 
 .. raw:: html
 
-    <iframe width="700" height="500" src="https://www.youtube.com/embed/ASHBCGGeEPk?si=o9Q1tTC1X1B9teef" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="700" height="500" src="https://www.youtube.com/embed/ASHBCGGeEPk?si=o9Q1tTC1X1B9teef" title="Reproductor de video de YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+

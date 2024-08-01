@@ -1,20 +1,20 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    ¡Hola! Bienvenido a la Comunidad de Entusiastas de SunFounder para Raspberry Pi, Arduino y ESP32 en Facebook. Sumérgete en el mundo de Raspberry Pi, Arduino y ESP32 junto a otros entusiastas.
 
-    **Why Join?**
+    **¿Por qué unirse?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Soporte Experto**: Resuelve problemas postventa y desafíos técnicos con la ayuda de nuestra comunidad y equipo.
+    - **Aprende y Comparte**: Intercambia consejos y tutoriales para mejorar tus habilidades.
+    - **Avances Exclusivos**: Obtén acceso anticipado a anuncios de nuevos productos y adelantos exclusivos.
+    - **Descuentos Especiales**: Disfruta de descuentos exclusivos en nuestros productos más recientes.
+    - **Promociones Festivas y Sorteos**: Participa en sorteos y promociones festivas.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 ¿Listo para explorar y crear con nosotros? Haz clic en [|link_sf_facebook|] y únete hoy mismo.
 
 .. _iot_mqtt_publish:
 
-Cloud Calling System with MQTT
+Sistema de Llamadas en la Nube con MQTT
 ============================================
 
 .. raw:: html
@@ -24,37 +24,37 @@ Cloud Calling System with MQTT
       Your browser does not support the video tag.
    </video>
 
-Message Queuing Telemetry Transport (MQTT) is a straightforward messaging protocol. It is also the most widely used messaging protocol in the realm of the Internet of Things (IoT).
+Message Queuing Telemetry Transport (MQTT) es un protocolo de mensajería sencillo. También es el protocolo de mensajería más utilizado en el ámbito del Internet de las Cosas (IoT).
 
-MQTT protocols define how IoT devices exchange data. They operate in an event-driven manner and are interconnected using the Publish/Subscribe model. The sender (Publisher) and the receiver (Subscriber) communicate through Topics. A device publishes a message on a specific topic, and all devices subscribed to that topic receive the message.
+Los protocolos MQTT definen cómo los dispositivos IoT intercambian datos. Operan de manera impulsada por eventos y están interconectados utilizando el modelo Publicar/Suscribirse. El remitente (Publicador) y el receptor (Suscriptor) se comunican a través de Temas. Un dispositivo publica un mensaje en un tema específico, y todos los dispositivos suscritos a ese tema reciben el mensaje.
 
-In this section, we'll create a service bell system using UNO R4, HiveMQ (a free public MQTT broker service), and four buttons. Each of the four buttons corresponds to a restaurant table, and when a customer presses a button, you'll be able to see which table needs service on HiveMQ.
+En esta sección, crearemos un sistema de timbre de servicio utilizando el UNO R4, HiveMQ (un servicio gratuito de broker público de MQTT) y cuatro botones. Cada uno de los cuatro botones corresponde a una mesa de restaurante, y cuando un cliente presiona un botón, podrás ver qué mesa necesita servicio en HiveMQ.
 
-**Required Components**
+**Componentes Requeridos**
 
-In this project, we need the following components. 
+En este proyecto, necesitamos los siguientes componentes. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+Es definitivamente conveniente comprar un kit completo, aquí está el enlace: 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
+    *   - Nombre	
+        - Ítems en este Kit
+        - Enlace
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+También puedes comprarlos por separado desde los enlaces a continuación.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - Introducción del Componente
+        - Enlace de Compra
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -66,79 +66,79 @@ You can also buy them separately from the links below.
         - |link_button_buy|
 
 
-**Wiring**
+**Conexiones**
 
 .. image:: img/04_mqtt_button_bb.png
    :width: 70%
    :align: center
 
-**Schematic**
+**Esquemático**
 
 .. image:: img/04_mqtt_button_schematic.png
    :width: 50%
    :align: center
 
-**How to play?**
+**¿Cómo jugar?**
 
-HiveMQ is an MQTT broker and client-based messaging platform that facilitates fast, efficient, and reliable data transfer to IoT devices.
+HiveMQ es una plataforma de mensajería basada en MQTT que facilita la transferencia rápida, eficiente y confiable de datos a dispositivos IoT.
 
-1. Open |link_hivemq| in your web browser.
+1. Abre |link_hivemq| en tu navegador web.
 
-2. Connect the client to the default public proxy.
+2. Conecta el cliente al proxy público predeterminado.
 
    .. image:: img/04_mqtt_1.png
 
-3. Click on **Add New Topic Subscription**.
+3. Haz clic en **Add New Topic Subscription**.
 
    .. image:: img/04_mqtt_2.png
 
-4. Enter the topics you wish to follow and click **Subscribe**. Make sure the topics you set here are unique to avoid receiving messages from other users, and pay attention to case sensitivity. 
+4. Introduce los temas que deseas seguir y haz clic en **Subscribe**. Asegúrate de que los temas que configures aquí sean únicos para evitar recibir mensajes de otros usuarios y presta atención a la sensibilidad de mayúsculas y minúsculas.
 
-   In this example code, we set the topic as ``SunFounder MQTT Test``. If you have made any changes, ensure that the topic in the code matches the subscribed topic on the webpage.
+   En este código de ejemplo, configuramos el tema como ``SunFounder MQTT Test``. Si has realizado algún cambio, asegúrate de que el tema en el código coincida con el tema suscrito en la página web.
 
    .. image:: img/04_mqtt_3.png
 
 
-**Install the Library**
+**Instalar la Biblioteca**
 
-To install the library, use the Arduino Library Manager and search for "ArduinoMqttClient" and install it.
+Para instalar la biblioteca, utiliza el Administrador de Bibliotecas de Arduino y busca "ArduinoMqttClient" e instálala.
 
-``ArduinoMqttClient.h``: Used for MQTT communication.
+``ArduinoMqttClient.h``: Utilizada para la comunicación MQTT.
 
-**Run the Code**
-
-.. note::
-
-    * You can open the file ``04_mqtt_button.ino`` under the path of ``elite-explorer-kit-main\iot_project\04_mqtt_button`` directly.
-    * Or copy this code into Arduino IDE.
+**Ejecutar el Código**
 
 .. note::
-    In the code, SSID and password are stored in ``arduino_secrets.h``. Before uploading this example, you need to modify them with your own WiFi credentials. Additionally, for security purposes, ensure that this information is kept confidential when sharing or storing the code.
+
+    * Puedes abrir el archivo ``04_mqtt_button.ino`` bajo la ruta ``elite-explorer-kit-main\iot_project\04_mqtt_button`` directamente.
+    * O copia este código en el IDE de Arduino.
+
+.. note::
+    En el código, SSID y contraseña se almacenan en ``arduino_secrets.h``. Antes de subir este ejemplo, necesitas modificarlos con tus propias credenciales de WiFi. Adicionalmente, por motivos de seguridad, asegúrate de mantener esta información confidencial al compartir o almacenar el código.
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/7a4acdf8-beed-47d4-ada8-cbaab0f3477f/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After running the code, go back to |link_hivemq|, and when you press one of the buttons on the breadboard, you will see the Messages prompt on HiveMQ.
+Después de ejecutar el código, vuelve a |link_hivemq|, y cuando presiones uno de los botones en la protoboard, verás el mensaje en HiveMQ.
 
     .. image:: img/04_mqtt_4.png
   
-**How it works?**
+**¿Cómo funciona?**
 
-This code is for an Arduino-based project that connects to Wi-Fi and communicates with an MQTT broker using the MQTT protocol. Additionally, it can detect whether four buttons are pressed and send the corresponding messages to the MQTT broker.
+Este código es para un proyecto basado en Arduino que se conecta a Wi-Fi y se comunica con un broker MQTT utilizando el protocolo MQTT. Además, puede detectar si se presionan cuatro botones y enviar los mensajes correspondientes al broker MQTT.
 
-Here is a detailed explanation of the code:
+Aquí tienes una explicación detallada del código:
 
-1. **Include Relevant Libraries**:
+1. **Incluir Bibliotecas Relevantes**:
 
    .. code-block:: Arduino
        
        #include <WiFiS3.h>
        #include <ArduinoMqttClient.h>
 
-2. **Include Sensitive Information**:
+2. **Incluir Información Sensible**:
 
-   * The ``arduino_secrets.h`` file contains the SSID and password for the Wi-Fi network.
+   * El archivo ``arduino_secrets.h`` contiene el SSID y la contraseña para la red Wi-Fi.
    
    .. code-block:: Arduino
        
@@ -146,29 +146,30 @@ Here is a detailed explanation of the code:
        char ssid[] = SECRET_SSID;   
        char pass[] = SECRET_PASS;   
 
-3. **Initialize Variables**:
+3. **Inicializar Variables**:
 
-   * Variables for managing Wi-Fi and MQTT connections.
-   * Initialize button pins and button states.
+   * Variables para gestionar conexiones Wi-Fi y MQTT.
+   * Inicializar pines de botones y estados de botones.
 
 4. ``setup()``:
 
-   * Initialize serial communication.
-   * Check for the presence of the Wi-Fi module and attempt to connect to Wi-Fi.
-   * Print network data.
-   * Attempt to connect to the MQTT broker.
-   * Subscribe to MQTT topics.
-   * Set buttons to input mode.
+   * Inicializar la comunicación serial.
+   * Verificar la presencia del módulo Wi-Fi e intentar conectarse a Wi-Fi.
+   * Imprimir datos de la red.
+   * Intentar conectarse al broker MQTT.
+   * Suscribirse a temas MQTT.
+   * Configurar los botones en modo de entrada.
 
 5. ``loop()``:
 
-   * Keep the MQTT connection active.
-   * Check if each button is pressed, and if so, send MQTT messages.
+   * Mantener activa la conexión MQTT.
+   * Verificar si cada botón se presiona, y si es así, enviar mensajes MQTT.
 
-6. **Other Utility Functions**:
+6. **Otras Funciones Utilitarias**:
 
-   * ``printWifiData()``: Prints information about the currently connected Wi-Fi network.
-   * ``printCurrentNet()``: Prints relevant data about the current network.
-   * ``printMacAddress(byte mac[])``: Prints the MAC address.
-   * ``onMqttMessage(int messageSize)``: Callback function triggered when a message is received from the MQTT broker. It prints the received message topic and content.
-   * ``sendButtonMessage(int buttonNumber)``: Use this function to send MQTT messages when a button is pressed.
+   * ``printWifiData()``: Imprime información sobre la red Wi-Fi actualmente conectada.
+   * ``printCurrentNet()``: Imprime datos relevantes sobre la red actual.
+   * ``printMacAddress(byte mac[])``: Imprime la dirección MAC.
+   * ``onMqttMessage(int messageSize)``: Función de callback que se activa cuando se recibe un mensaje del broker MQTT. Imprime el tema del mensaje recibido y su contenido.
+   * ``sendButtonMessage(int buttonNumber)``: Utiliza esta función para enviar mensajes MQTT cuando se presiona un botón.
+

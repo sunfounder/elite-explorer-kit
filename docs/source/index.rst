@@ -24,6 +24,7 @@ Gracias por elegir nuestro Elite Explorer Kit.
         * |link_jp_tutorials|
         * |link_en_tutorials|
         * |link_fr_tutorials|
+        * |link_es_tutorials|
     
     Por favor, haz clic en los respectivos enlaces para acceder al documento en tu idioma preferido.
 

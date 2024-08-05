@@ -75,6 +75,7 @@ Schéma de câblage
 .. image:: img/14-i2c_lcd_schematic.png
     :align: center
     :width: 80%
+    
 Code
 ---------------
 

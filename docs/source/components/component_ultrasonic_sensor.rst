@@ -53,4 +53,4 @@ déclenchement et le signal d'écho.
 **Exemple**
 
 * :ref:`basic_ultrasonic_sensor` (Basic Project)
-* :ref:`fun_smart_can` (Fun Project)
+* :ref:`fun_smart_fan` (Fun Project)

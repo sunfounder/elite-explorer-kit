@@ -40,6 +40,10 @@ templates_path = ['_templates']
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = []
 
+extensions = [
+    'sphinx.ext.autosectionlabel',
+    'sphinx_copybutton'
+]
 
 # -- Options for HTML output -------------------------------------------------
 
@@ -116,6 +120,10 @@ rst_epilog = """
 .. |link_fr_tutorials| raw:: html
 
     <a href="https://docs.sunfounder.com/projects/elite-explorer-kit/fr/latest/" target="_blank">Tutoriels en ligne en français</a>
+
+.. |link_es_tutorials| raw:: html
+
+    <a href="https://docs.sunfounder.com/projects/elite-explorer-kit/es/latest/" target="_blank">Tutoriales en línea de español</a>
 
 
     

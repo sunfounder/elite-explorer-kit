@@ -1,16 +1,16 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community di SunFounder per appassionati di Raspberry Pi, Arduino e ESP32 su Facebook! Approfondisci Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirsi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto Esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e Condividi**: Scambia suggerimenti e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Accedi in anteprima agli annunci dei nuovi prodotti e alle anticipazioni.
+    - **Sconti Speciali**: Godi di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e Giveaway Festivi**: Partecipa a giveaway e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
 .. _basic_74hc595:
 
@@ -18,37 +18,37 @@
 ==========================
 
 
-Overview
+Panoramica
 ----------------------
 
-Generally, there are two ways to drive a single 7-segment display. One way is to connect its 8 pins directly to eight ports on the Uno board, which we have done previously. Or you can connect the 74HC595 to three ports of the UNO board and then the 7-segment display to the 74HC595. In this experiment, we will use the latter. By this way, we can save five ports – considering the Uno board’s limited ports, this is very important. Now let's get started!
+Generalmente, ci sono due modi per pilotare un display a 7 segmenti. Un modo è collegare i suoi 8 pin direttamente a otto porte sulla scheda Uno, come abbiamo fatto in precedenza. Oppure puoi collegare il 74HC595 a tre porte della scheda UNO e poi il display a 7 segmenti al 74HC595. In questo esperimento utilizzeremo quest'ultimo metodo. In questo modo possiamo risparmiare cinque porte - considerando le porte limitate della scheda Uno, questo è molto importante. Ora iniziamo!
 
-Required Components
+Componenti Necessari
 ------------------------
 
-In this project, we need the following components. 
+In questo progetto, abbiamo bisogno dei seguenti componenti. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un kit completo, ecco il link: 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - ELEMENTI IN QUESTO KIT
         - LINK
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link seguenti.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE DEI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -63,57 +63,57 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_74hc595`
         - |link_74hc595_buy|
 
-Wiring
+Cablaggio
 ----------------------
 
 .. image:: img/29-74hc595_bb.png
     :align: center
     :width: 95%
 
-Schematic Diagram
+Schema Elettrico
 --------------------
 
-In the experiment MR (pin10) is connected to 5V (HIGH Level) and OE (pin 1)  to GND (LOW Level). Therefore, the data is input into the rising edge of SHcp and enters the memory register through the rising edge. We use the shiftout() function to output a 8-bit data to the shift register through DS. In the rising edge of the SHcp, the data in the shift register moves successively one bit in one time, i.e. data in Q1 moves to Q2, and so forth. In the rising edge of STcp, data in the shift register moves into the memory register. All data will be moved to the memory register after 8 times. Then the data in the memory register is output to the bus (Q0-Q7). So the 16 characters are displayed in the 7-segment in turn.
+Nell'esperimento MR (pin10) è collegato a 5V (Livello HIGH) e OE (pin 1) a GND (Livello LOW). Pertanto, i dati vengono immessi sul fronte di salita di SHcp e entrano nel registro di memoria attraverso il fronte di salita. Usiamo la funzione shiftout() per inviare un dato a 8 bit al registro a scorrimento tramite DS. Sul fronte di salita di SHcp, i dati nel registro a scorrimento si spostano successivamente di un bit alla volta, cioè i dati in Q1 si spostano in Q2, e così via. Sul fronte di salita di STcp, i dati nel registro a scorrimento si spostano nel registro di memoria. Tutti i dati verranno trasferiti nel registro di memoria dopo 8 volte. Successivamente, i dati nel registro di memoria vengono inviati al bus (Q0-Q7). Quindi i 16 caratteri vengono visualizzati a turno nel display a 7 segmenti.
 
 .. image:: img/29_74hc595_schematic.png
    :align: center
 
 
-Code
---------
+Codice
+-----------
 
 .. note::
 
-    * You can open the file ``29-74hc595.ino`` under the path of ``elite-explorer-kit-main\basic_project\29-74hc595`` directly.
-    * Or copy this code into Arduino IDE.
+    * Puoi aprire il file ``29-74hc595.ino`` nel percorso ``elite-explorer-kit-main\basic_project\29-74hc595`` direttamente.
+    * Oppure copia questo codice nell'IDE di Arduino.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/c7232b3c-61c9-4d7d-849b-55ed406181b1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After uploading the codes to the uno board, you should now see the 7-segment display from 0 to 9 and A to F.
+Dopo aver caricato il codice sulla scheda Uno, dovresti vedere il display a 7 segmenti visualizzare da 0 a 9 e da A a F.
     
 
-Code Analysis
------------------
+Analisi del Codice
+--------------------
 
-**Set the array elements**
+**Impostare gli elementi dell'array**
 
 .. code-block:: arduino
 
     int datArray[16] = {252, 96, 218, 242, 102, 182, 190, 224, 254, 246, 238, 62, 156, 122, 158, 142};
 
-This array stores the data of the 16 characters from 0 to F. 252 stands for 0, which you can calculate by yourself. To display 0, the segment g (the middle one) of the 7-segment display must be low level (dim).
+Questo array memorizza i dati dei 16 caratteri da 0 a F. 252 rappresenta 0, che puoi calcolare da solo. Per visualizzare 0, il segmento g (quello centrale) del display a 7 segmenti deve essere a livello basso (spento).
 
-Since the segment g is connected to Q1 of the 74HC595, set both Q1 and DP (the dot) as low level and leave the rest pins as high level.
-Therefore, the values of Q7 Q6 Q5 Q4 Q3 Q2 Q1 Q0 are 1 1 1 1 1 1 0 0.
+Poiché il segmento g è collegato a Q1 del 74HC595, impostare sia Q1 che DP (il punto) a livello basso e lasciare gli altri pin a livello alto.
+Pertanto, i valori di Q7 Q6 Q5 Q4 Q3 Q2 Q1 Q0 sono 1 1 1 1 1 1 0 0.
 
-Change the binary numbers into decimal ones:
+Converti i numeri binari in decimali:
 1x2\ :sup:`7`\ +1x2\ :sup:`6`\ +1x2\ :sup:`5`\ +1x2\ :sup:`4`\ +1x2\ :sup:`3`\ +1x2\ :sup:`2`\ +0x2\ :sup:`1`\ +1x2\ :sup:`0`\ =252.
 
-So that's the value for the number **0** to be displayed. You can calculate other characters similarly.
+Quindi questo è il valore per il numero **0** da visualizzare. Puoi calcolare altri caratteri in modo simile.
 
-**Display 0-F in the 7-segment display**
+**Visualizzare 0-F nel display a 7 segmenti**
 
 .. code-block:: arduino
 
@@ -121,25 +121,22 @@ So that's the value for the number **0** to be displayed. You can calculate othe
 
     {
 
-      digitalWrite(STcp,LOW); //ground ST_CP and hold low for as long as you are transmitting
+      digitalWrite(STcp,LOW); //porta ST_CP a livello basso e mantienilo basso per tutto il tempo in cui stai trasmettendo
 
       shiftOut(DS,SHcp,MSBFIRST,datArray[num]);
 
-      //return the latch pin high to signal chip that it
+      //riporta il pin di latch alto per segnalare al chip che non deve più ascoltare
 
-      //no longer needs to listen for information
+      digitalWrite(STcp,HIGH); //porta ST_CP a livello alto per salvare i dati
 
-      digitalWrite(STcp,HIGH); //pull the ST_CPST_CP to save the data
-
-      delay(1000); //wait for a second
+      delay(1000); //attendi un secondo
 
     }
 
-Set ``STcp`` as low level first and then high level. It will generate a rising edge pulse of STcp.
+Imposta ``STcp`` a livello basso prima e poi a livello alto. Genererà un impulso di salita di STcp.
 
-``shiftOut()`` is used to shift out a byte of data one bit at a time, which means to shift a byte of data in ``dataArray[num]`` to the shifting register with the DS pin. ``MSBFIRST`` means to move from high bits.
+``shiftOut()`` viene utilizzato per inviare un byte di dati un bit alla volta, il che significa inviare un byte di dati in ``dataArray[num]`` al registro a scorrimento con il pin DS. ``MSBFIRST`` significa muoversi dai bit più alti.
 
-After ``digitalWrite(STcp,HIGH)`` is run, the STcp will be at the rising edge. At this time, the data in the shift register will be moved to the memory register.
+Dopo ``digitalWrite(STcp,HIGH)``, STcp sarà sul fronte di salita. In questo momento, i dati nel registro a scorrimento verranno spostati nel registro di memoria.
 
-A byte of data will be transferred into the memory register after 8 times. Then the data of memory register is output to the bus (Q0-Q7). You will see a character is displayed on the 7-segment. Then delay for 1000ms. After that line, go back to ``for()``. The loop repeats until all the characters are displayed in the 7-segment display one by one after
-16 times.
+Un byte di dati verrà trasferito nel registro di memoria dopo 8 volte. Successivamente, i dati del registro di memoria vengono inviati al bus (Q0-Q7). Vedrai un carattere visualizzato sul display a 7 segmenti. Quindi attendi 1000ms. Dopo quella linea, torna a ``for()``. Il ciclo si ripete fino a quando tutti i caratteri vengono visualizzati uno per uno nel display a 7 segmenti dopo 16 volte.

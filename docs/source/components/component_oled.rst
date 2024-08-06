@@ -1,46 +1,45 @@
 .. note::
+    Ciao, benvenuto nella comunità di appassionati di SunFounder Raspberry Pi, Arduino e ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino e ESP32 con altri appassionati.
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    **Perché unirti a noi?**
 
-    **Why Join?**
+    - **Supporto esperto**: Risolvi i problemi post-vendita e le sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e condividi**: Scambia suggerimenti e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Ottieni accesso anticipato agli annunci di nuovi prodotti e anteprime.
+    - **Sconti speciali**: Goditi sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e omaggi festivi**: Partecipa a omaggi e promozioni per le festività.
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca [|link_sf_facebook|] e unisciti oggi!
 
 .. _cpn_oled:
 
-OLED Display Module
+Modulo Display OLED
 ==========================
 
 .. image:: img/oled.png
     :width: 300
     :align: center
 
-Introduction
----------------------------
-An OLED (Organic Light-Emitting Diode) display module is a device that can display text, graphics and images on a thin and flexible screen using organic materials that emit light when electric current is applied.
+Introduzione
+------------------------------
+Un modulo display OLED (Organic Light-Emitting Diode) è un dispositivo che può visualizzare testo, grafica e immagini su uno schermo sottile e flessibile utilizzando materiali organici che emettono luce quando viene applicata una corrente elettrica.
 
-The main advantage of an OLED Display is that it emits its own light and doesn’t need another source of backlight. Due to this, OLED Displays often have better contrast, brightness and viewing angles when compared to LCD displays.
+Il principale vantaggio di un display OLED è che emette la propria luce e non necessita di un'altra fonte di retroilluminazione. Per questo motivo, i display OLED hanno spesso un migliore contrasto, luminosità e angoli di visualizzazione rispetto ai display LCD.
 
-Another important feature of OLED Displays is deep black levels. Since each pixel emits its own light in an OLED Display, to produce black color, the individual pixel can be turned OFF.
+Un'altra caratteristica importante dei display OLED è il livello di nero profondo. Poiché ogni pixel emette la propria luce in un display OLED, per produrre il colore nero, il singolo pixel può essere spento.
 
-Due to lower power consumption (only pixels which are lit up draw current), OLED displays are also popular in battery operated devices like Smart Watches, Health Trackers and other wearables.
+Grazie al minor consumo energetico (solo i pixel accesi assorbono corrente), i display OLED sono anche popolari nei dispositivi a batteria come Smart Watch, Health Tracker e altri dispositivi indossabili.
 
-Principle
----------------------------
-An OLED display module consists of an OLED panel and an OLED driver chip that is mounted on the back of the module. The OLED panel is made of many tiny pixels that can produce different colors of light. Each pixel consists of several layers of organic materials sandwiched between two electrodes (anode and cathode). When electric current flows through the electrodes, the organic materials emit light of different wavelengths depending on their composition.
+Principio di funzionamento
+------------------------------
+Un modulo display OLED è composto da un pannello OLED e da un chip driver OLED montato sul retro del modulo. Il pannello OLED è costituito da molti piccoli pixel che possono produrre diversi colori di luce. Ogni pixel è composto da diversi strati di materiali organici inseriti tra due elettrodi (anodo e catodo). Quando la corrente elettrica scorre attraverso gli elettrodi, i materiali organici emettono luce di diverse lunghezze d'onda a seconda della loro composizione.
 
-The OLED driver chip is a chip that can control the pixels of the OLED panel using a serial communication protocol called I2C (Inter-Integrated Circuit).
+Il chip driver OLED è un chip che può controllare i pixel del pannello OLED utilizzando un protocollo di comunicazione seriale chiamato I2C (Inter-Integrated Circuit).
 
-The OLED driver chip converts the signals from the Arduino into commands for the OLED panel. The Arduino can send data to the OLED driver chip using a library that can control the I2C protocol. One such library is the Adafruit SSD1306 library. With this library, you can initialize the OLED display module, set the brightness level, print text, graphics or images, etc.
+Il chip driver OLED converte i segnali dall'Arduino in comandi per il pannello OLED. L'Arduino può inviare dati al chip driver OLED utilizzando una libreria che può controllare il protocollo I2C. Una di queste librerie è la libreria Adafruit SSD1306. Con questa libreria, è possibile inizializzare il modulo display OLED, impostare il livello di luminosità, stampare testo, grafica o immagini, ecc.
 
-**Example**
+**Esempio**
 
-* :ref:`basic_oled` (Basic Project)
-* :ref:`fun_pong` (Fun Project)
-* :ref:`iot_weathertime_screen` (IoT Project)
+* :ref:`basic_oled` (Progetto di base)
+* :ref:`fun_pong` (Progetto divertente)
+* :ref:`iot_weathertime_screen` (Progetto IoT)

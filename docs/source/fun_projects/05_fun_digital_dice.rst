@@ -1,56 +1,56 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella community SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts su Facebook! Approfondisci Raspberry Pi, Arduino ed ESP32 con altri appassionati.
 
-    **Why Join?**
+    **Perché unirsi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto Esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara & Condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Ottieni l'accesso anticipato agli annunci di nuovi prodotti e anteprime esclusive.
+    - **Sconti Speciali**: Goditi sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e Concorsi Festivi**: Partecipa a concorsi e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _fun_digital_dice:
 
-Digital Dice
+Dado Digitale
 =======================================
 
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/videos/fun_projects/05_fun_dice.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      Il tuo browser non supporta il tag video.
    </video>
 
-This code is designed to simulate a rolling dice using a 74HC595 shift register and a 7-segment digital display. The dice roll simulation is activated by directly shaking the tilt switch. Upon this action, the digital display cycles through random numbers between 1 and 6, simulating the rolling of a dice. After a brief interval, the display stops, showing a random number that signifies the outcome of the dice roll.
+Questo codice è progettato per simulare un lancio di dadi utilizzando un registro a scorrimento 74HC595 e un display digitale a 7 segmenti. La simulazione del lancio del dado viene attivata agitando direttamente l'interruttore inclinabile. Al compimento di questa azione, il display digitale scorre tra numeri casuali tra 1 e 6, simulando il lancio di un dado. Dopo un breve intervallo, il display si ferma, mostrando un numero casuale che rappresenta il risultato del lancio del dado.
 
-**Required Components**
+**Componenti Necessari**
 
-In this project, we need the following components. 
+In questo progetto, abbiamo bisogno dei seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un kit completo, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - ELEMENTI IN QUESTO KIT
         - LINK
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link sottostanti.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE COMPONENTI
+        - LINK ACQUISTO
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -67,7 +67,7 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_7segment`
         - |link_7segment_buy|
 
-**Wiring**
+**Collegamenti**
 
 .. image:: img/05_dice_bb.png
     :width: 80%
@@ -77,51 +77,52 @@ You can also buy them separately from the links below.
 
    <br/>
 
-**Schematic**
+**Schema Elettrico**
 
 .. image:: img/05_digital_dice_schematic.png
    :width: 100%
 
-**Code**
+**Codice**
 
 .. note::
 
-    * You can open the file ``05_digital_dice.ino`` under the path of ``elite-explorer-kit-main\fun_project\05_digital_dice`` directly.
-    * Or copy this code into Arduino IDE.
+    * Puoi aprire il file ``05_digital_dice.ino`` nel percorso ``elite-explorer-kit-main\fun_project\05_digital_dice`` direttamente.
+    * Oppure copia questo codice nell'Arduino IDE.
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/ff0528b0-a10d-49e8-8916-6cb1fdfdf9a2/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-**How it works?**
+**Come funziona?**
 
-Here's a detailed explanation of the code:
+Ecco una spiegazione dettagliata del codice:
 
-1. Initialization of variables:
+1. Inizializzazione delle variabili:
 
-   ``dataPin``, ``clockPin``, ``latchPin``: Pins for the 74HC595.
-   ``buttonPin``: The digital pin where the button is connected.
-   ``numbers[]``: An array to store the encoding representing numbers 1 through 6 on a common anode digital tube.
+   ``dataPin``, ``clockPin``, ``latchPin``: Pin per il 74HC595.
+   ``buttonPin``: Il pin digitale a cui è collegato il pulsante.
+   ``numbers[]``: Un array per memorizzare la codifica che rappresenta i numeri da 1 a 6 su un tubo digitale ad anodo comune.
 
-2. Volatile variables:
+2. Variabili volatili:
 
-   rolling: This is a volatile variable indicating whether the dice is currently rolling. 
-   It's declared as volatile since it's accessed both in the interrupt service routine and the main program.
+   rolling: Questa è una variabile volatile che indica se il dado sta attualmente rotolando. 
+   È dichiarata volatile poiché viene acceduta sia nella routine di servizio degli interrupt sia nel programma principale.
 
 3. ``setup()``:
 
-   Set the modes for the relevant pins.
-   Set the input mode for the button using the internal pull-up resistor.
-   Assign an interrupt to the button, which calls the rollDice function when the button's state changes.
+   Imposta le modalità per i pin rilevanti.
+   Imposta la modalità input per il pulsante utilizzando il resistore pull-up interno.
+   Assegna un interrupt al pulsante, che chiama la funzione rollDice quando lo stato del pulsante cambia.
 
 4. ``loop()``:
 
-   It checks if rolling is true. If it is, it continues to display a random number between 1 and 6. If the button has been pressed for more than 500 milliseconds, the rolling stops.
+   Controlla se rolling è true. Se lo è, continua a visualizzare un numero casuale tra 1 e 6. Se il pulsante è stato premuto per più di 500 millisecondi, il rolling si ferma.
 
 5. ``rollDice()``:
 
-   This is the interrupt service routine for the button. It checks if the button is pressed (low level). If it is, the current time is recorded and the rolling begins.
+   Questa è la routine di servizio degli interrupt per il pulsante. Controlla se il pulsante è premuto (livello basso). Se lo è, il tempo corrente viene registrato e il rolling inizia.
 
 6. ``displayNumber()``:
 
-   This function displays a number on the digital tube. It sends the number to the digital tube through the 74HC595 shift register.
+   Questa funzione visualizza un numero sul tubo digitale. Invia il numero al tubo digitale attraverso il registro a scorrimento 74HC595.
+

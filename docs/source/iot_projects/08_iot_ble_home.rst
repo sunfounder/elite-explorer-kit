@@ -1,21 +1,21 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella comunità degli appassionati di SunFounder Raspberry Pi, Arduino e ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino e ESP32 con altri appassionati.
 
-    **Why Join?**
+    **Perché unirti?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto Esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e Condividi**: Scambia suggerimenti e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Ottieni accesso anticipato agli annunci di nuovi prodotti e anteprime.
+    - **Sconti Speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e Giveaway Festivi**: Partecipa a giveaway e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca [|link_sf_facebook|] e unisciti oggi!
 
 .. _iot_ble_home:
 
-Bluetooth Environmental Monitor
-=================================
+Monitor Ambientale Bluetooth
+==================================
 
 .. raw:: html
 
@@ -25,35 +25,35 @@ Bluetooth Environmental Monitor
    </video>
 
 
-This project uses an Android app created with MIT App Inventor to receive and display environmental data from an Arduino board. The Arduino board fetches data from a DHT11 sensor to measure temperature and humidity. Once the data is collected, it's transmitted over Bluetooth. The app will display the data on the screen once it receives it.
+Questo progetto utilizza un'app Android creata con MIT App Inventor per ricevere e visualizzare i dati ambientali da una scheda Arduino. La scheda Arduino raccoglie i dati da un sensore DHT11 per misurare temperatura e umidità. Una volta raccolti i dati, vengono trasmessi tramite Bluetooth. L'app visualizzerà i dati sullo schermo una volta ricevuti.
 
-The Android application will be constructed utilizing a complimentary web-based platform known as |link_appinventor|. The project presents an excellent opportunity to gain familiarity with the interfacing of an Arduino with a smartphone. 
+L'applicazione Android verrà costruita utilizzando una piattaforma web gratuita nota come |link_appinventor|. Il progetto rappresenta un'eccellente opportunità per familiarizzare con l'interfacciamento di un Arduino con uno smartphone. 
 
-**Required Components**
+**Componenti Necessari**
 
-In this project, we need the following components. 
+In questo progetto, avremo bisogno dei seguenti componenti. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un kit completo, ecco il link: 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - ARTICOLI IN QUESTO KIT
         - LINK
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link sottostanti.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE DEI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -64,7 +64,7 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_dht11`
         - |link_humiture_buy|
 
-**1. Build the Cirduit**
+**1. Costruisci il Circuito**
 
 .. image:: img/08-bluetooth_environmental_monitor_bb.png
     :width: 80%
@@ -77,87 +77,86 @@ You can also buy them separately from the links below.
 .. raw:: html
 
    <br/>
+   
+**2. Crea l'App Android**
 
-**2. Create the Android App**
+L'applicazione Android verrà sviluppata utilizzando un'applicazione web gratuita nota come |link_appinventor|. 
+MIT App Inventor è un eccellente punto di partenza per lo sviluppo Android, grazie alle sue funzionalità intuitive di drag-and-drop che consentono la creazione di applicazioni semplici.
 
-The Android application will be developed using a free web application known as |link_appinventor|. 
-MIT App Inventor serves as an excellent starting point for Android development, owing to its intuitive drag-and-drop 
-features allowing for the creation of simplistic applications.
+Iniziamo.
 
-Now, let's begin.
-
-#. Go to |link_appinventor_login|, and click "online tool" to login. You will require a Google account to register with MIT App Inventor.
+#. Vai su |link_appinventor_login| e clicca su "online tool" per accedere. Avrai bisogno di un account Google per registrarti su MIT App Inventor.
 
    .. image:: img/08_ai_signup.png
        :width: 90%
        :align: center
 
-#. After logging in, navigate to **Projects** -> **Import project (.aia) from my computer**. Subsequently, upload the ``ble_environmental_monitor.aia`` file located in the path ``elite-explorer-kit-main\iot_project\08-bluetooth_environmental_monitor``.
+#. Dopo aver effettuato l'accesso, naviga su **Projects** -> **Import project (.aia) from my computer**. Successivamente, carica il file ``ble_environmental_monitor.aia`` situato nel percorso ``elite-explorer-kit-main\iot_project\08-bluetooth_environmental_monitor``.
 
-   You can also directly download here: :download:`ble_environmental_monitor.aia</_static/other/ble_environmental_monitor.aia>`
+   Puoi anche scaricarlo direttamente qui: :download:`ble_environmental_monitor.aia</_static/other/ble_environmental_monitor.aia>`
 
    .. image:: img/08_ai_import.png
         :align: center
 
-#. Upon uploading the ``.aia`` file, you will see the application on the MIT App Inventor software. This is a pre-configured template. You can modify this template after you have familiarized yourself with MIT App Inventor through the following steps.
+#. Una volta caricato il file ``.aia``, vedrai l'applicazione nel software MIT App Inventor. Questo è un modello preconfigurato. Puoi modificare questo modello dopo aver familiarizzato con MIT App Inventor seguendo i passaggi successivi.
 
-#. In MIT App Inventor, you have 2 primary sections: the **Designer** and the **Blocks**. You can switch between these two sections in the upper right corner of the page.
+#. In MIT App Inventor, hai 2 sezioni principali: il **Designer** e i **Blocks**. Puoi passare da una sezione all'altra nell'angolo in alto a destra della pagina.
 
    .. image:: img/08_ai_intro_1.png
 
-#. The **Designer** allows you to add buttons, text, screens, and modify the overall aesthetic of your application.
+#. Il **Designer** ti permette di aggiungere pulsanti, testo, schermate e modificare l'estetica generale della tua applicazione.
 
    .. image:: img/08_ai_intro_2.png
       :width: 100%
    
-#. Next, there's the **Blocks** section. This section lets you craft custom functionalities for your app, allowing you to program each component on the app's GUI to achieve desired features.
+#. Successivamente, c'è la sezione **Blocks**. Questa sezione ti consente di creare funzionalità personalizzate per la tua app, permettendoti di programmare ogni componente dell'interfaccia utente dell'app per ottenere le funzionalità desiderate.
 
    .. image:: img/08_ai_intro_3.png
       :width: 100%
 
-#. To install the application on a smartphone, navigate to the **Build** tab.
+#. Per installare l'applicazione su uno smartphone, naviga sulla scheda **Build**.
 
    .. image:: img/08_ai_intro_4.png
 
-   * You can generate a ``.apk`` file. After selecting this option, a page will appear allowing you to choose between downloading a ``.apk`` file or scanning a QR code for installation. Follow the installation guide to complete the application installation. 
+   * Puoi generare un file ``.apk``. Dopo aver selezionato questa opzione, apparirà una pagina che ti permetterà di scegliere tra scaricare un file ``.apk`` o scansionare un codice QR per l'installazione. Segui la guida all'installazione per completare l'installazione dell'applicazione. 
 
-     You also download our pre-compiled APK here: :download:`ble_environmental_monitor.apk</_static/other/ble_environmental_monitor.apk>`
+     Puoi anche scaricare il nostro APK precompilato qui: :download:`ble_environmental_monitor.apk</_static/other/ble_environmental_monitor.apk>`
 
-   * If you wish to upload this app to Google Play or another app marketplace, you can generate a ``.aab`` file.
+   * Se desideri caricare questa app su Google Play o un altro marketplace di app, puoi generare un file ``.aab``.
 
 
-**3. Upload the Code**
+**3. Carica il Codice**
 
-#. Open the ``08-bluetooth_environmental_monitor.ino`` file under the path of ``elite-explorer-kit-main\iot_project\08-bluetooth_environmental_monitor``, or copy this code into **Arduino IDE**.
+#. Apri il file ``08-bluetooth_environmental_monitor.ino`` nel percorso ``elite-explorer-kit-main\iot_project\08-bluetooth_environmental_monitor``, oppure copia questo codice in **Arduino IDE**.
    
    .. note:: 
-      To install the library, use the Arduino Library Manager to search for and install **"DHT sensor library"** and **"ArduinoBLE"**.
+      Per installare la libreria, utilizza l'Arduino Library Manager per cercare e installare **"DHT sensor library"** e **"ArduinoBLE"**.
 
    .. raw:: html
        
       <iframe src=https://create.arduino.cc/editor/sunfounder01/53fd4af4-dcc6-439d-b52f-2f94f17c1263/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-#. After selecting the correct board and port, click the **Upload** button.
+#. Dopo aver selezionato la scheda e la porta corrette, clicca sul pulsante **Upload**.
 
-#. Open the Serial monitor(set baudrate to **9600**) to view debug messages. 
+#. Apri il monitor seriale (imposta il baudrate a **9600**) per visualizzare i messaggi di debug. 
 
-**4. App and Bluetooth module Connection**
+**4. Connessione dell'App e del modulo Bluetooth**
 
-Ensure that the application created earlier is installed on your smartphone.
+Assicurati che l'applicazione creata in precedenza sia installata sul tuo smartphone.
 
-#. Initially, turn on **Bluetooth** on your smartphone.
+#. Inizialmente, attiva il **Bluetooth** sul tuo smartphone.
 
    .. image:: img/08_app_1.png
       :width: 60%
       :align: center
 
-#. Now open the newly installed **Environmental Monitor** APP.
+#. Ora apri la nuova app **Environmental Monitor** installata.
 
    .. image:: img/08_app_2.png
       :width: 25%
       :align: center
 
-#. When you first open this app, two authorization prompts will pop up in succession. These are the permissions required for using Bluetooth.
+#. Quando apri l'app per la prima volta, appariranno due richieste di autorizzazione in successione. Questi sono i permessi necessari per utilizzare il Bluetooth.
 
    .. image:: img/08_app_3.png
       :width: 100%
@@ -167,13 +166,13 @@ Ensure that the application created earlier is installed on your smartphone.
 
       <br/>
 
-#. In the APP, click on **Connect** button to establish a connection between the APP and Bluetooth module.
+#. Nell'APP, clicca sul pulsante **Connetti** per stabilire una connessione tra l'APP e il modulo Bluetooth.
 
    .. image:: img/08_app_4.png
       :width: 55%
       :align: center
 
-#. This page displays a list of all paired Bluetooth devices. Choose the ``xx.xx.xx.xx.xx.xx UNO R4 Home`` option from the list. The name of each device is listed next to its MAC address.
+#. Questa pagina mostra un elenco di tutti i dispositivi Bluetooth abbinati. Scegli l'opzione ``xx.xx.xx.xx.xx.xx UNO R4 Home`` dall'elenco. Il nome di ogni dispositivo è elencato accanto al suo indirizzo MAC.
 
    .. image:: img/08_app_5.png
       :width: 60%
@@ -183,7 +182,7 @@ Ensure that the application created earlier is installed on your smartphone.
 
       <br/>
 
-#. If you don't see any devices on the page shown above, you can try turning on the location switch of the device (some Android system versions bundle the location switch with the Bluetooth function).
+#. Se non vedi dispositivi nella pagina mostrata sopra, puoi provare ad attivare l'interruttore di localizzazione del dispositivo (alcune versioni di sistema Android includono l'interruttore di localizzazione con la funzione Bluetooth).
 
    .. image:: img/08_app_6.png
       :width: 60%
@@ -193,20 +192,20 @@ Ensure that the application created earlier is installed on your smartphone.
 
       <br/>
 
-#. After a successful connection, you will be redirected to the main page where it will display temperature and humidity.
+#. Dopo una connessione riuscita, sarai reindirizzato alla pagina principale dove verranno visualizzati temperatura e umidità.
 
    .. image:: img/08_app_7.png
       :width: 60%
       :align: center
 
-**5. Code explanation**
+**5. Spiegazione del Codice**
 
-1. Importing Libraries and Defining Constants
+1. Importazione delle Librerie e Definizione delle Costanti
 
-   - Import the required libraries and define constants for the DHT sensor pin and type.
+   - Importa le librerie necessarie e definisci le costanti per il pin e il tipo di sensore DHT.
 
    .. note:: 
-      To install the library, use the Arduino Library Manager to search for and install **"DHT sensor library"** and **"ArduinoBLE"**.
+      Per installare la libreria, utilizza il Gestore Librerie Arduino per cercare e installare **"DHT sensor library"** e **"ArduinoBLE"**.
 
    .. code-block:: arduino
    
@@ -215,9 +214,9 @@ Ensure that the application created earlier is installed on your smartphone.
        #define DHTPIN 11
        #define DHTTYPE DHT11
 
-2. Initializing BLE Services and Characteristics
+2. Inizializzazione dei Servizi e delle Caratteristiche BLE
 
-   - Define the UUIDs for BLE Environmental Sensing Service and Characteristics. We are using the pre-defined UUIDs provided by |link_bluetooth_sig|. The |link_sig_environmental_sensing| is assigned ``0x181A``, while ``0x2A6E`` and ``0x2A6F`` are reserved for |link_sig_temperature_humidity|, respectively.
+   - Definisci gli UUID per il Servizio e le Caratteristiche BLE Environmental Sensing. Stiamo utilizzando gli UUID predefiniti forniti da |link_bluetooth_sig|. Il |link_sig_environmental_sensing| è assegnato a ``0x181A``, mentre ``0x2A6E`` e ``0x2A6F`` sono riservati rispettivamente per |link_sig_temperature_humidity|.
 
    .. code-block:: arduino
    
@@ -225,9 +224,9 @@ Ensure that the application created earlier is installed on your smartphone.
        BLEShortCharacteristic temperatureCharacteristic("2A6E", BLERead | BLENotify);
        BLEUnsignedShortCharacteristic humidityCharacteristic("2A6F", BLERead | BLENotify);
 
-3. Setup Function
+3. Funzione di Setup
 
-   - Initialize the Serial communication, DHT sensor, and BLE.
+   - Inizializza la comunicazione Seriale, il sensore DHT e il BLE.
 
    .. code-block:: arduino
    
@@ -242,24 +241,24 @@ Ensure that the application created earlier is installed on your smartphone.
          setupBle();
        }
 
-4. Main Loop
+4. Loop Principale
 
-   - Poll for BLE events and update sensor data at regular intervals.
+   - Controlla gli eventi BLE e aggiorna i dati del sensore a intervalli regolari.
 
-   - The ``millis() - lastUpdateTime > updateInterval`` line ensures that the sensor data is updated every updateInterval milliseconds.
+   - La linea ``millis() - lastUpdateTime > updateInterval`` assicura che i dati del sensore vengano aggiornati ogni updateInterval millisecondi.
 
    .. code-block:: arduino
    
        void loop() {
          BLE.poll();
          if (millis() - lastUpdateTime > updateInterval) {
-           // Read sensor data and update BLE characteristics
+           // Leggi i dati del sensore e aggiorna le caratteristiche BLE
          }
        }
 
-5. BLE and Debug Functions
+5. Funzioni BLE e di Debug
 
-   Functions for setting up BLE, printing debug information, and managing BLE events.
+   Funzioni per configurare il BLE, stampare informazioni di debug e gestire gli eventi BLE.
 
    .. code-block:: arduino
    
@@ -268,8 +267,8 @@ Ensure that the application created earlier is installed on your smartphone.
        void blePeripheralConnectHandler(BLEDevice central) { /* ... */ }
        void blePeripheralDisconnectHandler(BLEDevice central) { /* ... */ }
 
-   - ``printDHT(float h, float t)``: Used to print the temperature and humidity data read by DHT11 on the serial monitor. This function is for debugging purposes.
+   - ``printDHT(float h, float t)``: Utilizzata per stampare i dati di temperatura e umidità letti dal DHT11 sul monitor seriale. Questa funzione è per scopi di debug.
 
-   - ``setupBle()``: Initializes Bluetooth, including setting the broadcast name, characteristics, and services.
+   - ``setupBle()``: Inizializza il Bluetooth, inclusi il nome di broadcast, le caratteristiche e i servizi.
 
-   - ``blePeripheralConnectHandler(BLEDevice central)`` and ``blePeripheralDisconnectHandler(BLEDevice central)``: These functions handle events when Bluetooth connects or disconnects. When a device successfully connects with UNO R4 via Bluetooth, the onboard LED lights up. When the device disconnects, the LED turns off.
+   - ``blePeripheralConnectHandler(BLEDevice central)`` e ``blePeripheralDisconnectHandler(BLEDevice central)``: Queste funzioni gestiscono gli eventi quando il Bluetooth si connette o si disconnette. Quando un dispositivo si connette con UNO R4 tramite Bluetooth, il LED integrato si accende. Quando il dispositivo si disconnette, il LED si spegne.

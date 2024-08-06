@@ -1,57 +1,57 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella community SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts su Facebook! Approfondisci Raspberry Pi, Arduino ed ESP32 con altri appassionati.
 
-    **Why Join?**
+    **Perché unirsi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto Esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara & Condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Ottieni l'accesso anticipato agli annunci di nuovi prodotti e anteprime esclusive.
+    - **Sconti Speciali**: Goditi sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e Concorsi Festivi**: Partecipa a concorsi e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _fun_escape:
 
-GAME - Escape
+GIOCO - Escape
 ==================================
 
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/videos/fun_projects/11_fun_escape_square.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      Il tuo browser non supporta il tag video.
    </video>
 
-This game is called "Escape".
-The player's objective is to tilt the MPU6050 sensor to move a pixel on the LED matrix and attempt to maneuver it through an opening in the matrix border (the exit).
+Questo gioco si chiama "Escape".
+L'obiettivo del giocatore è inclinare il sensore MPU6050 per muovere un pixel sulla matrice LED e cercare di farlo passare attraverso un'apertura nel bordo della matrice (l'uscita).
 
-**Required Components**
+**Componenti Necessari**
 
-In this project, we need the following components. 
+In questo progetto, abbiamo bisogno dei seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un kit completo, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - ELEMENTI IN QUESTO KIT
         - LINK
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link sottostanti.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE COMPONENTI
+        - LINK ACQUISTO
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -61,62 +61,63 @@ You can also buy them separately from the links below.
         - \-
 
 
-**Wiring**
+**Collegamenti**
 
 .. image:: img/11_escape_bb.png
     :width: 80%
     :align: center
 
 
-**Schematic**
+**Schema Elettrico**
 
 .. image:: img/11_escape_schematic.png
    :width: 70%
    :align: center
 
 
-**Code**
+**Codice**
 
 .. note::
 
-    * You can open the file ``11_escape_square.ino`` under the path of ``elite-explorer-kit-main\fun_project\11_escape_square`` directly.
-    * Or copy this code into Arduino IDE.
+    * Puoi aprire il file ``11_escape_square.ino`` nel percorso ``elite-explorer-kit-main\fun_project\11_escape_square`` direttamente.
+    * Oppure copia questo codice nell'Arduino IDE.
 
 .. note::
-   To install the library, use the Arduino Library Manager and search for **"Adafruit MPU6050"** and install it.
+   Per installare la libreria, usa l'Arduino Library Manager e cerca **"Adafruit MPU6050"** e installala.
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/6b239445-f921-48fb-a93e-70cc7ef8afc7/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-**How it works?**
+**Come funziona?**
 
-Here's a detailed explanation of the code:
+Ecco una spiegazione dettagliata del codice:
 
-1. Library Imports and Global Variables:
+1. Importazione Librerie e Variabili Globali:
 
-   Imported libraries include the LED matrix, Wire (for I2C communication), MPU6050 (motion sensor), and ``Adafruit_Sensor`` library.
-   Initialization of MPU6050 and LED matrix objects.
-   Definition of global variables such as pixelX and pixelY (pixel position), gapStart and side (start position of the gap and which side), level (game difficulty level), and more.
+   Le librerie importate includono la matrice LED, Wire (per la comunicazione I2C), MPU6050 (sensore di movimento) e la libreria ``Adafruit_Sensor``.
+   Inizializzazione degli oggetti MPU6050 e matrice LED.
+   Definizione di variabili globali come pixelX e pixelY (posizione del pixel), gapStart e side (posizione iniziale del gap e lato), level (livello di difficoltà del gioco) e altre.
 
 2. ``setup()``:
 
-   Initialize the LED matrix and draw the matrix with the gap.
-   Initialize serial communication and check if the MPU6050 sensor is starting correctly, setting its acceleration range to 2g.
+   Inizializza la matrice LED e disegna la matrice con il gap.
+   Inizializza la comunicazione seriale e controlla se il sensore MPU6050 si avvia correttamente, impostando il suo intervallo di accelerazione a 2g.
 
 3. ``loop()``:
 
-   Periodically update the position of the pixel based on MPU6050 sensor readings.
-   Periodically move the gap's position.
-   Load the new pixel layout and render it on the LED matrix.
-   Check if the pixel has passed through the gap. 
-   If it has, delay for 1.5 seconds to display the success, increase the game difficulty, and reset the pixel's position.
+   Aggiorna periodicamente la posizione del pixel in base alle letture del sensore MPU6050.
+   Sposta periodicamente la posizione del gap.
+   Carica il nuovo layout del pixel e lo visualizza sulla matrice LED.
+   Controlla se il pixel è passato attraverso il gap. 
+   Se lo è, ritarda di 1,5 secondi per visualizzare il successo, aumenta la difficoltà del gioco e ripristina la posizione del pixel.
 
-4. Other Functions:
+4. Altre Funzioni:
 
-   * ``drawSquareWithGap()``: Draw an 8x8 border and create a gap within it.
-   * ``createGap()``: Create a gap of length 2 on the specified side.
-   * ``moveGap()``: Move the gap's position based on the current side and gapStart, changing the side when necessary.
-   * ``movePixelBasedOnMPU()``: Read acceleration data from MPU6050. Move the pixel's position based on the acceleration data (resetting if the pixel goes out of bounds or into walls).
-   * ``resetPixel()``: Reset the pixel's position to the center of the matrix.
-   * ``checkPixelPosition()``: Check if the pixel is on the gap. If it is, increase the game's difficulty level and set the pass flag to true.
+   * ``drawSquareWithGap()``: Disegna un bordo 8x8 e crea un gap al suo interno.
+   * ``createGap()``: Crea un gap di lunghezza 2 sul lato specificato.
+   * ``moveGap()``: Sposta la posizione del gap in base al lato corrente e a gapStart, cambiando lato quando necessario.
+   * ``movePixelBasedOnMPU()``: Legge i dati di accelerazione dal sensore MPU6050. Sposta la posizione del pixel in base ai dati di accelerazione (reimpostando se il pixel esce dai limiti o entra nelle pareti).
+   * ``resetPixel()``: Reimposta la posizione del pixel al centro della matrice.
+   * ``checkPixelPosition()``: Controlla se il pixel si trova sul gap. Se lo è, aumenta il livello di difficoltà del gioco e imposta il flag di passaggio su true.
+

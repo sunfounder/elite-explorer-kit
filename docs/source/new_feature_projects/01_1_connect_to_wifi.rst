@@ -1,68 +1,68 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community degli Appassionati di Raspberry Pi, Arduino e ESP32 di SunFounder su Facebook! Approfondisci Raspberry Pi, Arduino e ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto Esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra community e del team.
+    - **Apprendi e Condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Accedi in anteprima agli annunci dei nuovi prodotti e ai teaser.
+    - **Sconti Speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni Festive e Giveaway**: Partecipa a giveaway e promozioni speciali.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto per esplorare e creare con noi? Clicca [|link_sf_facebook|] e unisciti oggi stesso!
 
-Connect to Wi-Fi
-==================
+Connettersi a Wi-Fi
+=========================
 
-This tutorial will guide you through the essential steps to connect your Arduino board to a Wi-Fi network. You'll learn how to initialize the Wi-Fi module, verify its firmware, and securely join a network using its SSID and password. Once connected, you'll discover how to monitor important network details like your device's IP and MAC addresses, as well as the network's signal strength, directly from the serial console. This tutorial serves as both a practical guide to Wi-Fi connectivity and an introduction to network monitoring with Arduino, helping you establish and maintain a reliable Wi-Fi connection.
+Questo tutorial ti guiderà attraverso i passaggi essenziali per connettere il tuo board Arduino a una rete Wi-Fi. Imparerai come inizializzare il modulo Wi-Fi, verificare il firmware e unirti in modo sicuro a una rete utilizzando il suo SSID e password. Una volta connesso, scoprirai come monitorare importanti dettagli di rete come l'IP del tuo dispositivo e gli indirizzi MAC, nonché la potenza del segnale della rete, direttamente dalla console seriale. Questo tutorial serve sia come guida pratica alla connettività Wi-Fi che come introduzione al monitoraggio di rete con Arduino, aiutandoti a stabilire e mantenere una connessione Wi-Fi affidabile.
 
-1. Upload the code
+1. Carica il codice
 ========================
 
-Open the ``01-wifi_connect.ino`` file under the path of ``elite-explorer-kit-main\r4_new_feature\01-wifi_connect``, or copy this code into **Arduino IDE**.
+Apri il file ``01-wifi_connect.ino`` nel percorso ``elite-explorer-kit-main\r4_new_feature\01-wifi_connect``, oppure copia questo codice nell'**Arduino IDE**.
 
 .. note:: 
-      Wi-Fi® support is enabled via the built-in ``WiFiS3`` library that is shipped with the Arduino UNO R4 Core. Installing the core automatically installs the ``WiFiS3`` library.
+      Il supporto Wi-Fi® è abilitato tramite la libreria integrata ``WiFiS3`` fornita con il Core Arduino UNO R4. Installando il core, viene automaticamente installata anche la libreria ``WiFiS3``.
 
 
-You still need to create or modify ``arduino_secrets.h``, replace ``SECRET_SSID`` and ``SECRET_PASS`` with the name and password of the wifi you want to connect to. The file should contain:
+È ancora necessario creare o modificare ``arduino_secrets.h``, sostituendo ``SECRET_SSID`` e ``SECRET_PASS`` con il nome e la password della rete Wi-Fi a cui desideri connetterti. Il file dovrebbe contenere:
 
 .. code:: arduino
 
-    //arduino_secrets.h header file
-    #define SECRET_SSID "yournetwork"
-    #define SECRET_PASS "yourpassword"
+    // file intestazione arduino_secrets.h
+    #define SECRET_SSID "tuarete"
+    #define SECRET_PASS "tuapassword"
 
 .. raw:: html
        
    <iframe src=https://create.arduino.cc/editor/sunfounder01/a41ac638-31da-464c-b5d3-e70f2aacd29c/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-Open the serial monitor, and you will see similar content as follows. Arduino will output your device's IP and MAC addresses, as well as the network's signal strength.
+Apri il monitor seriale e vedrai un contenuto simile a quanto segue. Arduino mostrerà l'IP e gli indirizzi MAC del tuo dispositivo, nonché la potenza del segnale della rete.
 
 .. image:: img/01_1_wifi.png
     :width: 100%
 
 
-2. Code explanation
-========================
+2. Spiegazione del codice
+================================
 
-1. Including Libraries and Secret Data
+1. Inclusione delle Librerie e Dati Segreti
 
    .. code-block:: arduino
 
       #include <WiFiS3.h>
       #include "arduino_secrets.h" 
 
-   - ``WiFiS3`` is a library that provides functions for Wi-Fi connectivity. Installing the R4 core automatically installs the WiFiS3 library.
-   - ``arduino_secrets.h`` is a separate file where you keep your SSID and password so they're not exposed in your main code. Storing network and password separately reduces accidental sharing of Wi-Fi credentials.
+   - ``WiFiS3`` è una libreria che fornisce funzioni per la connettività Wi-Fi. Installando il core R4, viene automaticamente installata la libreria WiFiS3.
+   - ``arduino_secrets.h`` è un file separato dove vengono conservati SSID e password per evitare la loro esposizione nel codice principale. Conservare rete e password separatamente riduce la condivisione accidentale delle credenziali Wi-Fi.
 
    .. raw:: html
 
       <br/>
 
-2. Declaring Global Variables
+2. Dichiarazione di Variabili Globali
 
    .. code-block:: arduino
 
@@ -70,16 +70,16 @@ Open the serial monitor, and you will see similar content as follows. Arduino wi
       char pass[] = SECRET_PASS;
       int status = WL_IDLE_STATUS;
 
-   - ``ssid`` and ``pass`` contain your network name and password.
-   - ``status`` will store the current status of your Wi-Fi connection.
+   - ``ssid`` e ``pass`` contengono il nome della tua rete e la password.
+   - ``status`` memorizza lo stato attuale della connessione Wi-Fi.
 
    .. raw:: html
 
       <br/>
 
-3. ``setup()`` Function
+3. Funzione ``setup()``
 
-   The Serial interface is initialized with a baud rate of 9600. The ``while (!Serial);`` line makes sure that the program waits until the Serial connection is established.
+   L'interfaccia seriale viene inizializzata con un baud rate di 9600. La linea ``while (!Serial);`` assicura che il programma attenda finché la connessione seriale non è stabilita.
 
    .. code-block:: arduino
 
@@ -92,7 +92,7 @@ Open the serial monitor, and you will see similar content as follows. Arduino wi
           ...
       }
 
-   And then, the code checks whether the Wi-Fi module is available or not. If not, the program will halt, effectively stopping any further execution.
+   E quindi, il codice verifica se il modulo Wi-Fi è disponibile o meno. Se non lo è, il programma si interromperà, impedendo efficacemente qualsiasi ulteriore esecuzione.
 
    .. code-block:: arduino
 
@@ -105,7 +105,7 @@ Open the serial monitor, and you will see similar content as follows. Arduino wi
      }
      ...
 
-   In this part of the code, we check if the firmware version of uno R4 wifi is up to date. If it is not the latest version, a prompt for upgrade will be displayed. You can refer to :ref:`update_firmware` for firmware upgrade.
+   In questa parte del codice, controlliamo se la versione del firmware di uno R4 WiFi è aggiornata. Se non è l'ultima versione, verrà visualizzato un prompt per l'aggiornamento. Puoi fare riferimento a :ref:`update_firmware` per l'aggiornamento del firmware.
 
    .. https://forum.arduino.cc/t/radio-module-firmware-version-0-2-0-is-now-available/1147361
 
@@ -118,7 +118,7 @@ Open the serial monitor, and you will see similar content as follows. Arduino wi
       }
       ...
 
-4. ``loop()`` Function
+4. Funzione ``loop()``
 
    .. code-block:: arduino
 
@@ -128,9 +128,9 @@ Open the serial monitor, and you will see similar content as follows. Arduino wi
         printCurrentNet();
       }
 
-   - Every 10 seconds, the function ``printCurrentNet()`` is called to print the current network details.
+   - Ogni 10 secondi, la funzione ``printCurrentNet()`` viene chiamata per stampare i dettagli attuali della rete.
 
 
-**Reference**
+**Riferimenti**
 
 - |link_r4_wifi|

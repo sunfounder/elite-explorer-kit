@@ -1,16 +1,16 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community di appassionati SunFounder Raspberry Pi & Arduino & ESP32 su Facebook! Approfondisci Raspberry Pi, Arduino ed ESP32 con altri appassionati.
 
-    **Why Join?**
+    **Perché Unirsi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto Esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra community e del team.
+    - **Impara e Condividi**: Scambia suggerimenti e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Ottieni accesso anticipato a nuovi annunci di prodotti e anteprime.
+    - **Sconti Speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni Festive e Giveaway**: Partecipa a giveaway e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto per esplorare e creare con noi? Clicca [|link_sf_facebook|] e unisciti oggi!
 
 .. _iot_Bluetooth_lcd:
 
@@ -20,39 +20,39 @@ Bluetooth Message Box
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
-      <source src="../_static/videos/iot_projects/07_iot_ble_lcd.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      <source src="../_static/videos/iot_projects/07_iot_ble_lcd.mp4" type="video/mp4">
+      Il tuo browser non supporta il tag video.
    </video>
 
-This project receives messages and displays them on an LCD screen.
+Questo progetto riceve messaggi e li visualizza su uno schermo LCD.
 
-You can use it as a family message board, reminding family members who haven't left yet to remember to take their keys.
+Puoi usarlo come bacheca dei messaggi di famiglia, ricordando ai membri della famiglia che non sono ancora usciti di ricordarsi di prendere le chiavi.
 
-**Required Components**
+**Componenti Necessari**
 
-In this project, we need the following components. 
+In questo progetto, abbiamo bisogno dei seguenti componenti. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un kit completo, ecco il link: 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - ARTICOLI IN QUESTO KIT
         - LINK
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+È anche possibile acquistarli separatamente dai link sottostanti.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -63,13 +63,13 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_i2c_lcd1602`
         - |link_i2clcd1602_buy|
 
-**Wiring**
+**Cablaggio**
 
 .. image:: img/07_lightblue_lcd_bb.png
     :width: 100%
     :align: center
 
-**Schematic**
+**Schema**
 
 .. image:: img/07_lightblue_lcd_schematic.png
    :width: 80%
@@ -79,13 +79,13 @@ You can also buy them separately from the links below.
 
    <br/>
 
-**Generate the UUID**
+**Genera il UUID**
 
-UUIDs play a crucial role in BLE communication, ensuring the uniqueness of devices and accuracy of data exchange between them. You need to customize UUIDs to create your own BLE services and characteristics to meet specific application requirements. (Here, we need to create a characteristic that supports text input.)
+Gli UUID svolgono un ruolo cruciale nella comunicazione BLE, garantendo l'unicità dei dispositivi e l'accuratezza dello scambio di dati tra essi. Devi personalizzare gli UUID per creare i tuoi servizi e caratteristiche BLE per soddisfare requisiti applicativi specifici. (Qui, dobbiamo creare una caratteristica che supporti l'input di testo.)
 
-1. Use the `Online UUID Generator Tool <https://www.uuidgenerator.net/version4>`_ to create UUIDs unique to you to avoid UUID conflicts.
+1. Usa l'`Online UUID Generator Tool <https://www.uuidgenerator.net/version4>`_ per creare UUID unici per te per evitare conflitti di UUID.
 
-2. Generate two version 4 UUIDs.
+2. Genera due UUID versione 4.
 
    .. image:: img/07_uuid_1.png
       :width: 70%
@@ -94,46 +94,46 @@ UUIDs play a crucial role in BLE communication, ensuring the uniqueness of devic
 
       <br/><br/>
 
-3. Copy them and replace the two UUIDs in your code.
+3. Copiali e sostituisci i due UUID nel tuo codice.
 
    .. code-block:: arduino
    
        #define SERVICE_UUID "uuid1"
        #define CHARACTERISTIC_UUID "uuid2"
 
-**Install the Library**
+**Installa la Libreria**
 
-``ArduinoBLE.h``: Used for handling Bluetooth Low Energy (BLE) communication.
-``LiquidCrystal_I2C.h``: Used to control a 16x2 character LCD screen with an I2C interface.
+``ArduinoBLE.h``: Utilizzato per gestire la comunicazione Bluetooth Low Energy (BLE).
+``LiquidCrystal_I2C.h``: Utilizzato per controllare uno schermo LCD 16x2 con interfaccia I2C.
 
-**Run the Code**
+**Esegui il Codice**
 
 .. note::
 
-    * You can open the file ``07_lightblue_lcd.ino`` under the path of ``elite-explorer-kit-main\iot_project\07_lightblue_lcd`` directly.
-    * Or copy this code into Arduino IDE.
+    * Puoi aprire il file ``07_lightblue_lcd.ino`` nel percorso ``elite-explorer-kit-main\iot_project\07_lightblue_lcd`` direttamente.
+    * Oppure copia questo codice nell'IDE di Arduino.
 
 .. note:: 
-      To install the library, use the Arduino Library Manager to search for and install **"ArduinoBLE"** and **"LiquidCrystal I2C"**.
+      Per installare la libreria, usa il Gestore delle Librerie Arduino per cercare e installare **"ArduinoBLE"** e **"LiquidCrystal I2C"**.
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/958c37c2-a897-4c4c-b6c1-0e7fea67c7b1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-**How to play?**
+**Come Giocare?**
 
-To interact with the services and characteristics created in this sketch, you should use a generic Bluetooth® Low Energy central app like LightBlue (available for iOS and Android) or nRF Connect (for Android).
+Per interagire con i servizi e le caratteristiche creati in questo sketch, dovresti usare un'app centrale generica Bluetooth® Low Energy come LightBlue (disponibile per iOS e Android) o nRF Connect (per Android).
 
-Let's use LightBlue as an example to demonstrate how to control Arduino's LED via Bluetooth.
+Utilizziamo LightBlue come esempio per dimostrare come controllare l'LED di Arduino via Bluetooth.
 
-1. Download the LightBlue app from the App Store (for iOS) or Google Play (for Android).
+1. Scarica l'app LightBlue dall'App Store (per iOS) o Google Play (per Android).
 
    .. image:: img/07_lightblue.png
 
-2. Connecting Arduino with Your Smartphone via Bluetooth
+2. Collegare Arduino al tuo Smartphone via Bluetooth
 
-   Go to your Bluetooth settings and locate the device named "UNO R4 BLE." Connect to it.
+   Vai alle impostazioni Bluetooth e individua il dispositivo chiamato "UNO R4 BLE." Connetti a esso.
 
    .. image:: img/07_iot_ble_01.jpg
       :width: 50%
@@ -142,57 +142,57 @@ Let's use LightBlue as an example to demonstrate how to control Arduino's LED vi
 
       <br/><br/>
 
-3. Interacting with Arduino via Bluetooth Using LightBlue
+3. Interagire con Arduino via Bluetooth usando LightBlue
 
-   Launch LightBlue and tap on the **Bonded** tab at the bottom of the interface. Here, you'll see a list of BLE devices that your smartphone has previously paired with. Locate **UNO R4 BLE** and tap **CONNECT**.
+   Avvia LightBlue e tocca la scheda **Bonded** nella parte inferiore dell'interfaccia. Qui, vedrai un elenco di dispositivi BLE con cui il tuo smartphone è stato precedentemente associato. Individua **UNO R4 BLE** e tocca **CONNECT**.
 
    .. image:: img/07_iot_ble_02.jpg
 
-   Once connected, you'll gain access to detailed information about the Bluetooth device. Scroll down to find your service UUID and your Characteristic UUID.
+   Una volta connesso, avrai accesso a informazioni dettagliate sul dispositivo Bluetooth. Scorri verso il basso per trovare il tuo UUID di servizio e il tuo UUID di caratteristica.
 
-   Tap on the Characteristic. You'll notice that this Characteristic is both readable and writable, allowing you to both read from and write to it.
+   Tocca la Caratteristica. Noterai che questa Caratteristica è sia leggibile che scrivibile, permettendoti sia di leggere che di scrivere su di essa.
 
-   Continue scrolling to the "Data format" section and change it to UTF-8 String.
-   Enter text in the text box and click write. The message you entered will appear on the LCD.
+   Continua a scorrere fino alla sezione "Formato dei dati" e cambia in Stringa UTF-8.
+   Inserisci il testo nella casella di testo e fai clic su scrivi. Il messaggio inserito apparirà sullo schermo LCD.
 
    .. image:: img/07_iot_ble_03.jpg
 
-**How it works?**
+**Come Funziona?**
 
-Here are the main parts of the code and explanations of their functions:
+Ecco le principali parti del codice e le spiegazioni delle loro funzioni:
 
-1. Include the required libraries:
+1. Includere le librerie necessarie:
 
-   * ``ArduinoBLE.h``: Used for handling BLE communication.
-   * ``Wire.h``: Used for I2C communication.
-   * ``LiquidCrystal_I2C.h``: Used to control a 16x2 character LCD screen with I2C interface.
+   * ``ArduinoBLE.h``: Utilizzato per gestire la comunicazione BLE.
+   * ``Wire.h``: Utilizzato per la comunicazione I2C.
+   * ``LiquidCrystal_I2C.h``: Utilizzato per controllare uno schermo LCD 16x2 con interfaccia I2C.
 
-2. Define a BLE service and a BLE characteristic:
+2. Definire un servizio BLE e una caratteristica BLE:
 
-   * Use the ``BLEService`` class to define a BLE service and assign it a unique UUID.
-   * Use the ``BLECharacteristic`` class to define a BLE characteristic, assign it a unique UUID, and give it read (``BLERead``) and write (``BLEWrite``) permissions.
-   * Create a character array ``stringValue`` as the initial value of the characteristic.
+   * Usa la classe ``BLEService`` per definire un servizio BLE e assegnargli un UUID univoco.
+   * Usa la classe ``BLECharacteristic`` per definire una caratteristica BLE, assegnarle un UUID univoco e darle permessi di lettura (``BLERead``) e scrittura (``BLEWrite``).
+   * Crea un array di caratteri ``stringValue`` come valore iniziale della caratteristica.
 
-3. Initialize a 16x2 character LCD screen (LCD):
+3. Inizializzare uno schermo LCD 16x2 (LCD):
 
-   * Use the ``LiquidCrystal_I2C`` class to initialize an LCD, specifying the I2C address (0x27) and the number of rows and columns (16x2).
-   * Turn on the backlight of the LCD, clear the screen, move the cursor to the start of the first row, and display "Bluetooth LCD."
+   * Usa la classe ``LiquidCrystal_I2C`` per inizializzare un LCD, specificando l'indirizzo I2C (0x27) e il numero di righe e colonne (16x2).
+   * Accendi la retroilluminazione dell'LCD, cancella lo schermo, sposta il cursore all'inizio della prima riga e visualizza "Bluetooth LCD."
 
-4. Perform initialization in the ``setup()`` function:
+4. Eseguire l'inizializzazione nella funzione ``setup()``:
 
-   * Initialize serial communication.
-   * Initialize the BLE module, and if initialization fails, enter an infinite loop.
-   * Set the local name and service UUID for the BLE peripheral.
-   * Add the BLE characteristic to the BLE service.
-   * Start advertising the BLE service so that central devices can discover and connect to it.
-   * Initialize the LCD.
+   * Inizializza la comunicazione seriale.
+   * Inizializza il modulo BLE e, se l'inizializzazione fallisce, entra in un ciclo infinito.
+   * Imposta il nome locale e l'UUID del servizio per il dispositivo periferico BLE.
+   * Aggiungi la caratteristica BLE al servizio BLE.
+   * Inizia a pubblicizzare il servizio BLE affinché i dispositivi centrali possano scoprirlo e connettersi ad esso.
+   * Inizializza l'LCD.
 
-5. The ``loop()`` function:
+5. La funzione ``loop()``:
 
-   * Check if there is a central device connected to the BLE peripheral by calling ``BLE.central()``. If a central device is connected, enter the connection handling logic.
-   * In the connected state, check if data has been written to the BLE characteristic by checking ``boxCharacteristic.written()``.
-   * If data has been written, get the length of the written data using ``boxCharacteristic.valueLength()`` and create a byte array ``buffer`` to store the written data.
-   * Use ``boxCharacteristic.readValue()`` to read data from the BLE characteristic into the ``buffer``.
-   * Add a null character ``'\0'`` to the end of the ``buffer`` to convert it to a string.
-   * Print the received message to the serial monitor and display it on the LCD.
-   * Continue waiting for the next central device to connect after the central device disconnects.
+   * Controlla se c'è un dispositivo centrale connesso al dispositivo periferico BLE chiamando ``BLE.central()``. Se un dispositivo centrale è connesso, entra nella logica di gestione della connessione.
+   * In stato di connessione, controlla se i dati sono stati scritti nella caratteristica BLE controllando ``boxCharacteristic.written()``.
+   * Se i dati sono stati scritti, ottieni la lunghezza dei dati scritti usando ``boxCharacteristic.valueLength()`` e crea un array di byte ``buffer`` per memorizzare i dati scritti.
+   * Usa ``boxCharacteristic.readValue()`` per leggere i dati dalla caratteristica BLE nel ``buffer``.
+   * Aggiungi un carattere nullo ``'\0'`` alla fine del ``buffer`` per convertirlo in una stringa.
+   * Stampa il messaggio ricevuto sul monitor seriale e visualizzalo sull'LCD.
+   * Continua ad aspettare il prossimo dispositivo centrale da connettere dopo che il dispositivo centrale si è disconnesso.

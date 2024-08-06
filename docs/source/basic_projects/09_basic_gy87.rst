@@ -1,26 +1,24 @@
 .. note::
+    Ciao, benvenuto nella Community di SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts su Facebook! Approfondisci Raspberry Pi, Arduino e ESP32 con altri appassionati.
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    **Perché unirsi?**
 
-    **Why Join?**
+    - **Supporto esperto**: Risolvi i problemi post-vendita e le sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara e Condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Ottieni accesso anticipato agli annunci di nuovi prodotti e anteprime.
+    - **Sconti Speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni Festive e Giveaway**: Partecipa a giveaway e promozioni festive.
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    👉 Pronto a esplorare e creare con noi? Clicca [|link_sf_facebook|] e unisciti oggi stesso!
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
-GY-87 IMU Module
+Modulo GY-87 IMU
 ==========================
 
-The GY-87 module is equipped with three sensor chips: MPU6050, QMC5883L, and BMP180, each offering unique capabilities. The MPU6050 combines a gyroscope and an accelerometer for motion tracking, the QMC5883L serves as a magnetometer for directional sensing, and the BMP180 is used for measuring barometric pressure and temperature. These can be interfaced using the I2C protocol for effective communication with an Arduino.
+Il modulo GY-87 è dotato di tre chip sensori: MPU6050, QMC5883L e BMP180, ciascuno con capacità uniche. L'MPU6050 combina un giroscopio e un accelerometro per il tracciamento dei movimenti, il QMC5883L funge da magnetometro per il rilevamento della direzione e il BMP180 viene utilizzato per misurare la pressione barometrica e la temperatura. Questi possono essere interfacciati utilizzando il protocollo I2C per una comunicazione efficace con un Arduino.
 
-These sensors are designed for seamless integration via the I2C protocol, ensuring efficient communication with platforms like Arduino. Each sensor in the GY-87 module is accessible through unique I2C addresses: MPU6050 is accessed at 0x68, QMC5883L at 0x0D, and BMP180 at 0x77.
+Questi sensori sono progettati per un'integrazione senza soluzione di continuità tramite il protocollo I2C, garantendo una comunicazione efficiente con piattaforme come Arduino. Ogni sensore nel modulo GY-87 è accessibile attraverso indirizzi I2C unici: l'MPU6050 è accessibile a 0x68, il QMC5883L a 0x0D e il BMP180 a 0x77.
 
-
-Individual tutorials for each sensor chip:
+Tutorial individuali per ciascun chip sensore:
 
 .. toctree::
     :maxdepth: 1
@@ -29,15 +27,13 @@ Individual tutorials for each sensor chip:
     09_basic_gy87_mpu6050
     09_basic_gy87_qmc5883l
 
-
 .. raw:: html
 
    <br/>
 
-.. **Code for of GY-87 module**
+.. **Codice per il modulo GY-87**
 
-If you want to use these three chips simultaneously, here is a simple example:
-
+Se vuoi utilizzare questi tre chip contemporaneamente, ecco un semplice esempio:
 
 .. image:: img/09-gy87_bb.png
     :align: center
@@ -51,31 +47,28 @@ If you want to use these three chips simultaneously, here is a simple example:
 ..     :align: center
 ..     :width: 90%
 
-
 .. note::
+    * Puoi aprire il file ``09-gy87.ino`` sotto il percorso ``elite-explorer-kit-main\basic_project\09-gy87`` direttamente.
+    * Oppure copia questo codice nell'Arduino IDE.
 
-    * You can open the file ``09-gy87.ino`` under the path of ``elite-explorer-kit-main\basic_project\09-gy87`` directly.
-    * Or copy this code into Arduino IDE.
+.. note::    Per installare la libreria, usa l'Arduino Library Manager.
 
-.. note:: 
-    To install the library, use the Arduino Library Manager. 
-    
-        - Search for **"Adafruit MPU6050"** and install
+        - Cerca **"Adafruit MPU6050"** e installa
 
-          When installing each library, please make sure to select the installation of all dependencies.
-      
+          Durante l'installazione di ciascuna libreria, 
+          assicurati di selezionare l'installazione di tutte le dipendenze.
+
           .. image:: img/09-add_lib_tip.png
              :width: 80%
 
-        - Search for **"Adafruit Unified Sensor"** and install
-        - Search for **"QMC5883LCompass"** and install
-        - Search for **"Adafruit BMP085 Library"** and install
+        - Cerca **"Adafruit Unified Sensor"** e installa
+        - Cerca **"QMC5883LCompass"** e installa
+        - Cerca **"Adafruit BMP085 Library"** e installa
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/efd14082-486b-47eb-9533-8d36a36d2d88/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-.. note::
-   Magnetometers must be calibrated(:ref:`basic_gy87_calibrate`) before they can be used as compasses, and must held level in use and **kept away from iron objects, magnetized materials and current carrying wires**.
+.. note::    I magnetometri devono essere calibrati (:ref:`basic_gy87_calibrate`) prima di poter essere utilizzati come bussole, devono essere mantenuti in piano durante l'uso e **tenuti lontani da oggetti in ferro, materiali magnetizzati e fili che trasportano corrente**.
 
-After the code is successfully uploaded to your Arduino Uno R4, the Serial Monitor will come to life, continuously printing out sensor data from the GY-87 IMU module. This module incorporates three individual sensors: the MPU6050 for accelerometer and gyroscope readings, the QMC5883L for magnetometer readings, and the BMP180 for barometric pressure and temperature readings.
+Dopo che il codice è stato caricato con successo sul tuo Arduino Uno R4, il Monitor Seriale prenderà vita, stampando continuamente i dati dei sensori dal modulo GY-87 IMU. Questo modulo incorpora tre sensori individuali: l'MPU6050 per le letture di accelerometro e giroscopio, il QMC5883L per le letture del magnetometro e il BMP180 per le letture di pressione barometrica e temperatura.

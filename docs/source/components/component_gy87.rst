@@ -1,37 +1,37 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community di SunFounder per appassionati di Raspberry Pi, Arduino e ESP32 su Facebook! Approfondisci Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirsi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto Esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e Condividi**: Scambia suggerimenti e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Accedi in anteprima agli annunci dei nuovi prodotti e alle anticipazioni.
+    - **Sconti Speciali**: Godi di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e Giveaway Festivi**: Partecipa a giveaway e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
 .. _cpn_gy87:
 
-GY-87 IMU module
+Modulo IMU GY-87
 ============================
 
 .. image:: img/gy87.png
     :align: center
     :width: 40%
 
-The GY-87 sensor module is a high-precision, 10-axis (10DOF) module capable of measuring acceleration, angular velocity, and magnetic field strength across three axes: x, y, and z. It consists of three main sensors: MPU6050, QMC5883L, and BMP180, and communicates via the I2C protocol.
+Il modulo sensore GY-87 è un modulo ad alta precisione a 10 assi (10DOF) in grado di misurare accelerazione, velocità angolare e intensità del campo magnetico su tre assi: x, y e z. È composto da tre sensori principali: MPU6050, QMC5883L e BMP180, e comunica tramite il protocollo I2C.
 
-The GY-87 sensor module is based on three sensors:
+Il modulo sensore GY-87 si basa su tre sensori:
 
-1. **MPU6050**: This is a 6-axis accelerometer and gyroscope that can measure acceleration and angular velocity in three axes x, y, and z.
-2. **QMC5883L**: This is a 3-axis digital compass that can measure the strength of the magnetic field in three axes x, y, and z.
-3. **BMP180**: This is a barometric temperature and pressure sensor that can measure atmospheric pressure and temperature.
+1. **MPU6050**: Un accelerometro e giroscopio a 6 assi che può misurare accelerazione e velocità angolare su tre assi x, y e z.
+2. **QMC5883L**: Una bussola digitale a 3 assi che può misurare l'intensità del campo magnetico su tre assi x, y e z.
+3. **BMP180**: Un sensore barometrico di temperatura e pressione che può misurare pressione atmosferica e temperatura.
 
-The MPU6050 measures acceleration and angular velocity in three axes x, y, and z. The QMC5883L measures the strength of the magnetic field in three axes x, y, and z. The BMP180 measures atmospheric pressure and temperature. The data from these sensors are combined to provide accurate information about the orientation of the module in space.
+L'MPU6050 misura accelerazione e velocità angolare su tre assi x, y e z. Il QMC5883L misura l'intensità del campo magnetico su tre assi x, y e z. Il BMP180 misura pressione atmosferica e temperatura. I dati di questi sensori vengono combinati per fornire informazioni accurate sull'orientamento del modulo nello spazio.
 
-The GY-87 sensor module is commonly used in applications such as drones, robotics, and other projects that require accurate orientation information. It is compatible with Arduino boards and can be easily interfaced with them using the I2C communication protocol.
+Il modulo sensore GY-87 è comunemente utilizzato in applicazioni come droni, robotica e altri progetti che richiedono informazioni accurate sull'orientamento. È compatibile con le schede Arduino e può essere facilmente interfacciato con esse utilizzando il protocollo di comunicazione I2C.
 
 .. image:: img/GY-87-SCH.jpg
     :align: center
@@ -41,9 +41,10 @@ The GY-87 sensor module is commonly used in applications such as drones, robotic
 
     <br/>
 
-**Example**
+**Esempio**
 
-* :ref:`basic_gy87_bmp180` (Basic Project)
-* :ref:`basic_gy87_mpu6050` (Basic Project)
-* :ref:`basic_gy87_qmc5883l` (Basic Project)
-* :ref:`fun_escape` (Fun Project)
+* :ref:`basic_gy87_bmp180` (Progetto Base)
+* :ref:`basic_gy87_mpu6050` (Progetto Base)
+* :ref:`basic_gy87_qmc5883l` (Progetto Base)
+* :ref:`fun_escape` (Progetto Divertente)
+

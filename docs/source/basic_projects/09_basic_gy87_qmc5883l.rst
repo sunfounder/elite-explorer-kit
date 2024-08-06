@@ -1,53 +1,53 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella community di appassionati di SunFounder Raspberry Pi & Arduino & ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino e ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirsi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara e condividi**: Scambia suggerimenti e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Ottieni accesso anticipato agli annunci di nuovi prodotti e anteprime.
+    - **Sconti speciali**: Goditi sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni festive e giveaway**: Partecipa a giveaway e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _basic_gy87_qmc5883l:
 
 QMC5883L
 ==========================
 
-Overview
+Panoramica
 ---------------
 
-In this tutorial, we will explore the GY-87 IMU module, focusing on its QMC5883L magnetometer. The first part of the tutorial guides you through calibrating the QMC5883L magnetometer, which is essential for accurate magnetic field measurements. You will learn how to upload a calibration sketch to Arduino, perform real-time calibration, and apply these settings in your projects. The second part of the tutorial covers initializing the MPU6050 (accelerometer and gyroscope) and QMC5883L on an Arduino Uno using the Adafruit MPU6050 and QMC5883LCompass libraries. You will learn how to read and display sensor data on the Serial Monitor, which is a fundamental skill for applications in navigation, motion tracking, and orientation detection.
+In questo tutorial esploreremo il modulo IMU GY-87, concentrandoci sul magnetometro QMC5883L. La prima parte del tutorial ti guiderà nella calibrazione del magnetometro QMC5883L, essenziale per misurazioni accurate del campo magnetico. Imparerai come caricare uno sketch di calibrazione su Arduino, eseguire la calibrazione in tempo reale e applicare queste impostazioni nei tuoi progetti. La seconda parte del tutorial copre l'inizializzazione dell'MPU6050 (accelerometro e giroscopio) e del QMC5883L su un Arduino Uno utilizzando le librerie Adafruit MPU6050 e QMC5883LCompass. Imparerai come leggere e visualizzare i dati dei sensori sul Serial Monitor, una competenza fondamentale per applicazioni in navigazione, tracciamento dei movimenti e rilevamento dell'orientamento.
 
-Required Components
+Componenti necessari
 -------------------------
 
-In this project, we need the following components. 
+In questo progetto, abbiamo bisogno dei seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un kit completo, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - OGGETTI IN QUESTO KIT
         - LINK
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link sottostanti.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -56,7 +56,7 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_gy87`
         - \-
 
-Wiring
+Cablaggio
 ----------------------
 
 .. image:: img/09-gy87_bb.png
@@ -67,54 +67,51 @@ Wiring
 
    <br/>
 
-
-Schematic Diagram
+Schema elettrico
 -----------------------
 
 .. image:: img/09_basic_gy87_schematic.png
     :align: center
     :width: 60%
 
-
-Install Library
------------------------
+Installazione della libreria
+-------------------------------------
 
 .. note:: 
-    To install the library, use the Arduino Library Manager. 
+    Per installare la libreria, usa il Gestore Librerie di Arduino.
     
-        - Search for **"Adafruit MPU6050"** and install
+        - Cerca **"Adafruit MPU6050"** e installa.
 
-          When installing each library, please make sure to select the installation of all dependencies.
+          Durante l'installazione di ogni libreria, assicurati di selezionare l'installazione di tutte le dipendenze.
       
           .. image:: img/09-add_lib_tip.png
              :width: 80%
 
-        - Search for **"QMC5883LCompass"** and install
-
+        - Cerca **"QMC5883LCompass"** e installa.
 
 .. _basic_gy87_calibrate:
 
-Calibrate QMC5883L
+Calibrare QMC5883L
 -----------------------
 
 .. note::
 
-    * You can open the file ``09-gy87_compass_calibration.ino`` under the path of ``elite-explorer-kit-main\basic_project\09-gy87_compass_calibration`` directly.
-    * Or copy this code into Arduino IDE.
+    * Puoi aprire direttamente il file ``09-gy87_compass_calibration.ino`` nel percorso ``elite-explorer-kit-main\basic_project\09-gy87_compass_calibration``.
+    * Oppure copia questo codice nell'IDE di Arduino.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/252c7a58-3a9f-4c66-959e-f45fc19e68aa/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After uploading the code, open the serial monitor. Follow the instructions in the serial monitor to calibrate QMC5883L. When prompted to move the sensor, it is recommended to use Figure 8 calibration method. Alternatively, simply keep the sensor parallel to the ground and rotate it clockwise or counterclockwise until the serial monitor prompts that calibration is complete.
+Dopo aver caricato il codice, apri il monitor seriale. Segui le istruzioni nel monitor seriale per calibrare il QMC5883L. Quando ti viene chiesto di muovere il sensore, si consiglia di utilizzare il metodo di calibrazione a 8. In alternativa, mantieni semplicemente il sensore parallelo al suolo e ruotalo in senso orario o antiorario fino a quando il monitor seriale indica che la calibrazione è completa.
 
 .. image:: img/09_calibrate_qmc5883l.png
     :width: 100%
     :align: center
 
-Once all calibration data has been collected, the sketch will tell provide you with some code that will look like ``compass.setCalibrationOffsets(-375.00, -179.00, 85.00);`` and ``compass.setCalibrationScales(1.04, 0.96, 1.01);``. Copy this code. You may want to save it for future reference.
+Una volta raccolti tutti i dati di calibrazione, lo sketch ti fornirà un codice simile a ``compass.setCalibrationOffsets(-375.00, -179.00, 85.00);`` e ``compass.setCalibrationScales(1.04, 0.96, 1.01);``. Copia questo codice. Potresti volerlo salvare per riferimento futuro.
 
-When using QMC5883L: Open your project's sketch and paste the line of code you copied directly below the ``compass.init()`` call. Just like this:
+Quando utilizzi il QMC5883L: apri lo sketch del tuo progetto e incolla la linea di codice copiata direttamente sotto la chiamata ``compass.init()``. Proprio così:
 
 .. code:: arduino 
 
@@ -122,36 +119,35 @@ When using QMC5883L: Open your project's sketch and paste the line of code you c
    
      compass.init();
    
-     // You should replace the code below according to your calibration results
+     // Sostituisci il codice sottostante con i risultati della tua calibrazione
      compass.setCalibrationOffsets(-375.00, -179.00, 85.00);
      compass.setCalibrationScales(1.04, 0.96, 1.01);
    
    }
 
-Code
+Codice
 ---------------------------------------------
 
 .. note::
 
-   Magnetometers must be calibrated(:ref:`basic_gy87_calibrate`) before they can be used as compasses, and must held level in use and **kept away from iron objects, magnetized materials and current carrying wires**.
+   I magnetometri devono essere calibrati (:ref:`basic_gy87_calibrate`) prima di poter essere utilizzati come bussole e devono essere mantenuti livellati durante l'uso e **tenuti lontani da oggetti di ferro, materiali magnetizzati e fili portatori di corrente**.
 
 .. note::
 
-    * You can open the file ``09-gy87_qmc5883l.ino`` under the path of ``elite-explorer-kit-main\basic_project\09-gy87_qmc5883l`` directly.
-    * Or copy this code into Arduino IDE.
-    * Put the code obtained from the calibration steps below the line of code ``compass.init()`` in the function ``initializeQMC5883L()``.
+    * Puoi aprire direttamente il file ``09-gy87_qmc5883l.ino`` nel percorso ``elite-explorer-kit-main\basic_project\09-gy87_qmc5883l``.
+    * Oppure copia questo codice nell'IDE di Arduino.
+    * Inserisci il codice ottenuto dai passaggi di calibrazione sotto la linea di codice ``compass.init()`` nella funzione ``initializeQMC5883L()``.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/8b266a18-ce7b-4330-8c10-c9f4148bb8ec/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-Code Analysis
+Analisi del Codice
 ------------------------
 
-
-#. Include Libraries and Initialize Sensors
-   This section includes the necessary libraries for the MPU6050 and QMC5883L sensors and initializes their objects.
+#. Includere le Librerie e Inizializzare i Sensori
+   Questa sezione include le librerie necessarie per i sensori MPU6050 e QMC5883L e inizializza i loro oggetti.
 
    .. code-block:: arduino
       
@@ -163,29 +159,29 @@ Code Analysis
       Adafruit_MPU6050 mpu;
       QMC5883LCompass compass;
 
-#. Setup Function
+#. Funzione di Setup
 
-   Initializes serial communication, the MPU6050 sensor, and sets the MPU6050 to I2C bypass mode to allow direct access to the QMC5883L magnetometer. Then, it initializes the QMC5883L magnetometer.
+   Inizializza la comunicazione seriale, il sensore MPU6050 e imposta l'MPU6050 in modalità bypass I2C per consentire l'accesso diretto al magnetometro QMC5883L. Successivamente, inizializza il magnetometro QMC5883L.
 
    .. code-block:: arduino
       
       void setup() {
-        // Initialize the serial communication with a baud rate of 9600
+        // Inizializza la comunicazione seriale con una velocità di trasmissione di 9600 baud
         Serial.begin(9600);
       
-        // Initialize the MPU6050 sensor (accelerometer and gyroscope)
+        // Inizializza il sensore MPU6050 (accelerometro e giroscopio)
         initializeMPU6050();
       
-        // Enable I2C bypass on MPU6050 to directly access the QMC5883L magnetometer
+        // Abilita il bypass I2C su MPU6050 per accedere direttamente al magnetometro QMC5883L
         mpu.setI2CBypass(true);
       
-        // Initialize the QMC5883L magnetometer sensor
+        // Inizializza il sensore magnetometro QMC5883L
         initializeQMC5883L();
       }
 
-#. Loop Function
+#. Funzione Loop
 
-   Continuously reads data from the QMC5883L magnetometer and prints it to the Serial Monitor.
+   Legge continuamente i dati dal magnetometro QMC5883L e li stampa sul Monitor Seriale.
 
    .. code-block:: arduino
       
@@ -194,23 +190,23 @@ Code Analysis
         delay(500);
       }
 
-#. Initialize QMC5883L Function
+#. Funzione di Inizializzazione del QMC5883L
 
-   Initializes and calibrates the QMC5883L magnetometer. The calibration values should be adjusted based on specific calibration data.(:ref:`basic_gy87_calibrate`)
+   Inizializza e calibra il magnetometro QMC5883L. I valori di calibrazione devono essere regolati in base ai dati di calibrazione specifici.(:ref:`basic_gy87_calibrate`)
 
    .. code-block:: arduino
       
       void initializeQMC5883L() {
         compass.init();
       
-        // You should replace the code below according to your calibration results
+        // Sostituisci il codice sottostante con i risultati della tua calibrazione
         compass.setCalibrationOffsets(-549.00, -66.00, 160.00);
         compass.setCalibrationScales(0.97, 1.02, 1.02);
       }
 
-#. Print QMC5883L Data Function
+#. Funzione di Stampa dei Dati del QMC5883L
 
-   This function reads the magnetometer's X, Y, Z values, and azimuth, then prints them to the Serial Monitor.
+   Questa funzione legge i valori X, Y, Z e l'azimuth del magnetometro, quindi li stampa sul Monitor Seriale.
 
    .. code-block:: arduino
 

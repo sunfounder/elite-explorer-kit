@@ -1,55 +1,55 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella comunità di appassionati di SunFounder Raspberry Pi, Arduino e ESP32 su Facebook! Approfondisci Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti a noi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi i problemi post-vendita e le sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e Condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Accedi in anteprima agli annunci di nuovi prodotti e agli sneak peek.
+    - **Sconti speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni festive e omaggi**: Partecipa a giveaway e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto per esplorare e creare con noi? Clicca [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _basic_photoresistor:
 
-Photoresistor
+Fotoresistore
 ==========================
 
 .. https://docs.sunfounder.com/projects/vincent-kit/en/latest/arduino/2.26_photoresistor.html
 
-Overview
+Panoramica
 ---------------
 
-In this lesson, you will learn about Photoresistor. Photoresistor is applied in many electronic goods, such as the camera meter, clock radio, alarm device (as beam detector), small night lights, outdoor clock, solar street lamps and etc. Photoresistor is placed in a street lamp to control when the light is turned on. Ambient light falling on the photoresistor causes street lamps to turn on or off.
+In questa lezione, imparerai a conoscere il Fotoresistore. Il Fotoresistore è applicato in molti dispositivi elettronici, come il misuratore della fotocamera, la radiosveglia, il dispositivo di allarme (come rivelatore a fascio), le piccole luci notturne, l'orologio da esterno, le lampade stradali solari e così via. Il Fotoresistore è posto in un lampione per controllare quando la luce è accesa. La luce ambientale che colpisce il fotoresistore fa sì che i lampioni si accendano o si spengano.
 
-Required Components
+Componenti necessari
 -------------------------
 
-In this project, we need the following components. 
+In questo progetto, abbiamo bisogno dei seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un kit completo, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - ELEMENTI IN QUESTO KIT
         - LINK
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link qui sotto.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -62,29 +62,29 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_photoresistor`
         - |link_photoresistor_buy|
 
-Wiring
+Collegamenti
 ----------------------
 
-In this example, we use analog pin ( A0 ) to read the value of photoresistor. One pin of photoresistor is connected to 5V, the other is wired up to A0. Besides, a 10kΩ resistor is needed before the other pin is connected to GND.
+In questo esempio, utilizziamo il pin analogico (A0) per leggere il valore del fotoresistore. Un pin del fotoresistore è collegato a 5V, l'altro è collegato ad A0. Inoltre, è necessario un resistore da 10kΩ prima che l'altro pin sia collegato a GND.
 
 .. image:: img/01-photoresistor_bb.png
     :align: center
     :width: 80%
 
-Schematic Diagram
+Schema Elettrico
 -----------------------
 
 .. image:: img/01_photoresistor_schematic.png
     :align: center
     :width: 70%
 
-Code
+Codice
 ---------------
 
 .. note::
 
-    * You can open the file ``01-photoresistor`` under the path of ``elite-explorer-kit-main\basic_project\01-photoresistor`` directly.
-    * Or copy this code into Arduino IDE.
+    * Puoi aprire il file ``01-photoresistor`` direttamente dal percorso ``elite-explorer-kit-main\basic_project\01-photoresistor``.
+    * Oppure copia questo codice nell'IDE di Arduino.
 
 
 
@@ -93,4 +93,4 @@ Code
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/e6bf007e-b20d-44d0-9ef9-6d57c1ce4c3c/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After uploading the codes to the uno board, you can open the serial monitor to see the read value of the pin. When the ambient light becomes stronger, the reading will increase correspondingly, and the pin reading range is 「0」~「1023」.  However, according to the environmental conditions and the characteristics of the photoresistor, the actual reading range may be smaller than the theoretical range. 
+Dopo aver caricato il codice sulla scheda uno, puoi aprire il monitor seriale per vedere il valore letto dal pin. Quando la luce ambientale diventa più intensa, la lettura aumenterà di conseguenza, e l'intervallo di lettura del pin è 「0」~「1023」. Tuttavia, a seconda delle condizioni ambientali e delle caratteristiche del fotoresistore, l'intervallo di lettura effettivo potrebbe essere inferiore all'intervallo teorico.

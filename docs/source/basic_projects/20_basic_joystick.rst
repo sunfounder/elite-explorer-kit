@@ -1,56 +1,56 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community di SunFounder per appassionati di Raspberry Pi, Arduino e ESP32 su Facebook! Approfondisci Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirsi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto Esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e Condividi**: Scambia suggerimenti e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Accedi in anteprima agli annunci dei nuovi prodotti e alle anticipazioni.
+    - **Sconti Speciali**: Godi di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e Giveaway Festivi**: Partecipa a giveaway e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
 .. _basic_joystick:
 
-Joystick Module
+Modulo Joystick
 ==========================
 
 .. https://docs.sunfounder.com/projects/r4-basic-kit/en/latest/projects/joystick_ps2_uno.html#joystick-uno
 
 
-Overview
+Panoramica
 ---------------
 
-A joystick is an input device consisting of a stick that pivots on a base and reports its angle or direction to the device it is controlling. Joysticks are often used to control video games and robots. A Joystick PS2 is used here.
+Un joystick è un dispositivo di input costituito da un'asta che ruota su una base e segnala il suo angolo o direzione al dispositivo che sta controllando. I joystick sono spesso utilizzati per controllare i videogiochi e i robot. Qui viene utilizzato un Joystick PS2.
 
-Required Components
--------------------------
+Componenti Necessari
+----------------------------
 
-In this project, we need the following components. 
+In questo progetto, abbiamo bisogno dei seguenti componenti. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un kit completo, ecco il link: 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - ELEMENTI IN QUESTO KIT
         - LINK
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link seguenti.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE DEI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -61,53 +61,53 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_joystick`
         - |link_joystick_buy|
 
-Wiring
+Cablaggio
 ----------------------
 
 .. image:: img/20-joystick_bb.png
     :align: center
     :width: 70%
 
-Schematic Diagram
+Schema Elettrico
 ---------------------
 
-This module has two analog outputs (corresponding to X,Y biaxial offsets). 
+Questo modulo ha due uscite analogiche (corrispondenti agli offset biaxiali X,Y).
 
-In this experiment, we use the Uno board to detect the moving direction of the Joystick knob.
+In questo esperimento, utilizziamo la scheda Uno per rilevare la direzione di movimento della manopola del joystick.
 
 .. image:: img/20_joystick_schematic.png
     :align: center 
     :width: 70%
 
-Code
--------
+Codice
+----------
 
 .. note::
 
-    * You can open the file ``20-joystick.ino`` under the path of ``elite-explorer-kit-main\basic_project\20-joystick`` directly.
-    * Or copy this code into Arduino IDE.
+    * Puoi aprire direttamente il file ``20-joystick.ino`` nel percorso ``elite-explorer-kit-main\basic_project\20-joystick``.
+    * Oppure copia questo codice nell'Arduino IDE.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/ac0f9910-e53e-43a3-a5ae-ec4d3a3f4aa1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-Now, when you push the rocker, the coordinates of the X and Y axes displayed on the Serial Monitor will change accordingly. Pressing the button will also display the coordinate Z=0.
+Ora, quando spingi la leva, le coordinate degli assi X e Y visualizzate sul Monitor Seriale cambieranno di conseguenza. Premendo il pulsante verrà visualizzata anche la coordinata Z=0.
 
 
-Code Analysis
--------------------
+Analisi del Codice
+----------------------
 
-The code is use the serial monitor to print the value of the VRX and VRY pins of the joystick ps2.
+Il codice utilizza il monitor seriale per stampare il valore dei pin VRX e VRY del joystick ps2.
 
 .. code-block:: arduino
 
     void loop()
     {
         Serial.print("X: "); 
-        Serial.print(analogRead(xPin), DEC);  // print the value of VRX in DEC
+        Serial.print(analogRead(xPin), DEC);  // stampa il valore di VRX in DEC
         Serial.print("|Y: ");
-        Serial.print(analogRead(yPin), DEC);  // print the value of VRX in DEC
+        Serial.print(analogRead(yPin), DEC);  // stampa il valore di VRY in DEC
         Serial.print("|Z: ");
-        Serial.println(digitalRead(swPin));  // print the value of SW
+        Serial.println(digitalRead(swPin));  // stampa il valore di SW
         delay(50);
     }

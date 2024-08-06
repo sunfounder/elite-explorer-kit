@@ -1,33 +1,33 @@
 .. note::
+    Ciao, benvenuto nella comunità di appassionati di SunFounder Raspberry Pi, Arduino e ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino e ESP32 con altri appassionati.
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    **Perché unirti a noi?**
 
-    **Why Join?**
+    - **Supporto esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e condividi**: Scambia suggerimenti e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Ottieni accesso anticipato agli annunci di nuovi prodotti e anteprime.
+    - **Sconti speciali**: Goditi sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e omaggi festivi**: Partecipa a omaggi e promozioni per le festività.
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca [|link_sf_facebook|] e unisciti oggi!
 
 .. _cpn_keypad:
 
-Keypad
+Tastierino
 ========================
 
-A keypad is a rectangular array of 12 or 16 OFF-(ON) buttons. 
-Their contacts are accessed via a header suitable for connection with a ribbon cable or insertion into a printed circuit board. 
-In some keypads, each button connects with a separate contact in the header, while all the buttons share a common ground.
+Un tastierino è una matrice rettangolare di 12 o 16 pulsanti OFF-(ON). 
+I loro contatti sono accessibili tramite un connettore adatto per il collegamento con un cavo a nastro o per l'inserimento in una scheda a circuito stampato. 
+In alcuni tastierini, ogni pulsante si connette con un contatto separato nel connettore, mentre tutti i pulsanti condividono un comune di massa.
 
 .. image:: img/keypad314.png
 
-More often, the buttons are matrix encoded, meaning that each of them bridges a unique pair of conductors in a matrix. 
-This configuration is suitable for polling by a microcontroller, which can be programmed to send an output pulse to each of the four horizontal wires in turn. 
-During each pulse, it checks the remaining four vertical wires in sequence, to determine which one, if any, is carrying a signal. 
-Pullup or pulldown resistors should be added to the input wires to prevent the inputs of the microcontroller from behaving unpredictably when no signal is present.
+Più spesso, i pulsanti sono codificati a matrice, il che significa che ciascuno di essi collega una coppia unica di conduttori in una matrice. 
+Questa configurazione è adatta per il polling da parte di un microcontrollore, che può essere programmato per inviare un impulso di uscita a ciascuno dei quattro fili orizzontali a turno. 
+Durante ciascun impulso, controlla i restanti quattro fili verticali in sequenza, per determinare quale di essi, se presente, sta trasmettendo un segnale. 
+Resistori di pull-up o pull-down dovrebbero essere aggiunti ai fili di ingresso per prevenire comportamenti imprevedibili negli ingressi del microcontrollore quando non è presente alcun segnale.
 
-**Example**
+**Esempio**
 
-* :ref:`basic_keypad` (Basic Project)
+* :ref:`basic_keypad` (Progetto di base)
+

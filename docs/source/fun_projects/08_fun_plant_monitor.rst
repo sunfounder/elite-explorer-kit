@@ -1,57 +1,57 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella community SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts su Facebook! Approfondisci Raspberry Pi, Arduino ed ESP32 con altri appassionati.
 
-    **Why Join?**
+    **Perché unirsi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto Esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara & Condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Ottieni l'accesso anticipato agli annunci di nuovi prodotti e anteprime esclusive.
+    - **Sconti Speciali**: Goditi sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e Concorsi Festivi**: Partecipa a concorsi e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _fun_plant_monitor:
 
-Plant Monitor
+Monitor per Piante
 ============================
 
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/videos/fun_projects/08_fun_plant_monitor.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      Il tuo browser non supporta il tag video.
    </video>
 
-This project automatically waters plants by activating a water pump when the soil humidity falls below a specific threshold.
-Additionally, it displays temperature, humidity, and soil moisture on an LCD screen, providing users with insights into the plant's growth environment.
+Questo progetto irriga automaticamente le piante attivando una pompa dell'acqua quando l'umidità del suolo scende sotto una soglia specifica.
+Inoltre, visualizza temperatura, umidità e umidità del suolo su uno schermo LCD, fornendo agli utenti informazioni sull'ambiente di crescita della pianta.
 
-**Required Components**
+**Componenti Necessari**
 
-In this project, we need the following components. 
+In questo progetto, abbiamo bisogno dei seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un kit completo, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - ELEMENTI IN QUESTO KIT
         - LINK
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link sottostanti.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE COMPONENTI
+        - LINK ACQUISTO
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -72,10 +72,10 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_power`
         - \-
 
-**Wiring**
+**Collegamenti**
 
 .. note::
-    To protect the :ref:`cpn_power`'s battery, please fully charge it before using it for the first time.
+    Per proteggere la batteria del :ref:`cpn_power`, caricala completamente prima di utilizzarla per la prima volta.
 
 .. image:: img/08_plant_monitor_bb.png
     :width: 100%
@@ -85,7 +85,7 @@ You can also buy them separately from the links below.
 
    <br/>
 
-**Schematic**
+**Schema Elettrico**
 
 .. image:: img/08_plant_monitor_schematic.png
    :width: 100%
@@ -95,39 +95,40 @@ You can also buy them separately from the links below.
 
    <br/>
 
-**Code**
+**Codice**
 
 .. note::
 
-    * You can open the file ``08_plant_monitor.ino`` under the path of ``elite-explorer-kit-main\fun_project\08_plant_monitor`` directly.
-    * Or copy this code into Arduino IDE.
+    * Puoi aprire il file ``08_plant_monitor.ino`` nel percorso ``elite-explorer-kit-main\fun_project\08_plant_monitor`` direttamente.
+    * Oppure copia questo codice nell'Arduino IDE.
 
 .. note::
-   To install the library, use the Arduino Library Manager and search for **"DHT sensor library"** and **"LiquidCrystal I2C"** and install them.
+   Per installare la libreria, usa l'Arduino Library Manager e cerca **"DHT sensor library"** e **"LiquidCrystal I2C"** e installale.
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/a9d6c9c7-0d7f-4dc2-84b6-9dbda15c89ae/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-**How it works?**
+**Come funziona?**
 
-Here is a detailed explanation of the code:
+Ecco una spiegazione dettagliata del codice:
 
-1. Library Inclusions and Constants/Variables:
+1. Inclusione delle Librerie e Definizioni di Costanti/Variabili:
 
-   Import ``Wire.h``, ``LiquidCrystal_I2C.h``, and ``DHT.h`` libraries.
-   Define pin numbers and other parameters related to DHT11, soil moisture sensor, and the water pump.
+   Importa le librerie ``Wire.h``, ``LiquidCrystal_I2C.h`` e ``DHT.h``.
+   Definisci i numeri dei pin e altri parametri relativi al DHT11, al sensore di umidità del suolo e alla pompa dell'acqua.
 
 2. ``setup()``:
 
-   Initialize the pin modes related to the soil moisture sensor and the water pump.
-   Turn off the water pump initially.
-   Initialize the LCD display and turn on the backlight.
-   Start the DHT sensor.
+   Inizializza le modalità dei pin relativi al sensore di umidità del suolo e alla pompa dell'acqua.
+   Spegni inizialmente la pompa dell'acqua.
+   Inizializza il display LCD e accendi la retroilluminazione.
+   Avvia il sensore DHT.
 
 3. ``loop()``:
 
-   Read humidity and temperature from the DHT sensor.
-   Read soil moisture from the soil moisture sensor.
-   Display temperature and humidity values on the LCD screen, then clear the screen and display the soil moisture value.
-   Determine whether to activate the water pump based on soil moisture. If the soil moisture is below 500 (a configurable threshold), activate the water pump for 1 second.
+   Leggi l'umidità e la temperatura dal sensore DHT.
+   Leggi l'umidità del suolo dal sensore di umidità del suolo.
+   Visualizza i valori di temperatura e umidità sullo schermo LCD, poi cancella lo schermo e visualizza il valore di umidità del suolo.
+   Determina se attivare la pompa dell'acqua in base all'umidità del suolo. Se l'umidità del suolo è inferiore a 500 (una soglia configurabile), attiva la pompa dell'acqua per 1 secondo.
+

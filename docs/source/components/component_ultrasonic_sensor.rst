@@ -1,58 +1,52 @@
 .. note::
+    Ciao, benvenuto nella comunità di appassionati di SunFounder Raspberry Pi, Arduino e ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino e ESP32 con altri appassionati.
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    **Perché unirti a noi?**
 
-    **Why Join?**
+    - **Supporto esperto**: Risolvi i problemi post-vendita e le sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e condividi**: Scambia suggerimenti e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Ottieni accesso anticipato agli annunci di nuovi prodotti e anteprime.
+    - **Sconti speciali**: Goditi sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e omaggi festivi**: Partecipa a omaggi e promozioni per le festività.
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca [|link_sf_facebook|] e unisciti oggi!
 
 .. _cpn_ultrasonic:
 
-Ultrasonic Module
-================================
+Modulo Ultrasonico
+==========================
 
 .. image:: img/ultrasonic_pic.png
     :width: 400
     :align: center
 
+Un modulo sensore ultrasonico è uno strumento che misura la distanza da un oggetto utilizzando onde sonore ultrasoniche. Ha due sonde. Una serve per inviare onde ultrasoniche e l'altra per riceverle e trasformare il tempo di invio e ricezione in una distanza, rilevando così la distanza tra il dispositivo e un ostacolo. In pratica è davvero conveniente e funzionale.
 
-An ultrasonic sensor module is an instrument that measures the distance to an object using ultrasonic sound waves. It has two probes. One is to send ultrasonic waves and the other is to receive the waves and transform the time of sending and receiving into a distance, thus detecting the distance between the device and an obstacle. In practice it is really convenient and functional.
+Fornisce una funzione di misurazione senza contatto da 2 cm a 400 cm, e la precisione di misurazione può raggiungere i 3 mm.
+Può garantire che il segnale sia stabile entro 5 m, e il segnale si indebolisce gradualmente dopo i 5 m, fino a scomparire alla posizione di 7 m.
 
+Il modulo include trasmettitori ultrasonici, ricevitore e circuito di controllo. I principi di base sono i seguenti:
 
-It provides 2cm - 400cm non-contact measurement function, and the ranging accuracy can reach to 3mm. 
-It can ensure that the signal is stable within 5m, and the signal is gradually weakened after 5m, till the 7m position disappears.
+#. Utilizzare un flip-flop IO per processare un segnale di livello alto di almeno 10us.
 
-The module includes ultrasonic transmitters, receiver and control circuit. The basic principles are as follows:
+#. Il modulo invia automaticamente otto impulsi a 40khz e rileva se c'è un ritorno di segnale.
 
-#. Use an IO flip-flop to process a high level signal of at least 10us.
+#. Se il segnale ritorna, passando al livello alto, la durata dell'uscita alta dell'IO è il tempo dal momento della trasmissione dell'onda ultrasonica al suo ritorno. Qui, la distanza di test = (tempo alto x velocità del suono (340 m / s) / 2.
 
-#. The module automatically sends eight 40khz and detects if there is a pulse signal return.
-
-#. If the signal returns, passing the high level, the high output IO duration is the time from the transmission of the ultrasonic wave to the return of it. Here, test distance = (high time x sound speed (340 m / s) / 2.
-
-
-
-The timing diagram is shown below. 
+Il diagramma temporale è mostrato di seguito.
 
 .. image:: img/ultrasonic228.png
 
-You only need to supply a short 10us pulse for the trigger input to start the ranging, and then the module
-will send out an 8 cycle burst of ultrasound at 40 kHz and raise its
-echo. You can calculate the range through the time interval between
-sending trigger signal and receiving echo signal.
+È sufficiente fornire un breve impulso di 10us per l'ingresso del trigger per avviare la misurazione, e poi il modulo
+invierà una raffica di 8 cicli di ultrasuoni a 40 kHz e solleverà il suo
+eco. È possibile calcolare la distanza tramite l'intervallo di tempo tra
+l'invio del segnale di trigger e la ricezione del segnale di eco.
 
-Formula: us / 58 = centimeters or us / 148 =inch; or: the range = high
-level time \* velocity (340M/S) / 2; you are suggested to use
-measurement cycle over 60ms in order to prevent signal collisions of
-trigger signal and the echo signal.
+Formula: us / 58 = centimetri o us / 148 = pollici; oppure: la distanza = tempo di livello alto \* velocità (340M/S) / 2; si consiglia di utilizzare
+un ciclo di misurazione superiore a 60ms per evitare collisioni tra
+segnale di trigger e segnale di eco.
 
-**Example**
+**Esempio**
 
-* :ref:`basic_ultrasonic_sensor` (Basic Project)
-* :ref:`fun_smart_can` (Fun Project)
+* :ref:`basic_ultrasonic_sensor` (Progetto di Base)
+* :ref:`fun_smart_can` (Progetto Divertente)

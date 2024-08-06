@@ -1,31 +1,30 @@
 .. note::
+    Ciao, benvenuto nella comunità di appassionati di SunFounder Raspberry Pi, Arduino e ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino e ESP32 con altri appassionati.
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    **Perché unirti a noi?**
 
-    **Why Join?**
+    - **Supporto esperto**: Risolvi i problemi post-vendita e le sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e condividi**: Scambia suggerimenti e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Ottieni accesso anticipato agli annunci di nuovi prodotti e anteprime.
+    - **Sconti speciali**: Goditi sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e omaggi festivi**: Partecipa a omaggi e promozioni per le festività.
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca [|link_sf_facebook|] e unisciti oggi!
 
 .. _cpn_photoresistor:
 
-Photoresistor
-==============
+Fotoresistore
+====================
 
 .. image:: img/photoresistor.png
     :width: 200
     :align: center
 
-A photoresistor or photocell is a light-controlled variable resistor. The resistance of a photoresistor decreases with increasing incident light intensity; in other words, it exhibits photo conductivity. 
+Un fotoresistore, o cellula fotoelettrica, è una resistenza variabile controllata dalla luce. La resistenza di un fotoresistore diminuisce con l'aumentare dell'intensità della luce incidente; in altre parole, esibisce fotoconduttività.
 
-A photoresistor can be applied in light-sensitive detector circuits and light-activated and dark-activated switching circuits acting as a resistance semiconductor. In the dark, a photoresistor can have a resistance as high as several megaohms (MΩ), while in the light, a photoresistor can have a resistance as low as a few hundred ohms.
+Un fotoresistore può essere applicato in circuiti di rilevamento sensibili alla luce e in circuiti di commutazione attivati dalla luce e dall'oscurità agendo come un semiconduttore resistivo. Al buio, un fotoresistore può avere una resistenza fino a diversi megaohm (MΩ), mentre alla luce, un fotoresistore può avere una resistenza di pochi centinaia di ohm.
 
-Here is the electronic symbol of photoresistor.
+Ecco il simbolo elettronico del fotoresistore.
 
 .. image:: img/photoresistor_symbol.png
     :width: 200
@@ -33,7 +32,7 @@ Here is the electronic symbol of photoresistor.
 
 * |link_photoresistor_wiki|
 
-**Example**
+**Esempio**
 
-* :ref:`basic_photoresistor` (Basic Project)
-* :ref:`fun_light_array` (Fun Project)
+* :ref:`basic_photoresistor` (Progetto di base)
+* :ref:`fun_light_array` (Progetto divertente)

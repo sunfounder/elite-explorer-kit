@@ -1,28 +1,26 @@
 .. note::
+    Ciao, benvenuto nella Community degli Appassionati di SunFounder Raspberry Pi, Arduino e ESP32 su Facebook! Approfondisci Raspberry Pi, Arduino e ESP32 insieme ad altri appassionati.
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    **Perché unirsi?**
 
-    **Why Join?**
+    - **Supporto Esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra community e del team.
+    - **Impara e Condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Accedi in anteprima agli annunci dei nuovi prodotti e ai sneak peek.
+    - **Sconti Speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni Festive e Giveaway**: Partecipa a giveaway e promozioni speciali.
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+LEZIONE 12: Lettura delle Tensioni Analogiche su Arduino
+=============================================================
 
-LESSON 12: Read Analog Voltages on the Arduino
-================================================
+Questa lezione esplora come leggere le tensioni analogiche utilizzando Arduino, ampliando le lezioni precedenti sugli output digitali e analogici. Ecco una breve panoramica di ciò che imparerai:
 
-This lesson explores how to read analog voltages using the Arduino, expanding upon previous lessons on digital and analog outputs. Here’s a brief overview of what you will learn:
-
-1. **Introduction to Analog Reading**: Understand the basic principles of reading analog voltages with the Arduino, emphasizing the importance of not exceeding the 5-volt input limit to avoid damage.
-2. **Using a Potentiometer**: Learn how to use a potentiometer to create a variable voltage source that can be read by the Arduino, demonstrating the setup through a practical circuit-building exercise.
-3. **Practical Application and Circuit Building**: Follow step-by-step instructions to build a circuit that includes a potentiometer and how to connect it to the Arduino for reading voltage variations.
-4. **Coding for Analog Reading**: Dive into the code required to read and interpret analog voltages, including setting up the Arduino sketch to display these voltages.
-5. **Homework Assignment**: Solidify your learning by adjusting the potentiometer to change the LED brightness linked to the voltage read by the Arduino, reinforcing the concepts of analog input and output.
-
+1. **Introduzione alla Lettura Analogica**: Comprendere i principi di base della lettura delle tensioni analogiche con Arduino, sottolineando l'importanza di non superare il limite di ingresso di 5 volt per evitare danni.
+2. **Utilizzo di un Potenziometro**: Imparare a utilizzare un potenziometro per creare una sorgente di tensione variabile che può essere letta da Arduino, dimostrando il setup attraverso un esercizio pratico di costruzione del circuito.
+3. **Applicazione Pratica e Costruzione del Circuito**: Seguire istruzioni passo passo per costruire un circuito che includa un potenziometro e come collegarlo ad Arduino per leggere le variazioni di tensione.
+4. **Codifica per la Lettura Analogica**: Approfondire il codice necessario per leggere e interpretare le tensioni analogiche, compresa la configurazione dello sketch Arduino per visualizzare queste tensioni.
+5. **Compito per Casa**: Consolidare l'apprendimento regolando il potenziometro per cambiare la luminosità del LED collegato alla tensione letta da Arduino, rafforzando i concetti di input e output analogici.
 
 **Video**
 

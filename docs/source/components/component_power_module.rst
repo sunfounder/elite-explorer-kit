@@ -1,28 +1,26 @@
 .. note::
+    Ciao, benvenuto nella comunità di appassionati di SunFounder Raspberry Pi, Arduino e ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino e ESP32 con altri appassionati.
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    **Perché unirti a noi?**
 
-    **Why Join?**
+    - **Supporto esperto**: Risolvi i problemi post-vendita e le sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e condividi**: Scambia suggerimenti e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Ottieni accesso anticipato agli annunci di nuovi prodotti e anteprime.
+    - **Sconti speciali**: Goditi sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e omaggi festivi**: Partecipa a omaggi e promozioni per le festività.
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca [|link_sf_facebook|] e unisciti oggi!
 
 .. _cpn_power:
 
-Power Supply Module
-=====================
+Modulo di Alimentazione
+===============================
 
-.. note::
-    To protect the :ref:`cpn_power`'s battery, please fully charge it before using it for the first time.
+.. note::    Per proteggere la batteria del :ref:`cpn_power`, caricala completamente prima di utilizzarla per la prima volta.
 
-When we need a large current to drive a component, which will severely interfere with the normal work of Arduino UNO board. Therefore, we separately supply power for the component by this module to make it run safely and steadily.
+Quando abbiamo bisogno di una grande corrente per pilotare un componente, ciò può interferire gravemente con il normale funzionamento della scheda Arduino UNO. Pertanto, forniamo separatamente l'alimentazione per il componente tramite questo modulo per farlo funzionare in modo sicuro e stabile.
 
-You can just plug it in the breadboard to supply power. It provides a voltage of 3.3V and 5V, and you can connect either via a jumper cap included.
+Puoi semplicemente collegarlo alla breadboard per fornire alimentazione. Fornisce una tensione di 3.3V e 5V, e puoi connetterti tramite un cappuccio di ponticello incluso.
 
 .. image:: img/power_supply_new.png
     :width: 95%
@@ -32,25 +30,24 @@ You can just plug it in the breadboard to supply power. It provides a voltage of
 
     <br/>
 
-**Features and specifications**
+**Caratteristiche e specifiche**
 
-* Charge Input: USB Type-C, 5V
-* Output Voltage: 5V, 3.3V (adjustable via jumpers. 0V, 3.3V, and 5V configuration)
-* Output Current: 5V/1.5A, 3.3V/1A
-* ON-OFF Switch Available
-* Two Independent Channel
-* USB (Type-A) Output Available
-* Battery: 3.7V 14500 Lithium-ion Battery, 500mAh
-* Dimension: 52mm x 32mm x 24mm (L x W x H)
+* Ingresso di Carica: USB Type-C, 5V
+* Tensione di Uscita: 5V, 3.3V (regolabile tramite jumper. Configurazione 0V, 3.3V e 5V)
+* Corrente di Uscita: 5V/1.5A, 3.3V/1A
+* Interruttore ON-OFF Disponibile
+* Due Canali Indipendenti
+* Uscita USB (Type-A) Disponibile
+* Batteria: Batteria agli ioni di litio 14500 da 3.7V, 500mAh
+* Dimensioni: 52mm x 32mm x 24mm (L x P x A)
 
 
-**Example**
+**Esempio**
 
-* :ref:`basic_motor` (Basic Project)
-* :ref:`basic_pump` (Basic Project)
-* :ref:`basic_stepper_motor` (Basic Project)
-* :ref:`fun_smart_fan` (Fun Project)
-* :ref:`fun_plant_monitor` (Fun Project)
-* :ref:`fun_access` (Fun Project)
-* :ref:`fun_pong` (Fun Project)
-
+* :ref:`basic_motor` (Progetto di base)
+* :ref:`basic_pump` (Progetto di base)
+* :ref:`basic_stepper_motor` (Progetto di base)
+* :ref:`fun_smart_fan` (Progetto divertente)
+* :ref:`fun_plant_monitor` (Progetto divertente)
+* :ref:`fun_access` (Progetto divertente)
+* :ref:`fun_pong` (Progetto divertente)

@@ -1,43 +1,42 @@
 .. note::
+    Ciao, benvenuto nella comunità di appassionati di SunFounder Raspberry Pi, Arduino e ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino e ESP32 con altri appassionati.
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    **Perché unirti a noi?**
 
-    **Why Join?**
+    - **Supporto esperto**: Risolvi i problemi post-vendita e le sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e condividi**: Scambia suggerimenti e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Ottieni accesso anticipato agli annunci di nuovi prodotti e anteprime.
+    - **Sconti speciali**: Goditi sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e omaggi festivi**: Partecipa a omaggi e promozioni per le festività.
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca [|link_sf_facebook|] e unisciti oggi!
 
 .. _cpn_ta6586:
 
-TA6586 - Motor Driver Chip
-=================================
+TA6586 - Chip Driver del Motore
+====================================
 
 .. image:: img/ta6586.png
 
-TA6586 is a monolithic IC designed for driving bi-directional DC motor. It has
-two pins of logic inputs for controlling the direction, forward and backward.
-The circuit feature good anti-interference performance, small standby current and
-low output saturation pressure drop. It has a built-in clamp diode to reverse the impact
-of the release of inductive load current, making it in the drive relays, DC motors,
-stepper motors or control the use of switching power safe and reliable.
-TA6586 is suitable for toy vehicles, remote-controlled aircraft motor drive, automatic
-valve motor, electromagnetic lock drive, precision instruments and other circuits.
+TA6586 è un circuito integrato monolitico progettato per pilotare motori DC bidirezionali. 
+Ha due pin di ingressi logici per controllare la direzione, avanti e indietro. Il circuito 
+offre una buona resistenza alle interferenze, una piccola corrente di standby e una bassa 
+caduta di pressione di saturazione in uscita. Ha un diodo di clamp integrato per invertire 
+l'impatto del rilascio della corrente di carico induttivo, rendendolo sicuro e affidabile 
+nell'uso per pilotare relè, motori DC, motori passo-passo o per controllare l'uso dell'alimentazione 
+di commutazione. TA6586 è adatto per veicoli giocattolo, motori di aeromobili telecomandati, 
+motori per valvole automatiche, attuatori elettromagnetici, strumenti di precisione e altri circuiti.
 
-**Features**
+**Caratteristiche**
 
-* Low stand-by current: ≦2uA
-* Wide supply voltage range
-* Built-in Brake Function
-* Thermal Shutdown protection
-* Over Current Limit and Short Circuit Protect Function
-* DIP8 Pb-Free package.
+* Bassa corrente di stand-by: ≦2uA
+* Ampio intervallo di tensione di alimentazione
+* Funzione di frenata integrata
+* Protezione da surriscaldamento
+* Funzione di limitazione della corrente e protezione da cortocircuito
+* Confezione DIP8 senza piombo
 
-**Pin Function**
+**Funzione dei Pin**
 
 .. image:: img/ta6586_pin1.png
     :width: 30%
@@ -45,15 +44,14 @@ valve motor, electromagnetic lock drive, precision instruments and other circuit
 .. image:: img/ta6586_pin.png
     :width: 75%
 
-
-**Input Truth Table**
+**Tabella della Verità di Ingresso**
 
 .. image:: img/ta6586_priciple.png
     :width: 95%
 
-**Example**
+**Esempio**
 
-* :ref:`basic_motor` (Basic Project)
-* :ref:`basic_pump` (Basic Project)
-* :ref:`fun_smart_fan` (Fun Project)
-* :ref:`fun_plant_monitor` (Fun Project)
+* :ref:`basic_motor` (Progetto di Base)
+* :ref:`basic_pump` (Progetto di Base)
+* :ref:`fun_smart_fan` (Progetto Divertente)
+* :ref:`fun_plant_monitor` (Progetto Divertente)

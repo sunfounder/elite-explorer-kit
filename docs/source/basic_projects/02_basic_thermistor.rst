@@ -1,55 +1,55 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella comunità di appassionati di SunFounder Raspberry Pi, Arduino e ESP32 su Facebook! Approfondisci Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti a noi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi i problemi post-vendita e le sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e Condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Accedi in anteprima agli annunci di nuovi prodotti e agli sneak peek.
+    - **Sconti speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni festive e omaggi**: Partecipa a giveaway e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto per esplorare e creare con noi? Clicca [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _basic_thermistor:
 
-Thermistor
+Termistore
 ==========================
 
 .. https://docs.sunfounder.com/projects/vincent-kit/en/latest/arduino/2.27_thermistor.html#ar-thermistor
 
-Overview
+Panoramica
 -------------
 
-In this lesson, you will learn how to use thermistor. Thermistor can be used as electronic circuit components for temperature compensation of instrument circuits. In the current meter, flowmeter, gas analyzer, and other devices. It can also be used for overheating protection, contactless relay, constant temperature, automatic gain control, motor start, time delay, color TV automatic degaussing, fire alarm and temperature compensation.
+In questa lezione, imparerai a usare il termistore. Il termistore può essere utilizzato come componente del circuito elettronico per la compensazione della temperatura dei circuiti degli strumenti. Nei dispositivi come amperometri, flussometri, analizzatori di gas e altri dispositivi. Può anche essere utilizzato per la protezione dal surriscaldamento, relè senza contatto, temperatura costante, controllo automatico del guadagno, avviamento del motore, ritardo temporale, smagnetizzazione automatica dei televisori a colori, allarmi antincendio e compensazione della temperatura.
 
-Required Components
+Componenti necessari
 -------------------------
 
-In this project, we need the following components. 
+In questo progetto, abbiamo bisogno dei seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un kit completo, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - ELEMENTI IN QUESTO KIT
         - LINK
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link qui sotto.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -62,35 +62,34 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_thermistor`
         - |link_thermistor_buy|
 
-Wiring
+Collegamenti
 ----------------------
 
-In this example, we use the analog pin A0 to get the value of Thermistor. One pin of thermistor is connected to 5V, and the other is wired up to A0. At the same time, a 10kΩ resistor is connected with the other pin before connecting to GND.
+In questo esempio, utilizziamo il pin analogico A0 per ottenere il valore del termistore. Un pin del termistore è collegato a 5V, e l'altro è collegato ad A0. Allo stesso tempo, un resistore da 10kΩ è collegato all'altro pin prima di collegarlo a GND.
 
 .. image:: img/02-thermistor_bb.png
     :align: center
     :width: 70%
 
-Schematic Diagram
+Schema Elettrico
 -----------------------
 
 .. image:: img/02_thermistor_schematic.png
    :align: center
    :width: 70%
 
-Code
+Codice
 -----------
 
 .. note::
 
-    * You can open the file ``02-thermistor.ino`` under the path of ``elite-explorer-kit-main\basic_project\02-thermistor`` directly.
-    * Or copy this code into Arduino IDE.
+    * Puoi aprire il file ``02-thermistor.ino`` direttamente dal percorso ``elite-explorer-kit-main\basic_project\02-thermistor``.
+    * Oppure copia questo codice nell'IDE di Arduino.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/be5dbe68-b57d-41f0-9fc0-237b99acbe3f/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After uploading the code to the uno r4 board, you can open the serial monitor to check the current temperature. 
+Dopo aver caricato il codice sulla scheda uno r4, puoi aprire il monitor seriale per controllare la temperatura corrente.
 
-The Kelvin temperature is calculated using the formula **T\ K\ =1/(ln(R\ T/R\ N)/B+1/T\ N)**. This equation is derived from the |link_steinhart_hart| and simplifies calculations. You can also find more information about this formula on the detailed introduction page of the :ref:`cpn_thermistor`.
-
+La temperatura in Kelvin è calcolata utilizzando la formula **T\ K\ =1/(ln(R\ T/R\ N)/B+1/T\ N)**. Questa equazione è derivata dalla |link_steinhart_hart| e semplifica i calcoli. Puoi trovare ulteriori informazioni su questa formula nella pagina di introduzione dettagliata del :ref:`cpn_thermistor`.

@@ -1,56 +1,56 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella community SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts su Facebook! Approfondisci Raspberry Pi, Arduino ed ESP32 con altri appassionati.
 
-    **Why Join?**
+    **Perché unirsi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto Esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara & Condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Ottieni l'accesso anticipato agli annunci di nuovi prodotti e anteprime esclusive.
+    - **Sconti Speciali**: Goditi sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e Concorsi Festivi**: Partecipa a concorsi e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _fun_light_array:
 
-Light-sensitive Array
+Array Sensibile alla Luce
 ==========================================
 
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/videos/fun_projects/04_fun_lightarray.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      Il tuo browser non supporta il tag video.
    </video>
 
-This program converts the readings from a light-dependent resistor into a corresponding number of illuminated LED lights, creating a simple indicator of light brightness.
+Questo programma converte le letture di un fotoresistore in un numero corrispondente di LED illuminati, creando un semplice indicatore di luminosità.
 
-**Required Components**
+**Componenti Necessari**
 
-In this project, we need the following components. 
+In questo progetto, abbiamo bisogno dei seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un kit completo, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - ELEMENTI IN QUESTO KIT
         - LINK
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link sottostanti.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE COMPONENTI
+        - LINK ACQUISTO
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -66,7 +66,7 @@ You can also buy them separately from the links below.
         - |link_photoresistor_buy|
 
 
-**Wiring**
+**Collegamenti**
 
 .. image:: img/04_light_sensitive_array_bb.png
     :width: 70%
@@ -76,44 +76,45 @@ You can also buy them separately from the links below.
 
    <br/>
 
-**Schematic**
+**Schema Elettrico**
 
 .. image:: img/04_light_sensitive_array_schematic.png
    :width: 60%
 
-**Code**
+**Codice**
 
 .. note::
 
-    * You can open the file ``04_light_sensitive_array.ino`` under the path of ``elite-explorer-kit-main\fun_project\04_light_sensitive_array`` directly.
-    * Or copy this code into Arduino IDE.
+    * Puoi aprire il file ``04_light_sensitive_array.ino`` nel percorso ``elite-explorer-kit-main\fun_project\04_light_sensitive_array`` direttamente.
+    * Oppure copia questo codice nell'Arduino IDE.
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/9da7af57-c002-41a0-bc84-372e91885d52/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-**How it works?**
+**Come funziona?**
 
-Here's a step-by-step explanation of the code:
+Ecco una spiegazione passo-passo del codice:
 
-1. Constant and Variable Definitions:
+1. Definizioni di Costanti e Variabili:
 
-   ``NbrLEDs``: Defines the presence of 8 LEDs.
-   ``ledPins[]``: LEDs are connected to Arduino pins 5 to 12.
-   ``photocellPin``: The photoresistor is connected to Arduino's A0 pin.
-   ``sensorValue``: This variable stores the value read from the photoresistor.
-   ``ledLevel``: This variable stores the number of LEDs based on the sensorValue conversion.
+   ``NbrLEDs``: Definisce la presenza di 8 LED.
+   ``ledPins[]``: I LED sono collegati ai pin 5-12 di Arduino.
+   ``photocellPin``: Il fotoresistore è collegato al pin A0 di Arduino.
+   ``sensorValue``: Questa variabile memorizza il valore letto dal fotoresistore.
+   ``ledLevel``: Questa variabile memorizza il numero di LED accesi in base alla conversione del valore del sensore.
 
 2. ``setup()``:
 
-   Configures pins 5 to 12 as output to drive the LEDs.
+   Configura i pin 5-12 come output per controllare i LED.
 
 3. ``loop()``:
 
-   Reads the analog value of the photoresistor from pin A0, typically ranging from 0 to 1023.
-   Uses the map function to map the photoresistor's value from the range 300-1023 to the range 0-8.
-   This means that if the reading from the light-dependent resistor is 300, no LEDs will be lit;
-   if the reading is 1023 or higher, all 8 LEDs will be lit.
+   Legge il valore analogico del fotoresistore dal pin A0, generalmente compreso tra 0 e 1023.
+   Usa la funzione map per mappare il valore del fotoresistore da un intervallo di 300-1023 a un intervallo di 0-8.
+   Questo significa che se la lettura dal fotoresistore è 300, nessun LED sarà acceso;
+   se la lettura è 1023 o superiore, tutti gli 8 LED saranno accesi.
    
-   The subsequent for loop checks each LED. If its index is less than ledLevel,
-   the LED will be turned on; otherwise, it will be turned off.
+   Il successivo ciclo for controlla ogni LED. Se l'indice è inferiore a ledLevel,
+   il LED sarà acceso; altrimenti, sarà spento.
+

@@ -1,29 +1,27 @@
 .. note::
+    Ciao, benvenuto nella Community degli Appassionati di SunFounder Raspberry Pi, Arduino e ESP32 su Facebook! Approfondisci Raspberry Pi, Arduino e ESP32 insieme ad altri appassionati.
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    **Perché unirsi?**
 
-    **Why Join?**
+    - **Supporto Esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra community e del team.
+    - **Impara e Condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Accedi in anteprima agli annunci dei nuovi prodotti e agli sneak peek.
+    - **Sconti Speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni Festive e Giveaway**: Partecipa a giveaway e promozioni speciali.
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
-Arduino Video Lessons for Absolute Beginners
+Video Lezioni Arduino per Principianti Assoluti
 ======================================================
 
-Delve into the world of Arduino with our comprehensive video course tailored for absolute beginners. This series of 32 detailed lessons covers everything from foundational concepts to advanced applications, providing a step-by-step guide through the essentials of electronics and programming. Whether you're a student, hobbyist, or aspiring enthusiast, this course empowers you to embark on engaging Arduino projects for personal interests, academic pursuits, or career ventures.
+Immergiti nel mondo di Arduino con il nostro corso video completo, pensato per principianti assoluti. Questa serie di 32 lezioni dettagliate copre tutto, dai concetti di base alle applicazioni avanzate, fornendo una guida passo-passo attraverso le nozioni essenziali di elettronica e programmazione. Che tu sia uno studente, un hobbista o un aspirante appassionato, questo corso ti permette di intraprendere progetti Arduino coinvolgenti per interessi personali, studi accademici o carriera.
 
-By the course's conclusion, you'll have developed a solid understanding of both theory and practical application in Arduino electronics and programming. Equipped with essential skills, you'll confidently tackle more complex projects and continue your exploration in this dynamic field. Enroll today and embark on your Arduino journey to unleash the potential of DIY electronics!
+Alla fine del corso, avrai sviluppato una solida comprensione sia teorica che pratica dell'elettronica e della programmazione con Arduino. Equipaggiato con competenze essenziali, affronterai con fiducia progetti più complessi e continuerai la tua esplorazione in questo campo dinamico. Iscriviti oggi e inizia il tuo viaggio con Arduino per liberare il potenziale dell'elettronica fai-da-te!
 
 `All New Arduino R4 WiFi LESSONS for Absolute Beginners - YouTube Playlist <https://youtube.com/playlist?list=PLGs0VKk2DiYyn0wN335MXpbi3PRJTMmex&feature=shared>`_
 
-    
 
-**Catalog**
+**Catalogo**
 
 .. toctree::
     :maxdepth: 1

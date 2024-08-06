@@ -1,16 +1,16 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community di SunFounder per appassionati di Raspberry Pi, Arduino e ESP32 su Facebook! Approfondisci Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirsi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto Esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e Condividi**: Scambia suggerimenti e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Accedi in anteprima agli annunci dei nuovi prodotti e alle anticipazioni.
+    - **Sconti Speciali**: Godi di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e Giveaway Festivi**: Partecipa a giveaway e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
 .. _basic_oled:
 
@@ -19,50 +19,49 @@ OLED
 
 .. https://docs.sunfounder.com/projects/ultimate-sensor-kit/en/latest/components_basic/22-component_oled.html
 
-Overview
+Panoramica
 ---------------
 
-In this lesson, you will learn about OLED Displays using the SSD1306 driver. OLED (Organic Light-Emitting Diodes) displays are widely used in various electronic devices such as smartwatches, mobile phones, and even televisions. The SSD1306 is a single-chip CMOS OLED/PLED driver with controller for organic/polymer light emitting diode dot-matrix graphic display system. It offers a crisp and clear visual output through the means of organic material-based diodes that emit light when an electric current passes through them.
+In questa lezione imparerai a conoscere i display OLED utilizzando il driver SSD1306. I display OLED (diodi organici a emissione di luce) sono ampiamente utilizzati in vari dispositivi elettronici come smartwatch, telefoni cellulari e persino televisori. L'SSD1306 è un driver OLED/PLED CMOS a chip singolo con controller per sistemi di visualizzazione grafica a matrice di punti a diodi organici/polimerici a emissione di luce. Offre un output visivo nitido e chiaro attraverso i diodi a base di materiale organico che emettono luce quando una corrente elettrica li attraversa.
 
-In the code provided, an OLED display is interfaced with an Arduino board via the I2C protocol. The code uses the Adafruit SSD1306 library to control the display. The program covers various functionalities such as:
+Nel codice fornito, un display OLED è interfacciato con una scheda Arduino tramite il protocollo I2C. Il codice utilizza la libreria Adafruit SSD1306 per controllare il display. Il programma copre varie funzionalità come:
 
-1. Displaying text: "Hello world!" is printed on the screen.
-2. Inverted text: The text "Hello world!" is displayed in an inverted color scheme.
-3. Font Size: The text "Hello!" is displayed with an increased font size.
-4. Numerical Display: The numbers 123456789 are displayed.
-5. ASCII Characters: A set of ASCII characters are displayed.
-6. Scrolling: Text is scrolled horizontally across the display.
-7. Bitmap Display: A predefined bitmap image is displayed on the OLED screen.
+1. Visualizzazione del testo: "Hello world!" viene stampato sullo schermo.
+2. Testo invertito: Il testo "Hello world!" viene visualizzato in uno schema di colori invertito.
+3. Dimensione del carattere: Il testo "Hello!" viene visualizzato con una dimensione del carattere aumentata.
+4. Visualizzazione numerica: Vengono visualizzati i numeri 123456789.
+5. Caratteri ASCII: Viene visualizzata una serie di caratteri ASCII.
+6. Scorrimento: Il testo scorre orizzontalmente sul display.
+7. Visualizzazione di bitmap: Viene visualizzata un'immagine bitmap predefinita sullo schermo OLED.
 
-This OLED display can be used in a multitude of applications including digital clocks, mini game consoles, information displays, and so on. It offers a great way to provide a user interface in compact and portable devices.
+Questo display OLED può essere utilizzato in una moltitudine di applicazioni, tra cui orologi digitali, mini console di gioco, display informativi e così via. Offre un ottimo modo per fornire un'interfaccia utente in dispositivi compatti e portatili.
 
-
-Required Components
+Componenti Necessari
 -------------------------
 
-In this project, we need the following components. 
+In questo progetto, abbiamo bisogno dei seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un kit completo, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome
+        - ELEMENTI IN QUESTO KIT
         - LINK
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link seguenti.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE DEI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -71,29 +70,29 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_oled`
         - |link_oled_buy|
 
-Wiring
+Cablaggio
 ----------------------
 
 .. image:: img/15-oled_bb.png
     :align: center
 
-Schematic Diagram
+Schema Elettrico
 -----------------------
 
 .. image:: img/15_oled_schematic.png
     :align: center
     :width: 70%
 
-Code
+Codice
 ---------------
 
 .. note::
 
-    * You can open the file ``15-oled.ino`` under the path of ``elite-explorer-kit-main\basic_project\15-oled`` directly.
-    * Or copy this code into Arduino IDE.
+    * Puoi aprire direttamente il file ``15-oled.ino`` nel percorso ``elite-explorer-kit-main\basic_project\15-oled``.
+    * Oppure copia questo codice nell'Arduino IDE.
 
     .. note:: 
-      To install the library, use the Arduino Library Manager and search for **"Adafruit SSD1306"** and **"Adafruit GFX"** and install it. 
+      Per installare la libreria, utilizza l'Arduino Library Manager e cerca **"Adafruit SSD1306"** e **"Adafruit GFX"** e installala. 
 
 .. raw:: html
 
@@ -108,19 +107,18 @@ Code
 
    <br/><br/>
 
-
-Code Analysis
+Analisi del Codice
 ------------------------
 
-1. **Library Inclusion and Initial Definitions**:
-   The necessary libraries for interfacing with the OLED are included. Following that, definitions regarding the OLED's dimensions and I2C address are provided.
+1. **Inclusione della Libreria e Definizioni Iniziali**:
+   Le librerie necessarie per l'interfacciamento con l'OLED sono incluse. Successivamente, vengono fornite le definizioni relative alle dimensioni dell'OLED e all'indirizzo I2C.
 
 
-   - **Adafruit SSD1306**: This library is designed to help with the interfacing of the SSD1306 OLED display. It provides methods to initialize the display, control its settings, and display content.
-   - **Adafruit GFX Library**: This is a core graphics library for displaying text, producing colors, drawing shapes, etc., on various screens including OLEDs.
+   - **Adafruit SSD1306**: Questa libreria è progettata per aiutare con l'interfacciamento del display OLED SSD1306. Fornisce metodi per inizializzare il display, controllarne le impostazioni e visualizzare i contenuti.
+   - **Adafruit GFX Library**: Questa è una libreria grafica di base per visualizzare testo, produrre colori, disegnare forme, ecc., su vari schermi, inclusi gli OLED.
 
    .. note:: 
-      To install the library, use the Arduino Library Manager and search for **"Adafruit SSD1306"** and **"Adafruit GFX"** and install it. 
+      Per installare la libreria, utilizza l'Arduino Library Manager e cerca **"Adafruit SSD1306"** e **"Adafruit GFX"** e installala. 
 
    .. code-block:: arduino
     
@@ -129,29 +127,29 @@ Code Analysis
       #include <Adafruit_GFX.h>
       #include <Adafruit_SSD1306.h>
 
-      #define SCREEN_WIDTH 128  // OLED display width, in pixels
-      #define SCREEN_HEIGHT 64  // OLED display height, in pixels
+      #define SCREEN_WIDTH 128  // Larghezza del display OLED in pixel
+      #define SCREEN_HEIGHT 64  // Altezza del display OLED in pixel
 
       #define OLED_RESET -1
       #define SCREEN_ADDRESS 0x3C
 
-2. **Bitmap Data**:
-   Bitmap data for displaying a custom icon on the OLED screen. This data represents an image in a format that the OLED can interpret.
+2. **Dati Bitmap**:
+   Dati bitmap per visualizzare un'icona personalizzata sullo schermo OLED. Questi dati rappresentano un'immagine in un formato che l'OLED può interpretare.
 
-   You can use this online tool called |link_image2cpp| that can turn your image into an array. 
+   Puoi usare questo strumento online chiamato |link_image2cpp| che può trasformare la tua immagine in un array. 
 
-   The ``PROGMEM`` keyword denotes that the array is stored in the program memory of the Arduino microcontroller. Storing data in program memory(PROGMEM) instead of RAM can be helpful for large amounts of data, which would otherwise take up too much space in RAM.
+   La parola chiave ``PROGMEM`` indica che l'array è memorizzato nella memoria del programma del microcontrollore Arduino. Memorizzare i dati nella memoria del programma (PROGMEM) invece che nella RAM può essere utile per grandi quantità di dati, che altrimenti occuperebbero troppo spazio nella RAM.
 
    .. code-block:: arduino
 
       static const unsigned char PROGMEM sunfounderIcon[] = {...};
 
-3. **Setup Function (Initialization and Display)**:
-   The ``setup()`` function initializes the OLED and displays a series of patterns, texts, and animations.
+3. **Funzione Setup (Inizializzazione e Visualizzazione)**:
+   La funzione ``setup()`` inizializza l'OLED e visualizza una serie di schemi, testi e animazioni.
 
    .. code-block:: arduino
 
       void setup() {
-         ...  // Serial initialization and OLED object initialization
-         ...  // Displaying various text, numbers, and animations
+         ...  // Inizializzazione seriale e dell'oggetto OLED
+         ...  // Visualizzazione di vari testi, numeri e animazioni
       }

@@ -1,59 +1,59 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella comunità di appassionati di SunFounder Raspberry Pi, Arduino e ESP32 su Facebook! Approfondisci Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti a noi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi i problemi post-vendita e le sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e Condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Accedi in anteprima agli annunci di nuovi prodotti e agli sneak peek.
+    - **Sconti speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni festive e omaggi**: Partecipa a giveaway e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto per esplorare e creare con noi? Clicca [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _basic_moisture:
 
-Soil Moisture
-==========================
+Umidità del Suolo
+===========================
 
 .. https://docs.sunfounder.com/projects/3in1-kit-r4/en/latest/basic_project/ar_moisture.html
 
-Overview
+Panoramica
 ---------------
 
-In the agricultural industry, crops cannot directly acquire inorganic elements from the soil. Instead, water present in the soil acts as a solvent to dissolve these elements.
+Nell'industria agricola, le colture non possono acquisire direttamente elementi inorganici dal suolo. Invece, l'acqua presente nel suolo funge da solvente per dissolvere questi elementi.
 
-Crops absorb moisture from the soil through their root system to obtain nutrients and facilitate growth.
+Le colture assorbono l'umidità dal suolo attraverso il loro sistema radicale per ottenere nutrienti e facilitare la crescita.
 
-During the growth and development of crops, there are varying requirements for soil temperature. Hence, it is necessary to use a soil moisture sensor.
+Durante la crescita e lo sviluppo delle colture, ci sono diverse esigenze per la temperatura del suolo. Pertanto, è necessario utilizzare un sensore di umidità del suolo.
 
-Required Components
+Componenti necessari
 -------------------------
 
-In this project, we need the following components. 
+In questo progetto, abbiamo bisogno dei seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un kit completo, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - ELEMENTI IN QUESTO KIT
         - LINK
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link qui sotto.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -64,32 +64,32 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_soil_moisture`
         - |link_soil_moisture_buy|
 
-Wiring
+Collegamenti
 ----------------------
 
 .. image:: img/03-soil_moisture_bb.png
     :align: center
     :width: 80%
 
-Schematic Diagram
+Schema Elettrico
 -----------------------
 
 .. image:: img/03_moisture_schematic.webp
     :align: center
     :width: 70%
 
-Code
+Codice
 ---------------
 
 .. note::
 
-    * Open the ``03-moisture.ino`` file under the path of ``elite-explorer-kit-main\basic_project\03-moisture``.
-    * Or copy this code into **Arduino IDE**.
-    
+    * Apri il file ``03-moisture.ino`` dal percorso ``elite-explorer-kit-main\basic_project\03-moisture``.
+    * Oppure copia questo codice nell'**Arduino IDE**.
+
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/c585dd77-2e8a-4839-a908-d22e1d6e93aa/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-    
-Once the code is successfully uploaded, the serial monitor will print out the soil moisture value.
 
-By inserting the module into the soil and watering it, the value of the soil moisture sensor will become smaller.
+Una volta caricato correttamente il codice, il monitor seriale stamperà il valore dell'umidità del suolo.
+
+Inserendo il modulo nel terreno e annaffiandolo, il valore del sensore di umidità del suolo diminuirà.

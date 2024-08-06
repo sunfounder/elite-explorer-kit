@@ -1,60 +1,59 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community di SunFounder per appassionati di Raspberry Pi, Arduino e ESP32 su Facebook! Approfondisci Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirsi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto Esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e Condividi**: Scambia suggerimenti e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Accedi in anteprima agli annunci dei nuovi prodotti e alle anticipazioni.
+    - **Sconti Speciali**: Godi di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e Giveaway Festivi**: Partecipa a giveaway e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
 .. _cpn_audio_speaker:
 
-Audio Module and Speaker
-===========================
+Modulo Audio e Altoparlante
+==============================
 
-**Audio Amplifier Module**
+**Modulo Amplificatore Audio**
 
 .. image:: img/audio_module.jpg
     :width: 500
     :align: center
 
-Audio Amplifier Module contains a HXJ8002 audio power amplifier chip. This chip is a power amplifier with low power supply, that can provide 3W average audio power for a 3Ω BTL load with low harmonic distortion (under 10% threshold distortion at 1KHz) from a 5V DC power supply. This chip can amplify audio signals without any coupling capacitors or bootstrap capacitors.
+Il Modulo Amplificatore Audio contiene un chip amplificatore audio HXJ8002. Questo chip è un amplificatore di potenza a bassa tensione di alimentazione, che può fornire una potenza audio media di 3W per un carico BTL da 3Ω con bassa distorsione armonica (sotto la soglia del 10% a 1KHz) da un'alimentazione di 5V DC. Questo chip può amplificare segnali audio senza alcun condensatore di accoppiamento o condensatore bootstrap.
 
-The module can be supplied by a 2.0V up to 5.5V DC with 10mA operating current (0.6uA for typical standby current) power source and produce a powerful amplified sound into a 3Ω, 4Ω, or 8Ω impedance speaker. This module has an improved pop and clicks circuitry for reducing significantly the transition nose at the powering on and off moment. Tiny size besides high efficiency and low power supplying make it applicable in widely portable and battery-powered projects and microcontrollers.  
-
+Il modulo può essere alimentato da una tensione DC compresa tra 2.0V e 5.5V con una corrente operativa di 10mA (0.6uA per corrente tipica in modalità standby) e produrre un suono amplificato potente in un altoparlante di impedenza 3Ω, 4Ω o 8Ω. Questo modulo ha un circuito migliorato per ridurre significativamente il rumore di transizione al momento dell'accensione e dello spegnimento. Le dimensioni ridotte oltre all'alta efficienza e alla bassa potenza di alimentazione lo rendono applicabile in numerosi progetti portatili e alimentati a batteria e microcontrollori.  
 
 * **IC**: HXJ8002
-* **Input Voltage**: 2V ~ 5.5V
-* **Standby Mode Current**: 0.6uA (typical value)
-* **Output Power**: 3W (3Ω load) , 2.5W (4Ω load) , 1.5W (8Ω load)
-* **Output Speaker Impedance**: 3Ω, 4Ω, 8Ω
-* **Size**: 19.8mm x 14.2mm
+* **Tensione di Ingresso**: 2V ~ 5.5V
+* **Corrente in Modalità Standby**: 0.6uA (valore tipico)
+* **Potenza di Uscita**: 3W (carico 3Ω) , 2.5W (carico 4Ω) , 1.5W (carico 8Ω)
+* **Impedenza dell'Altoparlante di Uscita**: 3Ω, 4Ω, 8Ω
+* **Dimensioni**: 19.8mm x 14.2mm
 
-**Speaker**
+**Altoparlante**
 
 .. image:: img/speaker_pic.png
     :width: 300
     :align: center
 
-* **Size**: 20x30x7mm
-* **Impedance**:8ohm
-* **Rate Input Power**: 1.5W 
-* **Max Input Power**: 2.0W
-* **Wire Length**: 10cm
+* **Dimensioni**: 20x30x7mm
+* **Impedenza**: 8ohm
+* **Potenza di Ingresso Nominale**: 1.5W 
+* **Potenza di Ingresso Massima**: 2.0W
+* **Lunghezza del Cavo**: 10cm
 
 .. image:: img/2030_speaker.png
 
-The size chart is as follows:
+Il grafico delle dimensioni è il seguente:
 
 * :download:`2030 Speaker Datasheet <https://github.com/sunfounder/sf-pdf/raw/master/datasheet/2030-speaker-datasheet.pdf>`
 
 
-**Example**
+**Esempio**
 
 * :ref:`basic_audio_speaker` (Basic Project)
 * :ref:`fun_welcome` (Fun Project)

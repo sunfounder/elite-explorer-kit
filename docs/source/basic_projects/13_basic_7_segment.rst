@@ -1,56 +1,56 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community di SunFounder per appassionati di Raspberry Pi, Arduino e ESP32 su Facebook! Approfondisci Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirsi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto Esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e Condividi**: Scambia suggerimenti e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Accedi in anteprima agli annunci dei nuovi prodotti e alle anticipazioni.
+    - **Sconti Speciali**: Godi di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e Giveaway Festivi**: Partecipa a giveaway e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
 .. _basic_7segment:
 
-7-segment Display
+Display a 7 segmenti
 ==========================
 
 .. https://docs.sunfounder.com/projects/uno-mega-kit/en/latest/uno/7_segment_display_uno.html#segmeng-uno
 
 
-Overview
+Panoramica
 -------------------
 
-A 7-segment display is a device that can display numerals and letters. It's made up of seven LEDs connected in parallel. Different letters/numbers can be shown by connecting pins on the display to the power source and enabling the related pins, thus turning on the corresponding LED segments. In this lesson let's learn how to display specific characters on it.
+Un display a 7 segmenti è un dispositivo che può visualizzare numeri e lettere. È composto da sette LED collegati in parallelo. Diverse lettere/numeri possono essere mostrati collegando i pin del display alla fonte di alimentazione e abilitando i pin corrispondenti, accendendo così i segmenti LED corrispondenti. In questa lezione impareremo a visualizzare caratteri specifici su di esso.
 
-Required Components
+Componenti Necessari
 ------------------------
 
-In this project, we need the following components. 
+In questo progetto, abbiamo bisogno dei seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un kit completo, ecco il link: 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - ELEMENTI IN QUESTO KIT
         - LINK
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link seguenti.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE DEI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -63,31 +63,29 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_7segment`
         - |link_7segment_buy|
 
-Wiring
+Cablaggio
 ----------------------
 
 .. image:: img/13-7_segment_display_bb.png
     :align: center
     :width: 70%
 
-
-Schematic Diagram
+Schema Elettrico
 ------------------------
 
-In this experiment, connect each of pin a-g of the 7-Segment Display to one 1000 ohm current limiting resistor respectively and then to pin 4-11. GND connects to GND. By programming, we can set one or several of pin4-11 as High level to light up the corresponding LED(s).
+In questo esperimento, collega ciascun pin a-g del display a 7 segmenti a un resistore di limitazione di corrente da 1000 ohm rispettivamente e poi ai pin 4-11. GND si collega a GND. Tramite la programmazione, possiamo impostare uno o più dei pin 4-11 su livello alto per accendere i LED corrispondenti.
 
 .. image:: img/13-7_segment_display_schematic.png
     :align: center
     :width: 80%
 
-Code
+Codice
 ---------------
 
 .. note::
 
-    * You can open the file ``13-7_segment.ino`` under the path of ``elite-explorer-kit-main\basic_project\13-7_segment`` directly.
-    * Or copy this code into Arduino IDE.
-
+    * Puoi aprire direttamente il file ``13-7_segment.ino`` nel percorso ``elite-explorer-kit-main\basic_project\13-7_segment``.
+    * Oppure copia questo codice nell'Arduino IDE.
 
 .. raw:: html
 
@@ -102,37 +100,37 @@ Code
 
    <br/><br/>
 
-Code Analysis
+Analisi del Codice
 ----------------------
 
-The code may be a little long for this experiment. But the syntax is simple. Let's take a look.
+Il codice può sembrare un po' lungo per questo esperimento, ma la sintassi è semplice. Diamo un'occhiata.
 
-**Call the function in loop()**
-
-.. code-block:: arduino
-
-   digital_1(); //display 1 to the 7-segment
-
-   delay(1000); //wait for a second
-
-   digital_2(); //display 2 to the 7-segment
-
-   delay(1000); //wait for a second
-
-   digital_3(); //display 3 to the 7-segment
-
-   delay(1000); //wait for a second
-
-   digital_4(); //display 4 to the 7-segment
-
-
-Calling these functions into the loop() is to let the 7-Segment display 0-F. The functions are shown below. Take ``digital_2()`` for example:
-
-**Detailed analysis of digital_2()**
+**Chiamare la funzione nel loop()**
 
 .. code-block:: arduino
 
-   void digital_2()  //display 2 to the 7-segment
+   digital_1(); //visualizza 1 sul display a 7 segmenti
+
+   delay(1000); //aspetta un secondo
+
+   digital_2(); //visualizza 2 sul display a 7 segmenti
+
+   delay(1000); //aspetta un secondo
+
+   digital_3(); //visualizza 3 sul display a 7 segmenti
+
+   delay(1000); //aspetta un secondo
+
+   digital_4(); //visualizza 4 sul display a 7 segmenti
+
+
+Chiamare queste funzioni nel loop() serve a far visualizzare allo schermo a 7 segmenti i numeri da 0 a F. Le funzioni sono mostrate di seguito. Prendiamo ``digital_2()`` come esempio:
+
+**Analisi dettagliata di digital_2()**
+
+.. code-block:: arduino
+
+   void digital_2()  //visualizza 2 sul display a 7 segmenti
    {
      turnOffAllSegments();
      digitalWrite(a, HIGH);
@@ -145,6 +143,6 @@ Calling these functions into the loop() is to let the 7-Segment display 0-F. The
 .. image:: img/13_7segment.jpeg
    :align: center
 
-First, we need to understand how the numeral **2** appears on the 7-Segment display. It is achieved by powering on segments a, b, d, e, and g. In programming, pins connected to these segments are set to a High level while c and f are set to Low level. We start by using the function ``turnOffAllSegments()`` to turn off all segments and then light up the required ones.
+Prima di tutto, dobbiamo capire come il numero **2** appare sul display a 7 segmenti. Si ottiene alimentando i segmenti a, b, d, e, e g. Nella programmazione, i pin collegati a questi segmenti sono impostati su livello alto mentre c e f sono impostati su livello basso. Iniziamo utilizzando la funzione ``turnOffAllSegments()`` per spegnere tutti i segmenti e poi accendere quelli richiesti.
 
-After running this part, the 7-segment will display **2**. Similarly, the display of other characters are the same. Since the letters b and d in upper case, namely **B** and **D**, would look the same with **8** and **0** on the display, they are displayed in lower case instead.
+Dopo aver eseguito questa parte, il display a 7 segmenti mostrerà **2**. Analogamente, la visualizzazione di altri caratteri è la stessa. Poiché le lettere b e d in maiuscolo, ovvero **B** e **D**, sarebbero simili a **8** e **0** sul display, sono visualizzate in minuscolo invece.

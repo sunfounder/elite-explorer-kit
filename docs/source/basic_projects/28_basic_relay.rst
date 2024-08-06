@@ -1,56 +1,55 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community di SunFounder per appassionati di Raspberry Pi, Arduino e ESP32 su Facebook! Approfondisci Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirsi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto Esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e Condividi**: Scambia suggerimenti e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Accedi in anteprima agli annunci dei nuovi prodotti e alle anticipazioni.
+    - **Sconti Speciali**: Godi di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e Giveaway Festivi**: Partecipa a giveaway e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
 .. _basic_relay:
 
-Relay
+Relè
 ==========================
 
 .. https://docs.sunfounder.com/projects/r4-basic-kit/en/latest/projects/relay_uno.html#relay-uno
 
-
-Overview
+Panoramica
 ---------------
 
-As we may know, relay is a device which is used to provide connection between two or more points or devices in response to the input signal applied. In other words, relays provide isolation between the controller and the device as devices may work on AC as well as on DC. However, they receive signals from a micro-controller which works on DC hence requiring a relay to bridge the gap. Relay is extremely useful when you need to control a large amount of current or voltage with small electrical signal.
+Come sappiamo, il relè è un dispositivo utilizzato per fornire connessione tra due o più punti o dispositivi in risposta al segnale di ingresso applicato. In altre parole, i relè forniscono isolamento tra il controller e il dispositivo, poiché i dispositivi possono funzionare sia in AC che in DC. Tuttavia, ricevono segnali da un microcontrollore che funziona in DC, richiedendo quindi un relè per colmare il divario. Il relè è estremamente utile quando è necessario controllare una grande quantità di corrente o tensione con un piccolo segnale elettrico.
 
-Required Components
+Componenti Necessari
 -------------------------
 
-In this project, we need the following components. 
+In questo progetto, abbiamo bisogno dei seguenti componenti. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un kit completo, ecco il link: 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - ELEMENTI IN QUESTO KIT
         - LINK
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link seguenti.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE DEI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -69,51 +68,51 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_diode`
         - |link_diode_buy| 
 
-Wiring
+Cablaggio
 ----------------------
 
 .. image:: img/28-relay_bb.png
     :align: center
     :width: 90%
 
-Schematic Diagram
+Schema Elettrico
 -----------------------
 
-Connect a 1K resistor (for current limiting when the transistor is energized) to pin 8 of the SunFounder Uno board, then to an NPN transistor whose collector is connected to the coil of a relay and emitter to GND; connect the normally open contact of the relay to an LED and then GND. Therefore, when a High level signal is given to pin 8, the transistor is energized, thus making the coil of the relay conductive. Then its normally open contact is closed, and the LED will light up. When pin 8 is given a Low level, the LED will stay dim.
+Collega una resistenza da 1K (per limitare la corrente quando il transistor è attivato) al pin 8 della scheda SunFounder Uno, quindi a un transistor NPN il cui collettore è collegato alla bobina di un relè e l'emettitore a GND; collega il contatto normalmente aperto del relè a un LED e poi a GND. Pertanto, quando viene fornito un segnale ad alto livello al pin 8, il transistor viene attivato, rendendo la bobina del relè conduttiva. Quindi il suo contatto normalmente aperto si chiude e il LED si accenderà. Quando al pin 8 viene fornito un segnale a basso livello, il LED rimarrà spento.
 
 .. image:: img/28_relay_schematic.png
 
 
-**Function of the freewheeling diode**: When the voltage input changes from High (5V) to Low (0V), the transistor changes from saturation (three working conditions: amplification, saturation, and cut-off) to cut-off, the current in the coil suddenly has no way to flow through. At this moment, without the freewheeling diode, a counter-electromotive force (EMF) will be generated at the ends of the coil, with positive at the bottom and negative at the top, a voltage higher than 100V. This voltage plus that from the power at the transistor are big enough to burn it. Therefore, the freewheeling diode is extremely important in discharging this counter-EMF in the direction of the arrow in the figure above, so the voltage of the transistor to GND is no higher than +5V (+0.7V).
+**Funzione del diodo di freewheeling**: Quando l'ingresso di tensione passa da High (5V) a Low (0V), il transistor passa dalla saturazione (tre condizioni di lavoro: amplificazione, saturazione e interruzione) all'interruzione, la corrente nella bobina improvvisamente non ha modo di fluire. In questo momento, senza il diodo di freewheeling, si genererà una controforza elettromotrice (EMF) alle estremità della bobina, con positivo in basso e negativo in alto, una tensione superiore a 100V. Questa tensione, sommata a quella del transistor, è sufficientemente alta da bruciarlo. Pertanto, il diodo di freewheeling è estremamente importante per scaricare questa contro-EMF nella direzione della freccia nella figura sopra, in modo che la tensione del transistor verso GND non superi +5V (+0,7V).
 
-In this experiment, when the relay closes, the LED will light up; when the relay opens, the LED will go out.
+In questo esperimento, quando il relè si chiude, il LED si accende; quando il relè si apre, il LED si spegne.
 
 
-Code
+Codice
 --------
 
 .. note::
 
-    * You can open the file ``28-relay.ino`` under the path of ``elite-explorer-kit-main\basic_project\28-relay`` directly.
-    * Or copy this code into Arduino IDE.
+    * Puoi aprire il file ``28-relay.ino`` nel percorso ``elite-explorer-kit-main\basic_project\28-relay`` direttamente.
+    * Oppure copia questo codice nell'IDE di Arduino.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/093cb26d-298d-4b36-b3be-466d813c19a9/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
   
 
-Now, send a High level signal, and the relay will close and the LED will light up; send a low one, and it will open and the LED will go out. In addition, you can hear a tick-tock caused by breaking the normally close contact and closing the normally open one.
+Ora, invia un segnale ad alto livello e il relè si chiuderà e il LED si accenderà; invia un segnale a basso livello e si aprirà e il LED si spegnerà. Inoltre, puoi sentire un ticchettio causato dall'interruzione del contatto normalmente chiuso e dalla chiusura di quello normalmente aperto.
 
-Code Analysis
------------------
+Analisi del Codice
+----------------------
 
 .. code-block:: arduino
 
    void loop() {
-     digitalWrite(relayPin, HIGH);  // Turn the relay on
-     delay(1000);                   // Wait for one second
-     digitalWrite(relayPin, LOW);   // Turn the relay off
-     delay(1000);                   // Wait for one second
+     digitalWrite(relayPin, HIGH);  // Accende il relè
+     delay(1000);                   // Attende un secondo
+     digitalWrite(relayPin, LOW);   // Spegne il relè
+     delay(1000);                   // Attende un secondo
    }
 
-The code in this experiment is simple. First, set relayPin as HIGH level and the LED connected to the relay will light up. Then set relayPin as LOW level and the LED goes out.
+Il codice in questo esperimento è semplice. Prima, imposta relayPin ad un livello HIGH e il LED collegato al relè si accenderà. Poi imposta relayPin ad un livello LOW e il LED si spegnerà.

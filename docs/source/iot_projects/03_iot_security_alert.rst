@@ -1,20 +1,19 @@
 .. note::
+    Ciao, benvenuto nella Community di Appassionati di SunFounder Raspberry Pi, Arduino e ESP32 su Facebook! Approfondisci Raspberry Pi, Arduino e ESP32 con altri appassionati.
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    **Perché unirsi?**
 
-    **Why Join?**
+    - **Supporto esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara e condividi**: Scambia suggerimenti e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Ottieni accesso anticipato agli annunci di nuovi prodotti e anteprime.
+    - **Sconti speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni festive e omaggi**: Partecipa a concorsi e promozioni festive.
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _iot_security_system_ifttt:
 
-Security System via IFTTT
+Sistema di Sicurezza via IFTTT
 ============================================
 
 .. raw:: html
@@ -24,35 +23,35 @@ Security System via IFTTT
       Your browser does not support the video tag.
    </video>
 
-With this project, we create a security device that employs a PIR Sensor to detect intruders or stray animals entering your home. In case of a breach, you will receive an email alert.
+Con questo progetto, creiamo un dispositivo di sicurezza che utilizza un sensore PIR per rilevare intrusi o animali randagi che entrano nella tua casa. In caso di violazione, riceverai un avviso via email.
 
-We'll utilize Webhooks as the fundamental service. A POST request is sent to IFTTT's service from UNO R4. 
+Utilizzeremo Webhooks come servizio fondamentale. Una richiesta POST viene inviata al servizio di IFTTT dall'UNO R4.
 
-**Required Components**
+**Componenti necessari**
 
-In this project, we need the following components. 
+In questo progetto, abbiamo bisogno dei seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un intero kit, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - ARTICOLI IN QUESTO KIT
         - LINK
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link sottostanti.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE COMPONENTI
+        - LINK ACQUISTO
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -61,97 +60,96 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_pir`
         - |link_pir_buy|
 
-**Wiring**
+**Collegamenti**
 
 .. image:: img/03-ifttt_pir_bb.png
     :width: 90%
     :align: center
 
-
-**Schematic**
+**Schema**
 
 .. image:: img/03-ifttt_pir_schematic.png
    :width: 50%
    :align: center
 
-**Setting up IFTTT**
+**Configurazione di IFTTT**
 
-IFTTT is a free service that offers various methods to link different data services together.
+IFTTT è un servizio gratuito che offre vari metodi per collegare diversi servizi dati tra loro.
 
-Let's create an Applet that responds to a webhook (custom URL) sending data to IFTTT, which will then send you an email.
+Creiamo un Applet che risponde a un webhook (URL personalizzato) inviando dati a IFTTT, che poi ti invierà un'email.
 
-Please follow the steps below on IFTTT.
+Segui i passaggi seguenti su IFTTT.
 
-1. Visit |link_ifttt| to log in or create an account.
+1. Visita |link_ifttt| per accedere o creare un account.
 
    .. image:: img/03_ifttt_1.png
        :width: 90%
 
-2. Click on **Create**.
+2. Clicca su **Create**.
 
    .. image:: img/03_ifttt_2.png
        :width: 90%
 
-3. Add an **If This** event.
+3. Aggiungi un evento **If This**.
 
    .. image:: img/03_ifttt_3.png
        :width: 70%
 
-4. Search for **Webhooks**.
+4. Cerca **Webhooks**.
 
    .. image:: img/03_ifttt_4.png
        :width: 70%
 
-5. Select **Receive a web request**.
+5. Seleziona **Receive a web request**.
 
    .. image:: img/03_ifttt_5.png
        :width: 90%
 
-6. Fill in the event name (e.g., SecurityWarning), and click **Create trigger**.
+6. Compila il nome dell'evento (es. SecurityWarning) e clicca su **Create trigger**.
 
    .. image:: img/03_ifttt_6.png
        :width: 70%
 
-7. Add a **Then That** event.
+7. Aggiungi un evento **Then That**.
 
    .. image:: img/03_ifttt_7.png
        :width: 70%
 
-8. Search for Email.
+8. Cerca Email.
 
    .. image:: img/03_ifttt_8.png
        :width: 80%
 
-9. Choose **Send me an email**.
+9. Scegli **Send me an email**.
 
    .. image:: img/03_ifttt_9.png
        :width: 80%
 
-10. Enter the **Subject** and **Body**, then click **Create action**.
+10. Inserisci l'**Oggetto** e il **Corpo**, quindi clicca su **Create action**.
 
    .. image:: img/03_ifttt_10.png
        :width: 70%
 
-11. Click **Continue** to finish the setup.
+11. Clicca su **Continue** per terminare la configurazione.
 
    .. image:: img/03_ifttt_11.png
        :width: 70%
 
-12. Adjust the title name as needed.
+12. Regola il nome del titolo se necessario.
 
    .. image:: img/03_ifttt_12.png
        :width: 80%
 
-13. You'll be automatically redirected to the Applet details page, where you can see that the Applet is currently connected and you can toggle the switch to enable/disable it.
+13. Verrai reindirizzato automaticamente alla pagina dei dettagli dell'Applet, dove puoi vedere che l'Applet è attualmente connesso e puoi attivare/disattivare l'interruttore per abilitarlo/disabilitarlo.
 
    .. image:: img/03_ifttt_13.png
        :width: 70%
 
-14. Now that we've created the IFTTT Applet, we also need the webhooks key, which can be obtained from |link_webhooks| to allow your device to access IFTTT.
+14. Ora che abbiamo creato l'Applet IFTTT, abbiamo anche bisogno della chiave webhooks, che può essere ottenuta da |link_webhooks| per permettere al tuo dispositivo di accedere a IFTTT.
 
    .. image:: img/03_ifttt_14.png
 
-15. Copy the webhooks key to "arduino_secrets.h" and fill in your SSID and password.
+15. Copia la chiave webhooks in "arduino_secrets.h" e inserisci il tuo SSID e password.
 
     .. code-block:: arduino
     
@@ -159,67 +157,65 @@ Please follow the steps below on IFTTT.
         #define SECRET_PASS "your_password"        // your network password (used for WPA, or as a key for WEP)
         #define WEBHOOKS_KEY "your_key"
 
-**Run the Code**
+**Esegui il codice**
 
 .. note::
+    * Puoi aprire il file ``03_ifttt_pir.ino`` nel percorso ``elite-explorer-kit-main\iot_project\03_ifttt_pir`` direttamente.
+    * Oppure copia questo codice nell'IDE Arduino.
 
-    * You can open the file ``03_ifttt_pir.ino`` under the path of ``elite-explorer-kit-main\iot_project\03_ifttt_pir`` directly.
-    * Or copy this code into Arduino IDE.
-
-.. note::
-    In the code, SSID and password are stored in ``arduino_secrets.h``. Before uploading this example, you need to modify them with your own WiFi credentials. Additionally, for security purposes, ensure that this information is kept confidential when sharing or storing the code.
+.. note::    Nel codice, SSID e password sono memorizzati in ``arduino_secrets.h``. Prima di caricare questo esempio, devi modificarli con le tue credenziali WiFi. Inoltre, per motivi di sicurezza, assicurati che queste informazioni siano mantenute riservate quando condividi o memorizzi il codice.
 
 .. warning::
-   To prevent your mailbox from being flooded, please debug the :ref:`cpn_pir` beforehand before running the code for this project.
+   Per evitare che la tua casella di posta venga inondata, ti preghiamo di testare in anticipo il :ref:`cpn_pir` prima di eseguire il codice per questo progetto.
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/adec1608-4642-4469-bdf4-8dc3e3e4ce4d/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
  
-**How it works?**
+**Come funziona?**
 
-1. Include the necessary libraries and header files:
+1. Includi le librerie necessarie e i file header:
 
-   * ``"WiFiS3.h"``: Used for managing Wi-Fi connections.
-   * ``"arduino_secrets.h"``: Contains Wi-Fi network name and password to safeguard sensitive information.
+   * ``"WiFiS3.h"``: Utilizzata per gestire le connessioni Wi-Fi.
+   * ``"arduino_secrets.h"``: Contiene il nome della rete Wi-Fi e la password per proteggere le informazioni sensibili.
 
-2. Define some global variables and constants:
+2. Definisci alcune variabili globali e costanti:
 
-   * ``ssid``: Name of the Wi-Fi network.
-   * ``pass``: Wi-Fi network password.
-   * ``status``: Status of the Wi-Fi connection.
-   * ``client``: Client used for communicating with the Wi-Fi server.
-   * ``server``: Address of the IFTTT Webhook server.
-   * ``event``: Name of the IFTTT Webhook event.
-   * ``webRequestURL``: Constructed URL for sending HTTP requests, including the Webhook event name and key.
-   * ``pirPin``: Digital pin to which the PIR sensor is connected.
-   * ``motionDetected``: Flag variable to track motion detection.
+   * ``ssid``: Nome della rete Wi-Fi.
+   * ``pass``: Password della rete Wi-Fi.
+   * ``status``: Stato della connessione Wi-Fi.
+   * ``client``: Client utilizzato per comunicare con il server Wi-Fi.
+   * ``server``: Indirizzo del server Webhook di IFTTT.
+   * ``event``: Nome dell'evento Webhook di IFTTT.
+   * ``webRequestURL``: URL costruito per l'invio delle richieste HTTP, incluso il nome dell'evento Webhook e la chiave.
+   * ``pirPin``: Pin digitale a cui è collegato il sensore PIR.
+   * ``motionDetected``: Variabile flag per monitorare la rilevazione di movimento.
 
-3. ``setup()`` function:
+3. Funzione ``setup()``:
 
-   * Initializes serial communication.
-   * Checks for the presence of the Wi-Fi module and outputs its firmware version.
-   * Attempts to connect to the Wi-Fi network, with retries if unsuccessful.
-   * Sets the pin connected to the PIR sensor to input mode.
+   * Inizializza la comunicazione seriale.
+   * Verifica la presenza del modulo Wi-Fi e stampa la sua versione firmware.
+   * Tenta di connettersi alla rete Wi-Fi, con ritenti in caso di fallimento.
+   * Imposta il pin collegato al sensore PIR come input.
 
-4. ``readResponse()`` function:
+4. Funzione ``readResponse()``:
 
-   * Reads HTTP response data from the IFTTT server and prints it to the serial console.
+   * Legge i dati di risposta HTTP dal server IFTTT e li stampa sulla console seriale.
 
-5. ``loop()`` function:
+5. Funzione ``loop()``:
 
-   * Calls the ``readResponse()`` function to read HTTP response data.
-   * Checks for motion using the PIR sensor. If motion is detected and was not detected previously:
-       * Prints "Motion detected!" to the console.
-       * Calls the ``triggerIFTTTEvent()`` function to send an HTTP request to the IFTTT server, triggering the Webhook event.
-       * Sets the ``motionDetected`` flag to ``true`` to indicate motion has been detected.
-   * If no motion is detected, sets the ``motionDetected`` flag to ``false``.
+   * Chiama la funzione ``readResponse()`` per leggere i dati di risposta HTTP.
+   * Controlla il movimento utilizzando il sensore PIR. Se viene rilevato movimento e non era stato rilevato in precedenza:
+       * Stampa "Movimento rilevato!" sulla console.
+       * Chiama la funzione ``triggerIFTTTEvent()`` per inviare una richiesta HTTP al server IFTTT, attivando l'evento Webhook.
+       * Imposta il flag ``motionDetected`` su ``true`` per indicare che è stato rilevato un movimento.
+   * Se non viene rilevato alcun movimento, imposta il flag ``motionDetected`` su ``false``.
 
-6. ``triggerIFTTTEvent()`` function:
+6. Funzione ``triggerIFTTTEvent()``:
 
-   * Establishes a connection with the IFTTT server.
-   * Sends an HTTP GET request, including the URL of the Webhook event and other HTTP headers.
+   * Stabilisce una connessione con il server IFTTT.
+   * Invia una richiesta HTTP GET, includendo l'URL dell'evento Webhook e altre intestazioni HTTP.
 
-7. ``printWifiStatus()`` function:
+7. Funzione ``printWifiStatus()``:
 
-   * Outputs information about the connected Wi-Fi network, including SSID, IP address, and signal strength (RSSI) to the serial console.
+   * Mostra informazioni sulla rete Wi-Fi connessa, inclusi SSID, indirizzo IP e intensità del segnale (RSSI) sulla console seriale.

@@ -1,55 +1,55 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community di SunFounder per appassionati di Raspberry Pi, Arduino e ESP32 su Facebook! Approfondisci Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirsi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto Esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e Condividi**: Scambia suggerimenti e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Accedi in anteprima agli annunci dei nuovi prodotti e alle anticipazioni.
+    - **Sconti Speciali**: Godi di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e Giveaway Festivi**: Partecipa a giveaway e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
 .. _basic_keypad:
 
-Keypad
+Tastierino
 ==========================
 
 .. https://docs.sunfounder.com/projects/vincent-kit-de/en/latest/arduino/2.19_keypad.html#ar-keypad
 
-Overview
+Panoramica
 -------------
 
-In this lesson, you will learn to use Keypad. Keypad can be applied into various kinds of devices, including mobile phone, fax machine, microwave oven and so on. It is commonly used in user input.
+In questa lezione, imparerai a usare un tastierino. Il tastierino può essere applicato a vari tipi di dispositivi, tra cui telefoni cellulari, fax, forni a microonde e così via. È comunemente usato per l'input dell'utente.
 
-Required Components
+Componenti Necessari
 -------------------------
 
-In this project, we need the following components. 
+In questo progetto, abbiamo bisogno dei seguenti componenti. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un kit completo, ecco il link: 
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - ELEMENTI IN QUESTO KIT
         - LINK
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link seguenti.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE DEI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -58,40 +58,40 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_keypad`
         - |link_keypad_buy|
 
-Wiring
+Cablaggio
 ----------------------
 
 .. image:: img/21-keypad_bb.png
     :align: center
 
-Schematic Diagram
+Schema Elettrico
 ----------------------
 
 .. image:: img/21_keypad_schematic.png
    :align: center
    :width: 70%
 
-Code
+Codice
 -----------
 
 
 .. note::
 
-    * You can open the file ``21-keypad.ino`` under the path of ``elite-explorer-kit-main\basic_project\21-keypad`` directly.
-    * To install the library, use the Arduino Library Manager and search for **"Adafruit Keypad"** and install it. 
+    * Puoi aprire direttamente il file ``21-keypad.ino`` nel percorso ``elite-explorer-kit-main\basic_project\21-keypad``.
+    * Per installare la libreria, usa il Gestore Librerie di Arduino e cerca **"Adafruit Keypad"** e installala. 
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/25fd4116-92d4-4ee4-b3ba-6707f4334629/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After uploading the codes to the UNO board, on the serial monitor, you can see the value of the key currently pressed on the Keypad.
+Dopo aver caricato il codice sulla scheda UNO, sul monitor seriale, puoi vedere il valore del tasto attualmente premuto sul tastierino.
 
-Code Analysis
--------------------
+Analisi del Codice
+----------------------
 
-1. Including the Library
+1. Inclusione della Libreria
 
-   We start by including the ``Adafruit_Keypad`` library, which allows us to easily interface with the keypad.
+   Iniziamo includendo la libreria ``Adafruit_Keypad``, che ci permette di interfacciarci facilmente con il tastierino.
 
    .. code-block:: arduino
 
@@ -99,10 +99,10 @@ Code Analysis
 
    .. note::
 
-      * To install the library, use the Arduino Library Manager and search for **"Adafruit Keypad"** and install it. 
+      * Per installare la libreria, usa il Gestore Librerie di Arduino e cerca **"Adafruit Keypad"** e installala. 
 
 
-2. Keypad Configuration
+2. Configurazione del Tastierino
 
    .. code-block:: arduino
 
@@ -117,26 +117,26 @@ Code Analysis
      byte rowPins[ROWS] = { 2, 3, 4, 5 };
      byte colPins[COLS] = { 8, 9, 10, 11 };
 
-   - The ``ROWS`` and ``COLS`` constants define the dimensions of the keypad. 
-   - ``keys`` is a 2D array storing the label for each button on the keypad.
-   - ``rowPins`` and ``colPins`` are arrays that store the Arduino pins connected to the keypad rows and columns.
+   - Le costanti ``ROWS`` e ``COLS`` definiscono le dimensioni del tastierino.
+   - ``keys`` è un array 2D che memorizza l'etichetta di ciascun pulsante del tastierino.
+   - ``rowPins`` e ``colPins`` sono array che memorizzano i pin Arduino collegati alle righe e colonne del tastierino.
 
    .. raw:: html
 
       <br/>
 
 
-3. Initialize Keypad
+3. Inizializzazione del Tastierino
 
-   Create an instance of ``Adafruit_Keypad`` called ``myKeypad`` and initialize it.
+   Crea un'istanza di ``Adafruit_Keypad`` chiamata ``myKeypad`` e inizializzala.
 
    .. code-block:: arduino
 
      Adafruit_Keypad myKeypad = Adafruit_Keypad(makeKeymap(keys), rowPins, colPins, ROWS, COLS);
 
-4. setup() Function
+4. Funzione setup()
 
-   Initialize Serial communication and the custom keypad.
+   Inizializza la comunicazione Serial e il tastierino personalizzato.
 
    .. code-block:: arduino
 
@@ -145,9 +145,9 @@ Code Analysis
        myKeypad.begin();
      }
 
-5. Main Loop
+5. Ciclo Principale
 
-   Check for key events and display them in the Serial Monitor.
+   Controlla gli eventi dei tasti e visualizzali nel Monitor Seriale.
 
    .. code-block:: arduino
 

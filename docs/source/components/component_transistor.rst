@@ -1,16 +1,15 @@
 .. note::
+    Ciao, benvenuto nella comunità di appassionati di SunFounder Raspberry Pi, Arduino e ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino e ESP32 con altri appassionati.
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    **Perché unirti a noi?**
 
-    **Why Join?**
+    - **Supporto esperto**: Risolvi i problemi post-vendita e le sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e condividi**: Scambia suggerimenti e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Ottieni accesso anticipato agli annunci di nuovi prodotti e anteprime.
+    - **Sconti speciali**: Goditi sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e omaggi festivi**: Partecipa a omaggi e promozioni per le festività.
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca [|link_sf_facebook|] e unisciti oggi!
 
 .. _cpn_transistor:
 
@@ -20,35 +19,33 @@ Transistor
 .. image:: img/npn_pnp.png
     :width: 300
 
-Transistor is a semiconductor device that controls current by current. It functions by amplifying weak signal to larger amplitude signal and is also used for non-contact switch. 
+Il transistor è un dispositivo semiconduttore che controlla la corrente tramite la corrente. Funziona amplificando un segnale debole in un segnale di ampiezza maggiore ed è anche utilizzato come interruttore senza contatto.
 
-A transistor is a three-layer structure composed of P-type and N-type semiconductors. They form the three regions internally. The thinner in the middle is the base region; the other two are both N-type or P-type ones – the smaller region with intense majority carriers is the emitter region, when the other one is the collector region. This composition enables the transistor to be an amplifier. 
-From these three regions, three poles are generated respectively, which are base (b), emitter (e), and collector (c). They form two P-N junctions, namely, the emitter junction and collection junction. The direction of the arrow in the transistor circuit symbol indicates that of the emitter junction. 
+Un transistor è una struttura a tre strati composta da semiconduttori di tipo P e N. Formano le tre regioni internamente. La più sottile al centro è la regione di base; le altre due sono entrambe di tipo N o P - la regione più piccola con una intensa presenza di portatori di maggioranza è la regione dell'emettitore, mentre l'altra è la regione del collettore. Questa composizione permette al transistor di essere un amplificatore.
+Da queste tre regioni si generano rispettivamente tre poli: base (b), emettitore (e) e collettore (c). Formano due giunzioni P-N, cioè la giunzione dell'emettitore e la giunzione del collettore. La direzione della freccia nel simbolo del circuito del transistor indica quella della giunzione dell'emettitore.
 
 * `P–N junction - Wikipedia <https://en.wikipedia.org/wiki/P-n_junction>`_
 
-Based on the semiconductor type, transistors can be divided into two groups, the NPN and PNP ones. From the abbreviation, we can tell that the former is made of two N-type semiconductors and one P-type and that the latter is the opposite. See the figure below. 
+In base al tipo di semiconduttore, i transistor possono essere divisi in due gruppi: NPN e PNP. Dall'abbreviazione, possiamo capire che il primo è composto da due semiconduttori di tipo N e uno di tipo P, mentre il secondo è l'opposto. Vedi la figura qui sotto.
 
-.. note::
-    s8550 is PNP transistor and the s8050 is the NPN one, They look very similar, and we need to check carefully to see their labels.
-
+.. note::    l'S8550 è un transistor PNP e l'S8050 è un transistor NPN. Sono molto simili e bisogna controllare attentamente per vedere le loro etichette.
 
 .. image:: img/transistor_symbol.png
     :width: 600
 
-When a High level signal goes through an NPN transistor, it is energized. But a PNP one needs a Low level signal to manage it. Both types of transistor are frequently used for contactless switches, just like in this experiment.
+Quando un segnale di livello alto passa attraverso un transistor NPN, esso si attiva. Ma un transistor PNP ha bisogno di un segnale di livello basso per attivarsi. Entrambi i tipi di transistor sono frequentemente utilizzati per interruttori senza contatto, proprio come in questo esperimento.
 
-Put the label side facing us and the pins facing down. The pins from left to right are emitter(e), base(b), and collector(c).
+Posiziona il lato dell'etichetta rivolto verso di te e i pin rivolti verso il basso. I pin da sinistra a destra sono emettitore(e), base(b) e collettore(c).
 
 .. image:: img/ebc.png
     :width: 150
 
-
 * |link_s8050_datasheet|
 * |link_s8550_datasheet|
 
-**Example**
+**Esempio**
 
-* :ref:`basic_relay` (Basic Project)
-* :ref:`basic_active_buzzer` (Basic Project)
-* :ref:`basic_passive_buzzer` (Basic Project)
+* :ref:`basic_relay` (Progetto di Base)
+* :ref:`basic_active_buzzer` (Progetto di Base)
+* :ref:`basic_passive_buzzer` (Progetto di Base)
+

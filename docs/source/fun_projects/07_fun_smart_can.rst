@@ -1,58 +1,58 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella community SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts su Facebook! Approfondisci Raspberry Pi, Arduino ed ESP32 con altri appassionati.
 
-    **Why Join?**
+    **Perché unirsi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto Esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra community e del nostro team.
+    - **Impara & Condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Ottieni l'accesso anticipato agli annunci di nuovi prodotti e anteprime esclusive.
+    - **Sconti Speciali**: Goditi sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e Concorsi Festivi**: Partecipa a concorsi e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _fun_smart_can:
 
-Smart Can
-=====================
+Pattumiera Intelligente
+==============================
 
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/videos/fun_projects/07_fun_smartcan.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      Il tuo browser non supporta il tag video.
    </video>
 
-This is an Arduino code designed to control a smart garbage can. 
-When an object is within a 20-centimeter range in front of the garbage can, its lid automatically opens. 
-This project utilizes an SG90 servo motor and an HC-SR04 ultrasonic distance sensor.
+Questo codice Arduino è progettato per controllare una pattumiera intelligente. 
+Quando un oggetto è entro 20 centimetri di distanza davanti alla pattumiera, il coperchio si apre automaticamente. 
+Questo progetto utilizza un servo motore SG90 e un sensore di distanza ultrasonico HC-SR04.
 
-**Required Components**
+**Componenti Necessari**
 
-In this project, we need the following components. 
+In questo progetto, abbiamo bisogno dei seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un kit completo, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - ELEMENTI IN QUESTO KIT
         - LINK
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link sottostanti.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE COMPONENTI
+        - LINK ACQUISTO
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -65,55 +65,56 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_servo`
         - |link_servo_buy|
 
-**Wiring**
+**Collegamenti**
 
 .. image:: img/07_smart_trash_can_bb.png
     :width: 70%
     :align: center
 
 
-**Schematic**
+**Schema Elettrico**
 
 .. image:: img/07_smart_trash_can_schematic.png
    :width: 90%
    :align: center
 
-**Code**
+**Codice**
 
 .. note::
 
-    * You can open the file ``07_smart_trash_can.ino`` under the path of ``elite-explorer-kit-main\fun_project\07_smart_trash_can`` directly.
-    * Or copy this code into Arduino IDE.
+    * Puoi aprire il file ``07_smart_trash_can.ino`` nel percorso ``elite-explorer-kit-main\fun_project\07_smart_trash_can`` direttamente.
+    * Oppure copia questo codice nell'Arduino IDE.
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/509f1bee-6e38-4106-bea7-9b06cdb3719f/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-**How it works?**
+**Come funziona?**
 
-Here is a step-by-step explanation of the code:
+Ecco una spiegazione passo-passo del codice:
 
-1. Import Libraries and Define Constants/Variables:
+1. Importa Librerie e Definisci Costanti/Variabili:
 
-   The ``Servo.h`` library is imported for controlling the SG90 servo motor.
-   Parameters for the servo motor, ultrasonic sensor, and other required constants and variables are defined.
+   La libreria ``Servo.h`` viene importata per controllare il servo motore SG90.
+   I parametri per il servo motore, il sensore ultrasonico e altre costanti e variabili necessarie sono definiti.
 
 2. ``setup()``:
 
-   Initialize serial communication with the computer at a baud rate of 9600.
-   Configure the trigger and echo pins of the ultrasonic sensor.
-   Attach the servo motor to its control pin and set its initial position to the closed angle. After setting the angle, the servo motor is detached to save power.
+   Inizializza la comunicazione seriale con il computer a un baud rate di 9600.
+   Configura i pin di trigger ed echo del sensore ultrasonico.
+   Collega il servo motore al suo pin di controllo e imposta la sua posizione iniziale all'angolo di chiusura. Dopo aver impostato l'angolo, il servo motore viene disconnesso per risparmiare energia.
 
 3. ``loop()``:
 
-   Measure distance three times and store the values of each measurement.
-   Calculate the average distance from the three measurements.
-   If the average distance is less than or equal to 20 centimeters (defined distance threshold), the servo motor rotates to the open angle (0 degrees). 
-   Otherwise, the servo motor returns to the closed position (90 degrees) after a one-second delay. The servo motor is detached when not in use to conserve power.
+   Misura la distanza tre volte e memorizza i valori di ciascuna misurazione.
+   Calcola la distanza media dalle tre misurazioni.
+   Se la distanza media è minore o uguale a 20 centimetri (soglia di distanza definita), il servo motore ruota all'angolo di apertura (0 gradi). 
+   Altrimenti, il servo motore ritorna alla posizione di chiusura (90 gradi) dopo un ritardo di un secondo. Il servo motore viene disconnesso quando non in uso per conservare energia.
 
 4. ``readDistance()``:
 
-   Send a pulse to the trigger pin of the ultrasonic sensor.
-   Measure the pulse width of the echo pin and calculate the distance value. 
-   This calculation uses the speed of sound in the air to compute distance based on pulse time.
+   Invia un impulso al pin di trigger del sensore ultrasonico.
+   Misura la durata dell'impulso del pin di echo e calcola il valore della distanza. 
+   Questo calcolo utilizza la velocità del suono nell'aria per determinare la distanza basata sul tempo dell'impulso.
+

@@ -1,16 +1,16 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella comunità di appassionati di SunFounder Raspberry Pi, Arduino e ESP32 su Facebook! Approfondisci Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirti a noi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto esperto**: Risolvi i problemi post-vendita e le sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e Condividi**: Scambia consigli e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Accedi in anteprima agli annunci di nuovi prodotti e agli sneak peek.
+    - **Sconti speciali**: Approfitta di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni festive e omaggi**: Partecipa a giveaway e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto per esplorare e creare con noi? Clicca [|link_sf_facebook|] e unisciti oggi stesso!
 
 .. _basic_gy87_mpu6050:
 
@@ -18,37 +18,37 @@ MPU6050
 ==========================
 
 
-Overview
+Panoramica
 ---------------
 
-In this tutorial, you'll learn to interface the GY-87 IMU module with an Arduino Uno, focusing on the MPU6050 sensor. We'll cover initializing the MPU6050 and displaying its accelerometer, gyroscope, and temperature data on the Serial Monitor. This lesson is essential for projects needing motion and temperature sensing, like robotics, gesture-controlled devices, and interactive art installations.
+In questo tutorial, imparerai a interfacciare il modulo IMU GY-87 con un Arduino Uno, concentrandoti sul sensore MPU6050. Tratteremo l'inizializzazione del MPU6050 e la visualizzazione dei dati dell'accelerometro, giroscopio e temperatura sul Monitor Seriale. Questa lezione è essenziale per progetti che richiedono il rilevamento del movimento e della temperatura, come robotica, dispositivi controllati da gesti e installazioni artistiche interattive.
 
-Required Components
+Componenti necessari
 -------------------------
 
-In this project, we need the following components. 
+In questo progetto, abbiamo bisogno dei seguenti componenti.
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un kit completo, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - ELEMENTI IN QUESTO KIT
         - LINK
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link qui sotto.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE AI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -57,7 +57,7 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_gy87`
         - \-
 
-Wiring
+Collegamenti
 ----------------------
 
 .. image:: img/09-gy87_bb.png
@@ -68,37 +68,34 @@ Wiring
 
    <br/>
 
-
-Schematic Diagram
+Schema Elettrico
 -----------------------
 
 .. image:: img/09_basic_gy87_schematic.png
     :align: center
     :width: 60%
 
-
-Code
+Codice
 -----------
 
 .. note::
 
-    * You can open the file ``09-gy87_mpu6050.ino`` under the path of ``elite-explorer-kit-main\basic_project\09-gy87_mpu6050`` directly.
-    * Or copy this code into Arduino IDE.
+    * Puoi aprire il file ``09-gy87_mpu6050.ino`` dal percorso ``elite-explorer-kit-main\basic_project\09-gy87_mpu6050`` direttamente.
+    * Oppure copia questo codice nell'IDE di Arduino.
 
 .. note:: 
-    To install the library, use the Arduino Library Manager and search for **"Adafruit MPU6050"** and install it. 
+    Per installare la libreria, usa il Library Manager di Arduino e cerca **"Adafruit MPU6050"** e installala.
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/f89edd5d-e6f9-4f83-979c-6c1d5da3e9d7/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-
-Code Analysis
+Analisi del Codice
 ------------------------
 
-#. Include Libraries
+#. Includi Librerie
 
-   The ``Adafruit_MPU6050``, ``Adafruit_Sensor``, and ``Wire`` libraries are included for sensor interfacing and communication.
+   Le librerie ``Adafruit_MPU6050``, ``Adafruit_Sensor`` e ``Wire`` sono incluse per l'interfacciamento e la comunicazione del sensore.
 
    .. code-block:: arduino
 
@@ -106,17 +103,17 @@ Code Analysis
       #include <Adafruit_Sensor.h>
       #include <Wire.h>
 
-#. Initialize Sensor Object
+#. Inizializza Oggetto Sensore
 
-   An object of the Adafruit_MPU6050 class is created to represent the MPU6050 sensor.
+   Viene creato un oggetto della classe Adafruit_MPU6050 per rappresentare il sensore MPU6050.
 
    .. code-block:: arduino
 
       Adafruit_MPU6050 mpu;
 
-#. Setup Function
+#. Funzione di Setup
 
-   Initializes serial communication and calls the function to initialize the MPU6050 sensor.
+   Inizializza la comunicazione seriale e chiama la funzione per inizializzare il sensore MPU6050.
 
    .. code-block:: arduino
 
@@ -125,9 +122,9 @@ Code Analysis
         initializeMPU6050();
       }
 
-#. Loop Function
+#. Funzione di Loop
 
-   Repeatedly calls the function to print MPU6050 data with a delay of 500 milliseconds between each call.
+   Chiama ripetutamente la funzione per stampare i dati del MPU6050 con un ritardo di 500 millisecondi tra ogni chiamata.
 
    .. code-block:: arduino
 
@@ -136,37 +133,37 @@ Code Analysis
         delay(500);
       }
 
-#. Initialize MPU6050 Function
+#. Funzione di Inizializzazione del MPU6050
 
-   Checks if the MPU6050 is connected, sets accelerometer and gyro ranges, and configures the filter bandwidth.
+   Controlla se il MPU6050 è collegato, imposta i range di accelerometro e giroscopio, e configura la larghezza di banda del filtro.
 
    .. code-block:: arduino
 
       void initializeMPU6050() {
-        // Check if the MPU6050 sensor is detected
+        // Controlla se il sensore MPU6050 è rilevato
         if (!mpu.begin()) {
           Serial.println("Failed to find MPU6050 chip");
           while (1)
-            ;  // Halt if sensor not found
+            ;  // Blocca se il sensore non è trovato
         }
         Serial.println("MPU6050 Found!");
       
-        // set accelerometer range to +-8G
+        // imposta il range dell'accelerometro a +-8G
         mpu.setAccelerometerRange(MPU6050_RANGE_8_G);
       
-        // set gyro range to +- 500 deg/s
+        // imposta il range del giroscopio a +- 500 deg/s
         mpu.setGyroRange(MPU6050_RANGE_500_DEG);
       
-        // set filter bandwidth to 21 Hz
+        // imposta la larghezza di banda del filtro a 21 Hz
         mpu.setFilterBandwidth(MPU6050_BAND_21_HZ);
       
         Serial.println("");
         delay(100);
       }
 
-#. Print MPU6050 Data Function
+#. Funzione per Stampare i Dati del MPU6050
 
-   Reads and prints the acceleration, gyroscope, and temperature data from the MPU6050 to the Serial Monitor.
+   Legge e stampa i dati di accelerazione, giroscopio e temperatura dal MPU6050 sul Monitor Seriale.
 
    .. code-block:: arduino
 
@@ -175,12 +172,12 @@ Code Analysis
         Serial.println();
         Serial.println("MPU6050 ------------");
       
-        /* Get new sensor events with the readings */
+        /* Ottieni nuovi eventi del sensore con le letture */
         sensors_event_t a, g, temp;
         mpu.getEvent(&a, &g, &temp);
       
-        /* Print out the values */
-        Serial.print("Acceleration X: ");
+        /* Stampa i valori */
+        Serial.print("Accelerazione X: ");
         Serial.print(a.acceleration.x);
         Serial.print(", Y: ");
         Serial.print(a.acceleration.y);

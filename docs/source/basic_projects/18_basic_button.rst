@@ -1,60 +1,59 @@
 .. note::
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    Ciao, benvenuto nella Community di SunFounder per appassionati di Raspberry Pi, Arduino e ESP32 su Facebook! Approfondisci Raspberry Pi, Arduino ed ESP32 insieme ad altri appassionati.
 
-    **Why Join?**
+    **Perché unirsi?**
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
+    - **Supporto Esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e Condividi**: Scambia suggerimenti e tutorial per migliorare le tue competenze.
+    - **Anteprime Esclusive**: Accedi in anteprima agli annunci dei nuovi prodotti e alle anticipazioni.
+    - **Sconti Speciali**: Godi di sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e Giveaway Festivi**: Partecipa a giveaway e promozioni festive.
 
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca su [|link_sf_facebook|] e unisciti oggi!
 
 .. _basic_button:
 
-Button
+Pulsante
 ==========================
 
 .. https://docs.sunfounder.com/projects/r4-basic-kit/en/latest/projects/controlling_led_by_button_uno.html#button-uno
 
-
-Overview
+Panoramica
 ----------------
 
-In this lesson, you will learn about controlling an LED using a button with Arduino. Buttons and LEDs are fundamental components in a wide range of electronic devices, such as remote controls, flashlights, and interactive installations. In this setup, a button is used as an input device to control the state of an LED, which serves as an output device.
+In questa lezione imparerai a controllare un LED utilizzando un pulsante con Arduino. Pulsanti e LED sono componenti fondamentali in una vasta gamma di dispositivi elettronici, come telecomandi, torce e installazioni interattive. In questa configurazione, un pulsante viene utilizzato come dispositivo di input per controllare lo stato di un LED, che funge da dispositivo di output.
 
-The button is connected to pin 12 on the Arduino Uno R4 board, and the LED is connected to pin 13. When the button is pressed, a signal is sent to the Arduino, triggering the LED to turn on. Conversely, when the button is released, the LED turns off. This simple yet effective mechanism can be the basis for more complex projects, such as home automation systems, interactive displays, and much more.
+Il pulsante è collegato al pin 12 della scheda Arduino Uno R4 e il LED è collegato al pin 13. Quando il pulsante viene premuto, un segnale viene inviato all'Arduino, attivando l'accensione del LED. Al contrario, quando il pulsante viene rilasciato, il LED si spegne. Questo semplice ma efficace meccanismo può essere la base per progetti più complessi, come sistemi di automazione domestica, display interattivi e molto altro.
 
-By the end of this lesson, you will understand how to read input from a button and use it to control an LED, thereby gaining a foundational understanding of input/output operations with Arduino.
+Alla fine di questa lezione, capirai come leggere l'input da un pulsante e usarlo per controllare un LED, acquisendo così una conoscenza di base delle operazioni di input/output con Arduino.
 
-Required Components
+Componenti Necessari
 -------------------------
 
-In this project, we need the following components. 
+In questo progetto, abbiamo bisogno dei seguenti componenti. 
 
-It's definitely convenient to buy a whole kit, here's the link: 
+È sicuramente conveniente acquistare un kit completo, ecco il link:
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
+    *   - Nome	
+        - ELEMENTI IN QUESTO KIT
         - LINK
     *   - Elite Explorer Kit
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+Puoi anche acquistarli separatamente dai link seguenti.
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - INTRODUZIONE DEI COMPONENTI
+        - LINK PER L'ACQUISTO
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -70,7 +69,7 @@ You can also buy them separately from the links below.
         - |link_button_buy|
 
 
-Wiring
+Cablaggio
 ----------------------
 
 .. image:: img/18-button_bb.png
@@ -78,23 +77,23 @@ Wiring
     :width: 70%
 
 
-Schematic Diagram
+Schema Elettrico
 ------------------------
 
-Connect one end of the buttons to pin 12 which connects with a pull-down resistor and a 0.1uF (104) capacitor (to eliminate jitter and output a stable level when the button is working). Connect the other end of the resistor to GND and one of the pins at the other end of the button to 5V. When the button is pressed, pin 12 is 5V (HIGH) and set pin 13 (integrated with an LED) as High at the same time. Then release the button (pin 12 changes to LOW) and pin 13 is Low. So we will see the LED lights up and goes out alternately as the button is pressed and released.
+Collega un'estremità del pulsante al pin 12, che è collegato a una resistenza pull-down e a un condensatore da 0,1uF (104) (per eliminare il jitter e ottenere un livello stabile quando il pulsante è in funzione). Collega l'altra estremità della resistenza a GND e uno dei pin all'altra estremità del pulsante a 5V. Quando il pulsante viene premuto, il pin 12 è a 5V (HIGH) e imposta il pin 13 (integrato con un LED) come HIGH allo stesso tempo. Poi rilascia il pulsante (il pin 12 passa a LOW) e il pin 13 è LOW. Quindi vedremo che il LED si accende e si spegne alternativamente quando il pulsante viene premuto e rilasciato.
 
 .. image:: img/18_button_schematic.png
     :align: center
     :width: 70%
 
 
-Code
+Codice
 ---------------
 
 .. note::
 
-    * You can open the file ``18-button.ino`` under the path of ``elite-explorer-kit-main\basic_project\18-button`` directly.
-    * Or copy this code into Arduino IDE.
+    * Puoi aprire direttamente il file ``18-button.ino`` nel percorso ``elite-explorer-kit-main\basic_project\18-button``.
+    * Oppure copia questo codice nell'Arduino IDE.
 
 
 
@@ -105,12 +104,13 @@ Code
     
 
 
-Code Analysis
--------------------
+Analisi del Codice
+-----------------------
 
-#. Define Constants and Variables
 
-   In this segment, the pin numbers for the button and the LED are defined. Also, a variable ``buttonState`` is declared to hold the current state of the button.
+#. Definizione di Costanti e Variabili
+
+   In questo segmento, vengono definiti i numeri di pin per il pulsante e il LED. Inoltre, viene dichiarata una variabile ``buttonState`` per mantenere lo stato corrente del pulsante.
  
    .. code-block:: arduino
  
@@ -118,9 +118,9 @@ Code Analysis
      const int ledPin = 13;
      int buttonState = 0;
 
-#. Setup Function
+#. Funzione di Setup
 
-   The ``setup()`` function runs once when the Arduino board starts. The pin modes for the button and the LED are set using the ``pinMode`` function.
+   La funzione ``setup()`` viene eseguita una volta quando la scheda Arduino viene avviata. I pin per il pulsante e il LED vengono configurati utilizzando la funzione ``pinMode``.
  
    .. code-block:: arduino
  
@@ -129,9 +129,9 @@ Code Analysis
        pinMode(ledPin, OUTPUT);
      }
 
-#. Main Loop
+#. Loop Principale
 
-   The ``loop()`` function runs repeatedly. Inside this loop, the ``digitalRead()`` function is used to read the state of the button. Depending on whether the button is pressed or not, the LED is turned on or off.
+   La funzione ``loop()`` viene eseguita ripetutamente. All'interno di questo loop, la funzione ``digitalRead()`` viene utilizzata per leggere lo stato del pulsante. A seconda che il pulsante sia premuto o meno, il LED viene acceso o spento.
  
    .. code-block:: arduino
  

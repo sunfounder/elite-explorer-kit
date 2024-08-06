@@ -32,6 +32,11 @@ author = 'www.sunfounder.com'
 extensions = ['sphinx.ext.autosectionlabel'
 ]
 
+extensions = [
+    'sphinx.ext.autosectionlabel',
+    'sphinx_copybutton'
+]
+
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
@@ -120,6 +125,10 @@ rst_epilog = """
 .. |link_es_tutorials| raw:: html
 
     <a href="https://docs.sunfounder.com/projects/elite-explorer-kit/es/latest/" target="_blank">Tutoriales en línea en español</a>
+
+.. |link_it_tutorials| raw:: html
+
+    <a href="https://docs.sunfounder.com/projects/elite-explorer-kit/it/latest/" target="_blank">Tutorial online in italiano</a>
 
     
 

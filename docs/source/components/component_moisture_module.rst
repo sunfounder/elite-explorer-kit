@@ -1,54 +1,49 @@
 .. note::
+    Ciao, benvenuto nella comunità di appassionati di SunFounder Raspberry Pi, Arduino e ESP32 su Facebook! Approfondisci le tue conoscenze su Raspberry Pi, Arduino e ESP32 con altri appassionati.
 
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
+    **Perché unirti a noi?**
 
-    **Why Join?**
+    - **Supporto esperto**: Risolvi problemi post-vendita e sfide tecniche con l'aiuto della nostra comunità e del nostro team.
+    - **Impara e condividi**: Scambia suggerimenti e tutorial per migliorare le tue competenze.
+    - **Anteprime esclusive**: Ottieni accesso anticipato agli annunci di nuovi prodotti e anteprime.
+    - **Sconti speciali**: Goditi sconti esclusivi sui nostri prodotti più recenti.
+    - **Promozioni e omaggi festivi**: Partecipa a omaggi e promozioni per le festività.
 
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
+    👉 Pronto a esplorare e creare con noi? Clicca [|link_sf_facebook|] e unisciti oggi!
 
 .. _cpn_soil_moisture:
 
-Soil Moisture Module
-================================
+Modulo di Umidità del Suolo
+=================================
 
 .. image:: img/soil_mositure.png
 
-* GND: Ground
-* VCC: Power supply, 3.3v~5V
-* AOUT: Outputs the soil moisture value, the wetter the soil, the smaller its value.
+* GND: Massa
+* VCC: Alimentazione, 3.3v~5V
+* AOUT: Uscita del valore di umidità del suolo, più è umido il suolo, minore è il suo valore.
 
-This capacitive soil moisture sensor is different from most of the resistive sensors on the market, using the principle of capacitive induction to detect soil moisture. It avoids the problem that resistive sensors are highly susceptible to corrosion and greatly extends its working life.
+Questo sensore capacitivo di umidità del suolo è diverso dalla maggior parte dei sensori resistivi sul mercato, utilizzando il principio dell'induzione capacitiva per rilevare l'umidità del suolo. Evita il problema che i sensori resistivi sono altamente suscettibili alla corrosione e ne prolunga notevolmente la durata.
 
+È realizzato con materiali resistenti alla corrosione e ha una durata eccellente. Inseriscilo nel terreno intorno alle piante e monitora i dati di umidità del suolo in tempo reale. Il modulo include un regolatore di tensione integrato che gli consente di funzionare su un intervallo di tensione di 3.3 ~ 5.5 V. È ideale per microcontrollori a bassa tensione con alimentazioni a 3.3 V e 5 V.
 
-It is made of corrosion-resistant materials and has an excellent service life. Insert it into the soil around plants and monitor real-time soil moisture data. The module includes an on-board voltage regulator that allows it to operate over a voltage range of 3.3 ~ 5.5 V. It is ideal for low-voltage microcontrollers with 3.3 V and 5 V supplies.
-
-The hardware schematic of the capacitive soil moisture sensor is shown below.
+Lo schema hardware del sensore capacitivo di umidità del suolo è mostrato di seguito.
 
 .. image:: img/solid_schematic.png
 
-There is a fixed frequency oscillator, which is built with a 555 timer IC. The generated square wave is then fed to the sensor like a capacitor. However, for the square wave signal, the capacitor has a certain reactance or, for the sake of argument, a resistor with a pure ohmic resistor (10k resistor on pin 3) to form a voltage divider.
+C'è un oscillatore a frequenza fissa, costruito con un timer IC 555. L'onda quadra generata viene quindi inviata al sensore come un condensatore. Tuttavia, per il segnale dell'onda quadra, il condensatore ha una certa reattanza o, per così dire, un resistore con un resistore puramente ohmico (resistore da 10k su pin 3) per formare un partitore di tensione.
 
-The higher the soil moisture, the higher the capacitance of the sensor. As a result, the square wave has less reactance, which reduces the voltage on the signal line, and the smaller the value of the analog input through the microcontroller.
+Più alta è l'umidità del suolo, maggiore è la capacità del sensore. Di conseguenza, l'onda quadra ha meno reattanza, il che riduce la tensione sulla linea del segnale, e minore è il valore dell'ingresso analogico attraverso il microcontrollore.
 
+**Specifiche**
 
-**Specification**
+* Tensione di funzionamento: 3.3 ~ 5.5 VDC
+* Tensione di uscita: 0 ~ 3.0VDC
+* Corrente operativa: 5mA
+* Interfaccia: PH2.0-3P
+* Dimensioni: 3.86 x 0.905 pollici (L x P)
+* Peso: 15g
 
-* Operating Voltage: 3.3 ~ 5.5 VDC
-* Output Voltage: 0 ~ 3.0VDC
-* Operating Current: 5mA
-* Interface: PH2.0-3P
-* Dimensions: 3.86 x 0.905 inches (L x W)
-* Weight: 15g
+**Esempio**
 
-**Example**
-
-* :ref:`basic_moisture` (Basic Project)
-* :ref:`fun_plant_monitor` (Fun Project)
-
-
+* :ref:`basic_moisture` (Progetto di base)
+* :ref:`fun_plant_monitor` (Progetto divertente)

@@ -117,11 +117,15 @@ rst_epilog = """
 
 .. |link_fr_tutorials| raw:: html
 
-    <a href="https://docs.sunfounder.com/projects/elite-explorer-kit/fr/latest/" target="_blank">Cours en ligne en anglais</a>
+    <a href="https://docs.sunfounder.com/projects/elite-explorer-kit/fr/latest/" target="_blank">Cours en ligne en français</a>
 
 .. |link_es_tutorials| raw:: html
 
     <a href="https://docs.sunfounder.com/projects/elite-explorer-kit/es/latest/" target="_blank">Tutoriales en línea en español</a>
+
+.. |link_it_tutorials| raw:: html
+
+    <a href="https://docs.sunfounder.com/projects/elite-explorer-kit/es/latest/" target="_blank">Corsi di italiano online</a>
 
 
     

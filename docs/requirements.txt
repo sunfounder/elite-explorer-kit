@@ -1,7 +1,4 @@
 ﻿# Defining the exact version will make sure things don't break
 sphinx==7.3.7
 sphinx-rtd-theme==2.1.0rc1
-extensions = [
-    'sphinx.ext.autosectionlabel',
-    'sphinx_copybutton'
-]
+sphinx_copybutton

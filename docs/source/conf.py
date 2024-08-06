@@ -29,7 +29,10 @@ author = 'www.sunfounder.com'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['sphinx.ext.autosectionlabel'
+
+extensions = [
+    'sphinx.ext.autosectionlabel',
+    'sphinx_copybutton'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -119,7 +122,11 @@ rst_epilog = """
 
 .. |link_es_tutorials| raw:: html
 
+<<<<<<< HEAD
     <a href="https://docs.sunfounder.com/projects/elite-explorer-kit/es/latest/" target="_blank">Tutoriales en línea en español</a>
+=======
+    <a href="https://docs.sunfounder.com/projects/elite-explorer-kit/es/latest/" target="_blank">Tutoriales en línea de español</a>
+>>>>>>> a19a6137ecb64762b0bd13bca3963ca1f007e75c
 
 
     

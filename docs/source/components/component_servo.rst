@@ -36,5 +36,5 @@ L'angle est déterminé par la durée d'une impulsion appliquée au fil de contr
 **Exemple**
 
 * :ref:`basic_servo` (Projet de base)
-* :ref:`fun_smart_can` (Projet amusant)
+* :ref:`fun_smart_fan` (Projet amusant)
 

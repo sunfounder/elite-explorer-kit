@@ -71,7 +71,7 @@ In this example, we use Power Supply Module to power the anode and cathode of br
 
 .. image:: img/24-motor_bb.png
     :align: center
-    :width: 80%
+    :width: 90%
 
 .. raw:: html
   

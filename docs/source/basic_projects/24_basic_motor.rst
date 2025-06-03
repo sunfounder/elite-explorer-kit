@@ -50,8 +50,7 @@ You can also buy them separately from the links below.
         - PURCHASE LINK
 
     *   - :ref:`uno_r4_wifi`
-        - \-
-    *   - :ref:`cpn_breadboard`
+
         - |link_breadboard_buy|
     *   - :ref:`cpn_wires`
         - |link_wires_buy|
@@ -68,7 +67,7 @@ Wiring
 In this example, we use Power Supply Module to power the anode and cathode of breadboard.
 
 .. note::
-    To protect the :ref:`cpn_power`'s battery, please fully charge it before using it for the first time.
+    The motor requires more power during operation, so please keep the power module connected to a charging cable when in use.
 
 .. image:: img/24-motor_bb.png
     :align: center

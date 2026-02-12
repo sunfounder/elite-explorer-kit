@@ -67,8 +67,7 @@ Conexión
 
 En este ejemplo, usamos el módulo de fuente de alimentación para alimentar el ánodo y cátodo de la placa de pruebas.
 
-.. note::
-    Para proteger la batería del :ref:`cpn_power`, cárgala completamente antes de usarla por primera vez.
+.. note:: El motor requiere más potencia durante el funcionamiento, por lo que debe mantener el módulo de alimentación conectado a un cable de carga cuando esté en uso.
 
 .. image:: img/24-motor_bb.png
     :align: center

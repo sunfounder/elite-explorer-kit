@@ -67,6 +67,8 @@ Verdrahtung
 
 In diesem Beispiel verwenden wir das Power Supply Module, um die Anode und Kathode des Breadboards zu versorgen.
 
+.. note:: Der Motor benötigt im Betrieb mehr Strom, daher muss das Leistungsmodul während des Gebrauchs an ein Ladekabel angeschlossen bleiben.
+
 .. image:: img/24-motor_bb.png
     :align: center
     :width: 80%

@@ -68,7 +68,7 @@ Câblage
 Dans cet exemple, nous utilisons un module d'alimentation pour alimenter l'anode et la cathode de la breadboard.
 
 .. note::
-    Pour protéger la batterie du :ref:`cpn_power`, veuillez la charger complètement avant de l'utiliser pour la première fois.
+    Le moteur nécessite davantage de puissance pendant son fonctionnement ; veuillez donc maintenir le module d'alimentation connecté à un câble de charge lorsqu'il est utilisé.
 
 .. image:: img/24-motor_bb.png
     :align: center

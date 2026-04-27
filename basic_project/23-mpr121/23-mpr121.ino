@@ -40,6 +40,7 @@ void setup() {
     while (1);
   }
   Serial.println("MPR121 found!");
+  cap.setAutoconfig(true);
 }
 
 void loop() {

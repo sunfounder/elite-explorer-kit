@@ -38,7 +38,7 @@ void setup() {
     while (1);  // Halt execution if MPR121 is not found
   }
   Serial.println("MPR121 initialized.");
-
+  cap.setAutoconfig(true);
   wave.sine(10);  // Initialize the sine wave generator with a frequency of 10 Hz
 }
 

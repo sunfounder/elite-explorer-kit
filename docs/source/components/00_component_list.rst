@@ -112,4 +112,5 @@ Below is the introduction to each component, which contains the operating princi
     component_humiture_sensor
     component_mfrc522
     component_gy87
+    cpn_10_axis_imu
 

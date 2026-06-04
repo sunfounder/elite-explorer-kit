@@ -12,7 +12,7 @@
 
     👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
 
-GY-87 IMU Module
+IMU Module
 ==========================
 
 The GY-87 module is equipped with three sensor chips: MPU6050, QMC5883L, and BMP180, each offering unique capabilities. The MPU6050 combines a gyroscope and an accelerometer for motion tracking, the QMC5883L serves as a magnetometer for directional sensing, and the BMP180 is used for measuring barometric pressure and temperature. These can be interfaced using the I2C protocol for effective communication with an Arduino.

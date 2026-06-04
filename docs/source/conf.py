@@ -44,7 +44,7 @@ html_context = {
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinx.ext.autosectionlabel',
+    # 'sphinx.ext.autosectionlabel',
     'sphinx_copybutton',
     'sphinx_rtd_theme'
 ]
@@ -112,6 +112,12 @@ gettext_compact = False # Support for generating the contents of the folders ins
 
 rst_epilog = """
 
+
+
+.. |link_cloud| raw:: html
+
+    <a href="https://cloud.arduino.cc/" target="_blank">here</a>
+
 .. |link_sf_facebook| raw:: html
 
     <a href="https://bit.ly/raphaelkit" target="_blank">here</a>
@@ -139,9 +145,6 @@ rst_epilog = """
 .. |link_it_tutorials| raw:: html
 
     <a href="https://docs.sunfounder.com/projects/elite-explorer-kit/it/latest/" target="_blank">Corsi di italiano online</a>
-
-    
-
 
 .. |link_download_arduino| raw:: html
 

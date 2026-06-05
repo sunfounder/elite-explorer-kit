@@ -1,32 +1,17 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
-WiFi-Controlled LED (Access Point)
+WiFi 控制 LED（接入点）
 ---------------------------------------------------
 
-This project allows you to control an LED light through a web interface. The Arduino board acts as a WiFi access point, creating its own local network that you can connect to with a web browser. Once connected, you can navigate to the device's IP address using the web browser, where you'll find options to turn an LED (connected to the board's pin 13) on and off. The project provides real-time feedback on the LED status via the Serial Monitor, making it easier to debug and understand the flow of operations.
+该项目允许您通过网络界面控制 LED 灯。Arduino 板充当 WiFi 接入点，创建自己的本地网络，您可以使用网络浏览器连接到该网络。连接后，您可以通过网络浏览器导航到设备的 IP 地址，在那里您将找到用于打开和关闭 LED（连接到板的引脚 13）的选项。该项目通过串口监视器提供 LED 状态的实时反馈，使调试和理解操作流程更加容易。
 
-1. Upload the code
+1. 上传代码
 ========================
 
-Open the ``01-wifi_ap.ino`` file under the path of ``elite-explorer-kit-main\r4_new_feature\01-wifi_ap``, or copy this code into **Arduino IDE**.
+打开路径 ``elite-explorer-kit-main\r4_new_feature\01-wifi_ap`` 下的 ``01-wifi_ap.ino`` 文件，或将此代码复制到 **Arduino IDE** 中。
 
-.. note:: 
-      Wi-Fi® support is enabled via the built-in ``WiFiS3`` library that is shipped with the Arduino UNO R4 Core. Installing the core automatically installs the ``WiFiS3`` library.
+.. note::
+     通过随 Arduino UNO R4 Core 一起提供的内置 ``WiFiS3`` 库启用 Wi-Fi 支持。安装该核心会自动安装 ``WiFiS3`` 库。
 
-
-You still need to create or modify ``arduino_secrets.h``, replace ``SECRET_SSID`` and ``SECRET_PASS`` with the name and password of your WiFi access point. The file should contain:
+您仍然需要创建或修改 ``arduino_secrets.h``，将 ``SECRET_SSID`` 和 ``SECRET_PASS`` 替换为您的 WiFi 接入点的名称和密码。该文件应包含：
 
 .. code:: arduino
 
@@ -35,7 +20,7 @@ You still need to create or modify ``arduino_secrets.h``, replace ``SECRET_SSID`
     #define SECRET_PASS "yourpassword"
 
 .. raw:: html
-    
+
    <iframe src=https://create.arduino.cc/editor/sunfounder01/8d0d28d2-2394-4eaa-b276-86a4f061badb/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 .. raw:: html
@@ -45,37 +30,37 @@ You still need to create or modify ``arduino_secrets.h``, replace ``SECRET_SSID`
       Your browser does not support the video tag.
    </video>
 
-2. Code explanation
+2. 代码说明
 ========================
 
-#. Importing Required Libraries
+#. 导入所需库
 
-   Importing the ``WiFiS3`` library for WiFi functionalities and ``arduino_secrets.h`` for sensitive data like passwords.
-  
+   导入用于 WiFi 功能的 ``WiFiS3`` 库和用于密码等敏感数据的 ``arduino_secrets.h``。
+
    .. code-block:: arduino
-   
+
      #include "WiFiS3.h"
      #include "arduino_secrets.h"
 
-#. Configuration and Variable Initialization
+#. 配置和变量初始化
 
-   Define WiFi SSID, password, and key index along with the LED pin and WiFi status.
-  
+   定义 WiFi SSID、密码和密钥索引，以及 LED 引脚和 WiFi 状态。
+
    .. code-block:: arduino
-   
-     char ssid[] = SECRET_SSID;        
-     char pass[] = SECRET_PASS;        
+
+     char ssid[] = SECRET_SSID;
+     char pass[] = SECRET_PASS;
      int keyIndex = 0;
      int led =  LED_BUILTIN;
      int status = WL_IDLE_STATUS;
      WiFiServer server(80);
 
-#. ``setup()`` Function
+#. ``setup()`` 函数
 
-   Initialize the serial communication and configure the WiFi module.
-   
+   初始化串行通信并配置 WiFi 模块。
+
    .. code-block:: arduino
-   
+
      void setup() {
 
        // ... setup code ...
@@ -86,7 +71,7 @@ You still need to create or modify ``arduino_secrets.h``, replace ``SECRET_SSID`
        server.begin();
      }
 
-   We also check if the firmware version of uno R4 wifi is up to date. If it is not the latest version, a prompt for upgrade will be displayed. You can refer to :ref:`update_firmware` for firmware upgrade.
+   我们还检查 uno R4 wifi 的固件版本是否是最新的。如果不是最新版本，将显示升级提示。您可以参考 :ref:`update_firmware` 进行固件升级。
 
    .. code-block:: arduino
 
@@ -97,29 +82,29 @@ You still need to create or modify ``arduino_secrets.h``, replace ``SECRET_SSID`
       }
       ...
 
-   You may want to modify the following code in order to be able to change the default IP of Arduino.
+   您可能需要修改以下代码，以便能够更改 Arduino 的默认 IP。
 
    .. code-block:: arduino
-      
+
       WiFi.config(IPAddress(192,48,56,2));
-   
 
-#. Main ``loop()`` Function
 
-   The ``loop()`` function in the Arduino code performs several key operations, specifically:
-   
-   1. Checking if a device has connected or disconnected from the access point.
-   2. Listening for incoming clients who make HTTP requests.
-   3. Reading client data and executing actions based on that data—like turning an LED on or off.
-   
-   Here, let's break down the ``loop()`` function to make these steps more understandable.
-   
-   #. Checking WiFi Status
+#. 主 ``loop()`` 函数
 
-      The code first checks if the WiFi status has changed. If a device has connected or disconnected, the serial monitor will display the information accordingly.
-   
+   Arduino 代码中的 ``loop()`` 函数执行几个关键操作，具体包括：
+
+   1. 检查是否有设备连接或断开接入点。
+   2. 监听发出 HTTP 请求的传入客户端。
+   3. 读取客户端数据并基于该数据执行操作——比如打开或关闭 LED。
+
+   这里，让我们分解 ``loop()`` 函数以使这些步骤更易于理解。
+
+   #. 检查 WiFi 状态
+
+      代码首先检查 WiFi 状态是否已更改。如果有设备连接或断开，串口监视器将相应地显示信息。
+
       .. code-block:: arduino
-   
+
         if (status != WiFi.status()) {
           status = WiFi.status();
           if (status == WL_AP_CONNECTED) {
@@ -128,19 +113,19 @@ You still need to create or modify ``arduino_secrets.h``, replace ``SECRET_SSID`
             Serial.println("Device disconnected from AP");
           }
         }
-   
-   #. Listening for Incoming Clients
 
-      ``WiFiClient client = server.available();`` waits for incoming clients.
-     
+   #. 监听传入客户端
+
+      ``WiFiClient client = server.available();`` 等待传入客户端。
+
       .. code-block:: arduino
-   
-        WiFiClient client = server.available();
-   
-   #. Handling Client Requests
 
-      Listens for incoming clients and serves them the HTML web page. When a user clicks on the "Click here to turn the LED on" or "Click here to turn the LED off" links on the served webpage, an HTTP GET request is sent to the Arduino server. Specifically, the URLs "http://yourAddress/H" for turning on the LED and "http://yourAddress/L" for turning it off will be accessed.
-  
+        WiFiClient client = server.available();
+
+   #. 处理客户端请求
+
+      监听传入客户端，并向其提供 HTML 网页。当用户在被提供的网页上点击 "Click here to turn the LED on" 或 "Click here to turn the LED off" 链接时，会向 Arduino 服务器发送 HTTP GET 请求。具体来说，将访问 URL "http://yourAddress/H" 以打开 LED，"http://yourAddress/L" 以关闭 LED。
+
       .. code-block:: arduino
 
         WiFiClient client = server.available();
@@ -153,11 +138,11 @@ You still need to create or modify ``arduino_secrets.h``, replace ``SECRET_SSID`
           client.print("<p style=\"font-size:7vw;\">Click <a href=\"/L\">here</a> turn the LED off<br></p>");
           // ...
         }
-   
-      The Arduino code listens for these incoming GET requests. When it detects ``GET /H`` at the end of an incoming line of text (HTTP header), it sets the LED connected to pin 13 to HIGH, effectively turning it on. Similarly, if it detects ``GET /L``, it sets the LED to LOW, turning it off.
-     
+
+      Arduino 代码监听这些传入的 GET 请求。当它在传入文本行（HTTP 头）的末尾检测到 ``GET /H`` 时，它将连接到引脚 13 的 LED 设置为 HIGH，从而打开它。类似地，如果检测到 ``GET /L``，它将 LED 设置为 LOW，从而关闭它。
+
       .. code-block:: arduino
-   
+
          while (client.connected()) {            // loop while the client's connected
            delayMicroseconds(10);                // This is required for the Arduino Nano RP2040 Connect - otherwise it will loop so fast that SPI will never be served.
            if (client.available()) {             // if there's bytes to read from the client,
@@ -173,7 +158,7 @@ You still need to create or modify ``arduino_secrets.h``, replace ``SECRET_SSID`
              else if (c != '\r') {    // if you got anything else but a carriage return character,
                currentLine += c;      // add it to the end of the currentLine
              }
-     
+
              // Check to see if the client request was "GET /H" or "GET /L":
              if (currentLine.endsWith("GET /H")) {
                digitalWrite(led, HIGH);               // GET /H turns the LED on
@@ -184,7 +169,6 @@ You still need to create or modify ``arduino_secrets.h``, replace ``SECRET_SSID`
            }
 
 
-
-**Reference**
+**参考**
 
 - |link_r4_wifi|

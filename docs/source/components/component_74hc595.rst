@@ -1,17 +1,3 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _cpn_74hc595:
 
 74HC595
@@ -19,27 +5,27 @@
 
 .. image:: img/74HC595.png
 
-The 74HC595 consists of an 8−bit shift register and a storage register with three−state parallel outputs. It converts serial input into parallel output so you can save IO ports of an MCU.
-When MR (pin10) is high level and OE (pin13) is low level, data is input in the rising edge of SHcp and goes to the memory register through the rising edge of SHcp. If the two clocks are connected together, the shift register is always one pulse earlier than the memory register. There is a serial shift input pin (Ds), a serial output pin (Q) and an asynchronous reset button (low level) in the memory register. The memory register outputs a Bus with a parallel 8-bit and in three states. When OE is enabled (low level), the data in memory register is output to the bus.
+74HC595由一个8位移位寄存器和一个具有三态并行输出的储存寄存器组成。它将串行输入转换为并行输出，从而可以节省MCU的IO端口。
+当MR（引脚10）为高电平且OE（引脚13）为低电平时，数据在SHcp的上升沿输入，并通过SHcp的上升沿进入储存寄存器。如果将两个时钟连接在一起，移位寄存器始终比储存寄存器早一个脉冲。它有一个串行移位输入引脚（Ds）、一个串行输出引脚（Q）和一个异步复位按钮（低电平）。储存寄存器输出一个具有并行8位三态的总线。当OE使能（低电平）时，储存寄存器中的数据输出到总线。
 
 * |link_74hc595_datasheet|
 
 .. image:: img/74hc595_pin.png
     :width: 600
 
-Pins of 74HC595 and their functions:
+74HC595的引脚及其功能：
 
-* **Q0-Q7**: 8-bit parallel data output pins, able to control 8 LEDs or 8 pins of 7-segment display directly.
-* **Q7’**: Series output pin, connected to DS of another 74HC595 to connect multiple 74HC595s in series
-* **MR**: Reset pin, active at low level; 
-* **SHcp**: Time sequence input of shift register. On the rising edge, the data in shift register moves successively one bit, i.e. data in Q1 moves to Q2, and so forth. While on the falling edge, the data in shift register remain unchanged.
-* **STcp**: Time sequence input of storage register. On the rising edge, data in the shift register moves into memory register.
-* **CE**: Output enable pin, active at low level. 
-* **DS**: Serial data input pin
-* **VCC**: Positive supply voltage.
-* **GND**: Ground.
+* **Q0-Q7** ：8位并行数据输出引脚，可直接控制8个LED或7段数码管的8个引脚。
+* **Q7'** ：级联输出引脚，连接到另一个74HC595的DS引脚，用于串联多个74HC595。
+* **MR** ：复位引脚，低电平有效。
+* **SHcp** ：移位寄存器时序输入。在上升沿，移位寄存器中的数据依次移动一位，即Q1中的数据移动到Q2，依此类推。在下降沿，移位寄存器中的数据保持不变。
+* **STcp** ：储存寄存器时序输入。在上升沿，移位寄存器中的数据移入储存寄存器。
+* **CE** ：输出使能引脚，低电平有效。
+* **DS** ：串行数据输入引脚。
+* **VCC** ：正电源电压。
+* **GND** ：接地。
 
-**Example**
+**示例**
 
-* :ref:`basic_74hc595` (Basic Project)
-* :ref:`fun_digital_dice` (Fun Project)
+* :ref:`basic_74hc595` （基础项目）
+* :ref:`fun_digital_dice` （趣味项目）

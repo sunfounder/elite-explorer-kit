@@ -1,23 +1,9 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
-Variable
+变量
 ========
 
-The variable is one of the most powerful and critical tools in a program. It helps us to store and call data in our programs.
+变量是程序中最强大和最关键的工��之一。它帮助我们存储和调用程序中的数据。
 
-The following sketch file uses variables. It stores the pin numbers of the on-board LED in the variable ``ledPin`` and a number "500" in the variable ``delayTime``.
+下面的项目文件使用了变量。它将板载 LED 的引脚号存储在变量 ``ledPin`` 中，将数字"500"存储在变量 ``delayTime`` 中。
 
 .. code-block:: C
     :emphasize-lines: 1,2
@@ -26,22 +12,22 @@ The following sketch file uses variables. It stores the pin numbers of the on-bo
     int delayTime = 500;
 
     void setup() {
-        pinMode(ledPin,OUTPUT); 
+        pinMode(ledPin,OUTPUT);
     }
 
     void loop() {
-        digitalWrite(ledPin,HIGH); 
-        delay(delayTime); 
-        digitalWrite(ledPin,LOW); 
+        digitalWrite(ledPin,HIGH);
+        delay(delayTime);
+        digitalWrite(ledPin,LOW);
         delay(delayTime);
     }
 
-Wait, is this a duplicate of what ``#define`` does? The answer is NO.
+等等，这和 ``#define`` 的功能重复了吗？答案是否定的。
 
-* The role of ``#define`` is to simply and directly replace text, it is not considered by the compiler as part of the program. 
-* A ``variable``, on the other hand, exists within the program and is used to store and call value. A variable can also modify its value within the program, something that a define cannot do.
+* ``#define`` 的作用是简单直接的文本替换，编译器不认为它是程序的一部分。
+* 而``变量``存在于程序内部，用于存储和调用值。变量还可以在程序内部修改其值，这是 define 无法做到的。
 
-The sketch file below self-adds to the variable and it will cause the on-board LED to blink longer after each blink.
+下面的项目文件对变量进行了自加操作，这将使板载 LED 每次闪烁后延时更长。
 
 .. code-block:: C
 
@@ -49,72 +35,70 @@ The sketch file below self-adds to the variable and it will cause the on-board L
     int delayTime = 500;
 
     void setup() {
-        pinMode(ledPin,OUTPUT); 
+        pinMode(ledPin,OUTPUT);
     }
 
     void loop() {
-        digitalWrite(ledPin,HIGH); 
-        delay(delayTime); 
-        digitalWrite(ledPin,LOW); 
+        digitalWrite(ledPin,HIGH);
         delay(delayTime);
-        delayTime = delayTime+200; //Each execution increments the value by 200
+        digitalWrite(ledPin,LOW);
+        delay(delayTime);
+        delayTime = delayTime+200; //每次执行将值增加200
     }
 
-Declare a variable
+声明变量
 -------------------
 
-Declaring a variable means creating a variable. 
+声明变量就是创建一个变量。
 
-To declare a variable, you need two things: the data type, and the variable name. The data type needs to be separated from the variable by a space, and the variable declaration needs to be terminated by a ``;``.
+声明一个变量需要两样东西：数据类型和变量名。数据类型需要用空格与变量名隔开，变量声明需要以 ``;`` 结尾。
 
-Let's use this variable as an example.
+让我们以这个变量为例。
 
 .. code-block:: C
 
     int delayTime;
 
-**Data Type**
+**数据类型**
 
-Here ``int`` is a data type called integer type, which can be used to store integers from -32768 to 32766. It can also not be used to store decimals.
+这里的 ``int`` 是一种称为整型的数据类型，可用于存储从 -32768 到 32766 的整数。它不能用于存储小数。
 
-Variables can hold different kinds of data other than integers. The Arduino language (which, remember, is C++) has built-in support for a few of them (only the most frequently used and useful are listed here):
+除了整数，变量还可以存储不同类型的数据。Arduino 语言（记住，它是 C++）内置了对以下几种数据类型的支持（这里只列出最常用和最有用的）：
 
-* ``float``: Store a decimal number, for example 3.1415926.
-* ``byte``: Can hold numbers from 0 to 255.
-* ``boolean``: Holds only two possible values, ``True`` or ``False``, even though it occupies a byte in memory.
-* ``char``: Holds a number from -127 to 127. Because it is marked as a ``char`` the compiler will try to match it to a character from the |link_ascii|.
-* ``string``: Can stores a string of characters, e.g. ``Halloween``.
-
-
-**Variable Name**
+* ``float``：存储小数，例如 3.1415926。
+* ``byte``：存储 0 到 255 之间的数字。
+* ``boolean``：只存储两个可能的值，``True`` 或 ``False``，即使它在内存中占用一个字节。
+* ``char``：存储 -127 到 127 之间的数字。由于被标记为 ``char``，编译器会尝试将其匹配为 |link_ascii| 中的一个字符。
+* ``string``：存储一个字符串，例如 ``Halloween``。
 
 
-You can set the variable to any name you want, such as ``i``, ``apple``, ``Bruce``, ``R2D2``, ``Sectumsempra``, but there are some basic rules to follow.
+**变量名**
 
-1. describe what it is used for. Here, I named the variable delayTime, so you can easily understand what it does. It works fine if I name the variable ``barryAllen``, but it confuses the person looking at the code.
+你可以将变量设为任何你想要的名称，例如 ``i``、``apple``、``Bruce``、``R2D2``、``Sectumsempra``，但需要遵循一些基本规则。
 
-2. Use regular nomenclature. You can use CamelCase like I did, with the initial T in ``delayTime`` so that it is easy to see that the variable consists of two words. Also, you can use UnderScoreCase to write the variable as ``delay_time``. It doesn't affect the program's running, but it would help the programmer to read the code if you use the nomenclature you prefer.
+1. 描述其用途。在这里，我将变量命名为 delayTime，这样你可以轻松理解它的作用。如果我将其命名为 ``barryAllen``，它也能正常工作，但会让人查看代码时感到困惑。
 
-3. Don't use keywords. Similar to what happens when we type "int", the Arduino IDE will color it to remind you that it is a word with a special purpose and cannot be used as a variable name. Change the name of the variable if it is colored. 
+2. 使用常规命名法。你可以像我一样使用驼峰命名法，将 ``delayTime`` 中的 T 大写，这样可以很容易看出变量由两个单词组成。你也可以使用下划线命名法，将变量写为 ``delay_time``。这不会影响程序的运行，但如果你使用自己偏好的命名法，将有助于程序员阅读代码。
 
-4. Special symbols are not allowed. For example, space, #, $, /, +, %, etc. The combination of English letters (case sensitive), underscores, and numbers (but numbers cannot be used as the first character of a variable name) is rich enough.
+3. 不要使用关键字。类似于我们输入"int"时发生的情况，Arduino IDE 会将其着色，以提醒你这是一个具有特殊用途的单词，不能用作变量名。如果变量名被着色了，请更改它。
+
+4. 不允许使用特殊符号。例如，空格、#、$、/、+、% 等。英文字母（区分大小写）、下划线和数字（但数字不能用作变量名的第一个字符）的组合已经足够丰富。
 
 
-**Assign a value to a variable**
+**给变量赋值**
 
-Once we have declared the variable, it is time to store the data. We use the assignment operator (i.e. ``=``) to put value into the variable.
+声明变量后，就需要存储数据了。我们使用赋值运算符（即 ``=``）将值放入变量中。
 
-We can assign values to the variable as soon as we declare it.
-
+我们可以在声明变量的同时为其赋值。
 
 .. code-block:: C
 
     int delayTime = 500;
 
-It is also possible to assign a new value to it at some time.
+也可以在某些时候为其赋一个新值。
 
 .. code-block:: C
 
-    int delayTime; // no value
-    delayTime = 500; // value is 500
-    delayTime = delayTime +200; // value is 700
+    int delayTime; // 没有值
+    delayTime = 500; // 值为 500
+    delayTime = delayTime +200; // 值为 700

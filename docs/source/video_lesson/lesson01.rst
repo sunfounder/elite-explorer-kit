@@ -1,42 +1,28 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
-LESSON 1: Getting Started for Absolute Beginners
+课程 1：面向绝对初学者的入门指南
 ==================================================
 
-This lesson introduces the "Arduino Uno R4 Wifi: Getting Started for Absolute Beginners" tutorial series, offering an engaging and practical learning experience for those new to programming and electronics. You will learn:
+本课程介绍了"Arduino Uno R4 WiFi：面向绝对初学者的入门指南"教程系列，为编程和电子的新手提供引人入胜且实用的学习体验。你将学习：
 
-1. **Setting up the Arduino Environment**: How to unbox and connect your Arduino Uno R4 Wifi to your computer.
-2. **Installing the Arduino Integrated Development Environment (IDE)**: Step-by-step guidance on downloading and installing the Arduino IDE necessary for writing and uploading programs.
-3. **Writing Your First Program**: Instructions on how to write a basic program to control an LED using the Arduino.
-4. **Understanding Program Structure**: Explanation of the essential components of an Arduino sketch, including setup and loop functions.
-5. **Manipulating Outputs**: How to digitally write commands to turn an LED on and off.
-6. **Using the Delay Function**: Demonstrations on how to use the delay function to control the blinking speed of an LED.
-7. **Homework Assignment**: A task to experiment with the delay times to understand the limits of human visual perception regarding blinking lights.
+1. **设置 Arduino 环境** ：如何开箱并将你的 Arduino Uno R4 WiFi 连接到计算机。
+2. **安装 Arduino 集成开发环境（IDE）** ：下载和安装编写及上传程序所需的 Arduino IDE 的逐步指导。
+3. **编写你的第一个程序** ：如何使用 Arduino 编写基本程序来控制 LED 的说明。
+4. **理解程序结构** ：解释 Arduino 项目的基本组成部分，包括 setup 和 loop 函数。
+5. **操作输出** ：如何通过数字写入命令来打开和关闭 LED。
+6. **使用延时函数** ：演示如何使用延时函数来控制 LED 的闪烁速度。
+7. **课后作业** ：一个实验任务，通过调整延时时间来理解人类视觉感知闪烁光线的极限。
 
-This comprehensive first lesson ensures a solid foundation in using the Arduino platform, geared towards helping learners think like engineers.
+这节全面的第一课确保你在使用 Arduino 平台方面打下坚实的基础，旨在帮助学习者像工程师一样思考。
 
-**Video**
+**视频**
 
 .. raw:: html
 
-    <iframe width="100%" 
+    <iframe width="100%"
         style="aspect-ratio: 16/9; max-width: 100%;"
-        src="https://www.youtube.com/embed/S66Iwhk2V7A?si=o9Q1tTC1X1B9teef" 
-        title="YouTube video player" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        src="https://www.youtube.com/embed/S66Iwhk2V7A?si=o9Q1tTC1X1B9teef"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen>
     </iframe>
 

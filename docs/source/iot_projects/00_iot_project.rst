@@ -1,27 +1,13 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _iot_projects:
 
-IoT Projects
+IoT 项目
 ====================
 
-The Elite Explorer Kit utilizes the built-in ESP32-S3 WiFi and Bluetooth module on the Arduino UNO R4 WiFi board, enabling a variety of easy and enjoyable IoT projects. The WiFi connectivity allows you to connect your Arduino to the internet and cloud platforms for IoT experiments. And Bluetooth provides short-range wireless communication capabilities.
+Elite Explorer 套件利用 Arduino UNO R4 WiFi 板上内置的 ESP32-S3 WiFi 和蓝牙模块，实现了各种简单有趣的 IoT 项目。WiFi 连接使您可以将 Arduino 连接到互联网和云平台进行 IoT 实验。而蓝牙则提供了短距离无线通信能力。
 
-With WiFi, you can build projects like a simple web server to control an LED remotely, interact with the Arduino IoT Cloud to monitor sensors, create security alerts with IFTTT using a PIR sensor, and make a cloud-based calling system using MQTT. We provide step-by-step guides to implement these and other networked IoT projects.
+通过 WiFi，您可以构建诸如：用于远程控制 LED 的简单网页服务器、与 Arduino IoT Cloud 交互以监测传感器、使用 PIR 传感器通过 IFTTT 创建安全警报，以及使用 MQTT 制作基于云的呼叫系统等项目。我们提供了逐步指南来实现这些及其他联网 IoT 项目。
 
-The Bluetooth functionality enables localized wireless projects such as exchanging messages on an LCD screen, monitoring temperature and humidity data from sensors on a smartphone app. 
+蓝牙功能可实现本地无线项目，例如在 LCD 屏幕上交换消息、在智能手机应用上监测来自传感器的温度和湿度数据。
 
 .. toctree::
    :maxdepth: 1

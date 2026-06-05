@@ -1,37 +1,23 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
-LESSON 18: Controlling RGB LED with an Arduino
+课程 18：使用 Arduino 控制 RGB LED
 ================================================
 
-This lesson demonstrates how to use an RGB LED with an Arduino to create different colors by combining red, green, and blue light, building on previous lessons about controlling LEDs and using the Arduino's PWM capabilities. Here’s a brief overview of what you will learn:
+本课程演示如何使用 Arduino 控制 RGB LED，通过混合红、绿、蓝三种光来创建不同颜色，建立在之前关于控制 LED 和使用 Arduino 的 PWM 功能的课程基础上。以下是您将学习的内容的简要概述：
 
-1. **Reviewing Previous Homework**:Recapping the assignment from Lesson 17, which involved creating a circuit with three LEDs (red, yellow, and green) and controlling them based on user input.
-2. **Setting Up the Circuit**:Detailed instructions on how to correctly connect an RGB LED to the Arduino. The RGB LED has four legs: one common ground and three for the red, green, and blue LEDs. Each color channel requires a separate current-limiting resistor to prevent crosstalk and ensure proper operation.
-3. **Writing the Code**:Step-by-step coding instructions to:Define the pins for each color channel of the RGB LED.Set up the serial monitor for user input.Use digital write commands to turn on and off each color channel.Convert user input to lowercase to handle different cases.
-4. **Practical Applications**:Examples of controlling the RGB LED to produce various colors by turning on different combinations of the red, green, and blue LEDs. 
-5. **Homework Assignment**:Extending the project by asking the user for specific colors, including red, green, blue, cyan, magenta, yellow, orange, and white. 
+1. **回顾之前的课后作业** ：回顾课程 17 的作业，其中涉及创建一个包含三个 LED（红色、黄色和绿色）的电路，并根据用户输入控制它们。
+2. **搭建电路** ：关于如何正确将 RGB LED 连接到 Arduino 的详细说明。RGB LED 有四个引脚：一个公共接地端和三个用于红、绿、蓝 LED 的引脚。每个颜色通道需要一个单独的限流电阻，以防止串扰并确保正常运行。
+3. **编写代码** ：逐步编码指导：定义 RGB LED 每个颜色通道的引脚，设置串口监视器以接收用户输入，使用数字写入命令打开和关闭每个颜色通道，将用户输入转换为小写以处理不同的大小写情况。
+4. **实际应用** ：通过打开红、绿、蓝 LED 的不同组合来控制 RGB LED 产生各种颜色的示例。
+5. **课后作业** ：通过要求用户指定颜色来扩展项目，包括红色、绿色、蓝色、青色、品红色、黄色、橙色和白色。
 
-**Video**
+**视频**
 
 .. raw:: html
 
-    <iframe width="100%" 
+    <iframe width="100%"
         style="aspect-ratio: 16/9; max-width: 100%;"
-        src="https://www.youtube.com/embed/ASHBCGGeEPk?si=o9Q1tTC1X1B9teef" 
-        title="YouTube video player" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        src="https://www.youtube.com/embed/ASHBCGGeEPk?si=o9Q1tTC1X1B9teef"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen>
     </iframe>

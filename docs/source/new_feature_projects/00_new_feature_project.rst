@@ -1,39 +1,25 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _new_projects:
 
-Explore Arduino® UNO R4 WiFi
+探索 Arduino UNO R4 WiFi
 ========================================
 
 .. image:: img/unor4wifi.webp
     :align: center
     :width: 50%
 
-The **Arduino Uno R4 WiFi board** is the latest addition to the Arduino family, offering a suite of advanced features while maintaining the robustness and versatility you've come to expect. This board brings a significant boost in processing power, thanks to its 32-bit Arm® Cortex®-M4 microcontroller, and it preserves compatibility with the standard form factor and shield stackability of the UNO series.
+**Arduino Uno R4 WiFi 板** 是 Arduino 家族的最新成员，在保持您已习惯的稳健性和多功能性的同时，提供了一系列高级功能。得益于其 32 位 Arm Cortex-M4 微控制器，该板的处理能力显著提升，并且它保持了 UNO 系列的标准外形尺寸和盾板堆叠兼容性。
 
-**What's new about Uno R4 compared to R3?**
+**Uno R4 相较于 R3 有哪些新特性？**
 
-- **Enhanced Processing**: Transition from an 8-bit AVR to a 32-bit Arm® Cortex®-M4 microcontroller.
-- **Memory Upgrade**: Elevate your projects with 32KB of SRAM and 256KB of NAND flash memory.
-- **Advanced Connectivity**: Experience seamless connectivity with USB-C and Wi-Fi.
-- **Improved Performance**: Accomplish more with faster processing and greater memory capacity.
-- **Flexible Power Supply**: Power up your board with up to 24V for broader project possibilities.
-  
-In addition to the above upgrades, the R4 WiFi also introduces the following new features:
+- **增强处理** ：从 8 位 AVR 过渡到 32 位 Arm Cortex-M4 微控制器。
+- **内存升级** ：以 32KB SRAM 和 256KB NAND 闪存提升您的项目。
+- **先进连接** ：通过 USB-C 和 Wi-Fi 体验无缝连接。
+- **性能提升** ：通过更快的处理和更大的内存容量完成更多任务。
+- **灵活供电** ：使用高达 24V 的电压为您的板供电，为更广泛的项目提供可能性。
 
-**New Features**
+除了上述升级，R4 WiFi 还引入了以下新功能：
+
+**新功能**
 
 .. toctree::
     :maxdepth: 2
@@ -46,14 +32,14 @@ In addition to the above upgrades, the R4 WiFi also introduces the following new
     06_14_bit_adc
     07_dac
 
-- **Wi-Fi®**: Provides wireless connectivity ideal for various IoT projects, enabled by the ESP32-S3 module.
-- **Bluetooth®**: Offers short-range wireless communication between devices, also powered by the ESP32-S3 module.
-- **Built-in Real-Time Clock (RTC)**: Ideal for time-sensitive applications. Includes additional pins for battery-powered operation and an "OFF" pin to turn off the board while keeping the RTC running.
-- **12x8 LED Matrix**: A simple way to display data or create animations.
-- **DAC Channel**: Achieve precise analog outputs, perfect for audio projects.
-- **14-bit ADC**: The upgraded Analog-to-Digital Converter (ADC) in the Arduino Uno R4 offers a resolution of up to 14 bits. This allows for more precise and detailed reading of analog signals compared to the 10-bit resolution of previous versions. 
-- **HID Support**: Simulate a mouse or keyboard via USB with built-in HID support.
-- **CAN Protocol Support**: Extend your reach into automotive and industrial applications.
+- **Wi-Fi** ：由 ESP32-S3 模块提供支持，为各种 IoT 项目提供无线连接。
+- **蓝牙** ：提供设备之间的短距离无线通信，也由 ESP32-S3 模块驱动。
+- **内置实时时钟 (RTC)** ：非常适合对时间敏感的应用。包括用于电池供电运行的附加引脚和一个"OFF"引脚，可在保持 RTC 运行的同时关闭板。
+- **12x8 LED 矩阵** ：一种显示数据或创建动画的简单方法。
+- **DAC 通道** ：实现精确的模拟输出，非常适合音频项目。
+- **14 位 ADC** ：Arduino Uno R4 中升级的模数转换器 (ADC) 提供高达 14 位的分辨率。与先前版本的 10 位分辨率相比，这允许更精确和详细地读取模拟信号。
+- **HID 支持** ：通过内置 HID 支持通过 USB 模拟鼠标或键盘。
+- **CAN 协议支持** ：将您的应用扩展到汽车和工业领域。
 
 .. toctree::
     :maxdepth: 2

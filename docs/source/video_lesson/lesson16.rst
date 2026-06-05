@@ -1,40 +1,26 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
-LESSON 16: Understanding If Statements and Conditionals
+课程 16：理解 If 语句和条件判断
 =========================================================
 
-This lesson demonstrates how to use if statements and conditionals to execute code based on specific conditions using the Arduino. Here’s a brief overview of what you will learn:
+本课程演示如何使用 if 语句和条件判断，根据特定条件使用 Arduino 执行代码。以下是您将学习的内容的简要概述：
 
-1. **Reviewing Previous Homework**:Recapping the assignment from Lesson 15, which involved controlling the brightness of an LED by getting input from the user on the serial monitor.
-2. **Setting Up the Circuit**:Instructions on how to correctly connect an LED and a resistor to the Arduino, ensuring that each component is properly configured for the experiment.
-3. **Writing the Code**:Step-by-step coding instructions to:Get a number from the user.Check if the number is positive, negative, or zero using if statements.Provide feedback to the user based on the input.
-4. **Using If Statements and Conditionals**:Explanation of if statements and conditionals, which are used to execute code only if certain conditions are met. This includes:Checking if a number is positive, negative, or zero.Implementing compound conditionals using logical operators such as AND (&&) and OR (||).
-5. **Exponential Scaling**:An example of how to apply exponential scaling in a different context to ensure smooth changes in perceived outcomes based on user inputs.
-6. **Debugging Tips**:Guidance on troubleshooting common issues such as incorrect logical conditions or unexpected behaviors in the code. Emphasis on the importance of handling boundary conditions correctly.
-7. **Practical Applications**:Examples of more complex conditional statements to check for even and odd numbers, handle different cases for string inputs, and convert string inputs to a consistent case for comparison.
-8. **Homework Assignment**:creating a program that asks the user which LED (red, green, or yellow) they want to turn on and then turns on the selected LED. This reinforces the concepts learned and encourages students to build and test circuits.
+1. **回顾之前的课后作业** ：回顾课程 15 的作业，其中涉及通过从串口监视器获取用户输入来控制 LED 的亮度。
+2. **搭建电路** ：关于如何正确连接 LED 和电阻到 Arduino 的说明，确保每个元件都正确配置用于实验。
+3. **编写代码** ：逐步编码指导：从用户处获取一个数字，使用 if 语句检查该数字是正数、负数还是零，根据输入向用户提供反馈。
+4. **使用 If 语句和条件判断** ：解释 if 语句和条件判断，它们用于仅在满足特定条件时执行代码。这包括：检查数字是正数、负数还是零，使用逻辑运算符如 AND (&&) 和 OR (||) 实现复合条件判断。
+5. **指数缩放** ：一个在不同上下文中应用指数缩放的示例，以确保基于用户输入的感知结果平滑变化。
+6. **调试技巧** ：关于排查常见问题的指导，例如不正确的逻辑条件或代码中的意外行为。强调正确处理边界条件的重要性。
+7. **实际应用** ：更复杂的条件语句示例，用于检查偶数和奇数、处理字符串输入的不同情况、以及将字符串输入转换为一致的大小写以进行比较。
+8. **课后作业** ：创建一个程序，询问用户想要打开哪个 LED（红色、绿色或黄色），然后打开所选 LED。这巩固了所学概念，并鼓励学生搭建和测试电路。
 
-**Video**
+**视频**
 
 .. raw:: html
 
-    <iframe width="100%" 
+    <iframe width="100%"
         style="aspect-ratio: 16/9; max-width: 100%;"
-        src="https://www.youtube.com/embed/H5OlCuUWEg8?si=o9Q1tTC1X1B9teef" 
-        title="YouTube video player" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        src="https://www.youtube.com/embed/H5OlCuUWEg8?si=o9Q1tTC1X1B9teef"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen>
     </iframe>

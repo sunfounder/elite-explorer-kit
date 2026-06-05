@@ -1,20 +1,6 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _iot_Bluetooth_lcd:
 
-Bluetooth Message Box
+蓝牙消息盒子
 =============================
 
 .. raw:: html
@@ -24,35 +10,35 @@ Bluetooth Message Box
       Your browser does not support the video tag.
    </video>
 
-This project receives messages and displays them on an LCD screen.
+此项目接收消息并在 LCD 屏幕上显示。
 
-You can use it as a family message board, reminding family members who haven't left yet to remember to take their keys.
+您可以将其用作家庭留言板，提醒尚未出门的家人记得带钥匙。
 
-**Required Components**
+**所需元件**
 
-In this project, we need the following components. 
+在这个项目中，我们需要以下元件。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+购买整套套件会更方便，以下是链接：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - Elite Explorer Kit
+    *   - 名称
+        - 套件所含项目
+        - 链接
+    *   - Elite Explorer 套件
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+您也可以从下面的链接单独购买。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - 元件介绍
+        - 购买链接
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -63,13 +49,13 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_i2c_lcd1602`
         - |link_i2clcd1602_buy|
 
-**Wiring**
+**接线**
 
 .. image:: img/07_lightblue_lcd_bb.png
     :width: 100%
     :align: center
 
-**Schematic**
+**原理图**
 
 .. image:: img/07_lightblue_lcd_schematic.png
    :width: 80%
@@ -79,13 +65,13 @@ You can also buy them separately from the links below.
 
    <br/>
 
-**Generate the UUID**
+**生成 UUID**
 
-UUIDs play a crucial role in BLE communication, ensuring the uniqueness of devices and accuracy of data exchange between them. You need to customize UUIDs to create your own BLE services and characteristics to meet specific application requirements. (Here, we need to create a characteristic that supports text input.)
+UUID 在 BLE 通信中起着至关重要的作用，确保设备的唯一性和它们之间数据交换的准确性。您需要自定义 UUID 来创建自己的 BLE 服务和特性，以满足特定的应用需求。（这里，我们需要创建一个支持文本输入的特性。）
 
-1. Use the `Online UUID Generator Tool <https://www.uuidgenerator.net/version4>`_ to create UUIDs unique to you to avoid UUID conflicts.
+1. 使用 `在线 UUID 生成器工具 <https://www.uuidgenerator.net/version4>`_ 创建您独有的 UUID，以避免 UUID 冲突。
 
-2. Generate two version 4 UUIDs.
+2. 生成两个版本 4 的 UUID。
 
    .. image:: img/07_uuid_1.png
       :width: 70%
@@ -94,46 +80,46 @@ UUIDs play a crucial role in BLE communication, ensuring the uniqueness of devic
 
       <br/><br/>
 
-3. Copy them and replace the two UUIDs in your code.
+3. 复制它们并替换代码中的两个 UUID。
 
    .. code-block:: arduino
-   
+
        #define SERVICE_UUID "uuid1"
        #define CHARACTERISTIC_UUID "uuid2"
 
-**Install the Library**
+**安装库**
 
-``ArduinoBLE.h``: Used for handling Bluetooth Low Energy (BLE) communication.
-``LiquidCrystal_I2C.h``: Used to control a 16x2 character LCD screen with an I2C interface.
+``ArduinoBLE.h``：用于处理低功耗蓝牙 (BLE) 通信。
+``LiquidCrystal_I2C.h``：用于控制带有 I2C 接口的 16x2 字符 LCD 屏幕。
 
-**Run the Code**
+**运行代码**
 
 .. note::
 
-    * You can open the file ``07_lightblue_lcd.ino`` under the path of ``elite-explorer-kit-main\iot_project\07_lightblue_lcd`` directly.
-    * Or copy this code into Arduino IDE.
+    * 您可以直接打开路径 ``elite-explorer-kit-main\iot_project\07_lightblue_lcd`` 下的 ``07_lightblue_lcd.ino`` 文件。
+    * 或者将这段代码复制到 Arduino IDE 中。
 
-.. note:: 
-      To install the library, use the Arduino Library Manager to search for and install **"ArduinoBLE"** and **"LiquidCrystal I2C"**.
+.. note::
+     要安装库，请使用 Arduino 库管理器搜索并安装 **"ArduinoBLE" ** 和 **"LiquidCrystal I2C"** 。
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/958c37c2-a897-4c4c-b6c1-0e7fea67c7b1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-**How to play?**
+**如何操作？**
 
-To interact with the services and characteristics created in this sketch, you should use a generic Bluetooth® Low Energy central app like LightBlue (available for iOS and Android) or nRF Connect (for Android).
+要与本 sketch 中创建的服务和特性进行交互，您应使用通用的蓝牙低功耗中心应用程序，如 LightBlue（适用于 iOS 和 Android）或 nRF Connect（适用于 Android）。
 
-Let's use LightBlue as an example to demonstrate how to control Arduino's LED via Bluetooth.
+让我们以 LightBlue 为例，演示如何通过蓝牙控制 Arduino 的 LED。
 
-1. Download the LightBlue app from the App Store (for iOS) or Google Play (for Android).
+1. 从 App Store（iOS）或 Google Play（Android）下载 LightBlue 应用程序。
 
    .. image:: img/07_lightblue.png
 
-2. Connecting Arduino with Your Smartphone via Bluetooth
+2. 通过蓝牙将 Arduino 与智能手机连接
 
-   Go to your Bluetooth settings and locate the device named "UNO R4 BLE." Connect to it.
+   转到蓝牙设置，找到名为 "UNO R4 BLE" 的设备。连接到它。
 
    .. image:: img/07_iot_ble_01.jpg
       :width: 50%
@@ -142,57 +128,57 @@ Let's use LightBlue as an example to demonstrate how to control Arduino's LED vi
 
       <br/><br/>
 
-3. Interacting with Arduino via Bluetooth Using LightBlue
+3. 使用 LightBlue 通过蓝牙与 Arduino 交互
 
-   Launch LightBlue and tap on the **Bonded** tab at the bottom of the interface. Here, you'll see a list of BLE devices that your smartphone has previously paired with. Locate **UNO R4 BLE** and tap **CONNECT**.
+   启动 LightBlue，点击界面底部的 **Bonded ** 选项卡。在这里，您将看到智能手机之前配对过的 BLE 设备列表。找到 **UNO R4 BLE ** 并点击 **CONNECT** 。
 
    .. image:: img/07_iot_ble_02.jpg
 
-   Once connected, you'll gain access to detailed information about the Bluetooth device. Scroll down to find your service UUID and your Characteristic UUID.
+   连接后，您将能够访问蓝牙设备的详细信息。向下滚动找到您的服务 UUID 和您的特性 UUID。
 
-   Tap on the Characteristic. You'll notice that this Characteristic is both readable and writable, allowing you to both read from and write to it.
+   点击该特性。您会注意到该特性既可读又可写，允许您对其进行读写。
 
-   Continue scrolling to the "Data format" section and change it to UTF-8 String.
-   Enter text in the text box and click write. The message you entered will appear on the LCD.
+   继续滚动到 "Data format" 部分，将其更改为 UTF-8 String。
+   在文本框中输入文本并点击 write。您输入的消息将出现在 LCD 上。
 
    .. image:: img/07_iot_ble_03.jpg
 
-**How it works?**
+**工作原理**
 
-Here are the main parts of the code and explanations of their functions:
+以下是代码的主要部分及其功能说明：
 
-1. Include the required libraries:
+1. 包含所需的库：
 
-   * ``ArduinoBLE.h``: Used for handling BLE communication.
-   * ``Wire.h``: Used for I2C communication.
-   * ``LiquidCrystal_I2C.h``: Used to control a 16x2 character LCD screen with I2C interface.
+   * ``ArduinoBLE.h``：用于处理 BLE 通信。
+   * ``Wire.h``：用于 I2C 通信。
+   * ``LiquidCrystal_I2C.h``：用于控制带有 I2C 接口的 16x2 字符 LCD 屏幕。
 
-2. Define a BLE service and a BLE characteristic:
+2. 定义一个 BLE 服务和一个 BLE 特性：
 
-   * Use the ``BLEService`` class to define a BLE service and assign it a unique UUID.
-   * Use the ``BLECharacteristic`` class to define a BLE characteristic, assign it a unique UUID, and give it read (``BLERead``) and write (``BLEWrite``) permissions.
-   * Create a character array ``stringValue`` as the initial value of the characteristic.
+   * 使用 ``BLEService`` 类定义一个 BLE 服务，并为其分配一个唯一的 UUID。
+   * 使用 ``BLECharacteristic`` 类定义一个 BLE 特性，为其分配一个唯一的 UUID，并赋予读（``BLERead``）和写（``BLEWrite``）权限。
+   * 创建一个字符数组 ``stringValue`` 作为特性的初始值。
 
-3. Initialize a 16x2 character LCD screen (LCD):
+3. 初始化一个 16x2 字符 LCD 屏幕 (LCD)：
 
-   * Use the ``LiquidCrystal_I2C`` class to initialize an LCD, specifying the I2C address (0x27) and the number of rows and columns (16x2).
-   * Turn on the backlight of the LCD, clear the screen, move the cursor to the start of the first row, and display "Bluetooth LCD."
+   * 使用 ``LiquidCrystal_I2C`` 类初始化一个 LCD，指定 I2C 地址 (0x27) 以及行数和列数 (16x2)。
+   * 打开 LCD 的背光，清屏，将光标移动到第一行的起始位置，并显示 "Bluetooth LCD"。
 
-4. Perform initialization in the ``setup()`` function:
+4. 在 ``setup()`` 函数中执行初始化：
 
-   * Initialize serial communication.
-   * Initialize the BLE module, and if initialization fails, enter an infinite loop.
-   * Set the local name and service UUID for the BLE peripheral.
-   * Add the BLE characteristic to the BLE service.
-   * Start advertising the BLE service so that central devices can discover and connect to it.
-   * Initialize the LCD.
+   * 初始化串行通信。
+   * 初始化 BLE 模块，如果初始化失败，则进入一个无限循环。
+   * 设置 BLE 外设的本地名称和服务 UUID。
+   * 将 BLE 特性添加到 BLE 服务中。
+   * 开始广播 BLE 服务，以便中心设备可以发现并连接到它。
+   * 初始化 LCD。
 
-5. The ``loop()`` function:
+5. ``loop()`` 函数：
 
-   * Check if there is a central device connected to the BLE peripheral by calling ``BLE.central()``. If a central device is connected, enter the connection handling logic.
-   * In the connected state, check if data has been written to the BLE characteristic by checking ``boxCharacteristic.written()``.
-   * If data has been written, get the length of the written data using ``boxCharacteristic.valueLength()`` and create a byte array ``buffer`` to store the written data.
-   * Use ``boxCharacteristic.readValue()`` to read data from the BLE characteristic into the ``buffer``.
-   * Add a null character ``'\0'`` to the end of the ``buffer`` to convert it to a string.
-   * Print the received message to the serial monitor and display it on the LCD.
-   * Continue waiting for the next central device to connect after the central device disconnects.
+   * 通过调用 ``BLE.central()`` 检查是否有中心设备连接到 BLE 外设。如果有中心设备连接，则进入连接处理逻辑。
+   * 在连接状态下，通过检查 ``boxCharacteristic.written()`` 来检查是否已向 BLE 特性写入数据。
+   * 如果已写入数据，使用 ``boxCharacteristic.valueLength()`` 获取写入数据的长度，并创建一个字节数组 ``buffer`` 来存储写入的数据。
+   * 使用 ``boxCharacteristic.readValue()`` 将 BLE 特性中的数据读取到 ``buffer`` 中。
+   * 在 ``buffer`` 的末尾添加一个空字符 ``'\0'``，将其转换为字符串。
+   * 将接收到的消息打印到串口监视器，并在 LCD 上显示。
+   * 在中心设备断开连接后，继续等待下一个中心设备连接。

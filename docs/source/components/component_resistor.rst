@@ -1,56 +1,42 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _cpn_resistor:
 
-Resistor
+电阻
 ============
 
 .. image:: img/resistor.png
     :width: 300
 
-Resistor is an electronic element that can limit the branch current. 
-A fixed resistor is a kind of resistor whose resistance cannot be changed, while that of a potentiometer or a variable resistor can be adjusted. 
+电阻是一种能够限制支路电流的电子元件。
+固定电阻是其阻值不能改变的电阻，而电位器或可变电阻的阻值可以调节。
 
-Two generally used circuit symbols for resistor. Normally, the resistance is marked on it. So if you see these symbols in a circuit, it stands for a resistor. 
+两种常用的电阻电路符号。通常，阻值标记在上面。因此，如果您在电路中看到这些符号，它代表一个电阻。
 
 .. image:: img/resistor_symbol.png
     :width: 400
 
-**Ω** is the unit of resistance and the larger units include KΩ, MΩ, etc. 
-Their relationship can be shown as follows: 1 MΩ=1000 KΩ, 1 KΩ = 1000 Ω. Normally, the value of resistance is marked on it. 
+**Ω** 是电阻的单位，较大的单位包括KΩ、MΩ等。
+它们之间的关系如下所示：1 MΩ=1000 KΩ, 1 KΩ = 1000 Ω。通常，电阻的阻值标记在其上。
 
-When using a resistor, we need to know its resistance first. Here are two methods: you can observe the bands on the resistor, or use a multimeter to measure the resistance. You are recommended to use the first method as it is more convenient and faster. 
+使用电阻时，首先需要知道其阻值。有两种方法：您可以观察电阻上的色环，或者使用万用表测量阻值。建议使用第一种方法，因为它更方便快捷。
 
 .. image:: img/resistance_card.jpg
 
-As shown in the card, each color stands for a number. 
+如卡片所示，每种颜色代表一个数字。
 
 .. list-table::
 
-   * - Black
-     - Brown
-     - Red
-     - Orange
-     - Yellow
-     - Green
-     - Blue
-     - Violet
-     - Grey
-     - White
-     - Gold
-     - Silver
+   * - 黑色
+     - 棕色
+     - 红色
+     - 橙色
+     - 黄色
+     - 绿色
+     - 蓝色
+     - 紫色
+     - 灰色
+     - 白色
+     - 金色
+     - 银色
    * - 0
      - 1
      - 2
@@ -64,48 +50,48 @@ As shown in the card, each color stands for a number.
      - 0.1
      - 0.01
 
-The 4- and 5-band resistors are frequently used, on which there are 4 and 5 chromatic bands. 
+4环和5环电阻经常使用，上面分别有4条和5条彩色色环。
 
-Normally, when you get a resistor, you may find it hard to decide which end to start for reading the color. 
-The tip is that the gap between the 4th and 5th band will be comparatively larger.
+通常，拿到电阻时，您可能难以确定从哪一端开始读取颜色。
+技巧是：第4环和第5环之间的间隔相对较大。
 
-Therefore, you can observe the gap between the two chromatic bands at one end of the resistor; 
-if it's larger than any other band gaps, then you can read from the opposite side. 
+因此，您可以观察电阻一端两条色环之间的间隔；
+如果它比其他任何色环间隔都大，那么您可以从相反的一端开始读取。
 
-Let’s see how to read the resistance value of a 5-band resistor as shown below.
+让我们看看如何阅读下面所示的5环电阻的阻值。
 
 .. image:: img/220ohm.jpg
     :width: 500
 
-So for this resistor, the resistance should be read from left to right. 
-The value should be in this format: 1st Band 2nd Band 3rd Band x 10^Multiplier (Ω) and the permissible error is ±Tolerance%. 
-So the resistance value of this resistor is 2(red) 2(red) 0(black) x 10^0(black) Ω = 220 Ω, 
-and the permissible error is ± 1% (brown). 
+因此，对于这个电阻，应从左到右读取阻值。
+数值格式应为：第1环 第2环 第3环 x 10^倍数（Ω），允许误差为±公差百分比。
+所以这个电阻的阻值是2(红) 2(红) 0(黑) x 10^0(黑) Ω = 220 Ω，
+允许误差为 ± 1%（棕色）。
 
-.. list-table::Common resistor color band
+.. list-table::常见电阻色环
     :header-rows: 1
 
-    * - Resistor 
-      - Color Band  
-    * - 10Ω   
-      - brown black black silver brown
-    * - 100Ω   
-      - brown black black black brown
-    * - 220Ω 
-      - red red black black brown
-    * - 330Ω 
-      - orange orange black black brown
-    * - 1kΩ 
-      - brown black black brown brown
-    * - 2kΩ 
-      - red black black brown brown
-    * - 5.1kΩ 
-      - green brown black brown brown
-    * - 10kΩ 
-      - brown black black red brown 
-    * - 100kΩ 
-      - brown black black orange brown 
-    * - 1MΩ 
-      - brown black black green brown 
+    * - 电阻
+      - 色环
+    * - 10Ω
+      - 棕黑黑银棕
+    * - 100Ω
+      - 棕黑黑黑棕
+    * - 220Ω
+      - 红红黑黑棕
+    * - 330Ω
+      - 橙橙黑黑棕
+    * - 1kΩ
+      - 棕黑黑棕棕
+    * - 2kΩ
+      - 红黑黑棕棕
+    * - 5.1kΩ
+      - 绿棕黑棕棕
+    * - 10kΩ
+      - 棕黑黑红棕
+    * - 100kΩ
+      - 棕黑黑橙棕
+    * - 1MΩ
+      - 棕黑黑绿棕
 
-You can learn more about resistor from Wiki: `Resistor - Wikipedia <https://en.wikipedia.org/wiki/Resistor>`_.
+您可以从维基百科了解更多关于电阻的信息：`电阻 - 维基百科 <https://en.wikipedia.org/wiki/Resistor>`_.

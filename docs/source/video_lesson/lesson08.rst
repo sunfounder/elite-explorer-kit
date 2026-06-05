@@ -1,37 +1,23 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
-LESSON 8: Using Variables in Arduino
+课程 8：在 Arduino 中使用变量
 ======================================
 
-This lesson introduces the concept of using variables in Arduino programming, enhancing flexibility and maintainability of code. Here’s a brief overview of what you will learn:
+本课程介绍了在 Arduino 编程中使用变量的概念，增强了代码的灵活性和可维护性。以下是您将学习的内容的简要概述：
 
-1. **Setup and Introduction**: Setting up the necessary components for an Arduino project using the SunFounder kit, preparing for a practical programming session.
-2. **Understanding Variables**: Learning why and how to use variables in Arduino programs to replace hard-coded numbers, which enhances code flexibility and maintainability.
-3. **Practical Example with LED and Morse Code**: Implementing a Morse code SOS signal using variables to control the LED states and timings, showing practical application of variables.
-4. **Improving Code with Variables**: Demonstrating how to improve and simplify program modifications by using variables instead of fixed values, which saves time and reduces errors in larger programs.
-5. **Homework Assignment**: Applying the concepts learned to create a circuit with two LEDs (red and green), where the green LED blinks quickly five times and the red LED blinks slowly ten times, reinforcing the use of variables in controlling different aspects of a program.
+1. **设置和介绍** ：使用 SunFounder 套件设置 Arduino 项目所需的组件，为实践编程课程做准备。
+2. **理解变量** ：学习为什么以及如何在 Arduino 程序中使用变量来替代硬编码的数字，从而增强代码的灵活性和可维护性。
+3. **LED 和摩斯电码的实践示例** ：使用变量实现摩斯电码 SOS 信号，以控制 LED 的状态和时间，展示变量的实际应用。
+4. **使用变量改进代码** ：演示如何通过使用变量替代固定值来改进和简化程序修改，在大型程序中节省时间并减少错误。
+5. **课后作业** ：应用所学概念，创建一个包含两个 LED（红色和绿色）的电路，其中绿色 LED 快速闪烁五次，红色 LED 慢速闪烁十次，强化使用变量控制程序不同方面的应用。
 
-**Video**
+**视频**
 
 .. raw:: html
 
-    <iframe width="100%" 
+    <iframe width="100%"
         style="aspect-ratio: 16/9; max-width: 100%;"
-        src="https://www.youtube.com/embed/Ucvwq5hFc3U?si=o9Q1tTC1X1B9teef" 
-        title="YouTube video player" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        src="https://www.youtube.com/embed/Ucvwq5hFc3U?si=o9Q1tTC1X1B9teef"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen>
     </iframe>

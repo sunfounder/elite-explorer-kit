@@ -1,84 +1,66 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
-How to upload Sketch to the Board?
+如何将项目上传到开发板？
 =============================================
 
-In this section, you will learn how to upload the sketch created previously to the Arduino board, as well as learn about some considerations.
+在本节中，你将学习如何将之前创建的项目上传到 Arduino 开发板，并了解一些注意事项。
 
-**1. Choose Board and port**
+**1. 选择开发板和端口**
 
-Arduino development boards usually come with a USB cable. You can use it to connect the board to your computer.
+Arduino 开发板通常附带一根 USB 数据线。你可以用它将开发板连接到电脑。
 
-Select the correct **Board** and **Port** in the Arduino IDE. Normally, Arduino boards are recognized automatically by the computer and assigned a port, so you can select it here.
+在 Arduino IDE 中选择正确的 **Board** （开发板）和 **Port** （端口）。通常，Arduino 开发板会被电脑自动识别并分配一个端口，你可以在此选择它。
 
     .. image:: img/04_upload_1.png
         :width: 90%
 
 
-If your board is already plugged in, but not recognized, check if the **INSTALLED** logo appears in the **Arduino UNO R4 Boards** section of the **Boards Manager**, if not, please scroll down a bit and click on **INSTALL**.
+如果开发板已插入但未被识别，请在 **Board Manager** （开发板管理器）中的 **Arduino UNO R4 Boards** 部分检查是否显示 **INSTALLED** （已安装）标识。如果没有，请向下滚动并点击 **INSTALL** （安装）。
 
-Search **"UNO R4"** in **Boards Manager** and check if the corresponding library is installed.
+在 **Board Manager** （开发板管理器）中搜索 **"UNO R4"** ，检查相应的库是否已安装。
 
     .. image:: img/04_upload_2.png
         :width: 90%
 
-Reopening the Arduino IDE and re-plugging the Arduino board will fix most of the problems. You can also click **Tools** -> **Board** or **Port** to select them.
+重新打开 Arduino IDE 并重新插拔 Arduino 开发板可以解决大多数问题。你也可以点击 **Tools** -> **Board** 或 **Port** 进行选择。
 
 
-**2. Verify the Sketch**
+**2. Verify 项目**
 
-After clicking the Verify button, the sketch will be compiled to see if there are any errors.
+点击 Verify 按钮后，项目将被编译以检查是否存在错误。
 
     .. image:: img/04_upload_3.png
         :width: 90%
 
-You can use it to find mistakes if you delete some characters or type a few letters by mistake. From the message bar, you can see where and what type of errors occurred. 
+如果你不小心删除了一些字符或打错了几个字母，可以使用它来查找错误。从消息栏中，你可以看到错误发生的位置和类型。
 
     .. image:: img/04_upload_4.png
         :width: 90%
 
-If there are no errors, you will see a message like the one below.
+如果没有错误，你将看到如下所示的消息。
 
     .. image:: img/04_upload_5.png
         :width: 90%
 
 
-**3. Upload sketch**
+**3. Upload 项目**
 
-After completing the above steps, click the **Upload** button to upload this sketch to the board.
+完成上述步骤后，点击 **Upload** （上传）按钮将项目上传到开发板。
 
     .. image:: img/04_upload_6.png
         :width: 90%
 
-If successful, you will be able to see the following prompt.
+如果上传成功，你将看到以下提示。
 
     .. image:: img/04_upload_7.png
         :width: 90%
 
-At the same time, the on-board LED blink.
+同时，开发板上的 LED 会闪烁。
 
 .. image:: img/04_upload_8.png
     :width: 400
     :align: center
 
 .. raw:: html
-    
+
     <br/>
 
-The Arduino board will automatically run the sketch after power is applied after the sketch is uploaded. The running program can be overwritten by uploading a new sketch.
-
-
-
-
+项目上传后，Arduino 开发板在通电后会自动运行该项目。可以通过上传新的项目来覆盖正在运行的程序。

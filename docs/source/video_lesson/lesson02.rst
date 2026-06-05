@@ -1,41 +1,27 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
-LESSON 2: How to Build Circuits With a Breadboard
+课程 2：如何使用面包板搭建电路
 ===================================================
 
-This lesson is delivered by Paul Mcarter. It's designed to enhance your skills in creating and understanding electronic circuits using a breadboard. Here’s what you will learn:
+本课程由 Paul Mcarter 讲授。旨在提升你使用面包板创建和理解电子电路的技能。以下是您将学习的内容：
 
-1. **Understanding the Circuit Design**: How to visualize and plan your circuit with a schematic representation, ensuring correct assembly and functionality.
-2. **Building the Circuit**: Step-by-step guidance on constructing a circuit to blink an external LED using pin 13 of the Arduino.
-3. **Implementing the Resistor**: The importance of using a resistor to limit current in your circuit, including how to select the correct resistor value using Ohm’s Law.
-4. **Configuring the Breadboard**: Detailed explanation of how a breadboard functions, including how to use it to connect components effectively.
-5. **Coding for Control**: Instructions on programming the Arduino to control the blinking pattern of the LED to signal SOS in Morse code.
-6. **Homework Assignment**: Your task is to complete the circuit setup, write the program for the SOS signal, and share your project on YouTube as a practical demonstration of your learning.
+1. **理解电路设计** ：如何通过电路原理图来可视化和规划你的电路，确保正确的组装和功能。
+2. **搭建电路** ：构建电路的逐步指导，使用 Arduino 的引脚 13 来控制外部 LED 闪烁。
+3. **使用电阻** ：在电路中使用电阻限制电流的重要性，包括如何使用欧姆定律选择正确的电阻值。
+4. **配置面包板** ：详细解释面包板的工作原理，包括如何有效地使用它来连接元件。
+5. **编程控制** ：编写 Arduino 程序，控制 LED 以摩斯电码的方式闪烁 SOS 信号的指导。
+6. **课后作业** ：你的任务是完成电路搭建，编写 SOS 信号程序，并在 YouTube 上分享你的项目作为实践演示。
 
 
 
-**Video**
+**视频**
 
 .. raw:: html
 
-    <iframe width="100%" 
+    <iframe width="100%"
         style="aspect-ratio: 16/9; max-width: 100%;"
-        src="https://www.youtube.com/embed/S1NJJRpWHpA?si=o9Q1tTC1X1B9teef" 
-        title="YouTube video player" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        src="https://www.youtube.com/embed/S1NJJRpWHpA?si=o9Q1tTC1X1B9teef"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen>
     </iframe>
 
@@ -43,33 +29,33 @@ This lesson is delivered by Paul Mcarter. It's designed to enhance your skills i
 
 
 
-**SUPPLEMENTAL Lesson**
+**补充课程**
 
-This lesson is a supplemental tutorial addressing common confusions from a previous lesson. Here's a concise overview:
+本课程是一个补充教程，解答了先前课程中的常见困惑。以下是简要概述：
 
-1. **Clarification Purpose**: This video responds to viewer confusion regarding the selection of a current limiting resistor for an LED in an Arduino project, ensuring no component damage upon activation.
-   
-2. **Basic Concepts and Corrections**: It reiterates the correct process shown in the original lesson but delves deeper to help viewers fully understand the calculations and avoid common mistakes.
-   
-3. **Detailed Explanation on Resistor Calculation**: The tutorial provides an in-depth explanation of calculating the resistor value needed to safely operate an LED without exceeding the current limitations of Arduino Uno R4's digital pins.
-   
-4. **Circuit Analysis and Design Strategy**: It discusses circuit design considerations to prevent potential damage due to current overload, explaining the voltage drop across the diode and resistor and how these affect the total current through the circuit.
-   
-5. **Practical Circuit Design Tips**: The video covers how to design circuits that account for worst-case scenarios, ensuring the Arduino remains protected under all conditions.
-   
-6. **Feedback and Interactive Approach**: The presenter seeks viewer feedback on the utility of supplemental lessons, indicating a responsive and adaptive teaching approach.
+1. **澄清目的** ：本视频回应了观众对于在 Arduino 项目中选择 LED 限流电阻的困惑，确保元件在启动时不会损坏。
 
-This lesson equips beginners with the knowledge to design safer and more effective Arduino projects, emphasizing critical thinking in electronic design.
+2. **基本概念和纠正** ：它重申了原始课程中演示的正确过程，但更深入地帮助观众充分理解计算并避免常见错误。
 
-**Video**
+3. **电阻计算的详细解释** ：本教程深入解释了计算电阻值所需的知识，以安全地操作 LED，同时不超出 Arduino Uno R4 数字引脚的电流限制。
+
+4. **电路分析和设计策略** ：讨论了电路设计考虑因素，以防止因电流过载而造成的潜在损坏，解释了二极管和电阻上的电压降以及它们如何影响电路中的总电流。
+
+5. **实用电路设计技巧** ：视频涵盖了如何设计考虑最坏情况的电路，确保 Arduino 在所有条件下都受到保护。
+
+6. **反馈和互动式教学** ：讲师寻求观众对补充课程实用性的反馈，体现出一种响应式和适应性的教学方法。
+
+本课程使初学者具备设计更安全、更有效的 Arduino 项目的知识，强调电子设计中的批判性思维。
+
+**视频**
 
 .. raw:: html
 
-    <iframe width="100%" 
+    <iframe width="100%"
         style="aspect-ratio: 16/9; max-width: 100%;"
-        src="https://www.youtube.com/embed/_kpiHFGB_ys?si=KpZfDEI0EazFt-4g" 
-        title="YouTube video player" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        src="https://www.youtube.com/embed/_kpiHFGB_ys?si=KpZfDEI0EazFt-4g"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen>
     </iframe>

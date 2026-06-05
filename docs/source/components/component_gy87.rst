@@ -1,37 +1,23 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _cpn_gy87:
 
-GY-87 IMU module
+GY-87 IMU模块
 ============================
 
 .. image:: img/gy87.png
     :align: center
     :width: 40%
 
-The GY-87 sensor module is a high-precision, 10-axis (10DOF) module capable of measuring acceleration, angular velocity, and magnetic field strength across three axes: x, y, and z. It consists of three main sensors: MPU6050, QMC5883L, and BMP180, and communicates via the I2C protocol.
+GY-87传感器模块是一款高精度10轴（10DOF）模块，能够测量x、y、z三个轴上的加速度、角速度和磁场强度。它由三个主要传感器组成：MPU6050、QMC5883L和BMP180，并通过I2C协议进行通信。
 
-The GY-87 sensor module is based on three sensors:
+GY-87传感器模块基于三个传感器：
 
-1. **MPU6050**: This is a 6-axis accelerometer and gyroscope that can measure acceleration and angular velocity in three axes x, y, and z.
-2. **QMC5883L**: This is a 3-axis digital compass that can measure the strength of the magnetic field in three axes x, y, and z.
-3. **BMP180**: This is a barometric temperature and pressure sensor that can measure atmospheric pressure and temperature.
+1. **MPU6050** ：这是一个6轴加速度计和陀螺仪，可以测量x、y、z三个轴上的加速度和角速度。
+2. **QMC5883L** ：这是一个3轴数字罗盘，可以测量x、y、z三个轴上的磁场强度。
+3. **BMP180** ：这是一个气压温度和压力传感器，可以测量大气压和温度。
 
-The MPU6050 measures acceleration and angular velocity in three axes x, y, and z. The QMC5883L measures the strength of the magnetic field in three axes x, y, and z. The BMP180 measures atmospheric pressure and temperature. The data from these sensors are combined to provide accurate information about the orientation of the module in space.
+MPU6050测量x、y、z三个轴上的加速度和角速度。QMC5883L测量x、y、z三个轴上的磁场强度。BMP180测量大气压和温度。这些传感器的数据被结合起来，提供模块在空间中方向的精确信息。
 
-The GY-87 sensor module is commonly used in applications such as drones, robotics, and other projects that require accurate orientation information. It is compatible with Arduino boards and can be easily interfaced with them using the I2C communication protocol.
+GY-87传感器模块常用于无人机、机器人和其他需要精确方向信息的项目中。它与Arduino板兼容，可以使用I2C通信协议轻松连接。
 
 .. .. image:: img/GY-87-SCH.jpg
 ..     :align: center
@@ -41,9 +27,9 @@ The GY-87 sensor module is commonly used in applications such as drones, robotic
 
     <br/>
 
-**Example**
+**示例**
 
-* :ref:`basic_gy87_bmp180` (Basic Project)
-* :ref:`basic_gy87_mpu6050` (Basic Project)
-* :ref:`basic_gy87_qmc5883l` (Basic Project)
-* :ref:`fun_escape` (Fun Project)
+* :ref:`basic_gy87_bmp180` （基础项目）
+* :ref:`basic_gy87_mpu6050` （基础项目）
+* :ref:`basic_gy87_qmc5883l` （基础项目）
+* :ref:`fun_escape` （趣味项目）

@@ -1,43 +1,29 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _cpn_7segment:
 
-7-segment Display
+7段数码管
 ======================
 
 .. image:: img/7-seg.jpg
 
-A 7-segment display is an 8-shaped component which packages 7 LEDs. Each LED is called a segment - when energized, one segment forms part of a numeral to be displayed.
+7段数码管是一种8字形的元件，内部封装了7个LED。每个LED称为一个段——通电时，一个段构成要显示的数字的一部分。
 
-There are two types of pin connection: Common Cathode (CC) and Common Anode (CA). As the name suggests, a CC display has all the cathodes of the 7 LEDs connected when a CA display has all the anodes of the 7 segments connected.
+有两种引脚连接类型：共阴极（CC）和共阳极（CA）。顾名思义，共阴极数码管将所有7个LED的阴极连接在一起，而共阳极数码管将所有7个段的阳极连接在一起。
 
-In this kit, we use the Common Cathode 7-segment display, here is the electronic symbol.
+本套件中使用的是共阴极7段数码管，以下是其电子符号。
 
 .. image:: img/segment_cathode.png
     :width: 800
 
-Each of the LEDs in the display is given a positional segment with one of its connection pins led out from the rectangular plastic package. These LED pins are labeled from "a" through to "g" representing each individual LED. The other LED pins are connected together forming a common pin. So by forward biasing the appropriate pins of the LED segments in a particular order, some segments will brighten and others stay dim, thus showing the corresponding character on the display. 
+数码管中的每个LED都有其位置段，其中一个连接引脚从矩形塑料封装中引出。这些LED引脚标记为"a"到"g"，代表每个独立的LED。另一个LED引脚连接在一起形成一个公共引脚。因此，通过按特定顺序正向偏置相应LED段的引脚，一些段会亮起，而其他段保持暗灭，从而在数码管上显示相应的字符。
 
-**Display Codes** 
+**显示代码**
 
-To help you get to know how 7-segment displays(Common Cathode) display Numbers, we have drawn the following table. Numbers are the number 0-F displayed on the 7-segment display; (DP) GFEDCBA refers to the corresponding LED set to 0 or 1, For example, 00111111 means that DP and G are set to 0, while others are set to 1. Therefore, the number 0 is displayed on the 7-segment display, while HEX Code corresponds to hexadecimal number.
+为了帮助您了解7段数码管（共阴极）如何显示数字，我们绘制了下表。数字是在7段数码管上显示的0-F数字；(DP)GFEDCBA指的是相应LED设置为0或1，例如，00111111表示DP和G设置为0，而其他设置为1。因此，数字0显示在7段数码管上，而HEX代码对应十六进制数。
 
 .. image:: img/segment_code.png
 
-**Example**
+**示例**
 
-* :ref:`basic_7segment` (Basic Project)
-* :ref:`basic_74hc595` (Basic Project)
-* :ref:`fun_digital_dice` (Fun Project)
+* :ref:`basic_7segment` （基础项目）
+* :ref:`basic_74hc595` （基础项目）
+* :ref:`fun_digital_dice` （趣味项目）

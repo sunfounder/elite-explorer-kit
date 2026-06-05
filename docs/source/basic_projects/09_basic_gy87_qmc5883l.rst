@@ -1,53 +1,39 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _basic_gy87_qmc5883l:
 
 QMC5883L
 ==========================
 
-Overview
+概述
 ---------------
 
-In this tutorial, we will explore the GY-87 IMU module, focusing on its QMC5883L magnetometer. The first part of the tutorial guides you through calibrating the QMC5883L magnetometer, which is essential for accurate magnetic field measurements. You will learn how to upload a calibration sketch to Arduino, perform real-time calibration, and apply these settings in your projects. The second part of the tutorial covers initializing the MPU6050 (accelerometer and gyroscope) and QMC5883L on an Arduino Uno using the Adafruit MPU6050 and QMC5883LCompass libraries. You will learn how to read and display sensor data on the Serial Monitor, which is a fundamental skill for applications in navigation, motion tracking, and orientation detection.
+在本教程中，我们将探索 GY-87 IMU 模块，重点介绍其 QMC5883L 磁力计。教程的第一部分将指导您校准 QMC5883L 磁力计，这对于精确的磁场测量至关重要。您将学习如何将校准草图上传到 Arduino，执行实时校准，并在项目中应用这些设置。教程的第二部分介绍如何使用 Adafruit MPU6050 和 QMC5883LCompass 库，在 Arduino Uno 上初始化 MPU6050（加速度计和陀螺仪）和 QMC5883L。您将学习如何读取传感器数据并在串口监视器上显示，这是导航、运动追踪和方向检测应用中的基础技能。
 
-Required Components
+所需元件
 -------------------------
 
-In this project, we need the following components. 
+本项目中，我们需要以下元件。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+购买整套套件会更加方便，以下是链接：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - Elite Explorer Kit
+    *   - 名称
+        - 套件所含项目
+        - 链接
+    *   - Elite Explorer 套件
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+您也可以从以下链接单独购买。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - 元件介绍
+        - 购买链接
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -56,7 +42,7 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_gy87`
         - \-
 
-Wiring
+接线
 ----------------------
 
 .. image:: img/09-gy87_bb.png
@@ -68,7 +54,7 @@ Wiring
    <br/>
 
 
-Schematic Diagram
+原理图
 -----------------------
 
 .. image:: img/09_basic_gy87_schematic.png
@@ -76,85 +62,85 @@ Schematic Diagram
     :width: 60%
 
 
-Install Library
+安装库
 -----------------------
 
-.. note:: 
-    To install the library, use the Arduino Library Manager. 
-    
-        - Search for **"Adafruit MPU6050"** and install
+.. note::
+    要安装库，请使用 Arduino 库管理器。
 
-          When installing each library, please make sure to select the installation of all dependencies.
-      
+        - 搜索 **"Adafruit MPU6050"** 并安装
+
+          安装每个库时，请确保选择安装所有依赖项。
+
           .. image:: img/09-add_lib_tip.png
              :width: 80%
 
-        - Search for **"QMC5883LCompass"** and install
+        - 搜索 **"QMC5883LCompass"** 并安装
 
 
 .. _basic_gy87_calibrate:
 
-Calibrate QMC5883L
+校准 QMC5883L
 -----------------------
 
 .. note::
 
-    * You can open the file ``09-gy87_compass_calibration.ino`` under the path of ``elite-explorer-kit-main\basic_project\09-gy87_compass_calibration`` directly.
-    * Or copy this code into Arduino IDE.
+    * 您可以直接打开路径 ``elite-explorer-kit-main\basic_project\09-gy87_compass_calibration`` 下的 ``09-gy87_compass_calibration.ino`` 文件。
+    * 或者将以下代码复制到 Arduino IDE 中。
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/252c7a58-3a9f-4c66-959e-f45fc19e68aa/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After uploading the code, open the serial monitor. Follow the instructions in the serial monitor to calibrate QMC5883L. When prompted to move the sensor, it is recommended to use Figure 8 calibration method. Alternatively, simply keep the sensor parallel to the ground and rotate it clockwise or counterclockwise until the serial monitor prompts that calibration is complete.
+上传代码后，打开串口监视器。按照串口监视器中的指示校准 QMC5883L。当提示移动传感器时，建议使用八字校准法。或者，只需将传感器保持与地面平行，顺时针或逆时针旋转，直到串口监视器提示校准完成。
 
 .. image:: img/09_calibrate_qmc5883l.png
     :width: 100%
     :align: center
 
-Once all calibration data has been collected, the sketch will tell provide you with some code that will look like ``compass.setCalibrationOffsets(-375.00, -179.00, 85.00);`` and ``compass.setCalibrationScales(1.04, 0.96, 1.01);``. Copy this code. You may want to save it for future reference.
+收集完所有校准数据后，草图将提供类似 ``compass.setCalibrationOffsets(-375.00, -179.00, 85.00);`` 和 ``compass.setCalibrationScales(1.04, 0.96, 1.01);`` 的代码。复制此代码。建议保存以供将来参考。
 
-When using QMC5883L: Open your project's sketch and paste the line of code you copied directly below the ``compass.init()`` call. Just like this:
+使用 QMC5883L 时：打开项目草图，将复制的代码行直接粘贴到 ``compass.init()`` 调用下方。如下所示：
 
-.. code:: arduino 
+.. code:: arduino
 
    void initializeQMC5883L() {
-   
+
      compass.init();
-   
-     // You should replace the code below according to your calibration results
+
+     // 您应根据校准结果替换以下代码
      compass.setCalibrationOffsets(-375.00, -179.00, 85.00);
      compass.setCalibrationScales(1.04, 0.96, 1.01);
-   
+
    }
 
-Code
+代码
 ---------------------------------------------
 
 .. note::
 
-   Magnetometers must be calibrated(:ref:`basic_gy87_calibrate`) before they can be used as compasses, and must held level in use and **kept away from iron objects, magnetized materials and current carrying wires**.
+   磁力计必须经过校准(:ref:`basic_gy87_calibrate`)才能用作指南针，使用时必须保持水平，并**远离铁质物体、磁化材料和载流导线** 。
 
 .. note::
 
-    * You can open the file ``09-gy87_qmc5883l.ino`` under the path of ``elite-explorer-kit-main\basic_project\09-gy87_qmc5883l`` directly.
-    * Or copy this code into Arduino IDE.
-    * Put the code obtained from the calibration steps below the line of code ``compass.init()`` in the function ``initializeQMC5883L()``.
+    * 您可以直接打开路径 ``elite-explorer-kit-main\basic_project\09-gy87_qmc5883l`` 下的 ``09-gy87_qmc5883l.ino`` 文件。
+    * 或者将以下代码复制到 Arduino IDE 中。
+    * 将从校准步骤获得的代码放在函数 ``initializeQMC5883L()`` 中 ``compass.init()`` 代码行下方。
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/8b266a18-ce7b-4330-8c10-c9f4148bb8ec/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-Code Analysis
+代码分析
 ------------------------
 
 
-#. Include Libraries and Initialize Sensors
-   This section includes the necessary libraries for the MPU6050 and QMC5883L sensors and initializes their objects.
+#. 包含库并初始化传感器
+   这部分包含了 MPU6050 和 QMC5883L 传感器所需的库，并初始化了它们的对象。
 
    .. code-block:: arduino
-      
+
       #include <Adafruit_MPU6050.h>
       #include <Adafruit_Sensor.h>
       #include <Wire.h>
@@ -163,92 +149,92 @@ Code Analysis
       Adafruit_MPU6050 mpu;
       QMC5883LCompass compass;
 
-#. Setup Function
+#. 设置函数
 
-   Initializes serial communication, the MPU6050 sensor, and sets the MPU6050 to I2C bypass mode to allow direct access to the QMC5883L magnetometer. Then, it initializes the QMC5883L magnetometer.
+   初始化串口通信、MPU6050 传感器，并将 MPU6050 设置为 I2C 旁路模式以允许直接访问 QMC5883L 磁力计。然后，初始化 QMC5883L 磁力计。
 
    .. code-block:: arduino
-      
+
       void setup() {
-        // Initialize the serial communication with a baud rate of 9600
+        // 初始化串口通信，波特率为 9600
         Serial.begin(9600);
-      
-        // Initialize the MPU6050 sensor (accelerometer and gyroscope)
+
+        // 初始化 MPU6050 传感器（加速度计和陀螺仪）
         initializeMPU6050();
-      
-        // Enable I2C bypass on MPU6050 to directly access the QMC5883L magnetometer
+
+        // 在 MPU6050 上启用 I2C 旁路以直接访问 QMC5883L 磁力计
         mpu.setI2CBypass(true);
-      
-        // Initialize the QMC5883L magnetometer sensor
+
+        // 初始化 QMC5883L 磁力计传感器
         initializeQMC5883L();
       }
 
-#. Loop Function
+#. 循环函数
 
-   Continuously reads data from the QMC5883L magnetometer and prints it to the Serial Monitor.
+   持续从 QMC5883L 磁力计读取数据并打印到串口监视器。
 
    .. code-block:: arduino
-      
+
       void loop() {
         printQMC5883L();
         delay(500);
       }
 
-#. Initialize QMC5883L Function
+#. 初始化 QMC5883L 函数
 
-   Initializes and calibrates the QMC5883L magnetometer. The calibration values should be adjusted based on specific calibration data.(:ref:`basic_gy87_calibrate`)
+   初始化并校准 QMC5883L 磁力计。校准值应根据具体校准数据进行调整。(:ref:`basic_gy87_calibrate`)
 
    .. code-block:: arduino
-      
+
       void initializeQMC5883L() {
         compass.init();
-      
-        // You should replace the code below according to your calibration results
+
+        // 您应根据校准结果替换以下代码
         compass.setCalibrationOffsets(-549.00, -66.00, 160.00);
         compass.setCalibrationScales(0.97, 1.02, 1.02);
       }
 
-#. Print QMC5883L Data Function
+#. 打印 QMC5883L 数据函数
 
-   This function reads the magnetometer's X, Y, Z values, and azimuth, then prints them to the Serial Monitor.
+   此函数读取磁力计的 X、Y、Z 值和方位角，然后打印到串口监视器。
 
    .. code-block:: arduino
 
     void printQMC5883L() {
-    
+
       Serial.println();
       Serial.println("QMC5883L ------------");
-    
+
     	int x, y, z, a;
     	char myArray[3];
-    	
+
     	compass.read();
-      
+
     	x = compass.getX();
     	y = compass.getY();
     	z = compass.getZ();
-    	
+
     	a = compass.getAzimuth();
-    
+
     	compass.getDirection(myArray, a);
-      
+
     	Serial.print("X: ");
     	Serial.print(x);
-    
+
     	Serial.print(" Y: ");
     	Serial.print(y);
-    
+
     	Serial.print(" Z: ");
     	Serial.print(z);
-    
+
     	Serial.print(" Azimuth: ");
     	Serial.print(a);
-    
+
     	Serial.print(" Direction: ");
     	Serial.print(myArray[0]);
     	Serial.print(myArray[1]);
     	Serial.println(myArray[2]);
-    
+
       Serial.println("QMC5883L ------------");
       Serial.println();
     }

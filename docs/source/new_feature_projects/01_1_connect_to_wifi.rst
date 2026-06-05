@@ -1,32 +1,18 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
-Connect to Wi-Fi
+连接到 Wi-Fi
 ==================
 
-This tutorial will guide you through the essential steps to connect your Arduino board to a Wi-Fi network. You'll learn how to initialize the Wi-Fi module, verify its firmware, and securely join a network using its SSID and password. Once connected, you'll discover how to monitor important network details like your device's IP and MAC addresses, as well as the network's signal strength, directly from the serial console. This tutorial serves as both a practical guide to Wi-Fi connectivity and an introduction to network monitoring with Arduino, helping you establish and maintain a reliable Wi-Fi connection.
+本教程将引导您完成将 Arduino 板连接到 Wi-Fi 网络的基本步骤。您将学习如何初始化 Wi-Fi 模块、验证其固件，以及使用 SSID 和密码安全地加入网络。连接后，您将发现如何直接从串行控制台监控重要的网络详细信息，例如设备的 IP 和 MAC 地址以及网络的信号强度。本教程既是 Wi-Fi 连接的实用指南，也是使用 Arduino 进行网络监控的介绍，帮助您建立并维护可靠的 Wi-Fi 连接。
 
-1. Upload the code
+1. 上传代码
 ========================
 
-Open the ``01-wifi_connect.ino`` file under the path of ``elite-explorer-kit-main\r4_new_feature\01-wifi_connect``, or copy this code into **Arduino IDE**.
+打开路径 ``elite-explorer-kit-main\r4_new_feature\01-wifi_connect`` 下的 ``01-wifi_connect.ino`` 文件，或将此代码复制到 **Arduino IDE** 中。
 
-.. note:: 
-      Wi-Fi® support is enabled via the built-in ``WiFiS3`` library that is shipped with the Arduino UNO R4 Core. Installing the core automatically installs the ``WiFiS3`` library.
+.. note::
+     通过随 Arduino UNO R4 Core 一起提供的内置 ``WiFiS3`` 库启用 Wi-Fi 支持。安装该核心会自动安装 ``WiFiS3`` 库。
 
 
-You still need to create or modify ``arduino_secrets.h``, replace ``SECRET_SSID`` and ``SECRET_PASS`` with the name and password of the wifi you want to connect to. The file should contain:
+您仍然需要创建或修改 ``arduino_secrets.h``，将 ``SECRET_SSID`` 和 ``SECRET_PASS`` 替换为您要连接的 WiFi 的名称和密码。该文件应包含：
 
 .. code:: arduino
 
@@ -35,34 +21,34 @@ You still need to create or modify ``arduino_secrets.h``, replace ``SECRET_SSID`
     #define SECRET_PASS "yourpassword"
 
 .. raw:: html
-       
+
    <iframe src=https://create.arduino.cc/editor/sunfounder01/a41ac638-31da-464c-b5d3-e70f2aacd29c/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-Open the serial monitor, and you will see similar content as follows. Arduino will output your device's IP and MAC addresses, as well as the network's signal strength.
+打开串口监视器，您将看到类似如下内容。Arduino 将输出您设备的 IP 和 MAC 地址，以及网络的信号强度。
 
 .. image:: img/01_1_wifi.png
     :width: 100%
 
 
-2. Code explanation
+2. 代码说明
 ========================
 
-1. Including Libraries and Secret Data
+1. 包含库和密钥数据
 
    .. code-block:: arduino
 
       #include <WiFiS3.h>
-      #include "arduino_secrets.h" 
+      #include "arduino_secrets.h"
 
-   - ``WiFiS3`` is a library that provides functions for Wi-Fi connectivity. Installing the R4 core automatically installs the WiFiS3 library.
-   - ``arduino_secrets.h`` is a separate file where you keep your SSID and password so they're not exposed in your main code. Storing network and password separately reduces accidental sharing of Wi-Fi credentials.
+   - ``WiFiS3`` 是一个提供 Wi-Fi 连接功能的库。安装 R4 核心会自动安装 WiFiS3 库。
+   - ``arduino_secrets.h`` 是一个单独的文件，您可以在其中保存 SSID 和密码，这样它们就不会暴露在主代码中。将网络和密码分开存储可减少意外共享 Wi-Fi 凭据的风险。
 
    .. raw:: html
 
       <br/>
 
-2. Declaring Global Variables
+2. 声明全局变量
 
    .. code-block:: arduino
 
@@ -70,16 +56,16 @@ Open the serial monitor, and you will see similar content as follows. Arduino wi
       char pass[] = SECRET_PASS;
       int status = WL_IDLE_STATUS;
 
-   - ``ssid`` and ``pass`` contain your network name and password.
-   - ``status`` will store the current status of your Wi-Fi connection.
+   - ``ssid`` 和 ``pass`` 包含您的网络名称和密码。
+   - ``status`` 将存储您的 Wi-Fi 连接的当前状态。
 
    .. raw:: html
 
       <br/>
 
-3. ``setup()`` Function
+3. ``setup()`` 函数
 
-   The Serial interface is initialized with a baud rate of 9600. The ``while (!Serial);`` line makes sure that the program waits until the Serial connection is established.
+   串行接口以 9600 的波特率初始化。``while (!Serial);`` 行确保程序等待直到串行连接建立。
 
    .. code-block:: arduino
 
@@ -92,7 +78,7 @@ Open the serial monitor, and you will see similar content as follows. Arduino wi
           ...
       }
 
-   And then, the code checks whether the Wi-Fi module is available or not. If not, the program will halt, effectively stopping any further execution.
+   然后，代码检查 Wi-Fi 模块是否可用。如果不可用，程序将停止，有效地阻止任何进一步的执行。
 
    .. code-block:: arduino
 
@@ -105,7 +91,7 @@ Open the serial monitor, and you will see similar content as follows. Arduino wi
      }
      ...
 
-   In this part of the code, we check if the firmware version of uno R4 wifi is up to date. If it is not the latest version, a prompt for upgrade will be displayed. You can refer to :ref:`update_firmware` for firmware upgrade.
+   在代码的这一部分，我们检查 uno R4 wifi 的固件版本是否是最新的。如果不是最新版本，将显示升级提示。您可以参考 :ref:`update_firmware` 进行固件升级。
 
    .. https://forum.arduino.cc/t/radio-module-firmware-version-0-2-0-is-now-available/1147361
 
@@ -118,7 +104,7 @@ Open the serial monitor, and you will see similar content as follows. Arduino wi
       }
       ...
 
-4. ``loop()`` Function
+4. ``loop()`` 函数
 
    .. code-block:: arduino
 
@@ -128,9 +114,9 @@ Open the serial monitor, and you will see similar content as follows. Arduino wi
         printCurrentNet();
       }
 
-   - Every 10 seconds, the function ``printCurrentNet()`` is called to print the current network details.
+   - 每 10 秒，调用 ``printCurrentNet()`` 函数打印当前的网络详情。
 
 
-**Reference**
+**参考**
 
 - |link_r4_wifi|

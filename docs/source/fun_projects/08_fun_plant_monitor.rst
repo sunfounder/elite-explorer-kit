@@ -1,20 +1,6 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _fun_plant_monitor:
 
-Plant Monitor
+植物监测器
 ============================
 
 .. raw:: html
@@ -24,34 +10,34 @@ Plant Monitor
       Your browser does not support the video tag.
    </video>
 
-This project automatically waters plants by activating a water pump when the soil humidity falls below a specific threshold.
-Additionally, it displays temperature, humidity, and soil moisture on an LCD screen, providing users with insights into the plant's growth environment.
+该项目通过当土壤湿度低于特定阈值时启动水泵来自动给植物浇水。
+此外，它还在 LCD 屏幕上显示温度、湿度和土壤湿度，让用户了解植物的生长环境。
 
-**Required Components**
+**所需元件**
 
-In this project, we need the following components. 
+在这个项目中，我们需要以下元件。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+购买整套套件会更方便，以下是链接：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - Elite Explorer Kit
+    *   - 名称
+        - 套件所含项目
+        - 链接
+    *   - Elite Explorer 套件
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+您也可以从下面的链接单独购买。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - 元件介绍
+        - 购买链接
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -72,10 +58,11 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_power`
         - \-
 
-**Wiring**
+
+**接线**
 
 .. note::
-    To protect the :ref:`cpn_power`'s battery, please fully charge it before using it for the first time.
+    为了保护 :ref:`cpn_power` 的电池，首次使用前请将其充满电。
 
 .. image:: img/08_plant_monitor_bb.png
     :width: 100%
@@ -85,7 +72,7 @@ You can also buy them separately from the links below.
 
    <br/>
 
-**Schematic**
+**原理图**
 
 .. image:: img/08_plant_monitor_schematic.png
    :width: 100%
@@ -95,39 +82,39 @@ You can also buy them separately from the links below.
 
    <br/>
 
-**Code**
+**代码**
 
 .. note::
 
-    * You can open the file ``08_plant_monitor.ino`` under the path of ``elite-explorer-kit-main\fun_project\08_plant_monitor`` directly.
-    * Or copy this code into Arduino IDE.
+    * 您可以直接打开路径 ``elite-explorer-kit-main\fun_project\08_plant_monitor`` 下的 ``08_plant_monitor.ino`` 文件。
+    * 或者将这段代码复制到 Arduino IDE 中。
 
 .. note::
-   To install the library, use the Arduino Library Manager and search for **"DHT sensor library"** and **"LiquidCrystal I2C"** and install them.
+   要安装库，请使用 Arduino 库管理器搜索 **"DHT sensor library" ** 和 **"LiquidCrystal I2C"** 并安装它们。
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/a9d6c9c7-0d7f-4dc2-84b6-9dbda15c89ae/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-**How it works?**
+**工作原理**
 
-Here is a detailed explanation of the code:
+以下是代码的详细说明：
 
-1. Library Inclusions and Constants/Variables:
+1. 库包含和常量/变量：
 
-   Import ``Wire.h``, ``LiquidCrystal_I2C.h``, and ``DHT.h`` libraries.
-   Define pin numbers and other parameters related to DHT11, soil moisture sensor, and the water pump.
+   导入 ``Wire.h``、``LiquidCrystal_I2C.h`` 和 ``DHT.h`` 库。
+   定义与 DHT11、土壤湿度传感器和水泵相关的引脚编号和其他参数。
 
-2. ``setup()``:
+2. ``setup()``：
 
-   Initialize the pin modes related to the soil moisture sensor and the water pump.
-   Turn off the water pump initially.
-   Initialize the LCD display and turn on the backlight.
-   Start the DHT sensor.
+   初始化与土壤湿度传感器和水泵相关的引脚模式。
+   初始关闭水泵。
+   初始化 LCD 显示屏并打开背光。
+   启动 DHT 传感器。
 
-3. ``loop()``:
+3. ``loop()``：
 
-   Read humidity and temperature from the DHT sensor.
-   Read soil moisture from the soil moisture sensor.
-   Display temperature and humidity values on the LCD screen, then clear the screen and display the soil moisture value.
-   Determine whether to activate the water pump based on soil moisture. If the soil moisture is below 500 (a configurable threshold), activate the water pump for 1 second.
+   从 DHT 传感器读取湿度和温度。
+   从土壤湿度传感器读取土壤湿度。
+   在 LCD 屏幕上显示温度和湿度值，然后清屏并显示土壤湿度值。
+   根据土壤湿度决定是否启动水泵。如果土壤湿度低于 500（可配置阈值），则启动水泵 1 秒钟。

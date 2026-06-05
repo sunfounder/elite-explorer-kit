@@ -1,38 +1,24 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
-LESSON 17: Control Multiple LED from the Serial Monitor
+课程 17：从串口监视器控制多个 LED
 =========================================================
 
-This lesson demonstrates how to create a user-controlled LED system using the Arduino, where the user can turn on and off different LEDs based on input through the serial monitor. Here’s a brief overview of what you will learn:
+本课程演示如何使用 Arduino 创建用户控制的 LED 系统，用户可以通过串口监视器输入来打开和关闭不同的 LED。以下是您将学习的内容的简要概述：
 
-1. **Reviewing Previous Homework**:Recapping the assignment from Lesson 16, which involved making a circuit with three LEDs (red, yellow, and green) and controlling them based on user input.
-2. **Setting Up the Circuit**:Detailed instructions on how to correctly connect three LEDs and their current-limiting resistors to the Arduino. Each LED's long leg (anode) is connected to a digital pin, and the short leg (cathode) is connected to ground through a resistor.
-3. **Writing the Code:Step-by-step coding instructions to**:Define the pins for each LED,Set up the serial monitor for user input,Use if statements to turn on the specified LED and ensure all other LEDs are turned off,Convert user input to lowercase to handle different cases.
-4. **Debugging Tips**:Guidance on troubleshooting common issues such as missing semicolons, incorrect curly braces, and ensuring all LEDs are correctly turned off when a new LED is turned on.
-5. **Practical Applications**:Examples of using if statements to handle user input and control multiple outputs (LEDs) based on that input. 
-6. **Homework Assignment**: Extending the project by asking the user for both the LED color and the desired brightness. 
+1. **回顾之前的课后作业** ：回顾课程 16 的作业，其中涉及制作一个包含三个 LED（红色、黄色和绿色）的电路，并根据用户输入控制它们。
+2. **搭建电路** ：关于如何正确将三个 LED 及其限流电阻连接到 Arduino 的详细说明。每个 LED 的长脚（阳极）连接到一个数字引脚，短脚（阴极）通过电阻连接到地。
+3. **编写代码** ：逐步编码指导：定义每个 LED 的引脚，设置串口监视器以接收用户输入，使用 if 语句打开指定的 LED 并确保所有其他 LED 关闭，将用户输入转换为小写以处理不同的大小写情况。
+4. **调试技巧** ：关于排查常见问题的指导，例如缺少分号、花括号不正确，以及确保在打开新 LED 时所有其他 LED 都已正确关闭。
+5. **实际应用** ：使用 if 语句处理用户输入并根据输入控制多个输出（LED）的示例。
+6. **课后作业** ：通过要求用户同时输入 LED 颜色和所需亮度来扩展项目。
 
-**Video**
+**视频**
 
 .. raw:: html
 
-    <iframe width="100%" 
+    <iframe width="100%"
         style="aspect-ratio: 16/9; max-width: 100%;"
-        src="https://www.youtube.com/embed/Ai7uqYHt_Yc?si=o9Q1tTC1X1B9teef" 
-        title="YouTube video player" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        src="https://www.youtube.com/embed/Ai7uqYHt_Yc?si=o9Q1tTC1X1B9teef"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen>
     </iframe>

@@ -1,17 +1,3 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _basic_mpr121:
 
 MPR121
@@ -20,37 +6,37 @@ MPR121
 .. https://docs.sunfounder.com/projects/vincent-kit/en/latest/arduino/2.24_mpr121_module.html#ar-mpr121
 
 
-Overview
+概述
 ---------------
 
-In this lesson, you will learn how to use MPR121. It's a good option when you want to add a lot of touch switches to your project. The electrode of MPR121 can be extended with a conductor. If you connect a wire to a banana, you can turn the banana into a touch switch, thus realizing projects such as fruit piano.
+在本课中，您将学习如何使用 MPR121。当您想在项目中添加大量触摸开关时，它是一个很好的选择。MPR121 的电极可以通过导体进行扩展。如果您将一根电线连接到香蕉上，就可以将香蕉变成一个触摸开关，从而实现水果钢琴等项目。
 
-Required Components
+所需元件
 -------------------------
 
-In this project, we need the following components. 
+本项目中，我们需要以下元件。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+购买整套套件会更加方便，以下是链接：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - Elite Explorer Kit
+    *   - 名称
+        - 套件所含项目
+        - 链接
+    *   - Elite Explorer 套件
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+您也可以从以下链接单独购买。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - 元件介绍
+        - 购买链接
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -61,32 +47,32 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_mpr121`
         - \-
 
-Wiring
+接线
 ----------------------
 
-In this example, we insert MPR121 into the breadboard. Get the GND of MPR121 connected to GND, 3.3V to 3V3, IRQ to the digital pin 2, SCL to the pin SCL(A5), and SDA to the pin SDA(A4). There are 12 electrodes for touch sensing. 
+在本示例中，我们将 MPR121 插入面包板。将 MPR121 的 GND 连接到 GND，3.3V 连接到 3V3，IRQ 连接到数字引脚 2，SCL 连接到引脚 SCL(A5)，SDA 连接到引脚 SDA(A4)。共有 12 个电极用于触摸感应。
 
 .. note::
-    MPR121 is powered by 3.3V, not 5V.
+    MPR121 使用 3.3V 供电，而非 5V。
 
 .. image:: img/23-mpr121_bb.png
     :align: center
     :width: 70%
 
-Schematic Diagram
+原理图
 ----------------------
 
 .. image:: img/23_mpr121_schematic.png
    :align: center
    :width: 70%
 
-Code
+代码
 --------
 
 .. note::
 
-    * You can open the file ``23-mpr121.ino`` under the path of ``elite-explorer-kit-main\basic_project\23-mpr121`` directly.
-    * The ``Adafruit MPR121`` library is used here, you can install it from the **Library Manager**.
+    * 您可以直接打开路径 ``elite-explorer-kit-main\basic_project\23-mpr121`` 下的 ``23-mpr121.ino`` 文件。
+    * 这里使用 ``Adafruit MPR121`` 库，您可以从 **库管理器** 安装它。
 
         .. image:: img/22_mpr121_lib.png
             :align: center
@@ -95,59 +81,59 @@ Code
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/de0aa390-de85-43ab-87f7-f380c67c65e8/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After uploading the code to the UNO board, the touch state of pins MPR121 "1" and "0" will be recorded in a 12-bit boolean array. This array will then be printed on the serial monitor.
+将代码上传到 UNO 板后，MPR121 引脚"1"和"0"的触摸状态将记录在一个 12 位布尔数组中。然后该数组将打印在串口监视器上。
 
-Code Analysis
+代码分析
 --------------------
-This code facilitates communication and operation of the MPR121 touch sensor. It can detect the status of touch electrodes and print information about touched or released electrodes on the serial interface. If detailed sensor data is required, the relevant code can be uncommented.
+此代码实现了 MPR121 触摸传感器的通信和操作。它可以检测触摸电极的状态，并在串行接口上打印有关触摸或释放电极的信息。如果需要详细的传感器数据，可以取消注释相关代码。
 
-Here's an analysis of the code:
+以下是代码分析：
 
-#. Import Libraries:
+#. 导入库：
 
    .. code-block:: arduino
 
        #include <Wire.h>
        #include "Adafruit_MPR121.h"
 
-   * ``Wire.h``: Used for I2C communication.
-   * ``Adafruit_MPR121.h``: Adafruit's MPR121 library for operating the MPR121 touch sensor.
+   * ``Wire.h``：用于 I2C 通信。
+   * ``Adafruit_MPR121.h``：Adafruit 的 MPR121 库，用于操作 MPR121 触摸传感器。
 
-#. Define the ``_BV`` Macro:
+#. 定义 ``_BV`` 宏：
 
    .. code-block:: arduino
 
        #ifndef _BV
-       #define _BV(bit) (1 << (bit)) 
+       #define _BV(bit) (1 << (bit))
        #endif
-   
-   ``_BV(bit)`` defines a macro that converts a given bit into the corresponding binary value, similar to 1 << bit.
 
-#. Initialize ``Adafruit_MPR121`` Class Instance:
+   ``_BV(bit)`` 定义了一个宏，将给定的位转换为相应的二进制值，类似于 1 << bit。
+
+#. 初始化 ``Adafruit_MPR121`` 类实例：
 
    .. code-block:: arduino
 
        Adafruit_MPR121 cap = Adafruit_MPR121();
 
-   Create an instance of the ``Adafruit_MPR121`` class named ``cap``. The ``cap`` object will be used to communicate with and operate the MPR121 touch sensor.
+   创建一个名为 ``cap`` 的 ``Adafruit_MPR121`` 类实例。``cap`` 对象将用于与 MPR121 触摸传感器通信和操作。
 
-#. ``setup()`` Function:
+#. ``setup()`` 函数：
 
-   Initialize serial communication at a baud rate of 9600. then initialize the MPR121 touch sensor with the default I2C address of 0x5A. If initialization fails, print an error message and enter an infinite loop.
+   以 9600 波特率初始化串口通信。然后使用默认 I2C 地址 0x5A 初始化 MPR121 触摸传感器。如果初始化失败，打印错误消息并进入无限循环。
 
    .. code-block:: arduino
 
        void setup() {
            Serial.begin(9600);
-           
-           while (!Serial) { // needed to keep leonardo/micro from starting too fast!
+
+           while (!Serial) { // 需要保持 leonardo/micro 不会启动过快！
                delay(10);
            }
-           
-           Serial.println("Adafruit MPR121 Capacitive Touch sensor test"); 
-           
-           // Default address is 0x5A, if tied to 3.3V its 0x5B
-           // If tied to SDA its 0x5C and if SCL then 0x5D
+
+           Serial.println("Adafruit MPR121 Capacitive Touch sensor test");
+
+           // 默认地址为 0x5A，如果连接到 3.3V 则为 0x5B
+           // 如果连接到 SDA 则为 0x5C，如果连接到 SCL 则为 0x5D
            if (!cap.begin(0x5A)) {
                Serial.println("MPR121 not found, check wiring?");
                while (1);
@@ -155,44 +141,43 @@ Here's an analysis of the code:
            Serial.println("MPR121 found!");
        }
 
-#. ``loop()`` Function:
+#. ``loop()`` 函数：
 
-   * Obtain the current touch status, returned as a 16-bit integer.
-
+   * 获取当前触摸状态，返回为 16 位整数。
 
      .. code-block:: arduino
 
          currtouched = cap.touched();
 
-   * Iterate through the status of 12 electrodes (numbered from 0 to 11).
+   * 遍历 12 个电极（编号从 0 到 11）的状态。
 
      .. code-block:: arduino
 
          for (uint8_t i=0; i<12; i++) {
-             // it if *is* touched and *wasnt* touched before, alert!
+             // 如果 *现在* 被触摸且 *之前* 没有被触摸，则发出提示！
              if ((currtouched & _BV(i)) && !(lasttouched & _BV(i)) ) {
                  Serial.print(i); Serial.println(" touched");
              }
-             // if it *was* touched and now *isnt*, alert!
+             // 如果 *之前* 被触摸而现在 *没有* 被触摸，则发出提示！
              if (!(currtouched & _BV(i)) && (lasttouched & _BV(i)) ) {
                  Serial.print(i); Serial.println(" released");
              }
          }
 
-     * If an electrode is touched and wasn't touched before, print "x touched," where x is the electrode number.
-     * If an electrode was touched before but is not touched now, print "x released."
+     * 如果某个电极被触摸且之前未被触摸，则打印 "x touched"，其中 x 为电极编号。
+     * 如果某个电极之前被触摸但现在未被触摸，则打印 "x released"。
 
-   * Update ``lasttouched`` to store the current touch status for comparison in the next iteration.
+   * 更新 ``lasttouched`` 以存储当前触摸状态，用于下一次迭代的比较。
 
      .. code-block:: arduino
 
          lasttouched = currtouched;
 
-   * Debugging Information (Optional Section):
+   * 调试信息（可选部分）：
 
      .. code-block:: arduino
 
-         // debugging info, what
+         // 调试信息
          Serial.print("\t\t\t\t\t\t\t\t\t\t\t\t\t 0x"); Serial.println(cap.touched(), HEX);
          Serial.print("Filt: ");
          for (uint8_t i=0; i<12; i++) {
@@ -204,6 +189,6 @@ Here's an analysis of the code:
              Serial.print(cap.baselineData(i)); Serial.print("\t");
          }
          Serial.println();
-         
-         // put a delay so it isn't overwhelming
+
+         // 添加延迟以防止数据过多
          delay(100);

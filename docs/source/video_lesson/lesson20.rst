@@ -1,37 +1,23 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
-LESSON 20: For Loops in Arduino
+课程 20：Arduino 中的 For 循环
 =================================
-This lesson demonstrates how to create a user-controlled RGB LED system using the Arduino, where the user can specify the number of blinks through the serial monitor. Here’s a brief overview of what you will learn:
+本课程演示如何使用 Arduino 创建用户控制的 RGB LED 系统，用户可以通过串口监视器指定闪烁次数。以下是您将学习的内容的简要概述：
 
-1. **Reviewing Previous Homework**: Recapping the assignment from Lesson 19, which involved blinking an RGB LED in a red-green-blue sequence for 25 cycles.
-2. **Setting Up the Circuit**: Detailed instructions on how to correctly connect an RGB LED and its current-limiting resistors to the Arduino. Each color channel (red, green, blue) is connected to a PWM digital pin (pins 9, 10, and 11), and the common cathode (long leg) is connected to ground.
-3. **Writing the Code**: Step-by-step coding instructions to:Define the pins for each color channel of the RGB LED.Set up the serial monitor for user input.Use analog write commands to control the brightness of each color channel.Implement a for loop to control the number of blink cycles based on user input.Ensure the program stops after the specified number of blinks.
-4. **Debugging Tips**: Guidance on troubleshooting common issues such as:Correcting syntax errors in the code.Ensuring the program loops the correct number of times.Handling user input correctly and stopping the program after the specified cycles.
-5. **Practical Applications**: Examples of using for loops to repeat a sequence of actions a specified number of times. 
-6. **Homework Assignment**: Repeating the blink sequence a user-specified number of times without using a for loop.Ensuring the program stops after the specified number of blinks.
+1. **回顾之前的课后作业** ：回顾课程 19 的作业，其中涉及使 RGB LED 按红-绿-蓝顺序闪烁 25 次循环。
+2. **搭建电路** ：关于如何正确将 RGB LED 及其限流电阻连接到 Arduino 的详细说明。每个颜色通道（红、绿、蓝）连接到一个 PWM 数字引脚（引脚 9、10 和 11），公共阴极（长脚）连接到地。
+3. **编写代码** ：逐步编码指导：定义 RGB LED 每个颜色通道的引脚，设置串口监视器以接收用户输入，使用模拟写入命令控制每个颜色通道的亮度，实现 for 循环以根据用户输入控制闪烁循环次数，确保程序在指定闪烁次数后停止。
+4. **调试技巧** ：关于排查常见问题的指导：纠正代码中的语法错误，确保程序循环正确的次数，正确处理用户输入并在指定循环后停止程序。
+5. **实际应用** ：使用 for 循环将一系列动作重复指定次数的示例。
+6. **课后作业** ：不使用 for 循环，将闪烁序列重复用户指定的次数。确保程序在指定闪烁次数后停止。
 
-**Video**
+**视频**
 
 .. raw:: html
 
-    <iframe width="100%" 
+    <iframe width="100%"
         style="aspect-ratio: 16/9; max-width: 100%;"
-        src="https://www.youtube.com/embed/CZh8QB26jjU?si=o9Q1tTC1X1B9teef" 
-        title="YouTube video player" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        src="https://www.youtube.com/embed/CZh8QB26jjU?si=o9Q1tTC1X1B9teef"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen>
     </iframe>

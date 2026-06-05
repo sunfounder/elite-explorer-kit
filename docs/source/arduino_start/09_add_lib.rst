@@ -1,77 +1,63 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _add_libraries:
 
-How to add libraries? (Important)
+如何添加库？（重要）
 ======================================
 
-A library is a collection of pre-written code or functions that extend the capabilities of the Arduino IDE. Libraries provide ready-to-use code for various functionalities, allowing you to save time and effort in coding complex features.
+库是预先编写好的代码或函数的集合，可以扩展 Arduino IDE 的功能。库提供了各种功能的现成代码，让你在编写复杂功能时节省时间和精力。
 
 
-Using the Library Manager
+使用库管理器
 -------------------------------
 
-Many libraries are available directly through the Arduino Library Manager. You can access the Library Manager by following these steps:
+许多库可以直接通过 Arduino 库管理器获得。你可以按照以下步骤访问库管理器：
 
-#. In the **Library Manager**, you can search for the desired library by name or browse through different categories.
+#. 在 **Library Manager** （库管理器）中，你可以按名称搜索所需库，或按不同类别浏览。
 
    .. note::
 
-      In projects where library installation is required, there will be prompts indicating which libraries to install. Follow the instructions provided, such as "The DHT sensor library library is used here, you can install it from the Library Manager." Simply install the recommended libraries as prompted.
+      在需要安装库的项目中，会有提示说明需要安装哪些库。按照指示操作，例如："此处使用了 DHT 传感器库，你可以从库管理器中安装它。"只需按提示安装推荐的库即可。
 
    .. image:: img/install_lib3.png
 
-#. Once you find the library you want to install, click on it and then click the **Install** button.
+#. 找到要安装的库后，点击它，然后点击 **Install** （安装）按钮。
 
    .. image:: img/install_lib2.png
 
-#. The Arduino IDE will automatically download and install the library for you.
+#. Arduino IDE 将自动下载并安装该库。
 
 .. _manual_install_lib:
 
-Manual Installation
+手动安装
 -----------------------
 
-Some libraries are not available through the **Library Manager** and need to be manually installed. To install these libraries, follow these steps:
+有些库无法通过 **Library Manager** （库管理器）获取，需要手动安装。要安装这些库，请按以下步骤操作：
 
-#. Open the Arduino IDE and go to **Sketch** -> **Include Library** -> **Add .ZIP Library**.
+#. 打开 Arduino IDE，进入 **Sketch** -> **Include Library** -> **Add .ZIP Library** 。
 
    .. image:: img/add_lib_zip.png
 
-#. Navigate to the directory where the library files are located, such as the ``elite-explorer-kit-main/library/`` folder, and select the library file and click **Open**.
+#. 导航到库文件所在的目录，例如 ``elite-explorer-kit-main/library/`` 文件夹，选择库文件并点击 **Open** （打开）。
 
    .. image:: img/rfid_choose.png
 
-#. Once the installation is complete, you will receive a notification confirming that the library has been successfully added to your Arduino IDE. The next time you need to use this library, you won't need to repeat the installation process.
+#. 安装完成后，你会收到一条通知，确认库已成功添加到 Arduino IDE。下次需要使用该库时，无需重复安装过程。
 
    .. image:: img/rfid_success.png
 
-#. Repeat the same process to add other libraries.
+#. 重复相同的过程以添加其他库。
 
 
-Library Location
+库文件位置
 -----------------------
 
-The libraries installed using either of the above methods can be found in the default library directory of the Arduino IDE, which is usually located at ``C:\Users\xxx\Documents\Arduino\libraries``.
+使用上述任一方法安装的库都可以在 Arduino IDE 的默认库目录中找到，通常位于 ``C:\Users\xxx\Documents\Arduino\libraries``。
 
-If your library directory is different, you can check it by going to **File** -> **Preferences**.
+如果你的库目录不同，可以通过 **File** -> **Preferences** 进行检查。
 
 .. image:: img/install_lib1.png
 
 
 
-**Reference**
+**参考**
 
 * |link_install_arduino_lib|

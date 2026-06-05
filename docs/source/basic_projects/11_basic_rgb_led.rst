@@ -1,53 +1,39 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _basic_rgb_led:
 
 RGB LED
 ==========================
 
-Overview
+概述
 ---------------
 
-In this lesson, we will use PWM to control an RGB LED to flash various kinds of color. When different PWM values are set to the R, G, and B pins of the LED, its brightness will be different. When the three different colors are mixed, we can see that the RGB LED flashes different colors.
+在本课中，我们将使用 PWM 控制 RGB LED 闪烁出各种颜色。当向 LED 的 R、G、B 引脚设置不同的 PWM 值时，其亮度会不同。当三种不同颜色混合时，我们可以看到 RGB LED 闪烁出不同的颜色。
 
-Required Components
+所需元件
 -------------------------
 
-In this project, we need the following components. 
+本项目中，我们需要以下元件。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+购买整套套件会更加方便，以下是链接：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - Elite Explorer Kit
+    *   - 名称
+        - 套件所含项目
+        - 链接
+    *   - Elite Explorer 套件
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+您也可以从以下链接单独购买。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - 元件介绍
+        - 购买链接
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -63,29 +49,29 @@ You can also buy them separately from the links below.
 PWM
 --------
 
-Pulse width modulation, or PWM, is a technique for getting analog results with digital means. Digital control is used to create a square wave, a signal switched between on and off. This on-off pattern can simulate voltages in between full on (5 Volts) and off (0 Volts) by changing the portion of the time the signal spends on versus the time that the signal spends off. The duration of "on time" is called pulse width. To get varying analog values, you change, or modulate, that width. If you repeat this on-off pattern fast enough with some device, an LED for example, it would be like this: the signal is a steady voltage between 0 and 5V controlling the brightness of the LED. (See the PWM description on the official website of Arduino).
+脉冲宽度调制（PWM）是一种用数字方式获得模拟结果的技术。数字控制用于产生方波，即在开和关之间切换的信号。通过改变信号开启时间与关闭时间的比例，这种开-关模式可以模拟在全开（5V）和关（0V）之间的电压。所谓的"开启时间"的持续时间称为脉冲宽度。要获得变化的模拟值，需要改变或调制该宽度。如果以足够快的速度重复这种开-关模式，对于某些设备（例如 LED），效果如下：信号是在 0 到 5V 之间的稳定电压，控制 LED 的亮度。（请参见 Arduino 官方网站上的 PWM 描述）。
 
-In the graphic below, the green lines represent a regular time period. This duration or period is the inverse of the PWM frequency. In other words, with Arduino's PWM frequency at about 500Hz, the green lines would measure 2 milliseconds each.
+在下图中，绿线表示一个常规时间段。该持续时间或周期是 PWM 频率的倒数。换句话说，Arduino 的 PWM 频率约为 500Hz，因此绿线的间隔为 2 毫秒。
 
 .. image:: img/11_rgbled_pwm.jpeg
    :align: center
    :width: 60%
 
 
-A call to analogWrite() is on a scale of 0 - 255, such that analogWrite(255) requests a 100% duty cycle (always on), and analogWrite(127) is a 50% duty cycle (on half the time) for example. 
+调用 analogWrite() 的范围是 0 - 255，例如 analogWrite(255) 请求 100% 占空比（始终开启），而 analogWrite(127) 是 50% 占空比（一半时间开启）。
 
-You will find that the smaller the PWM value is, the smaller the value will be after being converted into voltage. Then the LED becomes dimmer accordingly. Therefore, we can control the brightness of the LED by controlling the PWM value.
+您会发现 PWM 值越小，转换为电压后的值就越小，LED 也会相应变暗。因此，我们可以通过控制 PWM 值来控制 LED 的亮度。
 
 
 
-Wiring
+接线
 ----------------------
 
 .. image:: img/11-rgb_led_bb.png
     :align: center
     :width: 70%
 
-Schematic Diagram
+原理图
 -----------------------
 
 .. image:: img/11-rgb_led_schematic.png
@@ -93,13 +79,13 @@ Schematic Diagram
     :width: 80%
 
 
-Code
+代码
 ---------------
 
 .. note::
 
-    * You can open the file ``11-rgb_led.ino`` under the path of ``elite-explorer-kit-main\basic_project\11-rgb_led`` directly.
-    * Or copy this code into Arduino IDE.
+    * 您可以直接打开路径 ``elite-explorer-kit-main\basic_project\11-rgb_led`` 下的 ``11-rgb_led.ino`` 文件。
+    * 或者将以下代码复制到 Arduino IDE 中。
 
 .. raw:: html
 
@@ -109,32 +95,30 @@ Code
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/videos/basic_projects/11_basic_rgb_led.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      您的浏览器不支持视频标签。
    </video>
 
-Once the code is successfully uploaded, you will observe the RGB LED flashing in a circular pattern of red, green, and blue initially. It will then proceed to flash in the sequence of red, orange, yellow, green, blue, indigo, and purple.
+代码成功上传后，您将看到 RGB LED 先以红、绿、蓝循环闪烁，然后按红、橙、黄、绿、蓝、靛、紫的顺序闪烁。
 
-
-Code Analysis
+代码分析
 --------------------
 
-**Set the color**
+**设置颜色**
 
-Here use the ``color()`` function to set the color of the RGB LED. In the
-code, it is set to flash 7 different colors.
+这里使用 ``color()`` 函数来设置 RGB LED 的颜色。代码中设置为闪烁 7 种不同颜色。
 
-You can use the paint tool on your computer to get the RGB value.
+您可以使用计算机上的画图工具获取 RGB 值。
 
-1. Open the paint tool on your computer and click to Edit colors.
+1. 打开计算机上的画图工具，点击编辑颜色。
 
    .. image:: img/11_rgbled_color1.png
       :align: center
 
 
-2. Select one color, then you can see the RGB value of this color. Fill them in the code.
-   
-   .. note:: 
-      Due to hardware and environmental factors, the colors displayed on computer screens and RGB LEDs may vary even when using the same RGB values.
+2. 选择一种颜色，即可看到该颜色的 RGB 值。将它们填入代码中。
+
+   .. note::
+      由于硬件和环境因素，即使使用相同的 RGB 值，在计算机屏幕上和 RGB LED 上显示的颜色可能会有所不同。
 
    .. image:: img/11_rgbled_color2.png
       :align: center
@@ -142,48 +126,50 @@ You can use the paint tool on your computer to get the RGB value.
    .. raw:: html
 
       <br/>
-   
+
    .. code-block:: arduino
-   
-       void loop() // run over and over again
-   
+
+       void loop() // 不断重复运行
+
        {
-   
-         // Basic colors:
-   
-         color(255, 0, 0); // turn the RGB LED red
-   
-         delay(1000); // delay for 1 second
-   
-         color(0,255, 0); // turn the RGB LED green
-   
-         delay(1000); // delay for 1 second
-   
-         color(0, 0, 255); // turn the RGB LED blue
-   
-         delay(1000); // delay for 1 second
-   
-         // Example blended colors:
-   
-         color(255,0,252); // turn the RGB LED red
-   
-         delay(1000); // delay for 1 second
-   
-         color(237,109,0); // turn the RGB LED orange
-   
-         delay(1000); // delay for 1 second
-   
-         color(255,215,0); // turn the RGB LED yellow
-   
+
+         // 基本颜色：
+
+         color(255, 0, 0); // 将 RGB LED 设为红色
+
+         delay(1000); // 延迟 1 秒
+
+         color(0,255, 0); // 将 RGB LED 设为绿色
+
+         delay(1000); // 延迟 1 秒
+
+         color(0, 0, 255); // 将 RGB LED 设为蓝色
+
+         delay(1000); // 延迟 1 秒
+
+         // 混合颜色示例：
+
+         color(255,0,252); // 将 RGB LED 设为红色
+
+         delay(1000); // 延迟 1 秒
+
+         color(237,109,0); // 将 RGB LED 设为橙色
+
+         delay(1000); // 延迟 1 秒
+
+         color(255,215,0); // 将 RGB LED 设为黄色
+
+         delay(1000); // 延迟 1 秒
+
          ......
-   
-   
-**color() function**
+
+
+**color() 函数**
 
 .. code-block:: arduino
 
     void color (int red, int green, int blue)
-    // the color generating function
+    // 颜色生成函数
 
     {
 
@@ -195,6 +181,6 @@ You can use the paint tool on your computer to get the RGB value.
 
     }
 
-Define three unsigned char variables, red, green and blue. Write their values to ``redPin``, ``greenPin`` and ``bluePin``. For example, color(128,0,128) is to write 128 to ``redPin``, 0 to ``greenPin`` and 128 to ``bluePin``. Then the result is the LED flashing purple.
+定义三个 unsigned char 变量 red、green 和 blue。将其值写入 ``redPin``、``greenPin`` 和 ``bluePin``。例如，color(128,0,128) 将 128 写入 ``redPin``，0 写入 ``greenPin``，128 写入 ``bluePin``。结果是 LED 闪烁紫色。
 
-**analogWrite()**: Writes an analog value (PWM wave) to a pin. It has nothing to do with an analog pin, but is just for PWM pins. You do not need to call the ``pinMode()`` to set the pin as output before calling ``analogWrite()``.
+**analogWrite()** ：向引脚写入模拟值（PWM 波形）。它与模拟引脚无关，仅用于 PWM 引脚。在调用 ``analogWrite()`` 之前，无需调用 ``pinMode()`` 将引脚设置为输出。

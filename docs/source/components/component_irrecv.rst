@@ -1,62 +1,48 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _cpn_ir_receiver:
 
-Infrared Receiver
+红外接收模块
 =================================
 
-IR Receiver
+红外接收头
 ----------------------------
 
 .. image:: img/infrared-receiver_01.png
     :width: 60%
 
-* S: Signal output
-* +: VCC
-* -: GND
+* S：信号输出
+* +：VCC
+* -：GND
 
-.. An infrared-receiver is a component which receives infrared signals and can independently receive infrared rays and output signals compatible with TTL level. It is similar with a normal plastic-packaged transistor in size and is suitable for all kinds of infrared remote control and infrared transmission.
+.. 红外接收头是一种接收红外信号的元件，可独立接收红外线并输出与TTL电平兼容的信号。其大小与普通塑料封装的晶体管相似，适用于各种红外遥控和红外传输。
 
-SL838 is a small receiver for infrared remote control systems. It contains high speed and high sensitivity photodiode and preamplifier, and is packaged with epoxy resin to form infrared filter, Its main advantage is that it hasreliable function even in the disturbed environment.
+SL838是一款用于红外遥控系统的小型接收头。它包含高速高灵敏度光电二极管和前置放大器，并用环氧树脂封装形成红外滤光片。其主要优点是在干扰环境中也能保持可靠功能。
 
-Infrared, or IR, communication is a popular, low-cost, easy-to-use wireless communication technology. Infrared light has a slightly longer wavelength than visible light, so it is imperceptible to the human eye - ideal for wireless communication. A common modulation scheme for infrared communication is 38KHz modulation.
+红外（IR）通信是一种流行、低成本、易于使用的无线通信技术。红外光的波长比可见光略长，因此人眼不可见——非常适合无线通信。红外通信的一种常见调制方案是38KHz调制。
 
-* Can be used for remote control
-* Wide operating voltage: 2.7~5V
-* Internal filter for PCM frequency 
-* TTL and CMOS compatibility
-* Strong anti-interference ability
-* Compliant RoHS
+* 可用于遥控
+* 宽工作电压：2.7~5V
+* 内置PCM频率滤波器
+* 兼容TTL和CMOS
+* 抗干扰能力强
+* 符合RoHS标准
 
-Remote Control
+遥控器
 -------------------------
 
 .. image:: img/infrared-receiver_02.jpeg
     :width: 70%
 
-This is a Mini thin infrared wireless remote control with 21 function buttons and a transmitting distance of up to 8 meters, which is suitable for operating a wide range of devices in a kid's room.
+这是一款迷你型红外无线遥控器，具有21个功能按钮，发射距离可达8米，适用于在儿童房中操作各种设备。
 
-* Size: 85x39x6mm
-* Remote control range: 8-10m
-* Battery: 3V button type lithium manganese battery
-* Infrared carrier frequency: 38KHz
-* Surface paste material: 0.125mm PET
-* Effective life: more than 20,000 times
+* 尺寸：85x39x6mm
+* 遥控距离：8-10m
+* 电池：3V纽扣型锂锰电池
+* 红外载波频率：38KHz
+* 表面贴片材料：0.125mm PET
+* 有效寿命：超过20,000次
 
 
-**Example**
+**示例**
 
-* :ref:`basic_irrecv` (Basic Project)
-* :ref:`fun_guess_number` (Fun Project)
+* :ref:`basic_irrecv` （基础项目）
+* :ref:`fun_guess_number` （趣味项目）

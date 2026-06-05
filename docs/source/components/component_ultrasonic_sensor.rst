@@ -1,20 +1,6 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _cpn_ultrasonic:
 
-Ultrasonic Module
+超声波模块
 ================================
 
 .. image:: img/ultrasonic_pic.png
@@ -22,37 +8,34 @@ Ultrasonic Module
     :align: center
 
 
-An ultrasonic sensor module is an instrument that measures the distance to an object using ultrasonic sound waves. It has two probes. One is to send ultrasonic waves and the other is to receive the waves and transform the time of sending and receiving into a distance, thus detecting the distance between the device and an obstacle. In practice it is really convenient and functional.
+超声波传感器模块是一种使用超声波测量与物体之间距离的仪器。它有两个探头，一个用于发送超声波，另一个用于接收波，并将发送和接收的时间转换为距离，从而检测设备与障碍物之间的距离。在实际应用中非常方便和实用。
+
+它提供2cm - 400cm的非接触式测量功能，测距精度可达3mm。
+它可以确保信号在5m内稳定，5m后信号逐渐减弱，直到7m位置消失。
+
+该模块包括超声波发射器、接收器和控制电路。基本原理如下：
+
+#. 使用IO触发器处理至少10us的高电平信号。
+
+#. 模块自动发送八个40khz脉冲，并检测是否有脉冲信号返回。
+
+#. 如果信号返回，通过高电平，高输出IO持续时间是从超声波发送到返回的时间。这里，测试距离 = (高电平时间 x 声速（340 m/s）/ 2。
 
 
-It provides 2cm - 400cm non-contact measurement function, and the ranging accuracy can reach to 3mm. 
-It can ensure that the signal is stable within 5m, and the signal is gradually weakened after 5m, till the 7m position disappears.
 
-The module includes ultrasonic transmitters, receiver and control circuit. The basic principles are as follows:
-
-#. Use an IO flip-flop to process a high level signal of at least 10us.
-
-#. The module automatically sends eight 40khz and detects if there is a pulse signal return.
-
-#. If the signal returns, passing the high level, the high output IO duration is the time from the transmission of the ultrasonic wave to the return of it. Here, test distance = (high time x sound speed (340 m / s) / 2.
-
-
-
-The timing diagram is shown below. 
+时序图如下所示。
 
 .. image:: img/ultrasonic228.png
 
-You only need to supply a short 10us pulse for the trigger input to start the ranging, and then the module
-will send out an 8 cycle burst of ultrasound at 40 kHz and raise its
-echo. You can calculate the range through the time interval between
-sending trigger signal and receiving echo signal.
+您只需为触发输入提供一个短暂的10us脉冲即可开始测距，然后模块
+将发送8个40 kHz的超声波周期脉冲并拉高其
+回声。您可以通过发送触发信号和接收回波信号之间的时间间隔来计算距离。
 
-Formula: us / 58 = centimeters or us / 148 =inch; or: the range = high
-level time \* velocity (340M/S) / 2; you are suggested to use
-measurement cycle over 60ms in order to prevent signal collisions of
-trigger signal and the echo signal.
+公式：us / 58 = 厘米 或 us / 148 = 英寸；或：距离 = 高
+电平时间 \* 速度（340M/S）/ 2；建议使用
+超过60ms的测量周期，以防止触发信号和回波信号的信号冲突。
 
-**Example**
+**示例**
 
-* :ref:`basic_ultrasonic_sensor` (Basic Project)
-* :ref:`fun_smart_can` (Fun Project)
+* :ref:`basic_ultrasonic_sensor` （基础项目）
+* :ref:`fun_smart_can` （趣味项目）

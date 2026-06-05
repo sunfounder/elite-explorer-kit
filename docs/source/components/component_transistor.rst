@@ -1,44 +1,29 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _cpn_transistor:
 
-Transistor
+三极管
 ============
 
 .. image:: img/npn_pnp.png
     :width: 300
 
-Transistor is a semiconductor device that controls current by current. It functions by amplifying weak signal to larger amplitude signal and is also used for non-contact switch. 
+三极管是一种通过电流来控制电流的半导体器件。它的功能是将微弱信号放大为较大幅度的信号，也用于无触点开关。
 
-A transistor is a three-layer structure composed of P-type and N-type semiconductors. They form the three regions internally. The thinner in the middle is the base region; the other two are both N-type or P-type ones – the smaller region with intense majority carriers is the emitter region, when the other one is the collector region. This composition enables the transistor to be an amplifier. 
-From these three regions, three poles are generated respectively, which are base (b), emitter (e), and collector (c). They form two P-N junctions, namely, the emitter junction and collection junction. The direction of the arrow in the transistor circuit symbol indicates that of the emitter junction. 
+三极管是由P型和N型半导体组成的三层结构。它们内部形成三个区域。中间较薄的是基区；另外两个都是N型或P型——多数载流子浓度较高的较小区域是发射区，另一个是集电区。这种结构使三极管能够成为放大器。
+从这三个区域分别引出三个极，即基极（b）、发射极（e）和集电极（c）。它们形成两个PN结，即发射结和集电结。三极管电路符号中箭头的方向指示了发射结的方向。
 
-* `P–N junction - Wikipedia <https://en.wikipedia.org/wiki/P-n_junction>`_
+* `PN结 - 维基百科 <https://en.wikipedia.org/wiki/P-n_junction>`_
 
-Based on the semiconductor type, transistors can be divided into two groups, the NPN and PNP ones. From the abbreviation, we can tell that the former is made of two N-type semiconductors and one P-type and that the latter is the opposite. See the figure below. 
+根据半导体类型，三极管可分为两组，NPN型和PNP型。从缩写可知，前者由两个N型半导体和一个P型半导体组成，后者则相反。见下图。
 
 .. note::
-    s8550 is PNP transistor and the s8050 is the NPN one, They look very similar, and we need to check carefully to see their labels.
-
+    s8550是PNP三极管，s8050是NPN三极管。它们外观非常相似，需要仔细检查标签。
 
 .. image:: img/transistor_symbol.png
     :width: 600
 
-When a High level signal goes through an NPN transistor, it is energized. But a PNP one needs a Low level signal to manage it. Both types of transistor are frequently used for contactless switches, just like in this experiment.
+当高电平信号通过NPN三极管时，它被导通。但PNP三极管需要低电平信号来控制。两种类型的三极管都常用于无触点开关，就像本实验中的用法一样。
 
-Put the label side facing us and the pins facing down. The pins from left to right are emitter(e), base(b), and collector(c).
+将标签面朝向自己，引脚朝下。从左到右的引脚分别是发射极（e）、基极（b）和集电极（c）。
 
 .. image:: img/ebc.png
     :width: 150
@@ -47,8 +32,8 @@ Put the label side facing us and the pins facing down. The pins from left to rig
 * |link_s8050_datasheet|
 * |link_s8550_datasheet|
 
-**Example**
+**示例**
 
-* :ref:`basic_relay` (Basic Project)
-* :ref:`basic_active_buzzer` (Basic Project)
-* :ref:`basic_passive_buzzer` (Basic Project)
+* :ref:`basic_relay` （基础项目）
+* :ref:`basic_active_buzzer` （基础项目）
+* :ref:`basic_passive_buzzer` （基础项目）

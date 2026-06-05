@@ -1,40 +1,26 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _cpn_servo:
 
-Servo
+舵机
 ===========
 
 .. image:: img/servo.png
     :align: center
 
-A servo is generally composed of the following parts: case, shaft, gear system, potentiometer, DC motor, and embedded board.  
+舵机通常由以下部分组成：外壳、转轴、齿轮系统、电位器、直流电机和内置控制板。
 
-It works like this: The microcontroller sends out PWM signals to the servo, and then the embedded board in the servo receives the signals through the signal pin and controls the motor inside to turn. As a result, the motor drives the gear system and then motivates the shaft after deceleration. The shaft and potentiometer of the servo are connected together. When the shaft rotates, it drives the potentiometer, so the potentiometer outputs a voltage signal to the embedded board. Then the board determines the direction and speed of rotation based on the current position, so it can stop exactly at the right position as defined and hold there.
+它的工作原理如下：微控制器向舵机发送PWM信号，舵机中的内置控制板通过信号线接收信号并控制内部电机转动。结果，电机驱动齿轮系统，减速后带动转轴运动。舵机的转轴和电位器连接在一起。当转轴旋转时，它带动电位器，因此电位器向内置控制板输出电压信号。然后控制板根据当前位置确定旋转的方向和速度，从而能够精确停止在定义的位置并保持在那里。
 
 .. image:: img/servo_internal.png
     :align: center
 
-The angle is determined by the duration of a pulse that is applied to the control wire. This is called Pulse width Modulation. The servo expects to see a pulse every 20 ms. The length of the pulse will determine how far the motor turns. For example, a 1.5ms pulse will make the motor turn to the 90 degree position (neutral position).
-When a pulse is sent to a servo that is less than 1.5 ms, the servo rotates to a position and holds its output shaft some number of degrees counterclockwise from the neutral point. When the pulse is wider than 1.5 ms the opposite occurs. The minimal width and the maximum width of pulse that will command the servo to turn to a valid position are functions of each servo. Generally the minimum pulse will be about 0.5 ms wide and the maximum pulse will be 2.5 ms wide.
+角度由施加到控制线上的脉冲持续时间决定。这称为脉宽调制。舵机期望每20ms收到一个脉冲。脉冲的长度决定了电机转动的角度。例如，1.5ms的脉冲将使电机转到90度位置（中间位置）。
+当发送给舵机的脉冲小于1.5ms时，舵机旋转到一个位置并使其输出轴从中间点逆时针旋转一定角度。当脉冲大于1.5ms时，则发生相反的情况。命令舵机转到有效位置的最小脉冲宽度和最大脉冲宽度是每个舵机的特性。通常，最小脉冲约为0.5ms，最大脉冲约为2.5ms。
 
 .. image:: img/servo_duty.png
     :width: 600
     :align: center
 
-**Example**
+**示例**
 
-* :ref:`basic_servo` (Basic Project)
-* :ref:`fun_smart_can` (Fun Project)
+* :ref:`basic_servo` （基础项目）
+* :ref:`fun_smart_can` （趣味项目）

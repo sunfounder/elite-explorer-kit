@@ -1,21 +1,6 @@
-
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _get_start_arduino_ide:
 
-Get Started with Arduino
+Arduino 入门指南
 =======================================
 
 .. Arduino is an open source platform with simple software and hardware.
@@ -35,36 +20,36 @@ Get Started with Arduino
 ..     download_add
 ..     upload_code
 
-If you have no idea about Arduino. There are several words I would like to show you: electronics, design, programming, and even Maker. Some of you may think these words are quite far away from us, but in fact, they are not far at all. Because Arduino can take us into the world of programming and help us realize the dream of being a Maker. 
-In this session we will learn: 
+如果你对 Arduino 还不太了解，我想向你介绍几个关键词：电子、设计、编程，甚至是创客。有些人可能觉得这些词离我们很远，但实际上，它们一点也不遥远。因为 Arduino 可以带我们进入编程的世界，并帮助我们实现成为创客的梦想。
+在本节课程中，我们将学习：
 
-* What is Arduino?
-* What can Arduino do? 
-* How to build an Arduino Project?
+* 什么是 Arduino？
+* Arduino 能做什么？
+* 如何搭建一个 Arduino 项目？
 
 .. _what_is:
 
-What is Arduino?
+什么是 Arduino？
 -----------------
 
-First of all, I will give you a brief introduction to Arduino.
+首先，我将对 Arduino 做一个简要的介绍。
 
-Arduino is a convenient, flexible, and easy-to-use open-source electronic prototyping platform, including hardware Arduino boards of various models and software Arduino IDE. It is not only suitable for engineers for rapid prototyping, but also artists, designers, hobbyists, while it is almost a must-have tool for modern Makers.
+Arduino 是一个便捷、灵活且易于使用的开源电子原型平台，包括各种型号的硬件 Arduino 开发板和软件 Arduino IDE。它不仅适合工程师进行快速原型开发，也适合艺术家、设计师和爱好者，同时它几乎是现代创客的必备工具。
 
-Arduino is quite a large system. It has software, hardware, and a very huge online community of people who have never met each other but are able to work together because of a common hobby. Everyone in the Arduino family is using their wisdom, making with their hands, and sharing one great invention after another. And you can also be a part of it.
+Arduino 是一个相当庞大的系统。它拥有软件、硬件以及一个非常庞大的在线社区，社区中的人们虽然从未谋面，但因为有共同的爱好而能够共同协作。Arduino 大家庭中的每一个人都在用自己的智慧、动手制作，并分享一个又一个伟大的发明。你也可以成为其中的一员。
 
 .. _what_cando:
 
-What can Arduino do?
+Arduino 能做什么？
 ---------------------
 
-Speaking of which, you may have doubts about what Arduino can actually do. Suffice it to say, Arduino will solve all your problems.
+说到这里，你可能会对 Arduino 到底能做什么有所疑问。可以这么说，Arduino 能解决你所有的问题。
 
-Technically speaking, Arduino is a programmable logic controller. It is a development board that can be used to create many exciting and creative electronic creations: such as remote-controlled cars, robotic arms, bionic robots, smart homes, etc. 
+从技术上讲，Arduino 是一个可编程逻辑控制器。它是一种开发板，可以用来创建许多令人兴奋且富有创意的电子作品：如遥控汽车、机械臂、仿生机器人、智能家居等。
 
-Arduino boards are straightforward, simple, and powerful, suitable for students, makers and even professional programmers. 
+Arduino 开发板简单、易用且功能强大，适合学生、创客甚至专业程序员使用。
 
-To this day, electronics enthusiasts worldwide continue to develop creative electronic creations based on Arduino development boards.
+时至今日，全世界的电子爱好者们仍在不断基于 Arduino 开发板开发出富有创意的电子作品。
 
 .. What is Arduino UNO?
 .. ----------------------
@@ -74,16 +59,15 @@ To this day, electronics enthusiasts worldwide continue to develop creative elec
 
 
 
-
-How to build an Arduino Project
+如何搭建一个 Arduino 项目
 -----------------------------------
 
-Follow these steps to learn how to use Arduino from zero!
+按照以下步骤，从零开始学习如何使用 Arduino！
 
 
 .. toctree::
    :maxdepth: 2
-   
+
    01_install_arduino_ide
    02_introduce_ide
    03_create_save
@@ -94,5 +78,5 @@ Follow these steps to learn how to use Arduino from zero!
    08_basic_circuit
    09_add_lib
 
-   
+
 

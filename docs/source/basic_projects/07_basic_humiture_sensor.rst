@@ -1,66 +1,52 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _basic_humiture_sensor:
 
-Humiture Sensor Module
+温湿度传感器模块
 ==========================
 
 .. https://docs.sunfounder.com/projects/3in1-kit/en/latest/basic_project/ar_dht11.html#ar-dht11
 
-Overview
+概述
 ---------------
 
-Humidity and temperature are closely related from the physical quantity itself to the actual people's life.
-The temperature and humidity of human environment will directly affect the thermoregulatory function and heat transfer effect of human body.
-It will further affect the thinking activity and mental state, thus affecting the efficiency of our study and work.
+湿度和温度从物理量本身到人们的实际生活都密切相关。
+人类环境的温度和湿度会直接影响人体的体温调节功能和热传递效果。
+这将进一步影响思维活动和精神状态，从而影响我们的学习和工作效率。
 
-Temperature is one of the seven basic physical quantities in the International System of Units, which is used to measure the degree of hot and cold of an object.
-Celsius is one of the more widely used temperature scales in the world, expressed by the symbol "℃".
+温度是国际单位制中七个基本物理量之一，用于衡量物体的冷热程度。
+摄氏度是世界上较为常用的温标之一，用符号"℃"表示。
 
-Humidity is the concentration of water vapor present in the air.
-The relative humidity of air is commonly used in life and is expressed in %RH. Relative humidity is closely related to temperature.
-For a certain volume of sealed gas, the higher the temperature, the lower the relative humidity, and the lower the temperature, the higher the relative humidity.
+湿度是空气中水蒸气的浓度。
+生活中常用相对湿度，以 %RH 表示。相对湿度与温度密切相关。
+对于一定体积的密封气体，温度越高，相对湿度越低；温度越低，相对湿度越高。
 
-The dht11, a digital temperature and humidity sensor, is provided in this kit. It uses a capacitive humidity sensor and thermistor to measure the surrounding air and outputs a digital signal on the data pin.
+本套件提供了 dht11 数字温湿度传感器。它使用电容式湿度传感器和热敏电阻来测量周围空气，并在数据引脚上输出数字信号。
 
-Required Components
+所需元件
 -------------------------
 
-In this project, we need the following components. 
+本项目中，我们需要以下元件。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+购买整套套件会更加方便，以下是链接：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - Elite Explorer Kit
+    *   - 名称
+        - 套件所含项目
+        - 链接
+    *   - Elite Explorer 套件
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+您也可以从以下链接单独购买。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - 元件介绍
+        - 购买链接
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -73,75 +59,75 @@ You can also buy them separately from the links below.
 
 
 
-Wiring
+接线
 ----------------------
 
 .. image:: img/07-dht11_bb.png
     :align: center
 
-Schematic Diagram
+原理图
 -----------------------
 
 .. image:: img/07_humiture_schematic.png
     :align: center
     :width: 40%
 
-Code
+代码
 ---------------
 
 .. note::
 
-    * You can open the file ``07-humiture_sensor.ino`` under the path of ``elite-explorer-kit-main\basic_project\07-humiture_sensor`` directly.
-    * Or copy this code into Arduino IDE.
+    * 您可以直接打开路径 ``elite-explorer-kit-main\basic_project\07-humiture_sensor`` 下的 ``07-humiture_sensor.ino`` 文件。
+    * 或者将以下代码复制到 Arduino IDE 中。
 
-.. note:: 
-    To install the library, use the Arduino Library Manager and search for **"DHT sensor library"** and install it. 
+.. note::
+    要安装库，请使用 Arduino 库管理器搜索 **"DHT sensor library"** 并安装。
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/1086b07f-9551-4fa0-a0c0-391a6465ad2e/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-After the code is uploaded successfully, you will see the Serial Monitor continuously print out the temperature and humidity, and as the program runs steadily, these two values will become more and more accurate.
+代码成功上传后，您将看到串口监视器持续打印出温度和湿度，随着程序稳定运行，这两个值将变得越来越准确。
 
-Code Analysis
+代码分析
 ------------------------
 
-#. Inclusion of necessary libraries and definition of constants.
-   This part of the code includes the DHT sensor library and defines the pin number and sensor type used in this project.
+#. 包含必要的库并定义常量。
+   这部分代码包含了 DHT 传感器库，并定义了本项目所使用的引脚编号和传感器类型。
 
-   .. note:: 
-      To install the library, use the Arduino Library Manager and search for **"DHT sensor library"** and install it. 
+   .. note::
+      要安装库，请使用 Arduino 库管理器搜索 **"DHT sensor library"** 并安装。
 
    .. code-block:: arduino
-    
+
       #include <DHT.h>
-      #define DHTPIN 11       // Define the pin used to connect the sensor
-      #define DHTTYPE DHT11  // Define the sensor type
+      #define DHTPIN 11       // 定义连接传感器的引脚
+      #define DHTTYPE DHT11  // 定义传感器类型
 
-#. Creation of DHT object.
-   Here we create a DHT object using the defined pin number and sensor type.
+#. 创建 DHT 对象。
+   这里我们使用定义的引脚编号和传感器类型创建一个 DHT 对象。
 
    .. code-block:: arduino
 
-      DHT dht(DHTPIN, DHTTYPE);  // Create a DHT object
+      DHT dht(DHTPIN, DHTTYPE);  // 创建一个 DHT 对象
 
-#. This function is executed once when the Arduino starts. We initialize the serial communication and the DHT sensor in this function.
+#. 此函数在 Arduino 启动时执行一次。我们在此函数中初始化串口通信和 DHT 传感器。
 
    .. code-block:: arduino
 
       void setup() {
         Serial.begin(9600);
         Serial.println(F("DHT11 test!"));
-        dht.begin();  // Initialize the DHT sensor
+        dht.begin();  // 初始化 DHT 传感器
       }
 
-#. Main loop.
-   The ``loop()`` function runs continuously after the setup function. Here, we read the humidity and temperature values, calculate the heat index, and print these values to the serial monitor.  If the sensor read fails (returns NaN), it prints an error message.
+#. 主循环。
+   ``loop()`` 函数在 setup 函数之后持续运行。在这里，我们读取湿度和温度值，计算炎热指数，并将这些值打印到串口监视器。如果传感器读取失败（返回 NaN），则会打印一条错误消息。
 
    .. note::
-    
-      The |link_heat_index| is a way to measure how hot it feels outside by combining the air temperature and the humidity. It is also called the "felt air temperature" or "apparent temperature".
+
+      |link_heat_index| 是一种通过结合空气温度和湿度来衡量户外炎热程度的方法，也称为"体感温度"或"表观温度"。
 
    .. code-block:: arduino
 

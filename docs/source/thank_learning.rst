@@ -1,24 +1,10 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
-Thank You!
+感谢！
 ====================
 
-We sincerely thank those who have purchased our products, the evaluators who have diligently assessed what we offer, the industry veterans who have provided invaluable guidance for our tutorials, and our dedicated users who continuously follow and support us.
+我们衷心感谢所有购买我们产品的用户、认真评估我们产品的评测者、为我们的教程提供宝贵指导的行业专家，以及持续关注和支持我们的忠实用户。
 
-Your insightful feedback is crucial in motivating us to deliver even better, high-quality products.
+您富有洞察力的反馈对于激励我们提供更优质的产品至关重要。
 
-If you encounter any problems or have suggestions for improvement while using this kit, please feel free to contact us at: service@sunfounder.com
+如果您在使用本套件时遇到任何问题或有改进建议，请随时通过以下方式联系我们：service@sunfounder.com
 
-For a more collaborative approach, we encourage you to utilize the `GitHub issue <https://github.com/sunfounder/Elite-Explorer-Kit/issues/new/>`__ feature. This platform allows you to directly report any documentation concerns and engage with our community, ensuring that your voice contributes to the continuous improvement of our products.
+为了更具协作性的方式，我们鼓励您使用 `GitHub issue <https://github.com/sunfounder/Elite-Explorer-Kit/issues/new/>`__ 功能。该平台允许您直接报告任何文档问题并与我们的社区互动，确保您的声音为产品的持续改进做出贡献。

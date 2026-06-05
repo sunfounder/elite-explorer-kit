@@ -1,20 +1,6 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _iot_security_system_ifttt:
 
-Security System via IFTTT
+基于 IFTTT 的安全系统
 ============================================
 
 .. raw:: html
@@ -24,35 +10,35 @@ Security System via IFTTT
       Your browser does not support the video tag.
    </video>
 
-With this project, we create a security device that employs a PIR Sensor to detect intruders or stray animals entering your home. In case of a breach, you will receive an email alert.
+通过这个项目，我们创建了一个安全设备，使用 PIR 传感器检测进入您家中的入侵者或流浪动物。如果发生入侵，您将收到一封电子邮件警报。
 
-We'll utilize Webhooks as the fundamental service. A POST request is sent to IFTTT's service from UNO R4. 
+我们将使用 Webhooks 作为基础服务。从 UNO R4 向 IFTTT 的服务发送一个 POST 请求。
 
-**Required Components**
+**所需元件**
 
-In this project, we need the following components. 
+在这个项目中，我们需要以下元件。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+购买整套套件会更方便，以下是链接：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - Elite Explorer Kit
+    *   - 名称
+        - 套件所含项目
+        - 链接
+    *   - Elite Explorer 套件
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+您也可以从下面的链接单独购买。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - 元件介绍
+        - 购买链接
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -61,165 +47,165 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_pir`
         - |link_pir_buy|
 
-**Wiring**
+**接线**
 
 .. image:: img/03-ifttt_pir_bb.png
     :width: 90%
     :align: center
 
 
-**Schematic**
+**原理图**
 
 .. image:: img/03-ifttt_pir_schematic.png
    :width: 50%
    :align: center
 
-**Setting up IFTTT**
+**设置 IFTTT**
 
-IFTTT is a free service that offers various methods to link different data services together.
+IFTTT 是一项免费服务，提供多种方法将不同的数据服务链接在一起。
 
-Let's create an Applet that responds to a webhook (custom URL) sending data to IFTTT, which will then send you an email.
+让我们创建一个 Applet，响应 webhook（自定义 URL）将数据发送到 IFTTT，然后 IFTTT 将向您发送一封电子邮件。
 
-Please follow the steps below on IFTTT.
+请按照以下步骤在 IFTTT 上进行操作。
 
-1. Visit |link_ifttt| to log in or create an account.
+1. 访问 |link_ifttt| 登录或创建帐户。
 
    .. image:: img/03_ifttt_1.png
        :width: 90%
 
-2. Click on **Create**.
+2. 点击 **Create** 。
 
    .. image:: img/03_ifttt_2.png
        :width: 90%
 
-3. Add an **If This** event.
+3. 添加一个 **If This** 事件。
 
    .. image:: img/03_ifttt_3.png
        :width: 70%
 
-4. Search for **Webhooks**.
+4. 搜索 **Webhooks** 。
 
    .. image:: img/03_ifttt_4.png
        :width: 70%
 
-5. Select **Receive a web request**.
+5. 选择 **Receive a web request** 。
 
    .. image:: img/03_ifttt_5.png
        :width: 90%
 
-6. Fill in the event name (e.g., SecurityWarning), and click **Create trigger**.
+6. 填写事件名称（例如 SecurityWarning），然后点击 **Create trigger** 。
 
    .. image:: img/03_ifttt_6.png
        :width: 70%
 
-7. Add a **Then That** event.
+7. 添加一个 **Then That** 事件。
 
    .. image:: img/03_ifttt_7.png
        :width: 70%
 
-8. Search for Email.
+8. 搜索 Email。
 
    .. image:: img/03_ifttt_8.png
        :width: 80%
 
-9. Choose **Send me an email**.
+9. 选择 **Send me an email** 。
 
    .. image:: img/03_ifttt_9.png
        :width: 80%
 
-10. Enter the **Subject** and **Body**, then click **Create action**.
+10. 输入 **Subject ** 和 **Body ** ，然后点击 **Create action** 。
 
    .. image:: img/03_ifttt_10.png
        :width: 70%
 
-11. Click **Continue** to finish the setup.
+11. 点击 **Continue** 完成设置。
 
    .. image:: img/03_ifttt_11.png
        :width: 70%
 
-12. Adjust the title name as needed.
+12. 根据需要调整标题名称。
 
    .. image:: img/03_ifttt_12.png
        :width: 80%
 
-13. You'll be automatically redirected to the Applet details page, where you can see that the Applet is currently connected and you can toggle the switch to enable/disable it.
+13. 您将自动重定向到 Applet 详情页面，在该页面可以看到 Applet 当前已连接，您可以切换开关以启用/禁用它。
 
    .. image:: img/03_ifttt_13.png
        :width: 70%
 
-14. Now that we've created the IFTTT Applet, we also need the webhooks key, which can be obtained from |link_webhooks| to allow your device to access IFTTT.
+14. 现在我们已经创建了 IFTTT Applet，我们还需要 webhooks 密钥，可以从 |link_webhooks| 获取，以便您的设备访问 IFTTT。
 
    .. image:: img/03_ifttt_14.png
 
-15. Copy the webhooks key to "arduino_secrets.h" and fill in your SSID and password.
+15. 将 webhooks 密钥复制到 "arduino_secrets.h"，并填写您的 SSID 和密码。
 
     .. code-block:: arduino
-    
+
         #define SECRET_SSID "your_ssid"        // your network SSID (name)
         #define SECRET_PASS "your_password"        // your network password (used for WPA, or as a key for WEP)
         #define WEBHOOKS_KEY "your_key"
 
-**Run the Code**
+**运行代码**
 
 .. note::
 
-    * You can open the file ``03_ifttt_pir.ino`` under the path of ``elite-explorer-kit-main\iot_project\03_ifttt_pir`` directly.
-    * Or copy this code into Arduino IDE.
+    * 您可以直接打开路径 ``elite-explorer-kit-main\iot_project\03_ifttt_pir`` 下的 ``03_ifttt_pir.ino`` 文件。
+    * 或者将这段代码复制到 Arduino IDE 中。
 
 .. note::
-    In the code, SSID and password are stored in ``arduino_secrets.h``. Before uploading this example, you need to modify them with your own WiFi credentials. Additionally, for security purposes, ensure that this information is kept confidential when sharing or storing the code.
+    在代码中，SSID 和密码存储在 ``arduino_secrets.h`` 中。上传此示例之前，您需要使用自己的 WiFi 凭据修改它们。此外，出于安全目的，在共享或存储代码时请确保此信息保密。
 
 .. warning::
-   To prevent your mailbox from being flooded, please debug the :ref:`cpn_pir` beforehand before running the code for this project.
+   为了防止您的邮箱被大量邮件淹没，请在运行该项目的代码之前先调试好 :ref:`cpn_pir` 。
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/adec1608-4642-4469-bdf4-8dc3e3e4ce4d/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
- 
-**How it works?**
 
-1. Include the necessary libraries and header files:
+**工作原理**
 
-   * ``"WiFiS3.h"``: Used for managing Wi-Fi connections.
-   * ``"arduino_secrets.h"``: Contains Wi-Fi network name and password to safeguard sensitive information.
+1. 包含必要的库和头文件：
 
-2. Define some global variables and constants:
+   * ``"WiFiS3.h"``：用于管理 Wi-Fi 连接。
+   * ``"arduino_secrets.h"``：包含 Wi-Fi 网络名称和密码，以保护敏感信息。
 
-   * ``ssid``: Name of the Wi-Fi network.
-   * ``pass``: Wi-Fi network password.
-   * ``status``: Status of the Wi-Fi connection.
-   * ``client``: Client used for communicating with the Wi-Fi server.
-   * ``server``: Address of the IFTTT Webhook server.
-   * ``event``: Name of the IFTTT Webhook event.
-   * ``webRequestURL``: Constructed URL for sending HTTP requests, including the Webhook event name and key.
-   * ``pirPin``: Digital pin to which the PIR sensor is connected.
-   * ``motionDetected``: Flag variable to track motion detection.
+2. 定义一些全局变量和常量：
 
-3. ``setup()`` function:
+   * ``ssid``：Wi-Fi 网络的名称。
+   * ``pass``：Wi-Fi 网络密码。
+   * ``status``：Wi-Fi 连接的状态。
+   * ``client``：用于与 Wi-Fi 服务器通信的客户端。
+   * ``server``：IFTTT Webhook 服务器的地址。
+   * ``event``：IFTTT Webhook 事件的名称。
+   * ``webRequestURL``：构建的用于发送 HTTP 请求的 URL，包含 Webhook 事件名称和密钥。
+   * ``pirPin``：连接到 PIR 传感器的数字引脚。
+   * ``motionDetected``：用于跟踪运动检测的标志变量。
 
-   * Initializes serial communication.
-   * Checks for the presence of the Wi-Fi module and outputs its firmware version.
-   * Attempts to connect to the Wi-Fi network, with retries if unsuccessful.
-   * Sets the pin connected to the PIR sensor to input mode.
+3. ``setup()`` 函数：
 
-4. ``readResponse()`` function:
+   * 初始化串行通信。
+   * 检查 Wi-Fi 模块是否存在并输出其固件版本。
+   * 尝试连接到 Wi-Fi 网络，如果不成功则重试。
+   * 将连接到 PIR 传感器的引脚设置为输入模式。
 
-   * Reads HTTP response data from the IFTTT server and prints it to the serial console.
+4. ``readResponse()`` 函数：
 
-5. ``loop()`` function:
+   * 从 IFTTT 服务器读取 HTTP 响应数据并将其打印到串行控制台。
 
-   * Calls the ``readResponse()`` function to read HTTP response data.
-   * Checks for motion using the PIR sensor. If motion is detected and was not detected previously:
-       * Prints "Motion detected!" to the console.
-       * Calls the ``triggerIFTTTEvent()`` function to send an HTTP request to the IFTTT server, triggering the Webhook event.
-       * Sets the ``motionDetected`` flag to ``true`` to indicate motion has been detected.
-   * If no motion is detected, sets the ``motionDetected`` flag to ``false``.
+5. ``loop()`` 函数：
 
-6. ``triggerIFTTTEvent()`` function:
+   * 调用 ``readResponse()`` 函数读取 HTTP 响应数据。
+   * 使用 PIR 传感器检查是否检测到运动。如果检测到运动且之前未检测到：
+       * 在控制台打印 "Motion detected!"。
+       * 调用 ``triggerIFTTTEvent()`` 函数向 IFTTT 服务器发送 HTTP 请求，触发 Webhook 事件。
+       * 将 ``motionDetected`` 标志设置为 ``true``，表示已检测到运动。
+   * 如果未检测到运动，则将 ``motionDetected`` 标志设置为 ``false``。
 
-   * Establishes a connection with the IFTTT server.
-   * Sends an HTTP GET request, including the URL of the Webhook event and other HTTP headers.
+6. ``triggerIFTTTEvent()`` 函数：
 
-7. ``printWifiStatus()`` function:
+   * 与 IFTTT 服务器建立连接。
+   * 发送 HTTP GET 请求，包含 Webhook 事件的 URL 和其他 HTTP 头。
 
-   * Outputs information about the connected Wi-Fi network, including SSID, IP address, and signal strength (RSSI) to the serial console.
+7. ``printWifiStatus()`` 函数：
+
+   * 将已连接 Wi-Fi 网络的信息（包括 SSID、IP 地址和信号强度 (RSSI)）输出到串行控制台。

@@ -1,31 +1,17 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _cpn_photoresistor:
 
-Photoresistor
+光敏电阻
 ==============
 
 .. image:: img/photoresistor.png
     :width: 200
     :align: center
 
-A photoresistor or photocell is a light-controlled variable resistor. The resistance of a photoresistor decreases with increasing incident light intensity; in other words, it exhibits photo conductivity. 
+光敏电阻或光电池是一种光控可变电阻。光敏电阻的阻值随着入射光强度的增加而减小；换句话说，它表现出光电导性。
 
-A photoresistor can be applied in light-sensitive detector circuits and light-activated and dark-activated switching circuits acting as a resistance semiconductor. In the dark, a photoresistor can have a resistance as high as several megaohms (MΩ), while in the light, a photoresistor can have a resistance as low as a few hundred ohms.
+光敏电阻可作为电阻型半导体应用于光敏检测电路以及光控和暗控开关电路中。在暗处，光敏电阻的阻值可高达几兆欧（MΩ），而在亮处，光敏电阻的阻值可低至几百欧姆。
 
-Here is the electronic symbol of photoresistor.
+以下是光敏电阻的电子符号。
 
 .. image:: img/photoresistor_symbol.png
     :width: 200
@@ -33,7 +19,7 @@ Here is the electronic symbol of photoresistor.
 
 * |link_photoresistor_wiki|
 
-**Example**
+**示例**
 
-* :ref:`basic_photoresistor` (Basic Project)
-* :ref:`fun_light_array` (Fun Project)
+* :ref:`basic_photoresistor` （基础项目）
+* :ref:`fun_light_array` （趣味项目）

@@ -1,57 +1,43 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _basic_pir:
 
-PIR Motion Sensor Module
+PIR 人体运动传感器模块
 ==========================
 
 .. https://docs.sunfounder.com/projects/kepler-kit/en/latest/cproject/ar_pir.html#ar-pir
 
 
-Overview
+概述
 ---------------
 
-In this lesson, you will learn about PIR motion sensor module. The Passive Infrared(PIR) Motion Sensor is a sensor that detects motion. It is commonly used in security systems and automatic lighting systems. The sensor has two slots that detect infrared radiation. When an object, such as a person, passes in front of the sensor, it detects a change in the amount of infrared radiation and triggers an output signal.
+在本课中，您将了解 PIR 人体运动传感器模块。被动红外（PIR）运动传感器是一种检测运动的传感器。它常用于安防系统和自动照明系统。该传感器有两个槽，用于检测红外辐射。当一个物体（例如人）经过传感器前方时，它会检测到红外辐射量的变化并触发输出信号。
 
 
-Required Components
+所需元件
 -------------------------
 
-In this project, we need the following components. 
+本项目中，我们需要以下元件。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+购买整套套件会更加方便，以下是链接：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - Elite Explorer Kit
+    *   - 名称
+        - 套件所含项目
+        - 链接
+    *   - Elite Explorer 套件
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+您也可以从以下链接单独购买。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - 元件介绍
+        - 购买链接
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -62,7 +48,7 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_pir`
         - |link_pir_buy|
 
-Wiring
+接线
 ----------------------
 
 .. image:: img/05-pir_bb.png
@@ -70,7 +56,7 @@ Wiring
    :width: 100%
 
 
-Schematic Diagram
+原理图
 -----------------------
 
 .. image:: img/05-pir_schematic.png
@@ -78,20 +64,20 @@ Schematic Diagram
    :width: 50%
 
 
-Code
+代码
 ---------------
 
 .. note::
 
-    * You can open the file ``05-pir_motion_sensor.ino`` under the path of ``elite-explorer-kit-main\basic_project\05-pir_motion_sensor`` directly.
-    * Or copy this code into Arduino IDE.
+    * 您可以直接打开路径 ``elite-explorer-kit-main\basic_project\05-pir_motion_sensor`` 下的 ``05-pir_motion_sensor.ino`` 文件。
+    * 或者将以下代码复制到 Arduino IDE 中。
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/d9fc9198-1538-413d-b501-2cddc8d7cfe6/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After uploading the code to the Arduino Uno board, you can open the serial monitor to observe the sensor's output. When the PIR (passive infrared) motion sensor detects movement, the serial monitor will display the message "Somebody here!" to indicate that motion has been detected. If no motion is detected, the message "Monitoring..." will be shown instead.
+将代码上传到 Arduino Uno 板后，您可以打开串口监视器观察传感器输出。当 PIR（被动红外）运动传感器检测到移动时，串口监视器将显示消息 "Somebody here!" 以表示检测到运动。如果未检测到运动，则会显示消息 "Monitoring..."。
 
-The PIR sensor outputs a digital HIGH or LOW signal, corresponding to detected or undetected motion, respectively. Unlike an analog sensor that provides a range of values, the digital output from this PIR sensor will either be HIGH (typically represented as '1') or LOW (typically represented as '0').
+PIR 传感器输出数字 HIGH 或 LOW 信号，分别对应检测到或未检测到运动。与提供一系列数值的模拟传感器不同，此 PIR 传感器的数字输出要么是 HIGH（通常表示为'1'），要么是 LOW（通常表示为'0'）。
 
-Note that the actual sensitivity and range of detection can vary based on the PIR sensor's characteristics and the environmental conditions. Therefore, it is advisable to calibrate the sensor according to your specific needs.
+请注意，实际的检测灵敏度和范围可能因 PIR 传感器的特性和环境条件而异。因此，建议根据您的具体需求校准传感器。

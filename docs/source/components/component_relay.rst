@@ -1,49 +1,34 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _cpn_realy:
 
-Relay
+继电器
 ==========================================
 
 .. image:: img/relay_pic.png
     :width: 200
     :align: center
 
-As we may know, relay is a device which is used to provide connection between two or more points or devices in response to the input signal applied. In other words, relays provide isolation between the controller and the device as devices may work on AC as well as on DC. However, they receive signals from a microcontroller which works on DC hence requiring a relay to bridge the gap. Relay is extremely useful when you need to control a large amount of current or voltage with small electrical signal.
+众所周知，继电器是一种用于根据输入的信号在两点或多点之间提供连接的设备。换句话说，继电器在控制器和设备之间提供隔离，因为设备可能工作在交流电和直流电上。然而，它们接收来自微控制器的信号，微控制器工作在直流电上，因此需要继电器来桥接这一差距。当需要用微弱的电信号控制大电流或大电压时，继电器非常有用。
 
-There are 5 parts in every relay:
+每个继电器有5个部分：
 
 .. image:: img/relay142.jpeg
 
-**Electromagnet** - It consists of an iron core wounded by coil of wires. When electricity is passed through, it becomes magnetic. Therefore, it is called electromagnet.
+**电磁铁** - 它由一个绕有线圈的铁芯组成。当电流通过时，它变成磁性。因此，它被称为电磁铁。
 
-**Armature** - The movable magnetic strip is known as armature. When current flows through them, the coil is it energized thus producing a magnetic field which is used to make or break the normally open (N/O) or normally close (N/C) points. And the armature can be moved with direct current (DC) as well as alternating current (AC).
+**衔铁** - 可移动的磁性条称为衔铁。当电流流过时，线圈通电，从而产生磁场，用于接通或断开常开（N/O）或常闭（N/C）触点。衔铁可以通过直流电（DC）以及交流电（AC）来移动。
 
-**Spring** - When no currents flow through the coil on the electromagnet, the spring pulls the armature away so the circuit cannot be completed.
+**弹簧** - 当没有电流流过电磁铁上的线圈时，弹簧将衔铁拉开，使电路无法接通。
 
-Set of electrical **contacts** - There are two contact points:
+一组**触点** - 有两个接触点：
 
--  Normally open - connected when the relay is activated, and disconnected when it is inactive.
+- 常开 - 继电器激活时连接，继电器未激活时断开。
 
--  Normally close - not connected when the relay is activated, and connected when it is inactive.
+- 常闭 - 继电器激活时断开，继电器未激活时连接。
 
-**Molded frame** - Relays are covered with plastic for protection.
+**模制框架** - 继电器用塑料外壳覆盖以进行保护。
 
-The working principle of relay is simple. When power is supplied to the relay, currents start flowing through the control coil; as a result, the electromagnet starts energizing. Then the armature is attracted to the coil, pulling down the moving contact together thus connecting with the normally open contacts. So the circuit with the load is energized. Then breaking the circuit would a similar case, as the moving contact will be pulled up to the normally closed contacts under the force of the spring. In this way, the switching on and off of the relay can control the state
-of a load circuit.
+继电器的工作原理很简单。当向继电器供电时，电流开始流过控制线圈；结果，电磁铁开始通电。然后衔铁被吸引到线圈，将动触点一起拉下，从而与常开触点连接。因此，带有负载的电路通电。断开电路的情况类似，动触点将在弹簧的作用下被拉起并与常闭触点连接。通过这种方式，继电器的开关动作可以控制负载电路的状态。
 
-**Example**
+**示例**
 
-* :ref:`basic_relay` (Basic Project)
+* :ref:`basic_relay` （基础项目）

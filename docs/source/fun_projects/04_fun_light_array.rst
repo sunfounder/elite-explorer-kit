@@ -1,20 +1,6 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _fun_light_array:
 
-Light-sensitive Array
+光敏阵列
 ==========================================
 
 .. raw:: html
@@ -24,33 +10,33 @@ Light-sensitive Array
       Your browser does not support the video tag.
    </video>
 
-This program converts the readings from a light-dependent resistor into a corresponding number of illuminated LED lights, creating a simple indicator of light brightness.
+该程序将光敏电阻的读数转换为相应数量的点亮 LED，从而创建一个简单的亮度指示器。
 
-**Required Components**
+**所需元件**
 
-In this project, we need the following components. 
+在这个项目中，我们需要以下元件。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+购买整套套件会更方便，以下是链接：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - Elite Explorer Kit
+    *   - 名称
+        - 套件所含项目
+        - 链接
+    *   - Elite Explorer 套件
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+您也可以从下面的链接单独购买。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - 元件介绍
+        - 购买链接
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -66,7 +52,7 @@ You can also buy them separately from the links below.
         - |link_photoresistor_buy|
 
 
-**Wiring**
+**接线**
 
 .. image:: img/04_light_sensitive_array_bb.png
     :width: 70%
@@ -76,44 +62,44 @@ You can also buy them separately from the links below.
 
    <br/>
 
-**Schematic**
+**原理图**
 
 .. image:: img/04_light_sensitive_array_schematic.png
    :width: 60%
 
-**Code**
+**代码**
 
 .. note::
 
-    * You can open the file ``04_light_sensitive_array.ino`` under the path of ``elite-explorer-kit-main\fun_project\04_light_sensitive_array`` directly.
-    * Or copy this code into Arduino IDE.
+    * 您可以直接打开路径 ``elite-explorer-kit-main\fun_project\04_light_sensitive_array`` 下的 ``04_light_sensitive_array.ino`` 文件。
+    * 或者将这段代码复制到 Arduino IDE 中。
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/9da7af57-c002-41a0-bc84-372e91885d52/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-**How it works?**
+**工作原理**
 
-Here's a step-by-step explanation of the code:
+以下是代码的逐步说明：
 
-1. Constant and Variable Definitions:
+1. 常量和变量定义：
 
-   ``NbrLEDs``: Defines the presence of 8 LEDs.
-   ``ledPins[]``: LEDs are connected to Arduino pins 5 to 12.
-   ``photocellPin``: The photoresistor is connected to Arduino's A0 pin.
-   ``sensorValue``: This variable stores the value read from the photoresistor.
-   ``ledLevel``: This variable stores the number of LEDs based on the sensorValue conversion.
+   ``NbrLEDs``：定义了 8 个 LED。
+   ``ledPins[]``：LED 连接到 Arduino 的引脚 5 到 12。
+   ``photocellPin``：光敏电阻连接到 Arduino 的 A0 引脚。
+   ``sensorValue``：该变量存储从光敏电阻读取的值。
+   ``ledLevel``：该变量存储根据 sensorValue 转换后的 LED 数量。
 
-2. ``setup()``:
+2. ``setup()``：
 
-   Configures pins 5 to 12 as output to drive the LEDs.
+   将引脚 5 到 12 配置为输出，以驱动 LED。
 
-3. ``loop()``:
+3. ``loop()``：
 
-   Reads the analog value of the photoresistor from pin A0, typically ranging from 0 to 1023.
-   Uses the map function to map the photoresistor's value from the range 300-1023 to the range 0-8.
-   This means that if the reading from the light-dependent resistor is 300, no LEDs will be lit;
-   if the reading is 1023 or higher, all 8 LEDs will be lit.
-   
-   The subsequent for loop checks each LED. If its index is less than ledLevel,
-   the LED will be turned on; otherwise, it will be turned off.
+   从 A0 引脚读取光敏电阻的模拟值，通常范围是 0 到 1023。
+   使用 map 函数将光敏电阻的值从 300-1023 范围映射到 0-8 范围。
+   这意味着如果光敏电阻的读数为 300，则没有 LED 点亮；
+   如果读数为 1023 或更高，则所有 8 个 LED 都将点亮。
+
+   随后的 for 循环检查每个 LED。如果其索引小于 ledLevel，
+   则 LED 点亮；否则，它将熄灭。

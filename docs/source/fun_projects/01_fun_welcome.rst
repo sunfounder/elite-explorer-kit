@@ -1,20 +1,6 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _fun_welcome:
 
-Welcome
+欢迎
 ========================
 
 .. raw:: html
@@ -24,34 +10,34 @@ Welcome
       Your browser does not support the video tag.
    </video>
 
-In this project, we will use a PIR sensor to detect human presence and a speaker to simulate a doorbell, similar to the entrance doorbells in convenience stores.
-When a pedestrian appears within the range of the PIR sensor, the speaker will ring, mimicking a doorbell.
+在这个项目中，我们将使用PIR传感器检测人体存在，并使用扬声器模拟门铃，类似于便利店入口处的门铃。
+当行人出现在PIR传感器范围内时，扬声器将响起，模拟门铃声。
 
-**Required Components**
+**所需元件**
 
-In this project, we need the following components. 
+在这个项目中，我们需要以下元件。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+购买整套套件会更方便，以下是链接：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - Elite Explorer Kit
+    *   - 名称
+        - 套件所含项目
+        - 链接
+    *   - Elite Explorer 套件
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+您也可以从下面的链接单独购买。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - 元件介绍
+        - 购买链接
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -67,7 +53,7 @@ You can also buy them separately from the links below.
         - \-
 
 
-**Wiring**
+**接线**
 
 .. image:: img/01_welcome_bb.png
     :width: 90%
@@ -77,17 +63,17 @@ You can also buy them separately from the links below.
 
    <br/>
 
-**Schematic**
+**原理图**
 
 .. image:: img/01_welcome_schematic.png
    :width: 100%
 
-**Code**
+**代码**
 
 .. note::
 
-    * You can open the file ``01_welcome.ino`` under the path of ``elite-explorer-kit-main\fun_project\01_welcome`` directly.
-    * Or copy this code into Arduino IDE.
+    * 您可以直接打开路径 ``elite-explorer-kit-main\fun_project\01_welcome`` 下的 ``01_welcome.ino`` 文件。
+    * 或者将这段代码复制到 Arduino IDE 中。
 
 .. raw:: html
 
@@ -95,39 +81,39 @@ You can also buy them separately from the links below.
 
 
 
-**How it works?**
+**工作原理**
 
-Here is a step-by-step explanation of the code:
+以下是代码的逐步说明：
 
-1. Include Header Files:
+1. 包含头文件：
 
-   Include two header files, ``analogWave.h`` and ``pitches.h``. The ``analogWave.h`` file contains the definition of the ``analogWave`` class, while ``pitches.h`` contains the definitions of musical notes.
+   包含两个头文件：``analogWave.h`` 和 ``pitches.h``。``analogWave.h`` 文件包含 ``analogWave`` 类的定义，而 ``pitches.h`` 包含音符的定义。
 
-2. Instantiate Objects and Define Constants:
+2. 实例化对象和定义常量：
 
-   Create a ``wave`` object using the ``analogWave`` class and define ``PIR_PIN`` as 2, which is the pin connected to the PIR sensor.
+   使用 ``analogWave`` 类创建一个 ``wave`` 对象，并将 ``PIR_PIN`` 定义为 2，即连接到 PIR 传感器的引脚。
 
-3. Melody Array:
+3. 旋律数组：
 
-   The ``melody`` array defines a musical melody, with each note followed by a number representing its duration. 
-   Negative numbers represent dotted notes (increasing the duration by 50%).
+   ``melody`` 数组定义了一段音乐旋律，每个音符后面跟一个表示其时长的数字。
+   负数表示附点音符（时长增加 50%）。
 
-4. Global Variables:
+4. 全局变量：
 
-   Define some global variables for sharing data between functions.
+   定义一些全局变量，用于在函数之间共享数据。
 
-5. ``setup()``:
+5. ``setup()``：
 
-   Initialize ``PIR_PIN`` as an input and set the frequency of the sine wave to 10 Hz using ``wave.sine(10)``.
+   将 ``PIR_PIN`` 初始化为输入，并使用 ``wave.sine(10)`` 将正弦波的频率设置为 10 Hz。
 
-6. ``loop()``:
+6. ``loop()``：
 
-   Continuously monitor the value of the PIR sensor.
-   If human presence is detected (pirValue is HIGH), call the ``playMelody()`` function to play the melody and wait for 10 seconds to prevent repetitive playback of the melody.
+   持续监测 PIR 传感器的值。
+   如果检测到人体存在（pirValue 为 HIGH），则调用 ``playMelody()`` 函数播放旋律，并等待 10 秒以防止旋律重复播放。
 
-7. ``playMelody()``:
+7. ``playMelody()``：
 
-   This function calculates the duration of each note based on the data in the ``melody`` array and plays the corresponding note. There is a brief pause between notes.
-   The function sets the frequency of the waveform using ``wave.freq()`` and controls the duration of the notes and pauses between notes using the ``delay()`` function.
+   该函数根据 ``melody`` 数组中的数据计算每个音符的时长，并播放相应的音符。音符之间有一个短暂的停顿。
+   该函数使用 ``wave.freq()`` 设置波形频率，并使用 ``delay()`` 函数控制音符的时长和音符之间的停顿时间。
 
-   Note: Ensure that the ``pitches.h`` header file indeed exists before running this code.
+   注意：在运行此代码之前，请确保 ``pitches.h`` 头文件确实存在。

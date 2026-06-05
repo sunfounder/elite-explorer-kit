@@ -1,20 +1,6 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _fun_escape:
 
-GAME - Escape
+游戏 - 逃脱
 ==================================
 
 .. raw:: html
@@ -24,34 +10,34 @@ GAME - Escape
       Your browser does not support the video tag.
    </video>
 
-This game is called "Escape".
-The player's objective is to tilt the MPU6050 sensor to move a pixel on the LED matrix and attempt to maneuver it through an opening in the matrix border (the exit).
+这个游戏叫做"逃脱"。
+玩家的目标是倾斜 MPU6050 传感器来移动 LED 矩阵上的一个像素，并尝试将其穿过矩阵边框上的一个开口（出口）。
 
-**Required Components**
+**所需元件**
 
-In this project, we need the following components. 
+在这个项目中，我们需要以下元件。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+购买整套套件会更方便，以下是链接：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - Elite Explorer Kit
+    *   - 名称
+        - 套件所含项目
+        - 链接
+    *   - Elite Explorer 套件
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+您也可以从下面的链接单独购买。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - 元件介绍
+        - 购买链接
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -61,62 +47,62 @@ You can also buy them separately from the links below.
         - \-
 
 
-**Wiring**
+**接线**
 
 .. image:: img/11_escape_bb.png
     :width: 80%
     :align: center
 
 
-**Schematic**
+**原理图**
 
 .. image:: img/11_escape_schematic.png
    :width: 70%
    :align: center
 
 
-**Code**
+**代码**
 
 .. note::
 
-    * You can open the file ``11_escape_square.ino`` under the path of ``elite-explorer-kit-main\fun_project\11_escape_square`` directly.
-    * Or copy this code into Arduino IDE.
+    * 您可以直接打开路径 ``elite-explorer-kit-main\fun_project\11_escape_square`` 下的 ``11_escape_square.ino`` 文件。
+    * 或者将这段代码复制到 Arduino IDE 中。
 
 .. note::
-   To install the library, use the Arduino Library Manager and search for **"Adafruit MPU6050"** and install it.
+   要安装库，请使用 Arduino 库管理器搜索 **"Adafruit MPU6050"** 并安装。
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/6b239445-f921-48fb-a93e-70cc7ef8afc7/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-**How it works?**
+**工作原理**
 
-Here's a detailed explanation of the code:
+以下是代码的详细说明：
 
-1. Library Imports and Global Variables:
+1. 库导入和全局变量：
 
-   Imported libraries include the LED matrix, Wire (for I2C communication), MPU6050 (motion sensor), and ``Adafruit_Sensor`` library.
-   Initialization of MPU6050 and LED matrix objects.
-   Definition of global variables such as pixelX and pixelY (pixel position), gapStart and side (start position of the gap and which side), level (game difficulty level), and more.
+   导入的库包括 LED 矩阵库、Wire（用于 I2C 通信）、MPU6050（运动传感器）和 ``Adafruit_Sensor`` 库。
+   初始化 MPU6050 和 LED 矩阵对象。
+   定义全局变量，如 pixelX 和 pixelY（像素位置）、gapStart 和 side（缺口起始位置和所在边）、level（游戏难度等级）等。
 
-2. ``setup()``:
+2. ``setup()``：
 
-   Initialize the LED matrix and draw the matrix with the gap.
-   Initialize serial communication and check if the MPU6050 sensor is starting correctly, setting its acceleration range to 2g.
+   初始化 LED 矩阵并绘制带缺口的矩阵。
+   初始化串行通信，检查 MPU6050 传感器是否正常启动，并将其加速度范围设置为 2g。
 
-3. ``loop()``:
+3. ``loop()``：
 
-   Periodically update the position of the pixel based on MPU6050 sensor readings.
-   Periodically move the gap's position.
-   Load the new pixel layout and render it on the LED matrix.
-   Check if the pixel has passed through the gap. 
-   If it has, delay for 1.5 seconds to display the success, increase the game difficulty, and reset the pixel's position.
+   根据 MPU6050 传感器的读数定期更新像素位置。
+   定期移动缺口的位置。
+   加载新的像素布局并在 LED 矩阵上呈现。
+   检查像素是否通过了缺口。
+   如果已通过，延迟 1.5 秒显示成功，增加游戏难度，并重置像素位置。
 
-4. Other Functions:
+4. 其他函数：
 
-   * ``drawSquareWithGap()``: Draw an 8x8 border and create a gap within it.
-   * ``createGap()``: Create a gap of length 2 on the specified side.
-   * ``moveGap()``: Move the gap's position based on the current side and gapStart, changing the side when necessary.
-   * ``movePixelBasedOnMPU()``: Read acceleration data from MPU6050. Move the pixel's position based on the acceleration data (resetting if the pixel goes out of bounds or into walls).
-   * ``resetPixel()``: Reset the pixel's position to the center of the matrix.
-   * ``checkPixelPosition()``: Check if the pixel is on the gap. If it is, increase the game's difficulty level and set the pass flag to true.
+   * ``drawSquareWithGap()``：绘制一个 8x8 的边框并在其中创建一个缺口。
+   * ``createGap()``：在指定边上创建一个长度为 2 的缺口。
+   * ``moveGap()``：根据当前边和 gapStart 移动缺口位置，必要时改变边。
+   * ``movePixelBasedOnMPU()``：从 MPU6050 读取加速度数据。根据加速度数据移动像素位置（如果像素越界或撞墙则重置）。
+   * ``resetPixel()``：将像素位置重置到矩阵中心。
+   * ``checkPixelPosition()``：检查像素是否在缺口上。如果是，则增加游戏难度级别并将通过标志设置为 true。

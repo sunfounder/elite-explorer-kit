@@ -1,55 +1,41 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _basic_photoresistor:
 
-Photoresistor
+光敏电阻
 ==========================
 
 .. https://docs.sunfounder.com/projects/vincent-kit/en/latest/arduino/2.26_photoresistor.html
 
-Overview
+概述
 ---------------
 
-In this lesson, you will learn about Photoresistor. Photoresistor is applied in many electronic goods, such as the camera meter, clock radio, alarm device (as beam detector), small night lights, outdoor clock, solar street lamps and etc. Photoresistor is placed in a street lamp to control when the light is turned on. Ambient light falling on the photoresistor causes street lamps to turn on or off.
+在本课中，您将了解光敏电阻。光敏电阻广泛应用于许多电子产品中，例如相机测光表、时钟收音机、报警装置（作为光束探测器）、小型夜灯、户外时钟、太阳能路灯等。光敏电阻被放置在路灯中，用于控制灯的开启和关闭。环境光线照射到光敏电阻上，使路灯开启或关闭。
 
-Required Components
+所需元件
 -------------------------
 
-In this project, we need the following components. 
+本项目中，我们需要以下元件。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+购买整套套件会更加方便，以下是链接：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - Elite Explorer Kit
+    *   - 名称
+        - 套件所含项目
+        - 链接
+    *   - Elite Explorer 套件
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+您也可以从以下链接单独购买。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - 元件介绍
+        - 购买链接
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -62,30 +48,29 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_photoresistor`
         - |link_photoresistor_buy|
 
-Wiring
+接线
 ----------------------
 
-In this example, we use analog pin ( A0 ) to read the value of photoresistor. One pin of photoresistor is connected to 5V, the other is wired up to A0. Besides, a 10kΩ resistor is needed before the other pin is connected to GND.
+在本示例中，我们使用模拟引脚（A0）读取光敏电阻的值。光敏电阻的一个引脚连接到5V，另一个引脚连接到A0。此外，另一个引脚在连接到GND之前需要串联一个10kΩ电阻。
 
 .. image:: img/01-photoresistor_bb.png
     :align: center
     :width: 80%
 
-Schematic Diagram
+原理图
 -----------------------
 
 .. image:: img/01_photoresistor_schematic.png
     :align: center
     :width: 70%
 
-Code
+代码
 ---------------
 
 .. note::
 
-    * You can open the file ``01-photoresistor`` under the path of ``elite-explorer-kit-main\basic_project\01-photoresistor`` directly.
-    * Or copy this code into Arduino IDE.
-
+    * 您可以直接打开路径 ``elite-explorer-kit-main\basic_project\01-photoresistor`` 下的 ``01-photoresistor`` 文件。
+    * 或者将以下代码复制到 Arduino IDE 中。
 
 
 
@@ -93,4 +78,4 @@ Code
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/e6bf007e-b20d-44d0-9ef9-6d57c1ce4c3c/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After uploading the codes to the uno board, you can open the serial monitor to see the read value of the pin. When the ambient light becomes stronger, the reading will increase correspondingly, and the pin reading range is 「0」~「1023」.  However, according to the environmental conditions and the characteristics of the photoresistor, the actual reading range may be smaller than the theoretical range. 
+将代码上传到 Uno 板后，您可以打开串口监视器查看引脚的读取值。当环境光线变强时，读数会相应增加，引脚读数范围为「0」~「1023」。但根据环境条件和光敏电阻的特性，实际读数范围可能会小于理论范围。

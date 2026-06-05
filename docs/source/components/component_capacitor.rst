@@ -1,45 +1,31 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _cpn_capacitor:
 
-Capacitor
+电容
 =============
 
 .. image:: img/103_capacitor.png
 .. image:: img/10uf_cap.png
 
-Capacitor, refers to the amount of charge storage under a given potential difference, denoted as C, and the international unit is farad (F). 
-Generally speaking, electric charges move under force in an electric field. When there is a medium between conductors, the movement of electric charges is hindered and the electric charges accumulate on the conductors, resulting in accumulation of electric charges. 
+电容是指在给定电位差下的电荷存储量，用C表示，国际单位是法拉（F）。
+一般来说，电荷在电场中受力运动。当导体之间存在介质时，电荷运动受到阻碍，电荷在导体上积累，导致电荷的累积。
 
-The amount of stored electric charges is called capacitance. Because capacitors are one of the most widely used electronic components in electronic equipment, they are widely used in direct current isolation, coupling, bypass, filtering, tuning loops, energy conversion, and control circuits. Capacitors are divided into electrolytic capacitors, solid capacitors, etc.
+存储的电荷量称为电容量。由于电容是电子设备中应用最广泛的电子元件之一，因此被广泛用于直流隔离、耦合、旁路、滤波、调谐回路、能量转换和控制电路中。电容器分为电解电容、固态电容等。
 
-According to material characteristics, capacitors can be divided into: aluminum electrolytic capacitors, film capacitors, tantalum capacitors, ceramic capacitors, super capacitors, etc.
+根据材料特性，电容器可分为：铝电解电容、薄膜电容、钽电容、陶瓷电容、超级电容等。
 
-In this kit, ceramic capacitors and electrolytic capacitors are used. 
+本套件中使用了陶瓷电容和电解电容。
 
-* `Ceramic Capacitor - Wikipedia <https://en.wikipedia.org/wiki/Ceramic_capacitor>`_
+* `陶瓷电容 - 维基百科 <https://en.wikipedia.org/wiki/Ceramic_capacitor>`_
 
-* `Electrolytic Capacitor - Wikipedia <https://en.wikipedia.org/wiki/Electrolytic_capacitor>`_
+* `电解电容 - 维基百科 <https://en.wikipedia.org/wiki/Electrolytic_capacitor>`_
 
-There are 103 or 104 label on the ceramic capacitors, which represent the capacitance value, 103=10x10^3pF, 104=10x10^4pF
+陶瓷电容上标有103或104字样，代表电容值，103=10x10^3pF，104=10x10^4pF
 
-**Unit Conversion**
+**单位换算**
 
     1F=10^3mF=10^6uF=10^9nF=10^12pF
 
-**Example**
+**示例**
 
-* :ref:`basic_button` (Basic Project)
+* :ref:`basic_button` （基础项目）
 

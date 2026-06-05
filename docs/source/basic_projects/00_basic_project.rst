@@ -1,23 +1,9 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _basic_projects:
 
-Basic Projects
+基础项目
 ====================
 
-**Sensor**
+**传感器**
 
 .. toctree::
     :maxdepth: 1
@@ -33,11 +19,11 @@ Basic Projects
     09_basic_gy87
 
 
-**Display**
+**显示**
 
 .. toctree::
     :maxdepth: 1
-    
+
     10_basic_led
     11_basic_rgb_led
     12_basic_ws2812
@@ -46,7 +32,7 @@ Basic Projects
     15_basic_oled
 
 
-**Sound**
+**声音**
 
 .. toctree::
     :maxdepth: 1
@@ -56,7 +42,7 @@ Basic Projects
     17_basic_audio_speaker
 
 
-**Controller**
+**控制器**
 
 .. toctree::
     :maxdepth: 1
@@ -69,7 +55,7 @@ Basic Projects
     23_basic_mpr121_module
 
 
-**Actuator**
+**执行器**
 
 .. toctree::
     :maxdepth: 1
@@ -79,15 +65,14 @@ Basic Projects
     26_basic_stepper_motor
     27_basic_servo
     28_basic_relay
-    
-    
-**Chip**
+
+
+**芯片**
 
 .. toctree::
     :maxdepth: 1
 
     29_basic_74hc595
-
 
 
 

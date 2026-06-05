@@ -1,49 +1,35 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _cpn_motor:
 
-DC Motor
+直流电机
 ===================
 
 .. image:: img/motor.jpeg
     :align: center
 
-This is a 3V DC motor. When you give a high level and a low level to each of the 2 terminals, it will rotate.
+这是一个3V直流电机。当您给两个端子分别提供高电平和低电平时，它就会旋转。
 
-* **Length**: 25mm
-* **Diameter**: 21mm
-* **Shaft Diameter**: 2mm
-* **Shaft Length**: 8mm
-* **Voltage**: 3-6V
-* **Current**: 0.35-0.4A
-* **Speed at 3V**: 19000 RPM (Rotations Per Minute)
-* **Weight**: Approximately 14g (for one unit)
+* **长度** ：25mm
+* **直径** ：21mm
+* **轴径** ：2mm
+* **轴长** ：8mm
+* **电压** ：3-6V
+* **电流** ：0.35-0.4A
+* **3V时转速** ：19000 RPM（每分钟转数）
+* **重量** ：约14g（单个）
 
-Direct current (DC) motor is a continuous actuator that converts electrical energy into mechanical energy. DC motors make rotary pumps, fans, compressors, impellers, and other devices work by producing continuous angular rotation.
+直流电机是一种将电能转换为机械能的连续执行器。直流电机通过产生持续的角旋转来使旋转泵、风扇、压缩机、叶轮等设备工作。
 
-A DC motor consists of two parts, the fixed part of the motor called the **stator** and the internal part of the motor called the **rotor** (or **armature** of a DC motor) that rotates to produce motion.
-The key to generating motion is to position the armature within the magnetic field of the permanent magnet (whose field extends from the north pole to the south pole). The interaction of the magnetic field and the moving charged particles (the current-carrying wire generates the magnetic field) produces the torque that rotates the armature.
+直流电机由两个部分组成，电机的固定部分称为**定子** ，电机的内部部分称为**转子** （或直流电机的**电枢** ），它旋转以产生运动。
+产生运动的关键是将电枢置于永磁体的磁场中（其磁场从N极延伸到S极）。磁场与运动带电粒子（载流导线产生磁场）的相互作用产生使电枢旋转的扭矩。
 
 .. image:: img/motor_sche.png
     :align: center
 
-Current flows from the positive terminal of the battery through the circuit, through the copper brushes to the commutator, and then to the armature.
-But because of the two gaps in the commutator, this flow reverses halfway through each complete rotation.
-This continuous reversal essentially converts the DC power from the battery to AC, allowing the armature to experience torque in the right direction at the right time to maintain rotation.
+电流从电池的正极通过电路，经过碳刷流向换向器，然后到达电枢。
+但由于换向器上的两个间隙，这种电流会在每个完整旋转的一半时反向。
+这种持续的反向实际上将电池的直流电转换为交流电，使电枢在正确的时间以正确的方向承受扭矩，从而维持旋转。
 
-**Example**
+**示例**
 
-* :ref:`basic_motor` (Basic Project)
-* :ref:`fun_smart_fan` (Fun Project)
+* :ref:`basic_motor` （基础项目）
+* :ref:`fun_smart_fan` （趣味项目）

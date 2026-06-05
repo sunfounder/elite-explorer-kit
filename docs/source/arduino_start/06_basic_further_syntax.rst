@@ -1,44 +1,30 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
-Sketch Writing Rule
+项目编写规则
 ================================
 
 
-If you ask a friend to turn on the lights for you, you can say "Turn on the lights.", or "Lights on, bro.", you can use any tone of voice you want.
+如果你让朋友帮你开灯，你可以说"请开灯"，或者"兄弟，开灯"，你可以使用任何你想要的语气。
 
-However, if you want the Arduino board to do something for you, you need to follow the Arduino program writing rules to type in the commands.
+但是，如果你想让 Arduino 开发板为你做某事，你需要遵循 Arduino 程序编写规则来输入命令。
 
-This chapter contains the basic rules of the Arduino language and will help you understand how to translate natural language into code.
+本章包含 Arduino 语言的基本规则，将帮助你理解如何将自然语言转换为代码。
 
-Of course, this is a process that takes time to get familiar with, and it is also the most error-prone part of the process for newbies, so if you make mistakes often, it's okay, just try a few more times.
+当然，这是一个需要时间熟悉的过程，也是新手最容易出错的部分，所以如果经常犯错也没关系，多试几次就好了。
 
 
-Semicolon ``;``
+分号 ``;``
 ---------------
 
-Just like writing a letter, where you write a period at the end of each sentence as the end, the Arduino language requires you to use ``;`` to tell the board the end of the command.
+就像写信一样，你会在每句话的末尾写一个句号作为结束，Arduino 语言要求你使用 ``;`` 来告诉开发板命令的结束。
 
-Take the familiar "onboard LED blinking" example. A healthy sketch should look like this.
+以熟悉的"板载 LED 闪烁"为例。一个正常的项目应该是这样的。
 
-Example:
+示例：
 
 .. code-block:: C
 
     void setup() {
         // put your setup code here, to run once:
-        pinMode(13,OUTPUT); 
+        pinMode(13,OUTPUT);
     }
 
     void loop() {
@@ -49,16 +35,16 @@ Example:
         delay(500);
     }
 
-Next, let's take a look at the following two sketches and guess if they can be correctly recognized by Arduino before running them.
+接下来，让我们看看下面两个项目，在运行之前猜测它们能否被 Arduino 正确识别。
 
-Sketch A:
+项目 A：
 
 .. code-block:: C
     :emphasize-lines: 8,9,10,11
 
     void setup() {
         // put your setup code here, to run once:
-        pinMode(13,OUTPUT); 
+        pinMode(13,OUTPUT);
     }
 
     void loop() {
@@ -69,7 +55,7 @@ Sketch A:
         delay(500)
     }
 
-Sketch B:
+项目 B：
 
 .. code-block:: C
     :emphasize-lines: 8,9,10,11,12,13,14,15,16
@@ -78,7 +64,7 @@ Sketch B:
         // put your setup code here, to run once:
         pinMode(13,OUTPUT);
     }
-    
+
     void loop() {
         // put your main code here, to run repeatedly:
         digitalWrite(13,
@@ -86,36 +72,36 @@ Sketch B:
         (500
         );
         digitalWrite(13,
-        
+
         LOW);
                 delay(500)
         ;
     }
 
-The result is that **Sketch A** reports an error and **Sketch B** runs.
+结果是**项目 A** 报错，而 **项目 B** 可以运行。
 
-* The errors in **Sketch A** are missing ``;`` and although it looks normal, the Arduino can't read it.
-* **Sketch B**, looks anti-human, but in fact, indentation, line breaks and spaces in statements are things that do not exist in Arduino programs, so to the Arduino compiler, it looks the same as in the example.
+* **项目 A** 的错误是缺少 ``;``，虽然看起来正常，但 Arduino 无法读取。
+* **项目 B** 看起来反人类，但实际上，缩进、换行和空格在 Arduino 程序中是不存在的，因此对于 Arduino 编译器来说，它看起来和示例是一样的。
 
-However, please don't write your code as **Sketch B**, because it is usually natural people who write and view the code, so don't get yourself into trouble.
+但是，请不要像**项目 B** 那样编写代码，因为通常是由人来编写和查看代码，所以不要给自己找麻烦。
 
 
-Curlybraces ``{}``
+花括号 ``{}``
 ------------------
 
-``{}`` is the main component of the Arduino programming language, and they must appear in pairs. 
-A better programming convention is to insert a structure that requires curly braces by typing the right curly brace directly after typing the left curly brace, and then moving the cursor between the curly braces to insert the statement.
+``{}`` 是 Arduino 编程语言的主要组成部分，它们必须成对出现。
+一个更好的编程习惯是，在输入左花括号后，立即输入右花括号，然后将光标移到花括号之间插入语句。
 
 
 
-Comment ``//``
+注释 ``//``
 ---------------
 
-Comment is the part of the sketch that the compiler ignores. They are usually used to tell others how the program works.
+注释是编译器忽略的项目部分。它们通常用于告诉他人程序的工作原理。
 
-If we write two adjacent slashes in a line of code, the compiler will ignore anything up to the end of the line.
+如果我们在一行代码中写入两个相邻的斜杠，编译器将忽略该行之后的所有内容。
 
-If we create a new sketch, it comes with two comments, and if we remove these two comments, the sketch will not be affected in any way.
+如果我们创建一个新项目，它会自带两个注释，如果删除这两个注释，项目不会受到任何影响。
 
 .. code-block:: C
     :emphasize-lines: 2,7
@@ -131,24 +117,24 @@ If we create a new sketch, it comes with two comments, and if we remove these tw
     }
 
 
-Comment is very useful in programming, and several common uses are listed below.
+注释在编程中非常有用，下面列出了几种常见用法。
 
-* Usage A: Tell yourself or others what this section of code does.
+* 用法 A：告诉你自己或他人这段代码的作用。
 
 .. code-block:: C
 
     void setup() {
-        pinMode(13,OUTPUT); //Set pin 13 to output mode, it controls the onboard LED
+        pinMode(13,OUTPUT); //将引脚13设置为输出模式，它控制板载LED
     }
 
     void loop() {
-        digitalWrite(13,HIGH); // Activate the onboard LED by setting pin 13 high
-        delay(500); // Status quo for 500 ms
-        digitalWrite(13,LOW); // Turn off the onboard LED
-        delay(500);// Status quo for 500 ms
+        digitalWrite(13,HIGH); //通过将引脚13置高来点亮板载LED
+        delay(500); //保持状态500毫秒
+        digitalWrite(13,LOW); //关闭板载LED
+        delay(500);//保持状态500毫秒
     }
 
-* Usage B: Temporarily invalidate some statements (without deleting them) and uncomment them when you need to use them, so you don't have to rewrite them. This is very useful when debugging code and trying to locate program errors.
+* 用法 B：临时使某些语句失效（不删除它们），在需要使用时再取消注释，这样就不必重新编写。这在调试代码和尝试定位程序错误时非常有用。
 
 .. code-block:: C
     :emphasize-lines: 3,4,5,6
@@ -166,17 +152,17 @@ Comment is very useful in programming, and several common uses are listed below.
         delay(200);
         digitalWrite(13,LOW);
         delay(200);
-    }    
+    }
 
-.. note:: 
-    Use the shortcut ``Ctrl+/`` to help you quickly comment or uncomment your code.
+.. note::
+    使用快捷键 ``Ctrl+/`` 可以快速注释或取消注释你的代码。
 
-Comment ``/**/``
+注释 ``/**/``
 ------------------
 
-Same as ``//`` for comments. This type of comment can be more than one line long, and once the compiler reads ``/*``, it ignores anything that follows until it encounters ``*/``.
+与 ``//`` 一样用于注释。这种类型的注释可以跨越多行，一旦编译器读取到 ``/*``，它会忽略之后的所有内容，直到遇到 ``*/``。
 
-Example 1:
+示例 1：
 
 .. code-block:: C
     :emphasize-lines: 1,8,9,10,11
@@ -184,17 +170,17 @@ Example 1:
     /* Blink */
 
     void setup() {
-        pinMode(13,OUTPUT); 
+        pinMode(13,OUTPUT);
     }
 
     void loop() {
         /*
-        The following code will blink the onboard LED
-        You can modify the number in delay() to change the blinking frequency
+        下面的代码将让板载LED闪烁
+        你可以修改delay()中的数字来改变闪烁频率
         */
-        digitalWrite(13,HIGH); 
-        delay(500); 
-        digitalWrite(13,LOW); 
+        digitalWrite(13,HIGH);
+        delay(500);
+        digitalWrite(13,LOW);
         delay(500);
     }
 
@@ -202,15 +188,15 @@ Example 1:
 ``#define``
 --------------
 
-This is a useful C++ tool.
+这是一个有用的 C++ 工具。
 
 .. code-block:: C
 
     #define identifier token-string
 
-The compiler automatically replaces ``identifier`` with ``token-string`` when it reads it, which is usually used for constant definitions.
+当编译器读取到 ``identifier`` 时，会自动将其替换为 ``token-string``，这通常用于常量定义。
 
-As an example, here is a sketch that uses define, which improves the readability of the code.
+举个例子，下面是一个使用 define 的项目，它提高了代码的可读性。
 
 .. code-block:: C
     :emphasize-lines: 1,2
@@ -219,37 +205,37 @@ As an example, here is a sketch that uses define, which improves the readability
     #define DELAY_TIME 500
 
     void setup() {
-        pinMode(ONBOARD_LED,OUTPUT); 
+        pinMode(ONBOARD_LED,OUTPUT);
     }
 
     void loop() {
-        digitalWrite(ONBOARD_LED,HIGH); 
-        delay(DELAY_TIME); 
-        digitalWrite(ONBOARD_LED,LOW); 
+        digitalWrite(ONBOARD_LED,HIGH);
+        delay(DELAY_TIME);
+        digitalWrite(ONBOARD_LED,LOW);
         delay(DELAY_TIME);
     }
 
-To the compiler, it actually looks like this.
+对于编译器来说，它实际看起来是这样的。
 
 .. code-block:: C
 
     void setup() {
-        pinMode(13,OUTPUT); 
+        pinMode(13,OUTPUT);
     }
 
     void loop() {
-        digitalWrite(13,HIGH); 
-        delay(500); 
-        digitalWrite(13,LOW); 
+        digitalWrite(13,HIGH);
+        delay(500);
+        digitalWrite(13,LOW);
         delay(500);
     }
 
-We can see that the ``identifier`` is replaced and does not exist inside the program.
-Therefore, there are several caveats when using it.
+我们可以看到，``identifier`` 被替换了，在程序内部并不存在。
+因此，在使用它时需要注意几点。
 
-1. A ``token-string`` can only be modified manually and cannot be converted into other values by arithmetic in the program.
+1. ``token-string`` 只能手动修改，不能通过程序中的运算转换为其他值。
 
-2. Avoid using symbols such as ``;``. For example.
+2. 避免使用 ``;`` 等符号。例如：
 
 .. code-block:: C
     :emphasize-lines: 1
@@ -257,25 +243,25 @@ Therefore, there are several caveats when using it.
     #define ONBOARD_LED 13;
 
     void setup() {
-        pinMode(ONBOARD_LED,OUTPUT); 
+        pinMode(ONBOARD_LED,OUTPUT);
     }
 
     void loop() {
-        digitalWrite(ONBOARD_LED,HIGH); 
+        digitalWrite(ONBOARD_LED,HIGH);
     }
 
-The compiler will recognize it as the following, which is what will be reported as an error.
+编译器会将其识别为以下内容，这将会报错。
 
 .. code-block:: C
     :emphasize-lines: 2,6
 
     void setup() {
-        pinMode(13;,OUTPUT); 
+        pinMode(13;,OUTPUT);
     }
 
     void loop() {
-        digitalWrite(13;,HIGH); 
+        digitalWrite(13;,HIGH);
     }
 
-.. note:: 
-    A naming convention for ``#define`` is to capitalize ``identifier`` to avoid confusion with variables.
+.. note::
+    ``#define`` 的一个命名约定是将 ``identifier`` 大写，以避免与变量混淆。

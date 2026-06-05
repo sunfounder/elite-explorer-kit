@@ -1,56 +1,42 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _basic_potentiometer:
 
-Potentiometer
+电位器
 ==========================
 
 .. https://docs.sunfounder.com/projects/r4-basic-kit/en/latest/projects/controlling_an_led_by_potentiometer_uno.html
 
 
-Overview
+概述
 --------------------
 
-In this lesson, let’s see how to change the luminance of an LED by a potentiometer, and receive the data of the potentiometer in Serial Monitor to see its value change.
+在本课中，让我们看看如何通过电位器改变 LED 的亮度，并在串口监视器中接收电位器的数据以查看其值的变化。
 
-Required Components
+所需元件
 -------------------------
 
-In this project, we need the following components. 
+本项目中，我们需要以下元件。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+购买整套套件会更加方便，以下是链接：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - Elite Explorer Kit
+    *   - 名称
+        - 套件所含项目
+        - 链接
+    *   - Elite Explorer 套件
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+您也可以从以下链接单独购买。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - 元件介绍
+        - 购买链接
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -66,82 +52,82 @@ You can also buy them separately from the links below.
         - |link_potentiometer_buy|
 
 
-Wiring
+
+接线
 ----------------------
 
 .. image:: img/19-potentiometer_bb.png
     :align: center
     :width: 70%
 
-Schematic Diagram
+原理图
 ---------------------------
 
-In this experiment, the potentiometer is used as voltage divider, meaning connecting devices to all of its three pins. Connect the middle pin of the potentiometer to pin A0 and the other two pins to 5V and GND respectively. Therefore, the voltage of the potentiometer is 0-5V. Spin the knob of the potentiometer, and the voltage at pin A0 will change. Then convert that voltage into a digital value (0-1024) with the AD converter in the control board. Through programming, we can use the converted digital value to control the brightness of the LED on the
-control board.
+在本实验中，电位器用作分压器，即将其三个引脚都连接设备。将电位器的中间引脚连接到 A0，另外两个引脚分别连接到 5V 和 GND。因此，电位器的电压为 0-5V。旋转电位器的旋钮，A0 引脚的电压将发生变化。然后通过控制板中的 AD 转换器将该电压转换为数字值（0-1024）。通过编程，我们可以使用转换后的数字值来控制控制板上 LED 的亮度。
 
 .. image:: img/19_potentiometer_schematic.png
    :align: center
    :width: 70%
 
-Code
+代码
 ---------------
 
 .. note::
 
-    * You can open the file ``19-potentiometer.ino`` under the path of ``elite-explorer-kit-main\basic_project\19-potentiometer`` directly.
-    * Or copy this code into Arduino IDE.
+    * 您可以直接打开路径 ``elite-explorer-kit-main\basic_project\19-potentiometer`` 下的 ``19-potentiometer.ino`` 文件。
+    * 或者将以下代码复制到 Arduino IDE 中。
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/fb09e333-4057-40d8-8485-0de2d88c06c1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After uploading the code to the Uno board, you can open the serial monitor to observe the potentiometer's read values. As you turn the potentiometer knob, the read value will change accordingly. The raw analog reading from the potentiometer will range from \(0\) to \(1023\). Simultaneously, the code scales this value to a range of \(0\) to \(255\), which is also displayed on the serial monitor. This scaled value is then used to control the brightness of the connected LED. The LED will become brighter or dimmer based on the scaled value. It's worth noting that while the theoretical range of the potentiometer is \(0\) to \(1023\), the actual range may vary slightly due to hardware tolerances.
+将代码上传到 Uno 板后，您可以打开串口监视器观察电位器的读取值。当您旋转电位器旋钮时，读取值将相应变化。来自电位器的原始模拟读数范围为 \(0\) 到 \(1023\)。同时，代码将此值缩放至 \(0\) 到 \(255\) 的范围，该值也会显示在串口监视器上。这个缩放后的值用于控制连接 LED 的亮度。LED 将根据缩放后的值变得更亮或更暗。值得注意的是，虽然电位器的理论范围为 \(0\) 到 \(1023\)，但由于硬件公差，实际范围可能略有不同。
 
-Code Analysis
+代码分析
 ---------------
 
-#. Initialization and Setup (Setting Pin Modes and Initializing Serial Communication)
+#. 初始化和设置（设置引脚模式并初始化串口通信）
 
-   Before we get into the loop, we define which pins we're using and initialize the serial communication.
+   在进入主循环之前，我们定义使用的引脚并初始化串口通信。
 
    .. code-block:: arduino
 
-      const int analogPin = 0;  // Analog input pin connected to the potentiometer
-      const int ledPin = 9;     // Digital output pin connected to the LED
+      const int analogPin = 0;  // 连接到电位器的模拟输入引脚
+      const int ledPin = 9;     // 连接到 LED 的数字输出引脚
 
       void setup() {
-        Serial.begin(9600);  // Initialize serial communication with a baud rate of 9600
+        Serial.begin(9600);  // 初始化串口通信，波特率为 9600
       }
 
-#. Reading Analog Input (Getting Data from Potentiometer)
+#. 读取模拟输入（从电位器获取数据）
 
-   In this segment, we read the analog data from the potentiometer and print it to the serial monitor.
-
-   .. code-block:: arduino
-
-        inputValue = analogRead(analogPin);  // Read the analog value from the potentiometer
-        Serial.print("Input: ");             // Print "Input: " to the serial monitor
-        Serial.println(inputValue);          // Print the raw input value to the serial monitor
-
-#. Mapping and Scaling (Converting Potentiometer Data)
-
-   We scale the raw data from the potentiometer, which is in the range of 0-1023, to a new range of 0-255.
-
-   ``map(value, fromLow, fromHigh, toLow, toHigh)`` is used to convert a number from one range to another. For example, if the value is within the range of ``fromLow`` and ``fromHigh``, it will be converted to a corresponding value within the range of ``toLow`` and ``toHigh``, maintaining proportionality between the two ranges.
-
-   In this case, since the LED pin (pin 9) has a range of 0-255, we need to map values in the range of 0-1023 to match that same scale of 0-255.
+   在此部分中，我们从电位器读取模拟数据并将其打印到串口监视器。
 
    .. code-block:: arduino
 
-      outputValue = map(inputValue, 0, 1023, 0, 255);  // Map the input value to a new range
+        inputValue = analogRead(analogPin);  // 读取电位器的模拟值
+        Serial.print("Input: ");             // 在串口监视器上打印 "Input: "
+        Serial.println(inputValue);          // 在串口监视器上打印原始输入值
 
-#. Controlling LED and Serial Output
+#. 映射和缩放（转换电位器数据）
 
-   Finally, we control the LED's brightness based on the scaled value and print the scaled value for monitoring.
+   我们将来自电位器的原始数据（范围为 0-1023）缩放到新的范围 0-255。
+
+   ``map(value, fromLow, fromHigh, toLow, toHigh)`` 用于将数字从一个范围转换到另一个范围。例如，如果值在 ``fromLow`` 和 ``fromHigh`` 范围内，它将被转换为 ``toLow`` 和 ``toHigh`` 范围内的相应值，保持两个范围之间的比例关系。
+
+   在这种情况下，由于 LED 引脚（引脚 9）的范围为 0-255，我们需要将 0-1023 范围内的值映射到相同的 0-255 范围。
 
    .. code-block:: arduino
 
-      Serial.print("Output: ");                        // Print "Output: " to the serial monitor
-      Serial.println(outputValue);                     // Print the scaled output value to the serial monitor
-      analogWrite(ledPin, outputValue);                // Control the LED brightness based on the scaled value
-      delay(1000);     
+      outputValue = map(inputValue, 0, 1023, 0, 255);  // 将输入值映射到新的范围
+
+#. 控制 LED 和串口输出
+
+   最后，我们根据缩放后的值控制 LED 的亮度，并打印缩放后的值以供监视。
+
+   .. code-block:: arduino
+
+      Serial.print("Output: ");                        // 在串口监视器上打印 "Output: "
+      Serial.println(outputValue);                     // 在串口监视器上打印缩放后的输出值
+      analogWrite(ledPin, outputValue);                // 根据缩放后的值控制 LED 亮度
+      delay(1000);

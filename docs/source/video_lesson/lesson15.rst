@@ -1,38 +1,24 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
-LESSON 15: Controlling LED Based on User Input From Serial Monitor
+课程 15：基于串口监视器的用户输入控制 LED
 ====================================================================
 
-This lesson demonstrates how to create a user-interactive program using the Arduino, focusing on obtaining user input through the serial monitor and performing different operations based on the input. Here’s a brief overview of what you will learn:
+本课程演示如何使用 Arduino 创建用户交互程序，重点是通过串口监视器获取用户输入并根据输入执行不同的操作。以下是您将学习的内容的简要概述：
 
-1. **Reviewing Previous Homework**: Recapping the assignment from Lesson 14, which involved controlling the brightness of an LED by getting input from the user on the serial monitor.
-2. **Setting Up the Circuit**: Instructions on how to correctly connect an LED and a resistor to the Arduino, ensuring that each component is properly configured for the experiment.
-3. **Writing the Code**: Step-by-step coding instructions to read user input from the serial monitor and use it to adjust the LED’s brightness. This includes mathematical calculations to translate the user's input into a value that the Arduino can use to control the LED brightness.
-4. **Exponential Scaling**: Explanation of how to use exponential scaling to ensure that the perceived brightness of the LED increases smoothly across the range of user inputs.
-5. **Debugging Tips**: Guidance on troubleshooting common issues such as incorrect readings or errors in the output that affect the LED brightness.
-6. **Homework Assignment**: creating a program that asks the user for a brightness level (between 0 and 10) for an LED and then sets the LED brightness accordingly. 
+1. **回顾之前的课后作业** ：回顾课程 14 的作业，其中涉及通过从串口监视器获取用户输入来控制 LED 的亮度。
+2. **搭建电路** ：关于如何正确连接 LED 和电阻到 Arduino 的说明，确保每个元件都正确配置用于实验。
+3. **编写代码** ：逐步编码指导，从串口监视器读取用户输入并使用它调整 LED 的亮度。这包括数学计算，将用户输入转换为 Arduino 可用于控制 LED 亮度的值。
+4. **指数缩放** ：解释如何使用指数缩放，确保 LED 的感知亮度在用户输入范围内平滑增加。
+5. **调试技巧** ：关于排查常见问题的指导，例如读数不正确或影响 LED 亮度的输出错误。
+6. **课后作业** ：创建一个程序，要求用户为 LED 输入亮度级别（0 到 10 之间），然后相应地设置 LED 亮度。
 
-**Video**
+**视频**
 
 .. raw:: html
 
-    <iframe width="100%" 
+    <iframe width="100%"
         style="aspect-ratio: 16/9; max-width: 100%;"
-        src="https://www.youtube.com/embed/d-Ma3u7GngA?si=o9Q1tTC1X1B9teef" 
-        title="YouTube video player" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        src="https://www.youtube.com/embed/d-Ma3u7GngA?si=o9Q1tTC1X1B9teef"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen>
     </iframe>

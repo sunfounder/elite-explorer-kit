@@ -1,29 +1,14 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _new_wifi:
 
 Wi-Fi
 ========================================
 
-The Arduino UNO R4 WiFi comes with a built-in ESP32-S3 module, allowing you to connect to Wi-Fi® networks and perform network operations. It supports protocols such as HTTPS, MQTT, and UDP, which have been tested and are compatible. 
+Arduino UNO R4 WiFi 配有内置的 ESP32-S3 模块，使您能够连接到 Wi-Fi 网络并执行网络操作。它支持 HTTPS、MQTT 和 UDP 等协议，这些协议已经过测试并兼容。
 
-Next, I will guide you through two examples of utilizing WIFI:
+接下来，我将引导您完成两个利用 WiFi 的示例：
 
 .. toctree::
     :maxdepth: 2
 
     01_1_connect_to_wifi
     01_2_ap
-

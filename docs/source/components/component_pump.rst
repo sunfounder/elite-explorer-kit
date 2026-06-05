@@ -1,48 +1,34 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _cpn_pump:
 
-DC Water Pump
+直流水泵
 ================
 
 .. image:: img/pump.png
     :width: 40%
 
-This pump essentially functions as a DC motor, operating at a voltage of 3V and a current of 100mA. Upon powering, the pump draws water in from the bottom of its plastic casing and expels it from the outlet pipe. It must always be kept immersed in water to function properly. Reversing the polarity won't turn it into a water intake device; it will only pump water out!
+该水泵本质上作为一个直流电机运行，工作电压为3V，电流为100mA。通电后，水泵从其塑料外壳的底部吸水，并从出水管排出。它必须始终保持浸在水中才能正常工作。反接极性不会使其成为进水装置；它只会向外抽水！
 
-It's highly suitable for beginners to create a fountain or plant watering project using this submersible pump, as it is incredibly user-friendly!
-
-
-**Features**
-
-* **Voltage Scope**: DC 3 ~ 4.5V
-* **Operating Current**: 120 ~ 180mA
-* **Power**: 0.36 ~ 0.91W
-* **Max Water Head**: 0.35 ~ 0.55M
-* **Max Flow Rate**: 80 ~ 100 L/H
-* **Continuous Working Life**: 100 hours
-* **Water Fing Grade**: IP68
-* **Driving Mode**: DC, Magnetic Driving
-* **Material**: Engineering Plastic
-* **Outlet Outside Diameter**: 7.8 mm
-* **Outlet Inside Diameter**: 6.5 mm
-* It is a submersible pump and should be used that way. It tends to heat too much that there's a risk of overheating if you turn it on unsubmerged.
-* It comes with a 25cm male wire, allowing for easy insertion into a breadboard.
+它非常适合初学者使用这款潜水泵制作喷泉或植物浇水项目，因为它非常易于使用！
 
 
-**Example**
+**特性**
 
-* :ref:`basic_pump` (Basic Project)
-* :ref:`fun_plant_monitor` (Fun Project)
+* **电压范围** ：DC 3 ~ 4.5V
+* **工作电流** ：120 ~ 180mA
+* **功率** ：0.36 ~ 0.91W
+* **最大扬程** ：0.35 ~ 0.55M
+* **最大流量** ：80 ~ 100 L/H
+* **连续工作寿命** ：100小时
+* **防水等级** ：IP68
+* **驱动方式** ：直流，磁力驱动
+* **材料** ：工程塑料
+* **出水管外径** ：7.8 mm
+* **出水管内径** ：6.5 mm
+* 这是一款潜水泵，应在此方式下使用。如果在未浸入水中的情况下开启，它会过热，存在过热风险。
+* 附带25cm公头导线，便于插入面包板。
+
+
+**示例**
+
+* :ref:`basic_pump` （基础项目）
+* :ref:`fun_plant_monitor` （趣味项目）

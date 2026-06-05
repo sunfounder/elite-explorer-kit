@@ -1,54 +1,39 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _cpn_soil_moisture:
 
-Soil Moisture Module
+土壤湿度模块
 ================================
 
 .. image:: img/soil_mositure.png
 
-* GND: Ground
-* VCC: Power supply, 3.3v~5V
-* AOUT: Outputs the soil moisture value, the wetter the soil, the smaller its value.
+* GND：接地
+* VCC：电源，3.3v~5V
+* AOUT：输出土壤湿度值，土壤越湿，数值越小。
 
-This capacitive soil moisture sensor is different from most of the resistive sensors on the market, using the principle of capacitive induction to detect soil moisture. It avoids the problem that resistive sensors are highly susceptible to corrosion and greatly extends its working life.
+这款电容式土壤湿度传感器不同于市面上大多数电阻式传感器，它采用电容感应原理来检测土壤湿度。它避免了电阻式传感器极易被腐蚀的问题，大大延长了其工作寿命。
 
+它由耐腐蚀材料制成，具有出色的使用寿命。将其插入植物周围的土壤中，实时监测土壤湿度数据。该模块包含一个板载稳压器，可在3.3~5.5V电压范围内工作。非常适合3.3V和5V供电的低压微控制器。
 
-It is made of corrosion-resistant materials and has an excellent service life. Insert it into the soil around plants and monitor real-time soil moisture data. The module includes an on-board voltage regulator that allows it to operate over a voltage range of 3.3 ~ 5.5 V. It is ideal for low-voltage microcontrollers with 3.3 V and 5 V supplies.
-
-The hardware schematic of the capacitive soil moisture sensor is shown below.
+电容式土壤湿度传感器的硬件原理图如下所示。
 
 .. image:: img/solid_schematic.png
 
-There is a fixed frequency oscillator, which is built with a 555 timer IC. The generated square wave is then fed to the sensor like a capacitor. However, for the square wave signal, the capacitor has a certain reactance or, for the sake of argument, a resistor with a pure ohmic resistor (10k resistor on pin 3) to form a voltage divider.
+其中有一个由555定时器IC构建的固定频率振荡器。产生的方波随后被送入像电容器一样的传感器。然而，对于方波信号，电容器具有一定的电抗，或者说，与一个纯欧姆电阻（引脚3上的10k电阻）形成分压器。
 
-The higher the soil moisture, the higher the capacitance of the sensor. As a result, the square wave has less reactance, which reduces the voltage on the signal line, and the smaller the value of the analog input through the microcontroller.
+土壤湿度越高，传感器的电容越大。因此，方波的电抗越小，从而降低了信号线上的电压，通过微控制器模拟输入的值也越小。
 
 
-**Specification**
+**规格参数**
 
-* Operating Voltage: 3.3 ~ 5.5 VDC
-* Output Voltage: 0 ~ 3.0VDC
-* Operating Current: 5mA
-* Interface: PH2.0-3P
-* Dimensions: 3.86 x 0.905 inches (L x W)
-* Weight: 15g
+* 工作电压：3.3 ~ 5.5 VDC
+* 输出电压：0 ~ 3.0VDC
+* 工作电流：5mA
+* 接口：PH2.0-3P
+* 尺寸：3.86 x 0.905 英寸（长 x 宽）
+* 重量：15g
 
-**Example**
+**示例**
 
-* :ref:`basic_moisture` (Basic Project)
-* :ref:`fun_plant_monitor` (Fun Project)
+* :ref:`basic_moisture` （基础项目）
+* :ref:`fun_plant_monitor` （趣味项目）
 
 

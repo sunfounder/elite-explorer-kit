@@ -1,20 +1,6 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _fun_snake:
 
-GAME - Snake
+游戏 - 贪吃蛇
 =========================
 
 .. raw:: html
@@ -24,34 +10,34 @@ GAME - Snake
       Your browser does not support the video tag.
    </video>
 
-This example implements the classic Snake game on an 8x12 LED matrix using the R4 Wifi board.
-Players control the snake's direction using a dual-axis joystick.
+此示例使用 R4 Wifi 板在 8x12 LED 矩阵上实现了经典的贪吃蛇游戏。
+玩家使用双轴摇杆控制蛇的方向。
 
-**Required Components**
+**所需元件**
 
-In this project, we need the following components. 
+在这个项目中，我们需要以下元件。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+购买整套套件会更方便，以下是链接：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - Elite Explorer Kit
+    *   - 名称
+        - 套件所含项目
+        - 链接
+    *   - Elite Explorer 套件
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+您也可以从下面的链接单独购买。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - 元件介绍
+        - 购买链接
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -60,75 +46,75 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_joystick`
         - |link_joystick_buy|
 
-**Wiring**
+**接线**
 
 .. image:: img/13_snake_bb.png
     :width: 80%
     :align: center
 
 
-**Schematic**
+**原理图**
 
 .. image:: img/13_snake_schematic.png
    :width: 80%
    :align: center
 
 
-**Code**
+**代码**
 
 .. note::
 
-    * You can open the file ``13_snake.ino`` under the path of ``elite-explorer-kit-main\fun_project\13_snake`` directly.
-    * Or copy this code into Arduino IDE.
+    * 您可以直接打开路径 ``elite-explorer-kit-main\fun_project\13_snake`` 下的 ``13_snake.ino`` 文件。
+    * 或者将这段代码复制到 Arduino IDE 中。
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/df370ec5-d1b5-4ae7-b3b9-e97e0eb9a872/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-**How it works?**
+**工作原理**
 
-Here's a detailed explanation of the code:
+以下是代码的详细说明：
 
-1. Variable Definition and Initialization
+1. 变量定义和初始化
 
-   Import the ``Arduino_LED_Matrix`` library for LED matrix operations.
-   matrix is an instance of the LED matrix.
-   ``frame`` and ``flatFrame`` are arrays used to store and process pixel information on the screen.
-   The snake is represented as an array of ``Point`` structures, where each point has an x and y coordinate.
-   food represents the position of the food.
-   ``direction`` is the current movement direction of the snake.
+   导入 ``Arduino_LED_Matrix`` 库用于 LED 矩阵操作。
+   matrix 是 LED 矩阵的一个实例。
+   ``frame`` 和 ``flatFrame`` 是用于存储和处理屏幕上像素信息的数组。
+   蛇表示为一个 ``Point`` 结构体数组，其中每个点具有 x 和 y 坐标。
+   food 表示食物的位置。
+   ``direction`` 是蛇当前的移动方向。
 
-2. ``setup()`` 
+2. ``setup()``
 
-   Initialize the X and Y axes of the joystick as inputs.
-   Start the LED matrix.
-   Initialize the snake's starting position in the center of the screen.
-   Generate the initial position of the food randomly.
+   将摇杆的 X 轴和 Y 轴初始化为输入。
+   启动 LED 矩阵。
+   将蛇的起始位置初始化在屏幕中心。
+   随机生成食物的初始位置。
 
-3. ``loop()`` 
+3. ``loop()``
 
-   Determine the snake's direction based on the readings from the joystick.
-   Move the snake.
-   Check if the snake's head collides with the food. 
-   If it does, the snake grows, and new food is generated at a new location.
-   Check if the snake collides with itself. If it does, reset the game.
-   Draw the current game state (snake and food positions) on the LED matrix.
-   Add a delay to control the game's speed.
+   根据摇杆的读数确定蛇的方向。
+   移动蛇。
+   检查蛇头是否与食物碰撞。
+   如果是，蛇身增长，并在新位置生成新的食物。
+   检查蛇是否与自身碰撞。如果是，重置游戏。
+   在 LED 矩阵上绘制当前游戏状态（蛇和食物的位置）。
+   添加延迟以控制游戏速度。
 
-4. ``moveSnake()`` 
+4. ``moveSnake()``
 
-   Move each part of the snake to the position of the previous part, starting from the tail and moving to the head.
-   Move the snake's head based on its direction.
+   将蛇的每个部分移动到前一部分的位置，从尾部开始向头部移动。
+   根据蛇的方向移动蛇头。
 
-5. ``generateFood()`` 
+5. ``generateFood()``
 
-   Generate all possible food positions.
-   Check if each position overlaps with any part of the snake. If it doesn't overlap, the position is considered a possible food location.
-   Randomly select a possible food location.
+   生成所有可能的食物位置。
+   检查每个位置是否与蛇的任何部分重叠。如果不重叠，则该位置被视为可能的食物位置。
+   随机选择一个可能的食物位置。
 
-6. ``drawFrame()`` 
+6. ``drawFrame()``
 
-   Clear the current frame.
-   Draw the snake and food on the frame.
-   Flatten the two-dimensional frame array into a one-dimensional array (flatFrame) and load it onto the LED matrix.
+   清除当前帧。
+   在帧上绘制蛇和食物。
+   将二维帧数组展平为一维数组（flatFrame）并将其加载到 LED 矩阵上。

@@ -1,56 +1,42 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _basic_joystick:
 
-Joystick Module
+摇杆模块
 ==========================
 
 .. https://docs.sunfounder.com/projects/r4-basic-kit/en/latest/projects/joystick_ps2_uno.html#joystick-uno
 
 
-Overview
+概述
 ---------------
 
-A joystick is an input device consisting of a stick that pivots on a base and reports its angle or direction to the device it is controlling. Joysticks are often used to control video games and robots. A Joystick PS2 is used here.
+摇杆是一种输入设备，由一个在底座上旋转的摇杆组成，向所控制的设备报告其角度或方向。摇杆常用于控制视频游戏和机器人。这里使用的是 PS2 摇杆。
 
-Required Components
+所需元件
 -------------------------
 
-In this project, we need the following components. 
+本项目中，我们需要以下元件。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+购买整套套件会更加方便，以下是链接：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - Elite Explorer Kit
+    *   - 名称
+        - 套件所含项目
+        - 链接
+    *   - Elite Explorer 套件
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+您也可以从以下链接单独购买。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - 元件介绍
+        - 购买链接
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -61,53 +47,53 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_joystick`
         - |link_joystick_buy|
 
-Wiring
+接线
 ----------------------
 
 .. image:: img/20-joystick_bb.png
     :align: center
     :width: 70%
 
-Schematic Diagram
+原理图
 ---------------------
 
-This module has two analog outputs (corresponding to X,Y biaxial offsets). 
+该模块有两个模拟输出（对应 X、Y 双轴偏移）。
 
-In this experiment, we use the Uno board to detect the moving direction of the Joystick knob.
+在本实验中，我们使用 Uno 板检测摇杆旋钮的移动方向。
 
 .. image:: img/20_joystick_schematic.png
-    :align: center 
+    :align: center
     :width: 70%
 
-Code
+代码
 -------
 
 .. note::
 
-    * You can open the file ``20-joystick.ino`` under the path of ``elite-explorer-kit-main\basic_project\20-joystick`` directly.
-    * Or copy this code into Arduino IDE.
+    * 您可以直接打开路径 ``elite-explorer-kit-main\basic_project\20-joystick`` 下的 ``20-joystick.ino`` 文件。
+    * 或者将以下代码复制到 Arduino IDE 中。
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/ac0f9910-e53e-43a3-a5ae-ec4d3a3f4aa1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-Now, when you push the rocker, the coordinates of the X and Y axes displayed on the Serial Monitor will change accordingly. Pressing the button will also display the coordinate Z=0.
+现在，当您推动摇杆时，串口监视器上显示的 X 和 Y 轴坐标将相应变化。按下按钮还将显示坐标 Z=0。
 
 
-Code Analysis
+代码分析
 -------------------
 
-The code is use the serial monitor to print the value of the VRX and VRY pins of the joystick ps2.
+该代码使用串口监视器打印摇杆 PS2 的 VRX 和 VRY 引脚的值。
 
 .. code-block:: arduino
 
     void loop()
     {
-        Serial.print("X: "); 
-        Serial.print(analogRead(xPin), DEC);  // print the value of VRX in DEC
+        Serial.print("X: ");
+        Serial.print(analogRead(xPin), DEC);  // 以十进制格式打印 VRX 的值
         Serial.print("|Y: ");
-        Serial.print(analogRead(yPin), DEC);  // print the value of VRX in DEC
+        Serial.print(analogRead(yPin), DEC);  // 以十进制格式打印 VRY 的值
         Serial.print("|Z: ");
-        Serial.println(digitalRead(swPin));  // print the value of SW
+        Serial.println(digitalRead(swPin));  // 打印 SW 的值
         delay(50);
     }

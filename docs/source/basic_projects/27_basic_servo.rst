@@ -1,55 +1,41 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _basic_servo:
 
-Servo
+舵机
 ==========================
 
 .. https://docs.sunfounder.com/projects/r4-basic-kit/en/latest/projects/servo_uno.html#servo-uno
 
-Overview
+概述
 ---------------
 
-In this lesson, you will explore the use of Arduino and Servo Motors. Focusing on the Arduino Uno and the SG90 servo motor, you'll learn how to program the Arduino to control the servo's sweeping motion. This technique is essential in various applications like robotics and automated systems.
+在本课中，您将探索 Arduino 和舵机的使用。重点介绍 Arduino Uno 和 SG90 舵机，您将学习如何编程 Arduino 来控制舵机的扫动运动。该技术对于机器人和自动化系统等各种应用至关重要。
 
-Required Components
+所需元件
 -------------------------
 
-In this project, we need the following components. 
+本项目中，我们需要以下元件。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+购买整套套件会更加方便，以下是链接：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - Elite Explorer Kit
+    *   - 名称
+        - 套件所含项目
+        - 链接
+    *   - Elite Explorer 套件
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+您也可以从以下链接单独购买。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - 元件介绍
+        - 购买链接
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -58,7 +44,7 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_servo`
         - |link_servo_buy|
 
-Wiring
+接线
 ----------------------
 
 .. image:: img/27-servo_bb.png
@@ -69,40 +55,40 @@ Wiring
 
    <br/>
 
-Schematic Diagram
+原理图
 -----------------------
 
 .. image:: img/27_servo_schematic.png
     :align: center
     :width: 60%
 
-Code
+代码
 ---------------
 
 .. note::
 
-    * You can open the file ``27-servo.ino`` under the path of ``elite-explorer-kit-main\basic_project\27-servo`` directly.
-    * Or copy this code into Arduino IDE.
+    * 您可以直接打开路径 ``elite-explorer-kit-main\basic_project\27-servo`` 下的 ``27-servo.ino`` 文件。
+    * 或者将以下代码复制到 Arduino IDE 中。
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/c57ddb7a-0acb-4a64-938a-0a0abfc0ec4b/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-Code Analysis
+代码分析
 ------------------------
 
 
-1. Here, the ``Servo`` library is included which allows for easy control of the servo motor. The pin connected to the servo and the initial angle of the servo are also defined.
+1. 这里包含了 ``Servo`` 库，它允许轻松控制舵机。还定义了连接到舵机的引脚和舵机的初始角度。
 
    .. code-block:: arduino
 
       #include <Servo.h>
-      const int servoPin = 9;  // Define the servo pin
-      int angle = 0;           // Initialize the angle variable to 0 degrees
-      Servo servo;             // Create a servo object
+      const int servoPin = 9;  // 定义舵机引脚
+      int angle = 0;           // 将角度变量初始化为 0 度
+      Servo servo;             // 创建一个舵机对象
 
-2. The ``setup()`` function runs once when the Arduino starts. The servo is attached to the defined pin using the ``attach()`` function.
+2. ``setup()`` 函数在 Arduino 启动时运行一次。使用 ``attach()`` 函数将舵机连接到定义的引脚。
 
    .. code-block:: arduino
 
@@ -110,17 +96,17 @@ Code Analysis
         servo.attach(servoPin);
       }
 
-3. The main loop has two ``for`` loops. The first loop increases the angle from 0 to 180 degrees, and the second loop decreases the angle from 180 to 0 degrees. The ``servo.write(angle)`` command sets the servo to the specified angle. The ``delay(15)`` causes the servo to wait for 15 milliseconds before moving to the next angle, controlling the speed of the scanning movement.
+3. 主循环包含两个 ``for`` 循环。第一个循环将角度从 0 度增加到 180 度，第二个循环将角度从 180 度减小到 0 度。``servo.write(angle)`` 命令将舵机设置为指定角度。``delay(15)`` 使舵机在移动到下一个角度之前等待 15 毫秒，从而控制扫动运动的速度。
 
    .. code-block:: arduino
 
       void loop() {
-        // scan from 0 to 180 degrees
+        // 从 0 度扫描到 180 度
         for (angle = 0; angle < 180; angle++) {
           servo.write(angle);
           delay(15);
         }
-        // now scan back from 180 to 0 degrees
+        // 现在从 180 度扫描回 0 度
         for (angle = 180; angle > 0; angle--) {
           servo.write(angle);
           delay(15);

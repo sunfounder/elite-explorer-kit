@@ -1,26 +1,12 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 SunFounder |link_Elite_Explorer_kit|
 =======================================================
 
 * |link_Elite_kit|
 
-Thanks for choosing our |link_Elite_Explorer_kit|.
+感谢您选择我们的 |link_Elite_Explorer_kit| 。
 
 .. note::
-    This document is available in the following languages.
+    本文档提供以下语言版本。
 
         * |link_german_tutorials|
         * |link_jp_tutorials|
@@ -28,38 +14,28 @@ Thanks for choosing our |link_Elite_Explorer_kit|.
         * |link_fr_tutorials|
         * |link_es_tutorials|
         * |link_it_tutorials|
-    
-    Please click on the respective links to access the document in your preferred language.
+
+    请点击相应链接以访问您偏好的语言文档。
 
 .. image:: img/elite_explorer_kit_cover.png
     :width: 800
 
 
-Tired of basic Arduino kits with limited projects? Eager to build advanced IoT systems but don't know where to begin?
+厌倦了项目有限的基础Arduino套件？渴望构建高级物联网系统但不知从何入手？
 
-Look no further than the SunFounder Elite Explorer Kit with the all-new Arduino Uno R4 WiFi!
+SunFounder Elite Explorer Kit搭配全新的Arduino Uno R4 WiFi就是您的不二之选！
 
-The powerful Arduino Uno R4 WiFi board represents a giant leap forward for the world's most popular open-source electronics platform. With its 32-bit processor, expanded memory, USB-C, and built-in WiFi/Bluetooth, R4 unlocks endless possibilities.
+强大的Arduino Uno R4 WiFi板代表了全球最受欢迎的开源电子平台的一次巨大飞跃。凭借其32位处理器、扩展内存、USB-C和内置WiFi/蓝牙，R4解锁了无限可能。
 
-Our Elite Kit unleashes R4's full potential with a massive array of components to build creative projects, from music makers to plant monitors. Simple tutorials teach you the basics while guided projects let you construct automated fans, RFID door locks, and smartphone-controlled robots.
+我们的Elite Kit释放了R4的全部潜力，配有丰富的元件阵列，让您构建从音乐播放器到植物监控器等创意项目。简单的教程教您基础知识，而引导式项目则让您构建自动风扇、RFID门锁和智能手机控制的机器人。
 
-Explore the world of IoT with WiFi web servers, cloud dashboards, MQTT networks, and more. The kit transforms R4 into a versatile IoT prototyping tool constrained only by your imagination.
+通过WiFi网页服务器、云仪表板、MQTT网络等探索物联网世界。该套件将R4转变为一款多功能物联网原型开发工具，唯一限制您的只有想象力。
 
-With SunFounder, programming Arduino gets an upgrade. The Elite Explorer Kit, combined with the groundbreaking Uno R4 WiFi, is the ultimate all-in-one solution for mastering Arduino and building advanced DIY electronics projects. Order today and let your creativity soar!
+有了SunFounder，Arduino编程得到了升级。Elite Explorer Kit与突破性的Uno R4 WiFi相结合，是掌握Arduino和构建高级DIY电子项目的终极一体化解决方案。今天就下单吧，让您的创意尽情翱翔！
 
 
-.. **About the display language**
 
-.. This document is available in other languages as well. To switch the display language, kindly click on the Read the Docs icon located in the lower left corner of the page.
-
-.. .. image:: img/translation.png
-..     :align: center
-
-.. .. raw:: html
-
-..     <br/>
-
-**Contents**
+**目录**
 
 .. toctree::
     :maxdepth: 2
@@ -76,13 +52,6 @@ With SunFounder, programming Arduino gets an upgrade. The Elite Explorer Kit, co
     appendix/appendix
 
 
-.. toctree::
-    :maxdepth: 2
+**版权声明**
 
-    thank_learning
-
-
-
-**Copyright Notice**
-
-All contents including but not limited to texts, images, and code in this manual are owned by the SunFounder Company. You should only use it for personal study,investigation, enjoyment, or other non-commercial or nonprofit purposes, under therelated regulations and copyrights laws, without infringing the legal rights of the author and relevant right holders. For any individual or organization that uses these for commercial profit without permission, the Company reserves the right to take legal action.
+本手册中的所有内容（包括但不限于文字、图片和代码）均归SunFounder公司所有。您只能在相关法规和版权法的规定下，将其用于个人学习、研究、娱乐或其他非商业或非盈利目的，不得侵犯作者及相关权利持有人的合法权益。对于任何未经许可将此用于商业盈利的个人或组织，本公司保留追究法律责任的权利。

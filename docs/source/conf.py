@@ -34,7 +34,7 @@ html_context = {
     "display_github": True, # Integrate GitHub
     "github_user": "sunfounder", # Username
     "github_repo": "elite-explorer-kit", # Repo name
-    "github_version": "docs", # Version
+    "github_version": "docs-cn", # Version
     "conf_py_path": "/docs/source/", # Path in the checkout to the docs root
 }
 
@@ -101,7 +101,7 @@ html_css_files = [
 
 # Multi-language
 
-language = 'en' # Before running make html, set the language.
+language = 'zh_CN' # Before running make html, set the language.
 locale_dirs = ['locale/'] # .po files for other languages are placed in the locale/ folder.
 
 gettext_compact = False # Support for generating the contents of the folders inside source/ into other languages.

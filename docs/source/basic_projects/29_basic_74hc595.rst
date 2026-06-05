@@ -1,54 +1,40 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _basic_74hc595:
 
 74HC595
 ==========================
 
 
-Overview
+概述
 ----------------------
 
-Generally, there are two ways to drive a single 7-segment display. One way is to connect its 8 pins directly to eight ports on the Uno board, which we have done previously. Or you can connect the 74HC595 to three ports of the UNO board and then the 7-segment display to the 74HC595. In this experiment, we will use the latter. By this way, we can save five ports – considering the Uno board’s limited ports, this is very important. Now let's get started!
+通常，有两种方法可以驱动单个 7 段数码管。一种方法是将其 8 个引脚直接连接到 Uno 板的八个端口上，这是我们之前所做的。或者，您可以将 74HC595 连接到 UNO 板的三个端口，然后将 7 段数码管连接到 74HC595。在本实验中，我们将使用后一种方法。通过这种方式，我们可以节省五个端口——考虑到 Uno 板的端口有限，这一点非常重要。现在让我们开始吧！
 
-Required Components
+所需元件
 ------------------------
 
-In this project, we need the following components. 
+本项目中，我们需要以下元件。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+购买整套套件会更加方便，以下是链接：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - Elite Explorer Kit
+    *   - 名称
+        - 套件所含项目
+        - 链接
+    *   - Elite Explorer 套件
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+您也可以从以下链接单独购买。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - 元件介绍
+        - 购买链接
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -63,57 +49,57 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_74hc595`
         - |link_74hc595_buy|
 
-Wiring
+接线
 ----------------------
 
 .. image:: img/29-74hc595_bb.png
     :align: center
     :width: 95%
 
-Schematic Diagram
+原理图
 --------------------
 
-In the experiment MR (pin10) is connected to 5V (HIGH Level) and OE (pin 1)  to GND (LOW Level). Therefore, the data is input into the rising edge of SHcp and enters the memory register through the rising edge. We use the shiftout() function to output a 8-bit data to the shift register through DS. In the rising edge of the SHcp, the data in the shift register moves successively one bit in one time, i.e. data in Q1 moves to Q2, and so forth. In the rising edge of STcp, data in the shift register moves into the memory register. All data will be moved to the memory register after 8 times. Then the data in the memory register is output to the bus (Q0-Q7). So the 16 characters are displayed in the 7-segment in turn.
+在本实验中，MR（引脚 10）连接到 5V（高电平），OE（引脚 1）连接到 GND（低电平）。因此，数据在 SHcp 的上升沿输入，并通过上升沿进入存储器寄存器。我们使用 shiftout() 函数通过 DS 将 8 位数据输出到移位寄存器。在 SHcp 的上升沿，移位寄存器中的数据逐次移动一位，即 Q1 中的数据移动到 Q2，依此类推。在 STcp 的上升沿，移位寄存器中的数据移入存储器寄存器。经过 8 次后，所有数据将移入存储器寄存器。然后存储器寄存器中的数据输出到总线（Q0-Q7）。因此，16 个字符依次显示在 7 段数码管上。
 
 .. image:: img/29_74hc595_schematic.png
    :align: center
 
 
-Code
+代码
 --------
 
 .. note::
 
-    * You can open the file ``29-74hc595.ino`` under the path of ``elite-explorer-kit-main\basic_project\29-74hc595`` directly.
-    * Or copy this code into Arduino IDE.
+    * 您可以直接打开路径 ``elite-explorer-kit-main\basic_project\29-74hc595`` 下的 ``29-74hc595.ino`` 文件。
+    * 或者将以下代码复制到 Arduino IDE 中。
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/c7232b3c-61c9-4d7d-849b-55ed406181b1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After uploading the codes to the uno board, you should now see the 7-segment display from 0 to 9 and A to F.
-    
+将代码上传到 Uno 板后，您应该会看到 7 段数码管从 0 到 9 以及 A 到 F 的显示。
 
-Code Analysis
+
+代码分析
 -----------------
 
-**Set the array elements**
+**设置数组元素**
 
 .. code-block:: arduino
 
     int datArray[16] = {252, 96, 218, 242, 102, 182, 190, 224, 254, 246, 238, 62, 156, 122, 158, 142};
 
-This array stores the data of the 16 characters from 0 to F. 252 stands for 0, which you can calculate by yourself. To display 0, the segment g (the middle one) of the 7-segment display must be low level (dim).
+该数组存储了从 0 到 F 的 16 个字符的数据。252 代表 0，您可以自己计算。要显示 0，7 段数码管的 g 段（中间段）必须为低电平（熄灭）。
 
-Since the segment g is connected to Q1 of the 74HC595, set both Q1 and DP (the dot) as low level and leave the rest pins as high level.
-Therefore, the values of Q7 Q6 Q5 Q4 Q3 Q2 Q1 Q0 are 1 1 1 1 1 1 0 0.
+由于 g 段连接到 74HC595 的 Q1，将 Q1 和 DP（小数点）都设置为低电平，其余引脚保持高电平。
+因此，Q7 Q6 Q5 Q4 Q3 Q2 Q1 Q0 的值为 1 1 1 1 1 1 0 0。
 
-Change the binary numbers into decimal ones:
-1x2\ :sup:`7`\ +1x2\ :sup:`6`\ +1x2\ :sup:`5`\ +1x2\ :sup:`4`\ +1x2\ :sup:`3`\ +1x2\ :sup:`2`\ +0x2\ :sup:`1`\ +1x2\ :sup:`0`\ =252.
+将二进制数转换为十进制数：
+1x2\ :sup:`7`\ +1x2\ :sup:`6`\ +1x2\ :sup:`5`\ +1x2\ :sup:`4`\ +1x2\ :sup:`3`\ +1x2\ :sup:`2`\ +0x2\ :sup:`1`\ +1x2\ :sup:`0`\ =252。
 
-So that's the value for the number **0** to be displayed. You can calculate other characters similarly.
+这就是要显示的数字 **0** 的值。您可以类似地计算其他字符。
 
-**Display 0-F in the 7-segment display**
+**在 7 段数码管上显示 0-F**
 
 .. code-block:: arduino
 
@@ -121,25 +107,24 @@ So that's the value for the number **0** to be displayed. You can calculate othe
 
     {
 
-      digitalWrite(STcp,LOW); //ground ST_CP and hold low for as long as you are transmitting
+      digitalWrite(STcp,LOW); // 将 ST_CP 置低，并在传输期间保持低电平
 
       shiftOut(DS,SHcp,MSBFIRST,datArray[num]);
 
-      //return the latch pin high to signal chip that it
+      // 将锁存引脚拉高，以通知芯片
 
-      //no longer needs to listen for information
+      // 不再需要监听信息
 
-      digitalWrite(STcp,HIGH); //pull the ST_CPST_CP to save the data
+      digitalWrite(STcp,HIGH); // 拉高 ST_CP 以保存数据
 
-      delay(1000); //wait for a second
+      delay(1000); // 等待一秒
 
     }
 
-Set ``STcp`` as low level first and then high level. It will generate a rising edge pulse of STcp.
+先将 ``STcp`` 设置为低电平，然后设置为高电平。这将产生一个 STcp 的上升沿脉冲。
 
-``shiftOut()`` is used to shift out a byte of data one bit at a time, which means to shift a byte of data in ``dataArray[num]`` to the shifting register with the DS pin. ``MSBFIRST`` means to move from high bits.
+``shiftOut()`` 用于一次一位地移出一个字节的数据，即通过 DS 引脚将 ``dataArray[num]`` 中的一个字节数据移入移位寄存器。``MSBFIRST`` 表示从高位开始移动。
 
-After ``digitalWrite(STcp,HIGH)`` is run, the STcp will be at the rising edge. At this time, the data in the shift register will be moved to the memory register.
+执行 ``digitalWrite(STcp,HIGH)`` 后，STcp 将处于上升沿。此时，移位寄存器中的数据将移入存储器寄存器。
 
-A byte of data will be transferred into the memory register after 8 times. Then the data of memory register is output to the bus (Q0-Q7). You will see a character is displayed on the 7-segment. Then delay for 1000ms. After that line, go back to ``for()``. The loop repeats until all the characters are displayed in the 7-segment display one by one after
-16 times.
+一个字节的数据经过 8 次后将传输到存储器寄存器。然后存储器寄存器的数据输出到总线（Q0-Q7）。您将看到 7 段数码管上显示一个字符。然后延迟 1000ms。之后，返回 ``for()``。循环重复，直到 16 次后所有字符逐一显示在 7 段数码管上。

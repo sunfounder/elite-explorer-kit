@@ -1,59 +1,45 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _basic_moisture:
 
-Soil Moisture
+土壤湿度传感器
 ==========================
 
 .. https://docs.sunfounder.com/projects/3in1-kit-r4/en/latest/basic_project/ar_moisture.html
 
-Overview
+概述
 ---------------
 
-In the agricultural industry, crops cannot directly acquire inorganic elements from the soil. Instead, water present in the soil acts as a solvent to dissolve these elements.
+在农业中，作物无法直接从土壤中获取无机元素，而是通过土壤中的水分作为溶剂来溶解这些元素。
 
-Crops absorb moisture from the soil through their root system to obtain nutrients and facilitate growth.
+作物通过根系从土壤中吸收水分，以获取养分并促进生长。
 
-During the growth and development of crops, there are varying requirements for soil temperature. Hence, it is necessary to use a soil moisture sensor.
+在作物的生长发育过程中，对土壤温度有不同的要求。因此，需要使用土壤湿度传感器。
 
-Required Components
+所需元件
 -------------------------
 
-In this project, we need the following components. 
+本项目中，我们需要以下元件。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+购买整套套件会更加方便，以下是链接：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - Elite Explorer Kit
+    *   - 名称
+        - 套件所含项目
+        - 链接
+    *   - Elite Explorer 套件
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+您也可以从以下链接单独购买。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - 元件介绍
+        - 购买链接
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -64,32 +50,32 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_soil_moisture`
         - |link_soil_moisture_buy|
 
-Wiring
+接线
 ----------------------
 
 .. image:: img/03-soil_moisture_bb.png
     :align: center
     :width: 80%
 
-Schematic Diagram
+原理图
 -----------------------
 
 .. image:: img/03_moisture_schematic.webp
     :align: center
     :width: 70%
 
-Code
+代码
 ---------------
 
 .. note::
 
-    * Open the ``03-moisture.ino`` file under the path of ``elite-explorer-kit-main\basic_project\03-moisture``.
-    * Or copy this code into **Arduino IDE**.
-    
+    * 打开路径 ``elite-explorer-kit-main\basic_project\03-moisture`` 下的 ``03-moisture.ino`` 文件。
+    * 或者将以下代码复制到 **Arduino IDE** 中。
+
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/c585dd77-2e8a-4839-a908-d22e1d6e93aa/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-    
-Once the code is successfully uploaded, the serial monitor will print out the soil moisture value.
 
-By inserting the module into the soil and watering it, the value of the soil moisture sensor will become smaller.
+代码成功上传后，串口监视器将打印出土壤湿度值。
+
+将模块插入土壤并浇水后，土壤湿度传感器的数值会变小。

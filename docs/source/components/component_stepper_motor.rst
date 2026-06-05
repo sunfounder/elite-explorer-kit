@@ -1,55 +1,40 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _cpn_stepper_motor:
 
-Stepper Motor
+步进电机
 =========================
 
 .. image:: img/stepper_motor2.jpeg
    :align: center
 
-Stepper motors, due to their unique design, can be controlled to a high degree of accuracy without any feedback mechanisms. The shaft of a stepper, mounted with a series of magnets, is controlled by a series of electromagnetic coils that are charged positively and negatively in a specific sequence, precisely moving it forward or backward in small
-"steps".
+步进电机由于其独特的设计，可以在没有任何反馈机制的情况下实现高精度控制。步进电机的转轴上安装有一系列磁铁，由一系列电磁线圈控制，这些线圈按特定顺序正向和反向充电，从而以微小的"步进"精确地向前或向后移动。
 
-**Principle**
+**原理**
 
-There are two types of steppers, unipolars and bipolars, and it is very important to know which type you are working with. In this experiment, we will use a unipolar stepper.
+步进电机有两种类型：单极性和双极性，了解您正在使用哪种类型非常重要。在本实验中，我们将使用单极性步进电机。
 
-The stepper motor is a four-phase one, which uses a unipolarity DC power supply. As long as you electrify all phase windings of the motor by an appropriate timing sequence, you can make it rotate step by step. The schematic diagram of a four-phase reactive stepper motor:
+步进电机是一种四相电机，使用单极性直流电源。只要按照适当的时序为电机的各相绕组通电，就可以使其一步一步地旋转。四相反应式步进电机的原理图：
 
 .. image:: img/stepper_motor3.png
    :align: center
 
-In the figure, in the middle of the motor is a rotor - a gear-shaped permanent magnet. Around the rotor, 0 to 5 are teeth. Then more outside, there are 8 magnetic poles, with each two opposite ones connected by coil winding. So they form four pairs from A to D, which is called a phase. It has four lead wires to be connected with switches SA, SB, SC, and SD. Therefore, the four phases are in parallel in the circuit, and the two magnetic poles in one phase are in series.
+图中，电机中间是一个转子——一个齿轮状的永磁体。转子周围是0到5号齿。再外面是8个磁极，每两个相对的磁极通过线圈绕组连接。因此它们形成A到D四对，称为一相。它有四根引线连接到开关SA、SB、SC和SD。因此，四相在电路中是并联的，同一相中的两个磁极是串联的。
 
-**Here's how a 4-phase stepper motor works:**
+**以下是四相步进电机的工作原理：**
 
-At the beginning, switch SB is power on, switch SA, SC, and SD is power off, and B-phase magnetic poles align with tooth 0 and 3 of the rotor. At the same time, tooth 1 and 4 generate staggered teeth with C- and D-phase poles. Tooth 2 and 5 generate staggered teeth with D- and A-phase poles. When switch SC is power on, switch SB, SA, and SD is power off, the rotor rotates under magnetic field of C-phase winding and that between tooth 1 and 4. Then tooth 1 and 4 align with the magnetic poles of C-phase winding. While tooth 0 and 3 generate staggered teeth with A- and B-phase poles, and tooth 2 and 5 generate staggered teeth with the magnetic poles of A- and D-phase poles. The similar situation goes on and on. Energize the A, B, C and D phases in turn, and the rotor will rotate in the order of A, B, C and D.
+开始时，开关SB通电，开关SA、SC和SD断电，B相磁极与转子的0号和3号齿对齐。同时，1号和4号齿与C相和D相磁极产生错齿。2号和5号齿与D相和A相磁极产生错齿。当开关SC通电，开关SB、SA和SD断电时，转子在C相绕组的磁场以及1号和4号齿之间的磁场作用下旋转。然后1号和4号齿与C相绕组的磁极对齐。而0号和3号齿与A相和B相磁极产生错齿，2号和5号齿与A相和D相磁极产生错齿。如此循环往复。依次给A、B、C、D相通电，转子将按照A、B、C、D的顺序旋转。
 
-The four-phase stepper motor has three operating modes: single four-step, double four-step, and eight-step. The step angle for the single four-step and double four-step are the same, but the driving torque for the single four-step is smaller. The step angle of the eight-step is half that of the single four-step and double four-step. Thus, the eight-step operating mode can keep high driving torque and improve control accuracy. In this experiment, we let the stepper motor work in the eight-step mode.
+四相步进电机有三种工作模式：单四拍、双四拍和八拍。单四拍和双四拍的步进角相同，但单四拍的驱动力矩较小。八拍的步进角是单四拍和双四拍的一半。因此，八拍工作模式可以保持较高的驱动力矩并提高控制精度。在本实验中，我们让步进电机以八拍模式工作。
 
-**ULN2003 Module**
+**ULN2003模块**
 
 .. image:: img/uln2003.png
     :align: center
 
-To apply the motor in the circuit, a driver board needs to be used. Stepper Motor Driver-ULN2003 is a 7-channel inverter circuit. That is, when the input end is at high level, the output end of ULN2003 is at low level, and vice versa. If we supply high level to IN1, and low level to IN2, IN3 and IN4, then the output end OUT1 is at low level, and all the other output ends are at high level. So D1 lights up, switch SA is power on, and the stepper motor rotates one step. The similar case repeats on and on. Therefore, just give the stepper motor a specific timing sequence, it will rotate step by step. The ULN2003 here is used to provide particular timing sequences for the stepper motor.
+为了在电路中使用电机，需要使用驱动板。步进电机驱动ULN2003是一款7通道反相器电路。也就是说，当输入端为高电平时，ULN2003的输出端为低电平，反之亦然。如果给IN1提供高电平，给IN2、IN3和IN4提供低电平，那么输出端OUT1为低电平，其他所有输出端为高电平。因此D1点亮，开关SA接通，步进电机旋转一步。依此类推。因此，只需给步进电机提供特定的时序，它就会一步一步地旋转。这里的ULN2003用于为步进电机提供特定的时序。
 
 
-**Example**
+**示例**
 
 
-* :ref:`basic_stepper_motor` (Basic Project)
-* :ref:`fun_access` (Fun Project)
+* :ref:`basic_stepper_motor` （基础项目）
+* :ref:`fun_access` （趣味项目）

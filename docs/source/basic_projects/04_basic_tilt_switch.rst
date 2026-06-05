@@ -1,55 +1,41 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _basic_tilt_switch:
 
-Tilt Switch
+倾斜开关
 ==========================
 
 .. https://docs.sunfounder.com/projects/vincent-kit/en/latest/arduino/2.17_tilt_switch.html#ar-tilt
 
-Overview
+概述
 ---------------
 
-In this lesson, you will learn about tilt switch. Tilt switch can be used to detect whether objects tilt, which is of great value in practical applications. It can be used to judge the tilt of bridges, buildings, transmission line tower and so on, so it has an important guiding function in carrying out maintenance work.
+在本课中，您将了解倾斜开关。倾斜开关可用于检测物体是否倾斜，这在实际应用中具有重要价值。它可用于判断桥梁、建筑物、输电线路塔等的倾斜情况，因此对开展维护工作具有重要的指导作用。
 
-Required Components
+所需元件
 -------------------------
 
-In this project, we need the following components. 
+本项目中，我们需要以下元件。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+购买整套套件会更加方便，以下是链接：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - Elite Explorer Kit
+    *   - 名称
+        - 套件所含项目
+        - 链接
+    *   - Elite Explorer 套件
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+您也可以从以下链接单独购买。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - 名称
+        - 购买链接
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -62,17 +48,16 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_tilt_switch`
         - \-
 
-Fritzing Circuit
+Fritzing 电路图
 ---------------------
 
-In this example, digital pin 2 is used to read the signal of Tilt
-Switch.
+在本示例中，数字引脚2用于读取倾斜开关的信号。
 
 .. image:: img/04-tilt_switch_bb.png
    :align: center
    :width: 85%
 
-Schematic Diagram
+原理图
 -----------------------
 
 .. image:: img/04_tilt_switch_schematic.png
@@ -80,16 +65,16 @@ Schematic Diagram
    :width: 70%
 
 
-Code
+代码
 ----------
 
 .. note::
 
-    * You can open the file ``04-tilt_switch.ino`` under the path of ``elite-explorer-kit-main\basic_project\04-tilt_switch`` directly.
-    * Or copy this code into Arduino IDE.
+    * 您可以直接打开路径 ``elite-explorer-kit-main\basic_project\04-tilt_switch`` 下的 ``04-tilt_switch.ino`` 文件。
+    * 或者将以下代码复制到 Arduino IDE 中。
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/d85d75d9-e491-424c-93be-95e1f4e99549/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-Once the codes are uploaded to the uno r4 board, you can open the serial monitor to view the pin readings. The readings will display either "1" or "0" depending on whether the Tilt Switch is in a vertical position (with the internal metal ball making contact with the Wire Pins) or tilted.
+将代码上传到 Uno R4 板后，您可以打开串口监视器查看引脚读数。读数将显示"1"或"0"，具体取决于倾斜开关是处于垂直位置（内部金属球与线引脚接触）还是倾斜位置。

@@ -1,43 +1,22 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _cpn_ta6586:
 
-TA6586 - Motor Driver Chip
+TA6586 - 电机驱动芯片
 =================================
 
 .. image:: img/ta6586.png
 
-TA6586 is a monolithic IC designed for driving bi-directional DC motor. It has
-two pins of logic inputs for controlling the direction, forward and backward.
-The circuit feature good anti-interference performance, small standby current and
-low output saturation pressure drop. It has a built-in clamp diode to reverse the impact
-of the release of inductive load current, making it in the drive relays, DC motors,
-stepper motors or control the use of switching power safe and reliable.
-TA6586 is suitable for toy vehicles, remote-controlled aircraft motor drive, automatic
-valve motor, electromagnetic lock drive, precision instruments and other circuits.
+TA6586是一款用于驱动双向直流电机的单片IC。它具有两个逻辑输入引脚用于控制方向：正向和反向。该电路具有良好的抗干扰性能、较小的待机电流和低输出饱和压降。它内置了钳位二极管以反向抑制感性负载电流释放的冲击，使其在驱动继电器、直流电机、步进电机或控制开关电源时安全可靠。TA6586适用于玩具车、遥控飞机电机驱动、自动阀门电机、电磁锁驱动、精密仪器等电路。
 
-**Features**
+**特性**
 
-* Low stand-by current: ≦2uA
-* Wide supply voltage range
-* Built-in Brake Function
-* Thermal Shutdown protection
-* Over Current Limit and Short Circuit Protect Function
-* DIP8 Pb-Free package.
+* 低待机电流：≦2uA
+* 宽电源电压范围
+* 内置制动功能
+* 热关断保护
+* 过流限制和短路保护功能
+* DIP8无铅封装
 
-**Pin Function**
+**引脚功能**
 
 .. image:: img/ta6586_pin1.png
     :width: 30%
@@ -46,14 +25,14 @@ valve motor, electromagnetic lock drive, precision instruments and other circuit
     :width: 75%
 
 
-**Input Truth Table**
+**输入真值表**
 
 .. image:: img/ta6586_priciple.png
     :width: 95%
 
-**Example**
+**示例**
 
-* :ref:`basic_motor` (Basic Project)
-* :ref:`basic_pump` (Basic Project)
-* :ref:`fun_smart_fan` (Fun Project)
-* :ref:`fun_plant_monitor` (Fun Project)
+* :ref:`basic_motor` （基础项目）
+* :ref:`basic_pump` （基础项目）
+* :ref:`fun_smart_fan` （趣味项目）
+* :ref:`fun_plant_monitor` （趣味项目）

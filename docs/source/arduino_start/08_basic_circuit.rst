@@ -1,82 +1,68 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
-How to Build the Circuit
+如何搭建电路
 ========================
 
-Many of the things you use every day are powered by electricity, like the lights in your house and the computer you're reading.
+你每天使用的许多东西都靠电力驱动，比如你家里的灯和你正在看书的电脑。
 
-To use electricity, you must build an electrical circuit. Basically, a circuit is a path through which electricity flows, or an electronic circuit, and is made up of electrical devices and components (appliances) that are connected in a certain way, such as resistors, capacitors, power supplies, and switches.
+要使用电，你必须建立一个电路。基本上，电路是电流流动的路径，或者说电子电路，由以一定方式连接的电子设备和元件（用电器）组成，如电阻、电容、电源和开关。
 
 .. image:: img/circuit.png
     :align: center
     :width: 250
 
 .. raw:: html
-    
+
     <br/>
 
-A circuit is a closed path in which electrons move to create an electric current. To flow current, there must be a conducting path between the positive terminal of the power supply and the negative terminal, which is called a closed circuit (if it is broken, it is called an open circuit.) .
+电路是一个闭合路径，电子在其中运动产生电流。要让电流流动，必须在电源的正极和负极之间有一条导电路径，这称为闭合电路（如果断开，则称为开路）。
 
 
 
-The Arduino Board has some power output pins (positive) and some ground pins (negative).
-You can use these pins as the positive and negative sides of the power supply by plugging the power source into the board.
+Arduino 开发板有一些电源输出引脚（正极）和一些接地引脚（负极）。
+你可以使用这些引脚作为电源的正极和负极，将电源接入开发板。
 
 .. image:: img/08_circuit_1.png
     :align: center
     :width: 70%
 
-With electricity, you can create works with light, sound, and motion.
-You can light up an LED by connecting the long pin to the positive terminal and the short pin to the negative terminal.
-However, doing this directly can quickly damage not just the LED but also risk harming the pins of your UNO R4 board. To avoid this, it's essential to add a 1kΩ resistor into the circuit, protecting both the LED and the UNO R4's pins.
+有了电，你可以创造出具有光、声和运动效果的作品。
+你可以将长引脚连接到正极端子，短引脚连接到负极端子，从而点亮 LED。
+然而，直接这样做不仅会损坏 LED，还可能损坏 UNO R4 开发板的引脚。为了避免这种情况，有必要在电路中加入一个 1kΩ 的电阻，以保护 LED 和 UNO R4 的引脚。
 
-The circuit they form is shown below.
+它们形成的电路如下所示。
 
 .. image:: img/08_circuit_2.png
     :align: center
     :width: 65%
 
 .. raw:: html
-    
+
     <br/>
 
-You may have questions this time: how do I build this circuit? Hold the wires by hand, or tape the pins and wires?
+这时你可能会问：如何搭建这个电路？用手拿着导线，或者用胶带固定引脚和导线？
 
-In this situation, solderless breadboards will be your strongest allies.
+在这种情况下，免焊面包板将是你最得力的助手。
 
 .. _bc_bb:
 
-Hello, Breadboard!
+你好，面包板！
 ------------------------------
 
 
-A breadboard is a rectangular plastic plate with a bunch of small holes. 
-These holes allow us to easily insert electronic components and build electronic circuits. 
-Breadboards do not permanently fix electronic components, so we can easily repair a circuit and start over if something goes wrong.
+面包板是一块带有许多小孔的矩形塑料板。
+这些孔使我们能够轻松插入电子元件并搭建电子电路。
+面包板不会永久固定电子元件，因此如果出现问题，我们可以轻松修复电路并重新开始。
 
 .. note::
-    There is no need for special tools to use breadboards. However, many electronic components are very small, and a pair of tweezers can help us to pick up small parts better.
+    使用面包板不需要特殊工具。但是，许多电子元件非常小，一把镊子可以帮助我们更好地拾取小零件。
 
-On the Internet, we can find a lot of information about breadboards.
+在互联网上，我们可以找到很多关于面包板的信息。
 
-* `How to Use a Breadboard - Science Buddies <https://www.sciencebuddies.org/science-fair-projects/references/how-to-use-a-breadboard#pth-smd>`_
+* `如何使用面包板 - Science Buddies <https://www.sciencebuddies.org/science-fair-projects/references/how-to-use-a-breadboard#pth-smd>`_
 
-* `What is a BREADBOARD? - Makezine <https://cdn.makezine.com/uploads/2012/10/breadboardworkshop.pdf>`_
+* `什么是面包板？- Makezine <https://cdn.makezine.com/uploads/2012/10/breadboardworkshop.pdf>`_
 
 
-Here are some things you should know about breadboards.
+以下是关于面包板你应该了解的一些事项。
 
 .. image:: ../components/img/breadboard_internal.png
     :align: center
@@ -86,111 +72,111 @@ Here are some things you should know about breadboards.
 
    <br/>
 
-#. Each half-row group (such as column A-E in row 1 or column F-J in row 3) is connected. Therefore, if an electrical signal flows in from A1, it can flow out from B1, C1, D1, E1, but not from F1 or A2.
+#. 每个半行组（例如第 1 行 A-E 列或第 3 行 F-J 列）是连通的。因此，如果电信号从 A1 流入，它可以从 B1、C1、D1、E1 流出，但不能从 F1 或 A2 流出。
 
-#. In most cases, both sides of the breadboard are used as power buses, and the holes in each column (about 50 holes) are connected together. As a general rule, positive power supplies are connected to the holes near the red wire, and negative power supplies are connected to the holes near the blue wire.
+#. 在大多数情况下，面包板的两侧都用作电源母线，每列中的孔（约 50 个孔）是连接在一起的。一般来说，正电源连接到靠近红色导线一侧的孔，负电源连接到靠近蓝色导线一侧的孔。
 
-**Let us follow the direction of the current to build the circuit!**
+**让我们跟随电流的方向来搭建电路！**
 
 .. image:: img/08_circuit_3.png
     :align: center
     :width: 60%
 
 .. raw:: html
-    
+
     <br/>
 
-1. In this circuit, we use the 5V pin of the board to power the LED. Use a male-to-male (M2M) jumper wire to connect it to the red power bus.
-#. To protect the LED and the UNO R4's pins, the current must pass through a 1k ohm resistor. Connect one end (either end) of the resistor to the red power bus, and the other end to the free row of the breadboard.
+1. 在这个电路中，我们使用开发板的 5V 引脚为 LED 供电。使用公对公跳线将其连接到红色电源母线。
+#. 为了保护 LED 和 UNO R4 的引脚，电流必须通过一个 1k 欧姆的电阻。将电阻的一端（任意一端）连接到红色电源母线，另一端连接到面包板的空闲行。
 
    .. note::
-        The color ring of the 1000 ohm :ref:`cpn_resistor` is red, black, black, brown and brown.
+        1000 欧姆 :ref:`cpn_resistor` 的色环为红、黑、黑、棕、棕。
 
-#. If you pick up the LED, you will see that one of its leads is longer than the other. Connect the longer lead to the same row as the resistor, and the shorter lead to the other row.
+#. 如果你拿起 LED，会看到其中一根引脚比另一根长。将较长的引脚连接到与电阻相同的行，较短的引脚连接到另一行。
 
    .. note::
-        The longer lead is the anode, which represents the positive side of the circuit; the shorter lead is the cathode, which represents the negative side. 
+        较长的引脚是阳极，代表电路的正极；较短的引脚是阴极，代表电路的负极。
 
-        The anode needs to be connected to the GPIO pin through a resistor; the cathode needs to be connected to the GND pin.
+        阳极需要通过电阻连接到 GPIO 引脚；阴极需要连接到 GND 引脚。
 
-#. Using a male-to-male (M2M) jumper wire, connect the LED short pin to the breadboard's negative power bus.
-#. Connect the GND pin of board to the negative power bus using a jumper.
+#. 使用公对公跳线，将 LED 的短引脚连接到面包板的负电源母线。
+#. 使用跳线将开发板的 GND 引脚连接到负电源母线。
 
-Beware of short circuits
+注意短路
 ------------------------------
-Short circuits can occur when two components that shouldn't be connected are "accidentally" connected. 
-This kit includes resistors, transistors, capacitors, LEDs, etc. that have long metal pins that can bump into each other and cause a short. Some circuits are simply prevented from functioning properly when a short occurs. Occasionally, a short circuit can damage components permanently, especially between the power supply and the ground bus, causing the circuit to get very hot, melting the plastic on the breadboard and even burning the components!
+当两个不应该连接的元件被"意外"连接时，就会发生短路。
+本套件包含电阻、晶体管、电容、LED 等元件，它们有长的金属引脚，可能会相互碰触导致短路。发生短路时，有些电路会直接无法正常工作。有时，短路会永久损坏元件，特别是在电源和接地母线之间，会导致电路变得非常热，熔化面包板上的塑料，甚至烧毁元件！
 
-Therefore, always make sure that the pins of all the electronics on the breadboard are not touching each other.
+因此，务必确保面包板上所有电子元件的引脚不要相互接触。
 
-Direction of the circuit
+电路的方向
 -------------------------------
-There is an orientation to circuits, and the orientation plays a significant role in certain electronic components. There are some devices with polarity, which means they must be connected correctly based on their positive and negative poles. Circuits built with the wrong orientation will not function properly.
+电路是有方向的，方向在某些电子元件中起着重要作用。有些元件具有极性，这意味着它们必须根据正负极正确连接。方向错误的电路将无法正常工作。
 
 .. image:: img/08_circuit_4.png
     :align: center
     :width: 60%
 
 .. raw:: html
-    
+
     <br/>
 
-If you reverse the LED in this simple circuit that we built earlier, you will find that it no longer works.
+如果你在我们之前搭建的简单电路中反向连接 LED，你会发现它不再发光。
 
-In contrast, some devices have no direction, such as the resistors in this circuit, so you can try inverting them without affecting the LEDs' normal operation.
+相比之下，有些元件没有方向性，比如这个电路中的电阻，你可以尝试反向连接它们，而不会影响 LED 的正常工作。
 
-Most components and modules with labels such as "+", "-", "GND", "VCC" or have pins of different lengths must be connected to the circuit in a specific way.
+大多数标有"+"、"-"、"GND"、"VCC"或引脚长度不同的元件和模块必须以特定方式连接到电路。
 
 
-Protection of the circuit
+电路的保护
 -------------------------------------
 
-Current is the rate at which electrons flow past a point in a complete electrical circuit. At its most basic, current = flow. An ampere (AM-pir), or amp, is the international unit used for measuring current. It expresses the quantity of electrons (sometimes called "electrical charge") flowing past a point in a circuit over a given time.
+电流是电子在完整电路中通过某一点的速率。最基本地说，电流 = 流动。安培是用于测量电流的国际单位。它表示在给定时间内通过电路某一点的电子（有时称为"电荷"）数量。
 
-The driving force (voltage) behind the flow of current is called voltage and is measured in volts (V).
+驱动电流流动的驱动力（电压）称为电压，以伏特（V）为单位。
 
-Resistance (R) is the property of the material that restricts the flow of current, and it is measured in ohms (Ω).
+电阻（R）是材料限制电流流动的特性，以欧姆（Ω）为单位。
 
-According to Ohm's law (as long as the temperature remains constant), current, voltage, and resistance are proportional.
-A circuit's current is proportional to its voltage and inversely proportional to its resistance. 
+根据欧姆定律（只要温度保持不变），电流、电压和电阻是成比例的。
+电路的电流与其电压成正比，与其电阻成反比。
 
-Therefore, current (I) = voltage (V) / resistance (R).
+因此，电流（I）= 电压（V）/ 电阻（R）。
 
-* `Ohm's law - Wikipedia <https://en.wikipedia.org/wiki/Ohm%27s_law>`_
+* `欧姆定律 - 维基百科 <https://en.wikipedia.org/wiki/Ohm%27s_law>`_
 
-About Ohm's law we can do a simple experiment.
+关于欧姆定律，我们可以做一个简单的实验。
 
 .. image:: img/08_circuit_5.png
     :width: 55%
 
-By changing the wire connecting 5V to 3.3V , the LED gets dimmer.
-If you change the resistor from 1000 ohm to 2000 ohm (color ring: red, black, black, brown, and brown), you will notice that the LED becomes dimmer than before. The larger the resistor, the dimmer the LED.
+通过将连接 5V 的导线改为 3.3V，LED 会变暗。
+如果将电阻从 1000 欧姆改为 2000 欧姆（色环：红、黑、黑、棕、棕），你会注意到 LED 比以前更暗。电阻越大，LED 越暗。
 
-Most packaged modules only require access to the proper voltage (usually 3.3V or 5V), such as ultrasonic module.
+大多数封装模块只需要接入合适的电压（通常为 3.3V 或 5V），例如超声波模块。
 
-However, in your self-built circuits, you need to be aware of the supply voltage and resistor usage for electrical devices.
-
-
-As an example, LEDs usually consume 20mA of current, and their voltage drop is about 1.8V. According to Ohm's law, if we use 5V power supply, we need to connect a minimum of 160ohm ((5-1.8)/20mA) resistor in order not to burn out the LED.
+然而，在你自行搭建的电路中，你需要注意电气设备的供电电压和电阻的使用。
 
 
+举例来说，LED 通常消耗 20mA 电流，其压降约为 1.8V。根据欧姆定律，如果我们使用 5V 电源，为了不烧坏 LED，需要串联一个至少 160 欧姆（(5-1.8)/20mA）的电阻。
 
-Control circuit with Arduino
+
+
+用 Arduino 控制电路
 --------------------------------
 
-Now that we have a basic understanding of Arduino programming and electronic circuits, it's time to face the most critical question: How to control circuits with Arduino?
+现在我们已经对 Arduino 编程和电子电路有了基本的了解，是时候面对最关键的问题了：如何用 Arduino 控制电路？
 
-Simply put, the way Arduino controls a circuit is by changing the level of the pins on the board. For example, when controlling an on-board LED, it is writing a high or low level signal to pin 13.
+简单来说，Arduino 控制电路的方式是改变开发板上引脚的电平。例如，控制板载 LED 时，就是向引脚 13 写入高电平或低电平信号。
 
 
-Now let's try to code the Arduino board to control the blinking LED on the breadboard. Build the circuit so that the LED is connected to pin 9.
+现在让我们尝试编写代码，让 Arduino 开发板控制面包板上的 LED 闪烁。搭建电路，使 LED 连接到引脚 9。
 
 .. image:: img/08_circuit_6.png
     :width: 400
     :align: center
 
 
-Next, upload this sketch to the Arduino development board.
+接下来，将此项目上传到 Arduino 开发板。
 
 .. code-block:: C
 
@@ -198,17 +184,17 @@ Next, upload this sketch to the Arduino development board.
     int delayTime = 500;
 
     void setup() {
-        pinMode(ledPin,OUTPUT); 
+        pinMode(ledPin,OUTPUT);
     }
 
     void loop() {
-        digitalWrite(ledPin,HIGH); 
-        delay(delayTime); 
-        digitalWrite(ledPin,LOW); 
+        digitalWrite(ledPin,HIGH);
+        delay(delayTime);
+        digitalWrite(ledPin,LOW);
         delay(delayTime);
     }
 
-This sketch is very similar to the one we used to control the blinking of the on-board LED, the difference is that the value of ``ledPin`` has been changed to 9.
-This is because we are trying to control the level of pin 9 this time.
+这个项目与我们用来控制板载 LED 闪烁的项目非常相似，不同之处在于 ``ledPin`` 的值已更改为 9。
+这是因为我们这次要控制引脚 9 的电平。
 
-Now you can see the LED on the breadboard blinking.
+现在你可以看到面包板上的 LED 在闪烁了。

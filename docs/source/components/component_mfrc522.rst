@@ -1,38 +1,24 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _cpn_mfrc522:
 
-MFRC522 Module
+MFRC522模块
 =====================
 
 **RFID**
 
-Radio Frequency Identification (RFID) refers to technologies that involve using wireless communication between an object (or tag) and an interrogating device (or reader) to automatically track and identify such objects. The tag transmission range is limited to several meters from the reader. A clear line of sight between the reader and tag is not necessarily required.
+射频识别（RFID）指的是涉及使用物体（或标签）与询问设备（或读写器）之间无线通信的技术，用于自动跟踪和识别此类物体。标签的传输范围限制在距离读写器几米以内。读写器与标签之间不一定需要清晰的视线。
 
-Most tags contain at least one integrated circuit (IC) and an antenna. The microchip stores information and is responsible for managing the radio frequency (RF) communication with the reader. Passive tags do not have an independent energy source and depend on an external electromagnetic signal, provided by the reader, to power their operations. Active tags contain an independent energy source, such as a battery. Thus, they may have increased processing, transmission capabilities and range.
+大多数标签至少包含一个集成电路（IC）和一个天线。微芯片存储信息并负责管理与读写器的射频（RF）通信。无源标签没有独立的能源，依赖读写器提供的外部电磁信号来供电运行。有源标签包含独立的能源，如电池。因此，它们可能具有更强的处理能力、传输能力和更大的范围。
 
 .. image:: img/mfrc522.png
 
 
 **MFRC522**
 
-MFRC522 is a kind of integrated read and write card chip. It is commonly used in the radio at 13.56MHz. Launched by the NXP Company, it is a low-voltage, low-cost, and small-sized non-contact card chip, a best choice of intelligent instrument and portable handheld device.
+MFRC522是一种集成的读写卡芯片。常用于13.56MHz的射频通信。由恩智浦公司推出，是一款低电压、低成本、小体积的非接触式卡芯片，是智能仪器和便携式手持设备的最佳选择。
 
-The MF RC522 uses advanced modulation and demodulation concept which fully presented in all types of 13.56MHz passive contactless communication methods and protocols. In addition, it supports rapid CRYPTO1 encryption algorithm to verify MIFARE products. MFRC522 also supports MIFARE series of high-speed non-contact communication, with a two-way data transmission rate up to 424kbit/s. As a new member of the 13.56MHz highly integrated reader card series, MF RC522 is much similar to the existing MF RC500 and MF RC530 but there also exists great differences. It communicates with the host machine via the serial manner which needs less wiring. You can choose between SPI, I2C and serial UART mode (similar to RS232), which helps reduce the connection, save PCB board space (smaller size), and reduce cost.
+MF RC522采用了先进的调制和解调概念，完全适用于所有类型的13.56MHz无源非接触式通信方法和协议。此外，它支持快速的CRYPTO1加密算法来验证MIFARE产品。MFRC522还支持MIFARE系列高速非接触式通信，双向数据传输速率高达424kbit/s。作为13.56MHz高集成度读写卡系列的新成员，MF RC522与现有的MF RC500和MF RC530非常相似，但也存在很大差异。它通过串行方式与主机通信，需要更少的接线。您可以在SPI、I2C和串行UART模式（类似于RS232）之间选择，这有助于减少连接，节省PCB板空间（更小的尺寸），并降低成本。
 
-**Example**
+**示例**
 
-* :ref:`basic_mfrc522` (Basic Project)
-* :ref:`fun_access` (Fun Project)
+* :ref:`basic_mfrc522` （基础项目）
+* :ref:`fun_access` （趣味项目）

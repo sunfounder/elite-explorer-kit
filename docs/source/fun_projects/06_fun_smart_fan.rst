@@ -1,20 +1,6 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _fun_smart_fan:
 
-Smart Fan
+智能风扇
 =================================
 
 .. raw:: html
@@ -24,34 +10,34 @@ Smart Fan
       Your browser does not support the video tag.
    </video>
 
-This Arduino project automatically adjusts the fan's speed to maintain the temperature within a suitable range.
-Additionally, users can enter manual mode through a button to operate the fan at maximum speed.
+这个 Arduino 项目会自动调节风扇速度，以将温度维持在合适的范围内。
+此外，用户可以通过按钮进入手动模式，使风扇以最大速度运行。
 
-**Required Components**
+**所需元件**
 
-In this project, we need the following components. 
+在这个项目中，我们需要以下元件。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+购买整套套件会更方便，以下是链接：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - Elite Explorer Kit
+    *   - 名称
+        - 套件所含项目
+        - 链接
+    *   - Elite Explorer 套件
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+您也可以从下面的链接单独购买。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - 元件介绍
+        - 购买链接
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -74,10 +60,11 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_power`
         - \-
 
-**Wiring**
+
+**接线**
 
 .. note::
-    The motor requires more power during operation, so please keep the power module connected to a charging cable when in use.
+    电机在工作时需要更多电力，因此在使用时请保持电源模块连接到充电电缆。
 
 .. image:: img/06_smart_fan_bb.png
     :width: 100%
@@ -87,48 +74,48 @@ You can also buy them separately from the links below.
 
    <br/>
 
-**Schematic**
+**原理图**
 
 .. image:: img/06_smart_fan_schematic.png
    :width: 80%
    :align: center
 
-**Code**
+**代码**
 
 .. note::
 
-    * You can open the file ``06_smart_fan.ino`` under the path of ``elite-explorer-kit-main\fun_project\06_smart_fan`` directly.
-    * Or copy this code into Arduino IDE.
+    * 您可以直接打开路径 ``elite-explorer-kit-main\fun_project\06_smart_fan`` 下的 ``06_smart_fan.ino`` 文件。
+    * 或者将这段代码复制到 Arduino IDE 中。
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/ba484912-14d6-4125-83a0-73a107904144/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-**How it works?**
+**工作原理**
 
-Here is a step-by-step explanation of the code:
+以下是代码的逐步说明：
 
-1. Constants and Variable Definitions:
+1. 常量和变量定义：
 
-   Use ``#define`` to define the pins for various hardware connections.
-   ``TEMP_THRESHOLD`` is defined as 25°C, which is the temperature threshold to start the fan.
-   ``manualMode``: A boolean variable that indicates whether it is in manual mode.
+   使用 ``#define`` 定义各种硬件连接的引脚。
+   ``TEMP_THRESHOLD`` 定义为 25°C，这是启动风扇的温度阈值。
+   ``manualMode``：一个布尔变量，指示是否处于手动模式。
 
-2. ``setup()``:
+2. ``setup()``：
 
-   Set the mode for relevant pins (output, input, input with pull-up).
-   Initially set to automatic mode, so ``LED_AUTO`` is lit while ``LED_MANUAL`` is off.
+   设置相关引脚的模式（输出、输入、上拉输入）。
+   初始设置为自动模式，因此 ``LED_AUTO`` 点亮，而 ``LED_MANUAL`` 熄灭。
 
-3. ``loop()``:
+3. ``loop()``：
 
-   Monitor the button's state. When the button is pressed, it toggles the mode and changes the LED's status.
-   In manual mode, the fan operates at maximum speed.
-   In automatic mode, the code first reads the voltage value from the temperature sensor and converts it to a temperature value. 
-   If the temperature exceeds the threshold, the fan's speed is adjusted based on the temperature.
+   监测按钮的状态。当按钮被按下时，切换模式并更改 LED 的状态。
+   在手动模式下，风扇以最大速度运行。
+   在自动模式下，代码首先读取温度传感器的电压值并将其转换为温度值。
+   如果温度超过阈值，则根据温度调整风扇的速度。
 
-4. ``voltageToTemperature()``:
+4. ``voltageToTemperature()``：
 
-   This is an auxiliary function used to convert the voltage value from the temperature sensor into a temperature value (in Celsius).
-   The function uses the standard formula for a thermistor to estimate the temperature.
-   The return value is in degrees Celsius.
+   这是一个辅助函数，用于将温度传感器的电压值转换为温度值（摄氏度）。
+   该函数使用热敏电阻的标准公式来估算温度。
+   返回值以摄氏度为单位。

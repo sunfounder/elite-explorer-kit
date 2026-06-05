@@ -1,39 +1,25 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _cpn_joystick:
 
-Joystick Module
-=======================
+摇杆模块
+======================
 
 .. image:: img/joystick_pic.png
     :align: center
     :width: 600
 
-The basic idea of a joystick is to translate the movement of a stick into electronic information that a computer can process.
+摇杆的基本思想是将摇杆的运动转换为计算机可以处理的电子信息。
 
-In order to communicate a full range of motion to the computer, a joystick needs to measure the stick’s position on two axes – the X-axis (left to right) and the Y-axis (up and down). Just as in basic geometry, the X-Y coordinates pinpoint the stick’s position exactly.
+为了向计算机传达完整的运动范围，摇杆需要测量摇杆在两个轴上的位置——X轴（左到右）和Y轴（上到下）。就像基础几何学中一样，X-Y坐标精确地定位了摇杆的位置。
 
-To determine the location of the stick, the joystick control system simply monitors the position of each shaft. The conventional analog joystick design does this with two potentiometers, or variable resistors.
+为了确定摇杆的位置，摇杆控制系统只需监测每个轴的位置。传统的模拟摇杆设计使用两个电位器（即可变电阻器）来实现这一点。
 
-The joystick also has a digital input that is actuated when the joystick is pressed down.
+摇杆还有一个数字输入，当摇杆被按下时触发。
 
 .. image:: img/joystick318.png
     :align: center
     :width: 600
-	
-**Example**
 
-* :ref:`basic_joystick` (Basic Project)
-* :ref:`fun_snake` (Fun Project)
+**示例**
+
+* :ref:`basic_joystick` （基础项目）
+* :ref:`fun_snake` （趣味项目）

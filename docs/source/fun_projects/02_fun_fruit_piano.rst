@@ -1,20 +1,6 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _fun_fruit_piano:
 
-Fruit Piano
+水果钢琴
 ========================
 
 .. raw:: html
@@ -24,33 +10,33 @@ Fruit Piano
       Your browser does not support the video tag.
    </video>
 
-This project is a simple fruit piano that reads input from an MPR121 touch sensor and plays music through a DAC. In other words, we've turned fruits into a keyboard, allowing you to play music by simply touching them.
+这个项目是一个简单的水果钢琴，它通过 MPR121 触摸传感器读取输入，并通过 DAC 播放音乐。换句话说，我们把水果变成了键盘，只需触摸它们就能演奏音乐。
 
-**Required Components**
+**所需元件**
 
-In this project, we need the following components. 
+在这个项目中，我们需要以下元件。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+购买整套套件会更方便，以下是链接：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - Elite Explorer Kit
+    *   - 名称
+        - 套件所含项目
+        - 链接
+    *   - Elite Explorer 套件
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+您也可以从下面的链接单独购买。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - 元件介绍
+        - 购买链接
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -66,7 +52,7 @@ You can also buy them separately from the links below.
         - \-
 
 
-**Wiring**
+**接线**
 
 .. image:: img/02_fruit_piano_bb.png
     :width: 80%
@@ -77,50 +63,50 @@ You can also buy them separately from the links below.
    <br/>
 
 
-**Schematic**
+**原理图**
 
 .. image:: img/02_fruit_piano_schematic.png
    :width: 100%
 
-**Code**
+**代码**
 
 .. note::
 
-    * You can open the file ``02_fruit_piano.ino`` under the path of ``elite-explorer-kit-main\fun_project\02_fruit_piano`` directly.
-    * Or copy this code into Arduino IDE.
+    * 您可以直接打开路径 ``elite-explorer-kit-main\fun_project\02_fruit_piano`` 下的 ``02_fruit_piano.ino`` 文件。
+    * 或者将这段代码复制到 Arduino IDE 中。
 
 .. note::
-   To install the library, use the Arduino Library Manager and search for **"Adafruit MPR121"** and install it.
+   要安装库，请使用 Arduino 库管理器搜索 **"Adafruit MPR121"** 并安装。
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/e677c06a-7af1-4846-a507-dd69c0c50aae/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-**How it works?**
+**工作原理**
 
-Here's a step-by-step explanation of the code:
+以下是代码的逐步说明：
 
-1. Library and Object Initialization:
+1. 库和对象初始化：
 
-   Import the necessary libraries: ``Wire`` library (for I2C communication), ``Adafruit_MPR121`` library (for driving the MPR121), ``analogWave`` library (for generating analog waveforms), and ``pitches.h`` (which defines the frequencies of notes).
-   Create instances of ``Adafruit_MPR121`` and ``analogWave`` objects.
-   Define a notes array to store the note corresponding to each touch channel.
+   导入必要的库：``Wire`` 库（用于 I2C 通信）、``Adafruit_MPR121`` 库（用于驱动 MPR121）、``analogWave`` 库（用于生成模拟波形）和 ``pitches.h``（定义音符的频率）。
+   创建 ``Adafruit_MPR121`` 和 ``analogWave`` 对象的实例。
+   定义一个音符数组，用于存储每个触摸通道对应的音符。
 
-2. ``setup()``:
+2. ``setup()``：
 
-   Initialize Serial communication and wait for it to start.
-   Check and initialize the MPR121; if not found, print an error message on the serial monitor and halt execution.
-   Initialize the ``analogWave`` object and set the initial sine wave frequency to 10Hz.
+   初始化串行通信并等待其启动。
+   检查并初始化 MPR121；如果未找到，则在串口监视器上打印错误信息并停止执行。
+   初始化 ``analogWave`` 对象，并将初始正弦波频率设置为 10Hz。
 
-3. ``loop()``:
+3. ``loop()``：
 
-   Read the currently touched channels of the MPR121.
-   Iterate through all channels, check which one is touched, and play the corresponding note.
-   Add a small delay between each iteration.
+   读取 MPR121 当前被触摸的通道。
+   遍历所有通道，检查哪个被触摸，并播放相应的音符。
+   在每次迭代之间添加一个小延迟。
 
-4. Play Note ``playNote()``:
+4. 播放音符 ``playNote()``：
 
-   The ``playNote`` function takes a ``note`` parameter and sets the DAC frequency to play the corresponding note.
-   Delay for a period to play the note.
-   Stop playing the note.
+   ``playNote`` 函数接收一个 ``note`` 参数，并设置 DAC 频率以播放相应的音符。
+   延迟一段时间以播放音符。
+   停止播放音符。

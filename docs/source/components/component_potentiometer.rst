@@ -1,59 +1,45 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _cpn_potentiometer:
 
-Potentiometer
+电位器
 ===============
 
 .. image:: img/potentiometer.png
     :align: center
     :width: 150
 
-Potentiometer is also a resistance component with 3 terminals and its resistance value can be adjusted according to some regular variation. 
+电位器也是一种具有3个端子的电阻元件，其电阻值可以按照某种规律进行调节。
 
-Potentiometers come in various shapes, sizes, and values, but they all have the following things in common:
+电位器有各种形状、尺寸和阻值，但它们都具有以下共同点：
 
-* They have three terminals (or connection points).
-* They have a knob, screw, or slider that can be moved to vary the resistance between the middle terminal and either one of the outer terminals.
-* The resistance between the middle terminal and either one of the outer terminals varies from 0 Ω to the maximum resistance of the pot as the knob, screw, or slider is moved.
+* 它们有三个端子（或连接点）。
+* 它们有一个旋钮、螺丝或滑块，可以移动以改变中间端子与任一外侧端子之间的电阻。
+* 随着旋钮、螺丝或滑块的移动，中间端子与任一外侧端子之间的电阻从0Ω变化到电位器的最大电阻值。
 
-Here is the circuit symbol of potentiometer. 
+以下是电位器的电路符号。
 
 .. image:: img/potentiometer_symbol.png
     :align: center
     :width: 400
 
 
-The functions of the potentiometer in the circuit are as follows: 
+电位器在电路中的功能如下：
 
-#. Serving as a voltage divider
+#. 用作分压器
 
-    Potentiometer is a continuously adjustable resistor. When you adjust the shaft or sliding handle of the potentiometer, the movable contact will slide on the resistor.  At this point, a voltage can be output depending on the voltage applied onto the potentiometer and the angle the movable arm has rotated to or the travel it has made. 
+    电位器是一种连续可调的电阻器。当您调节电位器的转轴或滑动柄时，可动触点会在电阻体上滑动。此时，可以根据施加在电位器上的电压以及可动臂旋转的角度或移动的行程来输出电压。
 
-#. Serving as a rheostat
+#. 用作变阻器
 
-    When the potentiometer is used as a rheostat, connect the middle pin and one of the other 2 pins in the circuit. Thus you can get a smoothly and continuously changed resistance value within the travel of the moving contact. 
+    当电位器用作变阻器时，将中间引脚和另外两个引脚之一接入电路。这样，就可以在可动触点的行程范围内获得平滑连续变化的电阻值。
 
-#. Serving as a current controller
+#. 用作电流控制器
 
-    When the potentiometer acts as a current controller, the sliding contact terminal must be connected as one of the output terminals.
+    当电位器用作电流控制器时，滑动触点端子必须连接为输出端子之一。
 
-If you want to know more about potentiometer, refer to: |link_potentiometer_wiki|.
+如果您想了解更多关于电位器的信息，请参阅：|link_potentiometer_wiki| 。
 
-**Example**
+**示例**
 
-* :ref:`basic_potentiometer` (Basic Project)
-* :ref:`fun_hue` (Fun Project)
+* :ref:`basic_potentiometer` （基础项目）
+* :ref:`fun_hue` （趣味项目）
 

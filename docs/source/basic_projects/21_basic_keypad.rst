@@ -1,55 +1,41 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _basic_keypad:
 
-Keypad
+键盘
 ==========================
 
 .. https://docs.sunfounder.com/projects/vincent-kit-de/en/latest/arduino/2.19_keypad.html#ar-keypad
 
-Overview
+概述
 -------------
 
-In this lesson, you will learn to use Keypad. Keypad can be applied into various kinds of devices, including mobile phone, fax machine, microwave oven and so on. It is commonly used in user input.
+在本课中，您将学习使用键盘。键盘可应用于各种设备，包括手机、传真机、微波炉等。它常用于用户输入。
 
-Required Components
+所需元件
 -------------------------
 
-In this project, we need the following components. 
+本项目中，我们需要以下元件。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+购买整套套件会更加方便，以下是链接：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - Elite Explorer Kit
+    *   - 名称
+        - 套件所含项目
+        - 链接
+    *   - Elite Explorer 套件
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+您也可以从以下链接单独购买。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - 元件介绍
+        - 购买链接
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -58,40 +44,40 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_keypad`
         - |link_keypad_buy|
 
-Wiring
+接线
 ----------------------
 
 .. image:: img/21-keypad_bb.png
     :align: center
 
-Schematic Diagram
+原理图
 ----------------------
 
 .. image:: img/21_keypad_schematic.png
    :align: center
    :width: 70%
 
-Code
+代码
 -----------
 
 
 .. note::
 
-    * You can open the file ``21-keypad.ino`` under the path of ``elite-explorer-kit-main\basic_project\21-keypad`` directly.
-    * To install the library, use the Arduino Library Manager and search for **"Adafruit Keypad"** and install it. 
+    * 您可以直接打开路径 ``elite-explorer-kit-main\basic_project\21-keypad`` 下的 ``21-keypad.ino`` 文件。
+    * 要安装库，请使用 Arduino 库管理器搜索 **"Adafruit Keypad"** 并安装。
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/25fd4116-92d4-4ee4-b3ba-6707f4334629/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After uploading the codes to the UNO board, on the serial monitor, you can see the value of the key currently pressed on the Keypad.
+将代码上传到 UNO 板后，在串口监视器中，您可以看到键盘上当前按下的键的值。
 
-Code Analysis
+代码分析
 -------------------
 
-1. Including the Library
+1. 包含库
 
-   We start by including the ``Adafruit_Keypad`` library, which allows us to easily interface with the keypad.
+   首先包含 ``Adafruit_Keypad`` 库，这使我们能够轻松地与键盘交互。
 
    .. code-block:: arduino
 
@@ -99,10 +85,10 @@ Code Analysis
 
    .. note::
 
-      * To install the library, use the Arduino Library Manager and search for **"Adafruit Keypad"** and install it. 
+      * 要安装库，请使用 Arduino 库管理器搜索 **"Adafruit Keypad"** 并安装。
 
 
-2. Keypad Configuration
+2. 键盘配置
 
    .. code-block:: arduino
 
@@ -117,26 +103,26 @@ Code Analysis
      byte rowPins[ROWS] = { 2, 3, 4, 5 };
      byte colPins[COLS] = { 8, 9, 10, 11 };
 
-   - The ``ROWS`` and ``COLS`` constants define the dimensions of the keypad. 
-   - ``keys`` is a 2D array storing the label for each button on the keypad.
-   - ``rowPins`` and ``colPins`` are arrays that store the Arduino pins connected to the keypad rows and columns.
+   - ``ROWS`` 和 ``COLS`` 常量定义了键盘的尺寸。
+   - ``keys`` 是一个二维数组，存储键盘上每个按钮的标签。
+   - ``rowPins`` 和 ``colPins`` 是存储连接到键盘行和列的 Arduino 引脚的数组。
 
    .. raw:: html
 
       <br/>
 
 
-3. Initialize Keypad
+3. 初始化键盘
 
-   Create an instance of ``Adafruit_Keypad`` called ``myKeypad`` and initialize it.
+   创建一个名为 ``myKeypad`` 的 ``Adafruit_Keypad`` 实例并初始化它。
 
    .. code-block:: arduino
 
      Adafruit_Keypad myKeypad = Adafruit_Keypad(makeKeymap(keys), rowPins, colPins, ROWS, COLS);
 
-4. setup() Function
+4. setup() 函数
 
-   Initialize Serial communication and the custom keypad.
+   初始化串口通信和自定义键盘。
 
    .. code-block:: arduino
 
@@ -145,9 +131,9 @@ Code Analysis
        myKeypad.begin();
      }
 
-5. Main Loop
+5. 主循环
 
-   Check for key events and display them in the Serial Monitor.
+   检查按键事件并在串口监视器中显示它们。
 
    .. code-block:: arduino
 
@@ -161,4 +147,3 @@ Code Analysis
        }
        delay(10);
      }
-

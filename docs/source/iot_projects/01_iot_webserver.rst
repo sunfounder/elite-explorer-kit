@@ -1,18 +1,4 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
-Simple Webserver
+简单网页服务器
 ===========================
 
 .. raw:: html
@@ -22,58 +8,58 @@ Simple Webserver
       Your browser does not support the video tag.
    </video>
 
-This simple Arduino program is designed to create a basic WiFi web server, allowing users to control the on and off state of an LED on the Arduino board via a web browser.
+这个简单的 Arduino 程序旨在创建一个基本的 WiFi 网页服务器，允许用户通过网络浏览器控制 Arduino 板上 LED 的开关状态。
 
-**Run the Code**
-
-.. note::
-
-    * You can open the file ``01_simple_webserver.ino`` under the path of ``elite-explorer-kit-main\iot_project\01_simple_webserver`` directly.
-    * Or copy this code into Arduino IDE.
+**运行代码**
 
 .. note::
-    In the code, SSID and password are stored in ``arduino_secrets.h``. Before uploading this example, you need to modify them with your own WiFi credentials. Additionally, for security purposes, ensure that this information is kept confidential when sharing or storing the code.
+
+    * 您可以直接打开路径 ``elite-explorer-kit-main\iot_project\01_simple_webserver`` 下的 ``01_simple_webserver.ino`` 文件。
+    * 或者将这段代码复制到 Arduino IDE 中。
+
+.. note::
+    在代码中，SSID 和密码存储在 ``arduino_secrets.h`` 中。上传此示例之前，您需要使用自己的 WiFi 凭据修改它们。此外，出于安全目的，在共享或存储代码时请确保此信息保密。
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/7ed8f58d-2ed8-4dc9-82cb-7e49b6977ea1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
-After uploading the code, you will be able to see the IP address in the serial monitor. You can enter this IP address in your web browser to turn the onboard LED on/off.
+上传代码后，您将在串口监视器中看到 IP 地址。您可以在网络浏览器中输入此 IP 地址来打开/关闭板载 LED。
 
 .. image:: img/01_webserver.png
 
-**How it works?**
+**工作原理**
 
-Here is an explanation of the code:
+以下是代码的说明：
 
-1. Header Files and Global Variables:
+1. 头文件和全局变量：
 
-   * ``#include "WiFiS3.h"``: This includes the WiFi library for connecting and managing WiFi. This library is included with Arduino UNO R4 Core, so no additional installation is required.
-   * ``#include "arduino_secrets.h"``: This includes sensitive WiFi connection data such as SSID and password.
-   * ``ssid``, ``pass``, ``keyIndex``: These are network credentials used for WiFi connection.
-   * ``led``, ``status``, ``server``: These define the LED pin, WiFi status, and web server object.
+   * ``#include "WiFiS3.h"``：这包含了用于连接和管理 WiFi 的 WiFi 库。该库包含在 Arduino UNO R4 Core 中，因此无需额外安装。
+   * ``#include "arduino_secrets.h"``：这包含了敏感的 WiFi 连接数据，如 SSID 和密码。
+   * ``ssid``、``pass``、``keyIndex``：这些是用于 WiFi 连接的网络凭据。
+   * ``led``、``status``、``server``：这些定义了 LED 引脚、WiFi 状态和网页服务器对象。
 
-2. ``setup()``:
+2. ``setup()``：
 
-   * Begin serial communication.
-   * Check for the presence of the WiFi module.
-   * Check if the WiFi module's firmware version is up-to-date.
-   * Attempt to connect to the WiFi network.
-   * Start the web server.
-   * Print the WiFi status.
+   * 开始串行通信。
+   * 检查 WiFi 模块是否存在。
+   * 检查 WiFi 模块的固件版本是否为最新。
+   * 尝试连接到 WiFi 网络。
+   * 启动网页服务器。
+   * 打印 WiFi 状态。
 
-3. ``loop()``:
+3. ``loop()``：
 
-   * Check for new web client connections.
-   * If there are client connections, read their incoming HTTP requests.
-   * Based on the requests, you can control the on/off state of the LED. For example, if the request is "GET /H," it will turn on the LED; if it's "GET /L," it will turn off the LED.
-   * Send an HTTP response to instruct the user on how to control the LED.
-   * Disconnect the client.
+   * 检查新的网页客户端连接。
+   * 如果有客户端连接，读取其传入的 HTTP 请求。
+   * 根据请求，您可以控制 LED 的开关状态。例如，如果请求是 "GET /H"，则打开 LED；如果是 "GET /L"，则关闭 LED。
+   * 发送 HTTP 响应以指导用户如何控制 LED。
+   * 断开客户端连接。
 
-4. ``printWifiStatus()``:
+4. ``printWifiStatus()``：
 
-   * Print the connected WiFi SSID.
-   * Print the IP address of the Arduino board.
-   * Print the received signal strength.
-   * Explain how to view this page in a web browser.
+   * 打印已连接的 WiFi SSID。
+   * 打印 Arduino 板的 IP 地址。
+   * 打印接收到的信号强度。
+   * 说明如何在网络浏览器中查看此页面。

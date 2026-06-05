@@ -1,38 +1,25 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
-LESSON 12: Read Analog Voltages on the Arduino
+课程 12：在 Arduino 上读取模拟电压
 ================================================
 
-This lesson explores how to read analog voltages using the Arduino, expanding upon previous lessons on digital and analog outputs. Here’s a brief overview of what you will learn:
+本课程探讨如何使用 Arduino 读取模拟电压，扩展了之前关于数字和模拟输出的课程内容。以下是您将学习的内容的简要概述：
 
-1. **Introduction to Analog Reading**: Understand the basic principles of reading analog voltages with the Arduino, emphasizing the importance of not exceeding the 5-volt input limit to avoid damage.
-2. **Using a Potentiometer**: Learn how to use a potentiometer to create a variable voltage source that can be read by the Arduino, demonstrating the setup through a practical circuit-building exercise.
-3. **Practical Application and Circuit Building**: Follow step-by-step instructions to build a circuit that includes a potentiometer and how to connect it to the Arduino for reading voltage variations.
-4. **Coding for Analog Reading**: Dive into the code required to read and interpret analog voltages, including setting up the Arduino sketch to display these voltages.
-5. **Homework Assignment**: Solidify your learning by adjusting the potentiometer to change the LED brightness linked to the voltage read by the Arduino, reinforcing the concepts of analog input and output.
+1. **模拟读取简介** ：了解使用 Arduino 读取模拟电压的基本原理，强调不要超过 5 伏输入限制以避免损坏的重要性。
+2. **使用电位器** ：学习如何使用电位器创建一个可由 Arduino 读取的可变电压源，通过实际的电路搭建练习演示设置方法。
+3. **实际应用和电路搭建** ：按照逐步说明，搭建一个包含电位器的电路，并将其连接到 Arduino 以读取电压变化。
+4. **模拟读取编程** ：深入探讨读取和解释模拟电压所需的代码，包括设置 Arduino 项目以显示这些电压。
+5. **课后作业** ：通过调整电位器来改变与 Arduino 读取电压相关联的 LED 亮度，巩固你对模拟输入和输出概念的理解。
 
 
-**Video**
+
+**视频**
 
 .. raw:: html
 
-    <iframe width="100%" 
+    <iframe width="100%"
         style="aspect-ratio: 16/9; max-width: 100%;"
-        src="https://www.youtube.com/embed/Vp5u_8KAzFw?si=o9Q1tTC1X1B9teef" 
-        title="YouTube video player" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        src="https://www.youtube.com/embed/Vp5u_8KAzFw?si=o9Q1tTC1X1B9teef"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen>
     </iframe>

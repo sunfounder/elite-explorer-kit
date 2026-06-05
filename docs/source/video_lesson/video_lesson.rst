@@ -1,29 +1,15 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
-Arduino Video Lessons for Absolute Beginners
+Arduino 视频课程 - 面向绝对初学者
 ======================================================
 
-Delve into the world of Arduino with our comprehensive video course tailored for absolute beginners. This series of 32 detailed lessons covers everything from foundational concepts to advanced applications, providing a step-by-step guide through the essentials of electronics and programming. Whether you're a student, hobbyist, or aspiring enthusiast, this course empowers you to embark on engaging Arduino projects for personal interests, academic pursuits, or career ventures.
+通过我们专为绝对初学者设计的综合视频课程，深入 Arduino 的世界。本系列包含 32 节详细课程，涵盖从基础概念到高级应用的所有内容，为电子和编程的要点提供逐步指导。无论你是学生、爱好者还是有抱负的发烧友，本课程都能让你开启引人入胜的 Arduino 项目，用于个人兴趣、学术追求或职业发展。
 
-By the course's conclusion, you'll have developed a solid understanding of both theory and practical application in Arduino electronics and programming. Equipped with essential skills, you'll confidently tackle more complex projects and continue your exploration in this dynamic field. Enroll today and embark on your Arduino journey to unleash the potential of DIY electronics!
+课程结束时，你将建立起对 Arduino 电子和编程在理论与实践方面的扎实理解。掌握了基本技能后，你将能够自信地应对更复杂的项目，并继续在这个充满活力的领域探索。立即加入，开启你的 Arduino 之旅，释放 DIY 电子的无限潜力！
 
-`All New Arduino R4 WiFi LESSONS for Absolute Beginners - YouTube Playlist <https://youtube.com/playlist?list=PLGs0VKk2DiYyn0wN335MXpbi3PRJTMmex&feature=shared>`_
+`全新 Arduino R4 WiFi 初学者课程 - YouTube 播放列表 <https://youtube.com/playlist?list=PLGs0VKk2DiYyn0wN335MXpbi3PRJTMmex&feature=shared>`_
 
-    
 
-**Catalog**
+
+**目录**
 
 .. toctree::
     :maxdepth: 1
@@ -59,4 +45,4 @@ By the course's conclusion, you'll have developed a solid understanding of both 
     lesson29
     lesson30
     lesson31
-    lesson32    
+    lesson32

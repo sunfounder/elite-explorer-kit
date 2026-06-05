@@ -1,38 +1,24 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
-LESSON 10: Writing Analog Voltages With the Arduino
+课程 10：使用 Arduino 写入模拟电压
 =====================================================
 
-This lesson teaches how to control the brightness of an LED by writing analog voltages using the Arduino. Here’s a brief overview of what you will learn:
+本课程教授如何通过使用 Arduino 写入模拟电压来控制 LED 的亮度。以下是您将学习的内容的简要概述：
 
-1. **Introduction to Analog Output**: Understand the basics of analog outputs compared to digital, learning why and how they allow for varying levels of power output rather than just on/off states.
-2. **Setting up the Arduino**: Review how to set up the Arduino IDE and configure the board for analog output, specifically focusing on using PWM pins.
-3. **Building the Circuit**: Instructions on constructing a circuit with an LED and resistor, emphasizing the importance of connecting to PWM-capable pins for analog functionality.
-4. **Programming for Variable Brightness**: Writing code to adjust the LED's brightness using the `analogWrite()` function, demonstrating the effect of different values on LED brightness.
-5. **Homework Assignment**: Develop a program that incrementally changes the LED's brightness from dimmest to brightest and then back to dimmest, reinforcing the lesson's concepts through a dynamic display.
+1. **模拟输出简介** ：了解模拟输出与数字输出的基本区别，了解为什么模拟输出允许不同级别的功率输出，而不仅仅是开/关状态。
+2. **设置 Arduino** ：回顾如何设置 Arduino IDE 并配置开发板以进行模拟输出，特别关注使用 PWM 引脚。
+3. **搭建电路** ：构建包含 LED 和电阻的电路的指导，强调连接到支持 PWM 的引脚对于模拟功能的重要性。
+4. **可调亮度编程** ：使用 `analogWrite()` 函数编写调整 LED 亮度的代码，演示不同值对 LED 亮度的影响。
+5. **课后作业** ：开发一个程序，使 LED 的亮度从最暗逐渐变为最亮，然后再变回最暗，通过动态演示巩固课程概念。
 
 
-**Video**
+**视频**
 
 .. raw:: html
 
-    <iframe width="100%" 
+    <iframe width="100%"
         style="aspect-ratio: 16/9; max-width: 100%;"
-        src="https://www.youtube.com/embed/lTzOvBYNo3U?si=o9Q1tTC1X1B9teef" 
-        title="YouTube video player" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        src="https://www.youtube.com/embed/lTzOvBYNo3U?si=o9Q1tTC1X1B9teef"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen>
     </iframe>

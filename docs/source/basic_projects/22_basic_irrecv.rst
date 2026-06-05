@@ -1,20 +1,6 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _basic_irrecv:
 
-Infrared Receiver
+红外接收器
 ==========================
 
 .. https://docs.sunfounder.com/projects/uno-mega-kit/en/latest/uno/infrared_Receiver_uno.html#receive-uno
@@ -22,37 +8,37 @@ Infrared Receiver
 .. https://docs.sunfounder.com/projects/r4-basic-kit/en/latest/projects/infrared_Receiver_uno.html#receive-uno
 
 
-Overview
+概述
 ------------------
 
-An infrared-receiver is a component that receives infrared signals and can independently receive infrared ray and output signals compatible with TTL level. It's similar with a normal plastic-packaged transistor in size and it is suitable for all kinds of infrared remote control and infrared transmission.
+红外接收器是一种接收红外信号的元件，可以独立接收红外线并输出与 TTL 电平兼容的信号。其大小与普通塑料封装晶体管相似，适用于各种红外遥控和红外传输。
 
-Required Components
+所需元件
 -------------------------
 
-In this project, we need the following components. 
+本项目中，我们需要以下元件。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+购买整套套件会更加方便，以下是链接：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - Elite Explorer Kit
+    *   - 名称
+        - 套件所含项目
+        - 链接
+    *   - Elite Explorer 套件
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+您也可以从以下链接单独购买。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - 元件介绍
+        - 购买链接
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -66,7 +52,8 @@ You can also buy them separately from the links below.
         - |link_receiver_buy|
 
 
-Wiring
+
+接线
 ----------------------
 
 .. image:: img/22-ir_receiver_bb.png
@@ -74,82 +61,82 @@ Wiring
     :width: 80%
 
 
-Schematic Diagram
+原理图
 ---------------------
 
 .. image:: img/22_irrecv_schematic.png
     :align: center
     :width: 50%
 
-Code
+代码
 ---------------
 
 .. note::
 
-    * You can open the file ``22-ir_receiver.ino`` under the path of ``elite-explorer-kit-main\basic_project\22-ir_receiver`` directly.
-    * Or copy this code into Arduino IDE.
+    * 您可以直接打开路径 ``elite-explorer-kit-main\basic_project\22-ir_receiver`` 下的 ``22-ir_receiver.ino`` 文件。
+    * 或者将以下代码复制到 Arduino IDE 中。
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/92e1cb75-cda1-4fc7-9680-28e28df8dccc/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-* The ``IRremote`` library is used here, you can install it from the **Library Manager**.
+* 这里使用 ``IRremote`` 库，您可以从 **库管理器** 安装它。
 
     .. image:: img/22_irrecv_lib.png
         :align: center
 
 .. Note::
 
-    * There is a transparent plastic piece at the back of the remote control to cut off the power and pull it out before you use the remote control.
+    * 遥控器背面有一个透明塑料片用于切断电源，使用遥控器前请将其拔出。
 
 
-Code Analysis
+代码分析
 ---------------------
 
-This code is designed to work with an infrared (IR) remote control using the ``IRremote`` library. Here's the breakdown:
+此代码设计用于与红外（IR）遥控器配合使用，采用 ``IRremote`` 库。以下是分析：
 
-#. Including the library and defining constants. First, the IRremote library is included, and the pin number for the IR receiver is defined as 2.
+#. 包含库并定义常量。首先包含 IRremote 库，并将红外接收器的引脚号定义为 2。
 
    .. code-block:: cpp
- 
+
      #include <IRremote.h>
      const int IR_RECEIVE_PIN = 2;
 
 
-#. Initializes serial communication at a baud rate of 9600. Initializes the IR receiver on the specified pin (``IR_RECEIVE_PIN``) and enables LED feedback (if applicable).
+#. 以 9600 波特率初始化串口通信。在指定引脚（``IR_RECEIVE_PIN``）上初始化红外接收器，并启用 LED 反馈（如果适用）。
 
    .. code-block:: arduino
 
        void setup() {
-           Serial.begin(9600);                                     // Start serial communication at 9600 baud rate
-           IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK);  // Start the IR receiver
+           Serial.begin(9600);                                     // 开始串口通信，波特率为 9600
+           IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK);  // 启动红外接收器
        }
 
-#. The loop runs continuously to process incoming IR remote signals.
+#. 循环持续运行以处理传入的红外遥控信号。
 
    .. code-block:: arduino
 
       void loop() {
-        // Check if there is any incoming IR signal
+        // 检查是否有任何传入的红外信号
         if (IrReceiver.decode()) {
-          // IrReceiver.printIRResultShort(&Serial);                 // Print the received data in one line
-          // Serial.println(IrReceiver.decodedIRData.command, HEX);  // Print the command in hexadecimal format
-          Serial.println(decodeKeyValue(IrReceiver.decodedIRData.command));  // Map and print the decoded IR signal to corresponding key value
-      
-          IrReceiver.resume();  // Enable receiving of the next value
+          // IrReceiver.printIRResultShort(&Serial);                 // 打印接收到的数据（单行）
+          // Serial.println(IrReceiver.decodedIRData.command, HEX);  // 以十六进制格式打印命令
+          Serial.println(decodeKeyValue(IrReceiver.decodedIRData.command));  // 映射并打印解码后的红外信号对应的键值
+
+          IrReceiver.resume();  // 启用接收下一个值
         }
       }
-   
-   * Checks if an IR signal is received and successfully decoded.
-   * Decodes the IR command and stores it in ``decodedValue`` using a custom ``decodeKeyValue()`` function.
-   * Prints the decoded IR value to the serial monitor.
-   * Resumes IR signal reception for the next signal.
+
+   * 检查是否接收并成功解码了红外信号。
+   * 使用自定义 ``decodeKeyValue()`` 函数解码红外命令并存储在 ``decodedValue`` 中。
+   * 将解码后的红外值打印到串口监视器。
+   * 恢复红外信号接收以准备接收下一个信号。
 
    .. raw:: html
 
         <br/>
 
-#. Helper function to map received IR signals to corresponding keys
+#. 将接收到的红外信号映射到相应按键的辅助函数
 
    .. image:: img/22_irrecv_key.png
       :align: center
@@ -157,9 +144,9 @@ This code is designed to work with an infrared (IR) remote control using the ``I
 
    .. code-block:: arduino
 
-      // Function to map received IR signals to corresponding keys
+      // 将接收到的红外信号映射到相应按键的函数
       String decodeKeyValue(long result) {
-        // Each case corresponds to a specific IR command
+        // 每个 case 对应一个特定的红外命令
         switch (result) {
           case 0x16:
             return "0";

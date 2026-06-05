@@ -1,66 +1,52 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _new_dac:
 
-Digital-to-Analog Converter (DAC)
+数模转换器 (DAC)
 ========================================
 
-The Arduino Uno R4 WiFi comes equipped with a built-in DAC (Digital-to-Analog Converter) feature. A DAC is crucial for converting digital signals into their analog counterparts, a functionality that's particularly vital in applications like audio processing, analog signal generation, and other scenarios requiring precise analog output.
+Arduino Uno R4 WiFi 配备了内置 DAC（数模转换器）功能。DAC 对于将数字信号转换为其模拟对应物至关重要，这一功能在音频处理、模拟信号生成以及其他需要精确模拟输出的应用中尤为重要。
 
-The DAC on the Uno R4 WiFi boasts up to 12-bit resolution, delivering true analog output capabilities that outperform those of PWM pins.
+Uno R4 WiFi 上的 DAC 拥有高达 12 位的分辨率，提供超越 PWM 引脚的真实模拟输出能力。
 
 .. image:: img/07_dac.png
   :width: 70%
 
-Play Music with DAC
+使用 DAC 播放音乐
 ++++++++++++++++++++
 
-**Circuit Diagram**
+**电路图**
 
 .. image:: img/07_dac_bb.png
   :width: 100%
   :align: center
 
-**Upload the Code**
+**上传代码**
 
-Open the ``07-dac.ino`` file located at ``elite-explorer-kit-main\r4_new_feature\07-dac``, or paste the following code into your Arduino IDE.
+打开位于 ``elite-explorer-kit-main\r4_new_feature\07-dac`` 的 ``07-dac.ino`` 文件，或将以下代码粘贴到您的 Arduino IDE 中。
 
-.. note:: 
-    Please place the ``pitches.h`` file in the same directory as the code to ensure proper functioning.
+.. note::
+    请将 ``pitches.h`` 文件放在与代码相同的目录中，以确保正常运行。
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/93e0379e-1d2d-4d9c-a603-42b3335e8e05/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-This project leverages the Arduino and DAC (Digital-to-Analog Converter) to play the iconic Super Mario Bros theme song. It utilizes a library called ``analogWave`` for sine wave generation and another library, ``pitches.h``, for defining note frequencies.
+该项目利用 Arduino 和 DAC（数模转换器）播放标志性的超级马里奥兄弟主题曲。它使用一个名为 ``analogWave`` 的库来生成正弦波，以及另一个库 ``pitches.h`` 来定义音符频率。
 
-- ``melody[]``: This array contains the notes to be played along with their durations. Notes are represented by predefined pitches (e.g., ``NOTE_E5``), and durations are represented in terms of beats (e.g., 4 signifies a quarter note). You can try composing your own melody by changing the notes and durations in the melody[] array. If you are interested, there is a repository on GitHub (|link_arduino_songs|) that provides Arduino code for playing different songs. Although their approach may be different from this project, you can refer to their notes and durations. (Simply replace the ``melody[]`` in the corresponding track with the code in this project.)
+- ``melody[]``：此数组包含要播放的音符及其持续时间。音符由预定义音高（例如 ``NOTE_E5``）表示，持续时间以节拍为单位表示（例如，4 表示四分音符）。您可以通过更改 melody[] 数组中的音符和持续时间来尝试编写自己的旋律。如果您有兴趣，GitHub 上有一个仓库（|link_arduino_songs| ），其中提供了用于播放不同歌曲的 Arduino 代码。尽管他们的方法可能与此项目不同，但您可以参考他们的音符和持续时间。（只需将相应曲目中的 ``melody[]`` 替换为此项目中的代码。）
 
-- ``tempo`` : The tempo for this project is set at 200 BPM (Beats Per Minute), which is used to calculate the duration of each note. Modifying this value will change the speed of the song's performance.
+- ``tempo``：此项目的速度设置为 200 BPM（每分钟节拍数），用于计算每个音符的持续时间。修改此值将改变歌曲的演奏速度。
 
-- **Sine Wave Generator**: The ``analogWave`` library's ``sine`` function initializes a 10 Hz sine wave generator, which is used for outputting the notes via DAC.
+- **正弦波发生器** ：``analogWave`` 库的 ``sine`` 函数初始化一个 10 Hz 的正弦波发生器，用于通过 DAC 输出音符。
 
-- **Note Duration**: Based on the set tempo and the beat count for each note, the duration for each note is calculated.
+- **音符持续时间** ：根据设置的速度和每个音符的节拍数，计算每个音符的持续时间。
 
-- **Play and Pause**: Each note plays for 85% of its calculated duration, followed by a 15% pause to distinguish between notes.
+- **播放和暂停** ：每个音符播放其计算持续时间的 85%，然后暂停 15% 以区分音符。
 
-- **Loop**: Upon completing the melody, the code automatically resets and starts playing again.
+- **循环** ：完成旋律后，代码自动重置并重新开始播放。
 
-This is an example that demonstrates how to use Arduino and external hardware (DAC) to generate music. It also shows how to use arrays and loops to simplify the logic of music playback.
+这是一个演示如何使用 Arduino 和外部硬件（DAC）生成音乐的示例。它还展示了如何使用数组和循环来简化音乐播放的逻辑。
 
 
-**Reference**
+**参考**
 
 - |link_r4_dac|

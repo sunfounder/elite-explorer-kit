@@ -1,46 +1,32 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _cpn_oled:
 
-OLED Display Module
+OLED显示模块
 ==========================
 
 .. image:: img/oled.png
     :width: 300
     :align: center
 
-Introduction
+概述
 ---------------------------
-An OLED (Organic Light-Emitting Diode) display module is a device that can display text, graphics and images on a thin and flexible screen using organic materials that emit light when electric current is applied.
+OLED（有机发光二极管）显示模块是一种可以在薄而灵活的屏幕上显示文本、图形和图像的设备，使用在电流通过时会发光的有机材料。
 
-The main advantage of an OLED Display is that it emits its own light and doesn’t need another source of backlight. Due to this, OLED Displays often have better contrast, brightness and viewing angles when compared to LCD displays.
+OLED显示的主要优点是其自身发光，不需要额外的背光源。因此，与LCD显示器相比，OLED显示器通常具有更好的对比度、亮度和可视角度。
 
-Another important feature of OLED Displays is deep black levels. Since each pixel emits its own light in an OLED Display, to produce black color, the individual pixel can be turned OFF.
+OLED显示器的另一个重要特性是深黑色表现。由于OLED显示器中每个像素自身发光，要产生黑色，可以关闭单个像素。
 
-Due to lower power consumption (only pixels which are lit up draw current), OLED displays are also popular in battery operated devices like Smart Watches, Health Trackers and other wearables.
+由于功耗较低（只有点亮的像素才消耗电流），OLED显示器在智能手表、健康追踪器和其他可穿戴设备等电池供电设备中也很受欢迎。
 
-Principle
+工作原理
 ---------------------------
-An OLED display module consists of an OLED panel and an OLED driver chip that is mounted on the back of the module. The OLED panel is made of many tiny pixels that can produce different colors of light. Each pixel consists of several layers of organic materials sandwiched between two electrodes (anode and cathode). When electric current flows through the electrodes, the organic materials emit light of different wavelengths depending on their composition.
+OLED显示模块由OLED面板和安装在模块背面的OLED驱动芯片组成。OLED面板由许多微小的像素组成，可以产生不同颜色的光。每个像素由夹在两个电极（阳极和阴极）之间的多层有机材料组成。当电流流过电极时，有机材料根据其成分发出不同波长的光。
 
-The OLED driver chip is a chip that can control the pixels of the OLED panel using a serial communication protocol called I2C (Inter-Integrated Circuit).
+OLED驱动芯片是一种可以使用称为I2C（集成电路间互联）的串行通信协议来控制OLED面板像素的芯片。
 
-The OLED driver chip converts the signals from the Arduino into commands for the OLED panel. The Arduino can send data to the OLED driver chip using a library that can control the I2C protocol. One such library is the Adafruit SSD1306 library. With this library, you can initialize the OLED display module, set the brightness level, print text, graphics or images, etc.
+OLED驱动芯片将Arduino发出的信号转换为OLED面板的命令。Arduino可以使用控制I2C协议的库向OLED驱动芯片发送数据。其中一个这样的库是Adafruit SSD1306库。使用该库，您可以初始化OLED显示模块、设置亮度级别、打印文本、图形或图像等。
 
-**Example**
+**示例**
 
-* :ref:`basic_oled` (Basic Project)
-* :ref:`fun_pong` (Fun Project)
-* :ref:`iot_weathertime_screen` (IoT Project)
+* :ref:`basic_oled` （基础项目）
+* :ref:`fun_pong` （趣味项目）
+* :ref:`iot_weathertime_screen` （物联网项目）

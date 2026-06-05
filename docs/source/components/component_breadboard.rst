@@ -1,37 +1,23 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _cpn_breadboard:
 
-Breadboard
+面包板
 ==============
 
 .. image:: img/breadboard.png
     :width: 600
 
-A breadboard is a construction base for prototyping of electronics. Originally the word referred to a literal bread board, a polished piece of wood used for slicing bread. In the 1970s the solderless breadboard (a.k.a. plugboard, a terminal array board) became available and nowadays the term "breadboard" is commonly used to refer to these.
+面包板是一种用于电子原型制作的构造基板。最初这个词指的是一个 literal bread board（切面包的木板），一块用来切面包的抛光木板。在20世纪70年代，免焊面包板（也称为插板、端子阵列板）问世，如今"breadboard"一词通常指代这些板子。
 
-It is used to build and test circuits quickly before finishing any circuit design. 
-And it has many holes into which components mentioned above can be inserted like ICs and resistors as well as jumper wires. 
-The breadboard allows you to plug in and remove components easily. 
+它用于在完成电路设计之前快速搭建和测试电路。
+它有许多孔，可以将上述元件如IC、电阻以及杜邦线插入其中。
+面包板允许您轻松地插入和移除元件。
 
-The picture shows the internal structure of a breadboard. 
-Although these holes on the breadboard appear to be independent of each other, they are actually connected to each other through metal strips internally.
+图片显示了面包板的内部结构。
+虽然面包板上的这些孔看起来是相互独立的，但实际上它们通过内部的金属条相互连接。
 
 .. image:: img/breadboard_internal.png
     :width: 600
 
-If you want to know more about breadboard, refer to: |link_breadboard_tutorials|
+如果您想了解更多关于面包板的信息，请参阅：|link_breadboard_tutorials|
 
 

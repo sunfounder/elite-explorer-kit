@@ -1,20 +1,6 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _fun_pong:
 
-GAME - Pong
+游戏 - 乒乓球
 =================================
 
 .. raw:: html
@@ -24,43 +10,43 @@ GAME - Pong
       Your browser does not support the video tag.
    </video>
 
-This is a simple Pong game designed using an OLED display and an Arduino board.
-In the Pong game, players compete against the computer, controlling a vertical paddle to bounce back a bouncing ball. 
-The goal is to prevent the ball from passing your paddle's edge, or else the opponent scores.
+这是一个使用 OLED 显示屏和 Arduino 板设计的简单乒乓球游戏。
+在乒乓球游戏中，玩家与电脑对战，控制一个垂直球拍来回击弹跳的球。
+目标是防止球越过您的球拍边缘，否则对手将得分。
 
-The game mechanics can be divided into the following parts:
+游戏机制可以分为以下几个部分：
 
-1. Ball Movement - The ball moves along its current direction at a set speed. Whenever the ball collides with a paddle, its speed increases, making the game more challenging.
+1. 球的运动 - 球以设定速度沿当前方向移动。每当球与球拍碰撞时，其速度会增加，使游戏更具挑战性。
 
-2. Paddle Movement - Used to block the ball's movement, the paddle can move up or down. Players control their own paddle using buttons, while the computer's paddle automatically follows the ball's position.
+2. 球拍运动 - 用于阻挡球的运动，球拍可以上下移动。玩家使用按钮控制自己的球拍，而电脑的球拍会自动跟随球的位置。
 
-3. Scoring - Whenever the ball goes beyond the left or right edge of the screen, the corresponding player or CPU scores.
+3. 计分 - 每当球越过屏幕的左侧或右侧边缘时，相应的玩家或 CPU 得分。
 
-**Required Components**
+**所需元件**
 
-In this project, we need the following components. 
+在这个项目中，我们需要以下元件。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+购买整套套件会更方便，以下是链接：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - Elite Explorer Kit
+    *   - 名称
+        - 套件所含项目
+        - 链接
+    *   - Elite Explorer 套件
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+您也可以从下面的链接单独购买。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - 元件介绍
+        - 购买链接
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -78,67 +64,67 @@ You can also buy them separately from the links below.
         - \-
 
 
-**Wiring**
+**接线**
 
 .. note::
-    To protect the :ref:`cpn_power`'s battery, please fully charge it before using it for the first time.
+    为了保护 :ref:`cpn_power` 的电池，首次使用前请将其充满电。
 
 .. image:: img/12_pong_bb.png
     :width: 100%
     :align: center
 
 
-**Schematic**
+**原理图**
 
 .. image:: img/12_pong_schematic.png
     :width: 100%
     :align: center
 
-**Code**
+**代码**
 
 .. note::
 
-    * You can open the file ``12_pong_oled.ino`` under the path of ``elite-explorer-kit-main\fun_project\12_pong_oled`` directly.
-    * Or copy this code into Arduino IDE.
+    * 您可以直接打开路径 ``elite-explorer-kit-main\fun_project\12_pong_oled`` 下的 ``12_pong_oled.ino`` 文件。
+    * 或者将这段代码复制到 Arduino IDE 中。
 
 .. note::
-   To install the library, use the Arduino Library Manager and search for **"Adafruit SSD1306"** and **"Adafruit GFX"** and install them.
+   要安装库，请使用 Arduino 库管理器搜索 **"Adafruit SSD1306" ** 和 **"Adafruit GFX"** 并安装它们。
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/86dbb549-d425-4f42-8b5b-28d486e3f7f8/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-**How it works?**
+**工作原理**
 
-The program structure can be divided into the following five parts:
+程序结构可以分为以下五个部分：
 
-1. Import Necessary Libraries - Used to control the OLED screen and read button inputs.
+1. 导入必要的库 - 用于控制 OLED 屏幕和读取按钮输入。
 
-2. Define Constants and Global Variables:
+2. 定义常量和全局变量：
 
-   Definitions for OLED screen width and height.
-   Definitions for buttons and OLED reset pins.
-   Position, speed, size, and direction of the ball and paddles.
-   Scores for player and CPU.
+   OLED 屏幕宽度和高度的定义。
+   按钮和 OLED 复位引脚的定义。
+   球和球拍的位置、速度、大小和方向。
+   玩家和 CPU 的分数。
 
-3. Initialization:
+3. 初始化：
 
-   Initialize serial communication, the OLED screen, and display the initial interface.
-   Set buttons as inputs and connect pull-up resistors.
-   Draw the playing field.
+   初始化串行通信、OLED 屏幕，并显示初始界面。
+   将按钮设置为输入并连接上拉电阻。
+   绘制比赛场地。
 
-4. Main Loop:
+4. 主循环：
 
-   Read button states.
-   Move the ball based on the set refresh rate.
-   Detect collisions between the ball and paddles or walls, adjusting the ball's direction and speed accordingly.
-   Update the screen with scores based on scoring events.
-   Refresh paddle positions.
+   读取按钮状态。
+   根据设定的刷新率移动球。
+   检测球与球拍或墙壁之间的碰撞，相应调整球的方向和速度。
+   根据得分事件更新屏幕上的分数。
+   刷新球拍位置。
 
-5. Additional Functions:
+5. 附加函数：
 
-   ``crossesPlayerPaddle`` and ``crossesCpuPaddle`` - Used to detect whether the ball collides with the player's or CPU's paddle.
-   
-   ``drawCourt`` - Draws the playing field on the OLED screen.
+   ``crossesPlayerPaddle`` 和 ``crossesCpuPaddle`` - 用于检测球是否与玩家或 CPU 的球拍碰撞。
 
-   ``displayScore`` - Displays the player's and CPU's scores on the screen.
+   ``drawCourt`` - 在 OLED 屏幕上绘制比赛场地。
+
+   ``displayScore`` - 在屏幕上显示玩家和 CPU 的分数。

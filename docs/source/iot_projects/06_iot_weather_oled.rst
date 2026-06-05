@@ -1,20 +1,6 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _iot_weathertime_screen:
 
-WeatherTime Screen
+天气时间屏幕
 ===============================
 
 .. raw:: html
@@ -24,33 +10,33 @@ WeatherTime Screen
       Your browser does not support the video tag.
    </video>
 
-This sketch connects to a WiFi network, fetches weather data from OpenWeatherMap every minute, retrieves the current time from an NTP server, and displays the day, time, and weather information on an OLED screen.
+此 sketch 连接到 WiFi 网络，每分钟从 OpenWeatherMap 获取天气数据，从 NTP 服务器获取当前时间，并在 OLED 屏幕上显示日期、时间和天气信息。
 
-**Required Components**
+**所需元件**
 
-In this project, we need the following components. 
+在这个项目中，我们需要以下元件。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+购买整套套件会更方便，以下是链接：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - Elite Explorer Kit
+    *   - 名称
+        - 套件所含项目
+        - 链接
+    *   - Elite Explorer 套件
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+您也可以从下面的链接单独购买。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - 元件介绍
+        - 购买链接
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -59,13 +45,13 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_oled`
         - |link_oled_buy|
 
-**Wiring**
+**接线**
 
 .. image:: img/06_weather_oled_bb.png
     :width: 100%
     :align: center
 
-**Schematic**
+**原理图**
 
 .. image:: img/06_weather_oled_schematic.png
     :width: 60%
@@ -73,78 +59,75 @@ You can also buy them separately from the links below.
 
 **OpenWeather**
 
-Get OpenWeather API keys
+获取 OpenWeather API 密钥
 
-.. .|link_openweather| is an online service, owned by OpenWeather Ltd, that provides global weather data via API, including current weather data, forecasts, nowcasts and historical weather data for any geographical location.
+`OpenWeather <https://openweathermap.org/>`_ 是 OpenWeather Ltd 拥有的在线服务，通过 API 提供全球天气数据，包括任何地理位置的当前天气数据、预报、临近预报和历史天气数据。
 
-`OpenWeather <https://openweathermap.org/>`_ is an online service, owned by OpenWeather Ltd, that provides global weather data via API, including current weather data, forecasts, nowcasts and historical weather data for any geographical location.
-
-
-#. Visit OpenWeather to log in/create an account.
+#. 访问 OpenWeather 登录/创建帐户。
 
    .. image:: img/06_owm_1.png
 
 
-#. Click into the API page from the navigation bar.
+#. 从导航栏进入 API 页面。
 
    .. image:: img/06_owm_2.png
 
 
-#. Find **Current Weather Data** and click Subscribe.
+#. 找到 **Current Weather Data** 并点击 Subscribe。
 
    .. image:: img/06_owm_3.png
 
 
-#. Under **Current weather and forecasts collection**, subscribe to the appropriate service. In our project, Free is good enough.
+#. 在 **Current weather and forecasts collection** 下，订阅适当的服务。在我们的项目中，Free 版本就足够了。
 
    .. image:: img/06_owm_4.png
 
 
-#. Copy the Key from the **API keys** page.
+#. 从 **API keys** 页面复制密钥。
 
    .. image:: img/06_owm_5.png
 
-#. Copy it to the ``arduino_secrets.h``.
+#. 将其复制到 ``arduino_secrets.h``。
 
    .. code-block:: Arduino
 
        #define SECRET_SSID "<SSID>"        // your network SSID (name)
-       #define SECRET_PASS "<PASSWORD>"        // your network password 
+       #define SECRET_PASS "<PASSWORD>"        // your network password
        #define API_KEY "<OpenWeather_API_KEY>"
        #define LOCATION "<YOUR CITY>"
 
-#. Set the time zone of your location.
+#. 设置您所在位置的时区。
 
-   Take the capital of Sweden, Stockholm, as an example. Search "stockholm timezone" on Google.
+   以瑞典首都斯德哥尔摩为例。在 Google 上搜索 "stockholm timezone"。
 
-   .. image:: img/06_weather_oled_01.png 
+   .. image:: img/06_weather_oled_01.png
 
-   In the search results, you will see "GMT+1", so you set the parameter of the function below to ``3600 * 1`` seconds.
-   
+   在搜索结果中，您将看到 "GMT+1"，因此将下面函数的参数设置为 ``3600 * 1`` 秒。
+
    .. code-block:: Arduino
 
       timeClient.setTimeOffset(3600 * 1);  // Adjust for your time zone (this is +1 hour)
 
-**Install the Library**
+**安装库**
 
-To install the library, use the Arduino Library Manager and search for "ArduinoMqttClient", "FastLED", "Adafruit GFX" and "Adafruit SSD1306" and install them.
+要安装库，请使用 Arduino 库管理器搜索 "ArduinoMqttClient"、"FastLED"、"Adafruit GFX" 和 "Adafruit SSD1306" 并安装它们。
 
-``ArduinoJson.h``: Used for handling JSON data (data obtained from openweathermap).
+``ArduinoJson.h``：用于处理 JSON 数据（从 openweathermap 获取的数据）。
 
-``NTPClient.h``: Used for obtaining real-time time.
+``NTPClient.h``：用于获取实时时间。
 
-``Adafruit_GFX.h``, ``Adafruit_SSD1306.h``: Used for OLED module.
+``Adafruit_GFX.h``、``Adafruit_SSD1306.h``：用于 OLED 模块。
 
-**Run the Code**
+**运行代码**
 
-
-.. note::
-
-    * You can open the file ``06_weather_oled.ino`` under the path of ``elite-explorer-kit-main\iot_project\06_weather_oled`` directly.
-    * Or copy this code into Arduino IDE.
 
 .. note::
-    In the code, SSID and password are stored in ``arduino_secrets.h``. Before uploading this example, you need to modify them with your own WiFi credentials. Additionally, for security purposes, ensure that this information is kept confidential when sharing or storing the code.
+
+    * 您可以直接打开路径 ``elite-explorer-kit-main\iot_project\06_weather_oled`` 下的 ``06_weather_oled.ino`` 文件。
+    * 或者将这段代码复制到 Arduino IDE 中。
+
+.. note::
+    在代码中，SSID 和密码存储在 ``arduino_secrets.h`` 中。上传此示例之前，您需要使用自己的 WiFi 凭据修改它们。此外，出于安全目的，在共享或存储代码时请确保此信息保密。
 
 .. raw:: html
 
@@ -152,55 +135,55 @@ To install the library, use the Arduino Library Manager and search for "ArduinoM
 
 
 
-**How it works?**
+**工作原理**
 
 
-1. Libraries and Definitions:
+1. 库和定义：
 
-   #. ``WiFiS3.h``: This is likely a library specific to a certain WiFi module or board to manage WiFi connections.
-   #. ``ArduinoJson.h``: This library is used for decoding (and encoding) JSON data.
-   #. ``arduino_secrets.h``: A separate file where sensitive data (like WiFi credentials) are stored. This is a good practice to keep credentials out of the main code.
-   #. **NTPClient & WiFiUdp**: These are used for fetching the current time from an NTP (Network Time Protocol) server.
-   #. **Adafruit libraries**: Used for managing the OLED display.
-   #. **Various global variables**: These include WiFi credentials, server details, and more, which will be used throughout the script.
+   #. ``WiFiS3.h``：这可能是特定于某个 WiFi 模块或板的库，用于管理 WiFi 连接。
+   #. ``ArduinoJson.h``：此库用于解码（和编码）JSON 数据。
+   #. ``arduino_secrets.h``：一个单独的文件，用于存储敏感数据（如 WiFi 凭据）。这是一个很好的做法，可以将凭据与主代码分离。
+   #. **NTPClient & WiFiUdp** ：用于从 NTP（网络时间协议）服务器获取当前时间。
+   #. **Adafruit 库** ：用于管理 OLED 显示屏。
+   #. **各种全局变量** ：包括 WiFi 凭据、服务器详细信息等，将在整个脚本中使用。
 
-2. ``setup()``:
+2. ``setup()``：
 
-   #. It initializes the serial communication.
-   #. Checks and prints the WiFi module's firmware version.
-   #. Tries to connect to the WiFi network using the provided SSID and password.
-   #. Prints the connected WiFi's status (SSID, IP, Signal strength).
-   #. Initializes the OLED display.
-   #. Starts the NTP client to fetch the current time and sets a time offset (in this case, 8 hours which might correspond to a specific timezone).
+   #. 初始化串行通信。
+   #. 检查并打印 WiFi 模块的固件版本。
+   #. 尝试使用提供的 SSID 和密码连接到 WiFi 网络。
+   #. 打印已连接的 WiFi 状态（SSID、IP、信号强度）。
+   #. 初始化 OLED 显示屏。
+   #. 启动 NTP 客户端以获取当前时间，并设置时间偏移（此处为 8 小时，可能对应于特定时区）。
 
-3. ``read_response()``:
+3. ``read_response()``：
 
-   #. Reads the response from the server, specifically looking for JSON data (denoted by ``{`` and ``}``).
-   #. If JSON data is found, it decodes the data to extract weather details like temperature, humidity, pressure, wind speed, and wind direction.
-   #. Calls the ``displayWeatherData`` function to display the weather information on the OLED screen.
+   #. 读取来自服务器的响应，特别查找 JSON 数据（由 ``{`` 和 ``}`` 表示）。
+   #. 如果找到 JSON 数据，则解码数据以提取天气详情，如温度、湿度、气压、风速和风向。
+   #. 调用 ``displayWeatherData`` 函数在 OLED 屏幕上显示天气信息。
 
-4. ``httpRequest()``:
+4. ``httpRequest()``：
 
-   #. Closes any existing connections to ensure the WiFi module's socket is free.
-   #. Tries to connect to the OpenWeatherMap server.
-   #. If connected, sends an HTTP GET request to fetch the weather data for a specific location defined by ``LOCATION`` (likely defined in ``arduino_secrets.h`` or elsewhere).
-   #. Records the time the request was made.
+   #. 关闭任何现有连接，确保 WiFi 模块的套接字是空闲的。
+   #. 尝试连接到 OpenWeatherMap 服务器。
+   #. 如果连接成功，发送 HTTP GET 请求以获取由 ``LOCATION`` 定义的特定位置的天气数据（可能在 ``arduino_secrets.h`` 或其他地方定义）。
+   #. 记录发出请求的时间。
 
-5. ``loop()``:
+5. ``loop()``：
 
-   #. Calls the ``read_response`` function to process any incoming data from the server.
-   #. Updates the time from the NTP server.
-   #. Checks if it's time to make another request to the weather server (based on the ``postingInterval``). If so, it calls the ``httpRequest`` function.
+   #. 调用 ``read_response`` 函数处理来自服务器的任何传入数据。
+   #. 从 NTP 服务器更新时间。
+   #. 检查是否到了向天气服务器发出另一个请求的时间（基于 ``postingInterval``）。如果是，则调用 ``httpRequest`` 函数。
 
-6. ``printWifiStatus()``:
+6. ``printWifiStatus()``：
 
-   #. The SSID of the connected network.
-   #. The local IP address of the board.
-   #. The signal strength (RSSI).
+   #. 已连接网络的 SSID。
+   #. 板的本地 IP 地址。
+   #. 信号强度 (RSSI)。
 
-7. ``displayWeatherData()``:
+7. ``displayWeatherData()``：
 
-   #. Clears the OLED screen.
-   #. Displays the current day of the week.
-   #. Displays the current time in HH:MM format.
-   #. Displays the provided weather data (temperature, humidity, pressure, and wind speed).
+   #. 清除 OLED 屏幕。
+   #. 显示当前星期几。
+   #. 以 HH:MM 格式显示当前时间。
+   #. 显示提供的天气数据（温度、湿度、气压和风速）。

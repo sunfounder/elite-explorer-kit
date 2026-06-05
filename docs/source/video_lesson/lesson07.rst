@@ -1,37 +1,23 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
-LESSON 7: Doing Math in Binary
+课程 7：二进制数学运算
 ================================
 
-This lesson dives into the fascinating world of binary mathematics, specifically focusing on how binary calculations power everything from simple Arduino devices to complex supercomputers. Here's a brief overview of what you will learn:
+本课程深入探讨二进制数学的迷人世界，特别关注二进制计算如何驱动从简单的 Arduino 设备到复杂的超级计算机的一切。以下是您将学习的内容的简要概述：
 
-1. **Binary Basics and Numbers**: Introduction to the concept of binary numbers, including how single bits represent binary digits (0 and 1), and how these bits combine to represent larger numbers.
-2. **Understanding Binary Operations**: Explore basic binary operations like addition, subtraction, multiplication, and division through hands-on examples.
-3. **Practical Application with a Binary Counter**: Through a detailed demonstration, you'll see how to apply binary calculations in programming an Arduino for tasks like counting and basic arithmetic.
-4. **Extending Binary to Other Uses**: Understand how binary applies to a variety of digital representations including colors, pictures, movies, letters, words, books, music, and more.
-5. **Homework Challenge**: Strengthen your understanding of binary mathematics with a practical exercise involving binary operations and real-world applications.
+1. **二进制基础和数字** ：介绍二进制数的概念，包括单个位如何表示二进制数字（0 和 1），以及这些位如何组合起来表示更大的数字。
+2. **理解二进制运算** ：通过动手示例，探索基本的二进制运算，如加法、减法、乘法和除法。
+3. **二进制计数器的实际应用** ：通过详细的演示，你将看到如何将二进制计算应用于 Arduino 编程，用于计数和基本算术等任务。
+4. **将二进制扩展到其他用途** ：了解二进制如何应用于各种数字表示，包括颜色、图片、电影、字母、单词、书籍、音乐等。
+5. **课后挑战** ：通过涉及二进制运算和实际应用的练习，加强你对二进制数学的理解。
 
-**Video**
+**视频**
 
 .. raw:: html
 
-    <iframe width="100%" 
+    <iframe width="100%"
         style="aspect-ratio: 16/9; max-width: 100%;"
-        src="https://www.youtube.com/embed/w1C3OT1V3xA?si=o9Q1tTC1X1B9teef" 
-        title="YouTube video player" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        src="https://www.youtube.com/embed/w1C3OT1V3xA?si=o9Q1tTC1X1B9teef"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen>
     </iframe>

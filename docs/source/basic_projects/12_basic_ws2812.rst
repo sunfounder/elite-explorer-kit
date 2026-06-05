@@ -1,53 +1,39 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _basic_ws2812:
 
-WS2812 RGB LEDs Strip
+WS2812 RGB LED 灯条
 ==========================
 
-Overview
+概述
 ---------------
 
-In this lesson, you will learn about NeoPixel LEDs and how to control them using the FastLED library on an Arduino Uno R4. NeoPixel LEDs are widely used in various applications like home decor, wearables, and event lighting. The FastLED library simplifies the process of programming these LEDs. Here, a chain of 8 NeoPixel LEDs is connected to an Arduino, and each LED in the sequence is lit up in blue color momentarily before turning off, moving on to the next LED in the chain. This basic example can serve as the foundation for more complex light patterns or interactive lighting projects.
+在本课中，您将了解 NeoPixel LED 以及如何使用 FastLED 库在 Arduino Uno R4 上控制它们。NeoPixel LED 广泛应用于家居装饰、可穿戴设备和活动照明等领域。FastLED 库简化了这些 LED 的编程过程。这里，将一串 8 个 NeoPixel LED 连接到 Arduino，序列中的每个 LED 会短暂亮起蓝色然后熄灭，接着轮到链条中的下一个 LED。这个基础示例可以作为更复杂的光效或交互式照明项目的基础。
 
-Required Components
+所需元件
 -------------------------
 
-In this project, we need the following components. 
+本项目中，我们需要以下元件。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+购买整套套件会更加方便，以下是链接：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - Elite Explorer Kit
+    *   - 名称
+        - 套件所含项目
+        - 链接
+    *   - Elite Explorer 套件
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+您也可以从以下链接单独购买。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - 元件介绍
+        - 购买链接
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -56,35 +42,35 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_ws2812`
         - |link_ws2812_buy|
 
-Wiring
+接线
 ----------------------
 
 .. image:: img/12-ws2812_bb.png
     :align: center
 
-Schematic Diagram
+原理图
 -----------------------
 
 .. image:: img/12_ws2812_schematic.png
     :align: center
     :width: 80%
 
-Code
+代码
 ---------------
 
 .. note::
 
-    * You can open the file ``12-ws2812.ino`` under the path of ``elite-explorer-kit-main\basic_project\12-ws2812`` directly.
-    * Or copy this code into Arduino IDE.
+    * 您可以直接打开路径 ``elite-explorer-kit-main\basic_project\12-ws2812`` 下的 ``12-ws2812.ino`` 文件。
+    * 或者将以下代码复制到 Arduino IDE 中。
 
-.. note:: 
-    To install the library, use the Arduino Library Manager and search for **"FastLED"** and install it. 
+.. note::
+    要安装库，请使用 Arduino 库管理器搜索 **"FastLED"** 并安装。
 
 .. important::
-    With the release of |link_fastled_3_7_0|, the FastLED library now officially supports the Arduino UNO R4. Therefore, you no longer need to manually install the development version. Simply update or install the FastLED library using the Arduino Library Manager.
+    随着 |link_fastled_3_7_0| 的发布，FastLED 库现已正式支持 Arduino UNO R4。因此，您不再需要手动安装开发版本。只需使用 Arduino 库管理器更新或安装 FastLED 库即可。
 
 .. warning::
-    **[Outdated]** Since the |link_FastLED_lib| library has not officially released a version supporting Arduino R4 yet, you'll need to download :download:`the latest development code of the FastLED library <https://codeload.github.com/FastLED/FastLED/zip/refs/heads/master>` and overwrite the existing FastLED library files. For detailed instructions on how to do this, please refer to the :ref:`manual_install_lib` section. (This note will be retracted when the FastLED library officially releases an update that supports the Arduino UNO R4.)
+    **[已过时]** 由于 |link_FastLED_lib| 库尚未正式发布支持 Arduino R4 的版本，您需要下载 :download:`FastLED 库的最新开发代码 <https://codeload.github.com/FastLED/FastLED/zip/refs/heads/master>` 并覆盖现有的 FastLED 库文件。有关如何执行此操作的详细说明，请参考 :ref:`manual_install_lib` 部分。（当 FastLED 库正式发布支持 Arduino UNO R4 的更新后，此说明将被撤回。）
 
 
 
@@ -97,51 +83,51 @@ Code
 
    <video loop autoplay muted style = "max-width:100%">
       <source src="../_static/videos/basic_projects/12_basic_ws2812.mp4"  type="video/mp4">
-      Your browser does not support the video tag.
+      您的浏览器不支持视频标签。
    </video>
 
-After the code is uploaded successfully, you will see each LED in the chain of 8 NeoPixel LEDs light up one at a time in a blue color. The program will loop through this sequence continuously, turning off each LED before moving on to the next. With a short delay between each LED, the lighting effect will appear as a traveling blue dot along the chain.
+代码成功上传后，您将看到 8 个 NeoPixel LED 灯串中的每个 LED 逐个亮起蓝色。程序将持续循环此序列，在转到下一个 LED 之前关闭当前 LED。由于每个 LED 之间有一个短暂的延迟，灯光效果将显示为一个沿着灯串移动的蓝色光点。
 
 
-Code Analysis
+代码分析
 ------------------------
 
-1. Import Library and Setup Constants
+1. 导入库并设置常量
 
-   - Importing the ``FastLED`` library to use its functions.
-   - Defining the number of LEDs and the data pin they are connected to.
-   
-   .. code-block:: arduino
-   
-      #include <FastLED.h>  // Include FastLED library
-      #define NUM_LEDS 8    // Number of LEDs in the chain
-      #define DATA_PIN 6    // Data pin for LED control
-
-2. Initialize LED Array
-   
-   Creating an array of ``CRGB`` type to store the color information of each LED.
+   - 导入 ``FastLED`` 库以使用其函数。
+   - 定义 LED 数量及其连接的数据引脚。
 
    .. code-block:: arduino
 
-      CRGB leds[NUM_LEDS];  // Array to hold LED color data
+      #include <FastLED.h>  // 包含 FastLED 库
+      #define NUM_LEDS 8    // 灯串中 LED 的数量
+      #define DATA_PIN 6    // LED 控制的数据引脚
 
-3. Initialize LEDs in Setup
+2. 初始化 LED 数组
 
-   Using ``FastLED.addLeds`` to initialize the LEDs.
+   创建一个 ``CRGB`` 类型的数组，用于存储每个 LED 的颜色信息。
+
+   .. code-block:: arduino
+
+      CRGB leds[NUM_LEDS];  // 用于存储 LED 颜色数据的数组
+
+3. 在 Setup 中初始化 LED
+
+   使用 ``FastLED.addLeds`` 初始化 LED。
 
    .. code-block:: arduino
 
       void setup() {
-        FastLED.addLeds<NEOPIXEL, DATA_PIN>(leds, NUM_LEDS);  // Initialize LEDs
+        FastLED.addLeds<NEOPIXEL, DATA_PIN>(leds, NUM_LEDS);  // 初始化 LED
       }
 
-4. Control LEDs in Loop
-   
-   Looping through each LED to set it to blue, display it, clear it, and then delay.
+4. 在 Loop 中控制 LED
 
-   - The ``leds`` array serves as a color buffer for your LED strip. Each element in this array corresponds to an individual LED on your physical strip, and its color value determines the color that the LED will display. The order of elements in the array matches the order of LEDs on the strip, starting from the first LED (which corresponds to ``leds[0]``) through to the last LED. To change the color of a specific LED on your strip, you simply modify the corresponding element in the ``leds`` array. You can use |fastled_color| or set colors using RGB (Taking green as an example, use ``leds[dot] = CRGB::Green`` or ``leds[dot] = CRGB(0, 255, 0);``).
+   循环遍历每个 LED，将其设为蓝色、显示、清除然后延迟。
 
-   - The ``FastLED.show();`` function updates the LED strip with new color data, making changes visible. It is like hitting the "publish" button for your LED strip after making edits and adjustments in the code.
+   - ``leds`` 数组作为 LED 灯条的颜色缓冲区。该数组中的每个元素对应物理灯条上的一个 LED，其颜色值决定了该 LED 将显示的颜色。数组中元素的顺序与灯条上 LED 的顺序一致，从第一个 LED（对应于 ``leds[0]``）到最后一个 LED。要更改灯条上特定 LED 的颜色，只需修改 ``leds`` 数组中相应的元素。您可以使用 |fastled_color| 或使用 RGB 设置颜色（以绿色为例，使用 ``leds[dot] = CRGB::Green`` 或 ``leds[dot] = CRGB(0, 255, 0);``）。
+
+   - ``FastLED.show();`` 函数用新的颜色数据更新 LED 灯条，使更改可见。这就像在代码中进行编辑和调整后，为 LED 灯条按下"发布"按钮。
 
    .. raw:: html
 
@@ -151,9 +137,9 @@ Code Analysis
 
       void loop() {
         for (int dot = 0; dot < NUM_LEDS; dot++) {
-          leds[dot] = CRGB::Blue;   // Set the current LED to blue
-          FastLED.show();           // Update LEDs
-          leds[dot] = CRGB::Black;  // Clear the current LED
-          delay(30);                // Wait for a short period before moving to the next LED
+          leds[dot] = CRGB::Blue;   // 将当前 LED 设为蓝色
+          FastLED.show();           // 更新 LED
+          leds[dot] = CRGB::Black;  // 清除当前 LED
+          delay(30);                // 短暂等待后转到下一个 LED
         }
       }

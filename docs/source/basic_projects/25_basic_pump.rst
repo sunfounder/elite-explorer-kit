@@ -1,55 +1,41 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _basic_pump:
 
-Water Pump
+水泵
 ==========================
 
-Overview
+概述
 ---------------
 
-The water pump is also a motor, which converts the mechanical energy of the motor or other external energy through a special structure to transport the liquid.
+水泵也是一种电机，它通过特殊结构将电机或其他外部能量的机械能转换来输送液体。
 
 
 
-Required Components
+所需元件
 -------------------------
 
-In this project, we need the following components. 
+本项目中，我们需要以下元件。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+购买整套套件会更加方便，以下是链接：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - Elite Explorer Kit
+    *   - 名称
+        - 套件所含项目
+        - 链接
+    *   - Elite Explorer 套件
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+您也可以从以下链接单独购买。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - 元件介绍
+        - 购买链接
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -58,7 +44,7 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_wires`
         - |link_wires_buy|
     *   - :ref:`cpn_pump`
-        - 
+        -
     *   - :ref:`cpn_ta6586`
         - \-
     *   - :ref:`cpn_power`
@@ -66,49 +52,49 @@ You can also buy them separately from the links below.
 
 
 
-Wiring
+接线
 ----------------------
 
 .. note::
-    To protect the :ref:`cpn_power`'s battery, please fully charge it before using it for the first time.
+    为了保护 :ref:`cpn_power` 的电池，首次使用前请将其充满电。
 
 .. image:: img/25-pump_bb.png
     :align: center
     :width: 80%
 
 .. raw:: html
-  
-  <br/> 
+
+  <br/>
 
 
-Schematic Diagram
+原理图
 -----------------------
 
 .. image:: img/25_pump_schematic.png
 
 
-Code
+代码
 ---------------
 
 .. note::
 
-   * You can open the file ``25-pump.ino`` under the path of ``elite-explorer-kit-main\basic_project\25-pump``. 
-   * Or copy this code into **Arduino IDE**.
+   * 您可以直接打开路径 ``elite-explorer-kit-main\basic_project\25-pump`` 下的 ``25-pump.ino`` 文件。
+   * 或者将以下代码复制到 **Arduino IDE** 中。
 
 .. raw:: html
-    
+
     <iframe src=https://create.arduino.cc/editor/sunfounder01/8a530528-aa58-4306-acc9-01632ae5e99a/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-    
-Attach the tubing to the pump and position it in the basin. Once the code is successfully uploaded, the water pump will turn on and remain active for five seconds.
-When conducting this experiment, please ensure that the circuit is kept away from water to prevent any potential short circuits.
+
+将管道连接到水泵并放置在水盆中。代码成功上传后，水泵将启动并持续运行五秒钟。
+进行本实验时，请确保电路远离水源，以防止任何潜在的短路。
 
 
-Code Analysis
+代码分析
 --------------------------
 
-The motor can be driven by providing a voltage difference between the copper sheets at both sides of the motor. 
+通过电机两侧铜片之间的电压差可以驱动电机。
 
 .. code-block:: arduino
-    
+
    digitalWrite(motorBI, HIGH);
    digitalWrite(motorFI, LOW);

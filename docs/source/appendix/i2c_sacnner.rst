@@ -1,30 +1,16 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _i2c_sacnner:
 
-How to Scan and Detect I2C Addresses?
+如何扫描和检测I2C地址？
 ==============================================
 
-This tutorial takes scanning the I2C address of the gy-87 module as an example, and guides you on how to detect I2C addresses.
+本教程以扫描gy-87模块的I2C地址为例，指导您如何检测I2C地址。
 
-Wiring
+接线
 ---------------
 
-Connect the SCL of GY-87 module to the SCL of UNO R4, and connect the SDA of GY-87 module to the SDA of UNO R4.
+将GY-87模块的SCL连接到UNO R4的SCL，将GY-87模块的SDA连接到UNO R4的SDA。
 
-Another way is to connect the SCL of GY-87 module to A5 of UNO R4, and connect the SDA of GY-87 module to A4 of UNO R4.
+另一种方法是将GY-87模块的SCL连接到UNO R4的A5，将GY-87模块的SDA连接到UNO R4的A4。
 
 .. image:: img/09-gy87_bb.png
     :align: center
@@ -34,51 +20,51 @@ Another way is to connect the SCL of GY-87 module to A5 of UNO R4, and connect t
 
    <br/>
 
-Upload the code
+上传代码
 -----------------
 
-Copy the code below to your Arduino IDE and then upload the code.
+将以下代码复制到您的Arduino IDE中，然后上传代码。
 
 .. code-block:: arduino
 
    #include <Wire.h>
-   
+
    // Set I2C bus to use: Wire, Wire1, etc.
    #define WIRE Wire
-   
+
    void setup() {
      WIRE.begin();
-   
+
      Serial.begin(9600);
      while (!Serial)
        delay(10);
      Serial.println("\nI2C Scanner");
-   
+
      // Enable bypass Mode for mpu6050
      Wire.beginTransmission(0x68);
      Wire.write(0x37);
      Wire.write(0x02);
      Wire.endTransmission();
-   
+
      Wire.beginTransmission(0x68);
      Wire.write(0x6A);
      Wire.write(0x00);
      Wire.endTransmission();
-   
+
      // Disable Sleep Mode
      Wire.beginTransmission(0x68);
      Wire.write(0x6B);
      Wire.write(0x00);
      Wire.endTransmission();
    }
-   
-   
+
+
    void loop() {
      byte error, address;
      int nDevices;
-   
+
      Serial.println("Scanning...");
-   
+
      nDevices = 0;
      for (address = 1; address < 127; address++) {
        // The i2c_scanner uses the return value of
@@ -86,14 +72,14 @@ Copy the code below to your Arduino IDE and then upload the code.
        // a device did acknowledge to the address.
        WIRE.beginTransmission(address);
        error = WIRE.endTransmission();
-   
+
        if (error == 0) {
          Serial.print("I2C device found at address 0x");
          if (address < 16)
            Serial.print("0");
          Serial.print(address, HEX);
          Serial.println("  !");
-   
+
          nDevices++;
        } else if (error == 4) {
          Serial.print("Unknown error at address 0x");
@@ -106,14 +92,14 @@ Copy the code below to your Arduino IDE and then upload the code.
        Serial.println("No I2C devices found\n");
      else
        Serial.println("done\n");
-   
+
      delay(5000);  // wait 5 seconds for next scan
    }
 
 
-After uploading the code, open the serial monitor and set the baud rate to 9600. Check the output in the serial monitor.
+上传代码后，打开串口监视器并将波特率设置为9600。检查串口监视器中的输出。
 
-These are the detected I2C addresses. You can refer to relevant information to determine which chips correspond to these addresses. In this case, ``0x68`` is for MPU6050 and ``0x77`` is for BMP180. The address ``0x1E`` is for QMC5883L, and occasionally(due to different production batches) the address of QMC5883L may also be ``0x0D``.
+这些是检测到的I2C地址。您可以参考相关信息来确定哪些芯片对应这些地址。在本例中，``0x68``对应MPU6050，``0x77``对应BMP180。地址``0x1E``对应QMC5883L，偶尔（因不同生产批次）QMC5883L的地址也可能是``0x0D``。
 
 .. image:: img/gy87-i2c.png
     :width: 100%

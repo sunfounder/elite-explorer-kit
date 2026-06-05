@@ -1,28 +1,14 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _cpn_power:
 
-Power Supply Module
+电源模块
 =====================
 
 .. note::
-    To protect the :ref:`cpn_power`'s battery, please fully charge it before using it for the first time.
+    为了保护:ref:`cpn_power` 的电池，首次使用前请将其充满电。
 
-When we need a large current to drive a component, which will severely interfere with the normal work of Arduino UNO board. Therefore, we separately supply power for the component by this module to make it run safely and steadily.
+当我们需要大电流来驱动某个元件时，这会严重干扰Arduino UNO板的正常工作。因此，我们通过此模块单独为元件供电，使其安全稳定地运行。
 
-You can just plug it in the breadboard to supply power. It provides a voltage of 3.3V and 5V, and you can connect either via a jumper cap included.
+您只需将其插入面包板即可供电。它提供3.3V和5V的电压，您可以通过附带的跳线帽进行选择。
 
 .. image:: img/power_supply_new.png
     :width: 95%
@@ -32,25 +18,25 @@ You can just plug it in the breadboard to supply power. It provides a voltage of
 
     <br/>
 
-**Features and specifications**
+**特性与规格**
 
-* Charge Input: USB Type-C, 5V
-* Output Voltage: 5V, 3.3V (adjustable via jumpers. 0V, 3.3V, and 5V configuration)
-* Output Current: 5V/1.5A, 3.3V/1A
-* ON-OFF Switch Available
-* Two Independent Channel
-* USB (Type-A) Output Available
-* Battery: 3.7V 14500 Lithium-ion Battery, 500mAh
-* Dimension: 52mm x 32mm x 24mm (L x W x H)
+* 充电输入：USB Type-C, 5V
+* 输出电压：5V, 3.3V（通过跳线可配置为0V、3.3V和5V）
+* 输出电流：5V/1.5A, 3.3V/1A
+* 带ON-OFF开关
+* 双独立通道
+* USB（Type-A）输出可用
+* 电池：3.7V 14500锂离子电池, 500mAh
+* 尺寸：52mm x 32mm x 24mm（长 x 宽 x 高）
 
 
-**Example**
+**示例**
 
-* :ref:`basic_motor` (Basic Project)
-* :ref:`basic_pump` (Basic Project)
-* :ref:`basic_stepper_motor` (Basic Project)
-* :ref:`fun_smart_fan` (Fun Project)
-* :ref:`fun_plant_monitor` (Fun Project)
-* :ref:`fun_access` (Fun Project)
-* :ref:`fun_pong` (Fun Project)
+* :ref:`basic_motor` （基础项目）
+* :ref:`basic_pump` （基础项目）
+* :ref:`basic_stepper_motor` （基础项目）
+* :ref:`fun_smart_fan` （趣味项目）
+* :ref:`fun_plant_monitor` （趣味项目）
+* :ref:`fun_access` （趣味项目）
+* :ref:`fun_pong` （趣味项目）
 

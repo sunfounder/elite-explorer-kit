@@ -1,73 +1,59 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _install_arduino:
 
-Download and Install Arduino IDE 2.0
+下载并安装 Arduino IDE 2.0
 ========================================
 
-The Arduino IDE, known as Arduino Integrated Development Environment, provides all the software support needed to complete an Arduino project. It is a programming software specifically designed for Arduino, provided by the Arduino team, that allows us to write programs and upload them to the Arduino board. 
+Arduino IDE，全称 Arduino Integrated Development Environment（Arduino 集成开发环境），提供了完成 Arduino 项目所需的所有软件支持。它是 Arduino 团队专为 Arduino 设计的一款编程软件，让我们能够编写程序并将其上传到 Arduino 开发板。
 
-The Arduino IDE 2.0 is an open-source project. It is a big step from its sturdy predecessor, Arduino IDE 1.x, and comes with revamped UI, improved board & library manager, debugger, autocomplete feature and much more.
+Arduino IDE 2.0 是一个开源项目。与其稳定的前身 Arduino IDE 1.x 相比，它是一个重大的进步，带来了全新的用户界面、改进的开发板与库管理器、调试器、自动补全功能以及更多其他特性。
 
-In this tutorial, we will show how to download and install the Arduino IDE 2.0 on your Windows, Mac, or Linux computer.
+在本教程中，我们将展示如何在 Windows、Mac 或 Linux 计算机上下载并安装 Arduino IDE 2.0。
 
-Requirements
+系统要求
 -------------------
 
-* Windows - Win 10 and newer, 64 bits
-* Linux - 64 bits
-* Mac OS Intel - Version 10.14: "Mojave" or newer, 64 bits
-* Mac OS Apple Silicon - Version 11: "Big Sur" or newer, 64 bits
+* Windows - Win 10 及更新版本，64 位
+* Linux - 64 位
+* Mac OS Intel - 版本 10.14："Mojave" 或更新版本，64 位
+* Mac OS Apple Silicon - 版本 11："Big Sur" 或更新版本，64 位
 
-Download the Arduino IDE 2.0
+下载 Arduino IDE 2.0
 -------------------------------
 
-#. Visit |link_download_arduino|.
+#. 访问 |link_download_arduino| 。
 
-#. Download the IDE for your OS version.
+#. 根据你的操作系统版本下载 IDE。
 
    .. image:: img/sp_001.png
 
-Installation
+安装
 ------------------------------
 
 Windows
 ^^^^^^^^^^^^^
 
-#. Double click the ``arduino-ide_xxxx.exe`` file to run the downloaded file.
+#. 双击 ``arduino-ide_xxxx.exe`` 文件运行下载的文件。
 
-#. Read the License Agreement and agree it.
+#. 阅读许可协议并同意。
 
    .. image:: img/sp_002.png
 
-#. Choose installation options.
+#. 选择安装选项。
 
    .. image:: img/sp_003.png
 
-#. Choose install location. It is recommended that the software be installed on a drive other than the system drive.
+#. 选择安装位置。建议将软件安装在系统盘以外的驱动器上。
 
    .. image:: img/sp_004.png
 
-#. Then Finish. 
+#. 然后点击完成。
 
    .. image:: img/sp_005.png
 
 macOS
 ^^^^^^^^^^^^^^^^
 
-Double click on the downloaded ``arduino_ide_xxxx.dmg`` file and follow the instructions to copy the **Arduino IDE.app** to the **Applications** folder, you will see the Arduino IDE installed successfully after a few seconds.
+双击下载的 ``arduino_ide_xxxx.dmg`` 文件，按照说明将 **Arduino IDE.app** 复制到 **应用程序** 文件夹中，几秒钟后你将看到 Arduino IDE 安装成功。
 
 .. image:: img/macos_install_ide.png
     :width: 800
@@ -75,24 +61,24 @@ Double click on the downloaded ``arduino_ide_xxxx.dmg`` file and follow the inst
 Linux
 ^^^^^^^^^^^^
 
-For the tutorial on installing the Arduino IDE 2.0 on a Linux system, please refer |link_install_arduino_linux|
+关于在 Linux 系统上安装 Arduino IDE 2.0 的教程，请参考 |link_install_arduino_linux|
 
 
-Open the IDE
+打开 IDE
 --------------
 
-#. When you first open Arduino IDE 2.0, it automatically installs the Arduino AVR Boards, built-in libraries, and other required files.
+#. 当你第一次打开 Arduino IDE 2.0 时，它会自动安装 Arduino AVR 开发板、内置库以及其他所需文件。
 
    .. image:: img/sp_901.png
 
-#. In addition, your firewall or security center may pop up a few times asking you if you want to install some device driver. Please install all of them.
+#. 此外，你的防火墙或安全中心可能会多次弹出窗口，询问你是否要安装某些设备驱动程序。请全部安装。
 
    .. image:: img/sp_104.png
 
-#. Now your Arduino IDE is ready!
+#. 现在你的 Arduino IDE 已经准备就绪！
 
    .. note::
-     In the event that some installations didn't work due to network issues or other reasons, you can reopen the Arduino IDE and it will finish the rest of the installation. The Output window will not automatically open after all installations are complete unless you click Verify or Upload.
+     如果某些安装因网络问题或其他原因未能完成，你可以重新打开 Arduino IDE，它将继续完成剩余的安装。所有安装完成后，输出窗口不会自动打开，除非你单击"验证"或"上传"。
 
 
 

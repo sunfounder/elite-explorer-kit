@@ -1,20 +1,6 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _iot_mqtt_publish:
 
-Cloud Calling System with MQTT
+基于 MQTT 的云呼叫系统
 ============================================
 
 .. raw:: html
@@ -24,37 +10,37 @@ Cloud Calling System with MQTT
       Your browser does not support the video tag.
    </video>
 
-Message Queuing Telemetry Transport (MQTT) is a straightforward messaging protocol. It is also the most widely used messaging protocol in the realm of the Internet of Things (IoT).
+消息队列遥测传输 (MQTT) 是一种简单的消息传递协议。它也是物联网 (IoT) 领域中使用最广泛的消息传递协议。
 
-MQTT protocols define how IoT devices exchange data. They operate in an event-driven manner and are interconnected using the Publish/Subscribe model. The sender (Publisher) and the receiver (Subscriber) communicate through Topics. A device publishes a message on a specific topic, and all devices subscribed to that topic receive the message.
+MQTT 协议定义了 IoT 设备如何交换数据。它们以事件驱动的方式运行，并使用发布/订阅模型进行互连。发送方（发布者）和接收方（订阅者）通过主题进行通信。设备在特定主题上发布消息，所有订阅了该主题的设备都会收到该消息。
 
-In this section, we'll create a service bell system using UNO R4, HiveMQ (a free public MQTT broker service), and four buttons. Each of the four buttons corresponds to a restaurant table, and when a customer presses a button, you'll be able to see which table needs service on HiveMQ.
+在本节中，我们将使用 UNO R4、HiveMQ（一个免费的公共 MQTT 代理服务）和四个按钮创建一个服务呼叫系统。四个按钮分别对应餐厅的餐桌，当顾客按下按钮时，您将能够在 HiveMQ 上看到哪张餐桌需要服务。
 
-**Required Components**
+**所需元件**
 
-In this project, we need the following components. 
+在这个项目中，我们需要以下元件。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+购买整套套件会更方便，以下是链接：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - Elite Explorer Kit
+    *   - 名称
+        - 套件所含项目
+        - 链接
+    *   - Elite Explorer 套件
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+您也可以从下面的链接单独购买。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - 元件介绍
+        - 购买链接
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -66,109 +52,109 @@ You can also buy them separately from the links below.
         - |link_button_buy|
 
 
-**Wiring**
+**接线**
 
 .. image:: img/04_mqtt_button_bb.png
    :width: 70%
    :align: center
 
-**Schematic**
+**原理图**
 
 .. image:: img/04_mqtt_button_schematic.png
    :width: 50%
    :align: center
 
-**How to play?**
+**如何操作？**
 
-HiveMQ is an MQTT broker and client-based messaging platform that facilitates fast, efficient, and reliable data transfer to IoT devices.
+HiveMQ 是一个基于 MQTT 代理和客户端的消息传递平台，可促进快速、高效和可靠的数据传输到 IoT 设备。
 
-1. Open |link_hivemq| in your web browser.
+1. 在网络浏览器中打开 |link_hivemq| 。
 
-2. Connect the client to the default public proxy.
+2. 将客户端连接到默认的公共代理。
 
    .. image:: img/04_mqtt_1.png
 
-3. Click on **Add New Topic Subscription**.
+3. 点击 **Add New Topic Subscription** 。
 
    .. image:: img/04_mqtt_2.png
 
-4. Enter the topics you wish to follow and click **Subscribe**. Make sure the topics you set here are unique to avoid receiving messages from other users, and pay attention to case sensitivity. 
+4. 输入您想要关注的主题并点击 **Subscribe** 。确保您在此处设置的主题是唯一的，以免收到来自其他用户的消息，并注意大小写。
 
-   In this example code, we set the topic as ``SunFounder MQTT Test``. If you have made any changes, ensure that the topic in the code matches the subscribed topic on the webpage.
+   在此示例代码中，我们将主题设置为 ``SunFounder MQTT Test``。如果您进行了任何更改，请确保代码中的主题与网页上订阅的主题匹配。
 
    .. image:: img/04_mqtt_3.png
 
 
-**Install the Library**
+**安装库**
 
-To install the library, use the Arduino Library Manager and search for "ArduinoMqttClient" and install it.
+要安装库，请使用 Arduino 库管理器搜索 "ArduinoMqttClient" 并安装。
 
-``ArduinoMqttClient.h``: Used for MQTT communication.
+``ArduinoMqttClient.h``：用于 MQTT 通信。
 
-**Run the Code**
-
-.. note::
-
-    * You can open the file ``04_mqtt_button.ino`` under the path of ``elite-explorer-kit-main\iot_project\04_mqtt_button`` directly.
-    * Or copy this code into Arduino IDE.
+**运行代码**
 
 .. note::
-    In the code, SSID and password are stored in ``arduino_secrets.h``. Before uploading this example, you need to modify them with your own WiFi credentials. Additionally, for security purposes, ensure that this information is kept confidential when sharing or storing the code.
+
+    * 您可以直接打开路径 ``elite-explorer-kit-main\iot_project\04_mqtt_button`` 下的 ``04_mqtt_button.ino`` 文件。
+    * 或者将这段代码复制到 Arduino IDE 中。
+
+.. note::
+    在代码中，SSID 和密码存储在 ``arduino_secrets.h`` 中。上传此示例之前，您需要使用自己的 WiFi 凭据修改它们。此外，出于安全目的，在共享或存储代码时请确保此信息保密。
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/7a4acdf8-beed-47d4-ada8-cbaab0f3477f/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-After running the code, go back to |link_hivemq|, and when you press one of the buttons on the breadboard, you will see the Messages prompt on HiveMQ.
+运行代码后，返回 |link_hivemq| ，当您按下面包板上的按钮之一时，您将在 HiveMQ 上看到消息提示。
 
     .. image:: img/04_mqtt_4.png
-  
-**How it works?**
 
-This code is for an Arduino-based project that connects to Wi-Fi and communicates with an MQTT broker using the MQTT protocol. Additionally, it can detect whether four buttons are pressed and send the corresponding messages to the MQTT broker.
+**工作原理**
 
-Here is a detailed explanation of the code:
+此代码是一个基于 Arduino 的项目，它连接到 Wi-Fi 并使用 MQTT 协议与 MQTT 代理通信。此外，它可以检测四个按钮是否被按下，并将相应的消息发送到 MQTT 代理。
 
-1. **Include Relevant Libraries**:
+以下是代码的详细说明：
+
+1. **包含相关库** ：
 
    .. code-block:: Arduino
-       
+
        #include <WiFiS3.h>
        #include <ArduinoMqttClient.h>
 
-2. **Include Sensitive Information**:
+2. **包含敏感信息** ：
 
-   * The ``arduino_secrets.h`` file contains the SSID and password for the Wi-Fi network.
-   
+   * ``arduino_secrets.h`` 文件包含 Wi-Fi 网络的 SSID 和密码。
+
    .. code-block:: Arduino
-       
-       #include "arduino_secrets.h" 
-       char ssid[] = SECRET_SSID;   
-       char pass[] = SECRET_PASS;   
 
-3. **Initialize Variables**:
+       #include "arduino_secrets.h"
+       char ssid[] = SECRET_SSID;
+       char pass[] = SECRET_PASS;
 
-   * Variables for managing Wi-Fi and MQTT connections.
-   * Initialize button pins and button states.
+3. **初始化变量** ：
 
-4. ``setup()``:
+   * 用于管理 Wi-Fi 和 MQTT 连接的变量。
+   * 初始化按钮引脚和按钮状态。
 
-   * Initialize serial communication.
-   * Check for the presence of the Wi-Fi module and attempt to connect to Wi-Fi.
-   * Print network data.
-   * Attempt to connect to the MQTT broker.
-   * Subscribe to MQTT topics.
-   * Set buttons to input mode.
+4. ``setup()``：
 
-5. ``loop()``:
+   * 初始化串行通信。
+   * 检查 Wi-Fi 模块是否存在并尝试连接到 Wi-Fi。
+   * 打印网络数据。
+   * 尝试连接到 MQTT 代理。
+   * 订阅 MQTT 主题。
+   * 将按钮设置为输入模式。
 
-   * Keep the MQTT connection active.
-   * Check if each button is pressed, and if so, send MQTT messages.
+5. ``loop()``：
 
-6. **Other Utility Functions**:
+   * 保持 MQTT 连接活动。
+   * 检查每个按钮是否被按下，如果被按下，则发送 MQTT 消息。
 
-   * ``printWifiData()``: Prints information about the currently connected Wi-Fi network.
-   * ``printCurrentNet()``: Prints relevant data about the current network.
-   * ``printMacAddress(byte mac[])``: Prints the MAC address.
-   * ``onMqttMessage(int messageSize)``: Callback function triggered when a message is received from the MQTT broker. It prints the received message topic and content.
-   * ``sendButtonMessage(int buttonNumber)``: Use this function to send MQTT messages when a button is pressed.
+6. **其他实用函数** ：
+
+   * ``printWifiData()``：打印当前连接的 Wi-Fi 网络信息。
+   * ``printCurrentNet()``：打印当前网络的相关数据。
+   * ``printMacAddress(byte mac[])``：打印 MAC 地址。
+   * ``onMqttMessage(int messageSize)``：当从 MQTT 代理接收到消息时触发的回调函数。它打印接收到的消息主题和内容。
+   * ``sendButtonMessage(int buttonNumber)``：使用此函数在按下按钮时发送 MQTT 消息。

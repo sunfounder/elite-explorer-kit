@@ -1,50 +1,36 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _cpn_diode:
 
-Diode
+二极管
 =================
 
 
-A diode is an electronic component with two electrodes. It allows current to flow in only one direction, which is often called the "Rectifying" function.
-Thus, a diode can be thought of as an electronic version of a check valve.
+二极管是一种具有两个电极的电子元件。它允许电流仅沿一个方向流动，这通常被称为"整流"功能。
+因此，二极管可以被看作是电子版的止回阀。
 
-Because of its unidirectional conductivity, the diode is used in almost all electronic circuits of some complexity. It is one of the first semiconductor devices and has a wide range of applications.
+由于其单向导电性，二极管几乎用于所有具有一定复杂度的电子电路中。它是最早的半导体器件之一，具有广泛的应用。
 
-According to its use classification, it can be divided into detector diodes, rectifier diodes, limiter diodes, voltage regulator diodes, etc. 
+根据用途分类，可分为检波二极管、整流二极管、限幅二极管、稳压二极管等。
 
-Rectifier diodes and voltage regulator diodes are included in this kit.
+本套件中包含整流二极管和稳压二极管。
 
-**Rectifier Diode**
+**整流二极管**
 
 .. image:: img/in4007_diode.png
 .. image:: img/symbol_rectifier_diode.png
     :width: 200
 
-A rectifier diode is a semiconductor diode, used to rectify AC (alternating current) to DC (direct current) using the rectifier bridge application. The alternative of rectifier diode through the Schottky barrier is mainly valued within digital electronics. This diode is capable to conduct the values of current which changes from mA to a few kA & voltages up to a few kV.
+整流二极管是一种半导体二极管，用于通过整流桥应用将交流电（AC）转换为直流电（DC）。通过肖特基势垒替代的整流二极管主要在数字电子领域具有价值。该二极管能够传导从mA到几kA变化的电流值，以及高达几kV的电压。
 
-The designing of rectifier diodes can be done with Silicon material and they are capable of conducting high electric current values. These diodes are not famous but still used Ge or gallium arsenide-based semiconductor diodes. Ge diodes have less allowable reversed voltage as well as a lesser allowable junction temperature. The Ge diode has a benefit as compared to Si diode that is low threshold voltage value while operating in a forward-bias.
+整流二极管的设计采用硅材料，能够传导高电流值。这些二极管并不常见，但仍使用锗或砷化镓基半导体二极管。锗二极管具有较低的允许反向电压和较低的允许结温。与硅二极管相比，锗二极管的一个优点是正向偏置操作时的阈值电压值较低。
 
 * |link_general_purpose_diode|
 
 
-**Zener Diode**
+**稳压二极管**
 
-A Zener diode is a special type of diode designed to reliably allow current to flow "backwards" when a certain set reverse voltage, known as the Zener voltage, is reached.
+稳压二极管是一种特殊类型的二极管，设计用于在达到特定反向电压（称为齐纳电压）时可靠地允许电流"反向"流动。
 
-This diode is a semiconductor device that has a very high resistance up to the critical reverse breakdown voltage. At this critical breakdown point, the reverse resistance is reduced to a very small value, and the current increases while the voltage remains constant in this low resistance region.
+这种二极管是一种半导体器件，在达到临界反向击穿电压之前具有非常高的电阻。在此临界击穿点，反向电阻减小到非常小的值，电流增加，而在此低电阻区域内电压保持恒定。
 
 .. image:: img/zener_diode.png
 .. image:: img/symbol-zener-diode.jpg
@@ -52,6 +38,6 @@ This diode is a semiconductor device that has a very high resistance up to the c
 
 * |link_zener_diode|
 
-**Example**
+**示例**
 
- * :ref:`basic_relay` (Basic Project)
+ * :ref:`basic_relay` （基础项目）

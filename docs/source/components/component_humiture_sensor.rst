@@ -1,38 +1,23 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _cpn_dht11:
 
-Humiture Sensor Module
+温湿度传感器模块
 =============================
 
-The digital temperature and humidity sensor DHT11 is a composite sensor that contains a calibrated digital signal output of temperature and humidity. 
-The technology of a dedicated digital modules collection and the temperature and humidity sensing technology are applied to ensure that the product has high reliability and excellent long-term stability.
+数字温湿度传感器DHT11是一款复合传感器，包含已校准的数字信号输出的温度和湿度。
+采用了专用的数字模块采集技术和温湿度传感技术，确保产品具有高可靠性和卓越的长期稳定性。
 
-
-Only three pins are available for use: VCC, GND, and DATA. 
-The communication process begins with the DATA line sending start signals to DHT11, and DHT11 receives the signals and returns an answer signal. 
-Then the host receives the answer signal and begins to receive 40-bit humiture data (8-bit humidity integer + 8-bit humidity decimal + 8-bit temperature integer + 8-bit temperature decimal + 8-bit checksum).
+只有三个引脚可供使用：VCC、GND和DATA。
+通信过程始于DATA线向DHT11发送起始信号，DHT11接收信号并返回应答信号。
+然后主机接收应答信号，并开始接收40位温湿度数据（8位湿度整数 + 8位湿度小数 + 8位温度整数 + 8位温度小数 + 8位校验和）。
 
 .. image:: img/Dht11.png
 
 
 * |link_dht11_datasheet|
 
-**Example**
+**示例**
 
-* :ref:`basic_humiture_sensor` (Basic Project)
-* :ref:`fun_plant_monitor` (Fun Project)
-* :ref:`iot_arduino_cloud` (IoT Project)
-* :ref:`iot_ble_home` (IoT Project)
+* :ref:`basic_humiture_sensor` （基础项目）
+* :ref:`fun_plant_monitor` （趣味项目）
+* :ref:`iot_arduino_cloud` （物联网项目）
+* :ref:`iot_ble_home` （物联网项目）

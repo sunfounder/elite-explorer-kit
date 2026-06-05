@@ -1,56 +1,42 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _basic_relay:
 
-Relay
+继电器
 ==========================
 
 .. https://docs.sunfounder.com/projects/r4-basic-kit/en/latest/projects/relay_uno.html#relay-uno
 
 
-Overview
+概述
 ---------------
 
-As we may know, relay is a device which is used to provide connection between two or more points or devices in response to the input signal applied. In other words, relays provide isolation between the controller and the device as devices may work on AC as well as on DC. However, they receive signals from a micro-controller which works on DC hence requiring a relay to bridge the gap. Relay is extremely useful when you need to control a large amount of current or voltage with small electrical signal.
+众所周知，继电器是一种设备，用于根据施加的输入信号在两个或多个点或设备之间建立连接。换句话说，继电器在控制器和设备之间提供隔离，因为设备可能使用交流电或直流电工作。然而，它们从微控制器接收信号，而微控制器使用直流电工作，因此需要继电器来桥接这一差距。当您需要用微小的电信号控制大电流或高电压时，继电器非常有用。
 
-Required Components
+所需元件
 -------------------------
 
-In this project, we need the following components. 
+本项目中，我们需要以下元件。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+购买整套套件会更加方便，以下是链接：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - Elite Explorer Kit
+    *   - 名称
+        - 套件所含项目
+        - 链接
+    *   - Elite Explorer 套件
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+您也可以从以下链接单独购买。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - 元件介绍
+        - 购买链接
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -67,53 +53,53 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_transistor`
         - |link_transistor_buy|
     *   - :ref:`cpn_diode`
-        - |link_diode_buy| 
+        - |link_diode_buy|
 
-Wiring
+接线
 ----------------------
 
 .. image:: img/28-relay_bb.png
     :align: center
     :width: 90%
 
-Schematic Diagram
+原理图
 -----------------------
 
-Connect a 1K resistor (for current limiting when the transistor is energized) to pin 8 of the SunFounder Uno board, then to an NPN transistor whose collector is connected to the coil of a relay and emitter to GND; connect the normally open contact of the relay to an LED and then GND. Therefore, when a High level signal is given to pin 8, the transistor is energized, thus making the coil of the relay conductive. Then its normally open contact is closed, and the LED will light up. When pin 8 is given a Low level, the LED will stay dim.
+在 SunFounder Uno 板的引脚 8 上连接一个 1K 电阻（用于在晶体管导通时限制电流），然后连接到一个 NPN 晶体管，其集电极连接到继电器线圈，发射极连接到 GND；将继电器的常开触点连接到一个 LED，然后连接到 GND。因此，当引脚 8 给出高电平时，晶体管导通，从而使继电器线圈导通。然后其常开触点闭合，LED 将点亮。当引脚 8 给出低电平时，LED 将保持熄灭。
 
 .. image:: img/28_relay_schematic.png
 
 
-**Function of the freewheeling diode**: When the voltage input changes from High (5V) to Low (0V), the transistor changes from saturation (three working conditions: amplification, saturation, and cut-off) to cut-off, the current in the coil suddenly has no way to flow through. At this moment, without the freewheeling diode, a counter-electromotive force (EMF) will be generated at the ends of the coil, with positive at the bottom and negative at the top, a voltage higher than 100V. This voltage plus that from the power at the transistor are big enough to burn it. Therefore, the freewheeling diode is extremely important in discharging this counter-EMF in the direction of the arrow in the figure above, so the voltage of the transistor to GND is no higher than +5V (+0.7V).
+**续流二极管的作用** ：当电压输入从高（5V）变为低（0V）时，晶体管从饱和状态（三种工作状态：放大、饱和、截止）变为截止状态，线圈中的电流突然无处可流。此时，如果没有续流二极管，线圈两端将产生反电动势（EMF），底部为正，顶部为负，电压高于 100V。该电压加上电源在晶体管上的电压足以烧毁它。因此，续流二极管极为重要，它可以使该反电动势沿上图中箭头方向放电，从而使晶体管到 GND 的电压不高于 +5V（+0.7V）。
 
-In this experiment, when the relay closes, the LED will light up; when the relay opens, the LED will go out.
+在本实验中，当继电器闭合时，LED 将点亮；当继电器断开时，LED 将熄灭。
 
 
-Code
+代码
 --------
 
 .. note::
 
-    * You can open the file ``28-relay.ino`` under the path of ``elite-explorer-kit-main\basic_project\28-relay`` directly.
-    * Or copy this code into Arduino IDE.
+    * 您可以直接打开路径 ``elite-explorer-kit-main\basic_project\28-relay`` 下的 ``28-relay.ino`` 文件。
+    * 或者将以下代码复制到 Arduino IDE 中。
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/093cb26d-298d-4b36-b3be-466d813c19a9/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-  
 
-Now, send a High level signal, and the relay will close and the LED will light up; send a low one, and it will open and the LED will go out. In addition, you can hear a tick-tock caused by breaking the normally close contact and closing the normally open one.
 
-Code Analysis
+现在，发送高电平信号，继电器将闭合，LED 将点亮；发送低电平信号，继电器将断开，LED 将熄灭。此外，您可以听到由于断开常闭触点和闭合常开触点而产生的嘀嗒声。
+
+代码分析
 -----------------
 
 .. code-block:: arduino
 
    void loop() {
-     digitalWrite(relayPin, HIGH);  // Turn the relay on
-     delay(1000);                   // Wait for one second
-     digitalWrite(relayPin, LOW);   // Turn the relay off
-     delay(1000);                   // Wait for one second
+     digitalWrite(relayPin, HIGH);  // 打开继电器
+     delay(1000);                   // 等待一秒
+     digitalWrite(relayPin, LOW);   // 关闭继电器
+     delay(1000);                   // 等待一秒
    }
 
-The code in this experiment is simple. First, set relayPin as HIGH level and the LED connected to the relay will light up. Then set relayPin as LOW level and the LED goes out.
+本实验中的代码很简单。首先，将 relayPin 设置为高电平，连接到继电器的 LED 将点亮。然后将 relayPin 设置为低电平，LED 熄灭。

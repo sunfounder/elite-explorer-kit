@@ -1,45 +1,28 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _cpn_wires:
 
-Jumper Wires
+杜邦线
 =====================
 
-Wires that connect two terminals are called jumper wires. There are
-various kinds of jumper wires. Here we focus on those used in
-breadboard. Among others, they are used to transfer electrical signals
-from anywhere on the breadboard to the input/output pins of a
-microcontroller.
+连接两个端子的线称为杜邦线。有
+各种类型的杜邦线。这里我们重点介绍那些用于
+面包板的杜邦线。它们用于将电信号
+从面包板的任何地方传输到微控制器的输入/输出引脚。
 
-Jump wires are fitted by inserting their "end connectors" into the slots
-provided in the breadboard, beneath whose surface there are a few sets
-of parallel plates that connect the slots in groups of rows or columns
-depending on the area. The "end connectors" are inserted into the
-breadboard, without soldering, in the particular slots that need to be
-connected in the specific prototype.
+杜邦线通过将其"端接头"插入面包板的插槽中来安装，
+面包板表面下方有几组
+平行金属片，根据区域的不同，这些金属片将插槽连接成行或列的组。
+"端接头"插入面包板中，无需焊接，插入到特定原型中需要连接的特定插槽。
 
-There are three types of jumper wire: Female-to-Female, Male-to-Male,
-and Male-to-Female. The reason we call it Male-to-Female is because it
-has the outstanding tip in one end as well as a sunk female end.
-Male-to-Male means both side are male and Female-to-Female means both
-ends are female.
+有三种类型的杜邦线：母对母、公对公
+和公对母。我们称其为公对母是因为它
+一端有突出的针尖，另一端有凹陷的母座。
+公对公意味着两端都是公头，母对母意味着两端
+都是母头。
 
 .. image:: img/Jumper_Wires.png
 
 
-More than one type of them may be used in a project. The color of the
-jump wires is different but it doesn’t mean their function is different
-accordingly; it's just designed so to better identify the connection
-between each circuit.
+在一个项目中可能会使用多种类型的杜邦线。杜邦线的
+颜色不同并不代表它们的功能不同；
+这样设计只是为了更好地区分
+每个电路之间的连接。

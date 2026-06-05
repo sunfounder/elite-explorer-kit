@@ -1,17 +1,3 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _iot_cheerlights:
 
 CheerLights
@@ -24,35 +10,35 @@ CheerLights
       Your browser does not support the video tag.
    </video>
 
-CheerLights is a global network of synchronized lights that can be controlled by anyone. Join the |link_cheerlights| LED color-changing community, which allows LEDs around the world to change colors simultaneously.  Place your LEDs in a corner of your office to remind yourself that you are not alone.
+CheerLights 是一个全球性的同步灯光网络，任何人都可以控制它。加入 |link_cheerlights| LED 变色社区，让世界各地的 LED 同时改变颜色。将您的 LED 放在办公室的角落，提醒自己您并不孤单。
 
-In this case, we also utilize MQTT, but instead of publishing our own messages, we subscribe to the "cheerlights" topic. This allows us to receive messages sent by others to the "cheerlights" topic and use that information to change the color of our LED strip accordingly.
+在这种情况下，我们也使用 MQTT，但不是发布我们自己的消息，而是订阅 "cheerlights" 主题。这使我们能够接收其他人发送到 "cheerlights" 主题的消息，并使用该信息相应地更改 LED 灯带的颜色。
 
-**Required Components**
+**所需元件**
 
-In this project, we need the following components. 
+在这个项目中，我们需要以下元件。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+购买整套套件会更方便，以下是链接：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - Elite Explorer Kit
+    *   - 名称
+        - 套件所含项目
+        - 链接
+    *   - Elite Explorer 套件
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+您也可以从下面的链接单独购买。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - 元件介绍
+        - 购买链接
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -61,13 +47,13 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_ws2812`
         - |link_ws2812_buy|
 
-**Wiring**
+**接线**
 
 .. image:: img/05_cheerlight_bb.png
     :width: 100%
     :align: center
 
-**Schematic**
+**原理图**
 
 .. image:: img/05_cheerlight_schematic.png
     :width: 50%
@@ -77,30 +63,30 @@ You can also buy them separately from the links below.
 
    <br/>
 
-**Install the Library**
+**安装库**
 
-To install the library, use the Arduino Library Manager and search for "ArduinoMqttClient" and "FastLED" and install them.
+要安装库，请使用 Arduino 库管理器搜索 "ArduinoMqttClient" 和 "FastLED" 并安装它们。
 
-``ArduinoMqttClient.h``: Used for MQTT communication.
+``ArduinoMqttClient.h``：用于 MQTT 通信。
 
-``FastLED.h``: Used to drive the RGB LED Strip.
+``FastLED.h``：用于驱动 RGB LED 灯带。
 
 .. important::
-    With the release of |link_fastled_3_7_0|, the FastLED library now officially supports the Arduino UNO R4. Therefore, you no longer need to manually install the development version. Simply update or install the FastLED library using the Arduino Library Manager.
+    随着 |link_fastled_3_7_0| 的发布，FastLED 库现已正式支持 Arduino UNO R4。因此，您不再需要手动安装开发版本。只需使用 Arduino 库管理器更新或安装 FastLED 库即可。
 
 .. warning::
-    **[Outdated]** Since the |link_FastLED_lib| library has not officially released a version supporting Arduino R4 yet, you'll need to download :download:`the latest development code of the FastLED library <https://codeload.github.com/FastLED/FastLED/zip/refs/heads/master>` and overwrite the existing FastLED library files. For detailed instructions on how to do this, please refer to the :ref:`manual_install_lib` section. (This note will be retracted when the FastLED library officially releases an update that supports the Arduino UNO R4.)
+    **[已过时]** 由于 |link_FastLED_lib| 库尚未正式发布支持 Arduino R4 的版本，您需要下载 :download:`FastLED 库最新的开发代码 <https://codeload.github.com/FastLED/FastLED/zip/refs/heads/master>` 并覆盖现有的 FastLED 库文件。有关如何执行此操作的详细说明，请参阅 :ref:`manual_install_lib` 部分。（当 FastLED 库正式发布支持 Arduino UNO R4 的更新时，此说明将被删除。）
 
-**Run the Code**
+**运行代码**
 
-
-.. note::
-
-    * You can open the file ``05_cheerlight.ino`` under the path of ``elite-explorer-kit-main\iot_project\05_cheerlight`` directly.
-    * Or copy this code into Arduino IDE.
 
 .. note::
-    In the code, SSID and password are stored in ``arduino_secrets.h``. Before uploading this example, you need to modify them with your own WiFi credentials. Additionally, for security purposes, ensure that this information is kept confidential when sharing or storing the code.
+
+    * 您可以直接打开路径 ``elite-explorer-kit-main\iot_project\05_cheerlight`` 下的 ``05_cheerlight.ino`` 文件。
+    * 或者将这段代码复制到 Arduino IDE 中。
+
+.. note::
+    在代码中，SSID 和密码存储在 ``arduino_secrets.h`` 中。上传此示例之前，您需要使用自己的 WiFi 凭据修改它们。此外，出于安全目的，在共享或存储代码时请确保此信息保密。
 
 .. raw:: html
 
@@ -109,58 +95,58 @@ To install the library, use the Arduino Library Manager and search for "ArduinoM
 
 
 
-**Control global @CheerLights devices**
+**控制全球 @CheerLights 设备**
 
-#. Join the |link_discord_server| and utilize the CheerLights bot to set the color. Simply type ``/cheerlights`` in any of the channels on the **CheerLights Discord Server** to activate the bot.
+#. 加入 |link_discord_server| 并使用 CheerLights 机器人设置颜色。只需在 **CheerLights Discord Server** 的任何频道中输入 ``/cheerlights`` 即可激活机器人。
 
    .. image:: img/05_iot_cheerlights_1.png
 
-#. Follow the instructions provided by the bot to set the color. This will allow you to control CheerLights devices globally.
+#. 按照机器人提供的说明设置颜色。这将使您能够全局控制 CheerLights 设备。
 
    .. image:: img/05_iot_cheerlights_2.png
 
-**How it works?**
+**工作原理**
 
-Here are the main parts of the code and explanations of their functions:
+以下是代码的主要部分及其功能说明：
 
-1. Include the required libraries:
+1. 包含所需的库：
 
-   * ``WiFiS3.h``: Used for handling Wi-Fi connections.
-   * ``ArduinoMqttClient.h``: Used for handling MQTT connections.
-   * ``FastLED.h``: Used for controlling NeoPixel LED strips.
+   * ``WiFiS3.h``：用于处理 Wi-Fi 连接。
+   * ``ArduinoMqttClient.h``：用于处理 MQTT 连接。
+   * ``FastLED.h``：用于控制 NeoPixel LED 灯带。
 
-2. Define some constants:
+2. 定义一些常量：
 
-   * ``NUM_LEDS``: The number of LEDs on the LED strip.
-   * ``DATA_PIN``: The data pin connected to Arduino for controlling the LED strip.
-   * ``arduino_secrets.h``: Header file containing Wi-Fi network name and password to protect sensitive information.
-   * ``broker``: Address of the MQTT server.
-   * ``port``: Port of the MQTT server.
-   * ``topic``: The MQTT topic to subscribe to.
+   * ``NUM_LEDS``：LED 灯带上的 LED 数量。
+   * ``DATA_PIN``：连接到 Arduino 用于控制 LED 灯带的数据引脚。
+   * ``arduino_secrets.h``：包含 Wi-Fi 网络名称和密码的头文件，以保护敏感信息。
+   * ``broker``：MQTT 服务器的地址。
+   * ``port``：MQTT 服务器的端口。
+   * ``topic``：要订阅的 MQTT 主题。
 
-3. Define some global variables:
+3. 定义一些全局变量：
 
-   * ``CRGB leds[NUM_LEDS]``: An array to store LED color data.
-   * ``colorName``: An array of color names supported by the CheerLights project.
-   * ``colorRGB``: An array of RGB color codes corresponding to color names.
+   * ``CRGB leds[NUM_LEDS]``：用于存储 LED 颜色数据的数组。
+   * ``colorName``：CheerLights 项目支持的颜色名称数组。
+   * ``colorRGB``：与颜色名称对应的 RGB 颜色代码数组。
 
-4. ``setup()`` function:
+4. ``setup()`` 函数：
 
-   * Initialize serial communication.
-   * Check if the Wi-Fi module is present and output its firmware version.
-   * Attempt to connect to the Wi-Fi network; if it fails, wait 10 seconds and retry.
-   * Upon successful connection, connect to the MQTT broker (server) and subscribe to the specified topic.
-   * Initialize the NeoPixel LED strip.
+   * 初始化串行通信。
+   * 检查 Wi-Fi 模块是否存在并输出其固件版本。
+   * 尝试连接到 Wi-Fi 网络；如果失败，等待 10 秒后重试。
+   * 连接成功后，连接到 MQTT 代理（服务器）并订阅指定的主题。
+   * 初始化 NeoPixel LED 灯带。
 
-5. ``loop()`` function:
+5. ``loop()`` 函数：
 
-   * Periodically call the ``mqttClient.poll()`` function to receive MQTT messages and send MQTT keep-alive signals.
-   * Add a 5-second delay to avoid continuous connection.
+   * 定期调用 ``mqttClient.poll()`` 函数以接收 MQTT 消息并发送 MQTT 保持活动信号。
+   * 添加 5 秒延迟以避免持续连接。
 
-6. ``printWifiData()`` and ``printCurrentNet()`` functions are used to output Wi-Fi network and connection information.
+6. ``printWifiData()`` 和 ``printCurrentNet()`` 函数用于输出 Wi-Fi 网络和连接信息。
 
-7. ``printMacAddress()`` function is used to print the MAC address in hexadecimal format.
+7. ``printMacAddress()`` 函数用于以十六进制格式打印 MAC 地址。
 
-8. ``onMqttMessage()`` function is a callback function triggered when an MQTT message is received. It outputs the received topic and message content, converting the message content to lowercase. If the topic is "cheerlights," it calls the ``setColor()`` function to set the LED strip color.
+8. ``onMqttMessage()`` 函数是当接收到 MQTT 消息时触发的回调函数。它输出接收到的主题和消息内容，并将消息内容转换为小写。如果主题是 "cheerlights"，则调用 ``setColor()`` 函数设置 LED 灯带颜色。
 
-9. ``setColor()`` function takes a color name as a parameter, then looks for a matching color in the ``colorName`` array. If a matching color is found, it sets the LED strip's color to the corresponding RGB value and updates the LED strip's color using the ``FastLED.show()`` function.
+9. ``setColor()`` 函数接受一个颜色名称作为参数，然后在 ``colorName`` 数组中查找匹配的颜色。如果找到匹配的颜色，则将 LED 灯带的颜色设置为相应的 RGB 值，并使用 ``FastLED.show()`` 函数更新 LED 灯带的颜色。

@@ -1,20 +1,6 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _fun_digital_dice:
 
-Digital Dice
+数字骰子
 =======================================
 
 .. raw:: html
@@ -24,33 +10,33 @@ Digital Dice
       Your browser does not support the video tag.
    </video>
 
-This code is designed to simulate a rolling dice using a 74HC595 shift register and a 7-segment digital display. The dice roll simulation is activated by directly shaking the tilt switch. Upon this action, the digital display cycles through random numbers between 1 and 6, simulating the rolling of a dice. After a brief interval, the display stops, showing a random number that signifies the outcome of the dice roll.
+此代码设计用于使用 74HC595 移位寄存器和 7 段数码管模拟掷骰子。通过直接摇晃倾斜开关来激活掷骰子模拟。触发后，数码管在 1 到 6 之间的随机数字之间循环，模拟骰子滚动。短暂间隔后，显示停止，显示一个随机数字，表示骰子掷出的结果。
 
-**Required Components**
+**所需元件**
 
-In this project, we need the following components. 
+在这个项目中，我们需要以下元件。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+购买整套套件会更方便，以下是链接：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - Elite Explorer Kit
+    *   - 名称
+        - 套件所含项目
+        - 链接
+    *   - Elite Explorer 套件
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+您也可以从下面的链接单独购买。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - 元件介绍
+        - 购买链接
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -67,7 +53,7 @@ You can also buy them separately from the links below.
     *   - :ref:`cpn_7segment`
         - |link_7segment_buy|
 
-**Wiring**
+**接线**
 
 .. image:: img/05_dice_bb.png
     :width: 80%
@@ -77,51 +63,51 @@ You can also buy them separately from the links below.
 
    <br/>
 
-**Schematic**
+**原理图**
 
 .. image:: img/05_digital_dice_schematic.png
    :width: 100%
 
-**Code**
+**代码**
 
 .. note::
 
-    * You can open the file ``05_digital_dice.ino`` under the path of ``elite-explorer-kit-main\fun_project\05_digital_dice`` directly.
-    * Or copy this code into Arduino IDE.
+    * 您可以直接打开路径 ``elite-explorer-kit-main\fun_project\05_digital_dice`` 下的 ``05_digital_dice.ino`` 文件。
+    * 或者将这段代码复制到 Arduino IDE 中。
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/ff0528b0-a10d-49e8-8916-6cb1fdfdf9a2/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-**How it works?**
+**工作原理**
 
-Here's a detailed explanation of the code:
+以下是代码的详细说明：
 
-1. Initialization of variables:
+1. 变量初始化：
 
-   ``dataPin``, ``clockPin``, ``latchPin``: Pins for the 74HC595.
-   ``buttonPin``: The digital pin where the button is connected.
-   ``numbers[]``: An array to store the encoding representing numbers 1 through 6 on a common anode digital tube.
+   ``dataPin``、``clockPin``、``latchPin``：74HC595 的引脚。
+   ``buttonPin``：连接按钮的数字引脚。
+   ``numbers[]``：一个数组，用于存储在共阳极数码管上表示数字 1 到 6 的编码。
 
-2. Volatile variables:
+2. 易失性变量：
 
-   rolling: This is a volatile variable indicating whether the dice is currently rolling. 
-   It's declared as volatile since it's accessed both in the interrupt service routine and the main program.
+   rolling：这是一个易失性变量，指示骰子当前是否正在滚动。
+   它被声明为 volatile，因为它在中断服务程序和主程序中都会被访问。
 
-3. ``setup()``:
+3. ``setup()``：
 
-   Set the modes for the relevant pins.
-   Set the input mode for the button using the internal pull-up resistor.
-   Assign an interrupt to the button, which calls the rollDice function when the button's state changes.
+   设置相关引脚的模式。
+   使用内部上拉电阻设置按钮的输入模式。
+   为按钮分配一个中断，当按钮状态改变时调用 rollDice 函数。
 
-4. ``loop()``:
+4. ``loop()``：
 
-   It checks if rolling is true. If it is, it continues to display a random number between 1 and 6. If the button has been pressed for more than 500 milliseconds, the rolling stops.
+   检查 rolling 是否为真。如果是，则继续显示 1 到 6 之间的随机数字。如果按钮被按下超过 500 毫秒，则停止滚动。
 
-5. ``rollDice()``:
+5. ``rollDice()``：
 
-   This is the interrupt service routine for the button. It checks if the button is pressed (low level). If it is, the current time is recorded and the rolling begins.
+   这是按钮的中断服务程序。它检查按钮是否被按下（低电平）。如果是，则记录当前时间并开始滚动。
 
-6. ``displayNumber()``:
+6. ``displayNumber()``：
 
-   This function displays a number on the digital tube. It sends the number to the digital tube through the 74HC595 shift register.
+   此函数在数码管上显示一个数字。它通过 74HC595 移位寄存器将数字发送到数码管。

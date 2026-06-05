@@ -1,17 +1,3 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _cpn_led:
 
 LED
@@ -20,26 +6,26 @@ LED
 .. image:: img/LED.png
     :width: 400
 
-Semiconductor light-emitting diode is a type of component which can turn electric energy into light energy via PN junctions. By wavelength, it can be categorized into laser diode, infrared light-emitting diode and visible light-emitting diode which is usually known as light-emitting diode (LED). 
-                    
-Diode has unidirectional conductivity, so the current flow will be as the arrow indicates in figure circuit symbol. You can only provide the anode with a positive power and the cathode with a negative. Thus the LED will light up. 
+半导体发光二极管是一种通过PN结将电能转化为光能的元件。按波长可分为激光二极管、红外发光二极管和可见光发光二极管（通常称为LED）。
+
+二极管具有单向导电性，因此电流将如图中电路符号的箭头所示方向流动。您只能将阳极接正电源，阴极接负电源。这样LED就会亮起。
 
 .. image:: img/led_symbol.png
 
 
-An LED has two pins. The longer one is the anode, and shorter one, the cathode. Pay attention not to connect them inversely. There is fixed forward voltage drop in the LED, so it cannot be connected with the circuit directly because the supply voltage can outweigh this drop and cause the LED to be burnt. The forward voltage of the red, yellow, and green LED is 1.8 V and that of the white one is 2.6 V. Most LEDs can withstand a maximum current of 20 mA, so we need to connect a current limiting resistor in series.                   
+一个LED有两个引脚。较长的是阳极，较短的是阴极。注意不要接反。LED具有固定的正向压降，因此不能直接连接到电路，因为电源电压可能超过此压降并导致LED烧毁。红色、黄色和绿色LED的正向电压为1.8V，白色LED为2.6V。大多数LED可承受最大20mA的电流，因此我们需要串联一个限流电阻。
 
-The formula of the resistance value is as follows:
+电阻值的计算公式如下：
 
     R = (Vsupply – VD)/I
 
-**R** stands for the resistance value of the current limiting resistor, **Vsupply** for voltage supply, **VD** for voltage drop and **I** for the working current of the LED.
+**R** 代表限流电阻的电阻值，**Vsupply** 代表电源电压，**VD** 代表压降，**I** 代表LED的工作电流。
 
-Here is the detailed introduction for the LED: |link_led_wiki|.
+以下是LED的详细介绍：|link_led_wiki| 。
 
-**Example**
+**示例**
 
-* :ref:`basic_led` (Basic Project)
-* :ref:`basic_relay` (Basic Project)
-* :ref:`fun_light_array` (Fun Project)
-* :ref:`fun_smart_fan` (Fun Project)
+* :ref:`basic_led` （基础项目）
+* :ref:`basic_relay` （基础项目）
+* :ref:`fun_light_array` （趣味项目）
+* :ref:`fun_smart_fan` （趣味项目）

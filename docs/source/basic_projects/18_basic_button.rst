@@ -1,60 +1,46 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _basic_button:
 
-Button
+按键
 ==========================
 
 .. https://docs.sunfounder.com/projects/r4-basic-kit/en/latest/projects/controlling_led_by_button_uno.html#button-uno
 
 
-Overview
+概述
 ----------------
 
-In this lesson, you will learn about controlling an LED using a button with Arduino. Buttons and LEDs are fundamental components in a wide range of electronic devices, such as remote controls, flashlights, and interactive installations. In this setup, a button is used as an input device to control the state of an LED, which serves as an output device.
+在本课中，您将学习如何使用 Arduino 通过按键控制 LED。按键和 LED 是各种电子设备中的基本元件，例如遥控器、手电筒和互动装置。在本设置中，按键作为输入设备来控制 LED（作为输出设备）的状态。
 
-The button is connected to pin 12 on the Arduino Uno R4 board, and the LED is connected to pin 13. When the button is pressed, a signal is sent to the Arduino, triggering the LED to turn on. Conversely, when the button is released, the LED turns off. This simple yet effective mechanism can be the basis for more complex projects, such as home automation systems, interactive displays, and much more.
+按键连接到 Arduino Uno R4 板的引脚 12，LED 连接到引脚 13。当按键按下时，信号发送到 Arduino，触发 LED 点亮。相反，当按键释放时，LED 熄灭。这种简单而有效的机制可以成为更复杂项目的基础，例如家庭自动化系统、互动展示等等。
 
-By the end of this lesson, you will understand how to read input from a button and use it to control an LED, thereby gaining a foundational understanding of input/output operations with Arduino.
+通过本课程，您将了解如何从按键读取输入并用它来控制 LED，从而获得使用 Arduino 进行输入/输出操作的基础知识。
 
-Required Components
+所需元件
 -------------------------
 
-In this project, we need the following components. 
+本项目中，我们需要以下元件。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+购买整套套件会更加方便，以下是链接：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - Elite Explorer Kit
+    *   - 名称
+        - 套件所含项目
+        - 链接
+    *   - Elite Explorer 套件
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+您也可以从以下链接单独购买。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - 元件介绍
+        - 购买链接
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -70,7 +56,8 @@ You can also buy them separately from the links below.
         - |link_button_buy|
 
 
-Wiring
+
+接线
 ----------------------
 
 .. image:: img/18-button_bb.png
@@ -78,23 +65,23 @@ Wiring
     :width: 70%
 
 
-Schematic Diagram
+原理图
 ------------------------
 
-Connect one end of the buttons to pin 12 which connects with a pull-down resistor and a 0.1uF (104) capacitor (to eliminate jitter and output a stable level when the button is working). Connect the other end of the resistor to GND and one of the pins at the other end of the button to 5V. When the button is pressed, pin 12 is 5V (HIGH) and set pin 13 (integrated with an LED) as High at the same time. Then release the button (pin 12 changes to LOW) and pin 13 is Low. So we will see the LED lights up and goes out alternately as the button is pressed and released.
+将按键的一端连接到引脚 12，该引脚连接一个下拉电阻和一个 0.1uF (104) 电容（用于消除抖动，在按键工作时输出稳定电平）。将电阻的另一端连接到 GND，按键另一端的一个引脚连接到 5V。当按键按下时，引脚 12 为 5V (HIGH)，同时将引脚 13（集成了 LED）设置为高电平。然后松开按键（引脚 12 变为 LOW），引脚 13 变为低电平。因此，我们将看到 LED 随着按键的按下和释放交替亮灭。
 
 .. image:: img/18_button_schematic.png
     :align: center
     :width: 70%
 
 
-Code
+代码
 ---------------
 
 .. note::
 
-    * You can open the file ``18-button.ino`` under the path of ``elite-explorer-kit-main\basic_project\18-button`` directly.
-    * Or copy this code into Arduino IDE.
+    * 您可以直接打开路径 ``elite-explorer-kit-main\basic_project\18-button`` 下的 ``18-button.ino`` 文件。
+    * 或者将以下代码复制到 Arduino IDE 中。
 
 
 
@@ -102,39 +89,40 @@ Code
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/a710eb54-9447-4542-ac98-c9a7e1ec4256/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-    
 
 
-Code Analysis
+
+
+代码分析
 -------------------
 
-#. Define Constants and Variables
+#. 定义常量和变量
 
-   In this segment, the pin numbers for the button and the LED are defined. Also, a variable ``buttonState`` is declared to hold the current state of the button.
- 
+   在此部分中，定义了按键和 LED 的引脚编号。同时，声明了一个变量 ``buttonState`` 用于保存按键的当前状态。
+
    .. code-block:: arduino
- 
+
      const int buttonPin = 12;
      const int ledPin = 13;
      int buttonState = 0;
 
-#. Setup Function
+#. 设置函数
 
-   The ``setup()`` function runs once when the Arduino board starts. The pin modes for the button and the LED are set using the ``pinMode`` function.
- 
+   ``setup()`` 函数在 Arduino 板启动时运行一次。使用 ``pinMode`` 函数设置按键和 LED 的引脚模式。
+
    .. code-block:: arduino
- 
+
      void setup() {
        pinMode(buttonPin, INPUT);
        pinMode(ledPin, OUTPUT);
      }
 
-#. Main Loop
+#. 主循环
 
-   The ``loop()`` function runs repeatedly. Inside this loop, the ``digitalRead()`` function is used to read the state of the button. Depending on whether the button is pressed or not, the LED is turned on or off.
- 
+   ``loop()`` 函数重复运行。在此循环中，使用 ``digitalRead()`` 函数读取按键的状态。根据按键是否按下，打开或关闭 LED。
+
    .. code-block:: arduino
- 
+
      void loop() {
        buttonState = digitalRead(buttonPin);
        if (buttonState == HIGH) {

@@ -1,17 +1,3 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _cpn_i2c_lcd1602:
 
 I2C LCD1602
@@ -20,43 +6,43 @@ I2C LCD1602
 .. image:: img/i2c_lcd1602.png
     :width: 800
 
-* **GND**: Ground
-* **VCC**: Voltage supply, 5V.
-* **SDA**: Serial data line. Connect to VCC through a pullup resistor.
-* **SCL**: Serial clock line. Connect to VCC through a pullup resistor.
+* **GND** ：接地
+* **VCC** ：电源电压，5V。
+* **SDA** ：串行数据线。通过上拉电阻连接到VCC。
+* **SCL** ：串行时钟线。通过上拉电阻连接到VCC。
 
-As we all know, though LCD and some other displays greatly enrich the man-machine interaction, they share a common weakness. When they are connected to a controller, multiple IOs will be occupied of the controller which has no so many outer ports. Also it restricts other functions of the controller. 
+众所周知，虽然LCD和其他一些显示器极大地丰富了人机交互，但它们有一个共同的缺点。当它们连接到控制器时，会占用控制器多个IO口，而控制器没有那么多外部端口。这也限制了控制器的其他功能。
 
-Therefore, LCD1602 with an I2C module is developed to solve the problem. The I2C module has a built-in PCF8574 I2C chip that converts I2C serial data to parallel data for the LCD display.        
+因此，带有I2C模块的LCD1602被开发出来以解决这个问题。I2C模块内置了PCF8574 I2C芯片，可将I2C串行数据转换为LCD显示所需的并行数据。
 
 * |link_pcf8574_datasheet|
 
-**I2C Address**
+**I2C地址**
 
-The default address is basically 0x27, in a few cases it may be 0x3F.
+默认地址基本上为0x27，少数情况下可能是0x3F。
 
-Taking the default address of 0x27 as an example, the device address can be modified by shorting the A0/A1/A2 pads; in the default state, A0/A1/A2 is 1, and if the pad is shorted, A0/A1/A2 is 0.
+以默认地址0x27为例，可以通过短接A0/A1/A2焊盘来修改设备地址；在默认状态下，A0/A1/A2为1，如果焊盘被短接，则A0/A1/A2为0。
 
 .. image:: img/i2c_address.jpg
     :width: 600
 
-**Backlight/Contrast**
+**背光/对比度**
 
-Backlight can be enabled by jumper cap, unplugg the jumper cap to disable the backlight. The blue potentiometer on the back is used to adjust the contrast (the ratio of brightness between the brightest white and the darkest black).
-
+背光可以通过跳线帽启用，拔下跳线帽即可禁用背光。背面的蓝色电位器用于调节对比度（最亮白色与最暗黑色之间的亮度比）。
 
 .. image:: img/back_lcd1602.jpg
 
-* **Shorting Cap**: Backlight can be enabled by this cap, unplugg this cap to disable the backlight.
-* **Potentiometer**: It is used to adjust the contrast (the clarity of the displayed text), which is increased in the clockwise direction and decreased in the counterclockwise direction.
+* **短接帽** ：通过此帽启用背光，拔下此帽可禁用背光。
+* **电位器** ：用于调节对比度（显示文本的清晰度），顺时针旋转增加，逆时针旋转减小。
 
 
 
 
-**Example**
 
-* :ref:`basic_i2c_lcd1602` (Basic Project)
-* :ref:`basic_ultrasonic_sensor` (Basic Project)
-* :ref:`fun_plant_monitor` (Fun Project)
-* :ref:`fun_guess_number` (Fun Project)
-* :ref:`iot_Bluetooth_lcd` (IoT Project)
+**示例**
+
+* :ref:`basic_i2c_lcd1602` （基础项目）
+* :ref:`basic_ultrasonic_sensor` （基础项目）
+* :ref:`fun_plant_monitor` （趣味项目）
+* :ref:`fun_guess_number` （趣味项目）
+* :ref:`iot_Bluetooth_lcd` （物联网项目）

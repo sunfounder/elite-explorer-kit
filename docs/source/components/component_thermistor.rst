@@ -1,60 +1,46 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _cpn_thermistor:
 
-Thermistor
+热敏电阻
 ===============
 
 .. image:: img/thermistor.png
     :width: 150
     :align: center
 
-A thermistor is a type of resistor whose resistance is strongly dependent on temperature, more so than in standard resistors. The word is a combination of thermal and resistor. Thermistors are widely used as inrush current limiters, temperature sensors (negative temperature coefficient or NTC type typically), self-resetting overcurrent protectors, and self-regulating heating elements (positive temperature coefficient or PTC type typically).
+热敏电阻是一种电阻值强烈依赖于温度的电阻器，其依赖程度比标准电阻器更显著。这个词是热（thermal）和电阻（resistor）的组合。热敏电阻广泛用作浪涌电流限制器、温度传感器（通常为负温度系数或NTC型）、自恢复过流保护器和自调节加热元件（通常为正温度系数或PTC型）。
 
 * |link_thermistor_wikipedia|
 
-Here is the electronic symbol of thermistor.
+以下是热敏电阻的电子符号。
 
 .. image:: img/thermistor_symbol.png
     :width: 300
     :align: center
 
-Thermistors are of two opposite fundamental types:
+热敏电阻有两种相反的基本类型：
 
-* With NTC thermistors, resistance decreases as temperature rises usually due to an increase in conduction electrons bumped up by thermal agitation from valency band. An NTC is commonly used as a temperature sensor, or in series with a circuit as an inrush current limiter.
-* With PTC thermistors, resistance increases as temperature rises usually due to increased thermal lattice agitations particularly those of impurities and imperfections. PTC thermistors are commonly installed in series with a circuit, and used to protect against overcurrent conditions, as resettable fuses.
+* 对于NTC热敏电阻，电阻随温度升高而减小，通常是由于热激发从价带跃迁到导带的导电电子增加所致。NTC通常用作温度传感器，或串联在电路中作为浪涌电流限制器。
+* 对于PTC热敏电阻，电阻随温度升高而增大，通常是由于热晶格扰动增加，尤其是杂质和缺陷引起的扰动。PTC热敏电阻通常串联在电路中，用作自恢复保险丝以防止过流情况。
 
-In this kit we use an NTC one. Each thermistor has a normal resistance. Here it is 10k ohm, which is measured under 25 degree Celsius.
+本套件中使用的是NTC型热敏电阻。每个热敏电阻都有一个标称电阻值。这里为10k欧姆，这是在25摄氏度下测量的。
 
-Here is the relation between the resistance and temperature:
+以下是电阻与温度之间的关系：
 
-    RT = RN * expB(1/TK – 1/TN)   
+    RT = RN * expB(1/TK – 1/TN)
 
-* **RT** is the resistance of the NTC thermistor when the temperature is TK. 
-* **RN** is the resistance of the NTC thermistor under the rated temperature TN. Here, the numerical value of RN is 10k.
-* **TK** is a Kelvin temperature and the unit is K. Here, the numerical value of TK is 273.15 + degree Celsius.
-* **TN** is a rated Kelvin temperature; the unit is K too. Here, the numerical value of TN is 273.15+25.
-* And **B(beta)**, the material constant of NTC thermistor, is also called heat sensitivity index with a numerical value 3950.      
-* **exp** is the abbreviation of exponential, and the base number e is a natural number and equals 2.7 approximately.  
+* **RT** 是温度为TK时NTC热敏电阻的电阻值。
+* **RN** 是NTC热敏电阻在额定温度TN下的电阻值。这里，RN的数值为10k。
+* **TK** 是开尔文温度，单位为K。这里，TK的数值为273.15 + 摄氏度。
+* **TN** 是额定开尔文温度；单位也是K。这里，TN的数值为273.15+25。
+* **B（beta）** 是NTC热敏电阻的材料常数，也称为热敏指数，数值为3950。
+* **exp** 是指数的缩写，底数e是自然数，约等于2.7。
 
-Convert this formula TK=1/(ln(RT/RN)/B+1/TN) to get Kelvin temperature that minus 273.15 equals degree Celsius.
+转换公式TK=1/(ln(RT/RN)/B+1/TN)得到开尔文温度，减去273.15等于摄氏度。
 
-This relation is an empirical formula. It is accurate only when the temperature and resistance are within the effective range.
+这个关系是经验公式。仅当温度和电阻在有效范围内时才准确。
 
-**Example**
+**示例**
 
-* :ref:`basic_thermistor` (Basic Project)
-* :ref:`fun_smart_fan` (Fun Project)
+* :ref:`basic_thermistor` （基础项目）
+* :ref:`fun_smart_fan` （趣味项目）
 

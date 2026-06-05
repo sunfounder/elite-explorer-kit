@@ -1,87 +1,73 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _new_hid:
 
 USB HID
 ========================================
 
-The Arduino Uno R4 WiFi is not just a powerful development board; it also comes with built-in support for Human Interface Devices (HID). This enables you to use the board to emulate devices like mice and keyboards, adding a new level of interactivity to your projects.
+Arduino Uno R4 WiFi 不仅是一个功能强大的开发板，它还内置了对人机接口设备 (HID) 的支持。这使您可以使用该板模拟鼠标和键盘等设备，为您的项目增加新的交互性。
 
-HID, or Human Interface Devices, are a category of computer devices designed for direct interaction with humans, typically for input purposes. This category includes devices like keyboards, mice, and game controllers. With the Arduino Uno R4 WiFi, you can emulate these devices, thereby unlocking a host of possibilities for DIY projects.
+HID，即人机接口设备，是一类计算机设备，设计用于与人类直接交互，通常用于输入目的。此类设备包括键盘、鼠标和游戏控制器。借助 Arduino Uno R4 WiFi，您可以模拟这些设备，从而为 DIY 项目开启大量可能性。
 
-Mouse Control
+鼠标控制
 -------------------
 
-Controlling a mouse using the Arduino Uno R4 WiFi is straightforward. By using the ``Mouse.move(x,y)`` command, you can easily control mouse movement. When updating the cursor position, it is always relative to the cursor’s previous location.
+使用 Arduino Uno R4 WiFi 控制鼠标非常简单。通过使用 ``Mouse.move(x,y)`` 命令，您可以轻松控制鼠标移动。更新光标位置时，它始终相对于光标的先前位置。
 
-Here's a simple example that demonstrates mouse cursor control using a button.
+以下是一个简单的示例，演示了如何使用按钮控制鼠标光标。
 
-**Circuit Diagram**
+**电路图**
 
 .. image:: img/05_hid_1_bb.png
   :width: 70%
   :align: center
 
-**Upload the Code**
+**上传代码**
 
-Open the ``05-hid_mouse.ino`` file located at ``elite-explorer-kit-main\r4_new_feature\05-hid_mouse``, or paste the following code into your Arduino IDE.
+打开位于 ``elite-explorer-kit-main\r4_new_feature\05-hid_mouse`` 的 ``05-hid_mouse.ino`` 文件，或将以下代码粘贴到您的 Arduino IDE 中。
 
 .. warning::
-    When you use the ``Mouse.move()`` command, the Arduino takes over your computer's mouse! To insure you don't lose control of your computer while running a sketch with this function, make sure to set up a reliable control system before you call ``Mouse.move()``. This sketch includes a pushbutton to toggle the mouse, so that it only runs after the button is pressed.
+    当您使用 ``Mouse.move()`` 命令时，Arduino 会接管您计算机的鼠标！为了确保在运行使用此功能的 sketch 时不会失去对计算机的控制，请确保在调用 ``Mouse.move()`` 之前设置一个可靠的控制系统。此 sketch 包含一个按钮来切换鼠标，因此只有在按下按钮后才会运行。
 
-.. warning:: 
-    Due to the multi-processor architecture of the UNO R4 WiFi board, you may face **"No device found on..."** errors while uploading code that uses HID functionalities.
-    
-    To upload under such circumstances, follow these steps:
-    
-    1. Quickly press and release the "RESET" button on the board twice. The LED marked "L" should start pulsing.
-    
-    2. From the Arduino IDE menu, select the board’s port. The port may change following the reset, so ensure it’s correctly selected.
+.. warning::
+    由于 UNO R4 WiFi 板的多处理器架构，在上传使用 HID 功能的代码时，您可能会遇到 **"No device found on..."** 错误。
+
+    要在这种情况下上传，请按照以下步骤操作：
+
+    1. 快速按下并松开板上的 "RESET" 按钮两次。标记为 "L" 的 LED 应开始闪烁。
+
+    2. 从 Arduino IDE 菜单中，选择板的端口。复位后端口可能会改变，因此请确保正确选择。
 
 .. raw:: html
 
    <iframe src=https://create.arduino.cc/editor/sunfounder01/4b72e0f4-57cb-4627-b728-10a16f61d15c/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
-In addition to controlling mouse movement, you can also handle mouse clicks. For more details, refer to |link_r4_usb_mouse|.
+除了控制鼠标移动，您还可以处理鼠标点击。有关更多详细信息，请参阅 |link_r4_usb_mouse| 。
 
 .. _new_hid_keyboard:
 
-Keyboard Control
+键盘控制
 -------------------
 
-The Arduino Uno R4 WiFi also provides keyboard emulation capabilities. It allows you to send not only individual keypresses but also execute complex key combinations.
+Arduino Uno R4 WiFi 还提供键盘模拟功能。它允许您不仅发送单个按键，还可以执行复杂的组合键。
 
 .. warning::
-   When you use the ``Keyboard.print()`` command, the Arduino takes over your computer's keyboard! To insure you don't lose control of your computer while running a sketch with this function, make sure to set up a reliable control system before you call ``Keyboard.print()``. This sketch includes a pushbutton to toggle the keyboard, so that it only runs after the button is pressed.
+    当您使用 ``Keyboard.print()`` 命令时，Arduino 会接管您计算机的键盘！为了确保在运行使用此功能的 sketch 时不会失去对计算机的控制，请确保在调用 ``Keyboard.print()`` 之前设置一个可靠的控制系统。此 sketch 包含一个按钮来切换键盘，因此只有在按下按钮后才会运行。
 
-**Example Code for Sending Shortcut Keys**
+**发送快捷键的示例代码**
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-In this instance, the Arduino Uno R4 WiFi is configured to emulate two frequently-used keyboard shortcuts: "Ctrl+C" for copy and "Ctrl+V" for paste. Two physical buttons connected to the Arduino serve as triggers. The button connected to pin 7 initiates the copy action, while the one connected to pin 8 triggers paste.
+在此实例中，Arduino Uno R4 WiFi 被配置为模拟两个常用的键盘快捷键："Ctrl+C" 用于复制，"Ctrl+V" 用于粘贴。连接到 Arduino 的两个物理按钮用作触发器。连接到引脚 7 的按钮启动复制操作，而连接到引脚 8 的按钮触发粘贴。
 
-Upon pressing either button, the Arduino employs the ``Keyboard.press()`` and ``Keyboard.releaseAll()`` functions to mimic the respective keyboard shortcuts. This example illustrates how you can design a dedicated hardware interface for specific tasks, facilitating repetitive actions without keyboard involvement. This could be especially advantageous in workplaces requiring quick data manipulation or in accessibility setups that benefit from simplified controls.
+按下任一按钮时，Arduino 使用 ``Keyboard.press()`` 和 ``Keyboard.releaseAll()`` 函数模拟相应的键盘快捷键。此示例说明了如何为特定任务设计专用硬件接口，从而无需键盘即可方便地执行重复性操作。这在需要快速数据操作的工作场所或受益于简化控制的无障碍设置中可能特别有利。
 
-**Circuit Diagram**
+**电路图**
 
 .. image:: img/05_hid_2_bb.png
   :width: 70%
   :align: center
 
-**Upload the Code**
+**上传代码**
 
-Open the ``05-hid_keyboard.ino`` file located at ``elite-explorer-kit-main\r4_new_feature\05-hid_keyboard``, or paste the following code into your Arduino IDE.
+打开位于 ``elite-explorer-kit-main\r4_new_feature\05-hid_keyboard`` 的 ``05-hid_keyboard.ino`` 文件，或将以下代码粘贴到您的 Arduino IDE 中。
 
 .. raw:: html
 
@@ -89,23 +75,23 @@ Open the ``05-hid_keyboard.ino`` file located at ``elite-explorer-kit-main\r4_ne
 
 
 
-Caveats and Tips
+注意事项和技巧
 -------------------
 
-1. **Cautionary Note on Mouse and Keyboard Libraries**: If either the Mouse or Keyboard library is running continuously, it could interfere with your board's programming. Functions like ``Mouse.move()`` and ``Keyboard.print()`` will assume control of your connected computer and should be invoked only when you're prepared to manage them. It's advised to use a control system, such as a physical switch or specific input controls, to toggle this functionality.
+1. **关于鼠标和键盘库的注意事项** ：如果鼠标或键盘库连续运行，可能会干扰您的板编程。像 ``Mouse.move()`` 和 ``Keyboard.print()`` 这样的函数将接管您已连接的计算机的控制权，只应在您准备好管理它们时调用。建议使用控制系统，例如物理开关或特定的输入控制，来切换此功能。
 
-2. **If You Encounter Code Upload Issues**: Due to the multi-processor architecture of the UNO R4 WiFi board, you may face ``"No device found on..."`` errors while uploading code that uses HID functionalities.
+2. **如果遇到代码上传问题** ：由于 UNO R4 WiFi 板的多处理器架构，在上传使用 HID 功能的代码时，您可能会遇到 ``"No device found on..."`` 错误。
 
-   To upload under such circumstances, follow these steps:
-   
-   1. Quickly press and release the "RESET" button on the board twice. The LED marked "L" should start pulsing.
-   
-   2. From the Arduino IDE menu, select the board's port. The port may change following the reset, so ensure it's correctly selected.
+   要在这种情况下上传，请按照以下步骤操作：
 
+   1. 快速按下并松开板上的 "RESET" 按钮两次。标记为 "L" 的 LED 应开始闪烁。
 
+   2. 从 Arduino IDE 菜单中，选择板的端口。复位后端口可能会改变，因此请确保正确选择。
 
 
-**Reference**
+
+
+**参考**
 
 - |link_r4_usb_hid|
 - |link_r4_usb_mouse|

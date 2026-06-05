@@ -1,36 +1,21 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
-Learn about the Components in Your Kit
+了解您套件中的元件
 =========================================
 
-Components List
+元件清单
 -----------------
 
-After opening the package, please check whether the quantity of components is compliance with product description and whether all components are in good condition.
+打开包装后，请检查元件数量是否与产品描述一致，以及所有元件是否完好无损。
 
-* :download:`Components List </_static/Elite_Explorer_Kit_Components_List.pdf>`
+* :download:`元件清单 </_static/Elite_Explorer_Kit_Components_List.pdf>`
 
 
-Components Introductions
+元件介绍
 --------------------------
 
+以下是对每个元件的介绍，包含元件的工作原理以及相应的项目。
 
-Below is the introduction to each component, which contains the operating principle of the component and the corresponding projects.
 
-
-**Basic**
+**基础元件**
 
 .. toctree::
     :maxdepth: 1
@@ -43,7 +28,7 @@ Below is the introduction to each component, which contains the operating princi
     component_diode
     component_wires
 
-**Chip**
+**芯片**
 
 .. toctree::
     :maxdepth: 1
@@ -51,11 +36,11 @@ Below is the introduction to each component, which contains the operating princi
     component_ta6585
     component_74hc595
 
-**Display**
+**显示**
 
 .. toctree::
     :maxdepth: 1
-    
+
     component_led
     component_rgb_led
     component_ws2812
@@ -64,7 +49,7 @@ Below is the introduction to each component, which contains the operating princi
     component_oled
 
 
-**Sound**
+**声音**
 
 .. toctree::
     :maxdepth: 1
@@ -72,7 +57,7 @@ Below is the introduction to each component, which contains the operating princi
     component_buzzer
     component_audio_speaker
 
-**Driver**
+**驱动**
 
 .. toctree::
     :maxdepth: 1
@@ -83,9 +68,9 @@ Below is the introduction to each component, which contains the operating princi
     component_servo
     component_relay
     component_power_module
-    
 
-**Controller**
+
+**控制**
 
 .. toctree::
     :maxdepth: 1
@@ -98,7 +83,7 @@ Below is the introduction to each component, which contains the operating princi
     component_mpr121_module
 
 
-**Sensor**
+**传感器**
 
 .. toctree::
     :maxdepth: 1

@@ -1,58 +1,44 @@
-.. note::
-
-    Hello, welcome to the SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasts Community on Facebook! Dive deeper into Raspberry Pi, Arduino, and ESP32 with fellow enthusiasts.
-
-    **Why Join?**
-
-    - **Expert Support**: Solve post-sale issues and technical challenges with help from our community and team.
-    - **Learn & Share**: Exchange tips and tutorials to enhance your skills.
-    - **Exclusive Previews**: Get early access to new product announcements and sneak peeks.
-    - **Special Discounts**: Enjoy exclusive discounts on our newest products.
-    - **Festive Promotions and Giveaways**: Take part in giveaways and holiday promotions.
-
-    👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
-
 .. _basic_passive_buzzer:
 
-Passive Buzzer
+无源蜂鸣器
 ==========================
 
 .. https://docs.sunfounder.com/projects/3in1-kit-r4/en/latest/basic_project/ar_tone_notone.html#ar-passive-buzzer
 
 
-Overview
+概述
 ---------------
 
-In this project, use these two functions to make the passive buzzer vibrate and produce sound. The function ``tone()`` generates a square wave with a specified frequency (and 50% duty cycle) on a pin. A duration can be specified, or the wave continues until ``noTone()`` is called.
-Similar to the active buzzer, the passive buzzer also utilizes electromagnetic induction to operate.
-The difference is that a passive buzzer does not have its own oscillating source, so it will not emit sound if DC signals are used.However, this allows the passive buzzer to adjust its own oscillation frequency and produce different notes such as "do, re, mi, fa, sol, la, ti".
+在本项目中，使用这两个函数使无源蜂鸣器振动并产生声音。函数 ``tone()`` 在引脚上生成指定频率（和 50% 占空比）的方波。可以指定持续时间，或者波形持续到调用 ``noTone()`` 为止。
+与有源蜂鸣器类似，无源蜂鸣器也利用电磁感应原理工作。
+不同之处在于，无源蜂鸣器没有自己的振荡源，因此如果使用直流信号，它不会发出声音。然而，这使得无源蜂鸣器可以调整自身的振荡频率，并产生不同的音符，如"do、re、mi、fa、sol、la、ti"。
 
-Required Components
+所需元件
 -------------------------
 
-In this project, we need the following components. 
+本项目中，我们需要以下元件。
 
-It's definitely convenient to buy a whole kit, here's the link: 
+购买整套套件会更加方便，以下是链接：
 
 .. list-table::
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Name	
-        - ITEMS IN THIS KIT
-        - LINK
-    *   - Elite Explorer Kit
+    *   - 名称
+        - 套件所含项目
+        - 链接
+    *   - Elite Explorer 套件
         - 300+
         - |link_Elite_Explorer_kit|
 
-You can also buy them separately from the links below.
+您也可以从以下链接单独购买。
 
 .. list-table::
     :widths: 30 20
     :header-rows: 1
 
-    *   - COMPONENT INTRODUCTION
-        - PURCHASE LINK
+    *   - 元件介绍
+        - 购买链接
 
     *   - :ref:`uno_r4_wifi`
         - \-
@@ -68,62 +54,63 @@ You can also buy them separately from the links below.
         - |link_passive_buzzer_buy|
 
 
-Wiring
+
+接线
 ----------------------
 
 .. note::
-    When connecting the buzzer, make sure to check its pins. The longer pin is the anode and the shorter one is the cathode. It's important not to mix them up, as doing so will prevent the buzzer from producing any sound.
+    连接蜂鸣器时，请务必检查其引脚。较长的引脚是阳极，较短的是阴极。不要弄反，否则蜂鸣器不会发出声音。
 
 .. image:: img/16-passive_buzzer_bb.png
     :align: center
     :width: 70%
 
-Schematic Diagram
+原理图
 -----------------------
 
 .. image:: img/16_passive_buzzer_schematic.png
     :align: center
     :width: 80%
 
-Code
+代码
 ---------------
 
 .. note::
 
-    * You can open the file ``16-passive_buzzer.ino`` under the path of ``elite-explorer-kit-main\basic_project\16-passive_buzzer`` directly.
-    * Or copy this code into Arduino IDE.
+    * 您可以直接打开路径 ``elite-explorer-kit-main\basic_project\16-passive_buzzer`` 下的 ``16-passive_buzzer.ino`` 文件。
+    * 或者将以下代码复制到 Arduino IDE 中。
 
 .. raw:: html
 
     <iframe src=https://create.arduino.cc/editor/sunfounder01/7936cad2-3605-40a0-a9fc-573f934ab6b1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-    
-At the time when you finish uploading the codes to the R4 board, you can hear a melody containing seven notes. 
 
-Code Analysis
+将代码上传到 R4 板后，您可以听到包含七个音符的旋律。
+
+代码分析
 ------------------------
 
-1. Including the pitches library:
-   This library provides the frequency values for various musical notes, allowing you to use musical notation in your code.
+1. 包含 pitches 库：
+   该库提供了各种音符的频率值，使您可以在代码中使用音符记法。
 
    .. note::
-      Please place the ``pitches.h`` file in the same directory as the code to ensure proper functioning. |link_pitches|
+      请将 ``pitches.h`` 文件放在与代码相同的目录中，以确保正常运行。|link_pitches|
 
       .. image:: img/16_passive_buzzer_piches.png
 
    .. code-block:: arduino
-       
+
       #include "pitches.h"
 
-2. Defining constants and arrays:
+2. 定义常量和数组：
 
-   * ``buzzerPin`` is the digital pin on the Arduino where the buzzer is connected.
+   * ``buzzerPin`` 是 Arduino 上连接蜂鸣器的数字引脚。
 
-   * ``melody[]`` is an array that stores the sequence of notes to be played.
+   * ``melody[]`` 是一个存储要播放的音符序列的数组。
 
-   * ``noteDurations[]`` is an array that stores the duration of each note in the melody.
+   * ``noteDurations[]`` 是一个存储旋律中每个音符时长的数组。
 
    .. code-block:: arduino
-   
+
       const int buzzerPin = 8;
       int melody[] = {
         NOTE_C4, NOTE_G3, NOTE_G3, NOTE_A3, NOTE_G3, 0, NOTE_B3, NOTE_C4
@@ -132,20 +119,18 @@ Code Analysis
         4, 8, 8, 4, 4, 4, 4, 4
       };
 
-3. Playing the melody:
+3. 播放旋律：
 
-   * The ``for`` loop iterates over each note in the melody.
+   * ``for`` 循环遍历旋律中的每个音符。
 
-   * The ``tone()`` function plays a note on the buzzer for a specific duration.
+   * ``tone()`` 函数在蜂鸣器上以特定时长播放一个音符。
 
-   * A delay is added between notes to distinguish them.
+   * 在音符之间添加延迟以区分它们。
 
-   * The ``noTone()`` function stops the sound.
-
-
+   * ``noTone()`` 函数停止声音。
 
    .. code-block:: arduino
-   
+
       void setup() {
         for (int thisNote = 0; thisNote < 8; thisNote++) {
           int noteDuration = 1000 / noteDurations[thisNote];
@@ -156,7 +141,7 @@ Code Analysis
         }
       }
 
-4. Empty loop function:
-   Since the melody is played only once in the setup, there's no code in the loop function.
+4. 空的 loop 函数：
+   由于旋律仅在 setup 中播放一次，因此 loop 函数中没有代码。
 
-5. Feel free to experiment with altering the notes and durations in the ``melody[]`` and ``noteDurations[]`` arrays to create your own melodies. If you're interested, there is a GitHub repository (|link_arduino-songs|) that offers Arduino code for playing various songs. While their approach may differ from this project, you can consult their notes and durations for reference.
+5. 随意尝试更改 ``melody[]`` 和 ``noteDurations[]`` 数组中的音符和时长，创建您自己的旋律。如果您有兴趣，有一个 GitHub 仓库 (|link_arduino-songs|) 提供了播放各种歌曲的 Arduino 代码。虽然他们的方法可能与此项目不同，但您可以参考他们的音符和时长。

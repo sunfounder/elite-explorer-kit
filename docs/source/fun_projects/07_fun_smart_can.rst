@@ -76,7 +76,7 @@ Vous pouvez également les acheter séparément à partir des liens ci-dessous.
 **Câblage**
 
 .. note::
-    Pour protéger la batterie de la :ref:`cpn_power`, veuillez la charger complètement avant de l'utiliser pour la première fois.
+    Pour protéger le Power Pack de la :ref:`cpn_power`, veuillez le charger complètement avant de l'utiliser pour la première fois.
 
 .. image:: img/06_smart_fan_bb.png
     :width: 100%

@@ -67,7 +67,7 @@ Câblage
 ----------------------
 
 .. note::
-    Pour protéger la batterie du :ref:`cpn_power`, veuillez la charger complètement avant de l'utiliser pour la première fois.
+    Pour protéger le Power Pack du :ref:`cpn_power`, veuillez le charger complètement avant de l'utiliser pour la première fois.
 
 .. image:: img/25-pump_bb.png
     :align: center

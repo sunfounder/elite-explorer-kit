@@ -18,7 +18,7 @@ Stromversorgungsmodul
 =====================
 
 .. note::
-    Um den Akku des :ref:`cpn_power` zu schonen, laden Sie ihn bitte vor dem ersten Gebrauch vollständig auf.
+    Um den Power-Pack des :ref:`cpn_power` zu schonen, laden Sie ihn bitte vor dem ersten Gebrauch vollständig auf.
 
 Wenn wir einen großen Strom benötigen, um eine Komponente zu betreiben, kann dies die normale Arbeit des Arduino UNO-Boards stark beeinträchtigen. Daher versorgen wir die Komponente separat mit diesem Modul, um sie sicher und stabil laufen zu lassen.
 
@@ -43,7 +43,7 @@ Sie können es einfach in das Steckbrett stecken, um Strom zu liefern. Es bietet
 * USB (Typ-C) Ausgang verfügbar
 * USB (Typ-A) Eingang verfügbar
 * An Bord LED: Ladeanzeige CHG, Betriebsanzeige PWR
-* Akku: 3,7V 14500 Lithium-Ionen-Akku, 500mAh
+* Akku: 3,7V Power-Pack, 500mAh
 * Abmessungen: 52mm x 32mm (L x B)
 
 

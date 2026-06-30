@@ -70,7 +70,7 @@ Wiring
 ----------------------
 
 .. note::
-    To protect the :ref:`cpn_power`'s battery, please fully charge it before using it for the first time.
+    To protect the :ref:`cpn_power`'s Power Pack, please fully charge it before using it for the first time.
 
 .. image:: img/25-pump_bb.png
     :align: center

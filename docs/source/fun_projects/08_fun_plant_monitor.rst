@@ -75,7 +75,7 @@ You can also buy them separately from the links below.
 **Wiring**
 
 .. note::
-    To protect the :ref:`cpn_power`'s battery, please fully charge it before using it for the first time.
+    To protect the :ref:`cpn_power`'s Power Pack, please fully charge it before using it for the first time.
 
 .. image:: img/08_plant_monitor_bb.png
     :width: 100%

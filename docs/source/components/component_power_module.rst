@@ -16,7 +16,7 @@
 Modulo di Alimentazione
 ===============================
 
-.. note::    Per proteggere la batteria del :ref:`cpn_power`, caricala completamente prima di utilizzarla per la prima volta.
+.. note::    Per proteggere il Power Pack del :ref:`cpn_power`, caricalo completamente prima di utilizzarlo per la prima volta.
 
 Quando abbiamo bisogno di una grande corrente per pilotare un componente, ciò può interferire gravemente con il normale funzionamento della scheda Arduino UNO. Pertanto, forniamo separatamente l'alimentazione per il componente tramite questo modulo per farlo funzionare in modo sicuro e stabile.
 
@@ -38,7 +38,7 @@ Puoi semplicemente collegarlo alla breadboard per fornire alimentazione. Fornisc
 * Interruttore ON-OFF Disponibile
 * Due Canali Indipendenti
 * Uscita USB (Type-A) Disponibile
-* Batteria: Batteria agli ioni di litio 14500 da 3.7V, 500mAh
+* Batteria: 3.7V Power Pack, 500mAh
 * Dimensioni: 52mm x 32mm x 24mm (L x P x A)
 
 

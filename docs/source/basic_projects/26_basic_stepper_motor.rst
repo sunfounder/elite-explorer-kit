@@ -74,7 +74,7 @@ Cablaggio
     Sebbene sia possibile alimentare il motore passo-passo direttamente dall'Arduino, ciò non è raccomandato poiché può causare disturbi elettrici sulle linee di alimentazione, potenzialmente danneggiando l'Arduino.
 
 .. note::
-    Per proteggere la batteria del :ref:`cpn_power`, caricala completamente prima di utilizzarla per la prima volta.
+    Per proteggere il Power Pack del :ref:`cpn_power`, caricalo completamente prima di utilizzarlo per la prima volta.
 
 .. image:: img/26-stepper_motor_bb.png
     :align: center

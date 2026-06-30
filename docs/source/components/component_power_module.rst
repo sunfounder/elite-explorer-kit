@@ -18,7 +18,7 @@ Módulo de Fuente de Alimentación
 =====================================
 
 .. note::
-    Para proteger la batería del :ref:`cpn_power`, por favor cárguela completamente antes de usarla por primera vez.
+    Para proteger el Power Pack del :ref:`cpn_power`, por favor cárguelo completamente antes de usarlo por primera vez.
 
 Cuando necesitamos una gran corriente para alimentar un componente, esto puede interferir gravemente con el funcionamiento normal de la placa Arduino UNO. Por lo tanto, proporcionamos energía separada para el componente con este módulo para que funcione de manera segura y estable.
 
@@ -40,7 +40,7 @@ Puedes simplemente conectarlo en la placa de pruebas para suministrar energía. 
 * Interruptor ON-OFF disponible
 * Dos canales independientes
 * Salida USB (Tipo-A) disponible
-* Batería: Batería de ion de litio 14500 de 3.7V, 500mAh
+* Batería: 3.7V Power Pack, 500mAh
 * Dimensiones: 52mm x 32mm x 24mm (L x A x H)
 
 **Ejemplo**

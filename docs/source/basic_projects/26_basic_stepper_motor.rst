@@ -74,7 +74,7 @@ Conexión
     Aunque es posible alimentar el motor paso a paso directamente desde el Arduino, esto no se recomienda ya que puede causar ruido eléctrico en sus líneas de suministro de energía, lo que podría dañar el Arduino.
 
 .. note::
-    Para proteger la batería del :ref:`cpn_power`, cárgala completamente antes de usarla por primera vez.
+    Para proteger el Power Pack del :ref:`cpn_power`, cárgalo completamente antes de usarlo por primera vez.
 
 .. image:: img/26-stepper_motor_bb.png
     :align: center

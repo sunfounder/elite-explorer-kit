@@ -68,7 +68,7 @@ Conexión
 ------------
 
 .. note::
-    Para proteger la batería del :ref:`cpn_power`, cárgala completamente antes de usarla por primera vez.
+    Para proteger el Power Pack del :ref:`cpn_power`, cárgalo completamente antes de usarlo por primera vez.
 
 .. image:: img/25-pump_bb.png
     :align: center

@@ -167,14 +167,20 @@ Please follow the steps below on IFTTT.
     * Or copy this code into Arduino IDE.
 
 .. note::
-    In the code, SSID and password are stored in ``arduino_secrets.h``. Before uploading this example, you need to modify them with your own WiFi credentials. Additionally, for security purposes, ensure that this information is kept confidential when sharing or storing the code.
+    In the code, SSID and password are stored in ``arduino_secrets.h``. Before uploading this example, you need to modify them with your own WiFi credentials.
 
 .. warning::
    To prevent your mailbox from being flooded, please debug the :ref:`cpn_pir` beforehand before running the code for this project.
 
-.. raw:: html
+.. literalinclude:: /_code/03_iot_security_alert_secrets.h
+   :language: cpp
+   :caption: arduino_secrets.h
 
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/adec1608-4642-4469-bdf4-8dc3e3e4ce4d/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/03_iot_security_alert.ino
+   :language: cpp
+   :linenos:
+   :caption: 03_ifttt_pir.ino
+
  
 **How it works?**
 

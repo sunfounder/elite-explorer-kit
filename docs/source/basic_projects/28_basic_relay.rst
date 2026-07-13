@@ -97,9 +97,11 @@ Code
     * You can open the file ``28-relay.ino`` under the path of ``elite-explorer-kit-main\basic_project\28-relay`` directly.
     * Or copy this code into Arduino IDE.
 
-.. raw:: html
+.. literalinclude:: /_code/28_basic_relay.ino
+   :language: cpp
+   :linenos:
+   :caption: 28-relay.ino
 
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/093cb26d-298d-4b36-b3be-466d813c19a9/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
   
 
 Now, send a High level signal, and the relay will close and the LED will light up; send a low one, and it will open and the LED will go out. In addition, you can hear a tick-tock caused by breaking the normally close contact and closing the normally open one.

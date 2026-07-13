@@ -88,8 +88,10 @@ Code
     * You can open the file ``04-tilt_switch.ino`` under the path of ``elite-explorer-kit-main\basic_project\04-tilt_switch`` directly.
     * Or copy this code into Arduino IDE.
 
-.. raw:: html
+.. literalinclude:: /_code/04_basic_tilt_switch.ino
+   :language: cpp
+   :linenos:
+   :caption: 04-tilt_switch.ino
 
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/d85d75d9-e491-424c-93be-95e1f4e99549/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 Once the codes are uploaded to the uno r4 board, you can open the serial monitor to view the pin readings. The readings will display either "1" or "0" depending on whether the Tilt Switch is in a vertical position (with the internal metal ball making contact with the Wire Pins) or tilted.

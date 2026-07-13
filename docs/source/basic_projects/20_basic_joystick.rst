@@ -87,9 +87,11 @@ Code
     * You can open the file ``20-joystick.ino`` under the path of ``elite-explorer-kit-main\basic_project\20-joystick`` directly.
     * Or copy this code into Arduino IDE.
 
-.. raw:: html
+.. literalinclude:: /_code/20_basic_joystick.ino
+   :language: cpp
+   :linenos:
+   :caption: 20-joystick.ino
 
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/ac0f9910-e53e-43a3-a5ae-ec4d3a3f4aa1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 Now, when you push the rocker, the coordinates of the X and Y axes displayed on the Serial Monitor will change accordingly. Pressing the button will also display the coordinate Z=0.
 

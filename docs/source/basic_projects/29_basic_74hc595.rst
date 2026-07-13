@@ -87,9 +87,11 @@ Code
     * You can open the file ``29-74hc595.ino`` under the path of ``elite-explorer-kit-main\basic_project\29-74hc595`` directly.
     * Or copy this code into Arduino IDE.
 
-.. raw:: html
+.. literalinclude:: /_code/29_basic_74hc595.ino
+   :language: cpp
+   :linenos:
+   :caption: 29-74hc595.ino
 
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/c7232b3c-61c9-4d7d-849b-55ed406181b1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 After uploading the codes to the uno board, you should now see the 7-segment display from 0 to 9 and A to F.
     

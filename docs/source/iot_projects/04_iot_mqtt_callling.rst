@@ -113,11 +113,17 @@ To install the library, use the Arduino Library Manager and search for "ArduinoM
     * Or copy this code into Arduino IDE.
 
 .. note::
-    In the code, SSID and password are stored in ``arduino_secrets.h``. Before uploading this example, you need to modify them with your own WiFi credentials. Additionally, for security purposes, ensure that this information is kept confidential when sharing or storing the code.
+    In the code, SSID and password are stored in ``arduino_secrets.h``. Before uploading this example, you need to modify them with your own WiFi credentials.
 
-.. raw:: html
+.. literalinclude:: /_code/04_iot_mqtt_callling_secrets.h
+   :language: cpp
+   :caption: arduino_secrets.h
 
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/7a4acdf8-beed-47d4-ada8-cbaab0f3477f/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/04_iot_mqtt_callling.ino
+   :language: cpp
+   :linenos:
+   :caption: 04_mqtt_button.ino
+
 
 After running the code, go back to |link_hivemq|, and when you press one of the buttons on the breadboard, you will see the Messages prompt on HiveMQ.
 

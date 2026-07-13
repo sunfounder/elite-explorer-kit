@@ -71,9 +71,11 @@ If you want to use these three chips simultaneously, here is a simple example:
         - Search for **"QMC5883LCompass"** and install
         - Search for **"Adafruit BMP085 Library"** and install
 
-.. raw:: html
+.. literalinclude:: /_code/09_basic_gy87.ino
+   :language: cpp
+   :linenos:
+   :caption: 09-gy87.ino
 
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/efd14082-486b-47eb-9533-8d36a36d2d88/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 .. note::
    Magnetometers must be calibrated(:ref:`basic_gy87_calibrate`) before they can be used as compasses, and must held level in use and **kept away from iron objects, magnetized materials and current carrying wires**.

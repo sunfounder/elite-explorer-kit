@@ -88,13 +88,20 @@ You can also buy them separately from the links below.
 
     * You can open the file ``02_fruit_piano.ino`` under the path of ``elite-explorer-kit-main\fun_project\02_fruit_piano`` directly.
     * Or copy this code into Arduino IDE.
+    * The ``pitches.h`` file is also required — place it in the same directory.
 
 .. note::
    To install the library, use the Arduino Library Manager and search for **"Adafruit MPR121"** and install it.
 
-.. raw:: html
+.. literalinclude:: /_code/pitches.h
+   :language: cpp
+   :caption: pitches.h
 
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/e677c06a-7af1-4846-a507-dd69c0c50aae/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/02_fun_fruit_piano.ino
+   :language: cpp
+   :linenos:
+   :caption: 02_fruit_piano.ino
+
 
 
 **How it works?**

@@ -144,11 +144,17 @@ To install the library, use the Arduino Library Manager and search for "ArduinoM
     * Or copy this code into Arduino IDE.
 
 .. note::
-    In the code, SSID and password are stored in ``arduino_secrets.h``. Before uploading this example, you need to modify them with your own WiFi credentials. Additionally, for security purposes, ensure that this information is kept confidential when sharing or storing the code.
+    In the code, SSID and password are stored in ``arduino_secrets.h``. Before uploading this example, you need to modify them with your own WiFi credentials.
 
-.. raw:: html
+.. literalinclude:: /_code/06_iot_weather_oled_secrets.h
+   :language: cpp
+   :caption: arduino_secrets.h
 
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/5f667ac1-bb24-4681-9fa1-db19fcfdd48a/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/06_iot_weather_oled.ino
+   :language: cpp
+   :linenos:
+   :caption: 06_weather_oled.ino
+
 
 
 

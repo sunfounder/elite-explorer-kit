@@ -88,10 +88,11 @@ Code
     * You can open the file ``13-7_segment.ino`` under the path of ``elite-explorer-kit-main\basic_project\13-7_segment`` directly.
     * Or copy this code into Arduino IDE.
 
+.. literalinclude:: /_code/13_basic_7_segment.ino
+   :language: cpp
+   :linenos:
+   :caption: 13-7_segment.ino
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/ce9857dc-6285-45cd-9918-e35b0b135836/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 .. raw:: html
 

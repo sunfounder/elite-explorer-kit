@@ -105,9 +105,11 @@ You can also buy them separately from the links below.
 .. note::
    To install the library, use the Arduino Library Manager and search for **"DHT sensor library"** and **"LiquidCrystal I2C"** and install them.
 
-.. raw:: html
+.. literalinclude:: /_code/08_fun_plant_monitor.ino
+   :language: cpp
+   :linenos:
+   :caption: 08_plant_monitor.ino
 
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/a9d6c9c7-0d7f-4dc2-84b6-9dbda15c89ae/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 **How it works?**
 

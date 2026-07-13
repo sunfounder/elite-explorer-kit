@@ -28,15 +28,14 @@ Open the ``01-wifi_connect.ino`` file under the path of ``elite-explorer-kit-mai
 
 You still need to create or modify ``arduino_secrets.h``, replace ``SECRET_SSID`` and ``SECRET_PASS`` with the name and password of the wifi you want to connect to. The file should contain:
 
-.. code:: arduino
+.. literalinclude:: /_code/01_1_connect_to_wifi_secrets.h
+   :language: cpp
+   :caption: arduino_secrets.h
 
-    //arduino_secrets.h header file
-    #define SECRET_SSID "yournetwork"
-    #define SECRET_PASS "yourpassword"
-
-.. raw:: html
-       
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/a41ac638-31da-464c-b5d3-e70f2aacd29c/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/01_1_connect_to_wifi.ino
+   :language: cpp
+   :linenos:
+   :caption: 01-wifi_connect.ino
 
 
 Open the serial monitor, and you will see similar content as follows. Arduino will output your device's IP and MAC addresses, as well as the network's signal strength.

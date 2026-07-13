@@ -85,10 +85,12 @@ Code
 
     * Open the ``03-moisture.ino`` file under the path of ``elite-explorer-kit-main\basic_project\03-moisture``.
     * Or copy this code into **Arduino IDE**.
-    
-.. raw:: html
 
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/c585dd77-2e8a-4839-a908-d22e1d6e93aa/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/03_basic_moisture.ino
+   :language: cpp
+   :linenos:
+   :caption: 03-moisture.ino
+
     
 Once the code is successfully uploaded, the serial monitor will print out the soil moisture value.
 

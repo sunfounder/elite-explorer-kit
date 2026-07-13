@@ -97,9 +97,11 @@ Code
 .. note:: 
     To install the library, use the Arduino Library Manager and search for **"DHT sensor library"** and install it. 
 
-.. raw:: html
+.. literalinclude:: /_code/07_basic_humiture_sensor.ino
+   :language: cpp
+   :linenos:
+   :caption: 07-humiture_sensor.ino
 
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/1086b07f-9551-4fa0-a0c0-391a6465ad2e/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
 After the code is uploaded successfully, you will see the Serial Monitor continuously print out the temperature and humidity, and as the program runs steadily, these two values will become more and more accurate.

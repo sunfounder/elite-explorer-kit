@@ -25,6 +25,14 @@ if errorlevel 9009 (
 	exit /b 1
 )
 
+REM Download the latest Arduino code from GitHub before building
+python download_code.py
+if errorlevel 1 (
+    echo.
+    echo.WARNING: Code download failed. The build will continue with cached files.
+    echo.
+)
+
 %SPHINXBUILD% -M %1 %SOURCEDIR% %BUILDDIR% %SPHINXOPTS% %O%
 goto end
 

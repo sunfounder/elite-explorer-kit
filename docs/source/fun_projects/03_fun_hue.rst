@@ -90,9 +90,11 @@ You can also buy them separately from the links below.
     * You can open the file ``03_huedial.ino`` under the path of ``elite-explorer-kit-main\fun_project\03_huedial`` directly.
     * Or copy this code into Arduino IDE.
 
-.. raw:: html
+.. literalinclude:: /_code/03_fun_hue.ino
+   :language: cpp
+   :linenos:
+   :caption: 03_HueDial.ino
 
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/0ad800d4-77bb-454f-8976-a078da71ec35/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 **How it works?**
 

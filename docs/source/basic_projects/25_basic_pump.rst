@@ -95,9 +95,11 @@ Code
    * You can open the file ``25-pump.ino`` under the path of ``elite-explorer-kit-main\basic_project\25-pump``. 
    * Or copy this code into **Arduino IDE**.
 
-.. raw:: html
-    
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/8a530528-aa58-4306-acc9-01632ae5e99a/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/25_basic_pump.ino
+   :language: cpp
+   :linenos:
+   :caption: 25-pump.ino
+
     
 Attach the tubing to the pump and position it in the basin. Once the code is successfully uploaded, the water pump will turn on and remain active for five seconds.
 When conducting this experiment, please ensure that the circuit is kept away from water to prevent any potential short circuits.

@@ -95,9 +95,11 @@ Code
     .. note:: 
       To install the library, use the Arduino Library Manager and search for **"Adafruit SSD1306"** and **"Adafruit GFX"** and install it. 
 
-.. raw:: html
+.. literalinclude:: /_code/15_basic_oled.ino
+   :language: cpp
+   :linenos:
+   :caption: 15-oled.ino
 
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/ec580f40-78b4-42c2-af7c-bb5bc05a7c23/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 .. raw:: html
 

@@ -37,12 +37,18 @@ Play Music with DAC
 
 Open the ``07-dac.ino`` file located at ``elite-explorer-kit-main\r4_new_feature\07-dac``, or paste the following code into your Arduino IDE.
 
-.. note:: 
+.. note::
     Please place the ``pitches.h`` file in the same directory as the code to ensure proper functioning.
 
-.. raw:: html
+.. literalinclude:: /_code/pitches.h
+   :language: cpp
+   :caption: pitches.h
 
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/93e0379e-1d2d-4d9c-a603-42b3335e8e05/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/07_dac.ino
+   :language: cpp
+   :linenos:
+   :caption: 07-dac.ino
+
 
 This project leverages the Arduino and DAC (Digital-to-Analog Converter) to play the iconic Super Mario Bros theme song. It utilizes a library called ``analogWave`` for sine wave generation and another library, ``pitches.h``, for defining note frequencies.
 

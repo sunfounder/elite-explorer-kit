@@ -87,9 +87,11 @@ Code
 .. note:: 
     To install the library, use the Arduino Library Manager and search for **"LiquidCrystal I2C"** and install it. 
 
-.. raw:: html
+.. literalinclude:: /_code/14_basic_i2c_lcd.ino
+   :language: cpp
+   :linenos:
+   :caption: 14-i2c_lcd.ino
 
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/096326ad-eccf-4d2e-be52-66f4819ca7d8/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 .. raw:: html
 

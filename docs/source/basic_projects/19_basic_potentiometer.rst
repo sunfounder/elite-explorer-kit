@@ -91,9 +91,11 @@ Code
     * You can open the file ``19-potentiometer.ino`` under the path of ``elite-explorer-kit-main\basic_project\19-potentiometer`` directly.
     * Or copy this code into Arduino IDE.
 
-.. raw:: html
+.. literalinclude:: /_code/19_basic_potentiometer.ino
+   :language: cpp
+   :linenos:
+   :caption: 19-potentiometer.ino
 
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/fb09e333-4057-40d8-8485-0de2d88c06c1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 After uploading the code to the Uno board, you can open the serial monitor to observe the potentiometer's read values. As you turn the potentiometer knob, the read value will change accordingly. The raw analog reading from the potentiometer will range from \(0\) to \(1023\). Simultaneously, the code scales this value to a range of \(0\) to \(255\), which is also displayed on the serial monitor. This scaled value is then used to control the brightness of the connected LED. The LED will become brighter or dimmer based on the scaled value. It's worth noting that while the theoretical range of the potentiometer is \(0\) to \(1023\), the actual range may vary slightly due to hardware tolerances.
 

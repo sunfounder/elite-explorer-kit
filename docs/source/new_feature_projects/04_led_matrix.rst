@@ -187,9 +187,10 @@ In the previous steps, we obtained a ``.h`` file that stores a series of frames 
 
 #. First, create a sketch. You can either open the ``04-led_matrix.ino`` file located under the path ``elite-explorer-kit-main\r4_new_feature\04-led_matrix``, or copy this code into the **Arduino IDE**.
 
-   .. raw:: html
-
-      <iframe src=https://create.arduino.cc/editor/sunfounder01/f3712371-7c3d-4a4b-bd98-f74fe43269ed/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/04_led_matrix.ino
+   :language: cpp
+   :linenos:
+   :caption: 04-led_matrix.ino
 
 
 #. If you are using code from the ``elite-explorer-kit-main\r4_new_feature\04-led_matrix`` path, you'll find a tab named ``animation.h`` in the Arduino IDE. Open it and replace the existing code with the .h file you obtained from the website.

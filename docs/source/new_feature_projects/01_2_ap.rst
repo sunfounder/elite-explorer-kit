@@ -28,15 +28,14 @@ Open the ``01-wifi_ap.ino`` file under the path of ``elite-explorer-kit-main\r4_
 
 You still need to create or modify ``arduino_secrets.h``, replace ``SECRET_SSID`` and ``SECRET_PASS`` with the name and password of your WiFi access point. The file should contain:
 
-.. code:: arduino
+.. literalinclude:: /_code/01_2_ap_secrets.h
+   :language: cpp
+   :caption: arduino_secrets.h
 
-    //arduino_secrets.h header file
-    #define SECRET_SSID "yournetwork"
-    #define SECRET_PASS "yourpassword"
-
-.. raw:: html
-    
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/8d0d28d2-2394-4eaa-b276-86a4f061badb/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/01_2_ap.ino
+   :language: cpp
+   :linenos:
+   :caption: 01-wifi_ap.ino
 
 .. raw:: html
 

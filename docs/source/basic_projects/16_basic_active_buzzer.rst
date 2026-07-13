@@ -96,8 +96,10 @@ Code
     * You can open the file ``16-active_buzzer.ino`` under the path of ``elite-explorer-kit-main\basic_project\16-active_buzzer`` directly.
     * Or copy this code into Arduino IDE.
 
-.. raw:: html
+.. literalinclude:: /_code/16_basic_active_buzzer.ino
+   :language: cpp
+   :linenos:
+   :caption: 16-active_buzzer.ino
 
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/bde4fd5c-8848-49cd-898f-8a824c836b80/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 After the code is uploaded successfully, you will hear a beep every second.

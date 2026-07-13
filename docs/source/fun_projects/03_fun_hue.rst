@@ -63,7 +63,7 @@ Sie können sie auch einzeln über die untenstehenden Links kaufen.
         - |link_resistor_buy|
     *   - :ref:`cpn_rgb_led`
         - |link_rgb_led_buy|
-    *   - :ref:`potentiometer`
+    *   - :ref:`cpn_potentiometer`
         - |link_potentiometer_buy|
 
 **Verdrahtung**
@@ -90,9 +90,10 @@ Sie können sie auch einzeln über die untenstehenden Links kaufen.
     * Sie können die Datei ``03_huedial.ino`` direkt unter dem Pfad ``elite-explorer-kit-main\fun_project\03_huedial`` öffnen.
     * Oder kopieren Sie diesen Code in die Arduino IDE.
 
-.. raw:: html
-
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/0ad800d4-77bb-454f-8976-a078da71ec35/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/03_fun_hue.ino
+   :language: cpp
+   :linenos:
+   :caption: 03_HueDial.ino
 
 **Wie funktioniert das?**
 

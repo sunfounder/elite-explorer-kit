@@ -97,9 +97,10 @@ Code
     * Sie können die Datei ``28-relay.ino`` direkt im Pfad ``elite-explorer-kit-main\basic_project\28-relay`` öffnen.
     * Oder kopieren Sie diesen Code in die Arduino IDE.
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/093cb26d-298d-4b36-b3be-466d813c19a9/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/28_basic_relay.ino
+   :language: cpp
+   :linenos:
+   :caption: 28-relay.ino
   
 
 Senden Sie nun ein High-Level-Signal, und das Relais schließt und die LED leuchtet auf; senden Sie ein Low-Level-Signal, und es öffnet sich und die LED erlischt. Zusätzlich können Sie ein Klick-Klack-Geräusch hören, verursacht durch das Öffnen des normalerweise geschlossenen Kontakts und das Schließen des normalerweise offenen Kontakts.

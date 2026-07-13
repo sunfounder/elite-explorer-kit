@@ -186,9 +186,10 @@ In den vorherigen Schritten haben wir eine ``.h``-Datei erhalten, die eine Reihe
 
 #. Erstellen Sie zuerst einen Sketch. Sie können entweder die Datei ``04-led_matrix.ino`` öffnen, die sich unter dem Pfad ``elite-explorer-kit-main\r4_new_feature\04-led_matrix`` befindet, oder diesen Code in die **Arduino IDE** kopieren.
 
-   .. raw:: html
-
-      <iframe src=https://create.arduino.cc/editor/sunfounder01/f3712371-7c3d-4a4b-bd98-f74fe43269ed/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/04_led_matrix.ino
+   :language: cpp
+   :linenos:
+   :caption: 04-led_matrix.ino
 
 
 #. Wenn Sie den Code vom Pfad ``elite-explorer-kit-main\r4_new_feature\04-led_matrix`` verwenden, finden Sie in der Arduino IDE einen Tab namens ``animation.h``. Öffnen Sie diesen und ersetzen Sie den vorhandenen Code durch die .h-Datei, die Sie von der Webseite erhalten haben.

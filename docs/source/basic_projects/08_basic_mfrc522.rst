@@ -81,9 +81,10 @@ Code
     * Sie können die Datei ``08-mfrc522.ino`` direkt unter dem Pfad ``elite-explorer-kit-main\basic_project\08-mfrc522`` öffnen.
     * Hier wird die ``RFID1`` Bibliothek verwendet. Die Bibliothek finden Sie im Verzeichnis ``elite-explorer-kit-main/library/``, oder Sie können hier :download:`RFID1.zip </_static/RFID1.zip>` herunterladen. Eine Anleitung zur Installation finden Sie unter :ref:`manual_install_lib`.
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/9a4e9be9-78f5-4bf0-8b44-ca6e44092dc1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/08_basic_mfrc522.ino
+   :language: cpp
+   :linenos:
+   :caption: 08-mfrc522.ino
 
 Nachdem die Codes auf das Uno-Board hochgeladen wurden, können Sie Ihre RFID-Karte (geheimer Schlüssel) in die Nähe des RFID-Lesegeräts bringen. Das Modul wird die Karteninformationen lesen und dann auf dem seriellen Monitor ausgeben.
 

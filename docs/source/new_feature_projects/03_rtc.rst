@@ -34,9 +34,10 @@ In bestimmten Anwendungsfällen müssen Sie möglicherweise spezifische Aufgaben
 
 Öffnen Sie die Datei ``03-rtc.ino``, die sich im Verzeichnis ``elite-explorer-kit-main\r4_new_feature\03-rtc`` befindet, oder fügen Sie den folgenden Code in Ihre Arduino IDE ein.
 
-.. raw:: html
-
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/48777cc6-f8a5-4646-b221-36c883ed5a62/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/03_rtc.ino
+   :language: cpp
+   :linenos:
+   :caption: 03-rtc.ino
 
 
 **Code-Erklärung**

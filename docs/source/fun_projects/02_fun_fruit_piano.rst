@@ -92,9 +92,14 @@ Sie können sie auch einzeln über die untenstehenden Links kaufen.
 .. note::
    Um die Bibliothek zu installieren, verwenden Sie den Arduino-Bibliotheksmanager und suchen Sie nach **„Adafruit MPR121“** und installieren Sie diese.
 
-.. raw:: html
+.. literalinclude:: /_code/pitches.h
+   :language: cpp
+   :caption: pitches.h
 
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/e677c06a-7af1-4846-a507-dd69c0c50aae/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/02_fun_fruit_piano.ino
+   :language: cpp
+   :linenos:
+   :caption: 02_fruit_piano.ino
 
 
 **Wie funktioniert das?**

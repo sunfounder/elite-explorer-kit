@@ -87,9 +87,10 @@ Code
     * Sie können die Datei ``20-joystick.ino`` direkt im Pfad ``elite-explorer-kit-main\basic_project\20-joystick`` öffnen.
     * Oder kopieren Sie diesen Code in die Arduino IDE.
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/ac0f9910-e53e-43a3-a5ae-ec4d3a3f4aa1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/20_basic_joystick.ino
+   :language: cpp
+   :linenos:
+   :caption: 20-joystick.ino
 
 Nun, wenn Sie den Rocker bewegen, ändern sich die Koordinaten der X- und Y-Achse auf dem Serial Monitor entsprechend. Wenn Sie den Knopf drücken, wird auch die Koordinate Z=0 angezeigt.
 

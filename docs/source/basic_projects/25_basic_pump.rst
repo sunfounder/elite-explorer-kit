@@ -92,9 +92,10 @@ Code
    * Sie können die Datei ``25-pump.ino`` direkt im Pfad ``elite-explorer-kit-main\basic_project\25-pump`` öffnen.
    * Oder kopieren Sie diesen Code in die **Arduino IDE**.
 
-.. raw:: html
-    
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/8a530528-aa58-4306-acc9-01632ae5e99a/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/25_basic_pump.ino
+   :language: cpp
+   :linenos:
+   :caption: 25-pump.ino
     
 Befestigen Sie den Schlauch an der Pumpe und positionieren Sie sie im Becken. Sobald der Code erfolgreich hochgeladen wurde, schaltet sich die Wasserpumpe ein und bleibt fünf Sekunden lang aktiv.
 Bitte achten Sie bei diesem Experiment darauf, dass der Stromkreis vom Wasser ferngehalten wird, um mögliche Kurzschlüsse zu vermeiden.

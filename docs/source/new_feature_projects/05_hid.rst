@@ -50,9 +50,10 @@ Hier ist ein einfaches Beispiel, das die Steuerung des Mauszeigers mit einem Kno
     
     2. Wählen Sie aus dem Arduino-IDE-Menü den Port des Boards aus. Der Port kann sich nach dem Reset ändern, stellen Sie also sicher, dass er korrekt ausgewählt ist.
 
-.. raw:: html
-
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/4b72e0f4-57cb-4627-b728-10a16f61d15c/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/05_hid_mouse.ino
+   :language: cpp
+   :linenos:
+   :caption: 05-hid_mouse.ino
 
 Neben der Steuerung der Mausbewegung können Sie auch Mausklicks verwalten. Für weitere Informationen siehe |link_r4_usb_mouse|.
 
@@ -83,9 +84,10 @@ Bei Betätigung eines der Knöpfe verwendet das Arduino die Funktionen ``Keyboar
 
 Öffnen Sie die Datei ``05-hid_keyboard.ino``, die sich unter ``elite-explorer-kit-main\r4_new_feature\05-hid_keyboard`` befindet, oder fügen Sie den folgenden Code in Ihre Arduino IDE ein.
 
-.. raw:: html
-
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/2a5b61d3-d5d6-4c78-a3a0-73880fa1fb57/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/05_hid_keyboard.ino
+   :language: cpp
+   :linenos:
+   :caption: 05-hid_keyboard.ino
 
 
 

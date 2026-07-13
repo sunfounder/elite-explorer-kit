@@ -35,9 +35,14 @@ Sie müssen auch ``arduino_secrets.h`` erstellen oder bearbeiten, ersetzen Sie `
     #define SECRET_SSID "yournetwork"
     #define SECRET_PASS "yourpassword"
 
-.. raw:: html
-       
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/a41ac638-31da-464c-b5d3-e70f2aacd29c/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/01_1_connect_to_wifi_secrets.h
+   :language: cpp
+   :caption: arduino_secrets.h
+
+.. literalinclude:: /_code/01_1_connect_to_wifi.ino
+   :language: cpp
+   :linenos:
+   :caption: 01-wifi_connect.ino
 
 
 Öffnen Sie den seriellen Monitor, und Sie werden ähnliche Inhalte wie folgt sehen. Arduino gibt die IP- und MAC-Adressen Ihres Geräts sowie die Signalstärke des Netzwerks aus.

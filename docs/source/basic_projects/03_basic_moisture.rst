@@ -86,9 +86,10 @@ Code
     * Öffnen Sie die Datei ``03-moisture.ino`` unter dem Pfad ``elite-explorer-kit-main\basic_project\03-moisture``.
     * Oder kopieren Sie diesen Code in die **Arduino IDE**.
     
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/c585dd77-2e8a-4839-a908-d22e1d6e93aa/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/03_basic_moisture.ino
+   :language: cpp
+   :linenos:
+   :caption: 03-moisture.ino
     
 Sobald der Code erfolgreich hochgeladen wurde, zeigt der serielle Monitor den Wert der Bodenfeuchtigkeit an.
 

@@ -86,9 +86,10 @@ Code
     * Sie können die Datei ``29-74hc595.ino`` direkt im Pfad ``elite-explorer-kit-main\basic_project\29-74hc595`` öffnen.
     * Oder kopieren Sie diesen Code in die Arduino IDE.
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/c7232b3c-61c9-4d7d-849b-55ed406181b1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/29_basic_74hc595.ino
+   :language: cpp
+   :linenos:
+   :caption: 29-74hc595.ino
 
 Nachdem die Codes auf das Uno-Board hochgeladen wurden, sollten Sie jetzt die 7-Segment-Anzeige von 0 bis 9 und A bis F sehen.
     

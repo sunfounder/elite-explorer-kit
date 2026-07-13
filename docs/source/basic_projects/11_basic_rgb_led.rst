@@ -101,9 +101,10 @@ Code
     * Sie können die Datei ``11-rgb_led.ino`` direkt unter dem Pfad ``elite-explorer-kit-main\basic_project\11-rgb_led`` öffnen.
     * Oder kopieren Sie diesen Code in die Arduino IDE.
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/71dc53ac-adc6-4c4d-8d92-1dfffd1d0f7f/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/11_basic_rgb_led.ino
+   :language: cpp
+   :linenos:
+   :caption: 11-rgb_led.ino
 
 .. raw:: html
 

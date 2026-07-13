@@ -81,9 +81,10 @@ Sie können sie auch einzeln über die untenstehenden Links kaufen.
     * Sie können die Datei ``13_snake.ino`` direkt unter dem Pfad ``elite-explorer-kit-main\fun_project\13_snake`` öffnen.
     * Oder kopieren Sie diesen Code in die Arduino IDE.
 
-.. raw:: html
-
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/df370ec5-d1b5-4ae7-b3b9-e97e0eb9a872/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/13_fun_snake.ino
+   :language: cpp
+   :linenos:
+   :caption: 13_snake.ino
 
 
 **Wie funktioniert des?**

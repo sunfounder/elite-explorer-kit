@@ -60,7 +60,7 @@ Sie können sie auch einzeln über die untenstehenden Links kaufen.
         - |link_wires_buy|
     *   - :ref:`cpn_resistor`
         - |link_resistor_buy|
-    *   - :ref:`led`
+    *   - :ref:`cpn_led`
         - |link_led_buy|
     *   - :ref:`cpn_potentiometer`
         - |link_potentiometer_buy|
@@ -91,9 +91,10 @@ Code
     * Sie können die Datei ``19-potentiometer.ino`` direkt unter dem Pfad ``elite-explorer-kit-main\basic_project\19-potentiometer`` öffnen.
     * Oder kopieren Sie diesen Code in die Arduino IDE.
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/fb09e333-4057-40d8-8485-0de2d88c06c1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/19_basic_potentiometer.ino
+   :language: cpp
+   :linenos:
+   :caption: 19-potentiometer.ino
 
 Nachdem der Code auf das Uno-Board hochgeladen wurde, kann der serielle Monitor geöffnet werden, um die gelesenen Werte des Potentiometers zu beobachten. Wenn Sie am Knopf des Potentiometers drehen, ändert sich der gelesene Wert entsprechend. Der rohe Analogwert des Potentiometers reicht von \(0\) bis \(1023\). Gleichzeitig skaliert der Code diesen Wert in einen Bereich von \(0\) bis \(255\), der auch auf dem seriellen Monitor angezeigt wird. Dieser skalierte Wert wird dann verwendet, um die Helligkeit der angeschlossenen LED zu steuern. Die LED wird heller oder dunkler, je nach skaliertem Wert. Es ist anzumerken, dass der theoretische Bereich des Potentiometers \(0\) bis \(1023\) beträgt, der tatsächliche Bereich kann jedoch aufgrund von Hardwaretoleranzen leicht variieren.
 

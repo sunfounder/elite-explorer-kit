@@ -89,8 +89,9 @@ Code
 
 
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/e6bf007e-b20d-44d0-9ef9-6d57c1ce4c3c/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/01_basic_photoresistor.ino
+   :language: cpp
+   :linenos:
+   :caption: 01-fotowiderstand.ino
 
 Nachdem Sie den Code auf das Uno-Board hochgeladen haben, können Sie den seriellen Monitor öffnen, um den ausgelesenen Wert des Pins zu sehen. Wenn das Umgebungslicht stärker wird, steigt auch der Messwert entsprechend an, und der Lesebereich des Pins liegt zwischen 「0」 und 「1023」. Jedoch kann der tatsächliche Lesebereich aufgrund der Umgebungsbedingungen und der Eigenschaften des Fotowiderstands kleiner sein als der theoretische Bereich.

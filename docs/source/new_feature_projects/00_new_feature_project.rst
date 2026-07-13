@@ -43,7 +43,7 @@ Neben den oben genannten Upgrades führt das R4 WiFi auch die folgenden neuen Fu
     03_rtc
     04_led_matrix
     05_hid
-    06_adc
+    06_14_bit_adc
     07_dac
 
 

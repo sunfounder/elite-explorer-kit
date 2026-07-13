@@ -71,9 +71,10 @@ Wenn Sie diese drei Chips gleichzeitig verwenden möchten, finden Sie hier ein e
         - Suchen Sie nach **„QMC5883LCompass“** und installieren Sie
         - Suchen Sie nach **„Adafruit BMP085 Library“** und installieren Sie
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/efd14082-486b-47eb-9533-8d36a36d2d88/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/09_basic_gy87.ino
+   :language: cpp
+   :linenos:
+   :caption: 09-gy87.ino
 
 .. note::
    Magnetometer müssen kalibriert werden (:ref:`basic_gy87_calibrate`), bevor sie als Kompass verwendet werden können, und müssen waagerecht gehalten und **fern von Eisenobjekten, magnetisierten Materialien und stromführenden Drähten** gehalten werden.

@@ -40,9 +40,14 @@ Musik mit DAC abspielen
 .. note:: 
     Bitte platzieren Sie die Datei ``pitches.h`` im selben Verzeichnis wie den Code, um eine ordnungsgemäße Funktion zu gewährleisten.
 
-.. raw:: html
+.. literalinclude:: /_code/pitches.h
+   :language: cpp
+   :caption: pitches.h
 
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/93e0379e-1d2d-4d9c-a603-42b3335e8e05/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/07_dac.ino
+   :language: cpp
+   :linenos:
+   :caption: 07-dac.ino
 
 Dieses Projekt nutzt das Arduino und den DAC (Digital-Analog-Wandler), um die ikonische Melodie von Super Mario Bros zu spielen. Es verwendet eine Bibliothek namens ``analogWave`` zur Erzeugung von Sinuswellen und eine weitere Bibliothek, ``pitches.h``, zur Definition der Notenfrequenzen.
 

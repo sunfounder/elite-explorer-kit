@@ -94,9 +94,10 @@ Sie können sie auch einzeln über die untenstehenden Links kaufen.
 .. note::
    Um die Bibliothek zu installieren, verwenden Sie den Arduino-Bibliotheksmanager und suchen Sie nach **„IRremote“** und **„LiquidCrystal I2C“** und installieren Sie diese.
 
-.. raw:: html
-
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/935cd2e8-23e1-4af8-bdf5-94ac00f10e8b/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/10_fun_guess_number.ino
+   :language: cpp
+   :linenos:
+   :caption: 10_guess_number.ino
 
 
 

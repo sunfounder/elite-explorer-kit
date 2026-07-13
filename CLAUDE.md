@@ -23,7 +23,7 @@ The GitHub repo `sunfounder/elite-explorer-kit` has one branch per language. The
 1. **All changes happen on `docs` first.** Structural changes (RST files, `.. literalinclude::` directives, scripts) must be made on the English `docs` branch before being propagated to translation branches.
 2. **This CLAUDE.md is the single project specification.** Translation branches must follow the same rules — there is no per-language CLAUDE.md override.
 3. **`_code/` is shared.** All branches download `.ino` and `.h` files from `main`. Code is language-agnostic; only the surrounding documentation text is translated.
-4. **Scripts run on `docs`.** `download_code.py`, `convert_iframes.py`, and `fix_indented_literalinclude.py` operate on the `docs` branch. When propagating to a translation branch, the same scripts should be run to sync RST structure (replacing iframes, de-indenting blocks, etc.).
+4. **Scripts run on `docs`.** `download_code.py`, `convert_iframes.py`, and `check_sync_parity.py` operate on the `docs` branch. When propagating to a translation branch, the same scripts should be run to sync RST structure (replacing iframes, checking parity, etc.).
 
 ## Sync Protocol: `docs` → Other Languages
 
@@ -207,10 +207,10 @@ The docs use `.. literalinclude::` to show Arduino code inline. The source of tr
 cd docs
 python download_code.py        # Step 1: Download .ino + .h files from GitHub → source/_code/
 python convert_iframes.py      # Step 2: Replace Arduino Cloud iframes with .. literalinclude::
-python fix_indented_literalinclude.py  # Step 3: De-indent any literalinclude stuck inside note/warning blocks
+python check_sync_parity.py    # Step 3: Validate structure, check for issues
 ```
 
-Always run them in this order. Step 3 is a safety net — `convert_iframes.py` now outputs at top level, but if anything slips through, this fixes it.
+Always run them in this order. Step 3 validates everything is in sync — run with `--fix` to auto-repair indentation issues.
 
 ### download_code.py
 
@@ -233,13 +233,18 @@ Batch-converts `<iframe src=https://create.arduino.cc/editor/sunfounder01/...>` 
 
 **Important:** `make_literalinclude()` always outputs at zero indent. Never indent `.. literalinclude::` — RST directives must be at top level, not nested inside `.. note::` or `.. warning::` blocks.
 
-### fix_indented_literalinclude.py
+### check_sync_parity.py
 
-Finds any `.. literalinclude::` lines that are indented (inside an admonition block) and de-indents them to top level. Handles two cases:
-1. **Split merged lines** — If a previous buggy run merged the directive and `:language: cpp` onto one line, splits them back.
-2. **De-indent blocks** — Removes leading whitespace from indented literalinclude blocks.
+Self-check tool that validates a single language branch independently (no English source required). Runs 7 checks:
+1. Remaining Arduino Cloud iframes
+2. literalinclude paths pointing to missing _code/ files
+3. Unused _code/ files (downloaded but never referenced)
+4. Heading underline >= heading text length
+5. Orphan RST files (not in any toctree)
+6. Broken toctree references
+7. Indented / merged literalinclude blocks
 
-Always ensures a single blank line separator before and after each directive.
+Run `python check_sync_parity.py --fix` to auto-repair check #7 (de-indent blocks, split merged lines, add blank line spacing).
 
 ## Project structure
 
@@ -247,7 +252,7 @@ Always ensures a single blank line separator before and after each directive.
 docs/
 ├── download_code.py            # Download .ino/.h from GitHub
 ├── convert_iframes.py          # Replace Arduino Cloud iframes
-├── fix_indented_literalinclude.py  # De-indent literalinclude blocks
+├── check_sync_parity.py        # Validate sync parity, --fix for auto-repair
 ├── make.bat                    # Windows build script
 └── source/
     ├── _code/                  # Downloaded .ino and .h files

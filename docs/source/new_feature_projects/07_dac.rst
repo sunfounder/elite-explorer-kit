@@ -40,9 +40,14 @@ DACを使用して音楽を再生する
 .. note:: 
     正常な動作を確保するために、コードと同じディレクトリに ``pitches.h`` ファイルを配置してください。
 
-.. raw:: html
+.. literalinclude:: /_code/pitches.h
+   :language: cpp
+   :caption: pitches.h
 
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/93e0379e-1d2d-4d9c-a603-42b3335e8e05/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/07_dac.ino
+   :language: cpp
+   :linenos:
+   :caption: 07-dac.ino
 
 このプロジェクトは、ArduinoとDAC（デジタル・アナログ・コンバータ）を活用して、アイコニックなスーパーマリオブラザーズのテーマ曲を再生します。これには、正弦波生成用の ``analogWave`` ライブラリと、音符の周波数を定義するための ``pitches.h`` ライブラリが使用されています。
 

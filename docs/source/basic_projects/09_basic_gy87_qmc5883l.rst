@@ -102,9 +102,10 @@ QMC5883Lの校正
     * ``09-gy87_compass_calibration.ino`` ファイルを ``elite-explorer-kit-main\basic_project\09-gy87_compass_calibration`` のパスから直接開くことができます。
     * または、このコードをArduino IDEにコピーします。
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/252c7a58-3a9f-4c66-959e-f45fc19e68aa/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/09_basic_gy87_qmc5883l_calib.ino
+   :language: cpp
+   :linenos:
+   :caption: 09-gy87_compass_calibration.ino
 
 コードのアップロード後、シリアルモニターを開きます。シリアルモニターの指示に従ってQMC5883Lを校正します。センサーの移動を求められた場合、図8の校正方法を使用することをお勧めします。または、センサーを地面と平行に保ち、シリアルモニターが校正が完了したことを示すまで時計回りまたは反時計回りに回転させます。
 
@@ -141,9 +142,10 @@ QMC5883Lを使用する場合：プロジェクトのスケッチを開き、 ``
     * または、このコードをArduino IDEにコピーします。
     * 校正手順から得られたコードを、関数 ``initializeQMC5883L()`` の ``compass.init()`` のコードの下に配置します。
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/8b266a18-ce7b-4330-8c10-c9f4148bb8ec/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/09_basic_gy87_qmc5883l.ino
+   :language: cpp
+   :linenos:
+   :caption: 09-gy87_qmc5883l.ino
 
 
 コード解析

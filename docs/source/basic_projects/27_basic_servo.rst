@@ -84,9 +84,10 @@
     * ファイル ``27-servo.ino`` を ``elite-explorer-kit-main\basic_project\27-servo`` で直接開くことができます。
     * または、このコードをArduino IDEにコピーしてください。
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/c57ddb7a-0acb-4a64-938a-0a0abfc0ec4b/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/27_basic_servo.ino
+   :language: cpp
+   :linenos:
+   :caption: 27-servo.ino
 
 
 コード解析

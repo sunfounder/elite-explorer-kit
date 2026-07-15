@@ -90,9 +90,10 @@
     * ファイル ``19-potentiometer.ino`` を ``elite-explorer-kit-main\basic_project\19-potentiometer`` のパスで直接開くことができます。
     * または、このコードをArduino IDEにコピーしてください。
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/fb09e333-4057-40d8-8485-0de2d88c06c1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/19_basic_potentiometer.ino
+   :language: cpp
+   :linenos:
+   :caption: 19-potentiometer.ino
 
 Unoボードにコードをアップロードした後、シリアルモニターを開いてポテンショメータの読み取り値を観察することができます。ポテンショメータのノブを回すと、読み取り値はそれに応じて変化します。ポテンショメータからの生のアナログ読み取り値は0から1023の範囲です。同時に、コードはこの値を0から255の範囲にスケールし、シリアルモニターにも表示します。このスケールされた値は、接続されたLEDの明るさを制御するために使用されます。LEDは、スケールされた値に基づいて明るくなったり暗くなったりします。ポテンショメータの理論上の範囲は0から1023ですが、実際の範囲はハードウェアの公差によってわずかに異なることに注意する価値があります。
 

@@ -95,9 +95,10 @@
 .. note:: 
     ライブラリのインストールには、Arduinoライブラリマネージャーを使用し、 **「DHT sensor library」** と検索してインストールします。 
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/1086b07f-9551-4fa0-a0c0-391a6465ad2e/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/07_basic_humiture_sensor.ino
+   :language: cpp
+   :linenos:
+   :caption: 07-humiture_sensor.ino
 
 コードが正常にアップロードされると、シリアルモニターに温度と湿度が継続的に表示され、プログラムが安定して実行されるにつれて、これらの2つの値はより正確になります。
 

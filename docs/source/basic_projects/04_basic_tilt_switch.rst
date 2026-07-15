@@ -87,8 +87,9 @@
     * ``elite-explorer-kit-main\basic_project\04-tilt_switch`` のパスの下にある ``04-tilt_switch.ino`` ファイルを直接開く。
     * または、このコードをArduino IDEにコピーします。
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/d85d75d9-e491-424c-93be-95e1f4e99549/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/04_basic_tilt_switch.ino
+   :language: cpp
+   :linenos:
+   :caption: 04-tilt_switch.ino
 
 コードがuno r4ボードにアップロードされると、シリアルモニターを開いてピンの読み取りを表示できます。チルトスイッチが垂直位置にある場合（内部の金属ボールがワイヤーピンに接触している場合）や傾斜している場合に応じて、「1」または「0」が表示されます。

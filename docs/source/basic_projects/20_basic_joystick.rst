@@ -87,9 +87,10 @@
     * ファイル ``20-joystick.ino`` を ``elite-explorer-kit-main\basic_project\20-joystick`` のパスで直接開くことができます。
     * または、このコードをArduino IDEにコピーしてください。
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/ac0f9910-e53e-43a3-a5ae-ec4d3a3f4aa1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/20_basic_joystick.ino
+   :language: cpp
+   :linenos:
+   :caption: 20-joystick.ino
 
 今、ロッカーを押すと、シリアルモニターに表示されるX軸とY軸の座標がそれに応じて変化します。ボタンを押すと、座標Z=0も表示されます。
 

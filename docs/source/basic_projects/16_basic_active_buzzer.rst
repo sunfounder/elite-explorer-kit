@@ -96,8 +96,9 @@
     * ファイル ``16-active_buzzer.ino`` を ``elite-explorer-kit-main\basic_project\16-active_buzzer`` のパスで直接開くことができます。
     * または、このコードをArduino IDEにコピーしてください。
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/bde4fd5c-8848-49cd-898f-8a824c836b80/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/16_basic_active_buzzer.ino
+   :language: cpp
+   :linenos:
+   :caption: 16-active_buzzer.ino
 
 コードが正常にアップロードされると、1秒ごとにビープ音が聞こえます。

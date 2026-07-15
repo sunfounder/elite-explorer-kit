@@ -86,9 +86,10 @@
     * ``elite-explorer-kit-main\basic_project\03-moisture`` のパスの下にある ``03-moisture.ino`` ファイルを開く。
     * または、このコードを **Arduino IDE** にコピーします。
     
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/c585dd77-2e8a-4839-a908-d22e1d6e93aa/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/03_basic_moisture.ino
+   :language: cpp
+   :linenos:
+   :caption: 03-moisture.ino
     
 コードが正常にアップロードされると、シリアルモニターに土壌の湿度値が表示されます。
 

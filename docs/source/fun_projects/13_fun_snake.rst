@@ -81,9 +81,10 @@
     * ファイル ``13_snake.inoo`` は、パス ``elite-explorer-kit-main\fun_project\13_snakeo`` で直接開けます。
     * または、このコードをArduino IDEにコピーしてください。
 
-.. raw:: html
-
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/df370ec5-d1b5-4ae7-b3b9-e97e0eb9a872/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/13_fun_snake.ino
+   :language: cpp
+   :linenos:
+   :caption: 13_snake.ino
 
 
 **どのように動作するのか？**

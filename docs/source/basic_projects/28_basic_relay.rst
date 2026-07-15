@@ -95,9 +95,10 @@ SunFounder Unoボードのピン8に1K抵抗（トランジスタが通電時の
     * ファイル ``28-relay.ino`` を ``elite-explorer-kit-main\basic_project\28-relay`` で直接開くことができます。
     * または、このコードをArduino IDEにコピーしてください。
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/093cb26d-298d-4b36-b3be-466d813c19a9/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/28_basic_relay.ino
+   :language: cpp
+   :linenos:
+   :caption: 28-relay.ino
   
 
 Highレベルの信号を送ると、リレーが閉じてLEDが点灯します。Lowレベルを送ると、リレーが開いてLEDが消灯します。また、通常閉接点を切り、通常開接点を閉じることによる「カチカチ」という音も聞こえます。

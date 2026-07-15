@@ -89,8 +89,9 @@
 
 
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/e6bf007e-b20d-44d0-9ef9-6d57c1ce4c3c/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/01_basic_photoresistor.ino
+   :language: cpp
+   :linenos:
+   :caption: 01-photoresistor.ino
 
 コードをボードにアップロードした後、シリアルモニターを開いてピンの読み取り値を確認できます。周囲の光が強くなると、読み取り値もそれに応じて増加します。ピンの読み取り範囲は「0」〜「1023」です。しかし、環境条件やフォトレジスタの特性により、実際の読み取り範囲は理論的な範囲よりも小さくなる場合があります。

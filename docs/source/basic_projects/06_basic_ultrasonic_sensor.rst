@@ -87,9 +87,10 @@
     * ``elite-explorer-kit-main\basic_project\06-ultrasonic`` のパスの下にある ``06-ultrasonic.ino`` ファイルを直接開く。
     * または、このコードをArduino IDEにコピーします。
 
-.. raw:: html
-
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/1897efb6-fa3c-4ebc-8993-6561b24848a9/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/06_basic_ultrasonic_sensor.ino
+   :language: cpp
+   :linenos:
+   :caption: 06-ultrasonic.ino
     
 .. raw:: html
 

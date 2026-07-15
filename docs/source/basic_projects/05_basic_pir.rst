@@ -84,9 +84,10 @@ PIR動作センサーモジュール
     * ``elite-explorer-kit-main\basic_project\05-pir_motion_sensor`` のパスの下にある ``05-pir_motion_sensor.ino`` ファイルを直接開く。
     * または、このコードをArduino IDEにコピーします。
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/d9fc9198-1538-413d-b501-2cddc8d7cfe6/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/05_basic_pir.ino
+   :language: cpp
+   :linenos:
+   :caption: 05-pir_motion_sensor.ino
 
 コードをArduino Unoボードにアップロードした後、シリアルモニターを開いてセンサーの出力を観察できます。PIR（パッシブ赤外線）動作センサーが動きを検出すると、シリアルモニターに「Somebody here!」と表示され、動きが検出されたことを示します。動きが検出されない場合は、「Monitoring...」と表示されます。
 

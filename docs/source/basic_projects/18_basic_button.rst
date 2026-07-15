@@ -95,9 +95,10 @@
     * ファイル ``18-button.ino`` を ``elite-explorer-kit-main\basic_project\18-button`` のパスで直接開くことができます。
     * または、このコードをArduino IDEにコピーしてください。
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/a710eb54-9447-4542-ac98-c9a7e1ec4256/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/18_basic_button.ino
+   :language: cpp
+   :linenos:
+   :caption: 18-button.ino
 
 
 コード解析

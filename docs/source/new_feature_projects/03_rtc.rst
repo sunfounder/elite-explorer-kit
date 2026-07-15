@@ -34,9 +34,10 @@ UNO R4 WiFiのマイクロコントローラー（RA4M1）にはRTC（リアル�
 
 ``03-rtc.ino`` ファイルを ``elite-explorer-kit-main\r4_new_feature\03-rtc`` で開くか、以下のコードをArduino IDEに貼り付けてください。
 
-.. raw:: html
-
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/48777cc6-f8a5-4646-b221-36c883ed5a62/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/03_rtc.ino
+   :language: cpp
+   :linenos:
+   :caption: 03-rtc.ino
 
 
 **コードの説明**

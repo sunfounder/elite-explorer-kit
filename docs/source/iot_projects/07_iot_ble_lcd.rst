@@ -116,9 +116,10 @@ BLE通信において、UUIDはデバイスのユニーク性を保証し、デ�
 .. note:: 
       ライブラリをインストールするには、Arduinoライブラリマネージャーを使用して、 **「ArduinoBLE」** と **「LiquidCrystal I2C」** を検索し、インストールします。
 
-.. raw:: html
-
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/958c37c2-a897-4c4c-b6c1-0e7fea67c7b1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/07_iot_ble_lcd.ino
+   :language: cpp
+   :linenos:
+   :caption: 07_lightblue_lcd.ino
 
 **操作方法**
 

@@ -187,9 +187,10 @@ LEDマトリクスの状態を格納するために ``unsigned long`` 配列を�
 
 #. まず、スケッチを作成します。パス ``elite-explorer-kit-main\r4_new_feature\04-led_matrix`` の下にある ``04-led_matrix.ino`` ファイルを開くか、このコードを **Arduino IDE** にコピーできます。
 
-   .. raw:: html
-
-      <iframe src=https://create.arduino.cc/editor/sunfounder01/f3712371-7c3d-4a4b-bd98-f74fe43269ed/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/04_led_matrix.ino
+   :language: cpp
+   :linenos:
+   :caption: 04-led_matrix.ino
 
 
 #. コードを ``elite-explorer-kit-main\r4_new_feature\04-led_matrix`` パスから使用している場合、Arduino IDEには ``animation.h`` という名前のタブがあります。これを開き、ウェブサイトから取得した .h ファイルで既存のコードを置き換えます。

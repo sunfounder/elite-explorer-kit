@@ -90,9 +90,10 @@ HueDial
     * ファイル ``03_huedial.ino`` を ``elite-explorer-kit-main\fun_project\03_huedial`` のパスから直接開くことができます。
     * または、このコードをArduino IDEにコピーしてください。
 
-.. raw:: html
-
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/0ad800d4-77bb-454f-8976-a078da71ec35/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/03_fun_hue.ino
+   :language: cpp
+   :linenos:
+   :caption: 03_HueDial.ino
 
 **どのように動作しますか？**
 

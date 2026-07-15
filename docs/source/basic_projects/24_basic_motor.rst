@@ -96,9 +96,10 @@
     * ファイル ``24-motor.ino`` を ``elite-explorer-kit-main\basic_project\24-motor`` のパスで直接開くことができます。
     * または、このコードをArduino IDEにコピーしてください。
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/7376df09-204d-4698-b2a6-106e2d2f00e6/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/24_basic_motor.ino
+   :language: cpp
+   :linenos:
+   :caption: 24-motor.ino
 
 UNOボードにコードをアップロードした後、シリアルモニターで「A」または「B」と入力することで、モーターの回転方向を選択できます。
 

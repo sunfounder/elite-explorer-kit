@@ -50,9 +50,10 @@ Arduino Uno R4 WiFiを使用してマウスを制御するのは簡単です。 
     
     2. Arduino IDEメニューから、ボードのポートを選択します。リセット後、ポートが変更されることがあるため、正しく選択されていることを確認してください。
 
-.. raw:: html
-
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/4b72e0f4-57cb-4627-b728-10a16f61d15c/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/05_hid_mouse.ino
+   :language: cpp
+   :linenos:
+   :caption: 05-hid_mouse.ino
 
 マウスの移動を制御するだけでなく、マウスのクリックも扱うことができます。詳細については、 |link_r4_usb_mouse| を参照してください。
 
@@ -84,9 +85,10 @@ Arduino Uno R4 WiFiは、キーボードエミュレーションの機能も提�
 
 ``elite-explorer-kit-main\r4_new_feature\05-hid_keyboard`` にある ``05-hid_keyboard.ino`` ファイルを開くか、以下のコードをArduino IDEに貼り付けてください。
 
-.. raw:: html
-
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/2a5b61d3-d5d6-4c78-a3a0-73880fa1fb57/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/05_hid_keyboard.ino
+   :language: cpp
+   :linenos:
+   :caption: 05-hid_keyboard.ino
 
 
 注意事項とヒント

@@ -92,9 +92,14 @@
     * ファイル ``16-passive_buzzer.ino`` を ``elite-explorer-kit-main\basic_project\16-passive_buzzer`` のパスで直接開くことができます。
     * または、このコードをArduino IDEにコピーしてください。
 
-.. raw:: html
+.. literalinclude:: /_code/pitches.h
+   :language: cpp
+   :caption: pitches.h
 
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/7936cad2-3605-40a0-a9fc-573f934ab6b1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/16_basic_passive_buzzer.ino
+   :language: cpp
+   :linenos:
+   :caption: 16-passive_buzzer.ino
     
 コードをR4ボードにアップロードし終えると、7つの音符を含むメロディーが聞こえます。
 

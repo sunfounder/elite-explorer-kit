@@ -92,9 +92,10 @@
    * ファイル ``25-pump.ino`` を ``elite-explorer-kit-main\basic_project\25-pump`` で直接開くことができます。
    * または、このコードを **Arduino IDE** にコピーしてください。
 
-.. raw:: html
-    
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/8a530528-aa58-4306-acc9-01632ae5e99a/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/25_basic_pump.ino
+   :language: cpp
+   :linenos:
+   :caption: 25-pump.ino
     
 ポンプにチューブを取り付け、ベースンに配置します。コードが正常にアップロードされると、水ポンプがオンになり、5秒間稼働します。
 この実験を行う際には、回路が水から離れていることを確認し、ショートサーキットを防いでください。

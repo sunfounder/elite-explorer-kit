@@ -172,9 +172,14 @@ IFTTTで以下の手順に従ってください。
 .. warning::
    メールボックスが溢れるのを防ぐため、このプロジェクトのコードを実行する前に :ref:`cpn_pir` をデバッグしてください。
 
-.. raw:: html
+.. literalinclude:: /_code/03_iot_security_alert_secrets.h
+   :language: cpp
+   :caption: arduino_secrets.h
 
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/adec1608-4642-4469-bdf4-8dc3e3e4ce4d/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/03_iot_security_alert.ino
+   :language: cpp
+   :linenos:
+   :caption: 03_ifttt_pir.ino
 
 **どのように動作するのか？**
 

@@ -81,9 +81,10 @@ BLEネットワークにおける **中央デバイス** は、近くの周辺�
 
 ``02-bluetooth.ino`` ファイルを ``elite-explorer-kit-main\r4_new_feature\02-bluetooth`` から開くか、以下のコードをArduino IDEに貼り付けます。
 
-.. raw:: html
-
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/44d76bb7-9f0a-4004-b3fe-9a88999c5f06/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/02_bluetooth.ino
+   :language: cpp
+   :linenos:
+   :caption: 02-bluetooth.ino
 
 
 **Bluetoothを介したArduino R4との接続**

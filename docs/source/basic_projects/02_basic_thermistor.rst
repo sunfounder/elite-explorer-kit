@@ -86,9 +86,10 @@
     * ``elite-explorer-kit-main\basic_project\02-thermistor`` のパスの下にある ``02-thermistor.ino`` ファイルを直接開くことができます。
     * または、このコードをArduino IDEにコピーします。
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/be5dbe68-b57d-41f0-9fc0-237b99acbe3f/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/02_basic_thermistor.ino
+   :language: cpp
+   :linenos:
+   :caption: 02-thermistor.ino
 
 uno r4 ボードにコードをアップロードした後、シリアルモニターを開いて現在の温度を確認できます。
 

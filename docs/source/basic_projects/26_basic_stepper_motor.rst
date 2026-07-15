@@ -93,9 +93,10 @@
     * ファイル ``26-stepper_motor.ino`` を ``elite-explorer-kit-main\basic_project\26-stepper_motor.rst`` のパスで直接開くことができます。
     * または、このコードをArduino IDEにコピーしてください。
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/ce640f07-39a0-418a-9114-901df676ff32/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/26_basic_stepper_motor.ino
+   :language: cpp
+   :linenos:
+   :caption: 26-stepper_motor.ino
 
 コードのアップロード後、Arduino Unoボードに接続された28BYJ-48ステッピングモーターは、ULN2003ドライバーによって回転を始めます。最初に、モーターは時計回りに5RPM（毎分回転数）の速度で1回転します。時計回りの回転が完了すると、モーターは1秒間停止します。
 

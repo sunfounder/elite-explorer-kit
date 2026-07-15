@@ -146,9 +146,14 @@ OpenWeather APIキーの取得
 .. note::
     コード内で、SSIDとパスワードは ``arduino_secrets.h`` に格納されています。この例をアップロードする前に、自分のWiFiの認証情報でそれらを修正する必要があります。さらに、コードを共有または保存する際には、この情報を機密に保つためのセキュリティ対策を講じてください。
 
-.. raw:: html
+.. literalinclude:: /_code/06_iot_weather_oled_secrets.h
+   :language: cpp
+   :caption: arduino_secrets.h
 
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/5f667ac1-bb24-4681-9fa1-db19fcfdd48a/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/06_iot_weather_oled.ino
+   :language: cpp
+   :linenos:
+   :caption: 06_weather_oled.ino
 
 
 

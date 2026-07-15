@@ -87,9 +87,14 @@
     * ファイル ``17-speaker.ino`` を ``elite-explorer-kit-main\basic_project\17-speaker`` のパスで直接開くことができます。
     * または、このコードをArduino IDEにコピーしてください。
 
-.. raw:: html
+.. literalinclude:: /_code/pitches.h
+   :language: cpp
+   :caption: pitches.h
 
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/33b690b5-0be6-434d-83d7-5bfcfce3775e/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/17_basic_audio_speaker.ino
+   :language: cpp
+   :linenos:
+   :caption: 17-speaker.ino
     
 コードをR4ボードにアップロードし終えると、7つの音符を含むメロディーが聞こえます。
 

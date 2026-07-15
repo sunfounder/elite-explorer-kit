@@ -73,9 +73,10 @@ GY-87モジュールは、MPU6050、QMC5883L、BMP180の3つのセンサーチ�
         - **「QMC5883LCompass」** を検索してインストール
         - **「Adafruit BMP085 Library」** を検索してインストール
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/efd14082-486b-47eb-9533-8d36a36d2d88/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/09_basic_gy87.ino
+   :language: cpp
+   :linenos:
+   :caption: 09-gy87.ino
 
 .. note::
    磁力計は使用前にキャリブレーション(:ref:`basic_gy87_calibrate`)が必要であり、使用時に水平に保持し、 **鉄製品、磁化された材料、電流を運ぶワイヤーから離しておく** 必要があります。

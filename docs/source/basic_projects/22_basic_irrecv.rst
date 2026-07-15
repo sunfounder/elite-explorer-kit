@@ -88,9 +88,10 @@
     * ファイル ``22-ir_receiver.ino`` を ``elite-explorer-kit-main\basic_project\22-ir_receiver`` のパスで直接開くことができます。
     * または、このコードをArduino IDEにコピーする。
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/92e1cb75-cda1-4fc7-9680-28e28df8dccc/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/22_basic_irrecv.ino
+   :language: cpp
+   :linenos:
+   :caption: 22-ir_receiver.ino
 
 * ここでは ``IRremote`` ライブラリを使用しています。 **Library Manager** からインストールできます。
 

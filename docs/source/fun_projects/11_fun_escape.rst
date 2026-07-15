@@ -85,9 +85,10 @@
 .. note::
    ライブラリをインストールするには、Arduinoライブラリマネージャーで **「Adafruit MPU6050」** を検索し、インストールしてください。
 
-.. raw:: html
-
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/6b239445-f921-48fb-a93e-70cc7ef8afc7/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/11_fun_escape.ino
+   :language: cpp
+   :linenos:
+   :caption: 11_escape_square.ino
 
 **どのように動作するのか？**
 

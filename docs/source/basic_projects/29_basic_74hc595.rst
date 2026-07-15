@@ -73,9 +73,10 @@
     * 您可以直接打开路径 ``elite-explorer-kit-main\basic_project\29-74hc595`` 下的 ``29-74hc595.ino`` 文件。
     * 或者将以下代码复制到 Arduino IDE 中。
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/c7232b3c-61c9-4d7d-849b-55ed406181b1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/29_basic_74hc595.ino
+   :language: cpp
+   :linenos:
+   :caption: 29-74hc595.ino
 
 将代码上传到 Uno 板后，您应该会看到 7 段数码管从 0 到 9 以及 A 到 F 的显示。
 

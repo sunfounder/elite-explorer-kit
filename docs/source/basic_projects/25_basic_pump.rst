@@ -81,9 +81,10 @@
    * 您可以直接打开路径 ``elite-explorer-kit-main\basic_project\25-pump`` 下的 ``25-pump.ino`` 文件。
    * 或者将以下代码复制到 **Arduino IDE** 中。
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/8a530528-aa58-4306-acc9-01632ae5e99a/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/25_basic_pump.ino
+   :language: cpp
+   :linenos:
+   :caption: 25-pump.ino
 
 将管道连接到水泵并放置在水盆中。代码成功上传后，水泵将启动并持续运行五秒钟。
 进行本实验时，请确保电路远离水源，以防止任何潜在的短路。

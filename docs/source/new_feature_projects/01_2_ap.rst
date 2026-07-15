@@ -19,9 +19,14 @@ WiFi 控制 LED（接入点）
     #define SECRET_SSID "yournetwork"
     #define SECRET_PASS "yourpassword"
 
-.. raw:: html
+.. literalinclude:: /_code/01_2_ap_secrets.h
+   :language: cpp
+   :caption: arduino_secrets.h
 
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/8d0d28d2-2394-4eaa-b276-86a4f061badb/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/01_2_ap.ino
+   :language: cpp
+   :linenos:
+   :caption: 01-wifi_ap.ino
 
 .. raw:: html
 

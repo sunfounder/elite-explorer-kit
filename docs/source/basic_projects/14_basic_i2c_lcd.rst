@@ -73,9 +73,10 @@ I2C LCD1602
 .. note::
     要安装库，请使用 Arduino 库管理器搜索 **"LiquidCrystal I2C"** 并安装。
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/096326ad-eccf-4d2e-be52-66f4819ca7d8/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/14_basic_i2c_lcd.ino
+   :language: cpp
+   :linenos:
+   :caption: 14-i2c_lcd.ino
 
 .. raw:: html
 

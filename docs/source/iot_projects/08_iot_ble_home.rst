@@ -119,9 +119,10 @@ MIT App Inventor 是 Android 开发的绝佳起点，因其直观的拖放
    .. note::
       要安装库，请使用 Arduino 库管理器搜索并安装 **"DHT sensor library" ** 和 **"ArduinoBLE"** 。
 
-   .. raw:: html
-
-      <iframe src=https://create.arduino.cc/editor/sunfounder01/53fd4af4-dcc6-439d-b52f-2f94f17c1263/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/08_iot_ble_home.ino
+   :language: cpp
+   :linenos:
+   :caption: 08-bluetooth_environmental_monitor.ino
 
 #. 选择正确的板和端口后，点击 **Upload** 按钮。
 

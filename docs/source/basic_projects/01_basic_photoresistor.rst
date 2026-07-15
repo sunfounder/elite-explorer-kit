@@ -74,8 +74,9 @@
 
 
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/e6bf007e-b20d-44d0-9ef9-6d57c1ce4c3c/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/01_basic_photoresistor.ino
+   :language: cpp
+   :linenos:
+   :caption: 01-photoresistor.ino
 
 将代码上传到 Uno 板后，您可以打开串口监视器查看引脚的读取值。当环境光线变强时，读数会相应增加，引脚读数范围为「0」~「1023」。但根据环境条件和光敏电阻的特性，实际读数范围可能会小于理论范围。

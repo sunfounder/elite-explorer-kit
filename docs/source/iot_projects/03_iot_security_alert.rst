@@ -158,9 +158,14 @@ IFTTT 是一项免费服务，提供多种方法将不同的数据服务链接�
 .. warning::
    为了防止您的邮箱被大量邮件淹没，请在运行该项目的代码之前先调试好 :ref:`cpn_pir` 。
 
-.. raw:: html
+.. literalinclude:: /_code/03_iot_security_alert_secrets.h
+   :language: cpp
+   :caption: arduino_secrets.h
 
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/adec1608-4642-4469-bdf4-8dc3e3e4ce4d/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/03_iot_security_alert.ino
+   :language: cpp
+   :linenos:
+   :caption: 03_ifttt_pir.ino
 
 **工作原理**
 

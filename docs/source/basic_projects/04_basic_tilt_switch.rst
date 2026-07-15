@@ -73,8 +73,9 @@ Fritzing 电路图
     * 您可以直接打开路径 ``elite-explorer-kit-main\basic_project\04-tilt_switch`` 下的 ``04-tilt_switch.ino`` 文件。
     * 或者将以下代码复制到 Arduino IDE 中。
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/d85d75d9-e491-424c-93be-95e1f4e99549/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/04_basic_tilt_switch.ino
+   :language: cpp
+   :linenos:
+   :caption: 04-tilt_switch.ino
 
 将代码上传到 Uno R4 板后，您可以打开串口监视器查看引脚读数。读数将显示"1"或"0"，具体取决于倾斜开关是处于垂直位置（内部金属球与线引脚接触）还是倾斜位置。

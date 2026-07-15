@@ -88,9 +88,10 @@ QMC5883L
     * 您可以直接打开路径 ``elite-explorer-kit-main\basic_project\09-gy87_compass_calibration`` 下的 ``09-gy87_compass_calibration.ino`` 文件。
     * 或者将以下代码复制到 Arduino IDE 中。
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/252c7a58-3a9f-4c66-959e-f45fc19e68aa/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/09_basic_gy87_qmc5883l_calib.ino
+   :language: cpp
+   :linenos:
+   :caption: 09-gy87_compass_calibration.ino
 
 上传代码后，打开串口监视器。按照串口监视器中的指示校准 QMC5883L。当提示移动传感器时，建议使用八字校准法。或者，只需将传感器保持与地面平行，顺时针或逆时针旋转，直到串口监视器提示校准完成。
 
@@ -127,9 +128,10 @@ QMC5883L
     * 或者将以下代码复制到 Arduino IDE 中。
     * 将从校准步骤获得的代码放在函数 ``initializeQMC5883L()`` 中 ``compass.init()`` 代码行下方。
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/8b266a18-ce7b-4330-8c10-c9f4148bb8ec/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/09_basic_gy87_qmc5883l.ino
+   :language: cpp
+   :linenos:
+   :caption: 09-gy87_qmc5883l.ino
 
 
 代码分析

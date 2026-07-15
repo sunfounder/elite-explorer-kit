@@ -67,9 +67,10 @@ BLE 网络中的 **中心设备** 扫描附近的外设设备并建立连接以�
 
 打开位于 ``elite-explorer-kit-main\r4_new_feature\02-bluetooth`` 的 ``02-bluetooth.ino`` 文件，或将以下代码粘贴到您的 Arduino IDE 中。
 
-.. raw:: html
-
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/44d76bb7-9f0a-4004-b3fe-9a88999c5f06/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/02_bluetooth.ino
+   :language: cpp
+   :linenos:
+   :caption: 02-bluetooth.ino
 
 
 **通过蓝牙连接 Arduino R4**

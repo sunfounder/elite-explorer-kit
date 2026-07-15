@@ -67,9 +67,10 @@
     * 您可以直接打开路径 ``elite-explorer-kit-main\fun_project\13_snake`` 下的 ``13_snake.ino`` 文件。
     * 或者将这段代码复制到 Arduino IDE 中。
 
-.. raw:: html
-
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/df370ec5-d1b5-4ae7-b3b9-e97e0eb9a872/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/13_fun_snake.ino
+   :language: cpp
+   :linenos:
+   :caption: 13_snake.ino
 
 
 **工作原理**

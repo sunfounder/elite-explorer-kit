@@ -72,9 +72,10 @@ PIR 人体运动传感器模块
     * 您可以直接打开路径 ``elite-explorer-kit-main\basic_project\05-pir_motion_sensor`` 下的 ``05-pir_motion_sensor.ino`` 文件。
     * 或者将以下代码复制到 Arduino IDE 中。
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/d9fc9198-1538-413d-b501-2cddc8d7cfe6/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/05_basic_pir.ino
+   :language: cpp
+   :linenos:
+   :caption: 05-pir_motion_sensor.ino
 
 将代码上传到 Arduino Uno 板后，您可以打开串口监视器观察传感器输出。当 PIR（被动红外）运动传感器检测到移动时，串口监视器将显示消息 "Somebody here!" 以表示检测到运动。如果未检测到运动，则会显示消息 "Monitoring..."。
 

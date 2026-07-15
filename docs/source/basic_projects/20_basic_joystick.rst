@@ -73,9 +73,10 @@
     * 您可以直接打开路径 ``elite-explorer-kit-main\basic_project\20-joystick`` 下的 ``20-joystick.ino`` 文件。
     * 或者将以下代码复制到 Arduino IDE 中。
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/ac0f9910-e53e-43a3-a5ae-ec4d3a3f4aa1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/20_basic_joystick.ino
+   :language: cpp
+   :linenos:
+   :caption: 20-joystick.ino
 
 现在，当您推动摇杆时，串口监视器上显示的 X 和 Y 轴坐标将相应变化。按下按钮还将显示坐标 Z=0。
 

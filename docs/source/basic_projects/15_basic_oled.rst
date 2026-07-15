@@ -81,9 +81,10 @@ OLED
     .. note::
       要安装库，请使用 Arduino 库管理器搜索 **"Adafruit SSD1306" ** 和 **"Adafruit GFX"** 并安装。
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/ec580f40-78b4-42c2-af7c-bb5bc05a7c23/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/15_basic_oled.ino
+   :language: cpp
+   :linenos:
+   :caption: 15-oled.ino
 
 .. raw:: html
 

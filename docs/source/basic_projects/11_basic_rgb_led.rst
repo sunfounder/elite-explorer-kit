@@ -87,9 +87,10 @@ PWM
     * 您可以直接打开路径 ``elite-explorer-kit-main\basic_project\11-rgb_led`` 下的 ``11-rgb_led.ino`` 文件。
     * 或者将以下代码复制到 Arduino IDE 中。
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/71dc53ac-adc6-4c4d-8d92-1dfffd1d0f7f/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/11_basic_rgb_led.ino
+   :language: cpp
+   :linenos:
+   :caption: 11-rgb_led.ino
 
 .. raw:: html
 

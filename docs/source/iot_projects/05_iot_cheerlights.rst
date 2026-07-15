@@ -88,9 +88,14 @@ CheerLights 是一个全球性的同步灯光网络，任何人都可以控制�
 .. note::
     在代码中，SSID 和密码存储在 ``arduino_secrets.h`` 中。上传此示例之前，您需要使用自己的 WiFi 凭据修改它们。此外，出于安全目的，在共享或存储代码时请确保此信息保密。
 
-.. raw:: html
+.. literalinclude:: /_code/05_iot_cheerlights_secrets.h
+   :language: cpp
+   :caption: arduino_secrets.h
 
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/9d7ad736-9725-499f-a6ea-91602120d53e/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/05_iot_cheerlights.ino
+   :language: cpp
+   :linenos:
+   :caption: 05_cheerlight.ino
 
 
 

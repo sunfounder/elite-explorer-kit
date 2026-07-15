@@ -20,9 +20,14 @@
     #define SECRET_SSID "yournetwork"
     #define SECRET_PASS "yourpassword"
 
-.. raw:: html
+.. literalinclude:: /_code/01_1_connect_to_wifi_secrets.h
+   :language: cpp
+   :caption: arduino_secrets.h
 
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/a41ac638-31da-464c-b5d3-e70f2aacd29c/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/01_1_connect_to_wifi.ino
+   :language: cpp
+   :linenos:
+   :caption: 01-wifi_connect.ino
 
 
 打开串口监视器，您将看到类似如下内容。Arduino 将输出您设备的 IP 和 MAC 地址，以及网络的信号强度。

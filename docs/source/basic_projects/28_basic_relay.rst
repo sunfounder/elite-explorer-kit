@@ -83,9 +83,10 @@
     * 您可以直接打开路径 ``elite-explorer-kit-main\basic_project\28-relay`` 下的 ``28-relay.ino`` 文件。
     * 或者将以下代码复制到 Arduino IDE 中。
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/093cb26d-298d-4b36-b3be-466d813c19a9/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/28_basic_relay.ino
+   :language: cpp
+   :linenos:
+   :caption: 28-relay.ino
 
 
 现在，发送高电平信号，继电器将闭合，LED 将点亮；发送低电平信号，继电器将断开，LED 将熄灭。此外，您可以听到由于断开常闭触点和闭合常开触点而产生的嘀嗒声。

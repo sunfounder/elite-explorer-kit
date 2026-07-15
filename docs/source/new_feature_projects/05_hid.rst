@@ -36,9 +36,10 @@ HID，即人机接口设备，是一类计算机设备，设计用于与人类�
 
     2. 从 Arduino IDE 菜单中，选择板的端口。复位后端口可能会改变，因此请确保正确选择。
 
-.. raw:: html
-
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/4b72e0f4-57cb-4627-b728-10a16f61d15c/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/05_hid_mouse.ino
+   :language: cpp
+   :linenos:
+   :caption: 05-hid_mouse.ino
 
 除了控制鼠标移动，您还可以处理鼠标点击。有关更多详细信息，请参阅 |link_r4_usb_mouse| 。
 
@@ -69,9 +70,10 @@ Arduino Uno R4 WiFi 还提供键盘模拟功能。它允许您不仅发送单个
 
 打开位于 ``elite-explorer-kit-main\r4_new_feature\05-hid_keyboard`` 的 ``05-hid_keyboard.ino`` 文件，或将以下代码粘贴到您的 Arduino IDE 中。
 
-.. raw:: html
-
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/2a5b61d3-d5d6-4c78-a3a0-73880fa1fb57/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/05_hid_keyboard.ino
+   :language: cpp
+   :linenos:
+   :caption: 05-hid_keyboard.ino
 
 
 

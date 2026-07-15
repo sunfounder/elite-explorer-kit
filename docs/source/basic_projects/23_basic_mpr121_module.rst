@@ -77,9 +77,10 @@ MPR121
         .. image:: img/22_mpr121_lib.png
             :align: center
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/de0aa390-de85-43ab-87f7-f380c67c65e8/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/23_basic_mpr121_module.ino
+   :language: cpp
+   :linenos:
+   :caption: 23-mpr121.ino
 
 将代码上传到 UNO 板后，MPR121 引脚"1"和"0"的触摸状态将记录在一个 12 位布尔数组中。然后该数组将打印在串口监视器上。
 

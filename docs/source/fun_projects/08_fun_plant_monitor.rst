@@ -92,9 +92,10 @@
 .. note::
    要安装库，请使用 Arduino 库管理器搜索 **"DHT sensor library" ** 和 **"LiquidCrystal I2C"** 并安装它们。
 
-.. raw:: html
-
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/a9d6c9c7-0d7f-4dc2-84b6-9dbda15c89ae/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/08_fun_plant_monitor.ino
+   :language: cpp
+   :linenos:
+   :caption: 08_plant_monitor.ino
 
 **工作原理**
 

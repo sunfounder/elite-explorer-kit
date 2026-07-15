@@ -92,9 +92,10 @@
 
     * 这里使用了 ``RFID1`` 库。该库可以在 ``elite-explorer-kit-main/library/`` 目录中找到，或者您可以点击此处 :download:`RFID1.zip </_static/RFID1.zip>` 下载。有关安装教程，请参阅 :ref:`manual_install_lib` 。
 
-.. raw:: html
-
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/3486dd4e-a76e-478f-b5a4-a86281f7f374/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/09_fun_access.ino
+   :language: cpp
+   :linenos:
+   :caption: 09_access_control_system.ino
 
 
 **工作原理**

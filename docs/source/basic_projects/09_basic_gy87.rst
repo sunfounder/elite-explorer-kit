@@ -57,9 +57,10 @@ GY-87 模块配备了三款传感器芯片：MPU6050、QMC5883L 和 BMP180，各
         - 搜索 **"QMC5883LCompass"** 并安装
         - 搜索 **"Adafruit BMP085 Library"** 并安装
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/efd14082-486b-47eb-9533-8d36a36d2d88/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/09_basic_gy87.ino
+   :language: cpp
+   :linenos:
+   :caption: 09-gy87.ino
 
 .. note::
    磁力计必须经过校准(:ref:`basic_gy87_calibrate`)才能用作指南针，使用时必须保持水平，并**远离铁质物体、磁化材料和载流导线** 。

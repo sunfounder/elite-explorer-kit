@@ -72,9 +72,10 @@
     * 您可以直接打开路径 ``elite-explorer-kit-main\basic_project\02-thermistor`` 下的 ``02-thermistor.ino`` 文件。
     * 或者将以下代码复制到 Arduino IDE 中。
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/be5dbe68-b57d-41f0-9fc0-237b99acbe3f/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/02_basic_thermistor.ino
+   :language: cpp
+   :linenos:
+   :caption: 02-thermistor.ino
 
 将代码上传到 Uno R4 板后，您可以打开串口监视器查看当前温度。
 

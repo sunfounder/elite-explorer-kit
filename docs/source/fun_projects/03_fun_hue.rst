@@ -76,9 +76,10 @@ HueDial 调色器
     * 您可以直接打开路径 ``elite-explorer-kit-main\fun_project\03_huedial`` 下的 ``03_huedial.ino`` 文件。
     * 或者将这段代码复制到 Arduino IDE 中。
 
-.. raw:: html
-
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/0ad800d4-77bb-454f-8976-a078da71ec35/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/03_fun_hue.ino
+   :language: cpp
+   :linenos:
+   :caption: 03_HueDial.ino
 
 **工作原理**
 

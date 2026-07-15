@@ -76,9 +76,10 @@
     * 您可以直接打开路径 ``elite-explorer-kit-main\basic_project\22-ir_receiver`` 下的 ``22-ir_receiver.ino`` 文件。
     * 或者将以下代码复制到 Arduino IDE 中。
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/92e1cb75-cda1-4fc7-9680-28e28df8dccc/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/22_basic_irrecv.ino
+   :language: cpp
+   :linenos:
+   :caption: 22-ir_receiver.ino
 
 * 这里使用 ``IRremote`` 库，您可以从 **库管理器** 安装它。
 

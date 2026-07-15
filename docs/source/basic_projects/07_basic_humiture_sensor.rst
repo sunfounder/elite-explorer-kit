@@ -83,9 +83,10 @@
 .. note::
     要安装库，请使用 Arduino 库管理器搜索 **"DHT sensor library"** 并安装。
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/1086b07f-9551-4fa0-a0c0-391a6465ad2e/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/07_basic_humiture_sensor.ino
+   :language: cpp
+   :linenos:
+   :caption: 07-humiture_sensor.ino
 
 
 代码成功上传后，您将看到串口监视器持续打印出温度和湿度，随着程序稳定运行，这两个值将变得越来越准确。

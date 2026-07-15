@@ -20,9 +20,10 @@ RTC（实时时钟）集成在 UNO R4 WiFi 的微控制器 (RA4M1) 中。RTC 是
 
 打开位于 ``elite-explorer-kit-main\r4_new_feature\03-rtc`` 的 ``03-rtc.ino`` 文件，或将以下代码粘贴到您的 Arduino IDE 中。
 
-.. raw:: html
-
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/48777cc6-f8a5-4646-b221-36c883ed5a62/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/03_rtc.ino
+   :language: cpp
+   :linenos:
+   :caption: 03-rtc.ino
 
 
 **代码说明**

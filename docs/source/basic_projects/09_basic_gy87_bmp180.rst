@@ -75,9 +75,10 @@ BMP180
 .. note::
     要安装库，请使用 Arduino 库管理器搜索 **"Adafruit BMP085 Library"** 并安装。
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/7f7347f7-e1e6-400f-b10c-02ccf300b3b9/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/09_basic_gy87_bmp180.ino
+   :language: cpp
+   :linenos:
+   :caption: 09-gy87_bmp180.ino
 
 
 代码分析

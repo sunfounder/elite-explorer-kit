@@ -67,9 +67,10 @@ Fritzing 电路图
     * 您可以直接打开路径 ``elite-explorer-kit-main\basic_project\08-mfrc522`` 下的 ``08-mfrc522.ino`` 文件。
     * 这里使用 ``RFID1`` 库。该库可以在 ``elite-explorer-kit-main/library/`` 目录中找到，或者您可以点击此处 :download:`RFID1.zip </_static/RFID1.zip>` 下载。请参考 :ref:`manual_install_lib` 了解如何安装。
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/9a4e9be9-78f5-4bf0-8b44-ca6e44092dc1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/08_basic_mfrc522.ino
+   :language: cpp
+   :linenos:
+   :caption: 08-mfrc522.ino
 
 将代码上传到 Uno 板后，您可以将 RFID 卡（密钥）靠近 RFID 读写器。模块将读取卡片信息，然后将其打印在串口监视器上。
 

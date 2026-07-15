@@ -70,9 +70,10 @@
     * 您可以直接打开路径 ``elite-explorer-kit-main\basic_project\27-servo`` 下的 ``27-servo.ino`` 文件。
     * 或者将以下代码复制到 Arduino IDE 中。
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/c57ddb7a-0acb-4a64-938a-0a0abfc0ec4b/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/27_basic_servo.ino
+   :language: cpp
+   :linenos:
+   :caption: 27-servo.ino
 
 
 代码分析

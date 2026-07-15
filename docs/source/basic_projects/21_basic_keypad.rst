@@ -66,9 +66,10 @@
     * 您可以直接打开路径 ``elite-explorer-kit-main\basic_project\21-keypad`` 下的 ``21-keypad.ino`` 文件。
     * 要安装库，请使用 Arduino 库管理器搜索 **"Adafruit Keypad"** 并安装。
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/25fd4116-92d4-4ee4-b3ba-6707f4334629/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/21_basic_keypad.ino
+   :language: cpp
+   :linenos:
+   :caption: 21-keypad.ino
 
 将代码上传到 UNO 板后，在串口监视器中，您可以看到键盘上当前按下的键的值。
 

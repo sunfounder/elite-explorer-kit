@@ -81,8 +81,9 @@
     * 您可以直接打开路径 ``elite-explorer-kit-main\basic_project\16-active_buzzer`` 下的 ``16-active_buzzer.ino`` 文件。
     * 或者将以下代码复制到 Arduino IDE 中。
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/bde4fd5c-8848-49cd-898f-8a824c836b80/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/16_basic_active_buzzer.ino
+   :language: cpp
+   :linenos:
+   :caption: 16-active_buzzer.ino
 
 代码成功上传后，您将每秒听到一声蜂鸣。

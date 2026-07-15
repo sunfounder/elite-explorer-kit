@@ -102,9 +102,10 @@ UUID 在 BLE 通信中起着至关重要的作用，确保设备的唯一性和�
 .. note::
      要安装库，请使用 Arduino 库管理器搜索并安装 **"ArduinoBLE" ** 和 **"LiquidCrystal I2C"** 。
 
-.. raw:: html
-
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/958c37c2-a897-4c4c-b6c1-0e7fea67c7b1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/07_iot_ble_lcd.ino
+   :language: cpp
+   :linenos:
+   :caption: 07_lightblue_lcd.ino
 
 
 **如何操作？**

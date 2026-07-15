@@ -67,9 +67,10 @@ LED 模块
    * 您可以直接打开路径 ``elite-explorer-kit-main\basic_project\10-led`` 下的 ``10-led.ino`` 文件。
    * 或者将以下代码复制到 **Arduino IDE** 中。
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/2d23289e-ebd1-49e9-b11f-b1bbc1f192c1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/10_basic_led.ino
+   :language: cpp
+   :linenos:
+   :caption: 10-led.ino
 
 .. raw:: html
 

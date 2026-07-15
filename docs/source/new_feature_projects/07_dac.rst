@@ -26,9 +26,14 @@ Uno R4 WiFi 上的 DAC 拥有高达 12 位的分辨率，提供超越 PWM 引脚
 .. note::
     请将 ``pitches.h`` 文件放在与代码相同的目录中，以确保正常运行。
 
-.. raw:: html
+.. literalinclude:: /_code/pitches.h
+   :language: cpp
+   :caption: pitches.h
 
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/93e0379e-1d2d-4d9c-a603-42b3335e8e05/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/07_dac.ino
+   :language: cpp
+   :linenos:
+   :caption: 07-dac.ino
 
 该项目利用 Arduino 和 DAC（数模转换器）播放标志性的超级马里奥兄弟主题曲。它使用一个名为 ``analogWave`` 的库来生成正弦波，以及另一个库 ``pitches.h`` 来定义音符频率。
 

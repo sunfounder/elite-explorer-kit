@@ -77,9 +77,10 @@
     * 您可以直接打开路径 ``elite-explorer-kit-main\basic_project\19-potentiometer`` 下的 ``19-potentiometer.ino`` 文件。
     * 或者将以下代码复制到 Arduino IDE 中。
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/fb09e333-4057-40d8-8485-0de2d88c06c1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/19_basic_potentiometer.ino
+   :language: cpp
+   :linenos:
+   :caption: 19-potentiometer.ino
 
 将代码上传到 Uno 板后，您可以打开串口监视器观察电位器的读取值。当您旋转电位器旋钮时，读取值将相应变化。来自电位器的原始模拟读数范围为 \(0\) 到 \(1023\)。同时，代码将此值缩放至 \(0\) 到 \(255\) 的范围，该值也会显示在串口监视器上。这个缩放后的值用于控制连接 LED 的亮度。LED 将根据缩放后的值变得更亮或更暗。值得注意的是，虽然电位器的理论范围为 \(0\) 到 \(1023\)，但由于硬件公差，实际范围可能略有不同。
 

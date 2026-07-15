@@ -173,9 +173,10 @@ Arduino LED 矩阵编辑器
 
 #. 首先，创建一个 sketch。您可以打开位于路径 ``elite-explorer-kit-main\r4_new_feature\04-led_matrix`` 下的 ``04-led_matrix.ino`` 文件，或将此代码复制到 **Arduino IDE** 中。
 
-   .. raw:: html
-
-      <iframe src=https://create.arduino.cc/editor/sunfounder01/f3712371-7c3d-4a4b-bd98-f74fe43269ed/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/04_led_matrix.ino
+   :language: cpp
+   :linenos:
+   :caption: 04-led_matrix.ino
 
 
 #. 如果您使用的是来自 ``elite-explorer-kit-main\r4_new_feature\04-led_matrix`` 路径的代码，您会在 Arduino IDE 中找到一个名为 ``animation.h`` 的选项卡。打开它，并用您从网站获取的 .h 文件替换现有代码。

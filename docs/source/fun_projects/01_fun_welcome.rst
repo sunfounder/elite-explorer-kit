@@ -75,9 +75,14 @@
     * 您可以直接打开路径 ``elite-explorer-kit-main\fun_project\01_welcome`` 下的 ``01_welcome.ino`` 文件。
     * 或者将这段代码复制到 Arduino IDE 中。
 
-.. raw:: html
+.. literalinclude:: /_code/pitches.h
+   :language: cpp
+   :caption: pitches.h
 
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/b9791d5d-169d-4603-9fc3-8081138811fa/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/01_fun_welcome.ino
+   :language: cpp
+   :linenos:
+   :caption: 01_welcome.ino
 
 
 

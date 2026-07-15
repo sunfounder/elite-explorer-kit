@@ -82,9 +82,10 @@
     * 您可以直接打开路径 ``elite-explorer-kit-main\basic_project\26-stepper_motor`` 下的 ``26-stepper_motor.ino`` 文件。
     * 或者将以下代码复制到 Arduino IDE 中。
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/ce640f07-39a0-418a-9114-901df676ff32/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/26_basic_stepper_motor.ino
+   :language: cpp
+   :linenos:
+   :caption: 26-stepper_motor.ino
 
 将代码上传到 Arduino Uno 板后，28BYJ-48 步进电机将在 ULN2003 驱动器的驱动下开始旋转。首先，电机将以 5 RPM（每分钟转数）的速度顺时针旋转一整圈。完成顺时针旋转后，电机将暂停 1 秒。
 

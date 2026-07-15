@@ -87,9 +87,10 @@ Vous pouvez également les acheter séparément à partir des liens ci-dessous.
     * Vous pouvez ouvrir le fichier ``04_light_sensitive_array.ino`` sous le chemin ``elite-explorer-kit-main\fun_project\04_light_sensitive_array`` directement.
     * Ou copiez ce code dans l'IDE Arduino.
 
-.. raw:: html
-
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/9da7af57-c002-41a0-bc84-372e91885d52/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/04_fun_light_array.ino
+   :language: cpp
+   :linenos:
+   :caption: 04_light_sensitive_array.ino
 
 **Comment ça marche ?**
 

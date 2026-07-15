@@ -87,8 +87,9 @@ Code
     * Vous pouvez ouvrir le fichier ``04-tilt_switch.ino`` sous le chemin ``elite-explorer-kit-main\basic_project\04-tilt_switch`` directement.
     * Ou copiez ce code dans l'IDE Arduino.
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/d85d75d9-e491-424c-93be-95e1f4e99549/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/04_basic_tilt_switch.ino
+   :language: cpp
+   :linenos:
+   :caption: 04-tilt_switch.ino
 
 Une fois les codes téléversés sur la carte uno r4, vous pouvez ouvrir le moniteur série pour voir les lectures des broches. Les lectures afficheront soit "1" soit "0" selon que l'interrupteur à bascule est en position verticale (avec la bille métallique interne en contact avec les broches métalliques) ou incliné.

@@ -50,9 +50,10 @@ Ouvrez le fichier ``05-hid_mouse.ino`` situé dans ``elite-explorer-kit-main\r4_
     
     2. Dans le menu de l'IDE Arduino, sélectionnez le port de la carte. Le port peut changer après la réinitialisation, alors assurez-vous qu'il est correctement sélectionné.
 
-.. raw:: html
-
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/4b72e0f4-57cb-4627-b728-10a16f61d15c/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/05_hid_mouse.ino
+   :language: cpp
+   :linenos:
+   :caption: 05-hid_mouse.ino
 
 En plus de contrôler le mouvement de la souris, vous pouvez également gérer les clics de la souris. Pour plus de détails, consultez |link_r4_usb_mouse|.
 
@@ -83,9 +84,10 @@ En appuyant sur l'un des boutons, l'Arduino utilise les fonctions ``Keyboard.pre
 
 Ouvrez le fichier ``05-hid_keyboard.ino`` situé dans ``elite-explorer-kit-main\r4_new_feature\05-hid_keyboard``, ou collez le code suivant dans votre IDE Arduino.
 
-.. raw:: html
-
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/2a5b61d3-d5d6-4c78-a3a0-73880fa1fb57/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/05_hid_keyboard.ino
+   :language: cpp
+   :linenos:
+   :caption: 05-hid_keyboard.ino
 
 
 

@@ -28,6 +28,7 @@ Merci d'avoir choisi notre |link_Elite_Explorer_kit|.
         * |link_fr_tutorials|
         * |link_es_tutorials|
         * |link_it_tutorials|
+
     Veuillez cliquer sur les liens respectifs pour accéder au document dans la langue de votre choix.
 
 .. image:: img/elite_explorer_kit_cover.png

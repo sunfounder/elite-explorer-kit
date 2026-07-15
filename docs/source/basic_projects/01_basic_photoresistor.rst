@@ -89,8 +89,9 @@ Code
 
 
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/e6bf007e-b20d-44d0-9ef9-6d57c1ce4c3c/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/01_basic_photoresistor.ino
+   :language: cpp
+   :linenos:
+   :caption: 01-photoresistor.ino
 
 Après avoir téléversé le code sur la carte uno, vous pouvez ouvrir le moniteur série pour voir la valeur lue de la broche. Lorsque la lumière ambiante devient plus forte, la lecture augmentera en conséquence, et la plage de lecture de la broche est de « 0 » à « 1023 ». Cependant, selon les conditions environnementales et les caractéristiques de la photorésistance, la plage de lecture réelle peut être inférieure à la plage théorique.

@@ -12,7 +12,7 @@
 
     👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
-.. _fun_smart_fan:
+.. _fun_smart_can:
 
 Ventilateur Intelligent
 =================================
@@ -99,9 +99,10 @@ Vous pouvez également les acheter séparément à partir des liens ci-dessous.
     * Vous pouvez ouvrir le fichier ``06_smart_fan.ino`` sous le chemin ``elite-explorer-kit-main\fun_project\06_smart_fan`` directement.
     * Ou copiez ce code dans l'IDE Arduino.
 
-.. raw:: html
-
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/ba484912-14d6-4125-83a0-73a107904144/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/07_fun_smart_can.ino
+   :language: cpp
+   :linenos:
+   :caption: 07_smart_trash_can.ino
 
 **Comment ça marche ?**
 

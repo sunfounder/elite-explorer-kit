@@ -104,9 +104,10 @@ Vous pouvez également les acheter séparément à partir des liens ci-dessous.
 .. note::
    Pour installer la bibliothèque, utilisez le gestionnaire de bibliothèque Arduino et recherchez **"Adafruit SSD1306"** et **"Adafruit GFX"** et installez-les.
 
-.. raw:: html
-
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/86dbb549-d425-4f42-8b5b-28d486e3f7f8/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/12_fun_pong.ino
+   :language: cpp
+   :linenos:
+   :caption: 12_pong_oled.ino
 
 **Comment ça marche ?**
 

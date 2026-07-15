@@ -62,7 +62,7 @@ Vous pouvez également les acheter séparément à partir des liens ci-dessous.
         - |link_resistor_buy|
     *   - :ref:`cpn_rgb_led`
         - |link_rgb_led_buy|
-    *   - :ref:`potentiometer`
+    *   - :ref:`cpn_potentiometer`
         - |link_potentiometer_buy|
 
 **Câblage**
@@ -88,9 +88,10 @@ Vous pouvez également les acheter séparément à partir des liens ci-dessous.
     * Vous pouvez ouvrir le fichier ``03_huedial.ino`` sous le chemin ``elite-explorer-kit-main\fun_project\03_huedial`` directement.
     * Ou copiez ce code dans l'IDE Arduino.
 
-.. raw:: html
-
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/0ad800d4-77bb-454f-8976-a078da71ec35/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/03_fun_hue.ino
+   :language: cpp
+   :linenos:
+   :caption: 03_HueDial.ino
 
 **Comment ça marche ?**
 

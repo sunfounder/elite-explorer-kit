@@ -34,9 +34,15 @@ Ce programme Arduino simple est conçu pour créer un serveur web WiFi de base, 
 .. note::
     Dans le code, le SSID et le mot de passe sont stockés dans ``arduino_secrets.h``. Avant de télécharger cet exemple, vous devez les modifier avec vos propres identifiants WiFi. De plus, pour des raisons de sécurité, assurez-vous que ces informations restent confidentielles lors du partage ou du stockage du code.
 
-.. raw:: html
+.. literalinclude:: /_code/01_iot_webserver_secrets.h
+   :language: cpp
+   :linenos:
+   :caption: arduino_secrets.h
 
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/7ed8f58d-2ed8-4dc9-82cb-7e49b6977ea1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/01_iot_webserver.ino
+   :language: cpp
+   :linenos:
+   :caption: 01_simple_webserver.ino
 
 
 Après avoir téléchargé le code, vous pourrez voir l'adresse IP dans le moniteur série. Vous pouvez entrer cette adresse IP dans votre navigateur web pour allumer/éteindre la LED intégrée.

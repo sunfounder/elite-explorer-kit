@@ -115,9 +115,15 @@ Pour installer la bibliothèque, utilisez le gestionnaire de bibliothèques Ardu
 .. note::
     Dans le code, le SSID et le mot de passe sont stockés dans ``arduino_secrets.h``. Avant de télécharger cet exemple, vous devez les modifier avec vos propres identifiants WiFi. De plus, pour des raisons de sécurité, assurez-vous que ces informations restent confidentielles lors du partage ou du stockage du code.
 
-.. raw:: html
+.. literalinclude:: /_code/04_iot_mqtt_callling_secrets.h
+   :language: cpp
+   :linenos:
+   :caption: arduino_secrets.h
 
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/7a4acdf8-beed-47d4-ada8-cbaab0f3477f/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/04_iot_mqtt_callling.ino
+   :language: cpp
+   :linenos:
+   :caption: 04_mqtt_button.ino
 
 Après avoir exécuté le code, revenez à |link_hivemq|, et lorsque vous appuyez sur l'un des boutons de la breadboard, vous verrez l'invite Messages sur HiveMQ.
 

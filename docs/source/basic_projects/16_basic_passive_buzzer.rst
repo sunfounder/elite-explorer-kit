@@ -90,11 +90,18 @@ Code
 .. note::
 
     * Vous pouvez ouvrir le fichier ``16-passive_buzzer.ino`` sous le chemin ``elite-explorer-kit-main\basic_project\16-passive_buzzer`` directement.
+    * The ``pitches.h`` file is also required — place it in the same directory.
     * Ou copiez ce code dans Arduino IDE.
 
-.. raw:: html
+.. literalinclude:: /_code/pitches.h
+   :language: cpp
+   :linenos:
+   :caption: pitches.h
 
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/7936cad2-3605-40a0-a9fc-573f934ab6b1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/16_basic_passive_buzzer.ino
+   :language: cpp
+   :linenos:
+   :caption: 16-passive_buzzer.ino
     
 Lorsque vous avez terminé de téléverser le code sur la carte R4, vous pouvez entendre une mélodie contenant sept notes.
 

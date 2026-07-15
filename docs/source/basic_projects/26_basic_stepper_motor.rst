@@ -96,9 +96,10 @@ Code
     * Vous pouvez ouvrir le fichier ``26-stepper_motor.ino`` sous le chemin ``elite-explorer-kit-main\basic_project\26-stepper_motor.rst`` directement.
     * Ou copier ce code dans l'IDE Arduino.
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/ce640f07-39a0-418a-9114-901df676ff32/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/26_basic_stepper_motor.ino
+   :language: cpp
+   :linenos:
+   :caption: 26-stepper_motor.ino
 
 Après avoir téléversé le code sur la carte Arduino Uno, le moteur pas à pas 28BYJ-48 commencera à tourner, entraîné par le pilote ULN2003. Initialement, le moteur tournera dans le sens horaire à une vitesse de 5 RPM (tours par minute) pour une révolution complète. Après avoir terminé la rotation horaire, le moteur s'arrêtera pendant 1 seconde.
 

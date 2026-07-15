@@ -106,4 +106,5 @@ Voici une présentation de chaque composant, qui contient le principe de fonctio
     component_humiture_sensor
     component_mfrc522
     component_gy87
+    cpn_10_axis_imu
 

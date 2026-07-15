@@ -60,7 +60,7 @@ Vous pouvez également les acheter séparément à partir des liens ci-dessous.
         - |link_wires_buy|
     *   - :ref:`cpn_resistor`
         - |link_resistor_buy|
-    *   - :ref:`led`
+    *   - :ref:`cpn_led`
         - |link_led_buy|
     *   - :ref:`cpn_potentiometer`
         - |link_potentiometer_buy|
@@ -90,9 +90,10 @@ Code
     * Vous pouvez ouvrir le fichier ``19-potentiometer.ino`` sous le chemin ``elite-explorer-kit-main\basic_project\19-potentiometer`` directement.
     * Ou copiez ce code dans Arduino IDE.
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/fb09e333-4057-40d8-8485-0de2d88c06c1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/19_basic_potentiometer.ino
+   :language: cpp
+   :linenos:
+   :caption: 19-potentiometer.ino
 
 Après avoir téléversé le code sur la carte Uno, vous pouvez ouvrir le moniteur série pour observer les valeurs lues du potentiomètre. Lorsque vous tournez le bouton du potentiomètre, la valeur lue changera en conséquence. La lecture analogique brute du potentiomètre variera de \(0\) à \(1023\). Simultanément, le code ajuste cette valeur à une plage de \(0\) à \(255\), qui est également affichée sur le moniteur série. Cette valeur ajustée est ensuite utilisée pour contrôler la luminosité de la LED connectée. La LED deviendra plus brillante ou plus faible en fonction de la valeur ajustée. Il est à noter que bien que la plage théorique du potentiomètre soit de \(0\) à \(1023\), la plage réelle peut varier légèrement en raison des tolérances matérielles.
 

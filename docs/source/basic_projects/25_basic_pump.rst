@@ -91,9 +91,10 @@ Code
    * Vous pouvez ouvrir le fichier ``25-pump.ino`` sous le chemin ``elite-explorer-kit-main\basic_project\25-pump``. 
    * Ou copier ce code dans **Arduino IDE**.
 
-.. raw:: html
-    
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/8a530528-aa58-4306-acc9-01632ae5e99a/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/25_basic_pump.ino
+   :language: cpp
+   :linenos:
+   :caption: 25-pump.ino
     
 Fixez le tuyau à la pompe et positionnez-la dans le bassin. Une fois le code téléversé avec succès, la pompe à eau s'allumera et restera active pendant cinq secondes.
 Lors de la réalisation de cette expérience, assurez-vous que le circuit reste à l'écart de l'eau pour éviter tout court-circuit potentiel.

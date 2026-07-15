@@ -87,9 +87,10 @@ Code
     * Vous pouvez ouvrir le fichier ``20-joystick.ino`` sous le chemin ``elite-explorer-kit-main\basic_project\20-joystick`` directement.
     * Ou copiez ce code dans Arduino IDE.
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/ac0f9910-e53e-43a3-a5ae-ec4d3a3f4aa1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/20_basic_joystick.ino
+   :language: cpp
+   :linenos:
+   :caption: 20-joystick.ino
 
 Maintenant, lorsque vous poussez le joystick, les coordonnées des axes X et Y affichées sur le Moniteur Série changeront en conséquence. En appuyant sur le bouton, la coordonnée Z=0 sera également affichée.
 

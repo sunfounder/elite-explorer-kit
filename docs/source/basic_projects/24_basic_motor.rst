@@ -97,9 +97,10 @@ Code
     * Vous pouvez ouvrir le fichier ``24-motor.ino`` sous le chemin ``elite-explorer-kit-main\basic_project\24-motor`` directement.
     * Ou copier ce code dans l'IDE Arduino.
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/7376df09-204d-4698-b2a6-106e2d2f00e6/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/24_basic_motor.ino
+   :language: cpp
+   :linenos:
+   :caption: 24-motor.ino
 
 Après avoir téléversé le code sur la carte UNO, vous pouvez choisir la direction de rotation du moteur en tapant "A" ou "B" dans le moniteur série.
 

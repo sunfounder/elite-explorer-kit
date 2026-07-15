@@ -89,9 +89,10 @@ Vous pouvez également les acheter séparément à partir des liens ci-dessous.
     * Vous pouvez ouvrir le fichier ``05_digital_dice.ino`` sous le chemin ``elite-explorer-kit-main\fun_project\05_digital_dice`` directement.
     * Ou copiez ce code dans l'IDE Arduino.
 
-.. raw:: html
-
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/ff0528b0-a10d-49e8-8916-6cb1fdfdf9a2/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/05_fun_digital_dice.ino
+   :language: cpp
+   :linenos:
+   :caption: 05_digital_dice.ino
 
 **Comment ça marche ?**
 

@@ -71,9 +71,10 @@ Si vous souhaitez utiliser ces trois puces simultanément, voici un exemple simp
         - Recherchez **"QMC5883LCompass"** et installez
         - Recherchez **"Adafruit BMP085 Library"** et installez
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/efd14082-486b-47eb-9533-8d36a36d2d88/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/09_basic_gy87.ino
+   :language: cpp
+   :linenos:
+   :caption: 09-gy87.ino
 
 .. note::
    Les magnétomètres doivent être calibrés (:ref:`basic_gy87_calibrate`) avant de pouvoir être utilisés comme compas, et doivent être tenus à niveau lors de l'utilisation et **éloignés des objets en fer, des matériaux magnétisés et des fils porteurs de courant**.

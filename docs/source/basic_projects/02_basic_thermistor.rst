@@ -86,9 +86,10 @@ Code
     * Vous pouvez ouvrir le fichier ``02-thermistor.ino`` sous le chemin ``elite-explorer-kit-main\basic_project\02-thermistor`` directement.
     * Ou copiez ce code dans l'IDE Arduino.
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/be5dbe68-b57d-41f0-9fc0-237b99acbe3f/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/02_basic_thermistor.ino
+   :language: cpp
+   :linenos:
+   :caption: 02-thermistor.ino
 
 Après avoir téléversé le code sur la carte uno r4, vous pouvez ouvrir le moniteur série pour vérifier la température actuelle.
 

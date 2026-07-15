@@ -45,7 +45,7 @@ html_context = {
 # ones.
 
 extensions = [
-    'sphinx.ext.autosectionlabel',
+    # 'sphinx.ext.autosectionlabel',
     'sphinx_copybutton',
     'sphinx_rtd_theme'
 ]

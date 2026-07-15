@@ -62,7 +62,7 @@ Vous pouvez également les acheter séparément via les liens ci-dessous.
         - |link_resistor_buy|
     *   - :ref:`cpn_led`
         - |link_led_buy|
-    *   - :ref:`cpn_realy`
+    *   - :ref:`cpn_relay`
         - |link_realy_buy|
     *   - :ref:`cpn_transistor`
         - |link_transistor_buy|
@@ -95,9 +95,10 @@ Code
     * Vous pouvez ouvrir le fichier ``28-relay.ino`` sous le chemin ``elite-explorer-kit-main\basic_project\28-relay`` directement.
     * Ou copier ce code dans l'IDE Arduino.
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/093cb26d-298d-4b36-b3be-466d813c19a9/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/28_basic_relay.ino
+   :language: cpp
+   :linenos:
+   :caption: 28-relay.ino
   
 
 Maintenant, envoyez un signal de niveau haut et le relais se fermera et la LED s'allumera ; envoyez un signal de niveau bas, et il s'ouvrira et la LED s'éteindra. De plus, vous pouvez entendre un tic-tac causé par l'ouverture du contact normalement fermé et la fermeture du contact normalement ouvert.

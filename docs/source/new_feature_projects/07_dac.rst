@@ -40,9 +40,15 @@ Ouvrez le fichier ``07-dac.ino`` situé dans ``elite-explorer-kit-main\r4_new_fe
 .. note:: 
     Veuillez placer le fichier ``pitches.h`` dans le même répertoire que le code pour assurer un fonctionnement correct.
 
-.. raw:: html
+.. literalinclude:: /_code/pitches.h
+   :language: cpp
+   :linenos:
+   :caption: pitches.h
 
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/93e0379e-1d2d-4d9c-a603-42b3335e8e05/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/07_dac.ino
+   :language: cpp
+   :linenos:
+   :caption: 07-dac.ino
 
 Ce projet utilise l'Arduino et le DAC (convertisseur numérique-analogique) pour jouer le thème emblématique de Super Mario Bros. Il utilise une bibliothèque appelée ``analogWave`` pour la génération d'ondes sinusoïdales et une autre bibliothèque, ``pitches.h``, pour définir les fréquences des notes.
 

@@ -106,9 +106,10 @@ Vous pouvez également les acheter séparément à partir des liens ci-dessous.
 
     * La bibliothèque ``RFID1`` est utilisée ici. La bibliothèque se trouve dans le répertoire ``elite-explorer-kit-main/library/``, ou vous pouvez cliquer ici :download:`RFID1.zip </_static/RFID1.zip>` pour la télécharger. Reportez-vous à :ref:`manual_install_lib` pour un tutoriel sur son installation.
 
-.. raw:: html
-
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/3486dd4e-a76e-478f-b5a4-a86281f7f374/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/09_fun_access.ino
+   :language: cpp
+   :linenos:
+   :caption: 09_access_control_system.ino
 
 
 **Comment ça marche ?**

@@ -89,8 +89,9 @@ Código
 
 
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/e6bf007e-b20d-44d0-9ef9-6d57c1ce4c3c/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/01_basic_photoresistor.ino
+   :language: cpp
+   :linenos:
+   :caption: 01-photoresistor.ino
 
 Después de subir el código a la placa uno, puedes abrir el monitor serial para ver el valor leído del pin. Cuando la luz ambiental se vuelva más fuerte, la lectura aumentará correspondientemente, y el rango de lectura del pin es de 「0」~「1023」. Sin embargo, según las condiciones ambientales y las características del fotorresistor, el rango de lectura real puede ser menor que el rango teórico.

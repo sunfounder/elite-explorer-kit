@@ -91,9 +91,10 @@ Código
    * Puedes abrir el archivo ``25-pump.ino`` en la ruta ``elite-explorer-kit-main\basic_project\25-pump``. 
    * O copiar este código en **Arduino IDE**.
 
-.. raw:: html
-    
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/8a530528-aa58-4306-acc9-01632ae5e99a/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/25_basic_pump.ino
+   :language: cpp
+   :linenos:
+   :caption: 25-pump.ino
     
 Coloca la manguera en la bomba y posiciónala en el recipiente. Una vez que el código se haya cargado correctamente, la bomba de agua se encenderá y permanecerá activa durante cinco segundos.
 Al realizar este experimento, asegúrate de que el circuito se mantenga alejado del agua para evitar posibles cortocircuitos.

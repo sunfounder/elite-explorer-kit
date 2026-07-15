@@ -68,9 +68,10 @@ Si deseas usar estos tres chips simultáneamente, aquí tienes un ejemplo simple
         - Busca **"QMC5883LCompass"** e instálala.
         - Busca **"Adafruit BMP085 Library"** e instálala.
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/efd14082-486b-47eb-9533-8d36a36d2d88/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/09_basic_gy87.ino
+   :language: cpp
+   :linenos:
+   :caption: 09-gy87.ino
 
 .. note::
    Los magnetómetros deben calibrarse(:ref:`basic_gy87_calibrate`) antes de que puedan usarse como brújulas, y deben mantenerse nivelados durante su uso y **alejados de objetos de hierro, materiales magnetizados y cables que transportan corriente**.

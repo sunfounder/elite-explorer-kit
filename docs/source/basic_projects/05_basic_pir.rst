@@ -86,9 +86,10 @@ Código
     * Puedes abrir el archivo ``05-pir_motion_sensor.ino`` en la ruta ``elite-explorer-kit-main\basic_project\05-pir_motion_sensor`` directamente.
     * O copiar este código en Arduino IDE.
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/d9fc9198-1538-413d-b501-2cddc8d7cfe6/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/05_basic_pir.ino
+   :language: cpp
+   :linenos:
+   :caption: 05-pir_motion_sensor.ino
 
 Después de subir el código a la placa Arduino Uno, puedes abrir el monitor serial para observar la salida del sensor. Cuando el sensor de movimiento PIR (infrarrojo pasivo) detecta movimiento, el monitor serial mostrará el mensaje "¡Alguien está aquí!" para indicar que se ha detectado movimiento. Si no se detecta movimiento, se mostrará el mensaje "Monitoreando..." en su lugar.
 

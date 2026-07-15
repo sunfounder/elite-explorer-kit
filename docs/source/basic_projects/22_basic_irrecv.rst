@@ -89,9 +89,10 @@ Código
     * Puedes abrir el archivo ``22-ir_receiver.ino`` directamente en la ruta ``elite-explorer-kit-main\basic_project\22-ir_receiver``.
     * O copia este código en el IDE de Arduino.
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/92e1cb75-cda1-4fc7-9680-28e28df8dccc/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/22_basic_irrecv.ino
+   :language: cpp
+   :linenos:
+   :caption: 22-ir_receiver.ino
 
 * Se utiliza la biblioteca ``IRremote`` aquí, puedes instalarla desde el **Administrador de Bibliotecas**.
 

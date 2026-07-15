@@ -80,9 +80,10 @@ Código
     * Puedes abrir el archivo ``21-keypad.ino`` directamente en la ruta ``elite-explorer-kit-main\basic_project\21-keypad``.
     * Para instalar la biblioteca, utiliza el Administrador de Bibliotecas de Arduino y busca **"Adafruit Keypad"** y luego instálala. 
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/25fd4116-92d4-4ee4-b3ba-6707f4334629/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/21_basic_keypad.ino
+   :language: cpp
+   :linenos:
+   :caption: 21-keypad.ino
 
 Después de subir el código a la placa UNO, en el monitor serie, podrás ver el valor de la tecla presionada en el teclado.
 

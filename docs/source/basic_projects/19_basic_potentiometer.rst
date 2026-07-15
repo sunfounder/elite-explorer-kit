@@ -90,9 +90,10 @@ Código
     * Puedes abrir el archivo ``19-potentiometer.ino`` directamente en la ruta ``elite-explorer-kit-main\basic_project\19-potentiometer``.
     * O copiar este código en Arduino IDE.
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/fb09e333-4057-40d8-8485-0de2d88c06c1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/19_basic_potentiometer.ino
+   :language: cpp
+   :linenos:
+   :caption: 19-potentiometer.ino
 
 Después de subir el código a la placa Uno, puedes abrir el monitor serie para observar los valores leídos del potenciómetro. A medida que giras la perilla del potenciómetro, el valor leído cambiará en consecuencia. La lectura analógica en bruto del potenciómetro variará de \(0\) a \(1023\). Simultáneamente, el código escala este valor a un rango de \(0\) a \(255\), que también se muestra en el monitor serie. Este valor escalado se usa para controlar el brillo del LED conectado. El LED se volverá más brillante o más tenue según el valor escalado. Vale la pena mencionar que, aunque el rango teórico del potenciómetro es de \(0\) a \(1023\), el rango real puede variar ligeramente debido a las tolerancias del hardware.
 

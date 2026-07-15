@@ -86,9 +86,10 @@ Código
     * Abre el archivo ``03-moisture.ino`` en la ruta ``elite-explorer-kit-main\basic_project\03-moisture``.
     * O copia este código en **Arduino IDE**.
     
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/c585dd77-2e8a-4839-a908-d22e1d6e93aa/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/03_basic_moisture.ino
+   :language: cpp
+   :linenos:
+   :caption: 03-moisture.ino
     
 Una vez que el código se haya subido correctamente, el monitor serial imprimirá el valor de la humedad del suelo.
 

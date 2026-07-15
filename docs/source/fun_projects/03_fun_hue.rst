@@ -89,9 +89,10 @@ También puedes comprarlos por separado desde los enlaces a continuación.
     * Puedes abrir el archivo ``03_huedial.ino`` bajo la ruta ``elite-explorer-kit-main\fun_project\03_huedial`` directamente.
     * O copia este código en Arduino IDE.
 
-.. raw:: html
-
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/0ad800d4-77bb-454f-8976-a078da71ec35/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/03_fun_hue.ino
+   :language: cpp
+   :linenos:
+   :caption: 03_HueDial.ino
 
 **¿Cómo funciona?**
 

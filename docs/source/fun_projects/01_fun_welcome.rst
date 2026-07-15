@@ -90,9 +90,14 @@ También puedes comprarlos por separado desde los enlaces a continuación.
     * Puedes abrir el archivo ``01_welcome.ino`` bajo la ruta ``elite-explorer-kit-main\fun_project\01_welcome`` directamente.
     * O copia este código en Arduino IDE.
 
-.. raw:: html
+.. literalinclude:: /_code/pitches.h
+   :language: cpp
+   :caption: pitches.h
 
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/b9791d5d-169d-4603-9fc3-8081138811fa/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/01_fun_welcome.ino
+   :language: cpp
+   :linenos:
+   :caption: 01_welcome.ino
 
 
 

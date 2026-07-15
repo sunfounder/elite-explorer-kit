@@ -96,9 +96,10 @@ Código
     * Puedes abrir el archivo ``28-relay.ino`` en la ruta ``elite-explorer-kit-main\basic_project\28-relay`` directamente.
     * O copiar este código en Arduino IDE.
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/093cb26d-298d-4b36-b3be-466d813c19a9/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/28_basic_relay.ino
+   :language: cpp
+   :linenos:
+   :caption: 28-relay.ino
   
 
 Ahora, envía una señal de alto nivel y el relé se cerrará y el LED se encenderá; envía una señal de bajo nivel y el relé se abrirá y el LED se apagará. Además, puedes escuchar un tic-tac causado por la apertura del contacto normalmente cerrado y el cierre del contacto normalmente abierto.

@@ -141,9 +141,14 @@ Para instalar la biblioteca, utiliza el Administrador de Bibliotecas de Arduino 
 .. note::
     En el código, SSID y contraseña se almacenan en ``arduino_secrets.h``. Antes de subir este ejemplo, necesitas modificarlos con tus propias credenciales de WiFi. Adicionalmente, por motivos de seguridad, asegúrate de mantener esta información confidencial al compartir o almacenar el código.
 
-.. raw:: html
+.. literalinclude:: /_code/06_iot_weather_oled_secrets.h
+   :language: cpp
+   :caption: arduino_secrets.h
 
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/5f667ac1-bb24-4681-9fa1-db19fcfdd48a/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/06_iot_weather_oled.ino
+   :language: cpp
+   :linenos:
+   :caption: 06_weather_oled.ino
 
 
 

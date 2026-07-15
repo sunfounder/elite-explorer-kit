@@ -85,9 +85,10 @@ También puedes comprarlos por separado desde los enlaces a continuación.
     * Puedes abrir el archivo ``07_smart_trash_can.ino`` bajo la ruta ``elite-explorer-kit-main\fun_project\07_smart_trash_can`` directamente.
     * O copiar este código en Arduino IDE.
 
-.. raw:: html
-
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/509f1bee-6e38-4106-bea7-9b06cdb3719f/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/07_fun_smart_can.ino
+   :language: cpp
+   :linenos:
+   :caption: 07_smart_trash_can.ino
 
 
 **¿Cómo funciona?**

@@ -91,9 +91,10 @@ Código
         .. image:: img/22_mpr121_lib.png
             :align: center
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/de0aa390-de85-43ab-87f7-f380c67c65e8/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/23_basic_mpr121_module.ino
+   :language: cpp
+   :linenos:
+   :caption: 23-mpr121.ino
 
 Después de cargar el código en la placa UNO, el estado táctil de los pines MPR121 "1" y "0" se registrará en una matriz booleana de 12 bits. Esta matriz se imprimirá luego en el monitor serial.
 

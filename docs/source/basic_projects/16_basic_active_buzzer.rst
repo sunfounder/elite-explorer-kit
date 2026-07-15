@@ -96,8 +96,9 @@ Código
     * Puedes abrir el archivo ``16-active_buzzer.ino`` directamente en la ruta ``elite-explorer-kit-main\basic_project\16-active_buzzer``.
     * O copia este código en Arduino IDE.
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/bde4fd5c-8848-49cd-898f-8a824c836b80/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/16_basic_active_buzzer.ino
+   :language: cpp
+   :linenos:
+   :caption: 16-active_buzzer.ino
 
 Después de que el código se cargue con éxito, escucharás un pitido cada segundo.

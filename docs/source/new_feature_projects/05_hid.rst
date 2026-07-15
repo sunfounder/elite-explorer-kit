@@ -50,9 +50,10 @@ Abre el archivo ``05-hid_mouse.ino`` ubicado en ``elite-explorer-kit-main\r4_new
     
     2. Desde el menú del Arduino IDE, selecciona el puerto de la placa. El puerto puede cambiar después del reinicio, así que asegúrate de seleccionarlo correctamente.
 
-.. raw:: html
-
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/4b72e0f4-57cb-4627-b728-10a16f61d15c/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/05_hid_mouse.ino
+   :language: cpp
+   :linenos:
+   :caption: 05-hid_mouse.ino
 
 Además de controlar el movimiento del ratón, también puedes manejar los clics del ratón. Para más detalles, consulta |link_r4_usb_mouse|.
 
@@ -83,9 +84,10 @@ Al presionar cualquiera de los botones, el Arduino emplea las funciones ``Keyboa
 
 Abre el archivo ``05-hid_keyboard.ino`` ubicado en ``elite-explorer-kit-main\r4_new_feature\05-hid_keyboard``, o pega el siguiente código en tu Arduino IDE.
 
-.. raw:: html
-
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/2a5b61d3-d5d6-4c78-a3a0-73880fa1fb57/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/05_hid_keyboard.ino
+   :language: cpp
+   :linenos:
+   :caption: 05-hid_keyboard.ino
 
 Advertencias y Consejos
 ---------------------------

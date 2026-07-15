@@ -100,9 +100,10 @@ También puedes comprarlos por separado desde los enlaces a continuación.
     * Puedes abrir el archivo ``06_smart_fan.ino`` bajo la ruta ``elite-explorer-kit-main\fun_project\06_smart_fan`` directamente.
     * O copia este código en Arduino IDE.
 
-.. raw:: html
-
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/ba484912-14d6-4125-83a0-73a107904144/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/06_fun_smart_fan.ino
+   :language: cpp
+   :linenos:
+   :caption: 06_smart_fan.ino
 
 
 **¿Cómo funciona?**

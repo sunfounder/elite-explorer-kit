@@ -187,9 +187,10 @@ En los pasos anteriores, obtuvimos un archivo ``.h`` que almacena una serie de f
 
 #. Primero, crea un boceto. Puedes abrir el archivo ``04-led_matrix.ino`` ubicado en la ruta ``elite-explorer-kit-main\r4_new_feature\04-led_matrix``, o copiar este código en el **Arduino IDE**.
 
-   .. raw:: html
-
-      <iframe src=https://create.arduino.cc/editor/sunfounder01/f3712371-7c3d-4a4b-bd98-f74fe43269ed/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/04_led_matrix.ino
+   :language: cpp
+   :linenos:
+   :caption: 04-led_matrix.ino
 
 
 #. Si estás utilizando el código de la ruta ``elite-explorer-kit-main\r4_new_feature\04-led_matrix``, encontrarás una pestaña llamada ``animation.h`` en el Arduino IDE. Ábrela y reemplaza el código existente con el archivo .h que obtuviste del sitio web.

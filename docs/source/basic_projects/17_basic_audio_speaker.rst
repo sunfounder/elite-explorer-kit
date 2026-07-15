@@ -86,9 +86,14 @@ Código
     * Puedes abrir el archivo ``17-speaker.ino`` directamente en la ruta ``elite-explorer-kit-main\basic_project\17-speaker``.
     * O copia este código en Arduino IDE.
 
-.. raw:: html
+.. literalinclude:: /_code/pitches.h
+   :language: cpp
+   :caption: pitches.h
 
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/33b690b5-0be6-434d-83d7-5bfcfce3775e/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/17_basic_audio_speaker.ino
+   :language: cpp
+   :linenos:
+   :caption: 17-speaker.ino
     
 Al terminar de cargar el código en la placa R4, escucharás una melodía que contiene siete notes.
 

@@ -34,9 +34,14 @@ Todavía necesitas crear o modificar ``arduino_secrets.h``, reemplazando ``SECRE
     #define SECRET_SSID "tunetwork"
     #define SECRET_PASS "tucontraseña"
 
-.. raw:: html
-       
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/a41ac638-31da-464c-b5d3-e70f2aacd29c/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/01_1_connect_to_wifi_secrets.h
+   :language: cpp
+   :caption: arduino_secrets.h
+
+.. literalinclude:: /_code/01_1_connect_to_wifi.ino
+   :language: cpp
+   :linenos:
+   :caption: 01-wifi_connect.ino
 
 
 Abre el monitor serial y verás un contenido similar al siguiente. Arduino mostrará las direcciones IP y MAC de tu dispositivo, así como la intensidad de la señal de la red.

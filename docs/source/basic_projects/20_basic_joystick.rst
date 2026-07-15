@@ -87,9 +87,10 @@ Codice
     * Puoi aprire direttamente il file ``20-joystick.ino`` nel percorso ``elite-explorer-kit-main\basic_project\20-joystick``.
     * Oppure copia questo codice nell'Arduino IDE.
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/ac0f9910-e53e-43a3-a5ae-ec4d3a3f4aa1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/20_basic_joystick.ino
+   :language: cpp
+   :linenos:
+   :caption: 20-joystick.ino
 
 Ora, quando spingi la leva, le coordinate degli assi X e Y visualizzate sul Monitor Seriale cambieranno di conseguenza. Premendo il pulsante verrà visualizzata anche la coordinata Z=0.
 

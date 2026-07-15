@@ -86,9 +86,10 @@ Codice
     * Puoi aprire il file ``02-thermistor.ino`` direttamente dal percorso ``elite-explorer-kit-main\basic_project\02-thermistor``.
     * Oppure copia questo codice nell'IDE di Arduino.
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/be5dbe68-b57d-41f0-9fc0-237b99acbe3f/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/02_basic_thermistor.ino
+   :language: cpp
+   :linenos:
+   :caption: 02-thermistor.ino
 
 Dopo aver caricato il codice sulla scheda uno r4, puoi aprire il monitor seriale per controllare la temperatura corrente.
 

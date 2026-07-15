@@ -49,9 +49,10 @@ Apri il file ``05-hid_mouse.ino`` situato nel percorso ``elite-explorer-kit-main
     
     2. Dal menu dell'Arduino IDE, seleziona la porta della scheda. La porta potrebbe cambiare dopo il reset, quindi assicurati che sia correttamente selezionata.
 
-.. raw:: html
-
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/4b72e0f4-57cb-4627-b728-10a16f61d15c/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/05_hid_mouse.ino
+   :language: cpp
+   :linenos:
+   :caption: 05-hid_mouse.ino
 
 Oltre a controllare il movimento del mouse, puoi anche gestire i clic del mouse. Per ulteriori dettagli, consulta |link_r4_usb_mouse|.
 
@@ -82,9 +83,10 @@ Quando viene premuto uno dei due pulsanti, l'Arduino utilizza le funzioni ``Keyb
 
 Apri il file ``05-hid_keyboard.ino`` situato nel percorso ``elite-explorer-kit-main\r4_new_feature\05-hid_keyboard``, oppure incolla il seguente codice nel tuo Arduino IDE.
 
-.. raw:: html
-
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/2a5b61d3-d5d6-4c78-a3a0-73880fa1fb57/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/05_hid_keyboard.ino
+   :language: cpp
+   :linenos:
+   :caption: 05-hid_keyboard.ino
 
 
 

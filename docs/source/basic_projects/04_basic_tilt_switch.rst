@@ -86,8 +86,9 @@ Codice
     * Puoi aprire il file ``04-tilt_switch.ino`` direttamente dal percorso ``elite-explorer-kit-main\basic_project\04-tilt_switch``.
     * Oppure copia questo codice nell'IDE di Arduino.
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/d85d75d9-e491-424c-93be-95e1f4e99549/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/04_basic_tilt_switch.ino
+   :language: cpp
+   :linenos:
+   :caption: 04-tilt_switch.ino
 
 Una volta caricato il codice sulla scheda uno r4, puoi aprire il monitor seriale per visualizzare le letture del pin. Le letture mostreranno "1" o "0" a seconda che l'interruttore a inclinazione sia in posizione verticale (con la sfera di metallo interna che fa contatto con i pin) o inclinato.

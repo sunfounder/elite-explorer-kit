@@ -79,9 +79,10 @@ Codice
    * Puoi aprire il file ``10-led.ino`` sotto il percorso ``elite-explorer-kit-main\basic_project\10-led``.
    * Oppure copia questo codice nell'**Arduino IDE**.
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/2d23289e-ebd1-49e9-b11f-b1bbc1f192c1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/10_basic_led.ino
+   :language: cpp
+   :linenos:
+   :caption: 10-led.ino
 
 .. raw:: html
 

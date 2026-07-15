@@ -87,9 +87,10 @@ Codice
 .. note:: 
     Per installare la libreria, usa il Library Manager di Arduino e cerca **"Adafruit BMP085 Library"** e installala.
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/7f7347f7-e1e6-400f-b10c-02ccf300b3b9/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/09_basic_gy87_bmp180.ino
+   :language: cpp
+   :linenos:
+   :caption: 09-gy87_bmp180.ino
 
 Analisi del Codice
 ------------------------

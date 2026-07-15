@@ -145,9 +145,14 @@ Per installare la libreria, utilizza il Gestore delle Librerie Arduino e cerca "
 .. note::
     Nel codice, SSID e password sono memorizzati in ``arduino_secrets.h``. Prima di caricare questo esempio, è necessario modificarli con le proprie credenziali WiFi. Inoltre, per motivi di sicurezza, assicurati che queste informazioni siano mantenute riservate durante la condivisione o la memorizzazione del codice.
 
-.. raw:: html
+.. literalinclude:: /_code/06_iot_weather_oled_secrets.h
+   :language: cpp
+   :caption: arduino_secrets.h
 
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/5f667ac1-bb24-4681-9fa1-db19fcfdd48a/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/06_iot_weather_oled.ino
+   :language: cpp
+   :linenos:
+   :caption: 06_weather_oled.ino
 
 **Come Funziona?**
 

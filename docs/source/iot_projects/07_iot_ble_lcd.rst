@@ -116,9 +116,10 @@ Gli UUID svolgono un ruolo cruciale nella comunicazione BLE, garantendo l'unicit
 .. note:: 
       Per installare la libreria, usa il Gestore delle Librerie Arduino per cercare e installare **"ArduinoBLE"** e **"LiquidCrystal I2C"**.
 
-.. raw:: html
-
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/958c37c2-a897-4c4c-b6c1-0e7fea67c7b1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/07_iot_ble_lcd.ino
+   :language: cpp
+   :linenos:
+   :caption: 07_lightblue_lcd.ino
 
 
 **Come Giocare?**

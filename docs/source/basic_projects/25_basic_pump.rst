@@ -91,9 +91,10 @@ Codice
    * Puoi aprire direttamente il file ``25-pump.ino`` nel percorso ``elite-explorer-kit-main\basic_project\25-pump``.
    * Oppure copia questo codice nell'**IDE di Arduino**.
 
-.. raw:: html
-    
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/8a530528-aa58-4306-acc9-01632ae5e99a/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/25_basic_pump.ino
+   :language: cpp
+   :linenos:
+   :caption: 25-pump.ino
     
 Collega il tubo alla pompa e posizionalo nella bacinella. Una volta caricato correttamente il codice, la pompa dell'acqua si accenderà e rimarrà attiva per cinque secondi.
 Durante questo esperimento, assicurati che il circuito sia tenuto lontano dall'acqua per evitare possibili cortocircuiti.

@@ -34,9 +34,14 @@ Apri il file ``01-wifi_connect.ino`` nel percorso ``elite-explorer-kit-main\r4_n
     #define SECRET_SSID "tuarete"
     #define SECRET_PASS "tuapassword"
 
-.. raw:: html
-       
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/a41ac638-31da-464c-b5d3-e70f2aacd29c/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/01_1_connect_to_wifi_secrets.h
+   :language: cpp
+   :caption: arduino_secrets.h
+
+.. literalinclude:: /_code/01_1_connect_to_wifi.ino
+   :language: cpp
+   :linenos:
+   :caption: 01-wifi_connect.ino
 
 
 Apri il monitor seriale e vedrai un contenuto simile a quanto segue. Arduino mostrerà l'IP e gli indirizzi MAC del tuo dispositivo, nonché la potenza del segnale della rete.

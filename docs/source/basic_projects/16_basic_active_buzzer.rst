@@ -96,8 +96,9 @@ Codice
     * Puoi aprire direttamente il file ``16-active_buzzer.ino`` nel percorso ``elite-explorer-kit-main\basic_project\16-active_buzzer``.
     * Oppure copia questo codice nell'Arduino IDE.
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/bde4fd5c-8848-49cd-898f-8a824c836b80/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/16_basic_active_buzzer.ino
+   :language: cpp
+   :linenos:
+   :caption: 16-active_buzzer.ino
 
 Dopo aver caricato correttamente il codice, sentirai un bip ogni secondo.

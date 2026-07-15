@@ -132,9 +132,10 @@ Iniziamo.
    .. note:: 
       Per installare la libreria, utilizza l'Arduino Library Manager per cercare e installare **"DHT sensor library"** e **"ArduinoBLE"**.
 
-   .. raw:: html
-       
-      <iframe src=https://create.arduino.cc/editor/sunfounder01/53fd4af4-dcc6-439d-b52f-2f94f17c1263/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/08_iot_ble_home.ino
+   :language: cpp
+   :linenos:
+   :caption: 08-bluetooth_environmental_monitor.ino
 
 #. Dopo aver selezionato la scheda e la porta corrette, clicca sul pulsante **Upload**.
 

@@ -168,9 +168,14 @@ Segui i passaggi seguenti su IFTTT.
 .. warning::
    Per evitare che la tua casella di posta venga inondata, ti preghiamo di testare in anticipo il :ref:`cpn_pir` prima di eseguire il codice per questo progetto.
 
-.. raw:: html
+.. literalinclude:: /_code/03_iot_security_alert_secrets.h
+   :language: cpp
+   :caption: arduino_secrets.h
 
-   <iframe src=https://create.arduino.cc/editor/sunfounder01/adec1608-4642-4469-bdf4-8dc3e3e4ce4d/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/03_iot_security_alert.ino
+   :language: cpp
+   :linenos:
+   :caption: 03_ifttt_pir.ino
  
 **Come funziona?**
 

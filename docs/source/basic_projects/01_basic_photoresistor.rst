@@ -89,8 +89,9 @@ Codice
 
 
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/e6bf007e-b20d-44d0-9ef9-6d57c1ce4c3c/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/01_basic_photoresistor.ino
+   :language: cpp
+   :linenos:
+   :caption: 01-photoresistor.ino
 
 Dopo aver caricato il codice sulla scheda uno, puoi aprire il monitor seriale per vedere il valore letto dal pin. Quando la luce ambientale diventa più intensa, la lettura aumenterà di conseguenza, e l'intervallo di lettura del pin è 「0」~「1023」. Tuttavia, a seconda delle condizioni ambientali e delle caratteristiche del fotoresistore, l'intervallo di lettura effettivo potrebbe essere inferiore all'intervallo teorico.

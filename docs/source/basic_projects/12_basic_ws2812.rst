@@ -86,9 +86,10 @@ Codice
 .. warning::
     **[Obsoleto]** Poiché la libreria |link_FastLED_lib| non ha ancora rilasciato ufficialmente una versione che supporti Arduino R4, dovrai scaricare :download:`l'ultima versione del codice di sviluppo della libreria FastLED <https://codeload.github.com/FastLED/FastLED/zip/refs/heads/master>` e sovrascrivere i file esistenti della libreria FastLED. Per istruzioni dettagliate su come farlo, consulta la sezione :ref:`manual_install_lib`. (Questa nota verrà ritirata quando la libreria FastLED rilascerà ufficialmente un aggiornamento che supporti l'Arduino UNO R4.)
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/6c9b8c2c-6cea-4ea8-a959-e579ca98f35d/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/12_basic_ws2812.ino
+   :language: cpp
+   :linenos:
+   :caption: 12-ws2812.ino
 
 .. raw:: html
 

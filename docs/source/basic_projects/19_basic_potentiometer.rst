@@ -90,9 +90,10 @@ Codice
     * Puoi aprire direttamente il file ``19-potentiometer.ino`` nel percorso ``elite-explorer-kit-main\basic_project\19-potentiometer``.
     * Oppure copia questo codice nell'Arduino IDE.
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/fb09e333-4057-40d8-8485-0de2d88c06c1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/19_basic_potentiometer.ino
+   :language: cpp
+   :linenos:
+   :caption: 19-potentiometer.ino
 
 Dopo aver caricato il codice sulla scheda Uno, puoi aprire il monitor seriale per osservare i valori letti dal potenziometro. Girando la manopola del potenziometro, il valore letto cambierà di conseguenza. La lettura analogica grezza del potenziometro varierà da \(0\) a \(1023\). Contemporaneamente, il codice ridimensiona questo valore a un intervallo di \(0\) a \(255\), che viene anche visualizzato sul monitor seriale. Questo valore scalato viene poi utilizzato per controllare la luminosità del LED collegato. Il LED diventerà più luminoso o più fioco in base al valore scalato. Vale la pena notare che, sebbene l'intervallo teorico del potenziometro sia \(0\) a \(1023\), l'intervallo effettivo può variare leggermente a causa delle tolleranze hardware.
 

@@ -86,9 +86,10 @@ Codice
 .. note:: 
     Per installare la libreria, usa il Library Manager di Arduino e cerca **"Adafruit MPU6050"** e installala.
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/f89edd5d-e6f9-4f83-979c-6c1d5da3e9d7/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/09_basic_gy87_mpu6050.ino
+   :language: cpp
+   :linenos:
+   :caption: 09-gy87_mpu6050.ino
 
 Analisi del Codice
 ------------------------

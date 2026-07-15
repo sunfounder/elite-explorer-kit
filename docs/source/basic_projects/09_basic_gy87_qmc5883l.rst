@@ -99,9 +99,10 @@ Calibrare QMC5883L
     * Puoi aprire direttamente il file ``09-gy87_compass_calibration.ino`` nel percorso ``elite-explorer-kit-main\basic_project\09-gy87_compass_calibration``.
     * Oppure copia questo codice nell'IDE di Arduino.
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/252c7a58-3a9f-4c66-959e-f45fc19e68aa/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/09_basic_gy87_qmc5883l_calib.ino
+   :language: cpp
+   :linenos:
+   :caption: 09-gy87_compass_calibration.ino
 
 Dopo aver caricato il codice, apri il monitor seriale. Segui le istruzioni nel monitor seriale per calibrare il QMC5883L. Quando ti viene chiesto di muovere il sensore, si consiglia di utilizzare il metodo di calibrazione a 8. In alternativa, mantieni semplicemente il sensore parallelo al suolo e ruotalo in senso orario o antiorario fino a quando il monitor seriale indica che la calibrazione è completa.
 
@@ -138,9 +139,10 @@ Codice
     * Oppure copia questo codice nell'IDE di Arduino.
     * Inserisci il codice ottenuto dai passaggi di calibrazione sotto la linea di codice ``compass.init()`` nella funzione ``initializeQMC5883L()``.
 
-.. raw:: html
-
-    <iframe src=https://create.arduino.cc/editor/sunfounder01/8b266a18-ce7b-4330-8c10-c9f4148bb8ec/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+.. literalinclude:: /_code/09_basic_gy87_qmc5883l.ino
+   :language: cpp
+   :linenos:
+   :caption: 09-gy87_qmc5883l.ino
 
 
 Analisi del Codice

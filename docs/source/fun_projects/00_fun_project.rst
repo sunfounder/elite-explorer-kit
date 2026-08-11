@@ -27,7 +27,6 @@ In this chapter, you will find some fun projects. These projects involve the use
     03_fun_hue
     04_fun_light_array
     05_fun_digital_dice
-    06_fun_smart_fan
     07_fun_smart_can
     08_fun_plant_monitor
     09_fun_access
@@ -36,3 +35,4 @@ In this chapter, you will find some fun projects. These projects involve the use
     12_fun_pong
     13_fun_snake
 
+.. 06_fun_smart_fan

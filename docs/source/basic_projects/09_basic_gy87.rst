@@ -12,9 +12,13 @@
 
     👉 Ready to explore and create with us? Click [|link_sf_facebook|] and join today!
 
-IMU Module
+.. _basic_gy87:
+
+IMU Module (GY-87)
 ==========================
 
+.. note:: Different versions of this kit may use different IMU modules. Please select the appropriate tutorial based on the version of the kit you have. If you have a 10-axis IMU module, please refer to :ref:`basic_imu`. If you have a GY-87 module, please refer to this lesson.
+    
 The GY-87 module is equipped with three sensor chips: MPU6050, QMC5883L, and BMP180, each offering unique capabilities. The MPU6050 combines a gyroscope and an accelerometer for motion tracking, the QMC5883L serves as a magnetometer for directional sensing, and the BMP180 is used for measuring barometric pressure and temperature. These can be interfaced using the I2C protocol for effective communication with an Arduino.
 
 These sensors are designed for seamless integration via the I2C protocol, ensuring efficient communication with platforms like Arduino. Each sensor in the GY-87 module is accessible through unique I2C addresses: MPU6050 is accessed at 0x68, QMC5883L at 0x0D, and BMP180 at 0x77.

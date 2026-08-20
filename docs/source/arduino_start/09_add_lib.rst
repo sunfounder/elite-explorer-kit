@@ -26,6 +26,7 @@ Verwendung des Bibliotheks-Managers
 Viele Bibliotheken sind direkt über den Arduino-Bibliotheks-Manager verfügbar. Sie können den Bibliotheks-Manager wie folgt aufrufen:
 
 #. Im **Library Manager** können Sie nach der gewünschten Bibliothek anhand ihres Namens suchen oder durch verschiedene Kategorien stöbern.
+      In Projekten, in denen eine Bibliotheksinstallation erforderlich ist, gibt es Hinweise darauf, welche Bibliotheken zu installieren sind. Befolgen Sie die bereitgestellten Anweisungen, z. B. „Hier wird die DHT-Sensorbibliothek verwendet. Sie können sie über den Library Manager installieren.“ Installieren Sie einfach die empfohlenen Bibliotheken wie angegeben.
 
    .. note::
 

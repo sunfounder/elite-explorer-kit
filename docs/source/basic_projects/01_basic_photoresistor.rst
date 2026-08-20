@@ -92,6 +92,6 @@ Code
 .. literalinclude:: /_code/01_basic_photoresistor.ino
    :language: cpp
    :linenos:
-   :caption: 01-fotowiderstand.ino
+   :caption: 01-photoresistor.ino
 
 Nachdem Sie den Code auf das Uno-Board hochgeladen haben, können Sie den seriellen Monitor öffnen, um den ausgelesenen Wert des Pins zu sehen. Wenn das Umgebungslicht stärker wird, steigt auch der Messwert entsprechend an, und der Lesebereich des Pins liegt zwischen 「0」 und 「1023」. Jedoch kann der tatsächliche Lesebereich aufgrund der Umgebungsbedingungen und der Eigenschaften des Fotowiderstands kleiner sein als der theoretische Bereich.

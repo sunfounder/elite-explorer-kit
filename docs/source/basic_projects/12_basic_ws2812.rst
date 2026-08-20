@@ -78,7 +78,13 @@ Code
     * Oder kopieren Sie diesen Code in die Arduino IDE.
 
 .. note:: 
-    Um die Bibliothek zu installieren, verwenden Sie den Arduino Library Manager und suchen Sie nach **„FastLED“** und installieren Sie diese. 
+    Um die Bibliothek zu installieren, verwenden Sie den Arduino Library Manager und suchen Sie nach **„FastLED“** und installieren Sie diese.
+
+.. important::
+    Mit der Veröffentlichung von |link_fastled_3_7_0| unterstützt die FastLED-Bibliothek nun offiziell den Arduino UNO R4. Daher müssen Sie die Entwicklungsversion nicht mehr manuell installieren. Aktualisieren oder installieren Sie die FastLED-Bibliothek einfach über den Arduino Library Manager.
+
+.. warning::
+    **[Veraltet]** Da die |link_FastLED_lib|-Bibliothek noch keine offizielle Version mit Unterstützung für den Arduino R4 veröffentlicht hat, müssen Sie :download:`den neuesten Entwicklungsstand der FastLED-Bibliothek <https://codeload.github.com/FastLED/FastLED/zip/refs/heads/master>` herunterladen und die vorhandenen FastLED-Bibliotheksdateien überschreiben. Detaillierte Anweisungen dazu finden Sie im Abschnitt :ref:`manual_install_lib`. (Dieser Hinweis wird zurückgezogen, wenn die FastLED-Bibliothek offiziell ein Update veröffentlicht, das den Arduino UNO R4 unterstützt.)
 
 .. literalinclude:: /_code/12_basic_ws2812.ino
    :language: cpp

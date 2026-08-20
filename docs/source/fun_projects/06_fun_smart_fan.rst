@@ -76,6 +76,8 @@ Sie können sie auch einzeln über die untenstehenden Links kaufen.
 
 **Verdrahtung**
 
+.. note:: Der Motor benötigt im Betrieb mehr Strom, daher muss das Leistungsmodul während des Gebrauchs an ein Ladekabel angeschlossen bleiben.
+
 .. image:: img/06_smart_fan_bb.png
     :width: 100%
     :align: center

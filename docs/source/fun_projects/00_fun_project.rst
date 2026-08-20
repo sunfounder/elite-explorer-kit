@@ -27,7 +27,6 @@ In diesem Kapitel finden Sie einige unterhaltsame Projekte. Diese Projekte beinh
     03_fun_hue
     04_fun_light_array
     05_fun_digital_dice
-    06_fun_smart_fan
     07_fun_smart_can
     08_fun_plant_monitor
     09_fun_access
@@ -35,4 +34,6 @@ In diesem Kapitel finden Sie einige unterhaltsame Projekte. Diese Projekte beinh
     11_fun_escape
     12_fun_pong
     13_fun_snake
+
+.. 06_fun_smart_fan
 

@@ -34,17 +34,14 @@ Sie können es einfach in das Steckbrett stecken, um Strom zu liefern. Es bietet
 
 **Merkmale und Spezifikationen**
 
-* Stromversorgungseingang: USB Typ-C, 5V
-* Ausgangsspannung: 5V, 3.3V (einstellbar über Jumper. 0V, 3.3V und 5V Konfiguration)
+* Ladeeingang: USB Typ-C, 5V
+* Ausgangsspannung: 5V, 3,3V (einstellbar über Jumper. 0V, 3,3V und 5V Konfiguration)
 * Ausgangsstrom: 5V/1,5A, 3,3V/1A
 * Ein-Aus-Schalter verfügbar
 * Zwei unabhängige Kanäle
-* Onboard-Berg-Männchen-Header für GND, 5V, 3.3V Ausgang
-* USB (Typ-C) Ausgang verfügbar
-* USB (Typ-A) Eingang verfügbar
-* An Bord LED: Ladeanzeige CHG, Betriebsanzeige PWR
+* USB (Typ-A) Ausgang verfügbar
 * Akku: 3,7V Power-Pack, 500mAh
-* Abmessungen: 52mm x 32mm (L x B)
+* Abmessungen: 52mm x 32mm x 24mm (L x B x H)
 
 
 **Beispiel**

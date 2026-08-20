@@ -18,22 +18,16 @@ Mit Wi-Fi verbinden
 
 Dieses Tutorial führt Sie durch die wesentlichen Schritte, um Ihr Arduino-Board mit einem Wi-Fi-Netzwerk zu verbinden. Sie lernen, wie Sie das Wi-Fi-Modul initialisieren, seine Firmware überprüfen und sicher einem Netzwerk mit SSID und Passwort beitreten. Sobald Sie verbunden sind, erfahren Sie, wie Sie wichtige Netzwerkinformationen wie die IP- und MAC-Adressen Ihres Geräts sowie die Signalstärke des Netzwerks direkt über die serielle Konsole überwachen. Dieses Tutorial dient sowohl als praktischer Leitfaden für die Wi-Fi-Konnektivität als auch als Einführung in die Netzwerküberwachung mit Arduino, um eine zuverlässige Wi-Fi-Verbindung herzustellen und aufrechtzuerhalten.
 
-Laden Sie den Code hoch
-----------------------------
+1. Code hochladen
+========================
 
 Öffnen Sie die Datei ``01-wifi_connect.ino`` im Pfad ``elite-explorer-kit-main\r4_new_feature\01-wifi_connect`` oder kopieren Sie diesen Code in die **Arduino IDE**.
 
 .. note:: 
-      Wi-Fi® wird über die integrierte ``WiFiS3``-Bibliothek aktiviert, die mit dem Arduino UNO R4 Core geliefert wird. Die Installation des Cores installiert automatisch die ``WiFiS3``-Bibliothek.
+      Die Wi-Fi®-Unterstützung wird über die integrierte ``WiFiS3``-Bibliothek aktiviert, die im Lieferumfang des Arduino UNO R4 Core enthalten ist. Die Installation des Cores installiert automatisch die ``WiFiS3``-Bibliothek.
 
 
 Sie müssen auch ``arduino_secrets.h`` erstellen oder bearbeiten, ersetzen Sie ``SECRET_SSID`` und ``SECRET_PASS`` durch den Namen und das Passwort des Wi-Fi, mit dem Sie sich verbinden möchten. Die Datei sollte enthalten:
-
-.. code:: arduino
-
-    //arduino_secrets.h header file
-    #define SECRET_SSID "yournetwork"
-    #define SECRET_PASS "yourpassword"
 
 .. literalinclude:: /_code/01_1_connect_to_wifi_secrets.h
    :language: cpp

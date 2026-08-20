@@ -50,8 +50,7 @@ Sie können sie auch einzeln über die untenstehenden Links kaufen.
         - KAUF-LINK
 
     *   - :ref:`uno_r4_wifi`
-        - \-
-    *   - :ref:`cpn_breadboard`
+
         - |link_breadboard_buy|
     *   - :ref:`cpn_wires`
         - |link_wires_buy|
@@ -71,7 +70,7 @@ In diesem Beispiel verwenden wir das Power Supply Module, um die Anode und Katho
 
 .. image:: img/24-motor_bb.png
     :align: center
-    :width: 80%
+    :width: 90%
 
 .. raw:: html
   

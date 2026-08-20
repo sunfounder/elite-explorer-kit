@@ -13,26 +13,20 @@
     👉 Sind Sie bereit, mit uns zu erkunden und zu erschaffen? Klicken Sie auf [|link_sf_facebook|] und treten Sie heute bei!
 
 WiFi-gesteuerte LED (Access Point)
-=====================================
+---------------------------------------------------
 
 Dieses Projekt ermöglicht es Ihnen, eine LED über eine Web-Oberfläche zu steuern. Das Arduino-Board fungiert als WiFi-Zugangspunkt und erstellt sein eigenes lokales Netzwerk, mit dem Sie sich über einen Webbrowser verbinden können. Einmal verbunden, können Sie im Webbrowser die IP-Adresse des Geräts aufrufen, wo Sie Optionen finden, um eine LED (an Pin 13 des Boards angeschlossen) ein- und auszuschalten. Das Projekt bietet Echtzeit-Feedback über den LED-Status über den seriellen Monitor, was das Debuggen und Verstehen des Ablaufs der Operationen erleichtert.
 
 1. Laden Sie den Code hoch
--------------------------------
+===============================
 
 Öffnen Sie die Datei ``01-wifi_ap.ino`` im Pfad ``elite-explorer-kit-main\r4_new_feature\01-wifi_ap`` oder kopieren Sie diesen Code in die **Arduino IDE**.
 
 .. note:: 
-      Wi-Fi® wird über die integrierte ``WiFiS3``-Bibliothek aktiviert, die mit dem Arduino UNO R4 Core geliefert wird. Die Installation des Cores installiert automatisch die ``WiFiS3``-Bibliothek.
+      Die Wi-Fi®-Unterstützung wird über die integrierte ``WiFiS3``-Bibliothek aktiviert, die im Lieferumfang des Arduino UNO R4 Core enthalten ist. Die Installation des Cores installiert automatisch die ``WiFiS3``-Bibliothek.
 
 
 Sie müssen auch ``arduino_secrets.h`` erstellen oder bearbeiten, ersetzen Sie ``SECRET_SSID`` und ``SECRET_PASS`` durch den Namen und das Passwort Ihres WiFi-Zugangspunkts. Die Datei sollte enthalten:
-
-.. code:: arduino
-
-    //arduino_secrets.h header file
-    #define SECRET_SSID "yournetwork"
-    #define SECRET_PASS "yourpassword"
 
 .. literalinclude:: /_code/01_2_ap_secrets.h
    :language: cpp

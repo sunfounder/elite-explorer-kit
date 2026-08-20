@@ -1,4 +1,4 @@
-.. note::
+﻿.. note::
 
     Hallo und willkommen in der SunFounder Raspberry Pi & Arduino & ESP32 Enthusiasten-Gemeinschaft auf Facebook! Tauchen Sie tiefer ein in die Welt von Raspberry Pi, Arduino und ESP32 mit anderen Enthusiasten.
 
@@ -112,19 +112,19 @@ Der Code könnte für dieses Experiment etwas lang erscheinen. Aber die Syntax i
 
 .. code-block:: arduino
 
-   digital_1(); //diaplay 1 to the 7-segment
+   digital_1(); //display 1 to the 7-segment
 
    delay(1000); //wait for a second
 
-   digital_2(); //diaplay 2 to the 7-segment
+   digital_2(); //display 2 to the 7-segment
 
    delay(1000); //wait for a second
 
-   digital_3(); //diaplay 3 to the 7-segment
+   digital_3(); //display 3 to the 7-segment
 
    delay(1000); //wait for a second
 
-   digital_4(); //diaplay 4 to the 7-segment
+   digital_4(); //display 4 to the 7-segment
 
 Durch den Aufruf dieser Funktionen in der loop()-Funktion wird die 7-Segment-Anzeige 0-F anzeigen. Die Funktionen werden nachfolgend gezeigt. Nehmen wir ``digital_2()`` als Beispiel:
 
@@ -132,7 +132,7 @@ Durch den Aufruf dieser Funktionen in der loop()-Funktion wird die 7-Segment-Anz
 
 .. code-block:: arduino
 
-   void digital_2()  //diaplay 2 to the 7-segment
+   void digital_2()  //display 2 to the 7-segment
    {
      turnOffAllSegments();
      digitalWrite(a, HIGH);

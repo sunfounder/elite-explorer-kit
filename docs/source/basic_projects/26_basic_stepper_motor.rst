@@ -73,6 +73,8 @@ Verdrahtung
 
     Obwohl es möglich ist, den Schrittmotor direkt vom Arduino zu betreiben, wird dies nicht empfohlen, da es elektrisches Rauschen auf dessen Stromversorgungsleitungen verursachen kann, was möglicherweise zu Schäden am Arduino führt.
 
+.. note:: Um den Power-Pack des :ref:`cpn_power` zu schonen, laden Sie ihn bitte vor dem ersten Gebrauch vollständig auf.
+
 .. image:: img/26-stepper_motor_bb.png
     :align: center
 

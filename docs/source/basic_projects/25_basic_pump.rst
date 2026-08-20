@@ -69,6 +69,8 @@ Sie können sie auch einzeln über die untenstehenden Links kaufen.
 Verdrahtung
 ----------------------
 
+.. note:: Um den Power-Pack des :ref:`cpn_power` zu schonen, laden Sie ihn bitte vor dem ersten Gebrauch vollständig auf.
+
 .. image:: img/25-pump_bb.png
     :align: center
     :width: 80%

@@ -1,5 +1,4 @@
 # SunFounder Elite Explorer Kit
-
 This repository is for the Elite Explorer Kit. You can [buy it on our website](https://www.sunfounder.com/collections/arduino-kits/products/sunfounder-elite-explorer-kit-with-official-arduino-uno-r4-wifi) or search for "Sunfounder" on [Amazon](https://www.amazon.com/SunFounder-Bluetooth-Tutorials-Beginners-Engineers/dp/B0CR6K5WKK).
 
 Quick Links:
@@ -18,17 +17,17 @@ Quick Links:
 <a id="update"></a>
 ## Update:
 
-2024-05-27:
-    - Add documentation for the 14-bit ADC feature in the Arduino Uno R4.
-
-2024-04-25:
-    - Add links to the video lessons.
+2023-12-06:
+    - First release in English.
 
 2023-12-14:
     - First release in German.
 
-2023-12-06:
-    - First release in English.
+2024-04-25:
+    - Add links to the video lessons.
+
+2024-05-24:
+    - Add documentation for the 14-bit ADC feature in the Arduino Uno R4.
 
 
 <a id="about_sunfounder"></a>

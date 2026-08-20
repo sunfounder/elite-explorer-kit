@@ -113,6 +113,10 @@ gettext_compact = False # Support for generating the contents of the folders ins
 
 rst_epilog = """
 
+.. |link_cloud| raw:: html
+
+    <a href="https://cloud.arduino.cc/" target="_blank">hier</a>
+
 .. |link_sf_facebook| raw:: html
 
     <a href="https://bit.ly/raphaelkit" target="_blank"> hier </a>
@@ -131,7 +135,7 @@ rst_epilog = """
 
 .. |link_fr_tutorials| raw:: html
 
-    <a href="https://docs.sunfounder.com/projects/elite-explorer-kit/fr/latest/" target="_blank">utoriels en ligne en français</a>
+    <a href="https://docs.sunfounder.com/projects/elite-explorer-kit/fr/latest/" target="_blank">Tutoriels en ligne en français</a>
 
 .. |link_es_tutorials| raw:: html
 
@@ -365,6 +369,10 @@ rst_epilog = """
 
     <a href="https://www.ti.com/lit/ds/symlink/cd74hc595.pdf?ts=1617341564801" target="_blank">74HC595 Datasheet</a>
 
+.. |link_FastLED_lib| raw:: html
+
+    <a href="https://github.com/FastLED/FastLED" target="_blank">FastLED</a>
+
 .. |link_analogReadResolution| raw:: html
 
     <a href="https://www.arduino.cc/reference/en/language/functions/analog-io/analogreadresolution/" target="_blank">Arduino Reference - analogReadResolution()</a>
@@ -376,6 +384,10 @@ rst_epilog = """
 .. |link_r4_wifi_adc| raw:: html
 
     <a href="https://docs.arduino.cc/tutorials/uno-r4-wifi/adc-resolution/" target="_blank">Arduino UNO R4 WiFi ADC Resolution</a>
+
+.. |link_fastled_3_7_0| raw:: html
+
+    <a href="https://github.com/FastLED/FastLED/blob/master/release_notes.md#fastled-370" target="_blank">FastLED 3.7.0</a>
 
 """
 

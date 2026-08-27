@@ -9,8 +9,8 @@ function changeLanguage() {
     let supportLangs = {
         'en': ['This documentation is also available in', 'English', 'Never show again'],
         'de': ['Diese Dokumentation ist auch in', 'Deutsch', 'Nie wieder anzeigen'],
-        'fr': ['"Cette documentation est également disponible en', 'Anglais', 'Ne plus afficher'],
         'ja': ['このドキュメントは', '日本語', '今後表示しない'],
+        'fr': ['Cette documentation est également disponible en', 'Français', 'Ne plus afficher'],
         'es': ['Esta documentación también está disponible en', 'español', 'No mostrar de nuevo'],
         'it': ['Questa documentazione è disponibile anche in', 'Italiano', 'Non mostrare più'],
     };

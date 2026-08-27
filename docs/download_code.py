@@ -40,6 +40,8 @@ PROJECTS = {
     "09_basic_gy87_mpu6050":         "basic_project/09-gy87_mpu6050/09-gy87_mpu6050.ino",
     "09_basic_gy87_qmc5883l":        "basic_project/09-gy87_qmc5883l/09-gy87_qmc5883l.ino",
     "09_basic_gy87_qmc5883l_calib":  "basic_project/09-gy87_compass_calibration/09-gy87_compass_calibration.ino",
+    "09_basic_imu":                  "basic_project/09-imu/09-imu.ino",
+    "09_basic_imu_calibration":      "basic_project/09-imu_calibration/09-imu_calibration.ino",
     "10_basic_led":                  "basic_project/10-led/10-led.ino",
     "11_basic_rgb_led":              "basic_project/11-rgb_led/11-rgb_led.ino",
     "12_basic_ws2812":               "basic_project/12-ws2812/12-ws2812.ino",

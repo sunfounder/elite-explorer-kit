@@ -113,6 +113,10 @@ gettext_compact = False # Support for generating the contents of the folders ins
 
 rst_epilog = """
 
+.. |link_cloud| raw:: html
+
+    <a href="https://cloud.arduino.cc/" target="_blank">aquí</a>
+
 .. |link_sf_facebook| raw:: html
 
     <a href="https://bit.ly/raphaelkit" target="_blank">Aquí</a>

@@ -27,5 +27,12 @@ Esta lección introduce el concepto de usar variables en la programación de Ard
 
 .. raw:: html
 
-    <iframe width="700" height="500" src="https://www.youtube.com/embed/Ucvwq5hFc3U?si=o9Q1tTC1X1B9teef" title="Reproductor de video de YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="100%" 
+        style="aspect-ratio: 16/9; max-width: 100%;"
+        src="https://www.youtube.com/embed/Ucvwq5hFc3U?si=o9Q1tTC1X1B9teef" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+    </iframe>
 

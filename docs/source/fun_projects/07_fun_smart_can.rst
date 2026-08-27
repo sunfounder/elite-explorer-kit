@@ -14,17 +14,19 @@
 
 .. _fun_smart_can:
 
-Ventilateur Intelligent
-=================================
+Poubelle intelligente
+==============================
 
 .. raw:: html
 
    <video loop autoplay muted style = "max-width:100%">
-      <source src="../_static/videos/fun_projects/06_fun_smartfan.mp4"  type="video/mp4">
+      <source src="../_static/videos/fun_projects/07_fun_smartcan.mp4"  type="video/mp4">
       Votre navigateur ne supporte pas la balise vidéo.
    </video>
 
-Ce projet Arduino ajuste automatiquement la vitesse du ventilateur pour maintenir la température dans une plage appropriée. De plus, les utilisateurs peuvent entrer en mode manuel via un bouton pour faire fonctionner le ventilateur à vitesse maximale.
+Ce code Arduino est conçu pour contrôler une poubelle intelligente.
+Lorsqu'un objet se trouve à moins de 20 centimètres devant la poubelle, son couvercle s'ouvre automatiquement.
+Ce projet utilise un servomoteur SG90 et un capteur de distance à ultrasons HC-SR04.
 
 **Composants nécessaires**
 
@@ -36,7 +38,7 @@ Il est certainement pratique d'acheter un kit complet, voici le lien :
     :widths: 20 20 20
     :header-rows: 1
 
-    *   - Nom	
+    *   - Nom
         - ARTICLES DANS CE KIT
         - LIEN
     *   - Elite Explorer Kit
@@ -58,45 +60,29 @@ Vous pouvez également les acheter séparément à partir des liens ci-dessous.
         - |link_breadboard_buy|
     *   - :ref:`cpn_wires`
         - |link_wires_buy|
-    *   - :ref:`cpn_resistor`
-        - |link_resistor_buy|
-    *   - :ref:`cpn_led`
-        - |link_led_buy|
-    *   - :ref:`cpn_button`
-        - |link_button_buy|
-    *   - :ref:`cpn_thermistor`
-        - |link_thermistor_buy|
-    *   - :ref:`cpn_motor`
-        - |link_motor_buy|
-    *   - :ref:`cpn_ta6586`
-        - \-
-    *   - :ref:`cpn_power`
-        - \-
+    *   - :ref:`cpn_ultrasonic`
+        - |link_ultrasonic_buy|
+    *   - :ref:`cpn_servo`
+        - |link_servo_buy|
 
 **Câblage**
 
-.. note::
-    Pour protéger le Power Pack de la :ref:`cpn_power`, veuillez le charger complètement avant de l'utiliser pour la première fois.
-
-.. image:: img/06_smart_fan_bb.png
-    :width: 100%
+.. image:: img/07_smart_trash_can_bb.png
+    :width: 70%
     :align: center
 
-.. raw:: html
-
-   <br/>
 
 **Schéma**
 
-.. image:: img/06_smart_fan_schematic.png
-   :width: 80%
+.. image:: img/07_smart_trash_can_schematic.png
+   :width: 90%
    :align: center
 
 **Code**
 
 .. note::
 
-    * Vous pouvez ouvrir le fichier ``06_smart_fan.ino`` sous le chemin ``elite-explorer-kit-main\fun_project\06_smart_fan`` directement.
+    * Vous pouvez ouvrir le fichier ``07_smart_trash_can.ino`` sous le chemin ``elite-explorer-kit-main\fun_project\07_smart_trash_can`` directement.
     * Ou copiez ce code dans l'IDE Arduino.
 
 .. literalinclude:: /_code/07_fun_smart_can.ino
@@ -104,31 +90,32 @@ Vous pouvez également les acheter séparément à partir des liens ci-dessous.
    :linenos:
    :caption: 07_smart_trash_can.ino
 
+
+
 **Comment ça marche ?**
 
 Voici une explication étape par étape du code :
 
-1. Définition des constantes et des variables :
+1. Importation des bibliothèques et définition des constantes/variables :
 
-   Utilisez ``#define`` pour définir les broches pour les diverses connexions matérielles.
-   ``TEMP_THRESHOLD`` est défini à 25°C, ce qui est le seuil de température pour démarrer le ventilateur.
-   ``manualMode`` : Une variable booléenne qui indique si le mode manuel est activé.
+   La bibliothèque ``Servo.h`` est importée pour contrôler le servomoteur SG90.
+   Les paramètres du servomoteur, du capteur à ultrasons et les autres constantes et variables nécessaires sont définis.
 
 2. ``setup()`` :
 
-   Définissez le mode des broches pertinentes (sortie, entrée, entrée avec pull-up).
-   Initialement réglé en mode automatique, donc ``LED_AUTO`` est allumé tandis que ``LED_MANUAL`` est éteint.
+   Initialise la communication série avec l'ordinateur à un débit de 9600 bauds.
+   Configure les broches trigger et echo du capteur à ultrasons.
+   Attache le servomoteur à sa broche de contrôle et définit sa position initiale à l'angle fermé. Après avoir réglé l'angle, le servomoteur est détaché pour économiser de l'énergie.
 
 3. ``loop()`` :
 
-   Surveillez l'état du bouton. Lorsque le bouton est pressé, il bascule le mode et change le statut de la LED.
-   En mode manuel, le ventilateur fonctionne à vitesse maximale.
-   En mode automatique, le code lit d'abord la valeur de tension du capteur de température et la convertit en une valeur de température.
-   Si la température dépasse le seuil, la vitesse du ventilateur est ajustée en fonction de la température.
+   Mesure la distance trois fois et stocke les valeurs de chaque mesure.
+   Calcule la distance moyenne à partir des trois mesures.
+   Si la distance moyenne est inférieure ou égale à 20 centimètres (seuil de distance défini), le servomoteur tourne jusqu'à l'angle d'ouverture (0 degré).
+   Sinon, le servomoteur revient à la position fermée (90 degrés) après un délai d'une seconde. Le servomoteur est détaché lorsqu'il n'est pas utilisé afin d'économiser de l'énergie.
 
-4. ``voltageToTemperature()`` :
+4. ``readDistance()`` :
 
-   Il s'agit d'une fonction auxiliaire utilisée pour convertir la valeur de tension du capteur de température en une valeur de température (en Celsius).
-   La fonction utilise la formule standard pour une thermistance afin d'estimer la température.
-   La valeur de retour est en degrés Celsius.
-
+   Envoie une impulsion à la broche trigger du capteur à ultrasons.
+   Mesure la largeur d'impulsion de la broche echo et calcule la valeur de la distance.
+   Ce calcul utilise la vitesse du son dans l'air pour calculer la distance en fonction du temps d'impulsion.

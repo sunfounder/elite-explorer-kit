@@ -34,7 +34,7 @@ Les communications BLE reposent sur deux protocoles clés : **GATT (Generic Attr
 
 
 Appareils périphériques (Typiquement serveurs GATT)
---------------------------------------------------=====
+-------------------------------------------------------
 
 Dans le réseau BLE, les **appareils périphériques** diffusent principalement des données pour être découverts et accessibles par les appareils centraux (jouant généralement le rôle de clients GATT). Ces appareils sont généralement des capteurs ou des petits matériels comme des moniteurs de fréquence cardiaque, des capteurs de température ou des ampoules intelligentes.
 

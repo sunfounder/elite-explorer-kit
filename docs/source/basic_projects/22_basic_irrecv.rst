@@ -99,7 +99,7 @@ Code
     .. image:: img/22_irrecv_lib.png
         :align: center
 
-.. note::
+.. Note::
 
     * Il y a une pièce en plastique transparent à l'arrière de la télécommande pour couper l'alimentation, retirez-la avant d'utiliser la télécommande.
 

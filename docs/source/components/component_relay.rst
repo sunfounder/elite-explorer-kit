@@ -12,7 +12,7 @@
 
     👉 Prêt à explorer et créer avec nous ? Cliquez sur [|link_sf_facebook|] et rejoignez-nous dès aujourd'hui !
 
-.. _cpn_relay:
+.. _cpn_realy:
 
 Relais
 ==========================================

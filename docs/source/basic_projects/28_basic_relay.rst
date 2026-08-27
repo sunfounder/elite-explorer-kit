@@ -62,7 +62,7 @@ Vous pouvez également les acheter séparément via les liens ci-dessous.
         - |link_resistor_buy|
     *   - :ref:`cpn_led`
         - |link_led_buy|
-    *   - :ref:`cpn_relay`
+    *   - :ref:`cpn_realy`
         - |link_realy_buy|
     *   - :ref:`cpn_transistor`
         - |link_transistor_buy|

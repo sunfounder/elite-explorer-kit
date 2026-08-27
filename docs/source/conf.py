@@ -112,6 +112,10 @@ gettext_compact = False # Support for generating the contents of the folders ins
 
 rst_epilog = """
 
+.. |link_cloud| raw:: html
+
+    <a href="https://cloud.arduino.cc/" target="_blank">qui</a>
+
 .. |link_sf_facebook| raw:: html
 
     <a href="https://bit.ly/raphaelkit" target="_blank">Qui</a>
@@ -391,7 +395,11 @@ rst_epilog = """
 # Purchase links of components
 
 rst_epilog += """
- 
+
+.. |link_Elite_kit| raw:: html
+
+    <a href="https://www.sunfounder.com/collections/arduino-kits/products/sunfounder-elite-explorer-kit-with-official-arduino-uno-r4-wifi?ref=tiktok1" target="_blank">Link di acquisto per Elite Explorer Kit</a>
+
 .. |link_Elite_Explorer_kit| raw:: html
 
     <a href="https://www.sunfounder.com/collections/arduino-kits/products/sunfounder-elite-explorer-kit-with-official-arduino-uno-r4-wifi?ref=tiktok1" target="_blank">Elite Explorer Kit</a>

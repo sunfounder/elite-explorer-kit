@@ -111,5 +111,5 @@ Di seguito è riportata l'introduzione a ciascun componente, che contiene il pri
     component_humiture_sensor
     component_mfrc522
     component_gy87
-   cpn_10_axis_imu
+    cpn_10_axis_imu
 

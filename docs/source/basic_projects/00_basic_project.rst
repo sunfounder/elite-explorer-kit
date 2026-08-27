@@ -30,6 +30,7 @@ Progetti di Base
     06_basic_ultrasonic_sensor
     07_basic_humiture_sensor
     08_basic_mfrc522
+    09_basic_imu
     09_basic_gy87
 
 

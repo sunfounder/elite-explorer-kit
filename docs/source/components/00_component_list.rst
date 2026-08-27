@@ -110,3 +110,4 @@ A continuación, se presenta la introducción a cada componente, que contiene el
     component_humiture_sensor
     component_mfrc522
     component_gy87
+    cpn_10_axis_imu

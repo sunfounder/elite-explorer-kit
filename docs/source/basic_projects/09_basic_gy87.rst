@@ -12,8 +12,12 @@
 
     👉 ¿Listo para explorar y crear con nosotros? Haz clic en [|link_sf_facebook|] y únete hoy mismo!
 
-Módulo IMU GY-87
+.. _basic_gy87:
+
+Módulo IMU (GY-87)
 ==========================
+
+.. note:: Diferentes versiones de este kit pueden usar diferentes módulos IMU. Selecciona el tutorial apropiado según la versión del kit que tengas. Si tienes un módulo IMU de 10 ejes, consulta :ref:`basic_imu`. Si tienes un módulo GY-87, consulta esta lección.
 
 El módulo GY-87 está equipado con tres chips sensores: MPU6050, QMC5883L y BMP180, cada uno ofreciendo capacidades únicas. El MPU6050 combina un giroscopio y un acelerómetro para el seguimiento de movimientos, el QMC5883L sirve como magnetómetro para la detección direccional, y el BMP180 se utiliza para medir la presión barométrica y la temperatura. Estos pueden ser integrados utilizando el protocolo I2C para una comunicación efectiva con un Arduino.
 

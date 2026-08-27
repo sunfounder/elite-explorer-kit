@@ -28,12 +28,6 @@ Apri il file ``01-wifi_connect.ino`` nel percorso ``elite-explorer-kit-main\r4_n
 
 È ancora necessario creare o modificare ``arduino_secrets.h``, sostituendo ``SECRET_SSID`` e ``SECRET_PASS`` con il nome e la password della rete Wi-Fi a cui desideri connetterti. Il file dovrebbe contenere:
 
-.. code:: arduino
-
-    // file intestazione arduino_secrets.h
-    #define SECRET_SSID "tuarete"
-    #define SECRET_PASS "tuapassword"
-
 .. literalinclude:: /_code/01_1_connect_to_wifi_secrets.h
    :language: cpp
    :caption: arduino_secrets.h

@@ -77,7 +77,7 @@ Puoi anche acquistarli separatamente dai link sottostanti.
 **Collegamenti**
 
 .. note::
-    Per proteggere il Power Pack del :ref:`cpn_power`, caricalo completamente prima di utilizzarlo per la prima volta.
+    Il motore richiede più potenza durante il funzionamento, quindi tieni il modulo di alimentazione collegato a un cavo di ricarica quando è in uso.
 
 .. image:: img/06_smart_fan_bb.png
     :width: 100%

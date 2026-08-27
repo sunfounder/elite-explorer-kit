@@ -11,7 +11,7 @@
 
     👉 Pronto a esplorare e creare con noi? Clicca [|link_sf_facebook|] e unisciti oggi!
 
-.. _cpn_relay:
+.. _cpn_realy:
 
 Relè
 ==========================================

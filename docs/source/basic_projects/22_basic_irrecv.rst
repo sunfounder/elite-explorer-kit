@@ -99,7 +99,7 @@ Codice
     .. image:: img/22_irrecv_lib.png
         :align: center
 
-.. note::
+.. Note::
     * C'è un pezzo di plastica trasparente sul retro del telecomando per interrompere l'alimentazione; estrailo prima di utilizzare il telecomando.
 
 

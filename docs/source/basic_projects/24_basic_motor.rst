@@ -50,8 +50,6 @@ Puoi anche acquistarli separatamente dai link seguenti.
         - LINK PER L'ACQUISTO
 
     *   - :ref:`uno_r4_wifi`
-        - \-
-    *   - :ref:`cpn_breadboard`
         - |link_breadboard_buy|
     *   - :ref:`cpn_wires`
         - |link_wires_buy|
@@ -72,7 +70,7 @@ In questo esempio, utilizziamo un modulo di alimentazione per alimentare l'anodo
 
 .. image:: img/24-motor_bb.png
     :align: center
-    :width: 80%
+    :width: 90%
 
 .. raw:: html
   

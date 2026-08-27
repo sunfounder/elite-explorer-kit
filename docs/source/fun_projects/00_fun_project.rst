@@ -12,7 +12,7 @@
 
     👉 Pronto a esplorare e creare con noi? Clicca [|link_sf_facebook|] e unisciti oggi stesso!
 
-.. _progetto_divertente:
+.. _fun_project:
 
 Progetti Divertenti
 ====================
@@ -27,7 +27,6 @@ In questo capitolo, troverai alcuni progetti divertenti. Questi progetti prevedo
     03_fun_hue
     04_fun_light_array
     05_fun_digital_dice
-    06_fun_smart_fan
     07_fun_smart_can
     08_fun_plant_monitor
     09_fun_access

@@ -28,12 +28,6 @@ Apri il file ``01-wifi_ap.ino`` nel percorso ``elite-explorer-kit-main\r4_new_fe
 
 È necessario ancora creare o modificare ``arduino_secrets.h``, sostituendo ``SECRET_SSID`` e ``SECRET_PASS`` con il nome e la password del tuo punto di accesso WiFi. Il file dovrebbe contenere:
 
-.. code:: arduino
-
-    // File header arduino_secrets.h
-    #define SECRET_SSID "tuarete"
-    #define SECRET_PASS "tuo_password"
-
 .. literalinclude:: /_code/01_2_ap_secrets.h
    :language: cpp
    :caption: arduino_secrets.h

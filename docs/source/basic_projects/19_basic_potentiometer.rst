@@ -60,7 +60,7 @@ También puedes comprarlos por separado en los enlaces a continuación.
         - |link_wires_buy|
     *   - :ref:`cpn_resistor`
         - |link_resistor_buy|
-    *   - :ref:`led`
+    *   - :ref:`cpn_led`
         - |link_led_buy|
     *   - :ref:`cpn_potentiometer`
         - |link_potentiometer_buy|

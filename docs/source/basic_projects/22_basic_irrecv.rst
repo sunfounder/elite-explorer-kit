@@ -99,7 +99,7 @@ Código
     .. image:: img/22_irrecv_lib.png
         :align: center
 
-.. note::
+.. Note::
 
     * Hay una pieza de plástico transparente en la parte trasera del control remoto para cortar la energía, retírala antes de usar el control remoto.
 

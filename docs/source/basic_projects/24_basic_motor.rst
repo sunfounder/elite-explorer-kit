@@ -50,8 +50,6 @@ También puedes comprarlos por separado en los enlaces a continuación.
         - ENLACE DE COMPRA
 
     *   - :ref:`uno_r4_wifi`
-        - \-
-    *   - :ref:`cpn_breadboard`
         - |link_breadboard_buy|
     *   - :ref:`cpn_wires`
         - |link_wires_buy|
@@ -71,7 +69,7 @@ En este ejemplo, usamos el módulo de fuente de alimentación para alimentar el 
 
 .. image:: img/24-motor_bb.png
     :align: center
-    :width: 80%
+    :width: 90%
 
 .. raw:: html
   

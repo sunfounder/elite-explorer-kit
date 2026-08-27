@@ -62,7 +62,7 @@ También puedes comprarlos por separado desde los enlaces a continuación.
         - |link_resistor_buy|
     *   - :ref:`cpn_rgb_led`
         - |link_rgb_led_buy|
-    *   - :ref:`potentiometer`
+    *   - :ref:`cpn_potentiometer`
         - |link_potentiometer_buy|
 
 **Cableado**

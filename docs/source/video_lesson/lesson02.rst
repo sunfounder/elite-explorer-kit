@@ -29,7 +29,14 @@ LESSON 2: ブレッドボードで回路を作る方法
 
 .. raw:: html
 
-    <iframe width="700" height="500" src="https://www.youtube.com/embed/S1NJJRpWHpA?si=o9Q1tTC1X1B9teef" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="100%" 
+        style="aspect-ratio: 16/9; max-width: 100%;"
+        src="https://www.youtube.com/embed/S1NJJRpWHpA?si=o9Q1tTC1X1B9teef" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+    </iframe>
 
     <br/><br/>
 
@@ -56,5 +63,12 @@ LESSON 2: ブレッドボードで回路を作る方法
 
 .. raw:: html
 
-    <iframe width="700" height="500" src="https://www.youtube.com/embed/_kpiHFGB_ys?si=KpZfDEI0EazFt-4g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe width="100%" 
+        style="aspect-ratio: 16/9; max-width: 100%;"
+        src="https://www.youtube.com/embed/_kpiHFGB_ys?si=KpZfDEI0EazFt-4g" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+    </iframe>
 

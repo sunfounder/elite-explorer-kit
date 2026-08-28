@@ -14,12 +14,6 @@
 
 您仍然需要创建或修改 ``arduino_secrets.h``，将 ``SECRET_SSID`` 和 ``SECRET_PASS`` 替换为您要连接的 WiFi 的名称和密码。该文件应包含：
 
-.. code:: arduino
-
-    //arduino_secrets.h header file
-    #define SECRET_SSID "yournetwork"
-    #define SECRET_PASS "yourpassword"
-
 .. literalinclude:: /_code/01_1_connect_to_wifi_secrets.h
    :language: cpp
    :caption: arduino_secrets.h

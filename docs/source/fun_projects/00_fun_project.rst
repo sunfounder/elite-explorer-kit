@@ -13,7 +13,6 @@
     03_fun_hue
     04_fun_light_array
     05_fun_digital_dice
-    06_fun_smart_fan
     07_fun_smart_can
     08_fun_plant_monitor
     09_fun_access

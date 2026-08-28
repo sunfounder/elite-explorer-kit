@@ -58,8 +58,6 @@ Arduino 板上的标准分辨率设置为 10 位 (0-1023)。UNO R4 WiFi 支持�
 
 **参考**
 - |link_analogReadResolution|
-- |link_r4_minima_adc|
-- |link_r4_wifi_adc|
 
 
 

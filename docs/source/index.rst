@@ -52,6 +52,12 @@ SunFounder Elite Explorer Kit搭配全新的Arduino Uno R4 WiFi就是您的不�
     appendix/appendix
 
 
+.. toctree::
+    :maxdepth: 2
+
+    thank_learning
+
+
 **版权声明**
 
 本手册中的所有内容（包括但不限于文字、图片和代码）均归SunFounder公司所有。您只能在相关法规和版权法的规定下，将其用于个人学习、研究、娱乐或其他非商业或非盈利目的，不得侵犯作者及相关权利持有人的合法权益。对于任何未经许可将此用于商业盈利的个人或组织，本公司保留追究法律责任的权利。

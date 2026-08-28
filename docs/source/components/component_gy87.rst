@@ -43,7 +43,7 @@ GY-87センサーモジュールは、ドローン、ロボティクス、正確
 
 **例**
 
-* :ref:`basic_gy87_qmc5883L` （基本プロジェクト）
+* :ref:`basic_gy87_qmc5883l` （基本プロジェクト）
 * :ref:`basic_gy87_bmp180` （基本プロジェクト）
 * :ref:`basic_gy87_mpu6050` （基本プロジェクト）
 * :ref:`fun_escape` （楽しいプロジェクト）

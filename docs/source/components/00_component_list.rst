@@ -111,4 +111,5 @@
     component_humiture_sensor
     component_mfrc522
     component_gy87
+    cpn_10_axis_imu
 

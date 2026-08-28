@@ -73,6 +73,9 @@
 
     Arduinoから直接ステッピングモーターに電力を供給することも可能ですが、これはArduinoの電源ラインに電気ノイズを引き起こし、Arduinoの損傷につながる可能性があるため、お勧めしません。
 
+.. note::
+    :ref:`cpn_power` を保護するために、初めて使用する前に完全に充電してください。
+
 .. image:: img/26-stepper_motor_bb.png
     :align: center
 

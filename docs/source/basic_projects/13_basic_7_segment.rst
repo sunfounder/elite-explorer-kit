@@ -111,19 +111,19 @@
 
 .. code-block:: arduino
 
-   digital_1(); //diaplay 1 to the 7-segment
+   digital_1(); //display 1 to the 7-segment
 
    delay(1000); //wait for a second
 
-   digital_2(); //diaplay 2 to the 7-segment
+   digital_2(); //display 2 to the 7-segment
 
    delay(1000); //wait for a second
 
-   digital_3(); //diaplay 3 to the 7-segment
+   digital_3(); //display 3 to the 7-segment
 
    delay(1000); //wait for a second
 
-   digital_4(); //diaplay 4 to the 7-segment
+   digital_4(); //display 4 to the 7-segment
 
 
 これらの関数をloop()に呼び出すことで、7セグメントが0-Fを表示します。以下に関数の例を示します。 ``digital_2()`` を例にとります：
@@ -132,7 +132,7 @@
 
 .. code-block:: arduino
 
-   void digital_2()  //diaplay 2 to the 7-segment
+   void digital_2()  //display 2 to the 7-segment
    {
      turnOffAllSegments();
      digitalWrite(a, HIGH);

@@ -71,7 +71,7 @@
 
 .. image:: img/24-motor_bb.png
     :align: center
-    :width: 80%
+    :width: 90%
 
 .. raw:: html
   

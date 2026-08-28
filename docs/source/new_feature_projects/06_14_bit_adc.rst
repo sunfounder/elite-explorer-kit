@@ -35,24 +35,24 @@ Arduinoボードの標準解像度は10ビット (0-1023) に設定されてい�
      // デフォルトの解像度 (10ビット) でA0を読み取り
      // シリアル接続に出力
      analogReadResolution(10);
-     Serial.print("ADC 10ビット (デフォルト): ");
+     Serial.print("ADC 10-bit (default) : ");
      Serial.print(analogRead(A0));
-   
+
      // 解像度を12ビットに変更しA0を読み取り
      analogReadResolution(12);
-     Serial.print(", 12ビット: ");
+     Serial.print(", 12-bit : ");
      Serial.print(analogRead(A0));
-   
+
      // 解像度を14ビットに変更しA0を読み取り
      analogReadResolution(14);
-     Serial.print(", 14ビット: ");
+     Serial.print(", 16-bit : ");
      Serial.print(analogRead(A0));
-   
+
      // 解像度を8ビットに変更しA0を読み取り
      analogReadResolution(8);
-     Serial.print(", 8ビット: ");
+     Serial.print(", 8-bit : ");
      Serial.println(analogRead(A0));
-   
+
      // シリアルモニタを占有しないように少し待つ
      delay(100);
    }
@@ -73,6 +73,4 @@ ADC解像度を設定する際には、以下の点を考慮してください�
 **参考文献**
 
 - |link_analogReadResolution|
-- |link_r4_minima_adc|
-- |link_r4_wifi_adc|
 

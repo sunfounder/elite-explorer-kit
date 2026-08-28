@@ -69,6 +69,9 @@
 配線図
 ----------------------
 
+.. note::
+    :ref:`cpn_power` を保護するために、初めて使用する前に完全に充電してください。
+
 .. image:: img/25-pump_bb.png
     :align: center
     :width: 80%

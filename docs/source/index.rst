@@ -17,7 +17,7 @@ SunFounder |link_Elite_Explorer_kit|
 
 * |link_Elite_kit|
 
-SunFounder |link_Elite_Explorer_kit|をお選びいただき、ありがとうございます。
+SunFounder |link_Elite_Explorer_kit|\ をお選びいただき、ありがとうございます。
 
 .. note::
     このドキュメントは以下の言語で利用可能です。
@@ -65,6 +65,7 @@ SunFounderとともに、Arduinoのプログラミングがアップグレード
 
     Elite Explorerキットについて <self>
     components/00_component_list
+    video_lesson/video_lesson
     arduino_start/00_get_start
     download_the_code
     basic_projects/00_basic_project
@@ -72,7 +73,6 @@ SunFounderとともに、Arduinoのプログラミングがアップグレード
     fun_projects/00_fun_project
     iot_projects/00_iot_project
     appendix/appendix
-    video_lesson/video_lesson
 
 
 .. toctree::

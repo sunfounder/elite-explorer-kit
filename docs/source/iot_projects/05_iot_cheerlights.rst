@@ -85,6 +85,12 @@ CheerLightsは、誰でも制御できるグローバルな同期ライトのネ
 
 ``FastLED.h``：RGB LEDストリップのドライブに使用します。
 
+.. important::
+    |link_fastled_3_7_0| のリリースにより、FastLEDライブラリは公式にArduino UNO R4をサポートするようになりました。そのため、開発版を手動でインストールする必要はなくなりました。Arduinoライブラリマネージャーを使用してFastLEDライブラリを更新またはインストールするだけです。
+
+.. warning::
+    **[古い情報]** |link_FastLED_lib| ライブラリはArduino R4をサポートするバージョンをまだ公式にリリースしていないため、:download:`FastLEDライブラリの最新開発コード <https://codeload.github.com/FastLED/FastLED/zip/refs/heads/master>` をダウンロードし、既存のFastLEDライブラリファイルを上書きする必要があります。詳細な手順については、:ref:`manual_install_lib` セクションを参照してください。（この注意書きは、FastLEDライブラリがArduino UNO R4をサポートするアップデートを公式にリリースした時点で撤回されます。）
+
 **コードの実行**
 
 
@@ -94,7 +100,7 @@ CheerLightsは、誰でも制御できるグローバルな同期ライトのネ
     * または、このコードをArduino IDEにコピーしてください。
 
 .. note::
-    コード内で、SSIDとパスワードは ``arduino_secrets.h`` に格納されています。この例をアップロードする前に、自分のWiFiの認証情報でそれらを修正する必要があります。さらに、コードを共有または保存する際には、この情報を機密に保つためのセキュリティ対策を講じてください。
+    コード内で、SSIDとパスワードは ``arduino_secrets.h`` に格納されています。この例をアップロードする前に、自分のWiFiの認証情報でそれらを修正する必要があります。
 
 .. literalinclude:: /_code/05_iot_cheerlights_secrets.h
    :language: cpp

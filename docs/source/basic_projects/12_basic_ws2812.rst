@@ -77,8 +77,14 @@ WS2812 RGB LEDストリップ
     * ファイル ``12-ws2812.ino`` を ``elite-explorer-kit-main\basic_project\12-ws2812`` のパスで直接開くことができます。
     * または、このコードをArduino IDEにコピーしてください。
 
-.. note:: 
+.. note::
     ライブラリをインストールするには、Arduinoライブラリマネージャーを使用し、 **「FastLED」** を検索してインストールしてください。
+
+.. important::
+    |link_fastled_3_7_0| のリリースにより、FastLEDライブラリは公式にArduino UNO R4をサポートするようになりました。そのため、開発版を手動でインストールする必要はなくなりました。Arduinoライブラリマネージャーを使用してFastLEDライブラリを更新またはインストールするだけです。
+
+.. warning::
+    **[古い情報]** |link_FastLED_lib| ライブラリはArduino R4をサポートするバージョンをまだ公式にリリースしていないため、:download:`FastLEDライブラリの最新開発コード <https://codeload.github.com/FastLED/FastLED/zip/refs/heads/master>` をダウンロードし、既存のFastLEDライブラリファイルを上書きする必要があります。詳細な手順については、:ref:`manual_install_lib` セクションを参照してください。（この注意書きは、FastLEDライブラリがArduino UNO R4をサポートするアップデートを公式にリリースした時点で撤回されます。）
 
 .. literalinclude:: /_code/12_basic_ws2812.ino
    :language: cpp

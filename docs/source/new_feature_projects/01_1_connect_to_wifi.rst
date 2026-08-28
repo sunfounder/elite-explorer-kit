@@ -18,7 +18,7 @@ Wi-Fiに接続する
 このチュートリアルでは、ArduinoボードをWi-Fiネットワークに接続するための基本的なステップを案内します。Wi-Fiモジュールの初期化、ファームウェアの確認、SSIDとパスワードを使用した安全なネットワークへの参加方法を学びます。接続後、シリアルコンソールからデバイスのIPやMACアドレス、ネットワークの信号強度などの重要なネットワーク情報をモニタリングする方法を発見します。このチュートリアルは、Wi-Fi接続の実用的なガイドであり、Arduinoを使用したネットワークモニタリングの導入としても役立ちます。これにより、信頼性のあるWi-Fi接続を確立し維持することができます。
 
 1. コードをアップロードする
------------------------------
+===============================
 
 ``elite-explorer-kit-main\r4_new_feature\01-wifi_connect`` のパスの下にある ``01-wifi_connect.ino`` ファイルを開くか、このコードを **Arduino IDE** にコピーします。
 
@@ -27,12 +27,6 @@ Wi-Fiに接続する
 
 
 ``arduino_secrets.h`` を作成または変更し、 ``SECRET_SSID`` と ``SECRET_PASS`` を接続したいWi-Fiの名前とパスワードに置き換える必要があります。 ファイルには以下が含まれている必要があります:
-
-.. code:: arduino
-
-    //arduino_secrets.h header file
-    #define SECRET_SSID "yournetwork"
-    #define SECRET_PASS "yourpassword"
 
 .. literalinclude:: /_code/01_1_connect_to_wifi_secrets.h
    :language: cpp
@@ -50,7 +44,7 @@ Wi-Fiに接続する
 
 
 2. コードの説明
------------------
+========================
 
 1. ライブラリと秘密データを含める
 

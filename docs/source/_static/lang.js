@@ -1,5 +1,5 @@
 function changeLanguage() {
-    
+
     let hostname = window.location.hostname; 
 
     if (hostname === '127.0.0.1' || hostname === 'localhost' || hostname.startsWith('192.168.')) {

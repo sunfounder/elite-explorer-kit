@@ -41,56 +41,51 @@ Circuit Fritzing
 ..     :width: 90%
 
 
-Installer la bibliothèque
----------------------------------
-
-Pour installer la bibliothèque, utilisez le gestionnaire de bibliothèques Arduino.
-
-   - Recherchez **"SunFounder_IMU"** et installez
-
-
-      .. image:: img/09-add_lib_tip_imu.png
-
-
-
 Calibrage
 ----------------------
 
-Avant d'utiliser le module IMU, il est recommandé d'effectuer un calibrage pour garantir la précision des données du capteur. Voici les étapes de calibrage :
+Avant de lire les données du capteur, calibrez l'IMU pour que les mesures soient précises.
 
-* Ouvrez le fichier ``09-imu_calibration.ino`` directement sous le chemin ``elite-explorer-kit-main\basic_project\09-imu_calibration``.
+#. Installez la bibliothèque **SunFounder_IMU** : ouvrez le gestionnaire de bibliothèques Arduino, recherchez **"SunFounder_IMU"** et cliquez sur **INSTALL**. L'image ci-dessous montre l'entrée une fois installée.
 
-Après avoir exécuté ce code, ouvrez le moniteur série et vous verrez les données du capteur s'afficher. Elles se présentent généralement dans le format suivant :
+   .. image:: img/09-add_lib_tip_imu.png
+      :align: center
 
-.. code-block:: text
+#. Ouvrez le fichier ``09-imu_calibration.ino`` sous le chemin ``elite-explorer-kit-main\basic_project\09-imu_calibration`` et téléversez-le sur votre carte.
 
-   const float ACCEL_BIAS[3] = {0.0, 0.0, 0.0};
-   const float ACCEL_SCALE[3] = {1.0, 1.0, 1.0};
-   const float GYRO_BIAS[3] = {0.0, 0.0, 0.0};
-   const float GYRO_SCALE[3] = {1.0, 1.0, 1.0};
-   const float MAG_BIAS[3] = {0.0, 0.0, 0.0};
-   const float MAG_SCALE[3] = {1.0, 1.0, 1.0};
+#. Ouvrez le moniteur série et réglez la vitesse en bauds sur **115200** et la fin de ligne sur **Both NL & CR**.
 
-Copiez ces données.
+#. Effectuez le calibrage six faces en suivant les instructions du moniteur série :
 
-Exécuter le code
-----------------------
+   * Envoyez un caractère quelconque pour démarrer. Le moniteur série affiche alors la première orientation.
+   * Placez le module dans les six orientations dans l'ordre indiqué : Z vers le haut, Z vers le bas, X vers le haut, X vers le bas, Y vers le haut et Y vers le bas.
+   * Gardez le module parfaitement immobile pendant chaque mesure, puis envoyez à nouveau un caractère pour mesurer l'orientation en cours et passer à la suivante.
 
+   .. image:: img/09_imu_cali.png
+      :align: center
+      :width: 90%
 
-Ouvrez le fichier ``09-imu.ino`` directement sous le chemin ``elite-explorer-kit-main\basic_project\09-imu``.
+#. Après la sixième orientation, le moniteur série affiche les constantes de calibrage. Copiez les six lignes :
 
-Accédez à la page ``calibration_data.h`` dans le projet, collez les données que vous venez de copier dans le fichier ``calibration_data.h``, en remplaçant les données d'origine.
+   .. code-block:: text
 
-.. image:: img/imu_cali_data.png
-   :width: 80%
+      Calibration complete!
+      Copy the following calibration data to your calibration_data.h:
+      const float ACCEL_BIAS[3] = {-0.0345, 0.0192, -0.1268};
+      const float ACCEL_SCALE[3] = {1.0012, 0.9987, 1.0005};
+      const float GYRO_BIAS[3] = {0.4120, -0.2085, 0.0331};
+      const float GYRO_SCALE[3] = {1.0000, 1.0000, 1.0000};
+      const float MAG_BIAS[3] = {-212.5000, 87.2500, -341.0000};
+      const float MAG_SCALE[3] = {0.9620, 1.0110, 1.0270};
 
-Revenez à la page ``09-imu.ino`` et téléversez le code sur votre carte Arduino Uno R4.
+   Les valeurs ci-dessus ne sont qu'un exemple ; les vôtres appartiennent à votre module.
 
-.. literalinclude:: /_code/09_basic_imu.ino
-   :language: cpp
-   :linenos:
-   :caption: 09-imu.ino
+#. Ouvrez le projet ``09-imu`` et son onglet ``calibration_data.h``, puis remplacez les six tableaux par les valeurs copiées.
 
-Après le téléversement réussi du code sur votre Arduino Uno R4, le moniteur série s'anime et affiche en continu les données des capteurs du module IMU 10 axes.
+   .. image:: img/imu_cali_data.png
+      :align: center
+      :width: 80%
 
-.. image:: img/imu_reading.png
+#. Téléversez ``09-imu.ino`` sur votre carte Arduino Uno R4. Le moniteur série affiche alors en continu les données de l'accéléromètre, du gyroscope, du magnétomètre et du baromètre.
+
+   .. image:: img/imu_reading.png

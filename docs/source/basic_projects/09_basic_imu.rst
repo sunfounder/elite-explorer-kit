@@ -41,56 +41,51 @@ Fritzing回路
 ..     :width: 90%
 
 
-ライブラリのインストール
----------------------------------
-
-ライブラリをインストールするには、Arduinoライブラリマネージャーを使用します。
-
-   - **"SunFounder_IMU"** を検索してインストールします。
-
-
-      .. image:: img/09-add_lib_tip_imu.png
-
-
-
 キャリブレーション
 ----------------------
 
-IMUモジュールを使用する前に、センサーデータの精度を確保するためにキャリブレーションを実行することをお勧めします。キャリブレーション手順は以下のとおりです：
+センサーデータを読む前に IMU をキャリブレーションして、測定値を正確にします。
 
-* ``elite-explorer-kit-main\basic_project\09-imu_calibration`` のパスにある ``09-imu_calibration.ino`` ファイルを直接開きます。
+#. **SunFounder_IMU** ライブラリをインストールします：Arduinoライブラリマネージャーを開き、**"SunFounder_IMU"** を検索して **INSTALL** をクリックします。下の画像はインストール後の表示です。
 
-このコードを実行した後、シリアルモニタを開くと、センサーデータの出力が表示されます。通常、次の形式で表示されます：
+   .. image:: img/09-add_lib_tip_imu.png
+      :align: center
 
-.. code-block:: text
+#. ``elite-explorer-kit-main\basic_project\09-imu_calibration`` のパスにある ``09-imu_calibration.ino`` を開き、ボードにアップロードします。
 
-   const float ACCEL_BIAS[3] = {0.0, 0.0, 0.0};
-   const float ACCEL_SCALE[3] = {1.0, 1.0, 1.0};
-   const float GYRO_BIAS[3] = {0.0, 0.0, 0.0};
-   const float GYRO_SCALE[3] = {1.0, 1.0, 1.0};
-   const float MAG_BIAS[3] = {0.0, 0.0, 0.0};
-   const float MAG_SCALE[3] = {1.0, 1.0, 1.0};
+#. シリアルモニタを開き、ボーレートを **115200**、行末文字を **Both NL & CR** に設定します。
 
-このデータをコピーします。
+#. シリアルモニタの指示に従って、6 面のキャリブレーションを行います：
 
-コードの実行
-----------------------
+   * 任意の文字を送信して開始します。シリアルモニタに最初の向きが表示されます。
+   * 指示された順に、モジュールを 6 つの向きに置きます：Z 面を上、Z 面を下、X 面を上、X 面を下、Y 面を上、Y 面を下。
+   * 各測定中はモジュールを完全に静止させ、そのあとで再度任意の文字を送信して現在の向きを測定し、次の向きに進みます。
 
+   .. image:: img/09_imu_cali.png
+      :align: center
+      :width: 90%
 
-``elite-explorer-kit-main\basic_project\09-imu`` のパスにある ``09-imu.ino`` ファイルを直接開きます。
+#. 6 つ目の向きが終わると、シリアルモニタにキャリブレーション定数が出力されます。次の 6 行をコピーします：
 
-プロジェクトの ``calibration_data.h`` ページに移動し、先ほどコピーしたデータを ``calibration_data.h`` ファイルに貼り付けて、元のデータを置き換えます。
+   .. code-block:: text
 
-.. image:: img/imu_cali_data.png
-   :width: 80%
+      Calibration complete!
+      Copy the following calibration data to your calibration_data.h:
+      const float ACCEL_BIAS[3] = {-0.0345, 0.0192, -0.1268};
+      const float ACCEL_SCALE[3] = {1.0012, 0.9987, 1.0005};
+      const float GYRO_BIAS[3] = {0.4120, -0.2085, 0.0331};
+      const float GYRO_SCALE[3] = {1.0000, 1.0000, 1.0000};
+      const float MAG_BIAS[3] = {-212.5000, 87.2500, -341.0000};
+      const float MAG_SCALE[3] = {0.9620, 1.0110, 1.0270};
 
-``09-imu.ino`` ページに戻り、Arduino Uno R4ボードにコードをアップロードします。
+   上の値はあくまで例です。実際の値はお使いのモジュール固有のものです。
 
-.. literalinclude:: /_code/09_basic_imu.ino
-   :language: cpp
-   :linenos:
-   :caption: 09-imu.ino
+#. ``09-imu`` プロジェクトとその ``calibration_data.h`` タブを開き、6 つの配列をコピーした値に置き換えます。
 
-コードがArduino Uno R4に正常にアップロードされると、シリアルモニタが起動し、10軸IMUモジュールからのセンサーデータが連続的に表示されます。
+   .. image:: img/imu_cali_data.png
+      :align: center
+      :width: 80%
 
-.. image:: img/imu_reading.png
+#. ``09-imu.ino`` を Arduino Uno R4 ボードにアップロードします。シリアルモニタに加速度計・ジャイロスコープ・磁力計・気圧計のデータが連続して出力されます。
+
+   .. image:: img/imu_reading.png

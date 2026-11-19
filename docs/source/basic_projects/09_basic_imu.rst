@@ -37,55 +37,51 @@ Fritzing-Schaltplan
 ..     :width: 90%
 
 
-Bibliothek installieren
----------------------------------
-
-Um die Bibliothek zu installieren, verwenden Sie den Arduino Library Manager.
-
-   - Suchen Sie nach **„SunFounder_IMU“** und installieren Sie diese
-
-
-      .. image:: img/09-add_lib_tip_imu.png
-
-
-
 Kalibrierung
 ----------------------
 
-Bevor Sie das IMU-Modul verwenden, wird empfohlen, eine Kalibrierung durchzuführen, um die Genauigkeit der Sensordaten zu gewährleisten. Die folgenden Schritte beschreiben die Kalibrierung:
+Kalibrieren Sie das IMU-Modul, bevor Sie Sensordaten auslesen, damit die Messwerte genau sind.
 
-* Öffnen Sie die Datei ``09-imu_calibration.ino`` direkt im Pfad ``elite-explorer-kit-main\basic_project\09-imu_calibration``.
+#. Installieren Sie die Bibliothek **SunFounder_IMU**: Öffnen Sie den Arduino Library Manager, suchen Sie nach **„SunFounder_IMU“** und klicken Sie auf **INSTALL**. Das Bild unten zeigt den Eintrag nach der Installation.
 
-Nachdem Sie diesen Code ausgeführt haben, öffnen Sie den seriellen Monitor und Sie sehen die Ausgabe der Sensordaten. Sie hat normalerweise folgendes Format:
+   .. image:: img/09-add_lib_tip_imu.png
+      :align: center
 
-.. code-block:: text
+#. Öffnen Sie die Datei ``09-imu_calibration.ino`` im Pfad ``elite-explorer-kit-main\basic_project\09-imu_calibration`` und laden Sie sie auf Ihr Board hoch.
 
-   const float ACCEL_BIAS[3] = {0.0, 0.0, 0.0};
-   const float ACCEL_SCALE[3] = {1.0, 1.0, 1.0};
-   const float GYRO_BIAS[3] = {0.0, 0.0, 0.0};
-   const float GYRO_SCALE[3] = {1.0, 1.0, 1.0};
-   const float MAG_BIAS[3] = {0.0, 0.0, 0.0};
-   const float MAG_SCALE[3] = {1.0, 1.0, 1.0};
+#. Öffnen Sie den seriellen Monitor und stellen Sie die Baudrate auf **115200** sowie das Zeilenende auf **Both NL & CR** ein.
 
-Kopieren Sie diese Daten.
+#. Führen Sie die Kalibrierung über die sechs Flächen durch und folgen Sie den Anweisungen im seriellen Monitor:
 
-Code ausführen
-----------------------
+   * Senden Sie ein beliebiges Zeichen, um zu starten. Der serielle Monitor zeigt dann die erste Ausrichtung an.
+   * Bringen Sie das Modul in der angegebenen Reihenfolge in die sechs Ausrichtungen: Z oben, Z unten, X oben, X unten, Y oben, Y unten.
+   * Halten Sie das Modul während jeder Messung vollständig still, senden Sie anschließend erneut ein beliebiges Zeichen und wechseln Sie zur nächsten Ausrichtung.
 
-Öffnen Sie die Datei ``09-imu.ino`` direkt im Pfad ``elite-explorer-kit-main\basic_project\09-imu``.
+   .. image:: img/09_imu_cali.png
+      :align: center
+      :width: 90%
 
-Wechseln Sie zur Seite ``calibration_data.h`` im Projekt und fügen Sie die soeben kopierten Daten in die Datei ``calibration_data.h`` ein, wobei Sie die ursprünglichen Daten ersetzen.
+#. Nach der sechsten Ausrichtung gibt der serielle Monitor die Kalibrierungskonstanten aus. Kopieren Sie die sechs Zeilen:
 
-.. image:: img/imu_cali_data.png
-   :width: 80%
+   .. code-block:: text
 
-Wechseln Sie zurück zur Seite ``09-imu.ino`` und laden Sie den Code auf Ihr Arduino Uno R4 Board hoch.
+      Calibration complete!
+      Copy the following calibration data to your calibration_data.h:
+      const float ACCEL_BIAS[3] = {-0.0345, 0.0192, -0.1268};
+      const float ACCEL_SCALE[3] = {1.0012, 0.9987, 1.0005};
+      const float GYRO_BIAS[3] = {0.4120, -0.2085, 0.0331};
+      const float GYRO_SCALE[3] = {1.0000, 1.0000, 1.0000};
+      const float MAG_BIAS[3] = {-212.5000, 87.2500, -341.0000};
+      const float MAG_SCALE[3] = {0.9620, 1.0110, 1.0270};
 
-.. literalinclude:: /_code/09_basic_imu.ino
-   :language: cpp
-   :linenos:
-   :caption: 09-imu.ino
+   Die Werte oben sind nur ein Beispiel — Ihre Werte gehören zu Ihrem eigenen Modul.
 
-Nachdem der Code erfolgreich auf Ihren Arduino Uno R4 hochgeladen wurde, erwacht der serielle Monitor zum Leben und gibt kontinuierlich Sensordaten des 10-Achsen-IMU-Moduls aus.
+#. Öffnen Sie das Projekt ``09-imu`` und darin die Registerkarte ``calibration_data.h``, und ersetzen Sie die sechs Arrays durch die kopierten Werte.
 
-.. image:: img/imu_reading.png
+   .. image:: img/imu_cali_data.png
+      :align: center
+      :width: 80%
+
+#. Laden Sie ``09-imu.ino`` auf Ihr Arduino Uno R4 Board hoch. Der serielle Monitor gibt dann fortlaufend die Daten von Beschleunigungsmesser, Gyroskop, Magnetometer und Barometer aus.
+
+   .. image:: img/imu_reading.png

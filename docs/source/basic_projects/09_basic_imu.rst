@@ -40,56 +40,51 @@ Circuito Fritzing
 ..     :width: 90%
 
 
-Installare la libreria
----------------------------------
-
-Per installare la libreria, usa il Library Manager di Arduino.
-
-   - Cerca **"SunFounder_IMU"** e installa
-
-
-      .. image:: img/09-add_lib_tip_imu.png
-
-
-
 Calibrazione
 ----------------------
 
-Prima di utilizzare il modulo IMU, si consiglia di eseguire la calibrazione per garantire l'accuratezza dei dati del sensore. Ecco i passaggi di calibrazione:
+Prima di leggere i dati del sensore, calibra il modulo IMU per rendere accurate le misurazioni.
 
-* Apri direttamente il file ``09-imu_calibration.ino`` nel percorso ``elite-explorer-kit-main\basic_project\09-imu_calibration``.
+#. Installa la libreria **SunFounder_IMU**: apri il Library Manager di Arduino, cerca **"SunFounder_IMU"** e fai clic su **INSTALL**. L'immagine qui sotto mostra la voce dopo l'installazione.
 
-Dopo aver eseguito questo codice, apri il monitor seriale e vedrai l'output dei dati del sensore. Di solito ha il seguente formato:
+   .. image:: img/09-add_lib_tip_imu.png
+      :align: center
 
-.. code-block:: text
+#. Apri il file ``09-imu_calibration.ino`` nel percorso ``elite-explorer-kit-main\basic_project\09-imu_calibration`` e caricalo sulla scheda.
 
-   const float ACCEL_BIAS[3] = {0.0, 0.0, 0.0};
-   const float ACCEL_SCALE[3] = {1.0, 1.0, 1.0};
-   const float GYRO_BIAS[3] = {0.0, 0.0, 0.0};
-   const float GYRO_SCALE[3] = {1.0, 1.0, 1.0};
-   const float MAG_BIAS[3] = {0.0, 0.0, 0.0};
-   const float MAG_SCALE[3] = {1.0, 1.0, 1.0};
+#. Apri il monitor seriale e imposta la velocità in baud a **115200** e la fine riga su **Both NL & CR**.
 
-Copia questi dati.
+#. Esegui la calibrazione a sei facce seguendo le indicazioni del monitor seriale:
 
-Eseguire il codice
-----------------------
+   * Invia un carattere qualsiasi per iniziare. Il monitor seriale mostra quindi il primo orientamento.
+   * Metti il modulo nei sei orientamenti nell'ordine indicato: Z verso l'alto, Z verso il basso, X verso l'alto, X verso il basso, Y verso l'alto e Y verso il basso.
+   * Mantieni il modulo completamente fermo durante ogni misurazione, poi invia di nuovo un carattere per misurare l'orientamento corrente e passare al successivo.
 
+   .. image:: img/09_imu_cali.png
+      :align: center
+      :width: 90%
 
-Apri direttamente il file ``09-imu.ino`` nel percorso ``elite-explorer-kit-main\basic_project\09-imu``.
+#. Dopo il sesto orientamento il monitor seriale stampa le costanti di calibrazione. Copia le sei righe:
 
-Vai alla pagina ``calibration_data.h`` nel progetto, incolla i dati che hai appena copiato nel file ``calibration_data.h``, sostituendo i dati originali.
+   .. code-block:: text
 
-.. image:: img/imu_cali_data.png
-   :width: 80%
+      Calibration complete!
+      Copy the following calibration data to your calibration_data.h:
+      const float ACCEL_BIAS[3] = {-0.0345, 0.0192, -0.1268};
+      const float ACCEL_SCALE[3] = {1.0012, 0.9987, 1.0005};
+      const float GYRO_BIAS[3] = {0.4120, -0.2085, 0.0331};
+      const float GYRO_SCALE[3] = {1.0000, 1.0000, 1.0000};
+      const float MAG_BIAS[3] = {-212.5000, 87.2500, -341.0000};
+      const float MAG_SCALE[3] = {0.9620, 1.0110, 1.0270};
 
-Torna alla pagina ``09-imu.ino`` e carica il codice sulla tua scheda Arduino Uno R4.
+   I valori qui sopra sono solo un esempio; i tuoi appartengono al tuo modulo.
 
-.. literalinclude:: /_code/09_basic_imu.ino
-   :language: cpp
-   :linenos:
-   :caption: 09-imu.ino
+#. Apri il progetto ``09-imu`` e la sua scheda ``calibration_data.h``, e sostituisci i sei array con i valori copiati.
 
-Dopo aver caricato con successo il codice sul tuo Arduino Uno R4, il monitor seriale prenderà vita, stampando continuamente i dati dei sensori del modulo IMU a 10 assi.
+   .. image:: img/imu_cali_data.png
+      :align: center
+      :width: 80%
 
-.. image:: img/imu_reading.png
+#. Carica ``09-imu.ino`` sulla tua scheda Arduino Uno R4. Il monitor seriale stamperà di continuo i dati di accelerometro, giroscopio, magnetometro e barometro.
+
+   .. image:: img/imu_reading.png

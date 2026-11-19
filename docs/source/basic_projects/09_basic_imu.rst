@@ -27,56 +27,51 @@ Fritzing 电路
 ..     :width: 90%
 
 
-安装库
----------------------------------
-
-要安装库，请使用 Arduino 库管理器。
-
-   - 搜索 **"SunFounder_IMU"** 并安装
-
-
-      .. image:: img/09-add_lib_tip_imu.png
-
-
-
 校准
 ----------------------
 
-在使用 IMU 模块之前，建议进行校准以确保传感器数据的准确性。以下是校准步骤：
+在读取传感器数据之前，先对 IMU 进行校准，让测量结果更准确。
 
-* 直接打开 ``elite-explorer-kit-main\basic_project\09-imu_calibration`` 路径下的 ``09-imu_calibration.ino`` 文件。
+#. 安装 **SunFounder_IMU** 库：打开 Arduino 库管理器，搜索 **"SunFounder_IMU"**，然后点击 **INSTALL**。下图为安装完成后的界面。
 
-运行此代码后，打开串口监视器，您将看到传感器数据输出。通常格式如下：
+   .. image:: img/09-add_lib_tip_imu.png
+      :align: center
 
-.. code-block:: text
+#. 打开 ``elite-explorer-kit-main\basic_project\09-imu_calibration`` 路径下的 ``09-imu_calibration.ino`` 文件，并将它上传到开发板。
 
-   const float ACCEL_BIAS[3] = {0.0, 0.0, 0.0};
-   const float ACCEL_SCALE[3] = {1.0, 1.0, 1.0};
-   const float GYRO_BIAS[3] = {0.0, 0.0, 0.0};
-   const float GYRO_SCALE[3] = {1.0, 1.0, 1.0};
-   const float MAG_BIAS[3] = {0.0, 0.0, 0.0};
-   const float MAG_SCALE[3] = {1.0, 1.0, 1.0};
+#. 打开串口监视器，将波特率设为 **115200**，行尾符设为 **Both NL & CR**。
 
-复制此数据。
+#. 按串口监视器中的提示完成六面校准：
 
-运行代码
-----------------------
+   * 发送任意字符开始校准，串口监视器会显示第一个朝向。
+   * 按提示把模块依次摆成六个朝向：Z 朝上、Z 朝下、X 朝上、X 朝下、Y 朝上、Y 朝下。
+   * 每次测量时保持模块完全静止，然后再次发送任意字符测量当前朝向，再进入下一个朝向。
 
+   .. image:: img/09_imu_cali.png
+      :align: center
+      :width: 90%
 
-直接打开 ``elite-explorer-kit-main\basic_project\09-imu`` 路径下的 ``09-imu.ino`` 文件。
+#. 六个朝向测量完成后，串口监视器会打印校准常量。复制这六行：
 
-转到项目中的 ``calibration_data.h`` 页面，将刚复制的数据粘贴到 ``calibration_data.h`` 文件中，替换原有数据。
+   .. code-block:: text
 
-.. image:: img/imu_cali_data.png
-   :width: 80%
+      Calibration complete!
+      Copy the following calibration data to your calibration_data.h:
+      const float ACCEL_BIAS[3] = {-0.0345, 0.0192, -0.1268};
+      const float ACCEL_SCALE[3] = {1.0012, 0.9987, 1.0005};
+      const float GYRO_BIAS[3] = {0.4120, -0.2085, 0.0331};
+      const float GYRO_SCALE[3] = {1.0000, 1.0000, 1.0000};
+      const float MAG_BIAS[3] = {-212.5000, 87.2500, -341.0000};
+      const float MAG_SCALE[3] = {0.9620, 1.0110, 1.0270};
 
-切回 ``09-imu.ino`` 页面，将代码上传到您的 Arduino Uno R4 板。
+   以上数值仅为示例，实际数值只属于你自己的模块。
 
-.. literalinclude:: /_code/09_basic_imu.ino
-   :language: cpp
-   :linenos:
-   :caption: 09-imu.ino
+#. 打开 ``09-imu`` 项目及其中的 ``calibration_data.h`` 标签页，用刚复制的数值替换这六个数组。
 
-代码成功上传到您的 Arduino Uno R4 后，串口监视器将开始运行，持续打印来自 10 轴 IMU 模块的传感器数据。
+   .. image:: img/imu_cali_data.png
+      :align: center
+      :width: 80%
 
-.. image:: img/imu_reading.png
+#. 将 ``09-imu.ino`` 上传到 Arduino Uno R4 开发板，串口监视器会持续输出加速度计、陀螺仪、磁力计和气压计的数据。
+
+   .. image:: img/imu_reading.png

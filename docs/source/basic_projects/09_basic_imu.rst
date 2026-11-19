@@ -22,9 +22,6 @@ IMU Module (10-Axis)
 The 10-Axis IMU (Inertial Measurement Unit) module combines multiple sensors to provide comprehensive motion and environmental data. It integrates a barometric pressure sensor (SPL06_001) for altitude measurement, a 6-axis motion sensor (SH3001) for acceleration and rotation, and a 3-axis magnetometer (QMC6310) for compass heading. This sophisticated module is ideal for robotics, navigation systems, and motion-tracking applications.
 
 
-
-
-
 Fritzing Circuit
 ----------------------------------
 
@@ -41,56 +38,51 @@ Fritzing Circuit
 ..     :width: 90%
 
 
-Install library
----------------------------------
-
-To install the library, use the Arduino Library Manager. 
-
-   - Search for **"SunFounder_IMU"** and install
-
-
-      .. image:: img/09-add_lib_tip_imu.png
-
-
-
 Calibration
 ----------------------
 
-Before using the IMU module, it is recommended to perform calibration to ensure the accuracy of sensor data. The following are the calibration steps:
+Before reading sensor data, calibrate the IMU to make the measurements accurate.
 
-* Open the file ``09-imu_calibration.ino`` under the path of ``elite-explorer-kit-main\basic_project\09-imu_calibration`` directly.
+#. Install the **SunFounder_IMU** library: open the Arduino Library Manager, search for **"SunFounder_IMU"**, and click **INSTALL** (the screenshot below shows the entry once it is installed).
 
-After running this code, open the Serial Monitor and you will see the sensor data output. It is typically in the following format:
+   .. image:: img/09-add_lib_tip_imu.png
+      :align: center
 
-.. code-block:: text
+#. Open the file ``09-imu_calibration.ino`` under the path of ``elite-explorer-kit-main\basic_project\09-imu_calibration`` and upload it to your board.
 
-   const float ACCEL_BIAS[3] = {0.0, 0.0, 0.0};
-   const float ACCEL_SCALE[3] = {1.0, 1.0, 1.0};
-   const float GYRO_BIAS[3] = {0.0, 0.0, 0.0};
-   const float GYRO_SCALE[3] = {1.0, 1.0, 1.0};
-   const float MAG_BIAS[3] = {0.0, 0.0, 0.0};
-   const float MAG_SCALE[3] = {1.0, 1.0, 1.0};
+#. Open the Serial Monitor and set the baud rate to **115200** and the line ending to **Both NL & CR**.
 
-Copy this data.
+   * Type any character and press Enter to start. The Serial Monitor then shows the first orientation.
+   * Place the module in the six orientations in the order they are requested: Z up, Z down, X up, X down, Y up, and Y down.
+   * Keep the module completely still during each measurement, then send any character again to measure the current orientation and move on to the next one.
 
-Run the Code
-----------------------
+   .. image:: img/09_imu_cali.png
+      :align: center
+      :width: 90%
 
+#. After the sixth orientation, the Serial Monitor prints the calibration constants. Copy the six lines:
 
-Open the file ``09-imu.ino`` under the path of ``elite-explorer-kit-main\basic_project\09-imu`` directly.
+   .. code-block:: text
 
-Go to the ``calibration_data.h`` page in the project, paste the data you just copied into the ``calibration_data.h`` file, replacing the original data.
+      Calibration complete!
+      Copy the following calibration data to your calibration_data.h:
+      const float ACCEL_BIAS[3] = {-0.0345, 0.0192, -0.1268};
+      const float ACCEL_SCALE[3] = {1.0012, 0.9987, 1.0005};
+      const float GYRO_BIAS[3] = {0.4120, -0.2085, 0.0331};
+      const float GYRO_SCALE[3] = {1.0000, 1.0000, 1.0000};
+      const float MAG_BIAS[3] = {-212.5000, 87.2500, -341.0000};
+      const float MAG_SCALE[3] = {0.9620, 1.0110, 1.0270};
 
-.. image:: img/imu_cali_data.png
-   :width: 80%
+   The values above are only an example; yours belong to your own module.
 
-Switch back to the ``09-imu.ino`` page and upload the code to your Arduino Uno R4 board.
+#. Open the file ``09-imu.ino`` under the path of ``elite-explorer-kit-main\basic_project\09-imu`` directly.
 
-.. literalinclude:: /_code/09_basic_imu.ino
-   :language: cpp
-   :linenos:
-   :caption: 09-imu.ino
+   * This sketch reads the calibration values from ``calibration_data.h``; replace the six arrays with the ones you copied.
 
-After the code is successfully uploaded to your Arduino Uno R4, the Serial Monitor will come to life, continuously printing out sensor data from the 10-Axis IMU module. 
+   .. image:: img/imu_cali_data.png
+      :align: center
+      :width: 80%
 
-.. image:: img/imu_reading.png
+#. Now, upload ``09-imu.ino`` to your Arduino Uno R4 board. The Serial Monitor then prints the accelerometer, gyroscope, magnetometer and barometer readings continuously.
+
+   .. image:: img/imu_reading.png

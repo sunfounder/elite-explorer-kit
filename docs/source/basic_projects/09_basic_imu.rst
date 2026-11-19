@@ -41,56 +41,51 @@ Circuito Fritzing
 ..     :width: 90%
 
 
-Instalar la biblioteca
----------------------------------
-
-Para instalar la biblioteca, utiliza el Administrador de Bibliotecas de Arduino.
-
-   - Busca **"SunFounder_IMU"** e instálala
-
-
-      .. image:: img/09-add_lib_tip_imu.png
-
-
-
 Calibración
 ----------------------
 
-Antes de usar el módulo IMU, se recomienda realizar la calibración para garantizar la precisión de los datos del sensor. Los siguientes son los pasos de calibración:
+Antes de leer los datos del sensor, calibra el IMU para que las mediciones sean precisas.
 
-* Abre el archivo ``09-imu_calibration.ino`` en la ruta ``elite-explorer-kit-main\basic_project\09-imu_calibration`` directamente.
+#. Instala la biblioteca **SunFounder_IMU**: abre el Administrador de Bibliotecas de Arduino, busca **"SunFounder_IMU"** y haz clic en **INSTALL**. La imagen de abajo muestra la entrada una vez instalada.
 
-Después de ejecutar este código, abre el Monitor Serial y verás la salida de datos del sensor. Generalmente tiene el siguiente formato:
+   .. image:: img/09-add_lib_tip_imu.png
+      :align: center
 
-.. code-block:: text
+#. Abre el archivo ``09-imu_calibration.ino`` en la ruta ``elite-explorer-kit-main\basic_project\09-imu_calibration`` y súbelo a tu placa.
 
-   const float ACCEL_BIAS[3] = {0.0, 0.0, 0.0};
-   const float ACCEL_SCALE[3] = {1.0, 1.0, 1.0};
-   const float GYRO_BIAS[3] = {0.0, 0.0, 0.0};
-   const float GYRO_SCALE[3] = {1.0, 1.0, 1.0};
-   const float MAG_BIAS[3] = {0.0, 0.0, 0.0};
-   const float MAG_SCALE[3] = {1.0, 1.0, 1.0};
+#. Abre el Monitor Serial y configura la velocidad en baudios en **115200** y el fin de línea en **Both NL & CR**.
 
-Copia estos datos.
+#. Realiza la calibración de seis caras siguiendo las indicaciones del Monitor Serial:
 
-Ejecutar el código
-----------------------
+   * Envía cualquier carácter para empezar. El Monitor Serial mostrará entonces la primera orientación.
+   * Coloca el módulo en las seis orientaciones en el orden indicado: Z arriba, Z abajo, X arriba, X abajo, Y arriba e Y abajo.
+   * Mantén el módulo completamente quieto durante cada medición y vuelve a enviar cualquier carácter para medir la orientación actual y pasar a la siguiente.
 
+   .. image:: img/09_imu_cali.png
+      :align: center
+      :width: 90%
 
-Abre el archivo ``09-imu.ino`` en la ruta ``elite-explorer-kit-main\basic_project\09-imu`` directamente.
+#. Al terminar la sexta orientación, el Monitor Serial imprime las constantes de calibración. Copia las seis líneas:
 
-Ve a la página ``calibration_data.h`` en el proyecto, pega los datos que acabas de copiar en el archivo ``calibration_data.h``, reemplazando los datos originales.
+   .. code-block:: text
 
-.. image:: img/imu_cali_data.png
-   :width: 80%
+      Calibration complete!
+      Copy the following calibration data to your calibration_data.h:
+      const float ACCEL_BIAS[3] = {-0.0345, 0.0192, -0.1268};
+      const float ACCEL_SCALE[3] = {1.0012, 0.9987, 1.0005};
+      const float GYRO_BIAS[3] = {0.4120, -0.2085, 0.0331};
+      const float GYRO_SCALE[3] = {1.0000, 1.0000, 1.0000};
+      const float MAG_BIAS[3] = {-212.5000, 87.2500, -341.0000};
+      const float MAG_SCALE[3] = {0.9620, 1.0110, 1.0270};
 
-Vuelve a la página ``09-imu.ino`` y sube el código a tu placa Arduino Uno R4.
+   Los valores de arriba son solo un ejemplo; los tuyos son propios de tu módulo.
 
-.. literalinclude:: /_code/09_basic_imu.ino
-   :language: cpp
-   :linenos:
-   :caption: 09-imu.ino
+#. Abre el proyecto ``09-imu`` y su pestaña ``calibration_data.h``, y sustituye los seis arrays por los valores que copiaste.
 
-Después de que el código se haya subido exitosamente a tu Arduino Uno R4, el Monitor Serial cobrará vida, imprimiendo continuamente los datos del sensor del módulo IMU de 10 ejes.
+   .. image:: img/imu_cali_data.png
+      :align: center
+      :width: 80%
 
-.. image:: img/imu_reading.png
+#. Sube ``09-imu.ino`` a tu placa Arduino Uno R4. El Monitor Serial imprimirá continuamente los datos del acelerómetro, el giroscopio, el magnetómetro y el barómetro.
+
+   .. image:: img/imu_reading.png
